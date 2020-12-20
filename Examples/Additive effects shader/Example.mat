@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Example
+  m_Shader: {fileID: 4800000, guid: cc53cd2e39903d0459ab5316dc316c93, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AdditionalMasks:
+        m_Texture: {fileID: 2800000, guid: d536686b8bc94494ca4bae111c7fab84, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AEmissive: 0
+    - _AdditionalMasksEnable: 0
+    - _BEmissive: 0
+    - _GEmissive: 0
+    - _REmissive: 0
+    - _RimLightEnable: 0
+    - _RimLightPower: 0.284
+    m_Colors:
+    - _AColor: {r: 0, g: 0, b: 0, a: 1}
+    - _BColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _GColor: {r: 0, g: 0.03145504, b: 1, a: 1}
+    - _RColor: {r: 1, g: 0, b: 0, a: 1}
+    - _RimLightColor: {r: 1, g: 0, b: 0, a: 1}

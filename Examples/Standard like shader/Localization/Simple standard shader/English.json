@@ -1,0 +1,89 @@
+{
+    "Properties": [
+        {
+            "Name": "_EmissionColor",
+            "DisplayName": "Emission color",
+            "Tooltip": "Emission color"
+        },
+        {
+            "Name": "Main texture",
+            "DisplayName": "Albedo (RGB)",
+            "Tooltip": "Albedo (RGB)"
+        },
+        {
+            "Name": "Normal map",
+            "DisplayName": "Normal map",
+            "Tooltip": "Normal map"
+        },
+        {
+            "Name": "Multi mask",
+            "DisplayName": "Combined masks",
+            "Tooltip": "Combined masks"
+        },
+        {
+            "Name": "Multi mask_GeneratorOpen",
+            "DisplayName": "Open packer",
+            "Tooltip": "Open packer"
+        },
+        {
+            "Name": "Multi mask_GeneratorSaveButton",
+            "DisplayName": "Save",
+            "Tooltip": "Save"
+        },
+        {
+            "Name": "Multi mask_GeneratorCancelButton",
+            "DisplayName": "Cancel",
+            "Tooltip": "Cancel"
+        },
+        {
+            "Name": "Multi mask_GeneratorTextureSize",
+            "DisplayName": "Size",
+            "Tooltip": "Size"
+        },
+        {
+            "Name": "Multi mask_TextureInvert",
+            "DisplayName": "Invert",
+            "Tooltip": "Invert"
+        },
+        {
+            "Name": "Multi mask_Input1",
+            "DisplayName": "Metallic",
+            "Tooltip": "Metallic"
+        },
+        {
+            "Name": "Multi mask_Input2",
+            "DisplayName": "Smoothness",
+            "Tooltip": "Smoothness"
+        },
+        {
+            "Name": "Multi mask_Input3",
+            "DisplayName": "Occlusion",
+            "Tooltip": "Occlusion"
+        },
+        {
+            "Name": "Multi mask_Input4",
+            "DisplayName": "Emission",
+            "Tooltip": "Emission"
+        },
+        {
+            "Name": "MaskControls",
+            "DisplayName": "Masks modifiers",
+            "Tooltip": "Masks modifiers"
+        },
+        {
+            "Name": "_Metallic",
+            "DisplayName": "Metallic",
+            "Tooltip": "Metallic"
+        },
+        {
+            "Name": "_Smoothness",
+            "DisplayName": "Smoothness",
+            "Tooltip": "Smoothness"
+        },
+        {
+            "Name": "_Occlusion",
+            "DisplayName": "Occlusion",
+            "Tooltip": "Occlusion"
+        }
+    ]
+}

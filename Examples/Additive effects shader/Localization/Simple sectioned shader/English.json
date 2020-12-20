@@ -1,0 +1,139 @@
+{
+    "Properties": [
+        {
+            "Name": "Rim power",
+            "DisplayName": "Power",
+            "Tooltip": "Power"
+        },
+        {
+            "Name": "Main texture",
+            "DisplayName": "Albedo",
+            "Tooltip": "Albedo"
+        },
+        {
+            "Name": "Layers header",
+            "DisplayName": "Additional Layers",
+            "Tooltip": "Additional color layers"
+        },
+        {
+            "Name": "Layers mask",
+            "DisplayName": "Layers mask",
+            "Tooltip": "Mask where every channel is a layer"
+        },
+        {
+            "Name": "Layers mask_GeneratorOpen",
+            "DisplayName": "Open layer merger",
+            "Tooltip": "Open layer merger"
+        },
+        {
+            "Name": "Layers mask_GeneratorSaveButton",
+            "DisplayName": "Save texture",
+            "Tooltip": "Save texture"
+        },
+        {
+            "Name": "Layers mask_GeneratorCancelButton",
+            "DisplayName": "Cancel",
+            "Tooltip": "Cancel"
+        },
+        {
+            "Name": "Layers mask_GeneratorTextureSize",
+            "DisplayName": "Texture size",
+            "Tooltip": "Texture size"
+        },
+        {
+            "Name": "Layers mask_TextureInvert",
+            "DisplayName": "Invert",
+            "Tooltip": "Invert the texture channel"
+        },
+        {
+            "Name": "Layers mask_Input1",
+            "DisplayName": "Red mask",
+            "Tooltip": "Red mask"
+        },
+        {
+            "Name": "Layers mask_Input2",
+            "DisplayName": "Green mask",
+            "Tooltip": "Green mask"
+        },
+        {
+            "Name": "Layers mask_Input3",
+            "DisplayName": "Blue mask",
+            "Tooltip": "Blue mask"
+        },
+        {
+            "Name": "Layers mask_Input4",
+            "DisplayName": "Alpha mask",
+            "Tooltip": "Alpha mask"
+        },
+        {
+            "Name": "Red channel",
+            "DisplayName": "Red channel",
+            "Tooltip": "Red channel"
+        },
+        {
+            "Name": "Red color",
+            "DisplayName": "Color",
+            "Tooltip": "Color"
+        },
+        {
+            "Name": "Red emissive",
+            "DisplayName": "Emissive",
+            "Tooltip": "Emissive"
+        },
+        {
+            "Name": "Green channel",
+            "DisplayName": "Green channel",
+            "Tooltip": "Green channel"
+        },
+        {
+            "Name": "Green color",
+            "DisplayName": "Color",
+            "Tooltip": "Color"
+        },
+        {
+            "Name": "Green emissive",
+            "DisplayName": "Emissive",
+            "Tooltip": "Emissive"
+        },
+        {
+            "Name": "Blue channel",
+            "DisplayName": "Blue channel",
+            "Tooltip": "Blue channel"
+        },
+        {
+            "Name": "Blue color",
+            "DisplayName": "Color",
+            "Tooltip": "Color"
+        },
+        {
+            "Name": "Blue emissive",
+            "DisplayName": "Emissive",
+            "Tooltip": "Emissive"
+        },
+        {
+            "Name": "Alpha channel",
+            "DisplayName": "Alpha channel",
+            "Tooltip": "Alpha channel"
+        },
+        {
+            "Name": "Alpha color",
+            "DisplayName": "Color",
+            "Tooltip": "Color"
+        },
+        {
+            "Name": "Alpha emissive",
+            "DisplayName": "Emissive",
+            "Tooltip": "Emissive"
+        },
+        {
+            "Name": "Rim light header",
+            "DisplayName": "Rim light",
+            "Tooltip": "Rim light"
+        },
+        {
+            "Name": "Rim color",
+            "DisplayName": "Rim color",
+            "Tooltip": "Rim color"
+        }
+    ]
+}

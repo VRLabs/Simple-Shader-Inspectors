@@ -1,0 +1,130 @@
+﻿// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel PackRGBA
+
+
+// Default variables needed by the TextureGeneratorControl.
+RWTexture2D<float4> Result;
+float width;
+float height;
+
+struct TextureMetadata
+{
+	float Width;
+    float Height;
+    float SelectedChannel;
+    float Reverse;
+    float Gamma;
+};
+
+StructuredBuffer<TextureMetadata> TexturesMeta;
+StructuredBuffer<float4> Colors;
+
+// User defined Textures
+Texture2D<float4> RChannel;
+Texture2D<float4> GChannel;
+Texture2D<float4> BChannel;
+Texture2D<float4> AChannel;
+
+// Converts gamma space to linear space
+inline float GammaToLinearSpaceExact (float value)
+{
+    if (value <= 0.04045F)
+    return value / 12.92F;
+    else if (value < 1.0F)
+    return pow(abs((value + 0.055F))/1.055F, 2.4F);
+    else
+    return pow(abs(value), 2.2F);
+}
+
+// Converts linear space to gamma space
+inline float LinearToGammaSpaceExact (float value)
+{
+    if (value <= 0.0F)
+    return 0.0F;
+    else if (value <= 0.0031308F)
+    return 12.92F * value;
+    else if (value < 1.0F)
+    return 1.055F * pow(abs(value), 0.4166667F) - 0.055F;
+    else
+    return pow(abs(value), 0.45454545F);
+}
+
+// Select the right channel from the float4
+float SelectChannel(float4 tex, float channel)
+{
+    if(channel == 0)
+    {
+        return tex.r;
+    }
+    else if(channel == 1)
+    {
+        return tex.g;
+    }
+    else if(channel == 2)
+    {
+        return tex.b;
+    }
+    else
+    {   
+        return tex.a;
+    }
+
+}
+
+// If is needed, do the color space correction
+float DoColorCorrectionIfNeeded(float gamma, float value)
+{
+    if(gamma == 1)
+    { 
+        return LinearToGammaSpaceExact(value);
+    }
+    else
+    {
+        return value;
+    }
+}
+
+// Reverse the value if needed
+float DoReverseIfNeeded(float reverse, float value)
+{
+    if(reverse == 1)
+    { 
+        return 1 - value;
+    }
+    else
+    {
+        return value;
+    }
+}
+
+[numthreads(16,16,1)]
+void PackRGBA (uint3 id : SV_DispatchThreadID)
+{
+    // Get the right uv coordinates based on texture size
+    float4 pixel = 0;
+    float2 uv1 = float2(id.x * TexturesMeta[0].Width / width, id.y * TexturesMeta[0].Height / height);
+    float2 uv2 = float2(id.x * TexturesMeta[1].Width / width, id.y * TexturesMeta[1].Height / height);
+    float2 uv3 = float2(id.x * TexturesMeta[2].Width / width, id.y * TexturesMeta[2].Height / height);
+    float2 uv4 = float2(id.x * TexturesMeta[3].Width / width, id.y * TexturesMeta[3].Height / height);
+
+    // Select the right channel of each texture
+    float selected1 = SelectChannel(RChannel[uv1.xy], TexturesMeta[0].SelectedChannel);
+    float selected2 = SelectChannel(GChannel[uv2.xy], TexturesMeta[1].SelectedChannel);
+    float selected3 = SelectChannel(BChannel[uv3.xy], TexturesMeta[2].SelectedChannel);
+    float selected4 = SelectChannel(AChannel[uv4.xy], TexturesMeta[3].SelectedChannel);
+
+    // Check for color space correction
+    selected1 = DoColorCorrectionIfNeeded(TexturesMeta[0].Gamma, selected1);
+    selected2 = DoColorCorrectionIfNeeded(TexturesMeta[1].Gamma, selected2);
+    selected3 = DoColorCorrectionIfNeeded(TexturesMeta[2].Gamma, selected3);
+    selected4 = DoColorCorrectionIfNeeded(TexturesMeta[3].Gamma, selected4);
+
+    // Reverse values where needed
+    pixel.r = DoReverseIfNeeded(TexturesMeta[0].Reverse, selected1);
+    pixel.g = DoReverseIfNeeded(TexturesMeta[1].Reverse, selected2);
+    pixel.b = DoReverseIfNeeded(TexturesMeta[2].Reverse, selected3);
+    pixel.a = DoReverseIfNeeded(TexturesMeta[3].Reverse, selected4);
+
+    // Return pixel
+    Result[id.xy] = pixel;
+}

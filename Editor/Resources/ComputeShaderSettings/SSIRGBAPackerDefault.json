@@ -1,0 +1,25 @@
+{
+  "KernelName": "PackRGBA",
+  "Inputs": [
+    {
+      "Type": 0,
+      "InputName":"RChannel",
+      "Settings": [ 1, 1 ]
+    },
+    {
+      "Type": 0,
+      "InputName":"GChannel",
+      "Settings": [ 1, 1 ]
+    },
+    {
+      "Type": 0,
+      "InputName":"BChannel",
+      "Settings": [ 1, 1 ]
+    },
+    {
+      "Type": 0,
+      "InputName":"AChannel",
+      "Settings": [ 1, 1 ]
+    }
+  ]
+}

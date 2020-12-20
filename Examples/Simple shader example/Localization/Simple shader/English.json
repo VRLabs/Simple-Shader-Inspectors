@@ -1,0 +1,19 @@
+{
+    "Properties": [
+        {
+            "Name": "Main texture",
+            "DisplayName": "Albedo (RGB)",
+            "Tooltip": "Albedo (RGB)"
+        },
+        {
+            "Name": "Normal toggle",
+            "DisplayName": "Enable normal",
+            "Tooltip": "Enable normal"
+        },
+        {
+            "Name": "Normal map",
+            "DisplayName": "Normal Map",
+            "Tooltip": "Normal Map"
+        }
+    ]
+}

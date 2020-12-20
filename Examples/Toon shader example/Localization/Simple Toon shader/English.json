@@ -1,0 +1,54 @@
+{
+    "Properties": [
+        {
+            "Name": "Main texture",
+            "DisplayName": "Albedo (RGB)",
+            "Tooltip": "Albedo (RGB)"
+        },
+        {
+            "Name": "Ramp",
+            "DisplayName": "Ramp",
+            "Tooltip": "Ramp"
+        },
+        {
+            "Name": "Ramp_GradientOpenEditor",
+            "DisplayName": "Open gradient editor",
+            "Tooltip": "Open gradient editor"
+        },
+        {
+            "Name": "Ramp_GradientColorLabel",
+            "DisplayName": "Color",
+            "Tooltip": "Color"
+        },
+        {
+            "Name": "Ramp_GradientTimeLabel",
+            "DisplayName": "Time",
+            "Tooltip": "Time"
+        },
+        {
+            "Name": "Ramp_GradientRampSizeLabel",
+            "DisplayName": "Size",
+            "Tooltip": "Size"
+        },
+        {
+            "Name": "Ramp_GradientBlendModeLabel",
+            "DisplayName": "Blend mode",
+            "Tooltip": "Blend mode"
+        },
+        {
+            "Name": "Ramp_GradientSaveButton",
+            "DisplayName": "Save gradient",
+            "Tooltip": "Save gradinet"
+        },
+        {
+            "Name": "Ramp_GradientCancelButton",
+            "DisplayName": "Cancel",
+            "Tooltip": "Cancel"
+        },
+        {
+            "Name": "Shadow intensity",
+            "DisplayName": "Shadow intensity",
+            "Tooltip": "Shadow intensity"
+        }
+    ]
+}
