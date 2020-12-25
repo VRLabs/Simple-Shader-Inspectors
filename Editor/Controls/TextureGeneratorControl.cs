@@ -155,18 +155,18 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             GeneratorInputColor = Color.white;
             GeneratorSaveButtonColor = Color.white;
 
-            _baseContent = AdditionalContentExtensions.CreatLocalizationArrayFromNames(_baseNames);
+            _baseContent = AdditionalContentExtensions.CreateLocalizationArrayFromNames(_baseNames);
 
             // Texture exclusive content
             if (_containsTextures)
             {
-                _textureContent = AdditionalContentExtensions.CreatLocalizationArrayFromNames(_textureNames);
+                _textureContent = AdditionalContentExtensions.CreateLocalizationArrayFromNames(_textureNames);
             }
 
             // Color exclusive content
             if (_containsTextures)
             {
-                _colorContent = AdditionalContentExtensions.CreatLocalizationArrayFromNames(_colorNames);
+                _colorContent = AdditionalContentExtensions.CreateLocalizationArrayFromNames(_colorNames);
             }
 
             _namesContent = new AdditionalLocalization[_inputs.Count];
@@ -310,7 +310,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             _resultTex.ReadPixels(new Rect(0, 0, _result.width, _result.height), 0, 0);
             RenderTexture.active = null;
             _resultTex.Apply(true);
-            Property.textureValue = SimpleShaderInspector.SaveAndGetTexture(_resultTex, SimpleShaderInspector.GetTextureDestinationPath((Material)Property.targets[0], PropertyName + ".png"));
+            Property.textureValue = SSIHelper.SaveAndGetTexture(_resultTex, SSIHelper.GetTextureDestinationPath((Material)Property.targets[0], PropertyName + ".png"));
         }
     }
 

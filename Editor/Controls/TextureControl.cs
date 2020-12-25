@@ -101,7 +101,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             }
             if (_hasExtra2)
             {
-                materialEditor.TexturePropertySingleLine(Content, Property, AdditionalProperties[0].Property, AdditionalProperties[1].Property);
+                //materialEditor.TexturePropertySingleLine(Content, Property, AdditionalProperties[0].Property, AdditionalProperties[1].Property);
             }
             else if (_hasExtra1)
             {

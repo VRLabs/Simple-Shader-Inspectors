@@ -251,8 +251,8 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             GUI.backgroundColor = GradientSaveButtonColor;
             if (GUILayout.Button(AdditionalContent[5].Content, GradientSaveButtonStyle))
             {
-                string path = SimpleShaderInspector.GetTextureDestinationPath((Material)Property.targets[0], PropertyName + "_gradient.png");
-                Property.textureValue = SimpleShaderInspector.SaveAndGetTexture(_gradient.GetTexture(), path, TextureWrapMode.Clamp);
+                string path = SSIHelper.GetTextureDestinationPath((Material)Property.targets[0], PropertyName + "_gradient.png");
+                Property.textureValue = SSIHelper.SaveAndGetTexture(_gradient.GetTexture(), path, TextureWrapMode.Clamp);
                 HasPropertyUpdated = true;
                 _previousTextures = null;
                 Selection.selectionChanged -= ResetGradientTexture;
@@ -334,7 +334,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         {
             if (!texture.isReadable)
             {
-                SimpleShaderInspector.SetTextureImporterReadable(texture, true);
+                SSIHelper.SetTextureImporterReadable(texture, true);
             }
             _gradient = new GradientTexture((int)_rampWidth);
             _blendMode = GradientBlendMode.Linear;

@@ -28,7 +28,7 @@ namespace VRLabs.SimpleShaderInspectors
         /// <summary>
         /// Array containing the index needed to fetch.
         /// </summary>
-        private int _propertyIndex;
+        private int _propertyIndex = -2;
 
         /// <summary>
         /// MaterialProperty containing the additional property needed by the control.
@@ -47,20 +47,19 @@ namespace VRLabs.SimpleShaderInspectors
         // Fetch and store the index of the needed material property.
         internal void SetPropertyIndex(MaterialProperty[] properties)
         {
-            _propertyIndex = SimpleShaderInspector.FindPropertyIndex(PropertyName, properties);
+            _propertyIndex = SSIHelper.FindPropertyIndex(PropertyName, properties);
         }
 
         // Fetch the material property based on the index.
         internal void FetchProperty(MaterialProperty[] properties)
         {
+            if (_propertyIndex == -2)
+                SetPropertyIndex(properties);
+
             if (_propertyIndex != -1)
-            {
                 Property = properties[_propertyIndex];
-            }
             else
-            {
                 Property = null;
-            }
         }
     }
 }

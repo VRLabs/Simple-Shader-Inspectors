@@ -11,215 +11,95 @@ namespace VRLabs.SimpleShaderInspectors
     internal static class Localization
     {
         /// <summary>
-        /// Gets informations about available localizations on selected path.
+        /// Apply Localization strings to a list of controls.
         /// </summary>
-        /// <param name="path">Path where the localization data is stored</param>
-        /// <returns>
-        ///     A string array with all available localizations,
-        ///     A string containing the selected localization,
-        ///     An integer containing the index of the selected localization.
-        /// </returns>
-        public static (string[], string, int) GetLocalization(string path)
+        /// <param name="controls">Controls to apply a localization</param>
+        /// <param name="localizationFilePath">Path of the localization file</param>
+        /// <param name="writeIfNotFound">Generate empty fields / new localization file if the provided one is missing or incomplete.</param>
+        public static void ApplyLocalization(this IEnumerable<SimpleControl> controls, string localizationFilePath, bool writeIfNotFound = false)
         {
-            List<string> names = new List<string>();
-            if (Directory.Exists(path))
-            {
-                string selected = "";
-                if (File.Exists(path + "/Settings.json"))
-                {
-                    selected = JsonUtility.FromJson<SettingsFile>(File.ReadAllText(path + "/Settings.json")).SelectedLanguage;
-                }
+            LocalizationFile localizationFile;
 
-                int selectedIndex = -1;
-                string[] namesPlusSettings = Directory.GetFiles(path);
-                for (int i = 0; i < namesPlusSettings.Length; i++)
-                {
-                    if (!namesPlusSettings[i].EndsWith("Settings.json") && !namesPlusSettings[i].EndsWith(".meta"))
-                    {
-                        string name = Path.GetFileNameWithoutExtension(namesPlusSettings[i]);
-                        names.Add(name);
-                        if (name.Equals(selected))
-                        {
-                            selectedIndex = names.Count - 1;
-                        }
-                    }
-                }
-
-                if (selectedIndex != -1) return (names.ToArray(), selected, selectedIndex);
-                SaveSettings(names[0], path);
-                selected = names[0];
-
-                return (names.ToArray(), selected, selectedIndex);
-            }
+            if (File.Exists(localizationFilePath))
+                localizationFile = JsonUtility.FromJson<LocalizationFile>(File.ReadAllText(localizationFilePath));
             else
+                localizationFile = new LocalizationFile();
+
+            List<PropertyInfo> missingInfo = SetPropertiesLocalization(controls, localizationFile.Properties).ToList();
+
+            if (missingInfo.Count > 0 && writeIfNotFound)
             {
-                return (null, null, -1);
+                missingInfo.AddRange(localizationFile.Properties);
+                localizationFile.Properties = missingInfo.ToArray();
+                File.WriteAllText(localizationFilePath, JsonUtility.ToJson(localizationFile, true));
             }
         }
 
-        /// <summary>
-        /// Gets a LocalizationFile object containing a localization based on the passed string.
-        /// </summary>
-        /// <param name="path">Path to look for the localization.</param>
-        /// <param name="name">Name of the localization.</param>
-        /// <returns>A LocalizationFile object containing the localizaion, or null if the localization was not found.</returns>
-        public static LocalizationFile GetSelectedLocalization(string path, string name)
+        private static IEnumerable<PropertyInfo> SetPropertiesLocalization(IEnumerable<SimpleControl> controls, PropertyInfo[] propertyInfos)
         {
-            if (File.Exists(path + "/" + name + ".json"))
+            List<PropertyInfo> missingInfo = new List<PropertyInfo>();
+            foreach (var control in controls)
             {
-                return JsonUtility.FromJson<LocalizationFile>(File.ReadAllText(path + "/" + name + ".json"));
-            }
-            else
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Generates a default English localization file.
-        /// </summary>
-        /// <param name="controls">Controls that need a localization.</param>
-        /// <param name="shader">Shader that the inspector references</param>
-        /// <param name="path">Save path</param>
-        /// <returns>
-        ///     A string array with only one element with the localization name,
-        ///     A string containing the selected localization,
-        ///     The generated localization.
-        /// </returns>
-        public static (string[], string, LocalizationFile) GenerateDefaultLocalization(List<SimpleControl> controls, Shader shader, string path)
-        {
-            List<PropertyInfo> localizationProperties = new List<PropertyInfo>();
-
-            GenerateLocalizationObjectStructure(controls, shader, localizationProperties);
-
-            LocalizationFile file = new LocalizationFile { Properties = localizationProperties.ToArray() };
-            Directory.CreateDirectory(path);
-            File.WriteAllText(path + "/English.json", JsonUtility.ToJson(file, true));
-            SaveSettings("English", path);
-            return (new string[] { "English" }, "English", file);
-        }
-
-        // Generates the list of PropertyInfo based on the controls that need a localization.
-        private static void GenerateLocalizationObjectStructure(List<SimpleControl> controls, Shader shader, List<PropertyInfo> localizations)
-        {
-            (string, string)[] properties = new (string, string)[ShaderUtil.GetPropertyCount(shader)];
-            for (int i = 0; i < properties.Length; i++)
-            {
-                properties[i] = (ShaderUtil.GetPropertyName(shader, i), ShaderUtil.GetPropertyDescription(shader, i));
-            }
-            foreach (SimpleControl control in controls)
-            {
-                if (localizations.FindPropertyByName(control.ControlAlias) == null)
+                // Find localization of the control content. 
+                PropertyInfo selectedInfo = propertyInfos.FindPropertyByName(control.ControlAlias);
+                if (selectedInfo == null)
                 {
-                    string displayName;
-                    if (control is PropertyControl pr)
-                    {
-                        displayName = properties.FindPropertyByName(pr.PropertyName);
-                    }
-                    else
-                    {
-                        displayName = properties.FindPropertyByName(control.ControlAlias);
-                    }
-
-                    if (string.IsNullOrEmpty(displayName))
-                    {
-                        displayName = "";
-                    }
-                    PropertyInfo info = new PropertyInfo
+                    selectedInfo = new PropertyInfo
                     {
                         Name = control.ControlAlias,
-                        DisplayName = displayName,
-                        Tooltip = displayName
+                        DisplayName = control.ControlAlias,
+                        Tooltip = ""
                     };
-                    localizations.Add(info);
+
+                    if (!string.IsNullOrWhiteSpace(selectedInfo.Name))
+                        missingInfo.Add(selectedInfo);
                 }
+                control.Content = new GUIContent(selectedInfo.DisplayName, selectedInfo.Tooltip);
 
                 switch (control)
                 {
+                    // Find additional content in case it implements the IAdditionalLocalization interface.
                     case IAdditionalLocalization additional:
+                        foreach (AdditionalLocalization content in additional.AdditionalContent)
                         {
-                            foreach (AdditionalLocalization content in additional.AdditionalContent)
+                            string fullName = control.ControlAlias + "_" + content.Name;
+                            PropertyInfo extraInfo = propertyInfos.FindPropertyByName(fullName);
+                            if (extraInfo == null)
                             {
-                                string fullName = control.ControlAlias + "_" + content.Name;
-                                if (localizations.FindPropertyByName(fullName) == null)
+                                extraInfo = new PropertyInfo
                                 {
-                                    PropertyInfo info = new PropertyInfo
-                                    {
-                                        Name = fullName,
-                                        DisplayName = "",
-                                        Tooltip = ""
-                                    };
-                                    localizations.Add(info);
-                                }
+                                    Name = fullName,
+                                    DisplayName = fullName,
+                                    Tooltip = ""
+                                };
+                                if (!string.IsNullOrWhiteSpace(extraInfo.Name))
+                                    missingInfo.Add(extraInfo);
                             }
 
-                            break;
+                            content.Content = new GUIContent(extraInfo.DisplayName, extraInfo.Tooltip);
                         }
+
+                        break;
+
+                    // Recursively se property localization for all properties inside this control if it has the IControlContainer interface.
                     case IControlContainer container:
-                        GenerateLocalizationObjectStructure(container.Controls, shader, localizations);
+                        missingInfo.AddRange(SetPropertiesLocalization(container.Controls, propertyInfos));
                         break;
                 }
             }
-        }
-
-        /// <summary>
-        /// Save current localization settings
-        /// </summary>
-        /// <param name="selectedLanguage">Selected language name.</param>
-        /// <param name="path">Path where the settings file is saved.</param>
-        public static void SaveSettings(string selectedLanguage, string path)
-        {
-            SettingsFile file = new SettingsFile { SelectedLanguage = selectedLanguage };
-            Directory.CreateDirectory(path);
-            string save = JsonUtility.ToJson(file, true);
-            File.WriteAllText(path + "/Settings.json", save);
-        }
-
-        /// <summary>
-        /// Add missing properties into the selected localization file.
-        /// </summary>
-        /// <param name="missingInfo">List of missing properties.</param>
-        /// <param name="selectedLanguage">Selected language.</param>
-        /// <param name="path">path to save.</param>
-        public static void AddDefaultsForMissingProperties(List<PropertyInfo> missingInfo, string selectedLanguage, string path)
-        {
-            if (File.Exists(path + "/" + selectedLanguage + ".json"))
-            {
-                LocalizationFile file = JsonUtility.FromJson<LocalizationFile>(File.ReadAllText(path + "/" + selectedLanguage + ".json"));
-                missingInfo.AddRange(file.Properties);
-                file.Properties = missingInfo.ToArray();
-                File.WriteAllText(path + "/" + selectedLanguage + ".json", JsonUtility.ToJson(file, true));
-            }
-        }
-        /// <summary>
-        /// Gets the property description from the property name.
-        /// </summary>
-        /// <param name="name">Name of the property</param>
-        /// <param name="shader">Shader to seatch from</param>
-        /// <returns>A string containing the property description.</returns>
-        public static string GetPropertyDescription(string name, Shader shader)
-        {
-            for (int i = 0; i < ShaderUtil.GetPropertyCount(shader); i++)
-            {
-                if (ShaderUtil.GetPropertyName(shader, i).Equals(name))
-                {
-                    return ShaderUtil.GetPropertyDescription(shader, i);
-                }
-            }
-
-            return "";
+            return missingInfo;
         }
     }
 
     internal static class LocalizationSearchers
     {
-        public static PropertyInfo FindPropertyByName(this List<PropertyInfo> properties, string name)
+        public static PropertyInfo FindPropertyByName(this IEnumerable<PropertyInfo> properties, string name)
         {
-            for (int i = 0; i < properties.Count; i++)
+            foreach (var property in properties)
             {
-                if (properties[i].Name.Equals(name))
+                if (property.Name.Equals(name))
                 {
-                    return properties[i];
+                    return property;
                 }
             }
             return null;
