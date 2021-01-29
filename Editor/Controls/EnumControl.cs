@@ -11,6 +11,8 @@ namespace VRLabs.SimpleShaderInspectors.Controls
     {
         private readonly GUIContent[] _options;
 
+        public TEnum SelectedOption => (TEnum)Enum.ToObject(typeof(TEnum) , Property.floatValue);
+
         /// <summary>
         /// Default constructor of <see cref="EnumControl<TEnum>"/>
         /// </summary>

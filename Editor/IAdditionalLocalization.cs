@@ -41,7 +41,7 @@ namespace VRLabs.SimpleShaderInspectors
             }
         }
 
-        public static AdditionalLocalization[] CreatLocalizationArrayFromNames(string[] contentNames)
+        public static AdditionalLocalization[] CreateLocalizationArrayFromNames(string[] contentNames)
         {
             AdditionalLocalization[] obj = new AdditionalLocalization[contentNames.Length];
             for (int i = 0; i < contentNames.Length; i++)

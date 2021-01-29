@@ -10,6 +10,10 @@ namespace VRLabs.SimpleShaderInspectors
     public abstract class SimpleControl
     {
         /// <summary>
+        /// Inspector that contains this control.
+        /// </summary>
+        public ISimpleShaderInspector Inspector { get; set; }
+        /// <summary>
         /// GuiContent set by the inspector.
         /// </summary>
         public GUIContent Content { get; set; }

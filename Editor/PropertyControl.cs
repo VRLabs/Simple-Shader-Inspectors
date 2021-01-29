@@ -11,7 +11,7 @@ namespace VRLabs.SimpleShaderInspectors
         /// <summary>
         /// Integer containing the index of the property of this control.
         /// </summary>
-        private int _propertyIndex;
+        private int _propertyIndex = -2;
 
         /// <summary>
         /// Name of the property shown by this control.
@@ -50,19 +50,18 @@ namespace VRLabs.SimpleShaderInspectors
 
         internal void SetPropertyIndex(MaterialProperty[] properties)
         {
-            _propertyIndex = SimpleShaderInspector.FindPropertyIndex(PropertyName, properties);
+            _propertyIndex = SSIHelper.FindPropertyIndex(PropertyName, properties);
         }
 
         internal void FetchProperty(MaterialProperty[] properties)
         {
+            if(_propertyIndex == -2)
+                SetPropertyIndex(properties);
+
             if (_propertyIndex != -1)
-            {
                 Property = properties[_propertyIndex];
-            }
             else
-            {
                 Property = null;
-            }
         }
     }
     public static partial class BaseControlExtensions

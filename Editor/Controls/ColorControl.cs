@@ -14,6 +14,11 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         public bool ShowAlphaValue { get; set; }
 
         /// <summary>
+        /// Selected color of the property stored in this control.
+        /// </summary>
+        public Color SelectedColor => Property.colorValue;
+
+        /// <summary>
         /// Default constructor of <see cref="ColorControl"/>
         /// </summary>
         /// <param name="propertyName">Material property name.</param>
