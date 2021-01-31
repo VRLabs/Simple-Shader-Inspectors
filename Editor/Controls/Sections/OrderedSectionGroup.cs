@@ -33,7 +33,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         {
             get
             {
-                List<SimpleControl> l = new List<SimpleControl>();
+                var l = new List<SimpleControl>();
                 l.AddRange(_controls);
                 l.AddRange(Sections);
                 return l;

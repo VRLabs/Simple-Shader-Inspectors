@@ -276,7 +276,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             _compute.SetFloat("width", (float)_resolution);
             _compute.SetFloat("height", (float)_resolution);
 
-            ComputeInputs computeData = new ComputeInputs();
+            var computeData = new ComputeInputs();
             foreach (var input in _inputs)
             {
                 input.AssignInputsToCompute(computeData, kernel);

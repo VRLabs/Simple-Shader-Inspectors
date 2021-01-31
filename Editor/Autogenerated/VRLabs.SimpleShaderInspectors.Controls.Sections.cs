@@ -87,9 +87,9 @@
             control.BackgroundStyle = property;
             return control;
         }
-        public static T SetAreControlsInside<T>(this T control, System.Boolean property) where T : Section
+        public static T SetAreControlsInHeader<T>(this T control, System.Boolean property) where T : Section
         {
-            control.AreControlsInside = property;
+            control.AreControlsInHeader = property;
             return control;
         }
         public static T SetIsPropertyAnimatable<T>(this T control, System.Boolean property) where T : Section

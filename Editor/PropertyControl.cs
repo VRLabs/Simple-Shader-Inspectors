@@ -55,7 +55,7 @@ namespace VRLabs.SimpleShaderInspectors
 
         internal void FetchProperty(MaterialProperty[] properties)
         {
-            if(_propertyIndex == -2)
+            if (_propertyIndex == -2)
                 SetPropertyIndex(properties);
 
             if (_propertyIndex != -1)

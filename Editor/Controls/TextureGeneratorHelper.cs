@@ -15,7 +15,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         internal static (string, List<ComputeInputBase>) GetInputs(string settingsJson)
         {
             TextureGeneratorSettings settings = JsonUtility.FromJson<TextureGeneratorSettings>(settingsJson);
-            List<ComputeInputBase> inputs = new List<ComputeInputBase>();
+            var inputs = new List<ComputeInputBase>();
             foreach (var input in settings.Inputs)
             {
                 switch (input.Type)

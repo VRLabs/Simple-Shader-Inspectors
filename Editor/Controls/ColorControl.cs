@@ -11,8 +11,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <summary>
         /// Boolan that determines if the color picker and the color field should show the alpha value.
         /// </summary>
-        [Chainable]
-        public bool ShowAlphaValue { get; set; }
+        [Chainable] public bool ShowAlphaValue { get; set; }
 
         /// <summary>
         /// Selected color of the property stored in this control.

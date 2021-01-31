@@ -109,7 +109,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             }
             EditorGUILayout.EndHorizontal();
 
-            if (!AreControlsInside)
+            if (!AreControlsInHeader)
             {
                 EditorGUILayout.EndVertical();
             }
@@ -119,7 +119,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
                 DrawControls(materialEditor);
                 EditorGUI.EndDisabledGroup();
             }
-            if (AreControlsInside)
+            if (AreControlsInHeader)
             {
                 EditorGUILayout.EndVertical();
             }

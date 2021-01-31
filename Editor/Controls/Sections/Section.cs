@@ -41,6 +41,16 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         public List<SimpleControl> Controls { get; set; }
 
         /// <summary>
+        /// Boolean indicating if the folding state material property needs to be updated
+        /// </summary>
+        public bool NonAnimatablePropertyChanged { get; set; }
+
+        /// <summary>
+        /// Bool indicating if the section is folded out or not.
+        /// </summary>
+        public bool Show { get; protected set; }
+
+        /// <summary>
         /// Style of the header label.
         /// </summary>
         [Chainable] public GUIStyle LabelStyle { get; set; }
@@ -53,12 +63,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// <summary>
         /// Boolean indicating if child controls will be inside the header background.
         /// </summary>
-        [Chainable] public bool AreControlsInside { get; set; }
-
-        /// <summary>
-        /// Boolean indicating if the folding state material property needs to be updated
-        /// </summary>
-        public bool NonAnimatablePropertyChanged { get; set; }
+        [Chainable] public bool AreControlsInHeader { get; set; }
 
         /// <summary>
         /// Boolean indicating if the folding state material property is animatable or not.
@@ -71,11 +76,6 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// </summary>
         /// <value></value>
         [Chainable] public bool ShowFoldoutArrow { get; set; }
-
-        /// <summary>
-        /// Bool indicating if the section is folded out or not.
-        /// </summary>
-        public bool Show { get; protected set; }
 
         /// <summary>
         /// Background color of the header.
@@ -113,7 +113,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             BackgroundColor = new Color(1, 1, 1, 1);
             LabelStyle = Styles.BoldCenter;
             BackgroundStyle = Styles.BoxHeavyBorder;
-            AreControlsInside = false;
+            AreControlsInHeader = false;
             IsPropertyAnimatable = false;
             ShowFoldoutArrow = true;
         }
@@ -210,7 +210,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
 
             EditorGUILayout.EndHorizontal();
 
-            if (!AreControlsInside)
+            if (!AreControlsInHeader)
             {
                 EditorGUILayout.EndVertical();
             }
@@ -218,7 +218,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             {
                 DrawControls(materialEditor);
             }
-            if (AreControlsInside)
+            if (AreControlsInHeader)
             {
                 EditorGUILayout.EndVertical();
             }

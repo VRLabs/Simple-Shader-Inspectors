@@ -19,7 +19,7 @@ namespace VRLabs.SimpleShaderInspectorsExamples
             this.AddTextureControl("_MainTex", "_Color").Alias("Main texture").SetShowUvOptions(true);
 
             _layersSection = this.AddActivatableSection("_AdditionalMasksEnable").Alias("Layers header")
-                .SetBackgroundColor(Color.cyan).SetAreControlsInside(true);
+                .SetBackgroundColor(Color.cyan).SetAreControlsInHeader(true);
             _layersSection.AddTextureGeneratorControl("_AdditionalMasks").Alias("Layers mask").SetShowUvOptions(true);
             _layersSection.AddSpaceControl();
 
