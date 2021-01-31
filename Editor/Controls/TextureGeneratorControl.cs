@@ -45,41 +45,41 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <summary>
         /// GUIStyle for the texture generator button.
         /// </summary>
-        public GUIStyle GeneratorButtonStyle { get; set; }
+        [Chainable] public GUIStyle GeneratorButtonStyle { get; set; }
         /// <summary>
         /// GUIStyle for the texture generator save button.
         /// </summary>
-        public GUIStyle GeneratorSaveButtonStyle { get; set; }
+        [Chainable] public GUIStyle GeneratorSaveButtonStyle { get; set; }
 
         /// <summary>
         /// GUIStyle for the texture generator background.
         /// </summary>
-        public GUIStyle GeneratorStyle { get; set; }
+        [Chainable] public GUIStyle GeneratorStyle { get; set; }
 
         /// <summary>
         /// GUIStyle for the input background.
         /// </summary>
-        public GUIStyle GeneratorInputStyle { get; set; }
+        [Chainable] public GUIStyle GeneratorInputStyle { get; set; }
 
         /// <summary>
         /// Background color for the gradient editor button.
         /// </summary>
-        public Color GeneratorButtonColor { get; set; }
+        [Chainable] public Color GeneratorButtonColor { get; set; }
 
         /// <summary>
         /// Background color for the gradient editor button.
         /// </summary>
-        public Color GeneratorSaveButtonColor { get; set; }
+        [Chainable] public Color GeneratorSaveButtonColor { get; set; }
 
         /// <summary>
         /// Background color for the gradient editor button.
         /// </summary>
-        public Color GeneratorColor { get; set; }
+        [Chainable] public Color GeneratorColor { get; set; }
 
         /// <summary>
         /// Background color for the gradient editor button.
         /// </summary>
-        public Color GeneratorInputColor { get; set; }
+        [Chainable] public Color GeneratorInputColor { get; set; }
 
         /// <summary>
         /// Additional localization strings.
@@ -311,127 +311,6 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             RenderTexture.active = null;
             _resultTex.Apply(true);
             Property.textureValue = SSIHelper.SaveAndGetTexture(_resultTex, SSIHelper.GetTextureDestinationPath((Material)Property.targets[0], PropertyName + ".png"));
-        }
-    }
-
-    public static partial class ControlExtensions
-    {
-        /// <summary>
-        /// Creates a new control of type <see cref="TextureGeneratorControl"/> and adds it to the current container.
-        /// </summary>
-        /// <param name="container">Container of controls this method extends to.</param>
-        /// <param name="propertyName">Material property name.</param>
-        /// <param name="extraPropertyName1">First additional material property name. Optional.</param>
-        /// <param name="extraPropertyName2">Second additional material property name. Optional.</param>
-        /// <returns>The <see cref="TextureGeneratorControl"/> object that has been added.</returns>
-        public static TextureGeneratorControl AddTextureGeneratorControl(this IControlContainer container, string propertyName, string extraPropertyName1 = null, string extraPropertyName2 = null)
-        {
-            TextureGeneratorControl control = new TextureGeneratorControl(propertyName, extraPropertyName1, extraPropertyName2);
-            container.Controls.Add(control);
-            return control;
-        }
-
-        /// <summary>
-        /// Sets up the generator toggle button style.
-        /// </summary>
-        /// <param name="control">Control this method extends to.</param>
-        /// <param name="style">Style to use.</param>
-        /// <typeparam name="T">Type of the control it extends to</typeparam>
-        /// <returns>The <see cref="TextureGeneratorControl"/> Object that has been modified.</returns>
-        public static T SetGeneratorButtonStyle<T>(this T control, GUIStyle style) where T : TextureGeneratorControl
-        {
-            control.GeneratorButtonStyle = style;
-            return control;
-        }
-
-        /// <summary>
-        /// Sets up the generator save button style.
-        /// </summary>
-        /// <param name="control">Control this method extends to.</param>
-        /// <param name="style">Style to use.</param>
-        /// <typeparam name="T">Type of the control it extends to</typeparam>
-        /// <returns>The <see cref="TextureGeneratorControl"/> Object that has been modified.</returns>
-        public static T SetGeneratorSaveButtonStyle<T>(this T control, GUIStyle style) where T : TextureGeneratorControl
-        {
-            control.GeneratorSaveButtonStyle = style;
-            return control;
-        }
-
-        /// <summary>
-        /// Sets up the generator background style.
-        /// </summary>
-        /// <param name="control">Control this method extends to.</param>
-        /// <param name="style">Style to use.</param>
-        /// <typeparam name="T">Type of the control it extends to</typeparam>
-        /// <returns>The <see cref="TextureGeneratorControl"/> Object that has been modified.</returns>
-        public static T SetGeneratorStyle<T>(this T control, GUIStyle style) where T : TextureGeneratorControl
-        {
-            control.GeneratorStyle = style;
-            return control;
-        }
-
-        /// <summary>
-        /// Sets up the generator's input background style.
-        /// </summary>
-        /// <param name="control">Control this method extends to.</param>
-        /// <param name="style">Style to use.</param>
-        /// <typeparam name="T">Type of the control it extends to</typeparam>
-        /// <returns>The <see cref="TextureGeneratorControl"/> Object that has been modified.</returns>
-        public static T SetGeneratorInputStyle<T>(this T control, GUIStyle style) where T : TextureGeneratorControl
-        {
-            control.GeneratorInputStyle = style;
-            return control;
-        }
-        /// <summary>
-        /// Sets up the generator toggle button color.
-        /// </summary>
-        /// <param name="control">Section this method extends to.</param>
-        /// <param name="color">Color of the background.</param>
-        /// <typeparam name="T">The type of this class.</typeparam>
-        /// <returns>The <see cref="TextureGeneratorControl"/> Object that has been modified.</returns>
-        public static T SetGeneratorButtonColor<T>(this T control, Color color) where T : TextureGeneratorControl
-        {
-            control.GeneratorButtonColor = color;
-            return control;
-        }
-
-        /// <summary>
-        /// Sets up the generator texture save button color.
-        /// </summary>
-        /// <param name="control">Section this method extends to.</param>
-        /// <param name="color">Color of the background.</param>
-        /// <typeparam name="T">The type of this class.</typeparam>
-        /// <returns>The <see cref="TextureGeneratorControl"/> Object that has been modified.</returns>
-        public static T SetGeneratorSaveButtonColor<T>(this T control, Color color) where T : TextureGeneratorControl
-        {
-            control.GeneratorSaveButtonColor = color;
-            return control;
-        }
-
-        /// <summary>
-        /// Sets up the style of the generator background color.
-        /// </summary>
-        /// <param name="section">Section this method extends to.</param>
-        /// <param name="color">Color of the background.</param>
-        /// <typeparam name="T">The type of this class.</typeparam>
-        /// <returns>The <see cref="TextureGeneratorControl"/> Object that has been modified.</returns>
-        public static T SetGeneratorColor<T>(this T control, Color color) where T : TextureGeneratorControl
-        {
-            control.GeneratorColor = color;
-            return control;
-        }
-
-        /// <summary>
-        /// Sets up the generator background color.
-        /// </summary>
-        /// <param name="control">Section this method extends to.</param>
-        /// <param name="color">Color of the background.</param>
-        /// <typeparam name="T">The type of this class.</typeparam>
-        /// <returns>The <see cref="TextureGeneratorControl"/> Object that has been modified.</returns>
-        public static T SetGeneratorInputColor<T>(this T control, Color color) where T : TextureGeneratorControl
-        {
-            control.GeneratorInputColor = color;
-            return control;
         }
     }
 

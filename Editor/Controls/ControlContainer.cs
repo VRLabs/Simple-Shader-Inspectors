@@ -35,18 +35,4 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             }
         }
     }
-    public static partial class ControlExtensions
-    {
-        /// <summary>
-        /// Creates a new control of type <see cref="PropertyControl"/> and adds it to the current container.
-        /// </summary>
-        /// <param name="container">Container of controls this method extends to.</param>
-        /// <returns>The <see cref="ControlContainer"/> object that has been added.</returns>
-        public static ControlContainer AddControlContainer(this IControlContainer container)
-        {
-            ControlContainer control = new ControlContainer();
-            container.Controls.Add(control);
-            return control;
-        }
-    }
 }

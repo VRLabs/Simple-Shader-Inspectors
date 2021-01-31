@@ -47,19 +47,4 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             }
         }
     }
-    public static partial class ControlExtensions
-    {
-        /// <summary>
-        /// Creates a new control of type <see cref="EnumControl<TEnum>"/> and adds it to the current container.
-        /// </summary>
-        /// <param name="container">Container of controls this method extends to.</param>
-        /// <param name="propertyName">Material property name.</param>
-        /// <returns>The <see cref="EnumControl<TEnum>"/> object that has been added.</returns>
-        public static EnumControl<TEnum> AddEnumControl<TEnum>(this IControlContainer container, string propertyName) where TEnum : Enum
-        {
-            EnumControl<TEnum> control = new EnumControl<TEnum>(propertyName);
-            container.Controls.Add(control);
-            return control;
-        }
-    }
 }

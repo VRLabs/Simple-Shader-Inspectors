@@ -29,20 +29,4 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             HasPropertyUpdated = EditorGUI.EndChangeCheck();
         }
     }
-
-    public static partial class ControlExtensions
-    {
-        /// <summary>
-        /// Creates a new control of type <see cref="TilingAndOffsetControl"/> and adds it to the current container.
-        /// </summary>
-        /// <param name="container">Container of controls this method extends to.</param>
-        /// <param name="propertyName">Material property name.</param>
-        /// <returns>The <see cref="TilingAndOffsetControl"/> object that has been added.</returns>
-        public static TilingAndOffsetControl AddTilingAndOffsetControl(this IControlContainer container, string propertyName)
-        {
-            TilingAndOffsetControl control = new TilingAndOffsetControl(propertyName);
-            container.Controls.Add(control);
-            return control;
-        }
-    }
 }

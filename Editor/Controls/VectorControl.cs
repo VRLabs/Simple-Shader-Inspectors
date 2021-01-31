@@ -99,25 +99,4 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             return EditorGUI.FloatField(rt, value);
         }
     }
-
-    public static partial class ControlExtensions
-    {
-        /// <summary>
-        /// Creates a new control of type <see cref="VectorControl"/> and adds it to the current container.
-        /// </summary>
-        /// <param name="container">Container of controls this method extends to.</param>
-        /// <param name="propertyName">Material property name.</param>
-        /// <param name="isXVisible">Shows the x component. Optional (Default true).</param>
-        /// <param name="isYVisible">Shows the y component. Optional (Default true).</param>
-        /// <param name="isZVisible">Shows the z component. Optional (Default true).</param>
-        /// <param name="isWVisible">Shows the w component. Optional (Default true).</param>
-        /// <returns>The <see cref="VectorControl"/> object that has been added.</returns>
-        public static VectorControl AddVectorControl(this IControlContainer container, string propertyName,
-            bool isXVisible = true, bool isYVisible = true, bool isZVisible = true, bool isWVisible = true)
-        {
-            VectorControl control = new VectorControl(propertyName, isXVisible, isYVisible, isZVisible, isWVisible);
-            container.Controls.Add(control);
-            return control;
-        }
-    }
 }

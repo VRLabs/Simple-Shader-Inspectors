@@ -10,9 +10,9 @@ namespace VRLabs.SimpleShaderInspectorsExamples
         private ToggleListControl _toggle;
         protected override void Start()
         {
-            this.AddTextureControl("_MainTex", "_Color").Alias("Main texture").SetUvOptions(true);
+            this.AddTextureControl("_MainTex", "_Color").Alias("Main texture").SetShowUvOptions(true);
             _toggle = this.AddToggleListControl("_EnableNormal").Alias("Normal toggle");
-            _toggle.AddTextureControl("_BumpMap", "_BumpIntensity").Alias("Normal map").SetUvOptions(true);
+            _toggle.AddTextureControl("_BumpMap", "_BumpIntensity").Alias("Normal map").SetShowUvOptions(true);
         }
 
         protected override void Header()
