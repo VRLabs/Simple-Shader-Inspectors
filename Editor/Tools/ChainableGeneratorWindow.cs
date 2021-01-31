@@ -3,8 +3,6 @@ using UnityEngine;
 using System;
 using System.IO;
 using System.Linq;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
 using System.Text;
 using System.Reflection;
 
@@ -110,7 +108,7 @@ namespace VRLabs.SimpleShaderInspectors.Tools
                 content.Append(Indentation(indent))
                     .AppendLine("}");
 
-                File.WriteAllText($"{destinationPath}\\{group.Key}.cs", content.ToString().Replace("\r\n", "\n"), System.Text.Encoding.UTF8);
+                File.WriteAllText($"{destinationPath}\\{group.Key}.Chainables.cs", content.ToString().Replace("\r\n", "\n"), System.Text.Encoding.UTF8);
             }
 
             AssetDatabase.Refresh();
