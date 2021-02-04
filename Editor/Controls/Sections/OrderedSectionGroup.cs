@@ -33,7 +33,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         {
             get
             {
-                List<SimpleControl> l = new List<SimpleControl>();
+                var l = new List<SimpleControl>();
                 l.AddRange(_controls);
                 l.AddRange(Sections);
                 return l;
@@ -215,22 +215,6 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
                     }
                 }
             }
-        }
-    }
-
-    public static partial class SectionControlExtensions
-    {
-        /// <summary>
-        /// Creates a new control of type <see cref="OrderedSectionGroup"/> and adds it to the current container.
-        /// </summary>
-        /// <param name="container">Container of controls this method extends to.</param>
-        /// <param name="alias">Alias of the control</param>
-        /// <returns>The <see cref="OrderedSectionGroup"/> object that has been added.</returns>
-        public static OrderedSectionGroup AddOrderedSectionGroup(this IControlContainer container, string alias)
-        {
-            OrderedSectionGroup sectionGroup = new OrderedSectionGroup(alias);
-            container.Controls.Add(sectionGroup);
-            return sectionGroup;
         }
     }
 }

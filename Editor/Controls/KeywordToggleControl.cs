@@ -58,19 +58,4 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             EditorGUI.showMixedValue = false;
         }
     }
-    public static partial class ControlExtensions
-    {
-        /// <summary>
-        /// Creates a new control of type <see cref="KeywordToggleControl"/> and adds it to the current container.
-        /// </summary>
-        /// <param name="container">Container of controls this method extends to.</param>
-        /// <param name="keyword">Keyword name.</param>
-        /// <returns>The <see cref="KeywordToggleControl"/> object that has been added.</returns>
-        public static KeywordToggleControl AddKeywordToggleControl(this IControlContainer container, string keyword)
-        {
-            KeywordToggleControl control = new KeywordToggleControl(keyword);
-            container.Controls.Add(control);
-            return control;
-        }
-    }
 }

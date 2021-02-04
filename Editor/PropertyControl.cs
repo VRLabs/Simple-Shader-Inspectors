@@ -55,28 +55,13 @@ namespace VRLabs.SimpleShaderInspectors
 
         internal void FetchProperty(MaterialProperty[] properties)
         {
-            if(_propertyIndex == -2)
+            if (_propertyIndex == -2)
                 SetPropertyIndex(properties);
 
             if (_propertyIndex != -1)
                 Property = properties[_propertyIndex];
             else
                 Property = null;
-        }
-    }
-    public static partial class BaseControlExtensions
-    {
-        /// <summary>
-        /// Creates a new control of type <see cref="PropertyControl"/> and adds it to the current container.
-        /// </summary>
-        /// <param name="container">Container of controls this method extends to.</param>
-        /// <param name="propertyName">Material property name.</param>
-        /// <returns>The <see cref="PropertyControl"/> object that has been added.</returns>
-        public static PropertyControl AddPropertyControl(this IControlContainer container, string propertyName)
-        {
-            PropertyControl control = new PropertyControl(propertyName);
-            container.Controls.Add(control);
-            return control;
         }
     }
 }

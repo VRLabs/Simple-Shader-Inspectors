@@ -109,7 +109,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             }
             EditorGUILayout.EndHorizontal();
 
-            if (!AreControlsInside)
+            if (!AreControlsInHeader)
             {
                 EditorGUILayout.EndVertical();
             }
@@ -119,47 +119,10 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
                 DrawControls(materialEditor);
                 EditorGUI.EndDisabledGroup();
             }
-            if (AreControlsInside)
+            if (AreControlsInHeader)
             {
                 EditorGUILayout.EndVertical();
             }
-        }
-    }
-
-    public static partial class SectionsControlExtensions
-    {
-        /// <summary>
-        /// Creates a new control of type <see cref="Section"/> and adds it to the current container.
-        /// </summary>
-        /// <param name="container">Container of controls this method extends to.</param>
-        /// <param name="activatePropertyName">Material property that will drive the section enable state</param>
-        /// <param name="enableValue">Float value that the material property will have if the section is disabled, optional (default: 0).</param>
-        /// <param name="disableValue">Float value that the material property will have if the section is enabled, optional (default: 1).</param>
-        /// <returns>The <see cref="Section"/> object that has been added.</returns>
-        public static ActivatableSection AddActivatableSection(this IControlContainer container, string activatePropertyName, float enableValue = 1, float disableValue = 0)
-        {
-            ActivatableSection control = new ActivatableSection(activatePropertyName, enableValue, disableValue);
-            container.Controls.Add(control);
-            return control;
-        }
-
-        /// <summary>
-        /// Creates a new control of type <see cref="Section"/> that is driven by a property and adds it to the current container.
-        /// </summary>
-        /// <param name="container">Container of controls this method extends to.</param>
-        /// <param name="activatePropertyName">Material property that will drive the section enable state</param>
-        /// <param name="showPropertyName">Material property that will drive the section open state</param>
-        /// <param name="enableValue">Float value that the material property will have if the section is disabled, optional (default: 0).</param>
-        /// <param name="disableValue">Float value that the material property will have if the section is enabled, optional (default: 1).</param>
-        /// <param name="hideValue">Float value that the material property will have if the section is collapsed, optional (default: 0).</param>
-        /// <param name="showValue">Float value that the material property will have if the section is visible, optional (default: 1).</param>
-        /// <returns>The <see cref="Section"/> object that has been added.</returns>
-        public static Section AddPDActivatableSection(this IControlContainer container, string activatePropertyName, string showPropertyName, float enableValue = 1,
-            float disableValue = 0, float hideValue = 0, float showValue = 1)
-        {
-            ActivatableSection control = new ActivatableSection(activatePropertyName, showPropertyName, enableValue, disableValue, hideValue, showValue);
-            container.Controls.Add(control);
-            return control;
         }
     }
 }

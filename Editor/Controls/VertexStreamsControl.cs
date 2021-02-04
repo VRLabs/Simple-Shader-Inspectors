@@ -73,14 +73,4 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             }
         }
     }
-
-    public static partial class ControlExtensions
-    {
-        public static VertexStreamsControl AddVertexStreamsControl(this IControlContainer container, string alias)
-        {
-            VertexStreamsControl control = new VertexStreamsControl(alias);
-            container.Controls.Add(control);
-            return control;
-        }
-    }
 }

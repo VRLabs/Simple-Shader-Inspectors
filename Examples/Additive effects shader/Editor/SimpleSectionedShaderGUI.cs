@@ -16,22 +16,22 @@ namespace VRLabs.SimpleShaderInspectorsExamples
         private Section _aChannel;
         protected override void Start()
         {
-            this.AddTextureControl("_MainTex", "_Color").Alias("Main texture").SetUvOptions(true);
+            this.AddTextureControl("_MainTex", "_Color").Alias("Main texture").SetShowUvOptions(true);
 
             _layersSection = this.AddActivatableSection("_AdditionalMasksEnable").Alias("Layers header")
-                .SetBackgroundColor(Color.cyan).IncludeControlsInHeader(true);
-            _layersSection.AddTextureGeneratorControl("_AdditionalMasks").Alias("Layers mask").SetUvOptions(true);
+                .SetBackgroundColor(Color.cyan).SetAreControlsInHeader(true);
+            _layersSection.AddTextureGeneratorControl("_AdditionalMasks").Alias("Layers mask").SetShowUvOptions(true);
             _layersSection.AddSpaceControl();
 
             _rChannel = _layersSection.AddSection("Red channel");
             _rChannel.AddColorControl("_RColor").Alias("Red color");
             _rChannel.AddToggleControl("_REmissive").Alias("Red emissive");
 
-            _gChannel = _layersSection.AddSection("Green channel").ShowFoldoutArrow(false);
+            _gChannel = _layersSection.AddSection("Green channel").SetShowFoldoutArrow(false);
             _gChannel.AddColorControl("_GColor").Alias("Green color");
             _gChannel.AddToggleControl("_GEmissive").Alias("Green emissive");
 
-            _bChannel = _layersSection.AddSection("Blue channel").SetBackGroundStyle(Styles.Bubble);
+            _bChannel = _layersSection.AddSection("Blue channel").SetBackgroundStyle(Styles.Bubble);
             _bChannel.AddColorControl("_BColor").Alias("Blue color");
             _bChannel.AddToggleControl("_BEmissive").Alias("Blue emissive");
 

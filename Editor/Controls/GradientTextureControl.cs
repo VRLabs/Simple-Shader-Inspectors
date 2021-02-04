@@ -39,28 +39,28 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <summary>
         /// GUIStyle for the gradient editor button.
         /// </summary>
-        public GUIStyle GradientButtonStyle { get; set; }
+        [Chainable] public GUIStyle GradientButtonStyle { get; set; }
         /// <summary>
         /// GUIStyle for the gradient editor save button.
         /// </summary>
-        public GUIStyle GradientSaveButtonStyle { get; set; }
+        [Chainable] public GUIStyle GradientSaveButtonStyle { get; set; }
         /// <summary>
         /// GUIStyle for the gradient editor background.
         /// </summary>
-        public GUIStyle GradientEditorStyle { get; set; }
+        [Chainable] public GUIStyle GradientEditorStyle { get; set; }
 
         /// <summary>
         /// Background color for the gradient editor button.
         /// </summary>
-        public Color GradientButtonColor { get; set; }
+        [Chainable] public Color GradientButtonColor { get; set; }
         /// <summary>
         /// Background color for the gradient editor save button.
         /// </summary>
-        public Color GradientSaveButtonColor { get; set; }
+        [Chainable] public Color GradientSaveButtonColor { get; set; }
         /// <summary>
         /// Background color for the gradient editor background.
         /// </summary>
-        public Color GradientEditorColor { get; set; }
+        [Chainable] public Color GradientEditorColor { get; set; }
 
         /// <summary>
         /// Additional localization strings.
@@ -449,101 +449,6 @@ namespace VRLabs.SimpleShaderInspectors.Controls
                 _previousTextures = null;
             }
             Selection.selectionChanged -= ResetGradientTexture;
-        }
-    }
-
-    public static partial class ControlExtensions
-    {
-        /// <summary>
-        /// Creates a new control of type <see cref="GradientTextureControl"/> and adds it to the current container.
-        /// </summary>
-        /// <param name="container">Container of controls this method extends to.</param>
-        /// <param name="propertyName">Gradient material property name.</param>
-        /// <param name="colorPropertyName">Gradient color property name.</param>
-        /// <returns>The <see cref="GradientTextureControl"/> object that has been added.</returns>
-        public static GradientTextureControl AddGradientTextureControl(this IControlContainer container, string propertyName, string colorPropertyName = null)
-        {
-            GradientTextureControl control = new GradientTextureControl(propertyName, colorPropertyName);
-            container.Controls.Add(control);
-            return control;
-        }
-
-        /// <summary>
-        /// Sets up the gradient editor toggle button.
-        /// </summary>
-        /// <param name="control">Control this method extends to.</param>
-        /// <param name="buttonStyle">Style with the background of the button.</param>
-        /// <typeparam name="T">Type of the control it extends to</typeparam>
-        /// <returns>The <see cref="GradientTextureControl"/> Object that has been modified.</returns>
-        public static T SetGradientButtonStyle<T>(this T control, GUIStyle buttonStyle) where T : GradientTextureControl
-        {
-            control.GradientButtonStyle = buttonStyle;
-            return control;
-        }
-
-        /// <summary>
-        /// Sets up the gradient texture save button.
-        /// </summary>
-        /// <param name="control">Control this method extends to.</param>
-        /// <param name="buttonStyle">Style with the background of the button.</param>
-        /// <typeparam name="T">Type of the control it extends to</typeparam>
-        /// <returns>The <see cref="GradientTextureControl"/> Object that has been modified.</returns>
-        public static T SetGradientSaveButtonStyle<T>(this T control, GUIStyle buttonStyle) where T : GradientTextureControl
-        {
-            control.GradientSaveButtonStyle = buttonStyle;
-            return control;
-        }
-
-        /// <summary>
-        /// Sets up the style of the gradient editor background.
-        /// </summary>
-        /// <param name="control">Control this method extends to.</param>
-        /// <param name="editorStyle">Style with the background of the gradient editor.</param>
-        /// <typeparam name="T">Type of the control it extends to</typeparam>
-        /// <returns>The <see cref="GradientTextureControl"/> Object that has been modified.</returns>
-        public static T SetGradientEditorStyle<T>(this T control, GUIStyle editorStyle) where T : GradientTextureControl
-        {
-            control.GradientEditorStyle = editorStyle;
-            return control;
-        }
-
-        /// <summary>
-        /// Sets up the gradient editor toggle button color.
-        /// </summary>
-        /// <param name="control">Section this method extends to.</param>
-        /// <param name="color">Color of the background.</param>
-        /// <typeparam name="T">The type of this class.</typeparam>
-        /// <returns>The <see cref="GradientTextureControl"/> Object that has been modified.</returns>
-        public static T SetGradientButtonColor<T>(this T control, Color color) where T : GradientTextureControl
-        {
-            control.GradientButtonColor = color;
-            return control;
-        }
-
-        /// <summary>
-        /// Sets up the gradient texture save button color.
-        /// </summary>
-        /// <param name="control">Section this method extends to.</param>
-        /// <param name="color">Color of the background.</param>
-        /// <typeparam name="T">The type of this class.</typeparam>
-        /// <returns>The <see cref="GradientTextureControl"/> Object that has been modified.</returns>
-        public static T SetGradientSaveButtonColor<T>(this T control, Color color) where T : GradientTextureControl
-        {
-            control.GradientSaveButtonColor = color;
-            return control;
-        }
-
-        /// <summary>
-        /// Sets up the style of the gradient editor background color.
-        /// </summary>
-        /// <param name="control">Control this method extends to.</param>
-        /// <param name="color">Color of the background.</param>
-        /// <typeparam name="T">The type of this class.</typeparam>
-        /// <returns>The <see cref="GradientTextureControl"/> Object that has been modified.</returns>
-        public static T SetGradientEditorColor<T>(this T control, Color color) where T : GradientTextureControl
-        {
-            control.GradientEditorColor = color;
-            return control;
         }
     }
 

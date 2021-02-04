@@ -44,19 +44,4 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             }
         }
     }
-
-    public static partial class ControlExtensions
-    {
-        /// <summary>
-        /// Creates a new control of type <see cref="LightmapEmissionControl"/> and adds it to the current container.
-        /// </summary>
-        /// <param name="control">Control this method extends to.</param>
-        /// <returns>The <see cref="LightmapEmissionControl"/> object that has been added.</returns>
-        public static LightmapEmissionControl AddLightmapEmissionControl(this IControlContainer container)
-        {
-            LightmapEmissionControl control = new LightmapEmissionControl();
-            container.Controls.Add(control);
-            return control;
-        }
-    }
 }

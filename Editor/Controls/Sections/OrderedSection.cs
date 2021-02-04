@@ -37,32 +37,32 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// <summary>
         /// GUIStyle for the UpIcon.
         /// </summary>
-        public GUIStyle UpIcon { get; set; }
+        [Chainable] public GUIStyle UpIcon { get; set; }
 
         /// <summary>
         /// GUIStyle for the DownIcon
         /// </summary>
-        public GUIStyle DownIcon { get; set; }
+        [Chainable] public GUIStyle DownIcon { get; set; }
 
         /// <summary>
         /// GUIStyle for the DeleteIcon
         /// </summary>
-        public GUIStyle DeleteIcon { get; set; }
+        [Chainable] public GUIStyle DeleteIcon { get; set; }
 
         /// <summary>
         /// Color of UpIcon.
         /// </summary>
-        public Color UpColor { get; set; }
+        [Chainable] public Color UpColor { get; set; }
 
         /// <summary>
         /// Color of Downicon.
         /// </summary>
-        public Color DownColor { get; set; }
+        [Chainable] public Color DownColor { get; set; }
 
         /// <summary>
         /// Color of Deleteicon.
         /// </summary>
-        public Color DeleteColor { get; set; }
+        [Chainable] public Color DeleteColor { get; set; }
 
         /// <summary>
         /// Constructor of <see cref="OrderedSection"/> used when creating a property driven ActivatableSection.
@@ -71,6 +71,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// <param name="showPropertyName">Material property that will drive the section open state</param>
         /// <param name="hideValue">Float value that the material property will have if the section is collapsed, optional (default: 0).</param>
         /// <param name="showValue">Float value that the material property will have if the section is visible, optional (default: 1).</param>
+        [LimitAccessScope(typeof(OrderedSectionGroup))]
         public OrderedSection(string activatePropertyName, string showPropertyName,
         float hideValue = 0, float showValue = 1) : base(showPropertyName, hideValue, showValue)
         {
@@ -89,6 +90,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// Default constructor of <see cref="OrderedSection"/>.
         /// </summary>
         /// <param name="activatePropertyName">Material property that will drive the section enable state</param>
+        [LimitAccessScope(typeof(OrderedSectionGroup))]
         public OrderedSection(string activatePropertyName) : base()
         {
             AdditionalProperties = new AdditionalProperty[1];
@@ -192,7 +194,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             }*/
             EditorGUILayout.EndHorizontal();
 
-            if (!AreControlsInside)
+            if (!AreControlsInHeader)
             {
                 EditorGUILayout.EndVertical();
             }
@@ -200,91 +202,10 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             {
                 DrawControls(materialEditor);
             }
-            if (AreControlsInside)
+            if (AreControlsInHeader)
             {
                 EditorGUILayout.EndVertical();
             }
-        }
-    }
-
-    public static partial class SectionsControlExtensions
-    {
-        /// <summary>
-        /// Creates a new control of type <see cref="Section"/> and adds it to the current container.
-        /// </summary>
-        /// <param name="container">Container of controls this method extends to.</param>
-        /// <param name="activatePropertyName">Material property that will drive the section enable state</param>
-        /// <returns>The <see cref="OrderedSection"/> object that has been added.</returns>
-        public static OrderedSection AddOrderedSection(this OrderedSectionGroup container, string activatePropertyName)
-        {
-            OrderedSection control = new OrderedSection(activatePropertyName);
-            container.Sections.Add(control);
-            return control;
-        }
-
-        /// <summary>
-        /// Creates a new control of type <see cref="Section"/> that is driven by a property and adds it to the current container.
-        /// </summary>
-        /// <param name="container">Container of controls this method extends to.</param>
-        /// <param name="activatePropertyName">Material property that will drive the section enable state</param>
-        /// <param name="showPropertyName">Material property that will drive the section open state</param>
-        /// <param name="hideValue">Float value that the material property will have if the section is collapsed, optional (default: 0).</param>
-        /// <param name="showValue">Float value that the material property will have if the section is visible, optional (default: 1).</param>
-        /// <returns>The <see cref="OrderedSection"/> object that has been added.</returns>
-        public static OrderedSection AddPDOrderedSection(this OrderedSectionGroup container, string activatePropertyName, string showPropertyName,
-            float hideValue = 0, float showValue = 1)
-        {
-            OrderedSection control = new OrderedSection(activatePropertyName, showPropertyName, hideValue, showValue);
-            container.Sections.Add(control);
-            return control;
-        }
-
-        /// <summary>
-        /// Sets up the color of the UpIcon.
-        /// </summary>
-        /// <param name="section">Section this method extends to.</param>
-        /// <param name="upIcon">Style with the background of the up icon.</param>
-        /// <param name="color">Color of the icon.</param>
-        /// <typeparam name="T">Type of the section object this method extends to.</typeparam>
-        /// <returns>The <see cref="OrderedSection"/> Object that has been modified.</returns>
-        public static T SetUpIcon<T>(this T section, GUIStyle upIcon, Color color = default) where T : OrderedSection
-        {
-            if (color == default) color = Color.white;
-            section.UpIcon = upIcon;
-            section.UpColor = color;
-            return section;
-        }
-
-        /// <summary>
-        /// Sets up the color of the DownIcon.
-        /// </summary>
-        /// <param name="section">Section this method extends to.</param>
-        /// <param name="downIcon">Style with the background of the down icon.</param>
-        /// <param name="color">Color of the icon.</param>
-        /// <typeparam name="T">Type of the section object this method extends to.</typeparam>
-        /// <returns>The <see cref="OrderedSection"/> Object that has been modified.</returns>
-        public static T SetDownIcon<T>(this T section, GUIStyle downIcon, Color color = default) where T : OrderedSection
-        {
-            if (color == default) color = Color.white;
-            section.DownIcon = downIcon;
-            section.DownColor = color;
-            return section;
-        }
-
-        /// <summary>
-        /// Sets up the color of the DeleteIcon.
-        /// </summary>
-        /// <param name="section">Section this method extends to.</param>
-        /// <param name="deleteIcon">Style with the background of the delete icon.</param>
-        /// <param name="color">Color of the icon.</param>
-        /// <typeparam name="T">Type of the section object this method extends to.</typeparam>
-        /// <returns>The <see cref="OrderedSection"/> Object that has been modified.</returns>
-        public static T SetDeleteIcon<T>(this T section, GUIStyle deleteIcon, Color color = default) where T : OrderedSection
-        {
-            if (color == default) color = Color.white;
-            section.DeleteIcon = deleteIcon;
-            section.DeleteColor = color;
-            return section;
         }
     }
 }

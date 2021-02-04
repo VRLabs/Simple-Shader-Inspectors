@@ -11,7 +11,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <summary>
         /// Boolan that determines if the color picker and the color field should show the alpha value.
         /// </summary>
-        public bool ShowAlphaValue { get; set; }
+        [Chainable] public bool ShowAlphaValue { get; set; }
 
         /// <summary>
         /// Selected color of the property stored in this control.
@@ -51,36 +51,6 @@ namespace VRLabs.SimpleShaderInspectors.Controls
                 materialEditor.RegisterPropertyChangeUndo(Property.displayName);
                 Property.colorValue = boxColor;
             }
-        }
-    }
-
-    public static partial class ControlExtensions
-    {
-        /// <summary>
-        /// Creates a new control of type <see cref="ColorControl"/> and adds it to the current container.
-        /// </summary>
-        /// <param name="container">Container of controls this method extends to.</param>
-        /// <param name="propertyName">Material property name.</param>
-        /// <param name="showAlphaValue">Show alpha value in the color picker, Optional (default: true).</param>
-        /// <returns>The <see cref="ColorControl"/> object that has been added.</returns>
-        public static ColorControl AddColorControl(this IControlContainer container, string propertyName, bool showAlphaValue = true)
-        {
-            ColorControl control = new ColorControl(propertyName, showAlphaValue);
-            container.Controls.Add(control);
-            return control;
-        }
-
-        /// <summary>
-        /// Sets up the generator background color.
-        /// </summary>
-        /// <param name="control">Control this method extends to.</param>
-        /// <param name="showAlpha">Boolean indicating if you want to show the alpha channel in the color selector.</param>
-        /// <typeparam name="T">The type of this class.</typeparam>
-        /// <returns>The <see cref="ColorControl"/> Object that has been modified.</returns>
-        public static T SetShowAlphaValue<T>(this T control, bool showAlpha) where T : ColorControl
-        {
-            control.ShowAlphaValue = showAlpha;
-            return control;
         }
     }
 }

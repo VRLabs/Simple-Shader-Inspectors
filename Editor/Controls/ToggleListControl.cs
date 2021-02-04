@@ -45,21 +45,4 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             }
         }
     }
-    public static partial class ControlExtensions
-    {
-        /// <summary>
-        /// Creates a new control of type <see cref="ToggleListControl"/> and adds it to the current container.
-        /// </summary>
-        /// <param name="container">Container of controls this method extends to.</param>
-        /// <param name="propertyName">Material property name.</param>
-        /// <param name="falseValue">Float value that the material property will have if the checkbox is not checked. Optional (default: 0).</param>
-        /// <param name="trueValue">Float value that the material property will have if the checkbox is checked. Optional (default: 1).</param>
-        /// <returns>The <see cref="ToggleListControl"/> object that has been added.</returns>
-        public static ToggleListControl AddToggleListControl(this IControlContainer container, string propertyName, float falseValue = 0, float trueValue = 1)
-        {
-            ToggleListControl control = new ToggleListControl(propertyName, falseValue, trueValue);
-            container.Controls.Add(control);
-            return control;
-        }
-    }
 }

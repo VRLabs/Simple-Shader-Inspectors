@@ -27,32 +27,32 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <summary>
         /// Boolean that defines if the control will show up an additional button to have access to the texture tiling and offset options.
         /// </summary>
-        public bool ShowUvOptions { get; set; }
+        [Chainable] public bool ShowUvOptions { get; set; }
 
         /// <summary>
         /// Boolean that defines if the control needs to render the second material property as an hdr color field,
         ///  only works if there is only one extra property and it's a color property.
         /// </summary>
-        public bool HasHDRColor { get; set; }
+        [Chainable] public bool HasHDRColor { get; set; }
 
         /// <summary>
         /// GUIStyle for the uv options button.
         /// </summary>
         /// <value></value>
-        public GUIStyle UVButtonStyle { get; set; }
+        [Chainable] public GUIStyle UVButtonStyle { get; set; }
         /// <summary>
         /// GUIStyle for the uv options button.
         /// </summary>
-        public GUIStyle UVAreaStyle { get; set; }
+        [Chainable] public GUIStyle UVAreaStyle { get; set; }
 
         /// <summary>
         /// Background color for the uv button.
         /// </summary>
-        public Color UVButtonColor { get; set; }
+        [Chainable] public Color UVButtonColor { get; set; }
         /// <summary>
         /// Background color for the uv button.
         /// </summary>
-        public Color UVAreaColor { get; set; }
+        [Chainable] public Color UVAreaColor { get; set; }
 
         /// <summary>
         /// Default constructor of <see cref="TextureControl"/>
@@ -132,102 +132,6 @@ namespace VRLabs.SimpleShaderInspectors.Controls
                 }
             }
             HasPropertyUpdated = EditorGUI.EndChangeCheck();
-        }
-    }
-
-    public static partial class ControlExtensions
-    {
-        /// <summary>
-        /// Creates a new control of type <see cref="TextureControl"/> and adds it to the current container.
-        /// </summary>
-        /// <param name="container">Container of controls this method extends to.</param>
-        /// <param name="propertyName">Material property name.</param>
-        /// <param name="extraPropertyName1">First additional material property name. Optional.</param>
-        /// <param name="extraPropertyName2">Second additional material property name. Optional.</param>
-        /// <returns>The <see cref="TextureControl"/> object that has been added.</returns>
-        public static TextureControl AddTextureControl(this IControlContainer container, string propertyName, string extraPropertyName1 = null, string extraPropertyName2 = null)
-        {
-            TextureControl control = new TextureControl(propertyName, extraPropertyName1, extraPropertyName2);
-            container.Controls.Add(control);
-            return control;
-        }
-
-        /// <summary>
-        /// Set if the additional tiling and offset button is visible
-        /// </summary>
-        /// <param name="control">Control this method extends to.</param>
-        /// <param name="showUvOptions">Boolean value</param>
-        /// <typeparam name="T">Type of the control it extends to</typeparam>
-        /// <returns>The <see cref="TextureControl"/> Object that has been modified.</returns>
-        public static T SetUvOptions<T>(this T control, bool showUvOptions) where T : TextureControl
-        {
-            control.ShowUvOptions = showUvOptions;
-            return control;
-        }
-
-        /// <summary>
-        /// Sets up the HasHDRColor bool.
-        /// </summary>
-        /// <param name="control">Control this method extends to.</param>
-        /// <param name="hasHDRColor">bool.</param>
-        /// <typeparam name="T">Type of the control it extends to</typeparam>
-        /// <returns>The <see cref="TextureControl"/> Object that has been modified.</returns>
-        public static T SetHasHDRColor<T>(this T control, bool hasHDRColor) where T : TextureControl
-        {
-            control.HasHDRColor = hasHDRColor;
-            return control;
-        }
-
-        /// <summary>
-        /// Sets up the additional uv button style.
-        /// </summary>
-        /// <param name="control">Control this method extends to.</param>
-        /// <param name="style">Style to use.</param>
-        /// <typeparam name="T">Type of the control it extends to</typeparam>
-        /// <returns>The <see cref="TextureControl"/> Object that has been modified.</returns>
-        public static T SetUVButtonStyle<T>(this T control, GUIStyle style) where T : TextureControl
-        {
-            control.UVButtonStyle = style;
-            return control;
-        }
-
-        /// <summary>
-        /// Sets up the additional uv tiling and offset area style.
-        /// </summary>
-        /// <param name="control">Control this method extends to.</param>
-        /// <param name="style">Style to use.</param>
-        /// <typeparam name="T">Type of the control it extends to</typeparam>
-        /// <returns>The <see cref="TextureControl"/> Object that has been modified.</returns>
-        public static T SetUVAreaStyle<T>(this T control, GUIStyle style) where T : TextureControl
-        {
-            control.UVAreaStyle = style;
-            return control;
-        }
-
-        /// <summary>
-        /// Sets up the uv button color.
-        /// </summary>
-        /// <param name="section">Section this method extends to.</param>
-        /// <param name="color">Color of the background.</param>
-        /// <typeparam name="T">The type of this class.</typeparam>
-        /// <returns>The <see cref="TextureControl"/> Object that has been modified.</returns>
-        public static T SetUVButtonColor<T>(this T control, Color color) where T : TextureGeneratorControl
-        {
-            control.UVButtonColor = color;
-            return control;
-        }
-
-        /// <summary>
-        /// Sets up  the additional uv tiling and offset area background color.
-        /// </summary>
-        /// <param name="section">Section this method extends to.</param>
-        /// <param name="color">Color of the background.</param>
-        /// <typeparam name="T">The type of this class.</typeparam>
-        /// <returns>The <see cref="TextureControl"/> Object that has been modified.</returns>
-        public static T SetUVAreaColor<T>(this T control, Color color) where T : TextureGeneratorControl
-        {
-            control.UVButtonColor = color;
-            return control;
         }
     }
 }
