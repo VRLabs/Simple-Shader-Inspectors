@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using UnityEditorInternal;
 
 namespace VRLabs.SimpleShaderInspectors.Tools
 {
@@ -13,7 +14,7 @@ namespace VRLabs.SimpleShaderInspectors.Tools
     /// </summary>
     public class LocalizationEditorWindow : EditorWindow
     {
-        [MenuItem("VRLabs/Simple Shader Inspectors/Localization file editor")]
+        [MenuItem("VRLabs/Simple Shader Inspectors/Localization file editord")]
         private static LocalizationEditorWindow CreateWindow()
         {
             LocalizationEditorWindow window = EditorWindow.GetWindow<LocalizationEditorWindow>();
@@ -21,57 +22,111 @@ namespace VRLabs.SimpleShaderInspectors.Tools
             return window;
         }
 
+        private PropertyInfo _activeProperty;
+        private bool _enableNameEditing = false;
+        private ReorderableList _list;
+        private List<PropertyInfo> _properties;
+        private GUIStyle _rightSubLabel;
         private string _selectedPath = null;
-        private LocalizationFile _localization;
         private Vector2 _scroll;
+
+        private void OnEnable()
+        {
+            _rightSubLabel = new GUIStyle { alignment = TextAnchor.MiddleRight };
+            _rightSubLabel.normal.textColor = Color.gray;
+        }
 
         void OnGUI()
         {
-            if (_selectedPath != null)
-            {
+            EditorGUILayout.Space();
+            if (!string.IsNullOrEmpty(_selectedPath))
                 EditorGUILayout.BeginHorizontal();
-            }
+
             if (GUILayout.Button("Select Localization file"))
             {
                 string path = EditorUtility.OpenFilePanel("Select localization file to edit", "Assets", "json");
-                if (path.Length != 0)
-                {
-                    _selectedPath = path;
-                    _localization = JsonUtility.FromJson<LocalizationFile>(File.ReadAllText(_selectedPath));
-                }
+                LoadReorderableList(path);
             }
-            if (_selectedPath != null)
+
+            if (!string.IsNullOrEmpty(_selectedPath))
             {
                 if (GUILayout.Button("Save currently open file"))
-                {
-                    File.WriteAllText(_selectedPath, JsonUtility.ToJson(_localization, true));
-                }
+                    File.WriteAllText(_selectedPath, JsonUtility.ToJson(new LocalizationFile { Properties = _properties.ToArray() }, true));
 
                 EditorGUILayout.EndHorizontal();
                 GUILayout.Label("Selected localization file: " + _selectedPath, Styles.MultilineLabel);
                 EditorGUILayout.Space();
 
-                _scroll = EditorGUILayout.BeginScrollView(_scroll);
-
-                foreach (var property in _localization.Properties)
+                if (_activeProperty != null)
                 {
                     EditorGUILayout.BeginVertical("box");
 
-                    EditorGUILayout.LabelField(property.Name, EditorStyles.boldLabel);
+                    EditorGUILayout.LabelField(_activeProperty.Name, EditorStyles.boldLabel);
 
-                    //We should let the inspector automatically generate the names
-                    //property.Name = EditorGUILayout.TextField("Name", property.Name);
-                    property.DisplayName = EditorGUILayout.TextField("Display Name", property.DisplayName);
+                    EditorGUILayout.BeginHorizontal();
+                    EditorGUI.BeginDisabledGroup(!_enableNameEditing);
+                    _activeProperty.Name = EditorGUILayout.TextField("Name", _activeProperty.Name);
+                    EditorGUI.EndDisabledGroup();
+
+                    // Unity default lock icon style alignment sucks, but i also suck at making icons so here's some GUILayout bs to align unity's one.
+                    EditorGUILayout.BeginVertical(GUILayout.Width(18));
+                    GUILayout.Space(3);
+                    _enableNameEditing = !GUILayout.Toggle(!_enableNameEditing, "", "IN LockButton", GUILayout.Width(14), GUILayout.Height(15));
+                    EditorGUILayout.EndVertical();
+                    EditorGUILayout.EndHorizontal();
+
+                    _activeProperty.DisplayName = EditorGUILayout.TextField("Display Name", _activeProperty.DisplayName);
+
                     EditorGUILayout.BeginHorizontal();
                     GUILayout.Label("Tooltip", GUILayout.Width(146));
-                    property.Tooltip = EditorGUILayout.TextArea(property.Tooltip);
+                    _activeProperty.Tooltip = EditorGUILayout.TextArea(_activeProperty.Tooltip);
                     EditorGUILayout.EndHorizontal();
 
                     EditorGUILayout.EndVertical();
                     EditorGUILayout.Space();
                 }
+                _scroll = EditorGUILayout.BeginScrollView(_scroll);
+                if (_list is null)
+                    LoadReorderableList(_selectedPath);
+
+                _list?.DoLayoutList();
+                GUILayout.Space(20);
                 EditorGUILayout.EndScrollView();
             }
+        }
+
+        private void LoadReorderableList(string path)
+        {
+            if (!string.IsNullOrWhiteSpace(path) && File.Exists(path))
+            {
+                _selectedPath = path;
+                var localization = JsonUtility.FromJson<LocalizationFile>(File.ReadAllText(_selectedPath));
+                _properties = new List<PropertyInfo>(localization.Properties);
+
+                _list = new ReorderableList(_properties, typeof(PropertyInfo), true, false, true, true)
+                {
+                    drawElementCallback = DrawListItems,
+                    onSelectCallback = (ReorderableList l) =>
+                    {
+                        _activeProperty = _properties[l.index];
+                        _enableNameEditing = false;
+                    }
+                };
+                _list.index = 0;
+                _activeProperty = _properties[0];
+            }
+            else
+            {
+                _selectedPath = null;
+            }
+        }
+
+        private void DrawListItems(Rect rect, int index, bool isActive, bool isFocused)
+        {
+            var property = _properties[index];
+
+            GUI.Label(new Rect(rect.x, rect.y, rect.width / 2, EditorGUIUtility.singleLineHeight), property.DisplayName, EditorStyles.boldLabel);
+            GUI.Label(new Rect(rect.x + rect.width / 2, rect.y, rect.width / 2, EditorGUIUtility.singleLineHeight), property.Name, _rightSubLabel);
         }
     }
 }
