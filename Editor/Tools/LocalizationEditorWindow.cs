@@ -14,7 +14,7 @@ namespace VRLabs.SimpleShaderInspectors.Tools
     /// </summary>
     public class LocalizationEditorWindow : EditorWindow
     {
-        [MenuItem("VRLabs/Simple Shader Inspectors/Localization file editord")]
+        [MenuItem("VRLabs/Simple Shader Inspectors/Localization file editor")]
         private static LocalizationEditorWindow CreateWindow()
         {
             LocalizationEditorWindow window = EditorWindow.GetWindow<LocalizationEditorWindow>();
@@ -52,6 +52,14 @@ namespace VRLabs.SimpleShaderInspectors.Tools
             {
                 if (GUILayout.Button("Save currently open file"))
                     File.WriteAllText(_selectedPath, JsonUtility.ToJson(new LocalizationFile { Properties = _properties.ToArray() }, true));
+
+                if (GUILayout.Button("Save as new file"))
+                {
+                    string path = EditorUtility.SaveFilePanel("Save localization", Path.GetDirectoryName(_selectedPath), "New language", "json");
+                    File.WriteAllText(path, JsonUtility.ToJson(new LocalizationFile { Properties = _properties.ToArray() }, true));
+                    _selectedPath = path;
+                    AssetDatabase.Refresh();
+                }
 
                 EditorGUILayout.EndHorizontal();
                 GUILayout.Label("Selected localization file: " + _selectedPath, Styles.MultilineLabel);
