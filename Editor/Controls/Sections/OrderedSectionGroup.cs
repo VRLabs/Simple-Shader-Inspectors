@@ -4,18 +4,16 @@ using UnityEngine;
 namespace VRLabs.SimpleShaderInspectors.Controls.Sections
 {
     /// <summary>
-    /// Control that contains a list of OrderedSections and controls thir lifecycle
+    /// Control that contains a list of OrderedSections and controls their lifecycle
     /// </summary>
-    public class OrderedSectionGroup : SimpleControl, IControlContainer
+    public class OrderedSectionGroup : SimpleControl, IControlContainer<OrderedSection>
     {
-        private List<SimpleControl> _controls;
-
-        private bool? areNewSectionsAvailable;
+        private bool? _areNewSectionsAvailable;
 
         /// <summary>
         /// List of available Ordered Sections
         /// </summary>
-        public List<OrderedSection> Sections { get; set; }
+        public List<OrderedSection> Controls { get; set; }
 
         /// <summary>
         /// GUIStyle for the add button
@@ -26,29 +24,14 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// Color of the add button.
         /// </summary>
         public Color ButtonColor { get; set; }
-        /// <summary>
-        /// LIst of controls. You can't use it normally.
-        /// </summary>
-        public List<SimpleControl> Controls
-        {
-            get
-            {
-                var l = new List<SimpleControl>();
-                l.AddRange(_controls);
-                l.AddRange(Sections);
-                return l;
-            }
-            set => _controls = value;
-        }
 
         /// <summary>
-        ///  Default contructor of <see cref="OrderedSectionGroup"/>.
+        ///  Default constructor of <see cref="OrderedSectionGroup"/>.
         /// </summary>
         /// <param name="alias">Alias of the control</param>
         public OrderedSectionGroup(string alias) : base(alias)
         {
-            _controls = new List<SimpleControl>();
-            Sections = new List<OrderedSection>();
+            Controls = new List<OrderedSection>();
 
             ButtonStyle = new GUIStyle(Styles.Bubble);
             ButtonColor = Color.white;
@@ -62,43 +45,43 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         {
             bool needsOrderUpdate = false;
             bool needsSectionAvailabilityUpdate = false;
-            for (int i = 0; i < Sections.Count; i++)
+            for (int i = 0; i < Controls.Count; i++)
             {
-                Sections[i].PredrawUpdate(materialEditor);
+                Controls[i].PredrawUpdate(materialEditor);
             }
-            if (areNewSectionsAvailable == null)
+            if (_areNewSectionsAvailable == null)
             {
                 UpdateSectionsOrder();
             }
-            for (int i = 0; i < Sections.Count; i++)
+            for (int i = 0; i < Controls.Count; i++)
             {
-                if (Sections[i].Enabled)
+                if (Controls[i].Enabled)
                 {
-                    Sections[i].DrawControl(materialEditor);
-                    if (Sections[i].PushState != 0)
+                    Controls[i].DrawControl(materialEditor);
+                    if (Controls[i].PushState != 0)
                     {
-                        if (Sections[i].PushState == 1 && i < Sections.Count - 1)
+                        if (Controls[i].PushState == 1 && i < Controls.Count - 1)
                         {
-                            Sections[i].AdditionalProperties[0].Property.floatValue++;
-                            Sections[i + 1].AdditionalProperties[0].Property.floatValue--;
+                            Controls[i].AdditionalProperties[0].Property.floatValue++;
+                            Controls[i + 1].AdditionalProperties[0].Property.floatValue--;
                         }
-                        else if (Sections[i].PushState == -1 && i > 0 && Sections[i - 1].Enabled)
+                        else if (Controls[i].PushState == -1 && i > 0 && Controls[i - 1].Enabled)
                         {
-                            Sections[i].AdditionalProperties[0].Property.floatValue--;
-                            Sections[i - 1].AdditionalProperties[0].Property.floatValue++;
+                            Controls[i].AdditionalProperties[0].Property.floatValue--;
+                            Controls[i - 1].AdditionalProperties[0].Property.floatValue++;
                         }
-                        Sections[i].PushState = 0;
+                        Controls[i].PushState = 0;
                         needsOrderUpdate = true;
                     }
-                    else if (Sections[i].HasActivatePropertyUpdated)
+                    else if (Controls[i].HasActivatePropertyUpdated)
                     {
                         needsSectionAvailabilityUpdate = true;
                     }
                 }
             }
-            if (areNewSectionsAvailable == null || needsSectionAvailabilityUpdate)
+            if (_areNewSectionsAvailable == null || needsSectionAvailabilityUpdate)
             {
-                areNewSectionsAvailable = AreNewSectionsAvailable();
+                _areNewSectionsAvailable = AreNewSectionsAvailable();
             }
             if (needsOrderUpdate)
             {
@@ -110,7 +93,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
 
         private void DrawAddButton()
         {
-            if (areNewSectionsAvailable ?? true)
+            if (_areNewSectionsAvailable ?? true)
             {
                 Color bCol = GUI.backgroundColor;
                 GUI.backgroundColor = ButtonColor;
@@ -118,7 +101,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
                 if (buttonPressed)
                 {
                     GenericMenu menu = new GenericMenu();
-                    foreach (OrderedSection section in Sections)
+                    foreach (OrderedSection section in Controls)
                     {
                         if (HasAtLeastOneDisabled(section))
                         {
@@ -140,15 +123,15 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             OrderedSection section = (OrderedSection)sectionVariable;
             section.AdditionalProperties[0].Property.floatValue = 753;
             section.HasSectionTurnedOn = true;
-            areNewSectionsAvailable = AreNewSectionsAvailable();
+            _areNewSectionsAvailable = AreNewSectionsAvailable();
             UpdateSectionsOrder();
         }
 
         private void UpdateSectionsOrder()
         {
-            Sections.Sort(CompareSectionsOrder);
+            Controls.Sort(CompareSectionsOrder);
             int j = 1;
-            foreach (OrderedSection section in Sections)
+            foreach (var section in Controls)
             {
                 if (section.AdditionalProperties[0].Property.floatValue != 0 && !section.AdditionalProperties[0].Property.hasMixedValue)
                 {
@@ -161,7 +144,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         private bool AreNewSectionsAvailable()
         {
             bool yesThereAre = false;
-            foreach (OrderedSection section in Sections)
+            foreach (var section in Controls)
             {
                 yesThereAre = HasAtLeastOneDisabled(section);
                 if (yesThereAre) break;
@@ -191,30 +174,36 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             if (x == null)
             {
                 if (y == null) return 0;
-                else return -1;
+                return -1;
             }
-            else
-            {
-                if (y == null)
-                {
-                    return 1;
-                }
-                else
-                {
-                    if (x.AdditionalProperties[0].Property.floatValue > y.AdditionalProperties[0].Property.floatValue)
-                    {
-                        return 1;
-                    }
-                    else if (x.AdditionalProperties[0].Property.floatValue < y.AdditionalProperties[0].Property.floatValue)
-                    {
-                        return -1;
-                    }
-                    else
-                    {
-                        return 0;
-                    }
-                }
-            }
+
+            if (y == null) return 1;
+            if (x.AdditionalProperties[0].Property.floatValue > y.AdditionalProperties[0].Property.floatValue)
+                return 1;
+            if (x.AdditionalProperties[0].Property.floatValue < y.AdditionalProperties[0].Property.floatValue)
+                return -1;
+            return 0;
+        }
+        
+        public IEnumerable<OrderedSection> GetControlList()
+        {
+            return Controls;
+        }
+
+        public void AddControl(OrderedSection control)
+        {
+            Controls.Add(control);
+        }
+        
+        void IControlContainer.AddControl(SimpleControl control)
+        {
+            if(control is OrderedSection section)
+                Controls.Add(section);
+        }
+
+        IEnumerable<SimpleControl> IControlContainer.GetControlList()
+        {
+            return Controls;
         }
     }
 }

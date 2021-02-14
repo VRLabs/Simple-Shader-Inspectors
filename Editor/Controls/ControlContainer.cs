@@ -34,5 +34,15 @@ namespace VRLabs.SimpleShaderInspectors.Controls
                 control.DrawControl(materialEditor);
             }
         }
+
+        public void AddControl(SimpleControl control)
+        {
+            Controls.Add(control);
+        }
+
+        public IEnumerable<SimpleControl> GetControlList()
+        {
+            return Controls;
+        }
     }
 }

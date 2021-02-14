@@ -44,5 +44,15 @@ namespace VRLabs.SimpleShaderInspectors.Controls
                 EditorGUI.indentLevel--;
             }
         }
+        
+        public void AddControl(SimpleControl control)
+        {
+            Controls.Add(control);
+        }
+
+        public IEnumerable<SimpleControl> GetControlList()
+        {
+            return Controls;
+        }
     }
 }
