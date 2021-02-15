@@ -144,7 +144,7 @@ namespace VRLabs.SimpleShaderInspectors.Tools
             if (limitScopeAttribute != null)
                 typeName = limitScopeAttribute.BaseType.Name;
             else
-                typeName = "IControlContainer";
+                typeName = "VRLabs.SimpleShaderInspectors.IControlContainer";
 
 
             // Chainable constructor header
@@ -183,7 +183,7 @@ namespace VRLabs.SimpleShaderInspectors.Tools
             }
             content.AppendLine(");")
                 .Append(Indentation(indentLevel))
-                .AppendLine("container.Controls.Add(control);")
+                .AppendLine("container.AddControl(control);")
                 .Append(Indentation(indentLevel))
                 .AppendLine("return control;");
             indentLevel--;

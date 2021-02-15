@@ -252,5 +252,15 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
                 Property.floatValue = Show ? showValue : hideValue;
             }
         }
+        
+        public void AddControl(SimpleControl control)
+        {
+            Controls.Add(control);
+        }
+
+        public IEnumerable<SimpleControl> GetControlList()
+        {
+            return Controls;
+        }
     }
 }

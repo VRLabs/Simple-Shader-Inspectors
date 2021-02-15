@@ -26,8 +26,9 @@ namespace VRLabs.SimpleShaderInspectors
                         add.AdditionalProperties[j].FetchProperty(properties);
                 }
 
-                if (control is IControlContainer con)
-                    con.Controls.FetchProperties(properties);
+                if (control is IControlContainer con) 
+                    con.GetControlList().FetchProperties(properties);
+
             }
         }
 
@@ -43,7 +44,7 @@ namespace VRLabs.SimpleShaderInspectors
             {
                 control.Inspector = inspector;
                 if (recursive && control is IControlContainer con)
-                    con.Controls.SetInspector(inspector);
+                    con.GetControlList().SetInspector(inspector);
             }
         }
 
@@ -83,7 +84,7 @@ namespace VRLabs.SimpleShaderInspectors
                     nonAnimatablePropertyControls.Add(c);
 
                 if(control is IControlContainer container)
-                    nonAnimatablePropertyControls.AddRange(container.Controls.FindNonAnimatablePropertyControls());
+                    nonAnimatablePropertyControls.AddRange(container.GetControlList().FindNonAnimatablePropertyControls());
             }
             return nonAnimatablePropertyControls;
         }
@@ -108,10 +109,10 @@ namespace VRLabs.SimpleShaderInspectors
             if (updateOutsideAnimation)
             {
                 // Reflection bs to get which animation window is recording
-                System.Reflection.Assembly editorAssembly = typeof(Editor).Assembly;
-                Type windowType = editorAssembly.GetType("UnityEditorInternal.AnimationWindowState");
+                var editorAssembly = typeof(Editor).Assembly;
+                var windowType = editorAssembly.GetType("UnityEditorInternal.AnimationWindowState");
 
-                System.Reflection.PropertyInfo isRecordingProp = windowType.GetProperty
+                var isRecordingProp = windowType.GetProperty
                     ("recording", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.Public);
 
                 UnityEngine.Object[] windowInstances = Resources.FindObjectsOfTypeAll(windowType);

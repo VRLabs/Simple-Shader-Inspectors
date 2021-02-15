@@ -2,29 +2,29 @@
 {
     public static partial class Chainables
     {
-        public static ActivatableSection AddActivatableSection(this IControlContainer container, System.String activatePropertyName, System.String showPropertyName, System.Single enableValue = 1, System.Single disableValue = 0, System.Single hideValue = 0, System.Single showValue = 1)
+        public static ActivatableSection AddActivatableSection(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String activatePropertyName, System.String showPropertyName, System.Single enableValue = 1, System.Single disableValue = 0, System.Single hideValue = 0, System.Single showValue = 1)
         {
             var control = new ActivatableSection(activatePropertyName, showPropertyName, enableValue, disableValue, hideValue, showValue);
-            container.Controls.Add(control);
+            container.AddControl(control);
             return control;
         }
-        public static ActivatableSection AddActivatableSection(this IControlContainer container, System.String activatePropertyName, System.Single enableValue = 1, System.Single disableValue = 0)
+        public static ActivatableSection AddActivatableSection(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String activatePropertyName, System.Single enableValue = 1, System.Single disableValue = 0)
         {
             var control = new ActivatableSection(activatePropertyName, enableValue, disableValue);
-            container.Controls.Add(control);
+            container.AddControl(control);
             return control;
         }
 
         public static OrderedSection AddOrderedSection(this OrderedSectionGroup container, System.String activatePropertyName, System.String showPropertyName, System.Single hideValue = 0, System.Single showValue = 1)
         {
             var control = new OrderedSection(activatePropertyName, showPropertyName, hideValue, showValue);
-            container.Controls.Add(control);
+            container.AddControl(control);
             return control;
         }
         public static OrderedSection AddOrderedSection(this OrderedSectionGroup container, System.String activatePropertyName)
         {
             var control = new OrderedSection(activatePropertyName);
-            container.Controls.Add(control);
+            container.AddControl(control);
             return control;
         }
         public static T SetUpIcon<T>(this T control, UnityEngine.GUIStyle property) where T : OrderedSection
@@ -58,23 +58,23 @@
             return control;
         }
 
-        public static OrderedSectionGroup AddOrderedSectionGroup(this IControlContainer container, System.String alias)
+        public static OrderedSectionGroup AddOrderedSectionGroup(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String alias)
         {
             var control = new OrderedSectionGroup(alias);
-            container.Controls.Add(control);
+            container.AddControl(control);
             return control;
         }
 
-        public static Section AddSection(this IControlContainer container, System.String propertyName, System.Single hideValue = 0, System.Single showValue = 1)
+        public static Section AddSection(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String propertyName, System.Single hideValue = 0, System.Single showValue = 1)
         {
             var control = new Section(propertyName, hideValue, showValue);
-            container.Controls.Add(control);
+            container.AddControl(control);
             return control;
         }
-        public static Section AddSection(this IControlContainer container)
+        public static Section AddSection(this VRLabs.SimpleShaderInspectors.IControlContainer container)
         {
             var control = new Section();
-            container.Controls.Add(control);
+            container.AddControl(control);
             return control;
         }
         public static T SetLabelStyle<T>(this T control, UnityEngine.GUIStyle property) where T : Section

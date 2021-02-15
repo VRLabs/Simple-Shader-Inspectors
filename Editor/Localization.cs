@@ -81,9 +81,9 @@ namespace VRLabs.SimpleShaderInspectors
 
                         break;
 
-                    // Recursively se property localization for all properties inside this control if it has the IControlContainer interface.
+                    // Recursively set property localization for all properties inside this control if it has the IControlContainer interface.
                     case IControlContainer container:
-                        missingInfo.AddRange(SetPropertiesLocalization(container.Controls, propertyInfos));
+                        missingInfo.AddRange(SetPropertiesLocalization(container.GetControlList(), propertyInfos));
                         break;
                 }
             }
