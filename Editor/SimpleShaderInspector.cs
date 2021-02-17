@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using System;
+using UnityEditor.Experimental.TerrainAPI;
 using Object = UnityEngine.Object;
 
 
@@ -123,15 +124,7 @@ namespace VRLabs.SimpleShaderInspectors
                 SSIHelper.UpdateNonAnimatableProperties(_nonAnimatablePropertyControls, materialEditor, NeedsNonAnimatableUpdate);
 
             // Draw footer and inspector logo.
-            GUILayout.FlexibleSpace();
-            GUILayout.BeginHorizontal();
-            Footer();
-            GUILayout.FlexibleSpace();
-            GUILayout.BeginVertical();
-            GUILayout.FlexibleSpace();
-            SSILogo();
-            GUILayout.EndVertical();
-            GUILayout.EndHorizontal();
+            DrawFooter(materialEditor);
 
             CheckChanges(materialEditor);
         }
@@ -218,11 +211,31 @@ namespace VRLabs.SimpleShaderInspectors
                 base.OnGUI(materialEditor, properties);
             }
         }
+        
+        // Draws the footer
+        private void DrawFooter(MaterialEditor materialEditor)
+        {
+            GUILayout.FlexibleSpace();
+            EditorGUILayout.BeginHorizontal();
+            
+            EditorGUILayout.BeginVertical();
+            Footer();
+            EditorGUILayout.EndVertical();
+            
+            GUILayout.FlexibleSpace();
+            // BTW i hate laying out stuff at the bottom right with unity's bs gui
+            EditorGUILayout.BeginVertical(GUILayout.MinHeight(42));
+            SSILogo(32);
+            EditorGUILayout.EndVertical();
+            
+            EditorGUILayout.EndHorizontal();
+        }
 
         // Draws the SSI logo
-        private void SSILogo()
+        private void SSILogo(float logoHeight)
         {
-            if (GUILayout.Button(new GUIContent(_logo, "Check out Simple Shader Inspectors!"), "label", GUILayout.Width(32), GUILayout.Height(32)))
+            if (GUILayout.Button(new GUIContent(_logo, "Check out Simple Shader Inspectors!"), Styles.BottomCenterLabel, 
+                GUILayout.Width(logoHeight), GUILayout.MaxHeight(logoHeight+10), GUILayout.ExpandHeight(true)))
                 Application.OpenURL("https://github.com/VRLabs/SimpleShaderInspectors");
         }
 
