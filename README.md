@@ -13,9 +13,6 @@
   <a href="https://github.com/VRLabs/SimpleShaderInspectors/releases/latest">
     <img src="https://img.shields.io/badge/Unity-2018.4-green.svg?style=flat-square">
   </a>
-  <a href="https://github.com/VRLabs/SimpleShaderInspectors/releases/latest">
-    <img src="https://img.shields.io/badge/Unity-2019.4-green.svg?style=flat-square">
-  </a>
   <br />
   <a href="https://github.com/VRLabs/SimpleShaderInspectors/issues">
     <img src="https://img.shields.io/github/issues-raw/VRLabs/SimpleShaderInspectors.svg?style=flat-square">
@@ -80,7 +77,7 @@ Right now Simple Shader Inspectors is in a functional beta state, what does it m
 
 ## License
 
-Simple Shader Inspectors is available as-is under MIT. For more information see [LICENSE](https://github.com/VRLabs/SimpleShaderInspectors/blob/develop/LICENSE).
+Simple Shader Inspectors is available as-is under MIT. For more information see [LICENSE](https://github.com/VRLabs/SimpleShaderInspectors/blob/master/LICENSE).
 
 ## Downloads
 
