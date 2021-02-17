@@ -55,25 +55,10 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             EditorGUI.indentLevel = 0;
             // I'll be honest, it looks somewhat retarded, but it's not worth to make an array and cycle it, it would waste more resources.
             Vector4 vector = new Vector4(0, 0, 0, 0);
-            if (IsXVisible)
-                vector.x = DrawSingleField("X", Property.vectorValue.x, GetFragmentedRect(r, _visibleCount, i++));
-            else
-                vector.x = Property.vectorValue.x;
-
-            if (IsYVisible)
-                vector.y = DrawSingleField("Y", Property.vectorValue.y, GetFragmentedRect(r, _visibleCount, i++));
-            else
-                vector.y = Property.vectorValue.y;
-
-            if (IsZVisible)
-                vector.z = DrawSingleField("Z", Property.vectorValue.z, GetFragmentedRect(r, _visibleCount, i++));
-            else
-                vector.z = Property.vectorValue.z;
-
-            if (IsWVisible)
-                vector.w = DrawSingleField("W", Property.vectorValue.w, GetFragmentedRect(r, _visibleCount, i++));
-            else
-                vector.w = Property.vectorValue.w;
+            vector.x = IsXVisible ? DrawSingleField("X", Property.vectorValue.x, GetFragmentedRect(r, _visibleCount, i++)) : Property.vectorValue.x;
+            vector.y = IsYVisible ? DrawSingleField("Y", Property.vectorValue.y, GetFragmentedRect(r, _visibleCount, i++)) : Property.vectorValue.y;
+            vector.z = IsZVisible ? DrawSingleField("Z", Property.vectorValue.z, GetFragmentedRect(r, _visibleCount, i++)) : Property.vectorValue.z;
+            vector.w = IsWVisible ? DrawSingleField("W", Property.vectorValue.w, GetFragmentedRect(r, _visibleCount, i++)) : Property.vectorValue.w;
 
             HasPropertyUpdated = EditorGUI.EndChangeCheck();
             if (HasPropertyUpdated)

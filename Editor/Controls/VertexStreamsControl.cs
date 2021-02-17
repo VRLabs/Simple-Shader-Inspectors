@@ -38,18 +38,17 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             {
                 Undo.RecordObjects(_renderers.Where(r => r != null).ToArray(), AdditionalContent[0].Content.text);
 
-                foreach (ParticleSystemRenderer renderer in _renderers)
-                    renderer?.SetActiveVertexStreams(_streams);
+                foreach (var renderer in _renderers)
+                    if(renderer != null)
+                        renderer.SetActiveVertexStreams(_streams);
             }
         }
 
         public VertexStreamsControl AddVertexStream(ParticleSystemVertexStream stream)
         {
-            if (!_streams.Contains(stream))
-            {
-                _streams.Add(stream);
-                _streams = _streams.OrderBy(x => x).ToList();
-            }
+            if (_streams.Contains(stream)) return this;
+            _streams.Add(stream);
+            _streams = _streams.OrderBy(x => x).ToList();
             return this;
         }
 
@@ -62,7 +61,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         private void CacheRenderers(Material material)
         {
             ParticleSystemRenderer[] renderers = Resources.FindObjectsOfTypeAll(typeof(ParticleSystemRenderer)) as ParticleSystemRenderer[];
-            foreach (ParticleSystemRenderer renderer in renderers)
+            foreach (var renderer in renderers)
             {
                 var go = renderer.gameObject;
                 if (go.hideFlags == HideFlags.NotEditable || go.hideFlags == HideFlags.HideAndDontSave)

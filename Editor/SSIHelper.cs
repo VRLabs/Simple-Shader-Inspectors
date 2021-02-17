@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace VRLabs.SimpleShaderInspectors
 {
@@ -21,14 +22,11 @@ namespace VRLabs.SimpleShaderInspectors
                     pr.FetchProperty(properties);
 
                 if (control is IAdditionalProperties add)
-                {
-                    for (int j = 0; j < add.AdditionalProperties.Length; j++)
-                        add.AdditionalProperties[j].FetchProperty(properties);
-                }
+                    foreach (var t in add.AdditionalProperties)
+                        t.FetchProperty(properties);
 
                 if (control is IControlContainer con) 
                     con.GetControlList().FetchProperties(properties);
-
             }
         }
 
@@ -58,10 +56,8 @@ namespace VRLabs.SimpleShaderInspectors
         internal static int FindPropertyIndex(string propertyName, MaterialProperty[] properties, bool propertyIsMandatory = false)
         {
             for (int i = 0; i < properties.Length; i++)
-            {
                 if (properties[i] != null && properties[i].name == propertyName)
                     return i;
-            }
 
             // We assume all required properties can be found, otherwise something is broken.
             if (propertyIsMandatory)
@@ -99,10 +95,8 @@ namespace VRLabs.SimpleShaderInspectors
         {
             List<INonAnimatableProperty> propertiesNeedingUpdate = new List<INonAnimatableProperty>();
             foreach(var control in controls)
-            {
                 if (control.NonAnimatablePropertyChanged)
                     propertiesNeedingUpdate.Add(control);
-            }
 
             if (propertiesNeedingUpdate.Count == 0) return;
 
@@ -118,16 +112,14 @@ namespace VRLabs.SimpleShaderInspectors
                 UnityEngine.Object[] windowInstances = Resources.FindObjectsOfTypeAll(windowType);
                 UnityEngine.Object recordingInstance = null;
 
-                for (int i = 0; i < windowInstances.Length; i++)
+                foreach (var t in windowInstances)
                 {
                     bool isRecording = (bool)isRecordingProp.GetValue
-                        (windowInstances[i], null);
+                        (t, null);
 
-                    if (isRecording)
-                    {
-                        recordingInstance = windowInstances[i];
-                        break;
-                    }
+                    if (!isRecording) continue;
+                    recordingInstance = t;
+                    break;
                 }
                 if (recordingInstance != null)
                 {
@@ -147,7 +139,7 @@ namespace VRLabs.SimpleShaderInspectors
             }
             else
             {
-                for (int i = 0; i < propertiesNeedingUpdate.Count; i++)
+                foreach (var t in propertiesNeedingUpdate)
                     SetNonAnimatableProperties(materialEditor, propertiesNeedingUpdate);
             }
         }
@@ -192,7 +184,7 @@ namespace VRLabs.SimpleShaderInspectors
             System.IO.File.WriteAllBytes(path, bytes);
             AssetDatabase.Refresh();
             path = path.Substring(path.LastIndexOf("Assets"));
-            TextureImporter t = AssetImporter.GetAtPath(path) as TextureImporter;
+            var t = AssetImporter.GetAtPath(path) as TextureImporter;
             t.wrapMode = mode;
             t.isReadable = true;
             AssetDatabase.ImportAsset(path);
@@ -219,31 +211,29 @@ namespace VRLabs.SimpleShaderInspectors
         /// <param name="isReadable">Does the texture need to be readable.</param>
         public static void SetTextureImporterReadable(Texture2D texture, bool isReadable)
         {
-            if (texture == null) return;
+            if (texture is null) return;
 
             string assetPath = AssetDatabase.GetAssetPath(texture);
             var tImporter = AssetImporter.GetAtPath(assetPath) as TextureImporter;
-            if (tImporter != null)
-            {
-                tImporter.textureType = TextureImporterType.Default;
-                tImporter.isReadable = isReadable;
-                AssetDatabase.ImportAsset(assetPath);
-                //AssetDatabase.Refresh();
-            }
+            if (tImporter is null) return;
+            
+            tImporter.textureType = TextureImporterType.Default;
+            tImporter.isReadable = isReadable;
+            AssetDatabase.ImportAsset(assetPath);
+            //AssetDatabase.Refresh();
         }
 
         public static void SetTextureImporterAlpha(Texture2D texture, bool alphaIsTransparency)
         {
-            if (texture == null) return;
+            if (texture is null) return;
 
             string assetPath = AssetDatabase.GetAssetPath(texture);
             var tImporter = AssetImporter.GetAtPath(assetPath) as TextureImporter;
-            if (tImporter != null)
-            {
-                tImporter.textureType = TextureImporterType.Default;
-                tImporter.alphaIsTransparency = alphaIsTransparency;
-                AssetDatabase.ImportAsset(assetPath);
-            }
+            if (tImporter is  null) return;
+            
+            tImporter.textureType = TextureImporterType.Default;
+            tImporter.alphaIsTransparency = alphaIsTransparency;
+            AssetDatabase.ImportAsset(assetPath);
         }
     }
 }

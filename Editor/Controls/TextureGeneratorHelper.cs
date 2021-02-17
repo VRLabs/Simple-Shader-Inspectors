@@ -37,7 +37,6 @@ namespace VRLabs.SimpleShaderInspectors.Controls
                         break;
                 }
             }
-
             return (settings.KernelName, inputs);
         }
     }

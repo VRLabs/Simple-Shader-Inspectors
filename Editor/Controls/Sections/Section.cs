@@ -127,23 +127,21 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             //bool previousShow = Show;
             if (useDictionary)
             {
-                if (firstCycle)
+                if (!firstCycle) return;
+                
+                if (dictionaryKey == null)
+                    dictionaryKey = ControlAlias + ((Material)materialEditor.target).GetInstanceID();
+                
+                if (StaticDictionaries.BoolDictionary.TryGetValue(dictionaryKey, out bool show))
                 {
-                    if (dictionaryKey == null)
-                    {
-                        dictionaryKey = ControlAlias + ((Material)materialEditor.target).GetInstanceID();
-                    }
-                    if (StaticDictionaries.BoolDictionary.TryGetValue(dictionaryKey, out bool show))
-                    {
-                        Show = show;
-                    }
-                    else
-                    {
-                        Show = false;
-                        StaticDictionaries.BoolDictionary[dictionaryKey] = Show;
-                    }
-                    firstCycle = false;
+                    Show = show;
                 }
+                else
+                {
+                    Show = false;
+                    StaticDictionaries.BoolDictionary[dictionaryKey] = Show;
+                }
+                firstCycle = false;
             }
             else
             {
@@ -193,10 +191,8 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             Rect r = EditorGUILayout.BeginHorizontal();
             EditorGUI.BeginChangeCheck();
             if (ShowFoldoutArrow)
-            {
                 Show = EditorGUILayout.Toggle(Show, EditorStyles.foldout, GUILayout.MaxWidth(15.0f));
-                //GUILayout.Space(38.0f);
-            }
+            
             EditorGUILayout.LabelField(Content, LabelStyle);
             //DrawUpDownButtons();
             //isEnabled = EditorGUILayout.Toggle(isEnabled, TSConstants.Styles.deleteStyle, GUILayout.MaxWidth(15.0f));
@@ -204,24 +200,18 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             Show = GUI.Toggle(r, Show, GUIContent.none, new GUIStyle());
             HasPropertyUpdated = EditorGUI.EndChangeCheck();
             if (HasPropertyUpdated)
-            {
                 UpdateEnabled(materialEditor);
-            }
 
             EditorGUILayout.EndHorizontal();
 
             if (!AreControlsInHeader)
-            {
                 EditorGUILayout.EndVertical();
-            }
+            
             if (Show)
-            {
                 DrawControls(materialEditor);
-            }
+            
             if (AreControlsInHeader)
-            {
                 EditorGUILayout.EndVertical();
-            }
         }
 
         /// <summary>
@@ -232,10 +222,9 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         {
             //EditorGUI.indentLevel++;
             EditorGUILayout.Space();
-            foreach (SimpleControl control in Controls)
-            {
+            foreach (var control in Controls)
                 control.DrawControl(materialEditor);
-            }
+            
             EditorGUILayout.Space();
             //EditorGUI.indentLevel--;
         }
@@ -246,21 +235,13 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// <param name="materialEditor">Material editor.</param>
         public virtual void UpdateNonAnimatableProperty(MaterialEditor materialEditor)
         {
-            if (!useDictionary && HasPropertyUpdated)
-            {
-                materialEditor.RegisterPropertyChangeUndo(Property.displayName);
-                Property.floatValue = Show ? showValue : hideValue;
-            }
+            if (useDictionary || !HasPropertyUpdated) return;
+            materialEditor.RegisterPropertyChangeUndo(Property.displayName);
+            Property.floatValue = Show ? showValue : hideValue;
         }
         
-        public void AddControl(SimpleControl control)
-        {
-            Controls.Add(control);
-        }
+        public void AddControl(SimpleControl control) => Controls.Add(control);
 
-        public IEnumerable<SimpleControl> GetControlList()
-        {
-            return Controls;
-        }
+        public IEnumerable<SimpleControl> GetControlList() => Controls;
     }
 }

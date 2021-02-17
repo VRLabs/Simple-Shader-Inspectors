@@ -41,7 +41,7 @@ namespace VRLabs.SimpleShaderInspectors
             foreach (var control in controls)
             {
                 // Find localization of the control content. 
-                PropertyInfo selectedInfo = propertyInfos.FindPropertyByName(control.ControlAlias);
+                var selectedInfo = propertyInfos.FindPropertyByName(control.ControlAlias);
                 if (selectedInfo == null)
                 {
                     selectedInfo = new PropertyInfo
@@ -60,10 +60,10 @@ namespace VRLabs.SimpleShaderInspectors
                 {
                     // Find additional content in case it implements the IAdditionalLocalization interface.
                     case IAdditionalLocalization additional:
-                        foreach (AdditionalLocalization content in additional.AdditionalContent)
+                        foreach (var content in additional.AdditionalContent)
                         {
                             string fullName = control.ControlAlias + "_" + content.Name;
-                            PropertyInfo extraInfo = propertyInfos.FindPropertyByName(fullName);
+                            var extraInfo = propertyInfos.FindPropertyByName(fullName);
                             if (extraInfo == null)
                             {
                                 extraInfo = new PropertyInfo
@@ -78,7 +78,6 @@ namespace VRLabs.SimpleShaderInspectors
 
                             content.Content = new GUIContent(extraInfo.DisplayName, extraInfo.Tooltip);
                         }
-
                         break;
 
                     // Recursively set property localization for all properties inside this control if it has the IControlContainer interface.

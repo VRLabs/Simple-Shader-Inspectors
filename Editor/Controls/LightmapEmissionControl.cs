@@ -32,14 +32,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
                 {
                     MaterialEditor.FixupEmissiveFlag(mat);
                     bool shouldEmissionBeEnabled = (mat.globalIlluminationFlags & MaterialGlobalIlluminationFlags.EmissiveIsBlack) == 0;
-                    if (shouldEmissionBeEnabled)
-                    {
-                        mat.SetOverrideTag("IsEmissive", "true");
-                    }
-                    else
-                    {
-                        mat.SetOverrideTag("IsEmissive", "false");
-                    }
+                    mat.SetOverrideTag("IsEmissive", shouldEmissionBeEnabled ? "true" : "false");
                 }
             }
         }

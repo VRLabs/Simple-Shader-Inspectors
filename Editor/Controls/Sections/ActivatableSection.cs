@@ -87,9 +87,8 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             Rect r = EditorGUILayout.BeginHorizontal();
             EditorGUI.BeginChangeCheck();
             if (ShowFoldoutArrow)
-            {
                 Show = EditorGUILayout.Toggle(Show, EditorStyles.foldout, GUILayout.MaxWidth(15.0f));
-            }
+            
             EditorGUI.BeginChangeCheck();
             Enabled = EditorGUILayout.Toggle(Enabled, GUILayout.MaxWidth(20.0f));
             HasActivatePropertyUpdated = EditorGUI.EndChangeCheck();
@@ -98,9 +97,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             Show = GUI.Toggle(r, Show, GUIContent.none, new GUIStyle());
             HasPropertyUpdated = EditorGUI.EndChangeCheck();
             if (HasPropertyUpdated)
-            {
                 UpdateEnabled(materialEditor);
-            }
 
             if (HasActivatePropertyUpdated)
             {
@@ -110,19 +107,17 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             EditorGUILayout.EndHorizontal();
 
             if (!AreControlsInHeader)
-            {
                 EditorGUILayout.EndVertical();
-            }
+            
             if (Show)
             {
                 EditorGUI.BeginDisabledGroup(!Enabled);
                 DrawControls(materialEditor);
                 EditorGUI.EndDisabledGroup();
             }
+            
             if (AreControlsInHeader)
-            {
                 EditorGUILayout.EndVertical();
-            }
         }
     }
 }

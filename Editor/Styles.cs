@@ -72,13 +72,7 @@ namespace VRLabs.SimpleShaderInspectors
         /// <summary>
         /// default input settings for the RGBAPAcker compute shader.
         /// </summary>
-        public static string RGBAPackerSettings
-        {
-            get
-            {
-                return Resources.Load<TextAsset>("ComputeShaderSettings/SSIRGBAPackerDefault").text;
-            }
-        }
+        public static string RGBAPackerSettings => Resources.Load<TextAsset>("ComputeShaderSettings/SSIRGBAPackerDefault").text;
     }
 
     /// <summary>
@@ -375,7 +369,7 @@ namespace VRLabs.SimpleShaderInspectors
         /// <returns>The generated GUIStyle</returns>
         public static GUIStyle CreateStyleFromSprite(RectOffset padding, string normal, string active = null, string focused = null, string hover = null)
         {
-            GUIStyle style = new GUIStyle();
+            var style = new GUIStyle();
             Sprite sprite = Resources.Load<Sprite>(normal);
             style.padding = padding;
             style.border.left = (int)sprite.border.x;

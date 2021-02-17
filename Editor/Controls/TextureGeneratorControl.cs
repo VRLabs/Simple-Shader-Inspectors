@@ -130,13 +130,14 @@ namespace VRLabs.SimpleShaderInspectors.Controls
 
             foreach (var input in _inputs)
             {
-                if (input is ComputeTextureInput)
+                switch (input)
                 {
-                    _containsTextures = true;
-                }
-                else if (input is ComputeColorInput)
-                {
-                    _containsColors = true;
+                    case ComputeTextureInput _:
+                        _containsTextures = true;
+                        break;
+                    case ComputeColorInput _:
+                        _containsColors = true;
+                        break;
                 }
 
                 if (_containsColors && _containsTextures)
@@ -159,21 +160,15 @@ namespace VRLabs.SimpleShaderInspectors.Controls
 
             // Texture exclusive content
             if (_containsTextures)
-            {
                 _textureContent = AdditionalContentExtensions.CreateLocalizationArrayFromNames(_textureNames);
-            }
 
             // Color exclusive content
             if (_containsTextures)
-            {
                 _colorContent = AdditionalContentExtensions.CreateLocalizationArrayFromNames(_colorNames);
-            }
 
             _namesContent = new AdditionalLocalization[_inputs.Count];
             for (int i = 0; i < _inputs.Count; i++)
-            {
                 _namesContent[i] = new AdditionalLocalization { Name = "Input" + (i + 1) };
-            }
         }
 
         /// <summary>
@@ -207,7 +202,6 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         {
             int columns = (int)((EditorGUIUtility.currentViewWidth - 20) / 90) - 1;
             if (columns == 0) columns = 1;
-            AdditionalLocalization[] selectedArray;
             for (int i = 0; i < _inputs.Count; i++)
             {
                 if (i % columns == 0)
@@ -225,14 +219,13 @@ namespace VRLabs.SimpleShaderInspectors.Controls
                         GUILayout.FlexibleSpace();
                     }
                 }
+
+                AdditionalLocalization[] selectedArray;
                 if (_inputs[i] is ComputeTextureInput)
-                {
                     selectedArray = _textureContent;
-                }
                 else
-                {
                     selectedArray = _colorContent;
-                }
+                
                 GUI.backgroundColor = GeneratorInputColor;
                 EditorGUILayout.BeginVertical(GeneratorInputStyle);
                 GUI.backgroundColor = SimpleShaderInspector.DefaultBgColor;
@@ -245,15 +238,16 @@ namespace VRLabs.SimpleShaderInspectors.Controls
 
             EditorGUILayout.BeginHorizontal();
             GUI.backgroundColor = GeneratorSaveButtonColor;
+            
             if (GUILayout.Button(_baseContent[1].Content, GeneratorSaveButtonStyle))
             {
                 GenerateTexture();
                 _isGeneratorOpen = false;
             }
+            
             if (GUILayout.Button(_baseContent[2].Content, GeneratorSaveButtonStyle))
-            {
                 _isGeneratorOpen = false;
-            }
+            
             GUI.backgroundColor = SimpleShaderInspector.DefaultBgColor;
             EditorGUILayout.EndHorizontal();
         }
@@ -278,9 +272,8 @@ namespace VRLabs.SimpleShaderInspectors.Controls
 
             var computeData = new ComputeInputs();
             foreach (var input in _inputs)
-            {
                 input.AssignInputsToCompute(computeData, kernel);
-            }
+            
             ComputeBuffer textureParamsBuffer = null;
             ComputeBuffer colorParamsBuffer = null;
             if (computeData.TexturesMeta.Count > 0)
@@ -297,9 +290,8 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             }
 
             foreach (var texture in computeData.Textures)
-            {
                 _compute.SetTexture(kernel, texture.Name, texture.Texture);
-            }
+            
             _compute.Dispatch(kernel, (int)_resolution / 16, (int)_resolution / 16, 1);
 
             textureParamsBuffer?.Release();

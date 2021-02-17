@@ -9,7 +9,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
     public class ColorControl : PropertyControl
     {
         /// <summary>
-        /// Boolan that determines if the color picker and the color field should show the alpha value.
+        /// Boolean that determines if the color picker and the color field should show the alpha value.
         /// </summary>
         [Chainable] public bool ShowAlphaValue { get; set; }
 

@@ -40,9 +40,8 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         protected override void ControlGUI(MaterialEditor materialEditor)
         {
             if (_materials == null)
-            {
                 _materials = Array.ConvertAll(materialEditor.targets, item => (Material)item);
-            }
+            
             EditorGUI.showMixedValue = _materials.IsKeywordMixedValue(keyword);
             ToggleEnabled = _materials[0].IsKeywordEnabled(keyword);
 

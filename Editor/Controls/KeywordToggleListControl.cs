@@ -35,22 +35,15 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             if (ToggleEnabled)
             {
                 EditorGUI.indentLevel++;
-                foreach (SimpleControl control in Controls)
-                {
+                foreach (var control in Controls)
                     control.DrawControl(materialEditor);
-                }
+                
                 EditorGUI.indentLevel--;
             }
         }
 
-        public void AddControl(SimpleControl control)
-        {
-            Controls.Add(control);
-        }
+        public void AddControl(SimpleControl control) => Controls.Add(control);
 
-        public IEnumerable<SimpleControl> GetControlList()
-        {
-            return Controls;
-        }
+        public IEnumerable<SimpleControl> GetControlList() => Controls;
     }
 }

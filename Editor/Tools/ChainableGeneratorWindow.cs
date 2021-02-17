@@ -33,20 +33,12 @@ namespace VRLabs.SimpleShaderInspectors.Tools
             if (GUILayout.Button("Select destination folder"))
             {
                 string path = EditorUtility.OpenFolderPanel("Select destination folder to use", "Assets", "Editor");
-                if (path.Length == 0)
-                {
-                    _destinationPath = null;
-                }
-                else
-                {
-                    _destinationPath = path;
-                }
+                _destinationPath = path.Length == 0 ? null : path;
             }
             GUILayout.Label("Selected folder: " + _destinationPath, Styles.MultilineLabel);
-            if (_destinationPath == null)
-            {
+            if (_destinationPath is null)
                 EditorGUILayout.HelpBox("You need to select a folder.", MessageType.Warning);
-            }
+            
             EditorGUILayout.Space();
             EditorGUI.BeginChangeCheck();
             _namespace = EditorGUILayout.TextField("Namespace", _namespace);
@@ -54,12 +46,11 @@ namespace VRLabs.SimpleShaderInspectors.Tools
 
             EditorGUI.BeginDisabledGroup(string.IsNullOrWhiteSpace(_destinationPath) || string.IsNullOrWhiteSpace(_namespace));
             if (GUILayout.Button("Generate chainables"))
-            {
                 GenerateChainables(_destinationPath, _namespace);
-            }
+            
             EditorGUI.EndDisabledGroup();
         }
-        private void GenerateChainables(string destinationPath, string nmsc)
+        private static void GenerateChainables(string destinationPath, string nmsc)
         {
             var types = AppDomain.CurrentDomain.GetAssemblies()
                 .SelectMany(x => x.GetTypes())
@@ -86,18 +77,14 @@ namespace VRLabs.SimpleShaderInspectors.Tools
                 foreach (var type in group)
                 {
                     foreach (var constructor in type.GetConstructors())
-                    {
                         BuildConstructorChainable(content, type, constructor, indent);
-                    }
 
-                    var chainableProperties = type.GetProperties(BindingFlags.DeclaredOnly | BindingFlags.Instance | BindingFlags.Public).Where(
-                    y => y.CustomAttributes.Any(
-                        z => z.AttributeType == typeof(ChainableAttribute)));
+                    var chainableProperties = type.GetProperties(BindingFlags.DeclaredOnly | BindingFlags.Instance | BindingFlags.Public)
+                        .Where(y => y.CustomAttributes.Any(z => z.AttributeType == typeof(ChainableAttribute)));
 
                     foreach (var prop in chainableProperties)
-                    {
                         BuildPropertyChainable(content, type, prop, indent);
-                    }
+                    
                     content.AppendLine();
                 }
 
@@ -216,7 +203,7 @@ namespace VRLabs.SimpleShaderInspectors.Tools
         {
             var sb = new StringBuilder();
 
-            foreach (Type arg in t.GetGenericArguments())
+            foreach (var arg in t.GetGenericArguments())
             {
                 sb.Append($" where {arg.Name} : ");
                 bool appendComma = false;
@@ -234,9 +221,8 @@ namespace VRLabs.SimpleShaderInspectors.Tools
         {
             var builder = new StringBuilder();
             for (int i = 0; i < level; i++)
-            {
                 builder.Append("    ");
-            }
+            
             return builder.ToString();
         }
     }

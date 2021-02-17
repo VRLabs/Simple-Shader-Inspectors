@@ -7,8 +7,8 @@ namespace VRLabs.SimpleShaderInspectors
     {
         public static Rect GetControlRectForSingleLine()
         {
-            const float extraSpacing = 2f;
-            return EditorGUILayout.GetControlRect(true, extraSpacing + 16f /* EditorGUI.kSingleLineHeight*/, EditorStyles.layerMaskField); // Unity give use public non internal getters for indentation space thanks
+            const float CONTENT_EXTRA_SPACING = 2f;
+            return EditorGUILayout.GetControlRect(true, CONTENT_EXTRA_SPACING + 16f /* EditorGUI.kSingleLineHeight*/, EditorStyles.layerMaskField); // Unity give use public non internal getters for indentation space thanks
         }
 
         /// <summary>
@@ -22,23 +22,23 @@ namespace VRLabs.SimpleShaderInspectors
         /// <returns></returns>
         public static Rect TexturePropertyWithHDRColorFixed(this MaterialEditor editor, GUIContent label, MaterialProperty textureProp, MaterialProperty colorProperty, bool showAlpha)
         {
-            Rect r = GetControlRectForSingleLine();
-            editor.TexturePropertyMiniThumbnail(r, textureProp, label.text, label.tooltip);
+            Rect rect = GetControlRectForSingleLine();
+            editor.TexturePropertyMiniThumbnail(rect, textureProp, label.text, label.tooltip);
 
             if (colorProperty.type != MaterialProperty.PropType.Color)
             {
                 Debug.LogError("Assuming MaterialProperty.PropType.Color (was " + colorProperty.type + ")");
-                return r;
+                return rect;
             }
 
-            editor.BeginAnimatedCheck(r, colorProperty);
+            editor.BeginAnimatedCheck(rect, colorProperty);
 
             // Temporarily reset the indent level as it was already used earlier to compute the positions of the layout items. same fix officially applied to MaterialEditor.TexturePropertySingleLine, why it hasn't been done to this one idk.
             int oldIndentLevel = EditorGUI.indentLevel;
 
             EditorGUI.indentLevel = 0;
 
-            Rect leftRect = MaterialEditor.GetLeftAlignedFieldRect(r);
+            Rect leftRect = MaterialEditor.GetLeftAlignedFieldRect(rect);
             EditorGUI.BeginChangeCheck();
             EditorGUI.showMixedValue = colorProperty.hasMixedValue;
             Color newValue = EditorGUI.ColorField(leftRect, GUIContent.none, colorProperty.colorValue, true, showAlpha, true);
@@ -51,7 +51,7 @@ namespace VRLabs.SimpleShaderInspectors
             // Restore the indent level
             EditorGUI.indentLevel = oldIndentLevel;
 
-            return r;
+            return rect;
         }
     }
 }

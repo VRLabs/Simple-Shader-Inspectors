@@ -66,14 +66,11 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             AdditionalProperties = new AdditionalProperty[2];
             AdditionalProperties[0] = new AdditionalProperty(extraPropertyName1);
             if (!string.IsNullOrWhiteSpace(extraPropertyName1))
-            {
                 _hasExtra1 = true;
-            }
+            
             AdditionalProperties[1] = new AdditionalProperty(extraPropertyName2);
             if (!string.IsNullOrWhiteSpace(extraPropertyName2))
-            {
                 _hasExtra2 = true;
-            }
 
             UVButtonStyle = Styles.GearIcon;
             UVAreaStyle = Styles.TextureBoxHeavyBorder;
@@ -96,9 +93,8 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         {
             EditorGUI.BeginChangeCheck();
             if (ShowUvOptions)
-            {
                 EditorGUILayout.BeginHorizontal();
-            }
+            
             if (_hasExtra2)
             {
                 materialEditor.TexturePropertySingleLine(Content, Property, AdditionalProperties[0].Property, AdditionalProperties[1].Property);

@@ -29,10 +29,8 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <param name="materialEditor">Material editor.</param>
         protected override void ControlGUI(MaterialEditor materialEditor)
         {
-            foreach (SimpleControl control in Controls)
-            {
+            foreach (var control in Controls)
                 control.DrawControl(materialEditor);
-            }
         }
 
         public void AddControl(SimpleControl control)

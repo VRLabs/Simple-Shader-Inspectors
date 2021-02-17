@@ -11,9 +11,7 @@ namespace VRLabs.SimpleShaderInspectors
     [System.AttributeUsage(System.AttributeTargets.Property, AllowMultiple = false)]
     public class ChainableAttribute : System.Attribute
     {
-        public ChainableAttribute()
-        {
-        }
+        public ChainableAttribute() {}
     }
 
     /// <summary>
@@ -22,7 +20,7 @@ namespace VRLabs.SimpleShaderInspectors
     [System.AttributeUsage(System.AttributeTargets.Constructor, AllowMultiple = false)]
     public class LimitAccessScopeAttribute : System.Attribute
     {
-        public Type BaseType { get; set; }
+        public Type BaseType { get; }
         public LimitAccessScopeAttribute(Type type)
         {
             BaseType = type;

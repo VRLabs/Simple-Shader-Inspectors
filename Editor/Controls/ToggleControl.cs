@@ -22,18 +22,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <summary>
         /// Boolean indicating if the toggle is enabled or not.
         /// </summary>
-        public bool ToggleEnabled
-        {
-            get
-            {
-                return Math.Abs((Property?.floatValue ?? 0) - trueValue) < 0.001;
-            }
-            /*set
-            {
-                if (Property != null)
-                    Property.floatValue = ToggleEnabled ? trueValue : falseValue;
-            }*/
-        }
+        public bool ToggleEnabled => Math.Abs((Property?.floatValue ?? 0) - trueValue) < 0.001;
 
         /// <summary>
         /// Default constructor of <see cref="ToggleControl"/>

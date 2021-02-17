@@ -30,13 +30,9 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         protected override void ControlGUI(MaterialEditor materialEditor)
         {
             if (Space == 0)
-            {
                 EditorGUILayout.Space();
-            }
             else
-            {
                 GUILayout.Space(Space);
-            }
         }
     }
 }

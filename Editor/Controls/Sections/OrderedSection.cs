@@ -159,9 +159,8 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
 
             EditorGUI.BeginChangeCheck();
             if (ShowFoldoutArrow)
-            {
                 Show = EditorGUILayout.Toggle(Show, EditorStyles.foldout, GUILayout.MaxWidth(15.0f));
-            }
+            
             Rect temp = GUILayoutUtility.GetLastRect();
             Rect r2 = new Rect(r.x + temp.width, r.y, r.width - (temp.width * 2), r.height);
             /*
@@ -175,17 +174,14 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             DrawSideButtons();
 
             if (HasSectionTurnedOn)
-            {
                 HasActivatePropertyUpdated = true;
-            }
+            
             HasSectionTurnedOn = false;
 
             Show = GUI.Toggle(r, Show, GUIContent.none, new GUIStyle());
             HasPropertyUpdated = EditorGUI.EndChangeCheck();
             if (HasPropertyUpdated)
-            {
                 UpdateEnabled(materialEditor);
-            }
 
             /*if (HasActivatePropertyUpdated)
             {
@@ -195,17 +191,13 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             EditorGUILayout.EndHorizontal();
 
             if (!AreControlsInHeader)
-            {
                 EditorGUILayout.EndVertical();
-            }
+            
             if (Show)
-            {
                 DrawControls(materialEditor);
-            }
+            
             if (AreControlsInHeader)
-            {
                 EditorGUILayout.EndVertical();
-            }
         }
     }
 }

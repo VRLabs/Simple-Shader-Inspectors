@@ -56,20 +56,18 @@ namespace VRLabs.SimpleShaderInspectors
         /// <param name="materialEditor">Material editor.</param>
         public void DrawControl(MaterialEditor materialEditor)
         {
-            if (IsVisible)
+            if (!IsVisible) return;
+            // We could directly use EditorGUI.BeginDisabledGroup(!IsEnabled) instead of this check,
+            // but i don't trust adding too many groups when not necessary
+            if (!IsEnabled)
             {
-                // We could directly use EditorGUI.BeginDisabledGroup(!IsEnabled) instead of this check,
-                // but i don't trust adding too many groups when not necessary
-                if (!IsEnabled)
-                {
-                    EditorGUI.BeginDisabledGroup(true);
-                    ControlGUI(materialEditor);
-                    EditorGUI.EndDisabledGroup();
-                }
-                else
-                {
-                    ControlGUI(materialEditor);
-                }
+                EditorGUI.BeginDisabledGroup(true);
+                ControlGUI(materialEditor);
+                EditorGUI.EndDisabledGroup();
+            }
+            else
+            {
+                ControlGUI(materialEditor);
             }
         }
     }
@@ -77,7 +75,7 @@ namespace VRLabs.SimpleShaderInspectors
     /// <summary>
     /// Static class containing all control extension methods in the base namespace of Simple Shader Inspectors.
     /// </summary>
-    public static partial class BaseControlExtensions
+    public static partial class Chainables
     {
         /// <summary>
         /// Set a custom alias for control localization.

@@ -68,7 +68,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         public AdditionalLocalization[] AdditionalContent { get; set; }
 
         /// <summary>
-        /// Default contructor.
+        /// Default constructor.
         /// </summary>
         /// <param name="propertyName">Name of the gradient texture property.</param>
         /// <param name="colorPropertyName">Name of the relative color property (default: null).</param>
@@ -95,7 +95,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             _blendMode = GradientBlendMode.Linear;
             _previousTextures = null;
 
-            this.InizializeLocalizationWithNames(_contentNames);
+            this.InitializeLocalizationWithNames(_contentNames);
         }
 
         /// <summary>
@@ -105,22 +105,17 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         protected override void ControlGUI(MaterialEditor materialEditor)
         {
             if (_materials == null)
-            {
                 _materials = Array.ConvertAll(materialEditor.targets, item => (Material)item);
-            }
+            
             EditorGUI.BeginChangeCheck();
             if (ShowUvOptions)
-            {
                 EditorGUILayout.BeginHorizontal();
-            }
+            
             if (_hasExtra1)
-            {
                 materialEditor.TexturePropertySingleLine(Content, Property, AdditionalProperties[0].Property);
-            }
             else
-            {
                 materialEditor.TexturePropertySingleLine(Content, Property);
-            }
+            
             if (ShowUvOptions)
             {
                 GUI.backgroundColor = UVButtonColor;
@@ -148,14 +143,12 @@ namespace VRLabs.SimpleShaderInspectors.Controls
                     _isGradientEditorOpen = true;
                     _previousTextures = new Texture2D[materialEditor.targets.Length];
                     for (int i = 0; i < materialEditor.targets.Length; i++)
-                    {
                         _previousTextures[i] = (Texture2D)_materials[i].GetTexture(PropertyName);
-                    } //(Texture2D)Property.textureValue;
+                    
                     Selection.selectionChanged += ResetGradientTexture;
                     if (_previousTextures != null)
-                    {
                         TranslateTextureToGradient(_previousTextures[0]);
-                    }
+                    
                     /*else
                     {
                         _gradient.Keys = new List<GradientTexture.ColorKey>();
@@ -219,15 +212,11 @@ namespace VRLabs.SimpleShaderInspectors.Controls
 
             Color col = EditorGUILayout.ColorField(_gradient.Keys[_selectedKeyIndex].Color);
             if (!col.Equals(_gradient.Keys[_selectedKeyIndex].Color))
-            {
                 _gradient.UpdateKeyColor(_selectedKeyIndex, col);
-            }
 
             float time = EditorGUILayout.FloatField(_gradient.Keys[_selectedKeyIndex].Time);
             if (time != _gradient.Keys[_selectedKeyIndex].Time)
-            {
                 _gradient.UpdateKeyTime(_selectedKeyIndex, time);
-            }
 
             _rampWidth = (GradientWidth)EditorGUILayout.EnumPopup(_rampWidth);
             if ((int)_rampWidth != _gradient.GetTexture().width)
@@ -325,39 +314,32 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             }
 
             if (repaint)
-            {
                 materialEditor.Repaint();
-            }
         }
 
         private void TranslateTextureToGradient(Texture2D texture)
         {
             if (!texture.isReadable)
-            {
                 SSIHelper.SetTextureImporterReadable(texture, true);
-            }
+            
             _gradient = new GradientTexture((int)_rampWidth);
             _blendMode = GradientBlendMode.Linear;
             int sampleWidth = Mathf.Max(texture.width, texture.height);
             Color[] colors = new Color[sampleWidth];
 
             for (int i = 0; i < sampleWidth; i++)
-            {
                 colors[i] = texture.GetPixel(texture.width * i / sampleWidth, texture.height * i / sampleWidth);
-            }
+            
             Color[] delta = GetDelta(colors);
             int deltaVariance = 0;
+            
             for (int i = 0; i < delta.Length; i++)
-            {
                 if (delta[i].r != 0 || delta[i].g != 0 || delta[i].b != 0)
-                {
                     deltaVariance++;
-                }
-            }
+
             if (deltaVariance < Mathf.Max(texture.width, texture.height) * 0.1)
-            {
                 _blendMode = GradientBlendMode.Fixed;
-            }
+            
             _gradient.BlendMode = _blendMode;
             delta[0] = delta[1];
 
@@ -420,7 +402,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             _gradient.UpdateTexture();
         }
 
-        private Color[] GetDelta(Color[] colors)
+        private static Color[] GetDelta(Color[] colors)
         {
             Color[] delta = new Color[colors.Length];
             delta[0] = new Color(0, 0, 0);
@@ -434,7 +416,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             return delta;
         }
 
-        private float GetDeltaVariance(Color delta)
+        private static float GetDeltaVariance(Color delta)
         {
             return Mathf.Max(new[] { Mathf.Abs(delta.r), Mathf.Abs(delta.g), Mathf.Abs(delta.b) });
         }

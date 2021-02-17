@@ -71,15 +71,11 @@ namespace VRLabs.SimpleShaderInspectors.Utility
                 }
             }
 
-            if (BlendMode == GradientBlendMode.Linear)
-            {
-                float blendTime = Mathf.InverseLerp(keyLeft.Time, keyRight.Time, time);
-                return Color.Lerp(keyLeft.Color, keyRight.Color, blendTime);
-            }
-            else
-            {
-                return keyRight.Color;
-            }
+            if (BlendMode == GradientBlendMode.Fixed) return keyRight.Color;
+            
+            float blendTime = Mathf.InverseLerp(keyLeft.Time, keyRight.Time, time);
+            return Color.Lerp(keyLeft.Color, keyRight.Color, blendTime);
+
         }
 
         /// <summary>
@@ -103,7 +99,8 @@ namespace VRLabs.SimpleShaderInspectors.Utility
                     UpdateTexture();
                     return i;
                 }
-                else if (time == Keys[i].Time && shouldDelete)
+
+                if (time == Keys[i].Time && shouldDelete)
                 {
                     Keys[i] = new ColorKey(color, time);
                     UpdateTexture();
@@ -217,15 +214,16 @@ namespace VRLabs.SimpleShaderInspectors.Utility
         [System.Serializable]
         public struct ColorKey
         {
-            [SerializeField]
             /// <summary>
             /// Color of the key.
             /// </summary>
-            public Color Color;
             [SerializeField]
+            public Color Color;
+            
             /// <summary>
             /// Time of the key.
             /// </summary>
+            [SerializeField]
             public float Time;
 
             /// <summary>

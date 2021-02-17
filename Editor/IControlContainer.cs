@@ -9,7 +9,7 @@ namespace VRLabs.SimpleShaderInspectors
     /// </summary>
     public interface IControlContainer<T> : IControlContainer where T : SimpleControl
     {
-        new void AddControl(T control);
+        void AddControl(T control);
         
         new IEnumerable<T> GetControlList();
     }

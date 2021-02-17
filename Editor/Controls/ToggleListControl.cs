@@ -45,14 +45,8 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             }
         }
         
-        public void AddControl(SimpleControl control)
-        {
-            Controls.Add(control);
-        }
+        public void AddControl(SimpleControl control) => Controls.Add(control);
 
-        public IEnumerable<SimpleControl> GetControlList()
-        {
-            return Controls;
-        }
+        public IEnumerable<SimpleControl> GetControlList() => Controls;
     }
 }

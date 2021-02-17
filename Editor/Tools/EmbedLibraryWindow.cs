@@ -92,13 +92,11 @@ namespace VRLabs.SimpleShaderInspectors.Tools
         private static void CopyLibrary(string path, string customNamespace, string assetIdentifier, bool keepComments = false)
         {
             if (!Directory.Exists(PATH))
-            {
                 throw new DirectoryNotFoundException("Simple Shader Inspectors has not been found in its default location, consider deleting it and reinstalling it using the official UnityPackage.");
-            }
+            
             if (Directory.Exists(path + "/SimpleShaderInspectors"))
-            {
                 Directory.Delete(path + "/SimpleShaderInspectors", true);
-            }
+            
             CopyDirectory(PATH, path, customNamespace, assetIdentifier, "", keepComments);
 
             AssetDatabase.Refresh();
@@ -140,9 +138,8 @@ namespace VRLabs.SimpleShaderInspectors.Tools
                     text = text.Replace(NAMESPACE, customNamespace + ".SimpleShaderInspectors");
 
                     if (Path.GetFileName(file).Equals("Styles.cs"))
-                    {
                         text = text.Replace(IDENTIFIER, assetIdentifier);
-                    }
+                    
                     string finalPath = file.Replace(oldPath, newPath + "/SimpleShaderInspectors" + subpath);
                     Directory.CreateDirectory(Path.GetDirectoryName(finalPath));
                     File.WriteAllText(finalPath, text);
@@ -157,7 +154,7 @@ namespace VRLabs.SimpleShaderInspectors.Tools
                 }
             }
 
-            foreach (var directory in Directory.GetDirectories(oldPath))
+            foreach (string directory in Directory.GetDirectories(oldPath))
             {
                 if (!Path.GetFileName(directory).Equals("Tools"))
                 {

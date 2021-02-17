@@ -110,10 +110,7 @@ namespace VRLabs.SimpleShaderInspectors
                 StartChecks(materialEditor);
                 _isFirstLoop = false;
                 if (Controls == null || Controls.Count == 0)
-                {
                     _doesContainControls = false;
-                }
-
             }
             else
             {
@@ -142,7 +139,7 @@ namespace VRLabs.SimpleShaderInspectors
         /// <summary>
         /// Load/reload the currently selected localization.
         /// </summary>
-        public void LoadLocalizations()
+        private void LoadLocalizations()
         {
             // Initializes path if it hasn't been initialized.
             if (string.IsNullOrWhiteSpace(_path))
@@ -211,7 +208,7 @@ namespace VRLabs.SimpleShaderInspectors
                 }
 
                 // Draw controls
-                foreach (SimpleControl control in Controls)
+                foreach (var control in Controls)
                     control.DrawControl(materialEditor);
             }
             else
@@ -226,19 +223,11 @@ namespace VRLabs.SimpleShaderInspectors
         private void SSILogo()
         {
             if (GUILayout.Button(new GUIContent(_logo, "Check out Simple Shader Inspectors!"), "label", GUILayout.Width(32), GUILayout.Height(32)))
-            {
                 Application.OpenURL("https://github.com/VRLabs/SimpleShaderInspectors");
-            }
         }
 
-        public void AddControl(SimpleControl control)
-        {
-            Controls.Add(control);
-        }
+        public void AddControl(SimpleControl control) => Controls.Add(control);
 
-        public IEnumerable<SimpleControl> GetControlList()
-        {
-            return Controls;
-        }
+        public IEnumerable<SimpleControl> GetControlList() => Controls;
     }
 }
