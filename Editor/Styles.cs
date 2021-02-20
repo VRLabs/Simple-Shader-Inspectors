@@ -70,7 +70,7 @@ namespace VRLabs.SimpleShaderInspectors
             }
         }
         /// <summary>
-        /// default input settings for the RGBAPAcker compute shader.
+        /// default input settings for the RGBAPacker compute shader.
         /// </summary>
         public static string RGBAPackerSettings => Resources.Load<TextAsset>("ComputeShaderSettings/SSIRGBAPackerDefault").text;
     }
@@ -312,6 +312,20 @@ namespace VRLabs.SimpleShaderInspectors
                 if (_centerLabel != null) return _centerLabel;
                 _centerLabel = new GUIStyle(EditorStyles.label) { alignment = TextAnchor.MiddleCenter };
                 return _centerLabel;
+            }
+        }
+        
+        private static GUIStyle _bottomCenterLabel;
+        /// <summary>
+        /// Style of a label with a center anchor.
+        /// </summary>
+        public static GUIStyle BottomCenterLabel
+        {
+            get
+            {
+                if (_bottomCenterLabel != null) return _bottomCenterLabel;
+                _bottomCenterLabel = new GUIStyle(EditorStyles.label) { alignment = TextAnchor.LowerCenter };
+                return _bottomCenterLabel;
             }
         }
 
