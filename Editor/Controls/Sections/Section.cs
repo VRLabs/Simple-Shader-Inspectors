@@ -103,6 +103,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         {
             InitSection();
             useDictionary = true;
+            ControlAlias = "Section";
             hideValue = 0;
             showValue = 1;
         }
