@@ -113,6 +113,10 @@ namespace VRLabs.SimpleShaderInspectors
         /// <summary>
         /// Style for a box pointing to a texture upwards. The border is more transparent than background.
         /// </summary>
+        /// <remarks>
+        /// The border, being more transparent than the background, will result darker than the background on dark themes, lighter than the background on light themes,
+        /// and with a more vivid color compared to the background when a custom background color is used.
+        /// </remarks>
         public static GUIStyle TextureBoxLightBorder
         {
             get
@@ -127,6 +131,10 @@ namespace VRLabs.SimpleShaderInspectors
         /// <summary>
         /// Style for a box pointing to a texture upwards. The border is less transparent than background.
         /// </summary>
+        /// <remarks>
+        /// The border, being less transparent than the background, will result lighter than the background on dark themes, darker than the background on light themes,
+        /// and with a less vivid color compared to the background when a custom background color is used.
+        /// </remarks>
         public static GUIStyle TextureBoxHeavyBorder
         {
             get
@@ -141,6 +149,10 @@ namespace VRLabs.SimpleShaderInspectors
         /// <summary>
         /// Style for a box. The border is more transparent than background.
         /// </summary>
+        /// <remarks>
+        /// The border, being more transparent than the background, will result darker than the background on dark themes, lighter than the background on light themes,
+        /// and with a more vivid color compared to the background when a custom background color is used.
+        /// </remarks>
         public static GUIStyle BoxLightBorder
         {
             get
@@ -160,6 +172,10 @@ namespace VRLabs.SimpleShaderInspectors
         /// <summary>
         /// Style for a box. The border is less transparent than background.
         /// </summary>
+        /// <remarks>
+        /// The border, being less transparent than the background, will result lighter than the background on dark themes, darker than the background on light themes,
+        /// and with a less vivid color compared to the background when a custom background color is used.
+        /// </remarks>
         public static GUIStyle BoxHeavyBorder
         {
             get
@@ -210,6 +226,7 @@ namespace VRLabs.SimpleShaderInspectors
         /// <summary>
         /// Style for a delete button.
         /// </summary>
+        // TODO: fix the texture name.
         public static GUIStyle DeleteIcon
         {
             get

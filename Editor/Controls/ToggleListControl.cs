@@ -8,6 +8,18 @@ namespace VRLabs.SimpleShaderInspectors.Controls
     /// Represents a control with a checkbox for setting a float property to 2 defined values.
     /// Also shows and hides a list of controls based on its state.
     /// </summary>
+    /// <remarks>
+    /// It's effectively a combination of <see cref="ToggleListControl"/> and <see cref="ControlContainer"/>, where the controls list is displayed only when the toggle is enabled.
+    /// </remarks>
+    /// <example>
+    /// Example usage:
+    /// <code>
+    /// // adds a toggle that toggles between 0 and 1
+    /// this.AddToggleListControl("_ExampleProperty");
+    /// // adds a toggle that toggles between 3 and 7
+    /// this.AddToggleListControl("_ExampleProperty", 3, 7); 
+    /// </code>
+    /// </example>
     public class ToggleListControl : ToggleControl, IControlContainer
     {
         /// <summary>
@@ -45,8 +57,16 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             }
         }
         
+        /// <summary>
+        /// Implementation needed by <see cref="IControlContainer"/> to add controls. All controls added are stored in <see cref="Controls"/>
+        /// </summary>
+        /// <param name="control">Control to add.</param>
         public void AddControl(SimpleControl control) => Controls.Add(control);
 
+        /// <summary>
+        /// Implementation needed by <see cref="IControlContainer"/> to get the object's controls list.
+        /// </summary>
+        /// <returns><see cref="Controls"/></returns>
         public IEnumerable<SimpleControl> GetControlList() => Controls;
     }
 }

@@ -6,52 +6,112 @@ namespace VRLabs.SimpleShaderInspectors.Controls
     /// <summary>
     /// Represents a control for a texture property with possibility to inline 2 extra properties.
     /// </summary>
+    /// <remarks>
+    /// <para>
+    /// It can be considered the Simple Shader Inspector equivalent of <c>MaterialEditor.TexturePropertySingleLine</c> where you can pass a texture property followed
+    /// by up to 2 additional properties
+    /// </para>
+    /// <para>
+    /// Unlike <c>MaterialEditor.TexturePropertySingleLine</c> it does add the possibility to edit texture tiling and offset, in the form of an optional gear icon on the side
+    /// (the icon can be changed)
+    /// </para>
+    /// </remarks>
+    /// <example>
+    /// Example usage:
+    /// <code>
+    /// // Adds a texture control with an additional color and float properties
+    /// this.AddTextureControl("_TextureProperty", "_ColorProperty", "_FloatProperty"); 
+    ///
+    /// // Adds a texture control with an additional color property and editable tiling and offset
+    /// this.AddTextureControl("_TextureProperty", "_ColorProperty").SetShowUvOptions(true);
+    /// </code>
+    /// </example>
     public class TextureControl : PropertyControl, IAdditionalProperties
     {
-        // Cached boolean that says if the control received the first extra property.
+        /// <summary>
+        /// Indicates if the control has the first extra property.
+        /// </summary>
+        /// <value>
+        /// True if the control had the first extra property, false otherwise.
+        /// </value>
         protected bool _hasExtra1 = false;
 
-        // Cached boolean that says if the control received the second extra property.
+        /// <summary>
+        /// Indicates if the control has the second extra property.
+        /// </summary>
+        /// <value>
+        /// True if the control had the second extra property, false otherwise.
+        /// </value>
         protected bool _hasExtra2 = false;
 
+        /// <summary>
+        /// Indicates if the uv button is pressed and the tiling and offset area is visible.
+        /// </summary>
+        /// <value>
+        /// True if the button is pressed, false otherwise.
+        /// </value>
         protected bool _isUVButtonPressed = false;
 
         /// <summary>
-        /// <para>Extra properties array.</para>
-        /// <para>In this control the properties instanced in the array are as foolows:</para>
-        /// <para>[0] = first extra property.</para>
-        /// <para>[1] = second extra property.</para>
+        /// Extra properties array. Implementation of <see cref="IAdditionalProperties"/>.
         /// </summary>
+        /// <value>List of <see cref="AdditionalProperty"/> used by this control.</value>
+        /// <remarks>
+        /// The list will store the following properties:
+        /// <list type="bullet">
+        /// <item> <term>[0]: </term> <description>first extra property.</description></item>
+        /// <item> <term>[1]: </term> <description>second extra property.</description></item>
+        /// </list>
+        /// </remarks>
         public AdditionalProperty[] AdditionalProperties { get; set; }
 
         /// <summary>
         /// Boolean that defines if the control will show up an additional button to have access to the texture tiling and offset options.
         /// </summary>
+        /// <value>
+        /// True if the control has to show the button for uv tiling and offset, false otherwise.
+        /// </value>
         [Chainable] public bool ShowUvOptions { get; set; }
 
         /// <summary>
         /// Boolean that defines if the control needs to render the second material property as an hdr color field,
-        ///  only works if there is only one extra property and it's a color property.
+        /// only works if there is only one extra property and it's a color property.
         /// </summary>
+        /// <value>
+        /// True if the color property should have an HDR color field, false otherwise.
+        /// </value>
         [Chainable] public bool HasHDRColor { get; set; }
 
         /// <summary>
-        /// GUIStyle for the uv options button.
+        /// Style for the tiling and offset options button.
         /// </summary>
-        /// <value></value>
+        /// <value>
+        /// GUIStyle used when displaying the tiling and offset button.
+        /// </value>
         [Chainable] public GUIStyle UVButtonStyle { get; set; }
+        
         /// <summary>
-        /// GUIStyle for the uv options button.
+        /// Style for the tiling and offset background area.
         /// </summary>
+        /// <value>
+        /// GUIStyle used for the background of the tiling and offset area.
+        /// </value>
         [Chainable] public GUIStyle UVAreaStyle { get; set; }
 
         /// <summary>
-        /// Background color for the uv button.
+        /// Color for the tiling and offset button.
         /// </summary>
+        /// <value>
+        /// Color used when displaying the tiling and offset button.
+        /// </value>
         [Chainable] public Color UVButtonColor { get; set; }
+        
         /// <summary>
         /// Background color for the uv button.
         /// </summary>
+        /// <value>
+        /// Color used when displaying the background for the tiling and offset area.
+        /// </value>
         [Chainable] public Color UVAreaColor { get; set; }
 
         /// <summary>

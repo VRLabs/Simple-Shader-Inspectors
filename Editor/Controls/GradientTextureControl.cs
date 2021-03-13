@@ -9,6 +9,19 @@ namespace VRLabs.SimpleShaderInspectors.Controls
     /// <summary>
     /// Control that handles a gradient texture with a gradient editor included.
     /// </summary>
+    /// <remarks>
+    /// <para>
+    /// This advanced control is a <see cref="TextureControl"/> specialized for gradient textures. It embeds an editor for generating or modifying gradients into textures,
+    /// enabling the user to create and previewing gradients in real time without leaving the inspector.
+    /// </para>
+    /// <para>It can also include a color property.</para>
+    /// </remarks>
+    /// <example>
+    /// Example usage:
+    /// <code>
+    /// this.AddGradientTextureControl("_exampleGradientTexture", "_ExampleColor");
+    /// </code>
+    /// </example>
     public class GradientTextureControl : TextureControl, IAdditionalLocalization
     {
         private GradientTexture _gradient;
@@ -37,34 +50,71 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         };
 
         /// <summary>
-        /// GUIStyle for the gradient editor button.
+        /// Style used to display the gradient editor button.
         /// </summary>
+        /// <value>
+        /// GUIStyle used.
+        /// </value>
         [Chainable] public GUIStyle GradientButtonStyle { get; set; }
+        
         /// <summary>
-        /// GUIStyle for the gradient editor save button.
+        /// Style used to display the gradient editor save button.
         /// </summary>
+        /// <value>
+        /// GUIStyle used.
+        /// </value>
         [Chainable] public GUIStyle GradientSaveButtonStyle { get; set; }
+        
         /// <summary>
-        /// GUIStyle for the gradient editor background.
+        /// Style used to display the gradient editor background.
         /// </summary>
+        /// <value>
+        /// GUIStyle used.
+        /// </value>
         [Chainable] public GUIStyle GradientEditorStyle { get; set; }
 
         /// <summary>
-        /// Background color for the gradient editor button.
+        /// Background color used to display the gradient editor button.
         /// </summary>
+        /// <value>
+        /// Color used.
+        /// </value>
         [Chainable] public Color GradientButtonColor { get; set; }
+        
         /// <summary>
-        /// Background color for the gradient editor save button.
+        /// Background color used to display the gradient editor save button.
         /// </summary>
+        /// <value>
+        /// Color used.
+        /// </value>
         [Chainable] public Color GradientSaveButtonColor { get; set; }
+        
         /// <summary>
-        /// Background color for the gradient editor background.
+        /// Background color used to display the gradient editor background.
         /// </summary>
+        /// <value>
+        /// Color used.
+        /// </value>
         [Chainable] public Color GradientEditorColor { get; set; }
 
         /// <summary>
-        /// Additional localization strings.
+        /// Implementation of <see cref="IAdditionalLocalization"/> for the additional localization strings.
         /// </summary>
+        /// <value>
+        /// Array of <see cref="AdditionalLocalization"/> objects. 
+        /// </value>
+        /// <remarks>
+        /// The localized content array will have the following object names:
+        /// <list type="bullet">
+        /// <item> <term>[0]: </term> <description>GradientOpenEditor</description> </item>
+        /// <item> <term>[1]: </term> <description>GradientColorLabel</description> </item>
+        /// <item> <term>[2]: </term> <description>GradientTimeLabel</description> </item>
+        /// <item> <term>[3]: </term> <description>GradientRampSizeLabel</description> </item>
+        /// <item> <term>[4]: </term> <description>GradientBlendModeLabel</description> </item>
+        /// <item> <term>[5]: </term> <description>GradientSaveButton</description> </item>
+        /// <item> <term>[6]: </term> <description>GradientCancelButton</description> </item>
+        /// </list>
+        /// </remarks>
         public AdditionalLocalization[] AdditionalContent { get; set; }
 
         /// <summary>

@@ -7,11 +7,17 @@ namespace VRLabs.SimpleShaderInspectors
     /// <summary>
     /// Interface used to define the need for additional material properties to handle.
     /// </summary>
+    /// <remarks>
+    /// When a control needs more than a single property to do its job, implementing this interface will let the inspector know this need.
+    /// </remarks>
     public interface IAdditionalProperties
     {
         /// <summary>
         /// Array containing all additional properties the control needs.
         /// </summary>
+        /// <remarks>
+        /// Is up to the control to initialize the array and assign the property names it needs to fetch.
+        /// </remarks>
         AdditionalProperty[] AdditionalProperties { get; set; }
     }
 

@@ -3,6 +3,13 @@ using UnityEngine;
 
 namespace VRLabs.SimpleShaderInspectors
 {
+    /// <summary>
+    /// Helper class for handling Material arrays.
+    /// </summary>
+    /// <remarks>
+    /// Managing multiple materials inside the inspector could become slightly annoying, these extension functions will make this process less annoying by automatically
+    /// looping the materials array to and do the operations you want
+    /// </remarks>
     public static class MaterialArrayHelper
     {
         /// <summary>

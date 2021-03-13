@@ -5,20 +5,43 @@ using UnityEngine;
 namespace VRLabs.SimpleShaderInspectors.Controls
 {
     /// <summary>
-    /// Represents a control with a checkbox for setting a float property to 2 defined values.
+    /// Represents a control with a checkbox for toggling a keyword on and off.
     /// </summary>
+    /// <remarks>
+    /// With this control, by passing the keyword name you can have a toggle that will enable and disable the keyword on the material.
+    /// </remarks>
+    /// <example>
+    /// Example usage:
+    /// <code>
+    /// this.AddKeywordToggleControl("KEYWORD_TO_TOGGLE");
+    /// </code>
+    ///
+    /// By default the keyword name will be used as Alias.
+    /// </example>
     public class KeywordToggleControl : SimpleControl
     {
         /// <summary>
         /// Boolean indicating if the toggle is enabled or not.
         /// </summary>
+        /// <value>
+        /// True if the toggle is enabled, false otherwise.
+        /// </value>
         public bool ToggleEnabled { get; protected set; }
 
         /// <summary>
         /// Boolean indicating if the keyword state has updated.
         /// </summary>
+        /// <value>
+        /// True if the keyword value has been updated, false otherwise.
+        /// </value>
         public bool HasKeywordUpdated { get; protected set; }
-
+        
+        /// <summary>
+        /// Keyword that this toggle sets on and off, once set by the constructor it cannot be changed.
+        /// </summary>
+        /// <value>
+        /// String containing the keyword.
+        /// </value>
         protected readonly string keyword;
 
         private Material[] _materials;

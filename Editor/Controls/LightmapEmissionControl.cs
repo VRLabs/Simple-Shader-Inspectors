@@ -3,8 +3,18 @@ using UnityEngine;
 namespace VRLabs.SimpleShaderInspectors.Controls
 {
     /// <summary>
-    /// Control that handles THe lightmap Emission Property of the material.
+    /// Control that handles the lightmap Emission Property of the material.
     /// </summary>
+    /// <remarks>
+    /// <para>Is the Simple Shader Inspectors equivalent of <c>MaterialEditor.LightmapEmissionProperty</c>.</para>
+    /// <para>It does not need an alias in order to work.</para>
+    /// </remarks>
+    /// <example>
+    /// Example usage:
+    /// <code>
+    /// this.AddLightmapEmissionControl();
+    /// </code>
+    /// </example>
     public class LightmapEmissionControl : SimpleControl
     {
         /// <summary>
@@ -15,6 +25,9 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <summary>
         /// Boolean indicating if the lightmap emission property has updated.
         /// </summary>
+        /// <value>
+        /// True if the lightmap emission value has been updated, false otherwise.
+        /// </value>
         public bool HasLightmapEmissionUpdated { get; protected set; }
 
         /// <summary>

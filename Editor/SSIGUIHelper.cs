@@ -3,8 +3,15 @@ using UnityEngine;
 
 namespace VRLabs.SimpleShaderInspectors
 {
+    /// <summary>
+    /// Helper class containing utility methods for IMGUI.
+    /// </summary>
     public static class SSIGUIHelper
     {
+        /// <summary>
+        /// Public reimplementation of Unity's internal equivalent function.
+        /// </summary>
+        /// <returns>A rect of the size for a single line object.</returns>
         public static Rect GetControlRectForSingleLine()
         {
             const float CONTENT_EXTRA_SPACING = 2f;
@@ -12,14 +19,14 @@ namespace VRLabs.SimpleShaderInspectors
         }
 
         /// <summary>
-        /// Draw a texture property with an HDR color field, it's the same as MaterialEditor.TexturePropertyWithHDRColor but it adds a fix for usage under indentation that would normally break it.
+        /// Draw a texture property with an HDR color field, it's the same as `MaterialEditor.TexturePropertyWithHDRColor` but it adds a fix for usage under indentation that would normally break it.
         /// </summary>
         /// <param name="editor">material editor</param>
         /// <param name="label">label to show</param>
         /// <param name="textureProp">texture material property</param>
         /// <param name="colorProperty">color material property</param>
         /// <param name="showAlpha">show alpha channel</param>
-        /// <returns></returns>
+        /// <returns>Rect used to display the TextureProperty.</returns>
         public static Rect TexturePropertyWithHDRColorFixed(this MaterialEditor editor, GUIContent label, MaterialProperty textureProp, MaterialProperty colorProperty, bool showAlpha)
         {
             Rect rect = GetControlRectForSingleLine();

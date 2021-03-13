@@ -4,25 +4,48 @@ using UnityEngine;
 namespace VRLabs.SimpleShaderInspectors.Controls.Sections
 {
     /// <summary>
-    /// Control that contains a list of OrderedSections and controls their lifecycle
+    /// Control that contains a list of OrderedSections and manages their lifecycle.
     /// </summary>
+    /// <remarks>
+    /// <para>The main purpose of this control is to manage multiple <see cref="OrderedSection"/> controls, reordering them when needed, and provide a button to enable disabled ones</para>
+    /// <para>In practice this control is what makes the entire ordered section system work, and that's the reason to why controls of type <see cref="OrderedSection"/> can only live inside this control.</para>
+    /// </remarks>
+    /// <example>
+    /// Example usage:
+    /// <code>
+    /// OrderedSectionGroup group = this.AddOrderedSectionGroup("GroupAlias");
+    ///  
+    /// group.AddOrderedSection("_ActivateProperty1");
+    /// group.AddOrderedSection("_ActivateProperty2");
+    /// group.AddOrderedSection("_ActivateProperty3");
+    /// </code>
+    /// </example>
     public class OrderedSectionGroup : SimpleControl, IControlContainer<OrderedSection>
     {
         private bool? _areNewSectionsAvailable;
 
         /// <summary>
-        /// List of available Ordered Sections
+        /// List of available Ordered Sections.
         /// </summary>
+        /// <value>
+        /// A list of <see cref="OrderedSection"/> containing the sections this control manages.
+        /// </value>
         public List<OrderedSection> Controls { get; set; }
 
         /// <summary>
-        /// GUIStyle for the add button
+        /// Style for the add button.
         /// </summary>
+        /// <value>
+        /// GUIStyle used when displaying the add button.
+        /// </value>
         public GUIStyle ButtonStyle { get; set; }
 
         /// <summary>
         /// Color of the add button.
         /// </summary>
+        /// <value>
+        /// Color used when displaying the add button.
+        /// </value>
         public Color ButtonColor { get; set; }
 
         /// <summary>
@@ -172,16 +195,33 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             return 0;
         }
         
+        /// <summary>
+        /// Implementation needed by <see cref="IControlContainer{T}"/> to get the object's controls list.
+        /// </summary>
+        /// <returns><see cref="Controls"/></returns>
         public IEnumerable<OrderedSection> GetControlList() => Controls;
 
+        /// <summary>
+        /// Implementation needed by <see cref="IControlContainer{T}"/> to add controls. All controls added are stored in <see cref="Controls"/>
+        /// </summary>
+        /// <param name="control">Control to add.</param>
         public void AddControl(OrderedSection control) => Controls.Add(control);
 
+        /// <summary>
+        /// Implementation needed by <see cref="IControlContainer"/> to add controls. All controls added are stored in <see cref="Controls"/> only if the parameter
+        /// is of type <see cref="OrderedSection"/>
+        /// </summary>
+        /// <param name="control">Control to add.</param>
         void IControlContainer.AddControl(SimpleControl control)
         {
             if(control is OrderedSection section)
                 Controls.Add(section);
         }
 
+        /// <summary>
+        /// Implementation needed by <see cref="IControlContainer"/> to get the object's controls list.
+        /// </summary>
+        /// <returns><see cref="Controls"/></returns>
         IEnumerable<SimpleControl> IControlContainer.GetControlList() => Controls;
     }
 }

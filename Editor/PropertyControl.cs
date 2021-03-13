@@ -6,6 +6,16 @@ namespace VRLabs.SimpleShaderInspectors
     /// <summary>
     /// Represents a general purpose control for a property that will be drawn based on the property type.
     /// </summary>
+    /// <remarks>
+    /// You can see this control as the Simple Shader Inspectors equivalent of <c>MaterialEditor.ShaderProperty</c> since it draws all properties in a generic way.
+    /// </remarks>
+    /// <example>
+    /// Initialize the control inside the inspector:
+    /// <code>
+    /// this.AddPropertyControl("_ExampleProperty");
+    /// </code>
+    /// </example>
+    /// <seealso cref="SimpleControl"/>
     public class PropertyControl : SimpleControl
     {
         /// <summary>
@@ -16,15 +26,22 @@ namespace VRLabs.SimpleShaderInspectors
         /// <summary>
         /// Name of the property shown by this control.
         /// </summary>
+        /// <value>
+        /// string containing the name of the property.
+        /// </value>
         public string PropertyName { get; protected set; }
         /// <summary>
         /// MaterialProperty related to the property shown by this control.
         /// </summary>
+        /// <value>
+        /// MaterialProperty fetched by the inspector based on <see cref="PropertyName"/>.
+        /// </value>
         public MaterialProperty Property { get; protected set; }
 
         /// <summary>
-        /// Boolean indicating if this control updated its property value
+        /// Boolean indicating if this control updated its property value.
         /// </summary>
+        /// <value>True if the property value has been updated, false otherwise.</value>
         public bool HasPropertyUpdated { get; protected set; }
 
         /// <summary>

@@ -9,8 +9,12 @@ using Object = UnityEngine.Object;
 namespace VRLabs.SimpleShaderInspectors
 {
     /// <summary>
-    /// Base class for creating new inspectors.
+    /// Default base class for creating new inspectors.
     /// </summary>
+    /// <remarks>
+    /// If you want to make an inspector with Simple Shader Inspectors you need to either derive from this class, or create your own implementing <see cref="ISimpleShaderInspector"/>,
+    /// but in this second case you need to implement a lot of stuff manually, so it isn't advised unless you need really custom inspector behaviours.
+    /// </remarks>
     public abstract class SimpleShaderInspector : ShaderGUI, ISimpleShaderInspector
     {
         // Array containing all found languages for a specific GUI.
@@ -35,56 +39,101 @@ namespace VRLabs.SimpleShaderInspectors
         /// <summary>
         /// Default gui background color.
         /// </summary>
+        /// <value>
+        /// Default gui background color.
+        /// </value>
+        /// <remarks>This static property makes easy to reset the background color inside a control without the need to locally store the default background color before changing it.</remarks>
         public static Color DefaultBgColor { get; set; } = GUI.backgroundColor;
 
         /// <summary>
         /// Array of selected materials
         /// </summary>
+        /// <value>
+        ///Array containing the materials currently selected by the inspector.
+        /// </value>
         public Material[] Materials { get; private set; }
 
-        // Reference to the shader used
+        /// <summary>
+        /// Shader currently used
+        /// </summary>
+        /// <value>
+        /// Contains the shader this inspector is viewing at the moment.
+        /// </value>
         public Shader Shader { get; private set; }
 
         /// <summary>
         /// List of controls.
         /// </summary>
+        /// <value>
+        /// List of control that the inspector had to draw.
+        /// </value>
         public List<SimpleControl> Controls { get; set; }
 
         /// <summary>
         /// String containing a custom folder name for localization of shaders.
         /// </summary>
+        /// <value>
+        /// Path relative to the folder containing localization files
+        /// </value>
+        /// <remarks>
+        /// This string does NOT contain the entire path string, just a sub path from <c>ShaderFolderName/Localization/</c>.
+        /// </remarks>
         protected string CustomLocalizationShaderName { get; set; }
 
         /// <summary>
         /// Boolean value that defines if the inspector should check for non animatable properties.
         /// </summary>
+        /// <value>True if non animatable properties should be granted their need to update outside of the animation recording, false otherwise. (default: false)</value>
+        /// <remarks>
+        /// Due to the cost of Reflection needed to get non animatable properties to be updated without animation recording the change, by default this behaviour is not enabled.
+        /// </remarks>
         protected bool NeedsNonAnimatableUpdate { get; set; }
 
         /// <summary>
-        /// Inizialization method where all the controls are instanced. You need to override it.
+        /// Initialization method where all the controls are instanced. You need to override it.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// This method is called only once at the beginning of the inspector lifecycle, and it should be used to create all controls that are needed, and set properties like
+        /// <see cref="NeedsNonAnimatableUpdate"/> or <see cref="CustomLocalizationShaderName"/> if a value different than the default one is needed.
+        /// </para>
+        /// <para>Keep in mind that <c>MaterialProperties</c> inside controls at this stage have not been filled in yet, so any attempt to use them would result in a <c>NullReferenceException</c></para>
+        /// </remarks>
         protected abstract void Start();
 
         /// <summary>
         /// Draw method that is used before drawing controls in the inspector.
         /// </summary>
+        /// <remarks>
+        /// This method is called before drawing any control (but after the language selector) and can be used to draw any kind of static stuff, like a title or a logo visualization.
+        /// </remarks>
         protected virtual void Header() { }
 
         /// <summary>
         /// Draw method that is used after drawing controls in the inspector.
         /// </summary>
+        /// <remarks>
+        /// This method is called at the end of the inspector, either at the bottom (in unity 2018.4) or right after the last control (in unity 2019.2+).
+        /// </remarks>
         protected virtual void Footer() { }
 
         /// <summary>
         /// Checks done on the first cycle before UI is drawn.
         /// </summary>
         /// <param name="materialEditor">material editor that uses this GUI.</param>
+        /// <remarks>
+        /// This method is called after the <see cref="Start"/> function, and at this stage material properties have been fetched and can be used for whatever is needed.
+        /// </remarks>
         protected virtual void StartChecks(MaterialEditor materialEditor) { }
 
         /// <summary>
         /// Check changes happened to properties.
         /// </summary>
         /// <param name="materialEditor">material editor that uses this GUI.</param>
+        /// <remarks>
+        /// This method is called after drawing all controls, and can be used to check if anything important has been changed by the user and some operations are needed to be done
+        /// (for example the user has changed a property to a certain value and therefore some controls need to be enabled or disables)
+        /// </remarks>
         protected virtual void CheckChanges(MaterialEditor materialEditor) { }
 
         /// <summary>
@@ -237,9 +286,17 @@ namespace VRLabs.SimpleShaderInspectors
                 GUILayout.Width(logoHeight), GUILayout.MaxHeight(logoHeight+10), GUILayout.ExpandHeight(true)))
                 Application.OpenURL("https://github.com/VRLabs/SimpleShaderInspectors");
         }
-
+        
+        /// <summary>
+        /// Implementation needed by <see cref="IControlContainer"/> to add controls.
+        /// </summary>
+        /// <param name="control">Control to add.</param>
         public void AddControl(SimpleControl control) => Controls.Add(control);
-
+        
+        /// <summary>
+        /// Implementation needed by <see cref="IControlContainer"/> to get the object's controls list.
+        /// </summary>
+        /// <returns>This inspector's controls list</returns>
         public IEnumerable<SimpleControl> GetControlList() => Controls;
     }
 }
