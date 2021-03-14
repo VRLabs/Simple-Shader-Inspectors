@@ -23,19 +23,19 @@ namespace VRLabs.SimpleShaderInspectorsExamples
             _layersSection.AddTextureGeneratorControl("_AdditionalMasks").Alias("Layers mask").SetShowUvOptions(true);
             _layersSection.AddSpaceControl();
 
-            _rChannel = _layersSection.AddSection("Red channel");
+            _rChannel = _layersSection.AddSection().Alias("Red channel");
             _rChannel.AddColorControl("_RColor").Alias("Red color");
             _rChannel.AddToggleControl("_REmissive").Alias("Red emissive");
 
-            _gChannel = _layersSection.AddSection("Green channel").SetShowFoldoutArrow(false);
+            _gChannel = _layersSection.AddSection().Alias("Green channel").SetShowFoldoutArrow(false);
             _gChannel.AddColorControl("_GColor").Alias("Green color");
             _gChannel.AddToggleControl("_GEmissive").Alias("Green emissive");
 
-            _bChannel = _layersSection.AddSection("Blue channel").SetBackgroundStyle(Styles.Bubble);
+            _bChannel = _layersSection.AddSection().Alias("Blue channel").SetBackgroundStyle(Styles.Bubble);
             _bChannel.AddColorControl("_BColor").Alias("Blue color");
             _bChannel.AddToggleControl("_BEmissive").Alias("Blue emissive");
 
-            _aChannel = _layersSection.AddSection("Alpha channel").SetLabelStyle(Styles.RightLabel);
+            _aChannel = _layersSection.AddSection().Alias("Alpha channel").SetLabelStyle(Styles.RightLabel);
             _aChannel.AddColorControl("_AColor").Alias("Alpha color");
             _aChannel.AddToggleControl("_AEmissive").Alias("Alpha emissive");
 
