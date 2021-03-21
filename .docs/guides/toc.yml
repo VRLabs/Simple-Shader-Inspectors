@@ -1,0 +1,27 @@
+- name: Inspector development guide
+  items:
+  - name: Getting Started
+    href: InspectorDevelopment/GettingStarted.md
+  - name: Basic Controls
+    href: InspectorDevelopment/BasicControls.md
+  - name: Chaining Methods
+    href: InspectorDevelopment/ChainingMethods.md
+  - name: Sections
+    href: InspectorDevelopment/Sections.md
+  - name: Customizing the Texture Generator
+    href: InspectorDevelopment/TextureGenerator.md
+  - name: Distributing Your Shader
+    href: InspectorDevelopment/DistributingYourShader.md
+  
+- name: Controls development guide
+  items:
+  - name: First Control
+    href: ControlsDevelopment/FirstControl.md
+  - name: Using IAdditionalLocalization
+    href: ControlsDevelopment/IAdditionalLocalization.md
+  - name: Using IAdditionalProperties
+    href: ControlsDevelopment/IAdditionalProperties.md
+  - name: Using IControlContainer
+    href: ControlsDevelopment/IControlContainer.md
+  - name: Using INonAnimatableProperty
+    href: ControlsDevelopment/INonAnimatableProperty.md

@@ -1,0 +1,28 @@
+using UnityEditor;
+using VRLabs.SimpleShaderInspectors;
+
+public class MyCustomControl : PropertyControl, INonAnimatableProperty
+{
+    public bool NonAnimatablePropertyChanged { get; set; }
+
+    private float _newValue;
+
+    public MyCustomControl(string propertyName) : base(propertyName)
+    {
+    }
+
+    protected override void ControlGUI(MaterialEditor materialEditor)
+    {
+        EditorGUI.BeginChangeCheck();
+        _newValue = EditorGUILayout.Slider(Content, Property.floatValue, Property.rangeLimits.x, Property.rangeLimits.y);
+        HasPropertyUpdated = EditorGUI.EndChangeCheck();
+        NonAnimatablePropertyChanged = HasPropertyUpdated;
+    }
+
+    public void UpdateNonAnimatableProperty(MaterialEditor materialEditor)
+    {
+        Property.floatValue = _newValue;
+    }
+}
+
+        materialEditor.RangeProperty(Property, Content.text);

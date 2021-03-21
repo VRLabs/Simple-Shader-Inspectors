@@ -1,0 +1,5 @@
+// inside the inspector
+ComputeShader compute = Resources.Load<ComputeShader>("Compute/maskColorizer");
+string json = Resources.Load<TextAsset>("Compute/maskColorizerSettings").text;
+
+this.AddTextureGeneratorControl(compute, json, "_TextureProperty");

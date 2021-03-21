@@ -1,0 +1,35 @@
+using UnityEditor;
+using UnityEngine;
+using VRLabs.SimpleShaderInspectors;
+
+namespace TestControlNamespace
+{
+    public class MyCustomControl : PropertyControl
+    {
+        public string ExtraText { get; protected set; }
+        [Chainable]
+        public bool IsExtraLabelVisible { get; set; }
+
+        public MyCustomControl(string propertyName, string extraText) : base(propertyName)
+        {
+            ExtraText = extraText;
+            IsExtraLabelVisible = true;
+        }
+
+        protected override void ControlGUI(MaterialEditor materialEditor)
+        {
+            EditorGUI.BeginChangeCheck();
+            materialEditor.TexturePropertySingleLine(Content, Property);
+            HasPropertyUpdated = EditorGUI.EndChangeCheck();
+            if (IsExtraLabelVisible)
+            {
+                GUILayout.Label(ExtraText);
+            }
+        }
+    }
+}
+        public MyCustomControl(string propertyName) : base(propertyName)
+        public MyCustomControl(string propertyName, string extraText, bool isExtraLabelVisible = true) : base(propertyName)
+
+            IsExtraLabelVisible = isExtraLabelVisible;
+            GUILayout.Label(ExtraText);

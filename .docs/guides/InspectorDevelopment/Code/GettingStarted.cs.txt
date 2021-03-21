@@ -1,0 +1,31 @@
+using UnityEditor;
+using VRLabs.SimpleShaderInspectors;
+using VRLabs.SimpleShaderInspectors.Controls;
+
+public class TestShaderInspector : SimpleShaderInspector
+{
+    private PropertyControl _floatControl;
+    private LabelControl _labelControl;
+
+    protected override void Start()
+    {
+        _floatControl = this.AddPropertyControl("_FloatProperty").Alias("MyFloatProperty");
+        _labelControl = this.AddLabelControl("MyLabel");
+    }
+
+    protected override void StartChecks(MaterialEditor materialEditor)
+    {
+        _labelControl.SetEnabled(_floatControl.Property.floatValue > 1);
+    }
+
+    protected override void CheckChanges(MaterialEditor materialEditor)
+    {
+        if (_floatControl.HasPropertyUpdated)
+        {
+            _labelControl.SetEnabled(_floatControl.Property.floatValue > 1);
+        }
+    }
+}
+
+        this.AddPropertyControl("_FloatProperty");
+        this.AddPropertyControl("_FloatProperty").Alias("MyFloatProperty");
