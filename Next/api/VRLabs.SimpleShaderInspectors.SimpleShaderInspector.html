@@ -1,0 +1,475 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SimpleShaderInspector
+   | Simple Shader Inspectors Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SimpleShaderInspector
+   | Simple Shader Inspectors Documentation ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="png" src="../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="VRLabs.SimpleShaderInspectors.SimpleShaderInspector">
+  
+  <h1 id="VRLabs_SimpleShaderInspectors_SimpleShaderInspector" data-uid="VRLabs.SimpleShaderInspectors.SimpleShaderInspector">Class SimpleShaderInspector
+  </h1>
+  <div class="markdown level0 summary"><p>Default base class for creating new inspectors.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">UnityEditor.ShaderGUI</span></div>
+    <div class="level2"><span class="xref">SimpleShaderInspector</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="VRLabs.SimpleShaderInspectors.ISimpleShaderInspector.html">ISimpleShaderInspector</a></div>
+    <div><a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer.html">IControlContainer</a></div>
+  </div>
+  
+  <h6><strong>Namespace</strong>: <a class="xref" href="VRLabs.SimpleShaderInspectors.html">VRLabs.SimpleShaderInspectors</a></h6>
+  
+  <h5 id="VRLabs_SimpleShaderInspectors_SimpleShaderInspector_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class SimpleShaderInspector : ShaderGUI, ISimpleShaderInspector, IControlContainer</code></pre>
+  </div>
+  
+  
+  
+  
+  <h5 id="VRLabs_SimpleShaderInspectors_SimpleShaderInspector_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>If you want to make an inspector with Simple Shader Inspectors you need to either derive from this class, or create your own implementing <a class="xref" href="VRLabs.SimpleShaderInspectors.ISimpleShaderInspector.html">ISimpleShaderInspector</a>,
+but in this second case you need to implement a lot of stuff manually, so it isn't advised unless you need really custom inspector behaviours.</p>
+</div>
+  
+  <h3 id="properties">Properties
+  </h3>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="VRLabs_SimpleShaderInspectors_SimpleShaderInspector_Controls" data-uid="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.Controls">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.Controls.html#VRLabs_SimpleShaderInspectors_SimpleShaderInspector_Controls">Controls</a>
+        </td>
+        <td class="markdown level1 summary"><p>List of controls.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="VRLabs_SimpleShaderInspectors_SimpleShaderInspector_CustomLocalizationShaderName" data-uid="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.CustomLocalizationShaderName">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.CustomLocalizationShaderName.html#VRLabs_SimpleShaderInspectors_SimpleShaderInspector_CustomLocalizationShaderName">CustomLocalizationShaderName</a>
+        </td>
+        <td class="markdown level1 summary"><p>String containing a custom folder name for localization of shaders.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="VRLabs_SimpleShaderInspectors_SimpleShaderInspector_DefaultBgColor" data-uid="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.DefaultBgColor">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.DefaultBgColor.html#VRLabs_SimpleShaderInspectors_SimpleShaderInspector_DefaultBgColor">DefaultBgColor</a>
+        </td>
+        <td class="markdown level1 summary"><p>Default gui background color.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="VRLabs_SimpleShaderInspectors_SimpleShaderInspector_Materials" data-uid="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.Materials">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.Materials.html#VRLabs_SimpleShaderInspectors_SimpleShaderInspector_Materials">Materials</a>
+        </td>
+        <td class="markdown level1 summary"><p>Array of selected materials</p>
+</td>
+      </tr>
+      <tr>
+        <td id="VRLabs_SimpleShaderInspectors_SimpleShaderInspector_NeedsNonAnimatableUpdate" data-uid="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.NeedsNonAnimatableUpdate">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.NeedsNonAnimatableUpdate.html#VRLabs_SimpleShaderInspectors_SimpleShaderInspector_NeedsNonAnimatableUpdate">NeedsNonAnimatableUpdate</a>
+        </td>
+        <td class="markdown level1 summary"><p>Boolean value that defines if the inspector should check for non animatable properties.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="VRLabs_SimpleShaderInspectors_SimpleShaderInspector_Shader" data-uid="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.Shader">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.Shader.html#VRLabs_SimpleShaderInspectors_SimpleShaderInspector_Shader">Shader</a>
+        </td>
+        <td class="markdown level1 summary"><p>Shader currently used</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="VRLabs_SimpleShaderInspectors_SimpleShaderInspector_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_" data-uid="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.AddControl.html#VRLabs_SimpleShaderInspectors_SimpleShaderInspector_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_">AddControl(SimpleControl)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Implementation needed by <a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer.html">IControlContainer</a> to add controls.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="VRLabs_SimpleShaderInspectors_SimpleShaderInspector_CheckChanges_UnityEditor_MaterialEditor_" data-uid="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.CheckChanges(UnityEditor.MaterialEditor)">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.CheckChanges.html#VRLabs_SimpleShaderInspectors_SimpleShaderInspector_CheckChanges_UnityEditor_MaterialEditor_">CheckChanges(MaterialEditor)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Check changes happened to properties.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="VRLabs_SimpleShaderInspectors_SimpleShaderInspector_Footer" data-uid="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.Footer">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.Footer.html#VRLabs_SimpleShaderInspectors_SimpleShaderInspector_Footer">Footer()</a>
+        </td>
+        <td class="markdown level1 summary"><p>Draw method that is used after drawing controls in the inspector.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="VRLabs_SimpleShaderInspectors_SimpleShaderInspector_GetControlList" data-uid="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.GetControlList">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.GetControlList.html#VRLabs_SimpleShaderInspectors_SimpleShaderInspector_GetControlList">GetControlList()</a>
+        </td>
+        <td class="markdown level1 summary"><p>Implementation needed by <a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer.html">IControlContainer</a> to get the object's controls list.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="VRLabs_SimpleShaderInspectors_SimpleShaderInspector_Header" data-uid="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.Header">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.Header.html#VRLabs_SimpleShaderInspectors_SimpleShaderInspector_Header">Header()</a>
+        </td>
+        <td class="markdown level1 summary"><p>Draw method that is used before drawing controls in the inspector.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="VRLabs_SimpleShaderInspectors_SimpleShaderInspector_OnGUI_UnityEditor_MaterialEditor_UnityEditor_MaterialProperty___" data-uid="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.OnGUI(UnityEditor.MaterialEditor,UnityEditor.MaterialProperty[])">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.OnGUI.html#VRLabs_SimpleShaderInspectors_SimpleShaderInspector_OnGUI_UnityEditor_MaterialEditor_UnityEditor_MaterialProperty___">OnGUI(MaterialEditor, MaterialProperty[])</a>
+        </td>
+        <td class="markdown level1 summary"><p>Method called when updating UI. Cannot be overridden in child classes, leave it alone.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="VRLabs_SimpleShaderInspectors_SimpleShaderInspector_Start" data-uid="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.Start">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.Start.html#VRLabs_SimpleShaderInspectors_SimpleShaderInspector_Start">Start()</a>
+        </td>
+        <td class="markdown level1 summary"><p>Initialization method where all the controls are instanced. You need to override it.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="VRLabs_SimpleShaderInspectors_SimpleShaderInspector_StartChecks_UnityEditor_MaterialEditor_" data-uid="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.StartChecks(UnityEditor.MaterialEditor)">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.StartChecks.html#VRLabs_SimpleShaderInspectors_SimpleShaderInspector_StartChecks_UnityEditor_MaterialEditor_">StartChecks(MaterialEditor)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Checks done on the first cycle before UI is drawn.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+    <h3 id="inheritedMembers">Inherited Members</h3>
+    <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <span class="xref">UnityEditor.ShaderGUI.OnMaterialPreviewGUI(UnityEditor.MaterialEditor, UnityEngine.Rect, UnityEngine.GUIStyle)</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="xref">UnityEditor.ShaderGUI.OnMaterialInteractivePreviewGUI(UnityEditor.MaterialEditor, UnityEngine.Rect, UnityEngine.GUIStyle)</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="xref">UnityEditor.ShaderGUI.OnMaterialPreviewSettingsGUI(UnityEditor.MaterialEditor)</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="xref">UnityEditor.ShaderGUI.OnClosed(UnityEngine.Material)</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="xref">UnityEditor.ShaderGUI.AssignNewShaderToMaterial(UnityEngine.Material, UnityEngine.Shader, UnityEngine.Shader)</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="xref">UnityEditor.ShaderGUI.FindProperty(System.String, UnityEditor.MaterialProperty[])</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="xref">UnityEditor.ShaderGUI.FindProperty(System.String, UnityEditor.MaterialProperty[], System.Boolean)</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="xref">System.Object.ToString()</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="xref">System.Object.Equals(System.Object)</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="xref">System.Object.GetHashCode()</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="xref">System.Object.GetType()</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="xref">System.Object.MemberwiseClone()</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Chainables.AddPropertyControl.html#VRLabs_SimpleShaderInspectors_Chainables_AddPropertyControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_">Chainables.AddPropertyControl(IControlContainer, String)</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddColorControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddColorControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_Boolean_">Chainables.AddColorControl(IControlContainer, String, Boolean)</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddControlContainer.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddControlContainer_VRLabs_SimpleShaderInspectors_IControlContainer_">Chainables.AddControlContainer(IControlContainer)</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddEnumControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddEnumControl__1_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_">Chainables.AddEnumControl&lt;TEnum&gt;(IControlContainer, String)</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddGradientTextureControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_">Chainables.AddGradientTextureControl(IControlContainer, String, String)</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddKeywordToggleControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddKeywordToggleControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_">Chainables.AddKeywordToggleControl(IControlContainer, String)</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddKeywordToggleListControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddKeywordToggleListControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_">Chainables.AddKeywordToggleListControl(IControlContainer, String)</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddLabelControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddLabelControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_">Chainables.AddLabelControl(IControlContainer, String)</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddLightmapEmissionControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddLightmapEmissionControl_VRLabs_SimpleShaderInspectors_IControlContainer_">Chainables.AddLightmapEmissionControl(IControlContainer)</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddSpaceControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddSpaceControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_Int32_">Chainables.AddSpaceControl(IControlContainer, Int32)</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddTextureControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_System_String_">Chainables.AddTextureControl(IControlContainer, String, String, String)</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddTextureGeneratorControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_System_String_">Chainables.AddTextureGeneratorControl(IControlContainer, String, String, String)</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddTextureGeneratorControl_VRLabs_SimpleShaderInspectors_IControlContainer_UnityEngine_ComputeShader_System_String_System_String_System_String_System_String_">Chainables.AddTextureGeneratorControl(IControlContainer, ComputeShader, String, String, String, String)</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTilingAndOffsetControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddTilingAndOffsetControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_">Chainables.AddTilingAndOffsetControl(IControlContainer, String)</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddToggleControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddToggleControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_Single_System_Single_">Chainables.AddToggleControl(IControlContainer, String, Single, Single)</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddToggleListControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddToggleListControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_Single_System_Single_">Chainables.AddToggleListControl(IControlContainer, String, Single, Single)</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddVectorControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddVectorControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_Boolean_System_Boolean_System_Boolean_System_Boolean_">Chainables.AddVectorControl(IControlContainer, String, Boolean, Boolean, Boolean, Boolean)</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddVertexStreamsControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddVertexStreamsControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_">Chainables.AddVertexStreamsControl(IControlContainer, String)</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddActivatableSection.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddActivatableSection_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_System_Single_System_Single_System_Single_System_Single_">Chainables.AddActivatableSection(IControlContainer, String, String, Single, Single, Single, Single)</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddActivatableSection.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddActivatableSection_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_Single_System_Single_">Chainables.AddActivatableSection(IControlContainer, String, Single, Single)</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSectionGroup.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddOrderedSectionGroup_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_">Chainables.AddOrderedSectionGroup(IControlContainer, String)</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddSection.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddSection_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_Single_System_Single_">Chainables.AddSection(IControlContainer, String, Single, Single)</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddSection.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddSection_VRLabs_SimpleShaderInspectors_IControlContainer_">Chainables.AddSection(IControlContainer)</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/VRLabs/SimpleShaderInspectors/new/master/apiSpec/new?filename=VRLabs_SimpleShaderInspectors_SimpleShaderInspector.md&amp;value=---%0Auid%3A%20VRLabs.SimpleShaderInspectors.SimpleShaderInspector%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/VRLabs/SimpleShaderInspectors/blob/master/docsOutput/docs/Next/src/SimpleShaderInspector.cs/#L18" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © VRLabs.<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Chaining methods | Simple Shader Inspectors Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Chaining methods | Simple Shader Inspectors Documentation ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="png" src="../../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="idev-ChainingMethods">
+<h1 id="chaining-methods">Chaining Methods</h1>
+
+<p>Let's take the following line from our example inspector in <a class="xref" href="GettingStarted.html">getting started</a>:</p>
+<pre><code class="lang-csharp">    _floatControl = this.AddPropertyControl(&quot;_FloatProperty&quot;).Alias(&quot;MyFloatProperty&quot;);
+</code></pre>
+<p>In this single line there's quite a bit going on. first it creates a new <code>PropertyControl</code> for our <code>_FloatProperty</code> and assigns it to an internal list.
+Then it takes this control and change its <code>Alias</code> to <code>&quot;MyFloatProperty&quot;</code>.
+Finally the control is assigned to our local <code>_floatControl</code> field.</p>
+<p>If you ever used the <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq">method syntax in LINQ</a> you are probably already familiar with this, but if you never used it you may be slightly confused by the above line, since usually you would be more used to something like this:</p>
+<pre><code class="lang-csharp">    _floatControl = new PropertyControl(&quot;_FloatProperty&quot;);
+    _floatControl.PropertyAlias = &quot;MyFloatProperty&quot;;
+    this.Controls.Add(_floatControl);
+</code></pre>
+<p>In terms of what they do they are equivalent, but in the first case we use methods that give the control itself as a return value, giving you the possibility to &quot;chain up&quot; another method call to do something else, or to assign that control to a variable to use later.</p>
+<p>By manipulating controls this way we can reduce the code needed to do the same amount of things, and keep it relatively simple to read.</p>
+<p>The advantages of it become more apparent on more complex controls where you want to optionally modify different stuff on the spot:</p>
+<pre><code class="lang-csharp">    _section = this.AddSection(&quot;MySectionAlias&quot;).SetBackgroundColor(Color.red)
+        .IncludeControlsInHeader(true).ShowFoldoutArrow(false).SetEnabled(false);
+</code></pre>
+<pre><code class="lang-csharp">    _section = new Section();
+    _section.PropertyAlias = &quot;MySectionAlias&quot;;
+    _section.BackgroundColor = Color.red;
+    _section.AreControlsInside = true;
+    _section.ShowFoldoutArrow = false;
+    _section.IsEnabled = false;
+    this.Controls.Add(_section);
+</code></pre>
+<p>As you can see, in this case we saved the need to write up a fairly sizeable amount of code just to initialize our <code>_section</code> control by chaining up method calls.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The <code>Section</code> control is a particular control that can help you a lot to organize an inspector, we talk more in depth about it <a class="xref" href="Sections.html">here</a>.</p>
+</div>
+<p>Every control can have its own dedicated chainable methods, and controls derived from other controls also inherit them. If you want to know what chainable methods a control has you can check up the API.</p>
+<h2 id="default-chainable-methods">Default chainable methods</h2>
+<p>These chainable methods are available to all controls since they are inherited from the <code>SimpleControl</code> base class:</p>
+<pre><code class="lang-csharp">    Alias(string alias)
+</code></pre>
+<p>Set a custom alias for control localization.</p>
+<p>This is like a unique identifier that the inspector can use when looking for localization data.</p>
+<pre><code class="lang-csharp">    SetVisible(bool visible)
+</code></pre>
+<p>Set if the control should be visible or not.</p>
+<pre><code class="lang-csharp">    SetEnabled(bool enabled)
+</code></pre>
+<p>Set if the control should be enabled or not.</p>
+<h2 id="chainable-constructor-methods">Chainable constructor methods</h2>
+<p>As we saw until now, to avoid having to manually assing a control to the internal list of the inspector we use <code>this.Add*YourControlNameHere*</code>, this internally creates a new control and assings it to the object in which you called the method from (in our case <code>this</code>, or in other words out inspector).</p>
+<p>This is not limited to the inspector itself, since these methods will work on anything that implements the <code>IControlContainer</code> interface (<code>SimpleShaderInspector</code> itself implements this interface). This means that controls themself can contain more controls inside themself, and they will control how to display them.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>These methods, like all chainable methods in the API, are <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/extension-methods"><code>Extension methods</code></a>, meaning that they're technically not part of the class itself, but can be applied to that class as if it was part of it.
+The main limitation is that since extension methods are not part of the class they can only access to public properties or methods of the class they're targeting.
+This is also the reason to why we need to use <code>this.</code> when calling one of these methods in the inspector.</p>
+</div>
+<p>For example if we have a <code>ToggleDropdownControl</code> called <code>toggle</code> we can add a <code>PropertyControl</code> in it by doing:</p>
+<pre><code class="lang-csharp">    toggle.AddPropertyControl(&quot;_MyPropertyName&quot;);
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p><code>ToggleDropdownControl</code> is a toggle that when enabled will diplay other controls underneath itself, is useful when you need to make some properties visible only if something is enabled.</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/VRLabs/SimpleShaderInspectors/blob/master/docsOutput/docs/Next/guides/InspectorDevelopment/ChainingMethods.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © VRLabs.<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

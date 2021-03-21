@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Using INonAnimatableProperty | Simple Shader Inspectors Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Using INonAnimatableProperty | Simple Shader Inspectors Documentation ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="png" src="../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="using-inonanimatableproperty">Using INonAnimatableProperty</h1>
+
+<p>When you're recording an animation every change you do gets recorded, material property changes included. But sometimes you don't want certain properties to be animated, cause maybe you're using them in a way that animating them would look weird, or simply is not something you want to be recorded if you happen to change it while the animation is recording.</p>
+<p>The INonAnimatableProperty interface will help you with that by giving you the possibily separate the code that updates the property in a dedicated method that will never get called when the animation is recording, and notify the inspector that it needs to update a property outside the recording</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>SimpleShaderInspector keeps track of controls with this interface and when it detects that some of them need to write updates to a property it will stop the animation recording if it was running, updates the non animatable property values, and then restarts the animation recording if it was stopped.</p>
+</div>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Due to the need of using <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/reflection"><code>Reflection</code></a> to stop and restart the animation recording, with the consequent performance cost, this system is disabled by default in any inspector and to activate it the user needs to set the <code>HasNonAnimatableProperties</code> inspector property to <code>true</code> during startup. If a non animatable property control is used when the system is disabled, the update code will run without checking the recording state.</p>
+</div>
+<p>Let's take our template code with INonAnimatableProperty implemented:</p>
+<pre><code class="lang-csharp" name="Main">using UnityEditor;
+using VRLabs.SimpleShaderInspectors;
+
+public class MyCustomControl : PropertyControl, INonAnimatableProperty
+{
+    public bool NonAnimatablePropertyChanged { get; set; }
+
+    public MyCustomControl(string propertyName) : base(propertyName)
+    {
+    }
+
+    protected override void ControlGUI(MaterialEditor materialEditor)
+    {
+    }
+
+    public void UpdateNonAnimatableProperty(MaterialEditor materialEditor)
+    {
+    }
+}
+</code></pre>
+<p>INonAnimatableProperty requires you to implement 1 property and one method:</p>
+<p><code>NonAnimatablePropertyChanged</code> is used to let the inspector know that in this frame a material property needs to update outside of the recording.</p>
+<p><code>UpdateNonAnimatableProperty</code> is where we update the value of our MaterialProperty without being recorded.</p>
+<p>Let's add a basic slider functionality o the class:</p>
+<pre><code class="lang-csharp" name="Main" highlight-lines="14-16">using UnityEditor;
+using VRLabs.SimpleShaderInspectors;
+
+public class MyCustomControl : PropertyControl, INonAnimatableProperty
+{
+    public bool NonAnimatablePropertyChanged { get; set; }
+
+    public MyCustomControl(string propertyName) : base(propertyName)
+    {
+    }
+
+    protected override void ControlGUI(MaterialEditor materialEditor)
+    {
+        EditorGUI.BeginChangeCheck();
+        materialEditor.RangeProperty(Property, Content.text);
+        HasPropertyUpdated = EditorGUI.EndChangeCheck();
+    }
+
+    public void UpdateNonAnimatableProperty(MaterialEditor materialEditor)
+    {
+    }
+}
+</code></pre>
+<p>In this current state the control will still record the changes into the animation for 2 reasons:</p>
+<ul>
+<li>We don't tell the inspector that we have a property to update outside of it</li>
+<li>We're updating the property inside <code>ControlGUI</code></li>
+</ul>
+<p>The first one is easy to solve, we just need to set <code>NonAnimatablePropertyChanged</code> to true if the property has changed:</p>
+<pre><code class="lang-csharp" name="Main" highlight-lines="2">HasPropertyUpdated = EditorGUI.EndChangeCheck();
+NonAnimatablePropertyChanged = HasPropertyUpdated;
+</code></pre>
+<p>As for the second one, things may get a bit trickier.</p>
+<p>We cannot rely on <code>materialEditor</code> to draw our property, cause the property will get automatically updated, so we need to do it ourself with <code>EditorGUILayout</code>. We also need to store the value we get back so that we can apply it to the property afterwards:</p>
+<pre><code class="lang-csharp" name="Main" highlight-lines="3">public bool NonAnimatablePropertyChanged { get; set; }
+
+private float _newValue;
+</code></pre><pre><code class="lang-csharp" name="Main" highlight-lines="4">protected override void ControlGUI(MaterialEditor materialEditor)
+{
+    EditorGUI.BeginChangeCheck();
+    _newValue = EditorGUILayout.Slider(Content, Property.floatValue, Property.rangeLimits.x, Property.rangeLimits.y);
+    HasPropertyUpdated = EditorGUI.EndChangeCheck();
+    NonAnimatablePropertyChanged = HasPropertyUpdated;
+}
+</code></pre>
+<p>And then we update the material property value inside <code>UpdateNonAnimatableProperty</code>:</p>
+<pre><code class="lang-csharp" name="Main" highlight-lines="3">public void UpdateNonAnimatableProperty(MaterialEditor materialEditor)
+{
+    Property.floatValue = _newValue;
+}
+</code></pre>
+<p>And with this, now our material property should update correctly without being recorded in the animation.</p>
+<h2 id="finished-example-class">Finished example class</h2>
+<pre><code class="lang-csharp" name="Main">using UnityEditor;
+using VRLabs.SimpleShaderInspectors;
+
+public class MyCustomControl : PropertyControl, INonAnimatableProperty
+{
+    public bool NonAnimatablePropertyChanged { get; set; }
+
+    private float _newValue;
+
+    public MyCustomControl(string propertyName) : base(propertyName)
+    {
+    }
+
+    protected override void ControlGUI(MaterialEditor materialEditor)
+    {
+        EditorGUI.BeginChangeCheck();
+        _newValue = EditorGUILayout.Slider(Content, Property.floatValue, Property.rangeLimits.x, Property.rangeLimits.y);
+        HasPropertyUpdated = EditorGUI.EndChangeCheck();
+        NonAnimatablePropertyChanged = HasPropertyUpdated;
+    }
+
+    public void UpdateNonAnimatableProperty(MaterialEditor materialEditor)
+    {
+        Property.floatValue = _newValue;
+    }
+}
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/VRLabs/SimpleShaderInspectors/blob/master/docsOutput/docs/guides/ControlsDevelopment/INonAnimatableProperty.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © VRLabs.<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

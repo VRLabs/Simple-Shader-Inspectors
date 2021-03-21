@@ -1,0 +1,334 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Customizing The Texture Generator | Simple Shader Inspectors Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Customizing The Texture Generator | Simple Shader Inspectors Documentation ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="png" src="../../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="idev-CustomTextureGenerator">
+<h1 id="customizing-the-texture-generator">Customizing The Texture Generator</h1>
+
+<p>The <code>TextureGeneratorControl</code> is a really particular control, not only it is a good example of the level of complexity that a single control can reach in terms of functionality, but it is also an example of how is possible to make controls driven mainly by data and therefore customizable for the specific need.</p>
+<p>For example if there's a need to take a color mask and apply a specific color for each channel, we can just make a compute shader that does that, give it to the texture generator, and tell him to show 1 texture input and 4 color inputs to feed the compute shader on.</p>
+<p>But <em>what</em> do you need to do in order to accomplish that?</p>
+<h2 id="creating-the-compute-shader">Creating the compute shader</h2>
+<p>First of all, you need the compute shader that does what you want, and you also need it to have what the control expects to find to feed the data on.</p>
+<p>We won't go too much into the details on how a compute shader works here since there are better guides elsewhere for that, but we will run down the main things that are important to get the compute shader to work in our context.</p>
+<p>First of all, create the file for the compute shader and call it however you want, in our case we call it <code>maskColorizer.compute</code>, but as long as the extension is right the name doesn't matter too much.</p>
+<p>Then just paste this code:</p>
+<pre><code class="lang-glsl" name="Main">#pragma kernel MaskColorizer
+
+// Default variables needed by the TextureGeneratorControl.
+RWTexture2D&lt;float4&gt; Result;
+float width;
+float height;
+
+struct TextureMetadata
+{
+    float Width;
+    float Height;
+    float SelectedChannel;
+    float Reverse;
+    float Gamma;
+};
+
+StructuredBuffer&lt;TextureMetadata&gt; TexturesMeta;
+StructuredBuffer&lt;float4&gt; Colors;
+
+// User defined Textures
+Texture2D&lt;float4&gt; Mask;
+</code></pre>
+<p>This code is required for each compute shader to work with the texture generator, since most of the input data will be fed here. But let's look a bit more into it:</p>
+<pre><code class="lang-glsl" name="Main">#pragma kernel MaskColorizer
+</code></pre>
+<p>This is a basic kernel definition for a compute shader, it says which function will be used as a valid entry point for the compute shader, in our case it will be <code>MaskColorizer</code>, you can edit the name to whatever you want, but the entry function will need to have the same name, also the name will also be used later to tell the control which entry point to use.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>You can have more than one kernel in a single file, so theoretically you could have all your compute functions in a single file and tell the generator which one to use each time, we advise to NOT do that, mostly because it can become very messy very quickly.</p>
+</div>
+<pre><code class="lang-glsl" name="Main">RWTexture2D&lt;float4&gt; Result;
+float width;
+float height;
+</code></pre>
+<p>The first variable is our end result, here we will be saving the final texture generated, and is where the generator will take the texture to save it to a file.</p>
+<p>The other 2 floats are, as you can guess, the width and height the result texture.</p>
+<pre><code class="lang-glsl" name="Main">struct TextureMetadata
+{
+    float Width;
+    float Height;
+    float SelectedChannel;
+    float Reverse;
+    float Gamma;
+};
+</code></pre>
+<p>This structure is the informations that the generator will pass for each texture it feeds in (outside of the texture itself).</p>
+<pre><code class="lang-glsl" name="Main">StructuredBuffer&lt;TextureMetadata&gt; TexturesMeta;
+StructuredBuffer&lt;float4&gt; Colors;
+</code></pre>
+<p>These 2 buffers are arrays containing the texture metadata of all textures and all colors that the generator feeds to the compute shader, the order they are fed in is the same order of display in the generator itself.</p>
+<pre><code class="lang-glsl" name="Main">Texture2D&lt;float4&gt; Mask;
+</code></pre>
+<p>Here each texture the generator has as an input has to be declared by its own, this is due to how textures need to be fed to the compute shader. In this case the generator only has a single texture, so only one variable is declared. You can name them however you want but keep their name in mind since you will need to use them later on.</p>
+<p>Outside of the declaring function with the same name of the kernel, this is all you need in the compute shader to make it work with the texture generator, <em>but</em> there is one more thing that you <em>should</em> add to the compute shader, and while it isn't always necessary, it makes some checks easier and more consistent with the options the generator provides with its inputs (and in this example you will need one of the functions in here).</p>
+<pre><code class="lang-glsl" name="Main">// Converts gamma space to linear space
+inline float GammaToLinearSpaceExact (float value)
+{
+    if (value &lt;= 0.04045F)
+    return value / 12.92F;
+    else if (value &lt; 1.0F)
+    return pow(abs((value + 0.055F))/1.055F, 2.4F);
+    else
+    return pow(abs(value), 2.2F);
+}
+
+// Converts linear space to gamma space
+inline float LinearToGammaSpaceExact (float value)
+{
+    if (value &lt;= 0.0F)
+    return 0.0F;
+    else if (value &lt;= 0.0031308F)
+    return 12.92F * value;
+    else if (value &lt; 1.0F)
+    return 1.055F * pow(abs(value), 0.4166667F) - 0.055F;
+    else
+    return pow(abs(value), 0.45454545F);
+}
+
+// Select the right channel from the float4
+float SelectChannel(float4 tex, float channel)
+{
+    if(channel == 0) return tex.r;
+    if(channel == 1) return tex.g;
+    if(channel == 2) return tex.b;
+    return tex.a;
+}
+
+// If is needed, do the color space correction
+float DoColorCorrectionIfNeeded(float gamma, float value)
+{
+    if(gamma == 1)
+        return LinearToGammaSpaceExact(value);
+    else
+        return value;
+}
+
+// Reverse the value if needed
+float DoReverseIfNeeded(float reverse, float value)
+{
+    if(reverse == 1)
+        return 1 - value;
+    else
+        return value;
+}
+</code></pre>
+<p>As you can see they're mostly selection or color space conversion functions, which go along very well with the metadata provided by the generator for each texture.</p>
+<p>Now is finally time to do what we want the generator to do:</p>
+<pre><code class="lang-glsl" name="Main">[numthreads(16,16,1)]
+void MaskColorizer (uint3 id : SV_DispatchThreadID)
+{
+    // Get the right uv coordinates based on texture size
+    float2 uv = float2(id.x * TexturesMeta[0].Width / width, id.y * TexturesMeta[0].Height / height);
+
+    // get fragment mask
+    float4 fragmentMask = DoColorCorrectionIfNeeded(TexturesMeta[0].Gamma, Mask[uv]); 
+
+    // applying colors
+    float4 finalColor = Colors[0];
+    finalColor = lerp(finalColor, Colors[1], fragmentMask.r);
+    finalColor = lerp(finalColor, Colors[2], fragmentMask.g);
+    finalColor = lerp(finalColor, Colors[3], fragmentMask.b);
+    finalColor = lerp(finalColor, Colors[4], fragmentMask.a);
+
+    // Return fragment
+    Result[id.xy] = finalColor;
+}
+</code></pre>
+<p>So, first of all, if you have no idea what <code>[numthreads(16,16,1)]</code> means, just leave it like that, it's actually needed to be exactly like that for the generator to work property.</p>
+<p>That said, the function declaration needs to have the same name of the kernel, in this case <code>MaskColorizer</code>.</p>
+<p>The <code>id</code> passed as a uint3 (3 ints packed into one structure) will be used as a way to get the textures uvs.</p>
+<pre><code class="lang-glsl" name="Main">float2 uv = float2(id.x * TexturesMeta[0].Width / width, id.y * TexturesMeta[0].Height / height);
+</code></pre>
+<p>Unlike normal shaders &quot;uvs&quot; here are not normalized 0-1 values, but instead are indexes of the pixels of the textures. This means that for each texture you need to do a conversion to get the pixel at the same relative position, which is what is done here.</p>
+<pre><code class="lang-glsl" name="Main">float4 fragmentMask = DoColorCorrectionIfNeeded(TexturesMeta[0].Gamma, Mask[uv]); 
+</code></pre>
+<p>When working in compute shaders texture fed to it may be either in linear or gamma color space, so here we check the color space and convert it to linear in case it's in gamma space.</p>
+<pre><code class="lang-glsl" name="Main">float4 finalColor = Colors[0];
+finalColor = lerp(finalColor, Colors[1], fragmentMask.r);
+finalColor = lerp(finalColor, Colors[2], fragmentMask.g);
+finalColor = lerp(finalColor, Colors[3], fragmentMask.b);
+finalColor = lerp(finalColor, Colors[4], fragmentMask.a);
+</code></pre>
+<p>If you come from normal shaders should be fairly simple to understand what is done here to get the color masking done, if you don't come from normal shader we're not sure why you're in this site in the first place.</p>
+<p>The only notable thing is the <code>Colors</code> array: this is the array of colors fed by the generator, and in this case the first color is the base color, meanwhile the other 4 are the colors for each channel.</p>
+<pre><code class="lang-csharp" name="Main">Result[id.xy] = finalColor;
+</code></pre>
+<p>As last thing, we set the final value of the fragment with the color we calculated.</p>
+<h2 id="creating-the-generator-input-settings-json">Creating the generator input settings json</h2>
+<p>Now that we have a compute shader, we need to tell the generator which data it has to feed. This is done by giving it a json file with the required data (in this example the json will be saved as <code>maskColorizerSettings.json</code>).</p>
+<pre><code class="lang-json" name="Main">{
+  &quot;KernelName&quot;: &quot;MaskColorizer&quot;,
+  &quot;Inputs&quot;: [
+    {
+      &quot;Type&quot;: 0,
+      &quot;InputName&quot;:&quot;Mask&quot;,
+      &quot;Settings&quot;: [1, 1]
+    },
+    {
+      &quot;Type&quot;: 1,
+      &quot;InputName&quot;:&quot;BaseColor&quot;,
+      &quot;Settings&quot;: [1]
+    },
+    {
+      &quot;Type&quot;: 1,
+      &quot;InputName&quot;:&quot;ColorR&quot;,
+      &quot;Settings&quot;: [1]
+    },
+    {
+      &quot;Type&quot;: 1,
+      &quot;InputName&quot;:&quot;ColorG&quot;,
+      &quot;Settings&quot;: [1]
+    },
+    {
+      &quot;Type&quot;: 1,
+      &quot;InputName&quot;:&quot;ColorB&quot;,
+      &quot;Settings&quot;: [1]
+    },
+    {
+      &quot;Type&quot;: 1,
+      &quot;InputName&quot;:&quot;ColorA&quot;,
+      &quot;Settings&quot;: [1]
+    }
+  ]
+}
+</code></pre>
+<p>Simple enough right? The json is laid out the following way:</p>
+<ul>
+<li>KernelName: name of the kernel that the generator has to use, must be the same name of the function of the compute.</li>
+<li>Inputs: array of all the inputs the generator has to use.
+<ul>
+<li>Type: type of input, 0 = Texture, 1 = Color.</li>
+<li>InputName: Name of the input field, for textures it has to be the same of the name used in the compute shader, for colors it only matters for the localization string used by the generator</li>
+<li>Settings: Array of int values that indicates some additional settings for the input field</li>
+</ul>
+</li>
+</ul>
+<p>Texture input settings:</p>
+<ul>
+<li>[0] : Show texture channel selector (0 = hidden, 1 = shown)</li>
+<li>[1] : Show reverse option (0 = hidden, 1 = shown)</li>
+</ul>
+<p>Color input settings:</p>
+<ul>
+<li>[0] : Show colorspace selector (0 = hidden, 1 = shown)</li>
+</ul>
+<h2 id="using-the-custom-generator">Using the custom generator</h2>
+<p>Now that we have both the compute shader and the input settings json we can use them on our <code>TextureGeneratorControl</code>.</p>
+<p>The easiest way is to put both the compute shader and the settings json inside a <code>Editor/Resources</code> folder, so what we can easily load them using <code>Resources.Load</code>, but you can use whatever method you want to load them.</p>
+<p>In this example the files will be inside a <code>Editor/Resources/Compute</code> folder.</p>
+<pre><code class="lang-csharp" name="Main">// inside the inspector
+ComputeShader compute = Resources.Load&lt;ComputeShader&gt;(&quot;Compute/maskColorizer&quot;);
+string json = Resources.Load&lt;TextAsset&gt;(&quot;Compute/maskColorizerSettings&quot;).text;
+
+this.AddTextureGeneratorControl(compute, json, &quot;_TextureProperty&quot;);
+</code></pre>
+<p>And now the generator is ready to go and be used, give it a try!</p>
+<p>Now this was a fairly simple example of compute shader, but, just like normal shaders, you can go with much <em>much</em> more complex shaders to do more advanced stuff.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/VRLabs/SimpleShaderInspectors/blob/master/docsOutput/docs/Next/guides/InspectorDevelopment/TextureGenerator.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © VRLabs.<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

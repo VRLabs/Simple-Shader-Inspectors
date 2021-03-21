@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Using IAdditionalProperties | Simple Shader Inspectors Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Using IAdditionalProperties | Simple Shader Inspectors Documentation ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="png" src="../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="cdev-IAdditionalProperties">
+<h1 id="using-iadditionalproperties">Using IAdditionalProperties</h1>
+
+<p>In some cases you may need to use multiple material properties in a single control.</p>
+<p>An example is making a texture control similar in functionality to <code>MaterialEditor.TexturePropertySingleLine</code>.</p>
+<p>Just like the <code>IAdditionalLocalization</code> interface can make you get multiple localized strings, <code>IAdditionalProperties</code> can be used for material properties themself. The biggest difference is that in this case you need a way to get the material property name of the additional properties from the inspector.</p>
+<p>This time let's check the <code>TextureControl</code> code that Simple Shader Inspectors comes with, since it uses this interface to have 2 extra properties. The file can be found inside <code>&quot;VRLabs/SimpleShaderInspectors/Editor/Controls/TextureControl.cs&quot;</code>.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>This is also a good time to see a real control use case instead of examples that are done for the sake of an example.</p>
+</div>
+<p>First let's look at the implementation of the <code>IAdditionalProperties</code> interface.</p>
+<pre><code class="lang-csharp" name="Main">public class TextureControl : PropertyControl, IAdditionalProperties
+{
+    //..
+    public AdditionalProperty[] AdditionalProperties { get; set; }
+    //..
+</code></pre>
+<p>As you can see, to implement the interface we need to add an array of type <code>AdditionalProperty[]</code>, which will contain both our property name string and out material property that will automatically be fetched by the inspector.</p>
+<p>let's now check in the constructor:</p>
+<pre><code class="lang-csharp" name="Main">public TextureControl(string propertyName, string extraPropertyName1 = null, string extraPropertyName2 = null) : base(propertyName)
+{
+    AdditionalProperties = new AdditionalProperty[2];
+    AdditionalProperties[0] = new AdditionalProperty(extraPropertyName1);
+    if (!string.IsNullOrWhiteSpace(extraPropertyName1))
+        _hasExtra1 = true;
+    
+    AdditionalProperties[1] = new AdditionalProperty(extraPropertyName2);
+    if (!string.IsNullOrWhiteSpace(extraPropertyName2))
+        _hasExtra2 = true;
+</code></pre>
+<p>Here the array is initialized with an array length of 2, and then we initialize both of them by giving them the name of the material property they need to fetch. (we are purposely ignoring the 2 extra checks since they're out of the scope of this page).</p>
+<p>Now during <code>ControlGUI</code> we can use them as we wish (the example below is taken from the <code>DrawTextureSingleLine</code> method, but that method is called inside <code>ControlGUI</code> so for our example is the same thing).</p>
+<pre><code class="lang-csharp" name="Main">if (_hasExtra2)
+{
+    materialEditor.TexturePropertySingleLine(Content, Property, AdditionalProperties[0].Property, AdditionalProperties[1].Property);
+}
+else if (_hasExtra1)
+{
+    if (AdditionalProperties[0].Property.type == MaterialProperty.PropType.Color &amp;&amp; HasHDRColor)
+        materialEditor.TexturePropertyWithHDRColorFixed(Content, Property, AdditionalProperties[0].Property, true);
+    else
+        materialEditor.TexturePropertySingleLine(Content, Property, AdditionalProperties[0].Property);
+}
+else
+{
+    materialEditor.TexturePropertySingleLine(Content, Property);
+}
+</code></pre><h2 id="overuse-of-iadditionalproperties-interface">Overuse of IAdditionalProperties interface</h2>
+<p>While this is incredibly useful in a lot of cases, a serious risk of abusing this interface is creating giant controls that handle half of the inspector alone.</p>
+<p>Let's take in consideration an hypotetical control that has 2 textures, one for a color map and one for a normal map, at first look it would make sense to merge them in a single control, due to their frequent use together, but it's really not.</p>
+<p>Before including more properties to a control, ask yourself the following questions:</p>
+<ul>
+<li>Are these properties directly correlated to each other in some way?</li>
+<li>Do they lose their overall meaning if split apart in 2 completely different areas of the inspector?</li>
+</ul>
+<p>If the answer is no to one of them, you probably should consider other options to handle them instead of including them in a single control.</p>
+<p>In case of the official texture control the answer to them is:</p>
+<ul>
+<li>Yes, because the second and third properties in this control should be used for properties that directly manipulate the texture (for example a texture color, or a normal map intensity).</li>
+<li>Yes, because if, for example, you put your texture field at the beginning and its color at the end of the inspector, when you reach the color you have no real reference to what that color modifies, maybe wrongly implying that the color is for standalone effects when in reality it just applies a tint to the texture.</li>
+</ul>
+<p>If we take into consideration our dual texture control the answers differ a bit:</p>
+<ul>
+<li>Not really, the 2 textures are used together really often, but they represent really different informations.</li>
+<li>No, if they are in 2 different areas of the inspector they still have their full meaning, and having them separated marks even more their independent functions. At worst the inspector would look a bit messy if they're not in the same general area.</li>
+</ul>
+<p>As third general rule: if you have more than 5-6 properties in a single control, there's a good chance you're doing something conceptually wrong. And if all those properties are really that intertwined between each other, let us know what the hell you're doing with that shader, cause we're definitely curious to see it.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/VRLabs/SimpleShaderInspectors/blob/master/docsOutput/docs/guides/ControlsDevelopment/IAdditionalProperties.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © VRLabs.<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

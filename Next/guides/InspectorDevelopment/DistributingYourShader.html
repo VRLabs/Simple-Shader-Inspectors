@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Distributing your shader | Simple Shader Inspectors Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Distributing your shader | Simple Shader Inspectors Documentation ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="png" src="../../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="idev-DistributingYourShader">
+<h1 id="distributing-your-shader">Distributing Your Shader</h1>
+
+<p>If you're making a customized shader inspector you probably belong in 1 of these 2 categories:</p>
+<ul>
+<li>you're making a shader for internal use in your dev team and you need to be sure that's easy to use for your artists.</li>
+<li>you're making a shader with the purpose of distributing it.</li>
+</ul>
+<p>In the first case you're good to go, as long as you included the Simple Shader Inspectors package in your team's project it will work fine.</p>
+<p>However in the second case you'll have the problem of distributing it, since it has our library as a dependency, and be sure that it won't cause problems in the eventuality that the end user's project already has some shader using our library, which may end up causing duplicate script errors or incompatibilities.</p>
+<p>Currently these are the ways we currently encourage to distribute our library with your shaders:</p>
+<h2 id="reference-to-our-package-repository">Reference to our package Repository</h2>
+<p>The first and simplest way is to not include our library directly but inform the end user that Simple Shader Inspectors is a requirement for your shader in order to work.</p>
+<p>Pros:</p>
+<ul>
+<li>Is the easiest method.</li>
+<li>Slimmer package.</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Is responsibility of the user to install our library, resulting in higher chance of user error.</li>
+<li>If some breaking changes happen within our library, you will have to update your editor to support it, or you end up having users downloading the latest version of our library and having it not work with your shader.</li>
+</ul>
+<h2 id="include-our-code-in-your-unity-package">Include our code in your unity package</h2>
+<p>Since Simple Shader Inspector is under MIT, you can freely include it in your unitypackage. If your main distribution method is Github (or equivalents), you can also include it in just the release package without the need to include it in your source code as well (in this case mention it in your README).</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>If you choose this method, please be sure to leave it in its default location and that its component's GUID did not change (you can test that by deleting our package and then reimport it, if you get console warning about duplicate GUID it means that unity changed that, in this case please move everything in a new project with our package installed first).</p>
+</div>
+<p>Pros:</p>
+<ul>
+<li>The user doesn't have to do additional steps.</li>
+<li>Doesn't need to be included in the source code itself as long as its included in the downloadable package.</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>It has the possibility of ending up with duplicate scripts if the user has also installed a shader that did not respected the above warning.</li>
+<li>If the user downloads a shader that uses a newer version of our library it will override the version you have included, and if the newer version has some breaking changes, your inspector won't work, so you need to keep your shader inspector up to date with our library version.</li>
+</ul>
+<h2 id="embed-our-code-in-your-editor-folder">Embed our code in your editor folder</h2>
+<p>This is by far the safest way to include our library in your shader, by making a copy of the necessary code into a separate folder inside your shader, under your namespace. We also included a tool to help you in the process by automatically copying the classes in your editor folder and change namespace to one defined by you. Remember to update your inspector's namespace <code>using</code> references.</p>
+<p>Pros:</p>
+<ul>
+<li>As long as you put your original namespace, you won't have code conflicts even if there are multiple copies of it from different shaders.</li>
+<li>The user doesn't have to do additional steps.</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>If you want to use newer versions of Simple Shader Inspectors you will need to redo the entire process.</li>
+<li>The user may not understand that your shader is actually using an additional library and may confuse eventual bugs inside our library as bug in your shader inspector.</li>
+</ul>
+<h2 id="final-thoughts">Final thoughts</h2>
+<p>As you can see there are multiple takes on the situation, each with pros and cons, choose one depending on your workflow. For example if you have a large audience not including the library at all and just mention that it has a requirement could end up in receiving a lot help requests from users unaware of the requirement, cause they may have downloaded your shader without consulting the README first.</p>
+<p>For example here at VRLabs we include the library inside our shader unity packages without actually embedding it, but we are also the ones developing it, meaning that a good part of the disadvantages of this method won't affect us at all.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/VRLabs/SimpleShaderInspectors/blob/master/docsOutput/docs/Next/guides/InspectorDevelopment/DistributingYourShader.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © VRLabs.<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

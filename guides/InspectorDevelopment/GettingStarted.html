@@ -1,0 +1,331 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Getting started | Simple Shader Inspectors Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Getting started | Simple Shader Inspectors Documentation ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="png" src="../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="idev-GettingStarted">
+<h1 id="getting-started">Getting Started</h1>
+
+<p>First of all, we need to import the unity package with the asset, if you haven't downloaded yet go <a href="https://github.com/VRLabs/SimpleShaderInspectors/releases/latest">here</a> and grab the latest version.</p>
+<p>Once everything is imported let's start building out first inspector!</p>
+<h2 id="creating-a-new-inspector">Creating a new Inspector</h2>
+<p>If you made shader inspectors before you know that we usually inherit from <code>ShaderGUI</code> to build an inspector.</p>
+<p>But in our case we will need to inherit from <code>SimpleShaderInspector</code> instead.</p>
+<p><code>SimpleShaderInspector</code> itself is derived from <code>ShaderGUI</code> so Unity will recognize it as a valid shader inspector and assign it to shaders that will ask for it.</p>
+<p>Here is an example custom inspector:</p>
+<pre><code class="lang-csharp" name="Main">using UnityEditor;
+using VRLabs.SimpleShaderInspectors;
+using VRLabs.SimpleShaderInspectors.Controls;
+
+public class TestShaderInspector : SimpleShaderInspector
+{
+    protected override void Start()
+    {
+    }
+}
+</code></pre>
+<p>As you can see, there is no <code>OnGUI</code> override, but there is a <code>Start</code> override instead.</p>
+<p>The concept of Simple Shader Inspectors is to declare the controls we want to draw and which <code>MaterialProperties</code> they control, and leaving the actual drawing and checking of material property changes to the inspector.</p>
+<p>Let's say that we have a <code>MaterialProperty</code> named <code>&quot;_FloatProperty&quot;</code> that we want to display, all we need to do is:</p>
+<pre><code class="lang-csharp" name="Main" highlight-lines="3">protected override void Start()
+{
+    this.AddPropertyControl(&quot;_FloatProperty&quot;);
+}
+</code></pre>
+<p><code>AddPropertyControl</code> is the most basic control available and is comparable to <code>MaterialEditor.ShaderProperty</code> in terms of what it draws to the ui.</p>
+<p>Notice the keyword <code>this</code> used at the beginning. if you've done a bit of programming before you should know that normally you can omit it, but in our case is necessary to use it, and if you try to remove it you will encounter a compilation error. <a class="xref" href="ChainingMethods.html">Here</a> we explain why we need it, but it's not necessary to know right now.</p>
+<h2 id="localization">Localization</h2>
+<p>If you try to check how the inspector looks now when you select a material you will notice 2 things:</p>
+<ul>
+<li>It shows the property with its default name.</li>
+<li>Now in your shader's folder you have a <code>Localization</code> folder.</li>
+</ul>
+<p><img src="/images/docs/idev/GettingStarted/1.png" alt="inspector">
+<img src="/images/docs/idev/GettingStarted/2.png" alt="folder"></p>
+<p>If you go into the <code>Localization</code> folder and then select the folder with the same name of your shader, you see that you have a <code>English.json</code> and a <code>Settings.json</code> file. The latter one is used by the inspector and we can leave that be, what we are interested in is the <code>English.json</code> file.</p>
+<p>This file contains all the controls needed text to display and is initially built based on what controls are declared in the inspector.</p>
+<p>If we open the one we generated it will only include an entry with 3 strings:</p>
+<pre><code class="lang-json" name="Main">{
+    &quot;Properties&quot;: [
+        {
+            &quot;Name&quot;: &quot;_FloatProperty&quot;,
+            &quot;DisplayName&quot;: &quot;My float property&quot;,
+            &quot;Tooltip&quot;: &quot;My float property&quot;
+        }
+    ]
+}
+</code></pre>
+<p>As you add more controls into the inspector, more entries will appear here.</p>
+<p>By default the <code>Name</code> will be the control alias. This alias depending on the type of control can be either a material property name (if the control has one), or an arbitrary name. In any case you can change an alias by calling <code>Alias(newName)</code>.</p>
+<pre><code class="lang-csharp" name="Main" highlight-lines="3">protected override void Start()
+{
+    this.AddPropertyControl(&quot;_FloatProperty&quot;).Alias(&quot;MyFloatProperty&quot;);
+}
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>We will talk about <code>.Alias</code> and similarly structured methods <a class="xref" href="ChainingMethods.html#default-chainable-methods">here</a>.</p>
+</div>
+<p>After we reopened the inspector again with this change it will update the localization file:</p>
+<pre><code class="lang-json" name="Main" highlight-lines="3-7">{
+    &quot;Properties&quot;: [
+        {
+            &quot;Name&quot;: &quot;MyFloatProperty&quot;,
+            &quot;DisplayName&quot;: &quot;My float property&quot;,
+            &quot;Tooltip&quot;: &quot;My float property&quot;
+        },
+        {
+            &quot;Name&quot;: &quot;_FloatProperty&quot;,
+            &quot;DisplayName&quot;: &quot;My float property&quot;,
+            &quot;Tooltip&quot;: &quot;My float property&quot;
+        }
+    ]
+}
+</code></pre>
+<p>As you can see the new name entry has been added.</p>
+<p>This comes really handy when you have multiple controls that take in the same property, since by default they would use the same entry.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The inspector will never delete old/unused entries to avoid losing stuff that you may need in the future, so is your job to clean up unwanted entries.</p>
+</div>
+<p>Let's clean up the file and set both <code>DisplayName</code> and <code>Tooltip</code> to what we want to show:</p>
+<pre><code class="lang-json" name="Main">{
+    &quot;Properties&quot;: [
+        {
+            &quot;Name&quot;: &quot;MyFloatProperty&quot;,
+            &quot;DisplayName&quot;: &quot;Awesome float property&quot;,
+            &quot;Tooltip&quot;: &quot;Nice tooltip!&quot;
+        }
+    ]
+}
+</code></pre>
+<p><img src="/images/docs/idev/GettingStarted/3.png" alt="inspector"></p>
+<p>Now is time for the fun part, duplicate <code>English.json</code> and rename it to <code>Not english.json</code> and modity it like this:</p>
+<pre><code class="lang-json" name="Main">{
+    &quot;Properties&quot;: [
+        {
+            &quot;Name&quot;: &quot;MyFloatProperty&quot;,
+            &quot;DisplayName&quot;: &quot;Aledoye flget prodfrghy&quot;,
+            &quot;Tooltip&quot;: &quot;I can't write!&quot;
+        }
+    ]
+}
+</code></pre>
+<p>Now if you reload the inspector you will see this:</p>
+<p><img src="/images/docs/idev/GettingStarted/4.png" alt="inspector"></p>
+<p>If you select the dropdown that just appeard you will see a new option: <code>Not english</code>.
+By selecting that the inspector will immediately swap out the localization with what you have selected.</p>
+<p><img src="/images/docs/idev/GettingStarted/5.png" alt="inspector"></p>
+<p>The inspector will keep the selected language until you change it back (that's what <code>Settings.json</code> is used for).</p>
+<p>This is really useful in case you want to target multiple countries with your shader and also cleans up the inspector script from having a wall of text with all the label names and tooltips.</p>
+<h2 id="localization-editor-window">Localization Editor Window</h2>
+<p>Editing localization files manually can become quite annoying over time, especially when the inspector starts to grow bigger and bigger.</p>
+<p>Fortunately, you don't have to edit them manually, but you can use the localization editor window provided by Simple Shader Inspectors. You can find it in <code>VRLabs/Simple Shader Inspectors/Localization file editor</code>.</p>
+<p>After you open the window there will be only one button that will prompt you to select the localization file to add, and once opened you will be greeted by a way more manageable UI with a list of the properties available and an area where you can edit the selected one.</p>
+<p><img src="/images/docs/idev/GettingStarted/8.png" alt="inspector"></p>
+<h2 id="check-changes">Check changes</h2>
+<p>Now we know how to show a control for a property and how to change its label content, but what about doing something specific in case a property has changed?</p>
+<p>Before doing anything, you should really check in the API if there is a control that already does what you want by its own.</p>
+<p>In case the answer is no or you simply want to set some values for various reasons you will need to override the <code>CheckChanges</code> method:</p>
+<pre><code class="lang-csharp" name="Main">protected override void StartChecks(MaterialEditor materialEditor)
+{
+}
+</code></pre>
+<p>In here you can check if any control had property changes and react accordingly.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Despite looking really similar to <code>OnGUI</code> you should avoid drawing stuff in here directly.</p>
+</div>
+<p>Right now we do not have any control available globally to check, and also have nothing we can do as a reaction, so let's modify the <code>Start</code> like this:</p>
+<pre><code class="lang-csharp" name="Main" highlight-lines="1-2,6-7">private PropertyControl _floatControl;
+private LabelControl _labelControl;
+
+protected override void Start()
+{
+    _floatControl = this.AddPropertyControl(&quot;_FloatProperty&quot;).Alias(&quot;MyFloatProperty&quot;);
+    _labelControl = this.AddLabelControl(&quot;MyLabel&quot;);
+}
+</code></pre><pre><code class="lang-json" name="Main">{
+    &quot;Properties&quot;: [
+        {
+            &quot;Name&quot;: &quot;MyLabel&quot;,
+            &quot;DisplayName&quot;: &quot;Awesome label!&quot;,
+            &quot;Tooltip&quot;: &quot;Nice tooltip!&quot;
+        },
+        {
+            &quot;Name&quot;: &quot;MyFloatProperty&quot;,
+            &quot;DisplayName&quot;: &quot;Awesome float property&quot;,
+            &quot;Tooltip&quot;: &quot;Nice tooltip!&quot;
+        }
+    ]
+}
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p><code>LabelControl</code> is a basic control that just displays a label, the string passed is the Alias used for localization. All controls that do not contain a property will require an Alias.</p>
+</div>
+<p>Now that we assigned those 2 controls to a variable we can check the changes of the first one:</p>
+<pre><code class="lang-csharp" name="Main" highlight-lines="3-6">protected override void CheckChanges(MaterialEditor materialEditor)
+{
+    if (_floatControl.HasPropertyUpdated)
+    {
+        _labelControl.SetEnabled(_floatControl.Property.floatValue &gt; 1);
+    }
+}
+</code></pre>
+<p>Here we check if <code>_floatControl</code> had a change and if it had one we set the enabled state of <code>_labelControl</code> to true if the property value is above 1 or false otherwise.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Almost all controls give you direct access to their <code>MaterialProperty</code> with the <code>Property</code> field. Some controls may give you access to additional <code>MaterialProperty</code> objects they manage. You can see if a control gives you access to additional properties by checking the API.</p>
+</div>
+<p>Now we can go back to our inspector and see that now the label gets correctly disabled or enabled based on the value of _floatProperty.</p>
+<p><img src="/images/docs/idev/GettingStarted/6.png" alt="inspector"></p>
+<p><img src="/images/docs/idev/GettingStarted/7.png" alt="inspector"></p>
+<h2 id="checks-during-inspector-initialization">Checks during inspector initialization</h2>
+<p>Now we can check whenever a property changes value and react conseqently, but it doesn't react during initialization.</p>
+<p>The first idea is to do the preliminary checks inside the <code>Start</code> function, but if you already tried that you noticed that whenever you try to access a material property you will get a <a href="https://docs.microsoft.com/en-us/dotnet/api/system.nullreferenceexception"><code>NullRefereneException</code></a>.</p>
+<p>This is normal, cause while we did initialized controls correctly, the inspector did not have the time to fetch the desired material property yet.</p>
+<p>That's where the <code>StartChecks</code> override comes in. This function is still called during the first initialization, but in this phase material properties will have been fetched. So we can put all our needed checks there. You can also put here all checks you want to do only during initialization that require a value from a material property.</p>
+<pre><code class="lang-csharp" name="Main">protected override void StartChecks(MaterialEditor materialEditor)
+{
+    _labelControl.SetEnabled(_floatControl.Property.floatValue &gt; 1);
+}
+</code></pre>
+<p>Now the inspector responds correctly during initialization as well.</p>
+<h2 id="finished-example-class">Finished example class</h2>
+<p>This is our final result for this first inspector:</p>
+<pre><code class="lang-csharp" name="Main">using UnityEditor;
+using VRLabs.SimpleShaderInspectors;
+using VRLabs.SimpleShaderInspectors.Controls;
+
+public class TestShaderInspector : SimpleShaderInspector
+{
+    private PropertyControl _floatControl;
+    private LabelControl _labelControl;
+
+    protected override void Start()
+    {
+        _floatControl = this.AddPropertyControl(&quot;_FloatProperty&quot;).Alias(&quot;MyFloatProperty&quot;);
+        _labelControl = this.AddLabelControl(&quot;MyLabel&quot;);
+    }
+
+    protected override void StartChecks(MaterialEditor materialEditor)
+    {
+        _labelControl.SetEnabled(_floatControl.Property.floatValue &gt; 1);
+    }
+
+    protected override void CheckChanges(MaterialEditor materialEditor)
+    {
+        if (_floatControl.HasPropertyUpdated)
+        {
+            _labelControl.SetEnabled(_floatControl.Property.floatValue &gt; 1);
+        }
+    }
+}
+</code></pre>
+<p>From here you can continue by adding more controls and checks as you need them.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>In this example we ended up assigning all created controls to local variables, but as you saw in the first steps of the guide you don't need to assign every control to have it shown.</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/VRLabs/SimpleShaderInspectors/blob/master/docsOutput/docs/guides/InspectorDevelopment/GettingStarted.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © VRLabs.<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

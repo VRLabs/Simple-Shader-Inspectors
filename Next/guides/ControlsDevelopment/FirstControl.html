@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>First control | Simple Shader Inspectors Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="First control | Simple Shader Inspectors Documentation ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="png" src="../../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="cdev-FirstControl">
+<h1 id="first-control">First Control</h1>
+
+<p>Controls are the central piece of Simple Shader Inspectors, so it's only natural that at some point you may need to make your own controls if you're doing something particular with your shader and you want an user friendly way to control it in the inspector.</p>
+<p>And luckily making a customized control is not too hard.</p>
+<div class="CAUTION">
+<h5>Caution</h5>
+<p>Unlike just using the API, making custom controls will <em>require</em> you to have a basic knowledge on how to manually display stuff in the inspector using <code>MaterialProperty</code>and <code>MaterialEditor</code>, how the <a href="https://docs.unity3d.com/Manual/GUIScriptingGuide.html"><code>IMGUI</code></a> systems works.</p>
+</div>
+<p>First things first, let's look at an empty template:</p>
+<pre><code class="lang-csharp" name="Main">using UnityEditor;
+using UnityEngine;
+using VRLabs.SimpleShaderInspectors;
+
+namespace TestControlNamespace
+{
+    public class MyCustomControl : PropertyControl
+    {
+        public MyCustomControl(string propertyName) : base(propertyName)
+        {
+        }
+        protected override void ControlGUI(MaterialEditor materialEditor)
+        {
+        }
+    }
+}
+</code></pre>
+<p>As we can see the class <code>MyCustomControl</code> inherits from <code>PropertyControl</code>, which is the base class for all controls that use one material property.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You can inherit from other controls as well if you want to inherit some of their specific functionalities.</p>
+</div>
+<div class="CAUTION">
+<h5>Caution</h5>
+<p>If you want to make a control that doesn't use any material property, the base class should be <code>SimpleControl</code>.
+<code>PropertyControl</code> also inherits from this class.</p>
+</div>
+<p>When inheriting from <code>PropertyControl</code> you will always need to override the <code>ControlGUI</code> method.
+This method is what gets called each time the inspector has to draw your control, therefore all the GUI stuff goes there.</p>
+<p>The constructor should always call the base constructor to correctly initialize the <code>PropertyName</code> string (you can initialize it manually if you want, it's just simpler to pass the string to the base constructor).</p>
+<p>After that, you're free to do whatever you want with the constructor.</p>
+<p>Let's start customize it to our needs, we will make a control that will only take 1 texture and diplays it, but also had an additional label in the row below for a longer description.</p>
+<p>To do that we need an additional string containing the text we wanna show:</p>
+<pre><code class="lang-csharp" name="Main" highlight-lines="3">public class MyCustomControl : PropertyControl
+{
+    public string ExtraText { get; protected set; }
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>We have the <code>set</code> as protected cause we don't want it be modified from the outside, but we still want to it to be usable if someone will ever inherit from this control.</p>
+</div>
+<p>Now we need the constructor to initialize the label as well.</p>
+<pre><code class="lang-csharp" name="Main" highlight-lines="1,3">public MyCustomControl(string propertyName, string extraText) : base(propertyName)
+{
+    ExtraText = extraText;
+}
+</code></pre>
+<p>Now we need to draw them in the <code>ControlGUI</code> method:</p>
+<pre><code class="lang-csharp" name="Main" highlight-lines="3-6">protected override void ControlGUI(MaterialEditor materialEditor)
+{
+    EditorGUI.BeginChangeCheck();
+    materialEditor.TexturePropertySingleLine(Content, Property);
+    HasPropertyUpdated = EditorGUI.EndChangeCheck();
+    GUILayout.Label(ExtraText);
+}
+</code></pre>
+<p>As you see, we did not fetch the material property, cause it gets automatically fetched for us by the inspector, so we get right to the draw part and we do a <code>BeginChangeCheck</code> so that everything we do next will be tracked for changes. Then we draw our texture property, end the change check assigning the result to <code>HasPropertyUpdated</code>, and draw our additional label.</p>
+<p>You can see that we use the <code>Content</code> field inherited from <code>PropertyControl</code> as a label for our texture. This is cause the localization system fetched the localized control string for us, so we don't need to worry about it.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>In this example the additional label uses a predefined string, this is not optimal if we will have multiple localizations, <a class="xref" href="IAdditionalLocalization.html">here</a> we will revisit the control to add support for another localized string.</p>
+</div>
+<p>As a final touch let's make the user able to decide whether or not he wants to display the additional label:</p>
+<pre><code class="lang-csharp" name="Main" highlight-lines="2">public string ExtraText { get; protected set; }
+public bool IsExtraLabelVisible { get; set; }
+</code></pre><pre><code class="lang-csharp" name="Main" highlight-lines="1,4">public MyCustomControl(string propertyName, string extraText, bool isExtraLabelVisible = true) : base(propertyName)
+{
+    ExtraText = extraText;
+    IsExtraLabelVisible = isExtraLabelVisible;
+}
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Doing <code>bool isExtraLabelVisible = true</code> makes so the parameter is not required to make the method call, and if the parameter is not given a default value is used instead (in this case <code>true</code>).</p>
+</div>
+<pre><code class="lang-csharp" name="Main" highlight-lines="6-7,9">protected override void ControlGUI(MaterialEditor materialEditor)
+{
+    EditorGUI.BeginChangeCheck();
+    materialEditor.TexturePropertySingleLine(Content, Property);
+    HasPropertyUpdated = EditorGUI.EndChangeCheck();
+    if (IsExtraLabelVisible)
+    {
+        GUILayout.Label(ExtraText);
+    }
+}
+</code></pre><h2 id="adding-the-new-control-extension-method">Adding the New Control extension method</h2>
+<p>At this state, the control technically already works, but it's a fairly different experience using this compared to the default ones, since we have to manually call the constructor and assign the control to the list in the inspector.</p>
+<p>This is because there are no <code>Extension methods</code> to create and assing the control.</p>
+<p>Simple Shader Inspectors comes with a tool that will automatically generate all chainable methods required from a namespace, and saves it into a class. It can be found at <code>VRLabs/Simple Shader Innspectors/Generate Chainable Methods</code>.</p>
+<p>Once opened you will need to select where you want to save the generated files and which namespace should be looked for:</p>
+<p><img src="/images/docs/cdev/FirstControl/1.png" alt="inspector"></p>
+<p>The tool will generate all chainable constructors and methods for all controls inside the selected namespace and subnamespaces.</p>
+<h2 id="making-a-property-chainable">Making a Property chainable</h2>
+<p>Usually you want the extension method to exactly match the constructor parameters, but in our case we did not put the boolean for the label. This is intentional, cause now we're gonna move that boolean out of the constructor and add a chainable attribute to the property definition.</p>
+<pre><code class="lang-csharp" name="Main" highlight-lines="2">public string ExtraText { get; protected set; }
+[Chainable]
+public bool IsExtraLabelVisible { get; set; }
+</code></pre><pre><code class="lang-csharp" name="Main" highlight-lines="1,4">public MyCustomControl(string propertyName, string extraText) : base(propertyName)
+{
+    ExtraText = extraText;
+    IsExtraLabelVisible = true;
+}
+</code></pre>
+<p>By adding the <code>Chainable</code> attribute you're telling the generator script to also generate a chainable method for this property (you will need to run the generator script again).</p>
+<p>Now the question is: when should a field be initialized with a parameter in the constructor vs having an extension method?</p>
+<p>It depends, on classes that are not meant to have child classes or has fields where it's required to have a value different from a default in order to work, then initializing them with a dedicated parameter in the constructor makes sense, in other cases you may just give a default value to it in the constructor and let the user decide if he wants to modify it by calling an extension method.</p>
+<p>You can also have both at the same time, if you so desire.</p>
+<h2 id="final-example-class">Final example class</h2>
+<pre><code class="lang-csharp" name="Main">using UnityEditor;
+using UnityEngine;
+using VRLabs.SimpleShaderInspectors;
+
+namespace TestControlNamespace
+{
+    public class MyCustomControl : PropertyControl
+    {
+        public string ExtraText { get; protected set; }
+        [Chainable]
+        public bool IsExtraLabelVisible { get; set; }
+
+        public MyCustomControl(string propertyName, string extraText) : base(propertyName)
+        {
+            ExtraText = extraText;
+            IsExtraLabelVisible = true;
+        }
+
+        protected override void ControlGUI(MaterialEditor materialEditor)
+        {
+            EditorGUI.BeginChangeCheck();
+            materialEditor.TexturePropertySingleLine(Content, Property);
+            HasPropertyUpdated = EditorGUI.EndChangeCheck();
+            if (IsExtraLabelVisible)
+            {
+                GUILayout.Label(ExtraText);
+            }
+        }
+    }
+}
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/VRLabs/SimpleShaderInspectors/blob/master/docsOutput/docs/Next/guides/ControlsDevelopment/FirstControl.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © VRLabs.<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

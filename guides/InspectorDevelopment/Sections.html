@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Sections | Simple Shader Inspectors Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Sections | Simple Shader Inspectors Documentation ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="png" src="../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="idev-Sections">
+<h1 id="sections">Sections</h1>
+
+<p>Sections are a family of controls that help organizing your inspector by grouping controls in dropdowns with nice headers, and they're so awesome that we needed to make a dedicated section just for them (no pun intended, ok maybe a bit).</p>
+<p>The main concept is simple: you create a section based on your needs, and then you add a number of controls to it with the usual <code>Add*YourControlNameHere*</code>, but applied to your section control instead of <code>this</code>. You can even add a section inside your section if you want.</p>
+<p>Right now there are 3 types of sections available and they each have their own use case.</p>
+<h2 id="section">Section</h2>
+<pre><code class="lang-csharp">    AddSection(string alias);
+</code></pre>
+<p>This is the basic section with no fancy extras to it, and, as we already seen with the <code>LabelControl</code>, since it doesn't have any material property it will have a default <code>Alias</code> that will be the same for every section control, so it's advised to assign a custom one.</p>
+<p>It also is the base class of the other 2 types of sections, so everything that is available here will be available on those as well.</p>
+<p>Practically speaking it doesn't have too much in terms of functionality, click on the header to toggle the visibility on and off, and <em>that's it</em>.</p>
+<p>You do however have quite a bit of appearance customizability with its chainable methods.
+For example you can change the color of the header background with <code>.SetBackgroundColor</code> or change the label style with <code>.SetLabelStyle</code>, or you can change the background itself by changing its style with <code>.SetBackgroundStyle</code>.</p>
+<h2 id="activatablesection">ActivatableSection</h2>
+<pre><code class="lang-csharp">    AddActivatableSection( string activatePropertyName, float enableValue = 0, float disableValue = 1);
+</code></pre>
+<p>This type of section on top of having everything the basic <code>Section</code> has it also has an additional checkbox in its header, and this checkbox is driven by the property you pass it during creation.</p>
+<p>Also unlike the basic <code>Section</code> this one has a property and as a consequence it won't be required to set an <code>Alias</code>.</p>
+<p>The checkbox will control if the content of the section will be enabled or not, and in case it is disabled all the controls under this section will be disabled and not modifiable.</p>
+<p>Currently this section does not have chainable methods on top of what is already available from <code>Section</code>.</p>
+<h2 id="orderedsection">OrderedSection</h2>
+<pre><code class="lang-csharp">   AddOrderedSection(string activatePropertyName);
+</code></pre>
+<p>This type of section could be interpreted as a different implementation of <code>ActivatableSection</code> since it works similarly on the surfaace, but there's one problem, you <em>can't</em> create it with the usual <code>this.AddOrderedSection</code> this time.</p>
+<div class="CAUTION">
+<h5>Caution</h5>
+<p>You could create a new <code>OrderedSection</code> using its default constructor, but you should not do that. You would not get a working section out of that anyways.</p>
+</div>
+<p>The only legitimate way to create an <code>OrderedSection</code> is to call the <code>.AddOrderedSection</code> from an <code>OrderedSectionGroup</code> control that will manage its lifecycle.</p>
+<p>So the question now is: what is an <code>OrderedSectionGroup</code>?</p>
+<p>First of all, it's a control, and therefore is used like all other controls. That said when first created without any <code>OrderedSection</code> assigned to it will just do nothing, but as soon as you add an <code>OrderedSection</code> to it a button will appear, and clicking it will generate a popup where you can select any disabled <code>OrderedSection</code> it has.</p>
+<p>Any enabled <code>OrderedSection</code> will be above this button.</p>
+<p>The section itself looks mostly like the basic <code>Section</code>, but it has some additional buttons on the right side.</p>
+<p>The 2 arrows allow you to reorded the section relative to the other sections inside the <code>OrderedSectionGroup</code>, meanwhile the x button will disable the section, making it completely disappear from the inspector until you re-enable it from the section group button.</p>
+<p>All of these icons can be customized by making a new style for them with a different background image.</p>
+<h2 id="using-properties-for-visibility">Using properties for Visibility</h2>
+<p>All the sections we've seen keep memorized their visibility state per each material internally with a <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>, while this is good enough for the majority of use cases, it will lose the memorized state when unity closes, resulting on all sections being closed the next time you open unity.</p>
+<p>As an alternative solution for that (or in case you want to keep the visibility state tracked in a <code>MaterialProperty</code>) you can use pass another property to the constructor.</p>
+<p>This property will be used to keep track of the visibility state, and you can also add 2 float values to tell the section what value should set when visible and what value set when not visible.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>A basic <code>Section</code> created this way will use the visibility property <code>Alias</code> and not rely on the default one.</p>
+</div>
+<div class="CAUTION">
+<h5>Caution</h5>
+<p>You can create float properties in you shader property list without using them in the shader code, just to keep track of the visibility state of section. Just beware that is usually not considered best practice to do that.</p>
+</div>
+<p>When using this method to create sections you also can decide if the property used for the visibility state will be recorded or not when you're <a href="https://docs.unity3d.com/Manual/animeditor-AnimatingAGameObject.html">recording an animation</a> by using <code>SetPropertyAnimatable</code>.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/VRLabs/SimpleShaderInspectors/blob/master/docsOutput/docs/guides/InspectorDevelopment/Sections.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © VRLabs.<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

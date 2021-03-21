@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Using IAdditionalLocalization | Simple Shader Inspectors Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Using IAdditionalLocalization | Simple Shader Inspectors Documentation ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="png" src="../../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="cdev-IAdditionalLocalization">
+<h1 id="using-iadditionallocalization">Using IAdditionalLocalization</h1>
+
+<p>In the last example we could not have localized content for the extra label cause by default each control only has a single <code>Content</code> property.</p>
+<p>This is quite limiting in case you want to make a control that handles multiple material properties at once (in this case you will need another interface as well), or that needs some extra text for various reasons.</p>
+<p>And is here that the <code>IAdditionalLocalization</code> comes into play.</p>
+<p>This interface is used to let the localization system know that the control that implements it needs more than one localization string.</p>
+<pre><code class="lang-csharp" name="Main" highlight-lines="1,3">public class MyCustomControl : PropertyControl, IAdditionalLocalization
+{
+    public AdditionalLocalization[] AdditionalContent { get; set; }
+</code></pre>
+<p>Implementing the interface will add the <code>AdditionalContent</code> array of type <code>AdditionalLocalization</code>. This type only contains the <code>Name</code> string which contains the name of the additional content, and the <code>GUIContent</code> we want to retrieve.</p>
+<p>To use it, we just need to initialize the array with the number of additional strings we want, and assign the names:</p>
+<pre><code class="lang-csharp" name="Main" highlight-lines="5-6">public MyCustomControl(string propertyName, string extraText) : base(propertyName)
+{
+    ExtraText = extraText;
+    IsExtraLabelVisible = true;
+    AdditionalContent = new AdditionalLocalization[1];
+    AdditionalContent[0] = new AdditionalLocalization { Name = &quot;extraProperty&quot; };
+}
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>If you have questions about the way the AdditionalLocalization object has been initialized here, check <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers#object-initializers">here</a>.</p>
+</div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The localization system when searching for strings of the extra localization will combine the control alias and the extra localization name in this way: <code>Alias_AdditionalContentName</code>.
+This is ensure that each control instance has a unique full name if they have different aliases.</p>
+</div>
+<div class="CAUTION">
+<h5>Caution</h5>
+<p>If you have more than 1 or 2 additional content to fetch, manually instancing each element may become annoying and bloat your constructor a bit too much. in this case you can have a static array of strings with all your names in the order you want to access them, and in the constructor use <a class="xref" href="../../api/VRLabs.SimpleShaderInspectors.AdditionalContentExtensions.InitializeLocalizationWithNames.html#VRLabs_SimpleShaderInspectors_AdditionalContentExtensions_InitializeLocalizationWithNames_VRLabs_SimpleShaderInspectors_IAdditionalLocalization_System_String___"><code>InizializeLocalizationWithNames</code></a></p>
+</div>
+<p>then we just need to use the <code>Content</code> inside the <code>AdditionalContent</code> array we created where we need it, in our case inside the <code>Label</code> call:</p>
+<pre><code class="lang-csharp" name="Main" highlight-lines="3">if (IsExtraLabelVisible)
+{
+    GUILayout.Label(AdditionalContent[0].Content);
+}
+</code></pre>
+<p>Now the label field will also have its own localized content.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>With this change <code>ExtraText</code> becomes useless, so you can safely remove any reference of it on constructors/methods</p>
+</div>
+<p>With this system you can add as much text as you want in your own controls with full support for localization, and is fairly easy to just plug it in and have it working.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/VRLabs/SimpleShaderInspectors/blob/master/docsOutput/docs/guides/ControlsDevelopment/IAdditionalLocalization.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © VRLabs.<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
