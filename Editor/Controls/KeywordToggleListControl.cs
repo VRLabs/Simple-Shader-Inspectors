@@ -5,14 +5,27 @@ using UnityEngine;
 namespace VRLabs.SimpleShaderInspectors.Controls
 {
     /// <summary>
-    /// Represents a control with a checkbox for setting a keyword.
-    /// Also shows and hides a list of controls based on its state.
+    /// <para>Represents a control with a checkbox for setting a keyword.</para>
+    /// <para>Also shows and hides a list of controls based on its state.</para>
     /// </summary>
+    /// <remarks>
+    /// it's effectively a combination of <see cref="KeywordToggleControl"/> and <see cref="ControlContainer"/>, where the controls list is enabled based on the keyword
+    /// enable state.
+    /// </remarks>
+    /// <example>
+    /// Example usage:
+    /// <code>
+    /// this.AddKeywordToggleListControl("KEYWORD_TO_TOGGLE");
+    /// </code>
+    /// </example>
     public class KeywordToggleListControl : KeywordToggleControl, IControlContainer
     {
         /// <summary>
-        /// List of controls that can be hidden by this control.
+        /// List of controls under this control.
         /// </summary>
+        /// <value>
+        /// All controls that have been added by extension methods.
+        /// </value>
         public List<SimpleControl> Controls { get; set; }
 
         /// <summary>
@@ -42,8 +55,16 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             }
         }
 
+        /// <summary>
+        /// Implementation needed by <see cref="IControlContainer"/> to add controls. All controls added are stored in <see cref="Controls"/>
+        /// </summary>
+        /// <param name="control">Control to add.</param>
         public void AddControl(SimpleControl control) => Controls.Add(control);
 
+        /// <summary>
+        /// Implementation needed by <see cref="IControlContainer"/> to get the object's controls list.
+        /// </summary>
+        /// <returns><see cref="Controls"/></returns>
         public IEnumerable<SimpleControl> GetControlList() => Controls;
     }
 }

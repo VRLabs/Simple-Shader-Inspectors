@@ -6,12 +6,60 @@ namespace VRLabs.SimpleShaderInspectors.Controls
     /// <summary>
     /// Represents a vector control.
     /// </summary>
+    /// <remarks>
+    /// <para>
+    /// While using a <see cref="PropertyControl"/> for a vector property can work just fine, it will default to displaying all 4 float values, even if the shader property represents
+    /// a float2 or float3. This is due to unity treating all of them as a Vector4 inside inspectors, resulting on having a 4 float display.
+    /// </para>
+    /// <para>With this control you have the ability to fine tune which of the 4 floats to show.</para>
+    /// <para>
+    /// This can also be useful if you pack different values into a single Vector4 for various reasons, cause you can just create different vector controls where each one access
+    /// different parts of the Vector4, so you can manage them independently inside your editor.
+    /// </para>
+    /// </remarks>
+    /// <example>
+    /// Example usage:
+    /// <code>
+    /// // adds a vector control
+    /// this.AddVectorControl("ExampleVector");
+    /// // adds a vector control where only the y and w values are displayed
+    /// this.AddVectorControl("ExampleVector", false, true, false, true); 
+    /// </code>
+    /// </example>
     public class VectorControl : PropertyControl
     {
         private readonly int _visibleCount;
+        
+        /// <summary>
+        /// Visibility state of the x value
+        /// </summary>
+        /// <value>
+        /// True if the x value is visible, false otherwise
+        /// </value>
         public bool IsXVisible { get; protected set; }
+        
+        /// <summary>
+        /// Visibility state of the y value
+        /// </summary>
+        /// <value>
+        /// True if the y value is visible, false otherwise
+        /// </value>
         public bool IsYVisible { get; protected set; }
+        
+        /// <summary>
+        /// Visibility state of the z value
+        /// </summary>
+        /// <value>
+        /// True if the z value is visible, false otherwise
+        /// </value>
         public bool IsZVisible { get; protected set; }
+        
+        /// <summary>
+        /// Visibility state of the w value
+        /// </summary>
+        /// <value>
+        /// True if the w value is visible, false otherwise
+        /// </value>
         public bool IsWVisible { get; protected set; }
         /// <summary>
         /// Default constructor of <see cref="VectorControl"/>

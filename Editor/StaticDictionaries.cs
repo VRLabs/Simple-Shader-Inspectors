@@ -10,8 +10,6 @@ namespace VRLabs.SimpleShaderInspectors
         /// <summary>
         /// Dictionary containing boolean values.
         /// </summary>
-        /// <typeparam name="string">Type of the Key.</typeparam>
-        /// <typeparam name="bool">Type of the value.</typeparam>
         public static Dictionary<string, bool> BoolDictionary { get; set; } = new Dictionary<string, bool>();
     }
 }

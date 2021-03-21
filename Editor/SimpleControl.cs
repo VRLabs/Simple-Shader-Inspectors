@@ -14,23 +14,44 @@ namespace VRLabs.SimpleShaderInspectors
         /// </summary>
         public ISimpleShaderInspector Inspector { get; set; }
         /// <summary>
-        /// GuiContent set by the inspector.
+        /// Localized GuiContent set by the inspector.
         /// </summary>
+        /// <value>
+        /// A GUIContent that is fetched by the inspector using the control's alias containing the localized string that will be displayed.
+        /// </value>
         public GUIContent Content { get; set; }
 
         /// <summary>
         /// Name used for localization.
         /// </summary>
+        /// <value>
+        /// String containing the alias used for localization.
+        /// </value>
+        /// <remarks>
+        /// <para>By default the alias should be set by the constructor and modified with the chainable <c><see cref="Chainables.Alias{T}"/></c> method.</para>
+        /// <para>
+        /// Is up to the controls derived from this class to decide what should be used as default value, just keep in mind that using hardcoded strings means that all
+        /// instances of that class would share the same localization string unless <c><see cref="Chainables.Alias{T}"/></c> is used in the inspector.
+        /// </para>
+        /// <para>
+        /// Controls using a <c>MaterialProperty</c> should use the material property name as alias (which should be done by default if you inherit from <see cref="PropertyControl"/>
+        /// and pass the property name to the base constructor), meanwhile controls that do not use a <c>MaterialProperty</c> should include a string in the constructor to pass as alias.
+        /// </para>
+        /// </remarks>
         public string ControlAlias { get; set; }
 
         /// <summary>
         /// Boolean that defines if the control is visible.
         /// </summary>
+        /// <value>
+        /// True if the control should be visible, false otherwise (default: true).
+        /// </value>
         public bool IsVisible { get; set; }
 
         /// <summary>
         /// Boolean that defines if the control is enabled.
         /// </summary>
+        /// <value>True if the control should be enabled, false otherwise (default: true).</value>
         public bool IsEnabled { get; set; }
 
         /// <summary>
@@ -45,19 +66,19 @@ namespace VRLabs.SimpleShaderInspectors
         }
 
         /// <summary>
-        /// Content of tha control that is drawn.
+        /// Content of the control that is drawn.
         /// </summary>
         /// <param name="materialEditor">Material editor.</param>
         protected abstract void ControlGUI(MaterialEditor materialEditor);
 
         /// <summary>
-        /// Content of tha control that is drawn.
+        /// Content of the control that is drawn.
         /// </summary>
         /// <param name="materialEditor">Material editor.</param>
         public void DrawControl(MaterialEditor materialEditor)
         {
             if (!IsVisible) return;
-            // We could directly use EditorGUI.BeginDisabledGroup(!IsEnabled) instead of this check,
+            // We could directly use EditorGUI.BeginDisabledGroup(!IsEnabled) instead of doing this check,
             // but i don't trust adding too many groups when not necessary
             if (!IsEnabled)
             {

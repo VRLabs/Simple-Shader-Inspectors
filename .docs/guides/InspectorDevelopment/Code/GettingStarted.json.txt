@@ -1,0 +1,49 @@
+{
+    "Properties": [
+        {
+            "Name": "MyFloatProperty",
+            "DisplayName": "My float property",
+            "Tooltip": "My float property"
+        },
+        {
+            "Name": "_FloatProperty",
+            "DisplayName": "My float property",
+            "Tooltip": "My float property"
+        }
+    ]
+}
+
+{
+    "Properties": [
+        {
+            "Name": "MyFloatProperty",
+            "DisplayName": "Awesome float property",
+            "Tooltip": "Nice tooltip!"
+        }
+    ]
+}
+
+{
+    "Properties": [
+        {
+            "Name": "MyFloatProperty",
+            "DisplayName": "Aledoye flget prodfrghy",
+            "Tooltip": "I can't write!"
+        }
+    ]
+}
+
+{
+    "Properties": [
+        {
+            "Name": "MyLabel",
+            "DisplayName": "Awesome label!",
+            "Tooltip": "Nice tooltip!"
+        },
+        {
+            "Name": "MyFloatProperty",
+            "DisplayName": "Awesome float property",
+            "Tooltip": "Nice tooltip!"
+        }
+    ]
+}

@@ -6,16 +6,32 @@ namespace VRLabs.SimpleShaderInspectors.Controls
     /// <summary>
     /// Represents a control for a color property.
     /// </summary>
+    /// <remarks>
+    /// It is the control to use whenever there's a need to display a color material property.
+    /// </remarks>
+    /// <example>
+    /// Initialize the control inside the inspector:
+    /// <code>
+    /// // initialize a color control that does not show the alpha value in the field.
+    /// this.AddColorControl("_ExampleColorProperty", false);
+    /// </code>
+    /// </example>
     public class ColorControl : PropertyControl
     {
         /// <summary>
         /// Boolean that determines if the color picker and the color field should show the alpha value.
         /// </summary>
+        /// <value>
+        /// True if the control should show the alpha value, false otherwise (default: true)
+        /// </value>
         [Chainable] public bool ShowAlphaValue { get; set; }
 
         /// <summary>
         /// Selected color of the property stored in this control.
         /// </summary>
+        /// <value>
+        /// The currently selected color.
+        /// </value>
         public Color SelectedColor => Property.colorValue;
 
         /// <summary>

@@ -6,11 +6,23 @@ namespace VRLabs.SimpleShaderInspectors.Controls
     /// <summary>
     /// Represents a label without any property.
     /// </summary>
+    /// <remarks>
+    /// <para>It can be seen ad the Simple Shader Inspectors version of <c>EditorGUILayout.LabelField</c>, with the advantage that it uses Simple Shader Inspectors' localization system for the
+    /// label string.</para>
+    /// <para>It is required to give an alias to the control, since it doesn't have anything that it could use as a default.</para>
+    /// </remarks>
+    /// <example>
+    /// Example usage:
+    /// <code>
+    /// this.AddLabelControl("AliasToUse");
+    /// </code>
+    /// </example>
     public class LabelControl : SimpleControl
     {
         /// <summary>
-        /// GUIStyle for the LabelStyle
+        /// Style used for the label control.
         /// </summary>
+        /// <value>GUIStyle for the label.</value>
         [Chainable] public GUIStyle LabelStyle { get; set; }
 
         /// <summary>

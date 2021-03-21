@@ -4,13 +4,29 @@ using UnityEngine;
 namespace VRLabs.SimpleShaderInspectors.Controls
 {
     /// <summary>
-    /// Represents a label without any property.
+    /// Represents an empty space.
     /// </summary>
+    /// <remarks>
+    /// <para>It can be considered the Simple Shader Inspectors equivalent of <c>GUILayout.Space</c>.</para>
+    /// <para>It does not need an alias in order to work.</para>
+    /// </remarks>
+    /// <example>
+    /// Example usage:
+    /// <code>
+    /// // Adds a space of 1 line worth of pixels
+    /// this.AddSpaceControl();
+    /// // adds a space of 15 pixels
+    /// this.AddSpaceControl(15); 
+    /// </code>
+    /// </example>
     public class SpaceControl : SimpleControl
     {
         /// <summary>
         /// Amount of space in pixels this control has.
         /// </summary>
+        /// <value>
+        /// Pixels of space.
+        /// </value>
         public int Space { get; set; }
 
         /// <summary>

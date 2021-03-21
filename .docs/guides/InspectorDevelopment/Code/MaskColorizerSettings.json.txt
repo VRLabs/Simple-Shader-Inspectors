@@ -1,0 +1,35 @@
+{
+  "KernelName": "MaskColorizer",
+  "Inputs": [
+    {
+      "Type": 0,
+      "InputName":"Mask",
+      "Settings": [1, 1]
+    },
+    {
+      "Type": 1,
+      "InputName":"BaseColor",
+      "Settings": [1]
+    },
+    {
+      "Type": 1,
+      "InputName":"ColorR",
+      "Settings": [1]
+    },
+    {
+      "Type": 1,
+      "InputName":"ColorG",
+      "Settings": [1]
+    },
+    {
+      "Type": 1,
+      "InputName":"ColorB",
+      "Settings": [1]
+    },
+    {
+      "Type": 1,
+      "InputName":"ColorA",
+      "Settings": [1]
+    }
+  ]
+}

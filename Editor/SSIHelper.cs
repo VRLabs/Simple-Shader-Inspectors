@@ -7,6 +7,9 @@ using Object = UnityEngine.Object;
 
 namespace VRLabs.SimpleShaderInspectors
 {
+    /// <summary>
+    /// Static class containing utility functions for Controls and Inspectors.
+    /// </summary>
     public static class SSIHelper
     {
         /// <summary>
@@ -143,7 +146,8 @@ namespace VRLabs.SimpleShaderInspectors
                     SetNonAnimatableProperties(materialEditor, propertiesNeedingUpdate);
             }
         }
-
+        
+        // TODO: set method private
         public static void SetNonAnimatableProperties(MaterialEditor materialEditor, IEnumerable<INonAnimatableProperty> nonAnimatableProperties)
         {
             foreach(var nonAnimatableProperty in nonAnimatableProperties)
@@ -207,7 +211,7 @@ namespace VRLabs.SimpleShaderInspectors
         /// <summary>
         /// Set the texture readable state.
         /// </summary>
-        /// <param name="texture">Texture</param>
+        /// <param name="texture">Texture.</param>
         /// <param name="isReadable">Does the texture need to be readable.</param>
         public static void SetTextureImporterReadable(Texture2D texture, bool isReadable)
         {
@@ -222,7 +226,12 @@ namespace VRLabs.SimpleShaderInspectors
             AssetDatabase.ImportAsset(assetPath);
             //AssetDatabase.Refresh();
         }
-
+        
+        /// <summary>
+        /// Set the texture alphaIsTransparency value.
+        /// </summary>
+        /// <param name="texture">Texture.</param>
+        /// <param name="alphaIsTransparency">alphaIsTransparency option to set.</param>
         public static void SetTextureImporterAlpha(Texture2D texture, bool alphaIsTransparency)
         {
             if (texture is null) return;

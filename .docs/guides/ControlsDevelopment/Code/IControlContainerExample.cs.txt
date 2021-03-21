@@ -1,0 +1,42 @@
+using System.Collections.Generic;
+using UnityEditor;
+using VRLabs.SimpleShaderInspectors;
+
+namespace TestControlNamespace
+{
+    public class MyCustomControl : PropertyControl, IControlContainer
+    {
+        public List<SimpleControl> Controls { get; set; }
+
+        public MyCustomControl(string propertyName) : base(propertyName)
+        {
+            Controls = new List<SimpleControl>();
+        }
+
+        protected override void ControlGUI(MaterialEditor materialEditor)
+        {
+            EditorGUI.BeginChangeCheck();
+            materialEditor.RangeProperty(Property, Content.text);
+            HasPropertyUpdated = EditorGUI.EndChangeCheck();
+            if (Property.floatValue > 0.5f)
+            {
+                foreach (SimpleControl control in Controls)
+                {
+                    control.DrawControl(materialEditor);
+                }
+            }
+        }
+
+        public void AddControl(SimpleControl control) => Controls.Add(control);
+
+        public IEnumerable<SimpleControl> GetControlList() => Controls;
+    }
+}
+
+        public void AddControl(SimpleControl control)
+        {
+        }
+
+        public IEnumerable<SimpleControl> GetControlList()
+        {
+        }

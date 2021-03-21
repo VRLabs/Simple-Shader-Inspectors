@@ -8,6 +8,9 @@ using UnityEngine;
 
 namespace VRLabs.SimpleShaderInspectors
 {
+    /// <summary>
+    /// Static helper class used for managing localizations.
+    /// </summary>
     internal static class Localization
     {
         /// <summary>
