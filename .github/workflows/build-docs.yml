@@ -41,6 +41,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: site
+          path: site
 
       - name: Deploy to GitHub Pages
         uses: Cecilapp/GitHub-Pages-deploy@v3
