@@ -191,7 +191,7 @@ namespace VRLabs.SimpleShaderInspectors
 
                 _path = $"{Path.GetDirectoryName(_path)}/Localization/{CustomLocalizationShaderName}";
 
-                if (Directory.Exists(_path))
+                if (!Directory.Exists(_path))
                     Directory.CreateDirectory(_path);
             }
 
