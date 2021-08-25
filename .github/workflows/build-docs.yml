@@ -20,7 +20,7 @@ jobs:
 
       - name: Build DocFX
         run: |
-          choco install docfx -y
+          choco install docfx -y --version 2.56.7
           docfx docsOutput/docs/docfx.json
           
       - name: Upload Site Artifacts
