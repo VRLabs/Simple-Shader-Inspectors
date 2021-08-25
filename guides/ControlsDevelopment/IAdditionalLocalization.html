@@ -8,7 +8,7 @@
     <title>Using IAdditionalLocalization | Simple Shader Inspectors Documentation </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Using IAdditionalLocalization | Simple Shader Inspectors Documentation ">
-    <meta name="generator" content="docfx 2.56.7.0">
+    <meta name="generator" content="docfx 2.58.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -96,7 +96,7 @@ This is ensure that each control instance has a unique full name if they have di
 </div>
 <div class="CAUTION">
 <h5>Caution</h5>
-<p>If you have more than 1 or 2 additional content to fetch, manually instancing each element may become annoying and bloat your constructor a bit too much. in this case you can have a static array of strings with all your names in the order you want to access them, and in the constructor use <a href="xref:VRLabs.SimpleShaderInspectors.AdditionalContentExtensions.InitializeLocalizationWithNames(VRLabs.SimpleShaderInspectors.IAdditionalLocalization,System.String%5B%5D)"><code>InizializeLocalizationWithNames</code></a></p>
+<p>If you have more than 1 or 2 additional content to fetch, manually instancing each element may become annoying and bloat your constructor a bit too much. in this case you can have a static array of strings with all your names in the order you want to access them, and in the constructor use <a class="xref" href="../../api/VRLabs.SimpleShaderInspectors.AdditionalContentExtensions.InitializeLocalizationWithNames.html#VRLabs_SimpleShaderInspectors_AdditionalContentExtensions_InitializeLocalizationWithNames_VRLabs_SimpleShaderInspectors_IAdditionalLocalization_System_String___"><code>InizializeLocalizationWithNames</code></a></p>
 </div>
 <p>then we just need to use the <code>Content</code> inside the <code>AdditionalContent</code> array we created where we need it, in our case inside the <code>Label</code> call:</p>
 <pre><code class="lang-csharp" name="Main" highlight-lines="3">if (IsExtraLabelVisible)
