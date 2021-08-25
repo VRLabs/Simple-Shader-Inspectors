@@ -11,7 +11,7 @@ namespace VRLabs.SimpleShaderInspectors
     /// <summary>
     /// Static helper class used for managing localizations.
     /// </summary>
-    internal static class Localization
+    public static class Localization
     {
         /// <summary>
         /// Apply Localization strings to a list of controls.
@@ -93,7 +93,7 @@ namespace VRLabs.SimpleShaderInspectors
         }
     }
 
-    internal static class LocalizationSearchers
+    public static class LocalizationSearchers
     {
         public static PropertyInfo FindPropertyByName(this IEnumerable<PropertyInfo> properties, string name)
         {
@@ -120,19 +120,19 @@ namespace VRLabs.SimpleShaderInspectors
     }
 
     [Serializable]
-    internal class PropertyInfo
+    public class PropertyInfo
     {
         public string Name;
         public string DisplayName;
         public string Tooltip;
     }
     [Serializable]
-    internal class LocalizationFile
+    public class LocalizationFile
     {
         public PropertyInfo[] Properties;
     }
     [Serializable]
-    internal class SettingsFile
+    public class SettingsFile
     {
         public string SelectedLanguage;
     }
