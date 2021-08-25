@@ -29,59 +29,19 @@
 </table>
 {{/children.0}}
 {{/children}}
-
-{{#inheritedMembers.0}}
-  <h3 id="inheritedMembers">{{__global.inheritedMembers}}</h3>
-  <table class="table table-bordered table-striped table-condensed">
-  <thead>
-    <tr>
-      <th>{{__global.name}}</th>
-    </tr>
-  </thead>
-  <tbody>
-  {{/inheritedMembers.0}}
-  {{#inheritedMembers}}
-  {{#definition}}
-  <tr>
-      <td>
-        <xref uid="{{definition}}" text="{{nameWithType.0.value}}" alt="{{fullName.0.value}}"/>
-      </td>
-    </tr>
-  {{/definition}}
-  {{^definition}}
-    <tr>
-      <td>
-        <xref uid="{{uid}}" text="{{nameWithType.0.value}}" alt="{{fullName.0.value}}"/>
-      </td>
-    </tr>
-  {{/definition}}
-{{/inheritedMembers}}
-{{#inheritedMembers.0}}
-  </tbody>
-</table>
-{{/inheritedMembers.0}}
-
 {{#extensionMethods.0}}
 <h3 id="extensionmethods">{{__global.extensionMethods}}</h3>
-<table class="table table-bordered table-striped table-condensed">
-  <thead>
-    <tr>
-      <th>{{__global.name}}</th>
-    </tr>
-  </thead>
-  <tbody>
-  {{/extensionMethods.0}}
-  {{#extensionMethods}}
-    <tr>
-      <td>
-        <xref uid="{{definition}}" altProperty="fullName" displayProperty="nameWithType"/>
-      </td>
-    </tr>
-{{/extensionMethods}}
-{{#extensionMethods.0}}
-  </tbody>
-</table>
 {{/extensionMethods.0}}
+{{#extensionMethods}}
+<div>
+  {{#definition}}
+    <xref uid="{{definition}}" altProperty="fullName" displayProperty="nameWithType"/>
+  {{/definition}}
+  {{^definition}}
+    <xref uid="{{uid}}" altProperty="fullName" displayProperty="nameWithType"/>
+  {{/definition}}
+</div>
+{{/extensionMethods}}
 {{#seealso.0}}
 <h3 id="seealso">{{__global.seealso}}</h3>
 <div class="seealso">
