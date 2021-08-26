@@ -97,6 +97,7 @@ namespace VRLabs.SimpleShaderInspectors
     {
         public static PropertyInfo FindPropertyByName(this IEnumerable<PropertyInfo> properties, string name)
         {
+            if (properties == null) return null;
             foreach (var property in properties)
             {
                 if (property.Name.Equals(name))
@@ -130,6 +131,11 @@ namespace VRLabs.SimpleShaderInspectors
     public class LocalizationFile
     {
         public PropertyInfo[] Properties;
+        
+        public LocalizationFile()
+        {
+            Properties = Array.Empty<PropertyInfo>();
+        }
     }
     [Serializable]
     public class SettingsFile
