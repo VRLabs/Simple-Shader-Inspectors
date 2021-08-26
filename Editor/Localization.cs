@@ -97,15 +97,7 @@ namespace VRLabs.SimpleShaderInspectors
     {
         public static PropertyInfo FindPropertyByName(this IEnumerable<PropertyInfo> properties, string name)
         {
-            if (properties == null) return null;
-            foreach (var property in properties)
-            {
-                if (property.Name.Equals(name))
-                {
-                    return property;
-                }
-            }
-            return null;
+            return properties?.FirstOrDefault(property => property.Name.Equals(name));
         }
         public static string FindPropertyByName(this (string, string)[] properties, string name)
         {
