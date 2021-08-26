@@ -35,7 +35,9 @@
       "templates/darkfx",
       "templates/memberpage/content"
     ],
-    "postProcessors": [],
+    "postProcessors": [
+      "ExtractSearchIndex"
+    ],
     "markdownEngineName": "markdig",
     "noLangKeyword": false,
     "keepFileLink": false,
