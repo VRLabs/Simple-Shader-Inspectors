@@ -15,7 +15,7 @@ namespace VRLabs.SimpleShaderInspectors.Tools
     {
         private const string PATH = "Assets/VRLabs/SimpleShaderInspectors/Editor";
         private const string NAMESPACE = "VRLabs.SimpleShaderInspectors";
-        private const string IDENTIFIER = "SSI";
+        public const string IDENTIFIER = "SSI";
 
         private static readonly Regex _namespaceRegex = new Regex("^[a-zA-Z0-9.]*$");
 
@@ -137,7 +137,8 @@ namespace VRLabs.SimpleShaderInspectors.Tools
 
                     text = text.Replace(NAMESPACE, customNamespace + ".SimpleShaderInspectors");
 
-                    if (Path.GetFileName(file).Equals("Styles.cs"))
+                    string filePath = Path.GetFileName(file);
+                    if (filePath.Equals("Styles.cs") || filePath.Equals("StaticDictionaries.cs"))
                         text = text.Replace(IDENTIFIER, assetIdentifier);
                     
                     string finalPath = file.Replace(oldPath, newPath + "/SimpleShaderInspectors" + subpath);

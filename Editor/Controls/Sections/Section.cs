@@ -204,7 +204,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
                 if (!firstCycle) return;
                 
                 if (dictionaryKey == null)
-                    dictionaryKey = ControlAlias + ((Material)materialEditor.target).GetInstanceID();
+                    dictionaryKey = ControlAlias +  AssetDatabase.AssetPathToGUID(AssetDatabase.GetAssetPath(materialEditor.target));
                 
                 if (StaticDictionaries.BoolDictionary.TryGetValue(dictionaryKey, out bool show))
                 {
@@ -213,7 +213,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
                 else
                 {
                     Show = false;
-                    StaticDictionaries.BoolDictionary[dictionaryKey] = Show;
+                    StaticDictionaries.BoolDictionary.SetValue(dictionaryKey, Show);
                 }
                 firstCycle = false;
             }
@@ -236,7 +236,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         {
             if (useDictionary)
             {
-                StaticDictionaries.BoolDictionary[dictionaryKey] = Show;
+                StaticDictionaries.BoolDictionary.SetValue(dictionaryKey, Show);
             }
             else
             {
