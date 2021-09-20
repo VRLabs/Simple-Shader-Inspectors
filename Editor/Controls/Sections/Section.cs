@@ -203,8 +203,8 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             {
                 if (!firstCycle) return;
                 
-                if (dictionaryKey == null)
-                    dictionaryKey = ControlAlias +  AssetDatabase.AssetPathToGUID(AssetDatabase.GetAssetPath(materialEditor.target));
+                if (string.IsNullOrWhiteSpace(dictionaryKey))
+                    dictionaryKey = $"{ControlAlias}_{AssetDatabase.AssetPathToGUID(AssetDatabase.GetAssetPath(Inspector.Materials[0]))}_Show";
                 
                 if (StaticDictionaries.BoolDictionary.TryGetValue(dictionaryKey, out bool show))
                 {

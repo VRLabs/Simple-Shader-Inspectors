@@ -14,6 +14,11 @@ namespace VRLabs.SimpleShaderInspectorsExamples
         private Section _gChannel;
         private Section _bChannel;
         private Section _aChannel;
+        private OrderedSectionGroup _group;
+        private OrderedSection _ordered1;
+        private OrderedSection _ordered2;
+        private OrderedSection _ordered3;
+        private OrderedSection _ordered4;
         protected override void Start()
         {
             this.AddTextureControl("_MainTex", "_Color").Alias("Main texture").SetShowUvOptions(true);
@@ -39,6 +44,24 @@ namespace VRLabs.SimpleShaderInspectorsExamples
             _aChannel.AddColorControl("_AColor").Alias("Alpha color");
             _aChannel.AddToggleControl("_AEmissive").Alias("Alpha emissive");
 
+            _layersSection.AddLabelControl("OrderedLabel");
+            _group = _layersSection.AddOrderedSectionGroup("Section group");
+            _ordered1 = _group.AddOrderedSection("_OrderedSection1").Alias("Ordered1");
+            _ordered1.AddColorControl("_RColor").Alias("Red color");
+            _ordered1.AddToggleControl("_REmissive").Alias("Red emissive");
+
+            _ordered2 = _group.AddOrderedSection("_OrderedSection2").Alias("Ordered2");
+            _ordered2.AddColorControl("_GColor").Alias("Green color");
+            _ordered2.AddToggleControl("_GEmissive").Alias("Green emissive");
+
+            _ordered3 = _group.AddOrderedSection("_OrderedSection3").Alias("Ordered3");
+            _ordered3.AddColorControl("_BColor").Alias("Blue color");
+            _ordered3.AddToggleControl("_BEmissive").Alias("Blue emissive");
+
+            _ordered4 = _group.AddOrderedSection("_OrderedSection4").Alias("Ordered4");
+            _ordered4.AddColorControl("_AColor").Alias("Alpha color");
+            _ordered4.AddToggleControl("_AEmissive").Alias("Alpha emissive");
+
             _rimSection = this.AddActivatableSection("_RimLightEnable").Alias("Rim light header")
                 .SetBackgroundColor(Color.yellow);
             _rimSection.AddColorControl("_RimLightColor").Alias("Rim color");
@@ -60,6 +83,7 @@ namespace VRLabs.SimpleShaderInspectorsExamples
             GUILayout.Label("- Space control");
             GUILayout.Label("- Sections");
             GUILayout.Label("- Activatable Sections");
+            GUILayout.Label("- Ordered Sections");
             GUILayout.Label("- Look customizations in sections");
             EditorGUI.indentLevel--;
             EditorGUILayout.Space();

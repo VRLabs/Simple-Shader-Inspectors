@@ -5,7 +5,7 @@
         _Color ("Color", Color) = (1,1,1,1)
         _MainTex ("Albedo (RGB)", 2D) = "white" {}
         _AdditionalMasksEnable ("Additional Masks", float) = 0
-        _AdditionalMasks ("Masks)", 2D) = "black" {}
+        _AdditionalMasks ("Masks", 2D) = "black" {}
         _RColor ("Color", Color) = (1,1,1,1)
         _REmissive ("Emissive", float) = 0
         _GColor ("Color", Color) = (1,1,1,1)
@@ -17,6 +17,10 @@
         _RimLightEnable("Rim light", float) = 0
         _RimLightColor ("Color", Color) = (1,1,1,1)
         _RimLightPower("Power", Range(0,1)) = 0
+        _OrderedSection1 ("1", float) = 0
+        _OrderedSection2 ("2", float) = 0
+        _OrderedSection3 ("3", float) = 0
+        _OrderedSection4 ("4", float) = 0
     }
     SubShader
     {

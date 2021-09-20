@@ -92,6 +92,24 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// </value>
         public bool Enabled { get; protected set; }
 
+
+        private int _sectionPosition;
+        /// <summary>
+        /// integer indicating the position of the section in the group.
+        /// </summary>
+        /// <value></value>
+        public int SectionPosition 
+        {
+            get => _sectionPosition;
+            set
+            {
+                _sectionPosition = value;
+                if (string.IsNullOrWhiteSpace(positionDictionaryKey))
+                    positionDictionaryKey = $"{ControlAlias}_{AssetDatabase.AssetPathToGUID(AssetDatabase.GetAssetPath(Inspector.Materials[0]))}_SectionPosition";
+                StaticDictionaries.IntDictionary.SetValue(positionDictionaryKey, _sectionPosition);
+            }
+        }
+
         /// <summary>
         /// Style for the up icon.
         /// </summary>
@@ -141,6 +159,24 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         [Chainable] public Color DeleteColor { get; set; }
 
         /// <summary>
+        /// Float value that the Show bool gets converted if true.
+        /// </summary>
+        /// <value>
+        /// Value of the activate material property when the section is enabled.
+        /// </value>
+        protected float enableValue;
+
+        /// <summary>
+        /// Float value that the Show bool gets converted if false.
+        /// </summary>
+        /// <value>
+        /// Value of the activate material property when the section is disabled.
+        /// </value>
+        protected float disableValue;
+
+        private string positionDictionaryKey;
+
+        /// <summary>
         /// Constructor of <see cref="OrderedSection"/> used when creating a property driven OrderedSection.
         /// </summary>
         /// <param name="activatePropertyName">Material property that will drive the section enable state</param>
@@ -148,8 +184,8 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// <param name="hideValue">Float value that the material property will have if the section is collapsed, optional (default: 0).</param>
         /// <param name="showValue">Float value that the material property will have if the section is visible, optional (default: 1).</param>
         [LimitAccessScope(typeof(OrderedSectionGroup))]
-        public OrderedSection(string activatePropertyName, string showPropertyName,
-        float hideValue = 0, float showValue = 1) : base(showPropertyName, hideValue, showValue)
+        public OrderedSection(string activatePropertyName, string showPropertyName, float enableValue = 1,
+            float disableValue = 0, float hideValue = 0, float showValue = 1) : base(showPropertyName, hideValue, showValue)
         {
             AdditionalProperties = new AdditionalProperty[1];
             AdditionalProperties[0] = new AdditionalProperty(activatePropertyName);
@@ -160,6 +196,9 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             UpColor = Color.white;
             DownColor = Color.white;
             DeleteColor = Color.white;
+
+            this.disableValue = disableValue;
+            this.enableValue = enableValue;
         }
 
         /// <summary>
@@ -167,7 +206,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// </summary>
         /// <param name="activatePropertyName">Material property that will drive the section enable state</param>
         [LimitAccessScope(typeof(OrderedSectionGroup))]
-        public OrderedSection(string activatePropertyName) : base()
+        public OrderedSection(string activatePropertyName, float enableValue = 1, float disableValue = 0) : base()
         {
             AdditionalProperties = new AdditionalProperty[1];
             AdditionalProperties[0] = new AdditionalProperty(activatePropertyName);
@@ -180,6 +219,9 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             UpColor = Color.white;
             DownColor = Color.white;
             DeleteColor = Color.white;
+
+            this.disableValue = disableValue;
+            this.enableValue = enableValue;
         }
 
         /// <summary>
@@ -209,6 +251,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             if (!Enabled)
             {
                 AdditionalProperties[0].Property.floatValue = 0;
+                SectionPosition = 0;
             }
             HasActivatePropertyUpdated = EditorGUI.EndChangeCheck();
             GUI.backgroundColor = bgcolor;
@@ -217,7 +260,30 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         public void PredrawUpdate(MaterialEditor materialEditor)
         {
             SetupEnabled(materialEditor);
-            Enabled = AdditionalProperties[0].Property.floatValue > 0;
+
+            if (string.IsNullOrWhiteSpace(positionDictionaryKey))
+            {
+                positionDictionaryKey = $"{ControlAlias}_{AssetDatabase.AssetPathToGUID(AssetDatabase.GetAssetPath(Inspector.Materials[0]))}_SectionPosition";
+
+                if (StaticDictionaries.IntDictionary.TryGetValue(positionDictionaryKey, out int position))
+                {
+                    _sectionPosition = position;
+                }
+                else
+                {
+                    _sectionPosition = 0;
+                    StaticDictionaries.IntDictionary.SetValue(positionDictionaryKey, _sectionPosition);
+                }
+                
+                if(Math.Abs(AdditionalProperties[0].Property.floatValue - disableValue) > 0.001 && _sectionPosition == 0)
+                    _sectionPosition = 753;
+
+                else if(Math.Abs(AdditionalProperties[0].Property.floatValue - disableValue) < 0.001 && _sectionPosition > 0)
+                    _sectionPosition = 0;
+            }
+
+            Enabled = SectionPosition > 0;
+            AdditionalProperties[0].Property.floatValue = Enabled ? enableValue : disableValue;
             HasActivatePropertyUpdated = false;
         }
 
@@ -242,11 +308,6 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             
             Rect temp = GUILayoutUtility.GetLastRect();
             Rect r2 = new Rect(r.x + temp.width, r.y, r.width - (temp.width * 2), r.height);
-            /*
-            EditorGUI.BeginChangeCheck();
-            Enabled = EditorGUILayout.Toggle(Enabled, GUILayout.MaxWidth(20.0f));
-            HasActivatePropertyUpdated = EditorGUI.EndChangeCheck();
-            */
             EditorGUI.LabelField(r2, Content, LabelStyle);
             GUILayout.FlexibleSpace();
 
@@ -262,11 +323,6 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             if (HasPropertyUpdated)
                 UpdateEnabled(materialEditor);
 
-            /*if (HasActivatePropertyUpdated)
-            {
-                materialEditor.RegisterPropertyChangeUndo(ActivateProperty.displayName);
-                ActivateProperty.floatValue = Enabled ? enableValue : disableValue;
-            }*/
             EditorGUILayout.EndHorizontal();
 
             if (!AreControlsInHeader)
