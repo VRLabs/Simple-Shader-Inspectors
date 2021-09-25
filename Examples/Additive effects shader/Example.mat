@@ -29,9 +29,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _AEmissive: 0
-    - _AdditionalMasksEnable: 0
+    - _AdditionalMasksEnable: 1
     - _BEmissive: 0
     - _GEmissive: 0
+    - _OrderedSection1: 0
+    - _OrderedSection2: 0
+    - _OrderedSection3: 0
+    - _OrderedSection4: 0
     - _REmissive: 0
     - _RimLightEnable: 0
     - _RimLightPower: 0.284

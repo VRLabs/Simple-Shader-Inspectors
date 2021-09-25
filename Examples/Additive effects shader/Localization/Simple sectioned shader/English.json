@@ -1,6 +1,36 @@
 {
     "Properties": [
         {
+            "Name": "OrderedLabel",
+            "DisplayName": "Ordered Sections:",
+            "Tooltip": ""
+        },
+        {
+            "Name": "Section group",
+            "DisplayName": "Add channel",
+            "Tooltip": "Add channel"
+        },
+        {
+            "Name": "Ordered1",
+            "DisplayName": "Red channel",
+            "Tooltip": "Red channel"
+        },
+        {
+            "Name": "Ordered2",
+            "DisplayName": "Green channel",
+            "Tooltip": "Green channel"
+        },
+        {
+            "Name": "Ordered3",
+            "DisplayName": "Blue channel",
+            "Tooltip": "Blue channel"
+        },
+        {
+            "Name": "Ordered4",
+            "DisplayName": "Alpha channel",
+            "Tooltip": "Alpha channel"
+        },
+        {
             "Name": "Rim power",
             "DisplayName": "Power",
             "Tooltip": "Power"

@@ -83,13 +83,13 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
                 {
                     if (Controls[i].PushState == 1 && i < Controls.Count - 1)
                     {
-                        Controls[i].AdditionalProperties[0].Property.floatValue++;
-                        Controls[i + 1].AdditionalProperties[0].Property.floatValue--;
+                        Controls[i].SectionPosition++;
+                        Controls[i + 1].SectionPosition--;
                     }
                     else if (Controls[i].PushState == -1 && i > 0 && Controls[i - 1].Enabled)
                     {
-                        Controls[i].AdditionalProperties[0].Property.floatValue--;
-                        Controls[i - 1].AdditionalProperties[0].Property.floatValue++;
+                        Controls[i].SectionPosition--;
+                        Controls[i - 1].SectionPosition++;
                     }
                     Controls[i].PushState = 0;
                     needsOrderUpdate = true;
@@ -135,7 +135,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         private void TurnOnSection(object sectionVariable)
         {
             var section = (OrderedSection)sectionVariable;
-            section.AdditionalProperties[0].Property.floatValue = 753;
+            section.SectionPosition = 753;
             section.HasSectionTurnedOn = true;
             _areNewSectionsAvailable = AreNewSectionsAvailable();
             UpdateSectionsOrder();
@@ -147,9 +147,9 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             int j = 1;
             foreach (var section in Controls)
             {
-                if (section.AdditionalProperties[0].Property.floatValue != 0 && !section.AdditionalProperties[0].Property.hasMixedValue)
+                if (section.SectionPosition != 0 && !section.AdditionalProperties[0].Property.hasMixedValue)
                 {
-                    section.AdditionalProperties[0].Property.floatValue = j;
+                    section.SectionPosition = j;
                     j++;
                 }
             }
@@ -188,9 +188,9 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             if (x == null) return y == null ? 0 : -1;
 
             if (y == null) return 1;
-            if (x.AdditionalProperties[0].Property.floatValue > y.AdditionalProperties[0].Property.floatValue)
+            if (x.SectionPosition > y.SectionPosition)
                 return 1;
-            if (x.AdditionalProperties[0].Property.floatValue < y.AdditionalProperties[0].Property.floatValue)
+            if (x.SectionPosition < y.SectionPosition)
                 return -1;
             return 0;
         }

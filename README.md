@@ -11,7 +11,7 @@
     <img src="https://img.shields.io/github/v/release/VRLabs/SimpleShaderInspectors.svg?style=flat-square">
   </a>
   <a href="https://github.com/VRLabs/SimpleShaderInspectors/releases/latest">
-    <img src="https://img.shields.io/badge/Unity-2018.4-green.svg?style=flat-square">
+    <img src="https://img.shields.io/badge/Unity-2019.4-green.svg?style=flat-square">
   </a>
   <br />
   <a href="https://github.com/VRLabs/SimpleShaderInspectors/issues">
