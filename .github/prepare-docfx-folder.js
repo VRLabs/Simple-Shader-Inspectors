@@ -60,9 +60,16 @@ const masterGuidesFolder = destinationMasterFolder + '/.docs/guides';
 
 var jsonFile = JSON.parse(fs.readFileSync(destinationDocsFolder + '/docfx.json'));
 
-for (let i = 0; i < tags.length; i++) {
-    if (!tags[i]) continue;
+var lastBigTag = "nothing";
+var currentlyIn = 0;
 
+for (let i = 0; i < tags.length; i++) {
+    if (currentlyIn > 5) break;
+    if (!tags[i]) continue;
+    if (tags[i].lastIndexOf(".") != -1 && tags[i].substring(0, tags[i].lastIndexOf(".")) === lastBigTag) continue;
+
+    currentlyIn++;
+    lastBigTag = tags[i].lastIndexOf(".") != -1 ? tags[i].substring(0, tags[i].lastIndexOf(".")) : "nothing";
     const tag = tags[i];
     const tagName = tag === "master" ? "Next" : tag;
     const tagFolder = i === 1 ? "" : tagName;
