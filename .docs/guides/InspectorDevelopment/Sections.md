@@ -43,10 +43,10 @@ Currently this section does not have chainable methods on top of what is already
 ## OrderedSection
 
 ```csharp
-   AddOrderedSection(string activatePropertyName);
+   AddOrderedSection(string activatePropertyName, float enableValue = 1, float disableValue = 0);
 ```
 
-This type of section could be interpreted as a different implementation of `ActivatableSection` since it works similarly on the surfaace, but there's one problem, you *can't* create it with the usual `this.AddOrderedSection` this time.
+This type of section could be interpreted as a different implementation of `ActivatableSection` since it works similarly on the surface, but there's one problem, you *can't* create it with the usual `this.AddOrderedSection` this time.
 
 >[!CAUTION]
 >You could create a new `OrderedSection` using its default constructor, but you should not do that. You would not get a working section out of that anyways.

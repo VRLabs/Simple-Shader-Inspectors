@@ -20,8 +20,6 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
     /// </para>
     /// <para>
     /// Another quirk of this type of section is that it can be moved up or down relative to the sections of the same group, letting the user order them in whichever way they see fit best.
-    /// As a result of this behaviour the value the property driving the enabled state will be 0 when not enabled, or the ordering index of the section when enabled, meaning that when
-    /// enabled the material property can have any value > 0.
     /// </para>
     /// </remarks>
     /// <example>
@@ -32,13 +30,18 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
     ///
     /// // Adds an OrderedSection using the specified property as activation property
     /// group.AddOrderedSection("_ActivateProperty");  
+    /// 
+    ///  // Adds an OrderedSection using the specified property as activation property,
+    ///  // the values for activation are set to 2-3 respectively when disabled and enabled
+    /// group.AddOrderedSection("_ActivateProperty", 2, 3); 
     ///
     /// // Adds an OrderedSection using the specified properties for activation and folding state
     /// group.AddOrderedSection("_ActivateProperty", "_ShowProperty"); 
     ///
     /// // Adds an OrderedSection using the specified properties for activation and folding state,
-    /// // the values for folding are set to 2/3 respectively when disabled and enabled
-    /// group.AddOrderedSection("_ActivateProperty", "_ShowProperty", 2, 3); 
+    /// // the values for activation are set to 2-3 respectively when disabled and enabled
+    /// // the values for folding are set to 4-6 respectively when folded in and out
+    /// group.AddOrderedSection("_ActivateProperty", "_ShowProperty", 2, 3, 4, 6); 
     /// </code>
     /// </example>
     public class OrderedSection : Section, IAdditionalProperties
@@ -181,11 +184,13 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// </summary>
         /// <param name="activatePropertyName">Material property that will drive the section enable state</param>
         /// <param name="showPropertyName">Material property that will drive the section open state</param>
-        /// <param name="hideValue">Float value that the material property will have if the section is collapsed, optional (default: 0).</param>
         /// <param name="showValue">Float value that the material property will have if the section is visible, optional (default: 1).</param>
+        /// <param name="hideValue">Float value that the material property will have if the section is collapsed, optional (default: 0).</param>
+        /// <param name="enableValue">Float value that the material property will have if the section is enabled, optional (default: 1).</param>
+        /// <param name="disableValue">Float value that the material property will have if the section is disabled, optional (default: 0).</param>
         [LimitAccessScope(typeof(OrderedSectionGroup))]
         public OrderedSection(string activatePropertyName, string showPropertyName, float enableValue = 1,
-            float disableValue = 0, float hideValue = 0, float showValue = 1) : base(showPropertyName, hideValue, showValue)
+            float disableValue = 0, float showValue = 1, float hideValue = 0) : base(showPropertyName, hideValue, showValue)
         {
             AdditionalProperties = new AdditionalProperty[1];
             AdditionalProperties[0] = new AdditionalProperty(activatePropertyName);
@@ -205,6 +210,8 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// Default constructor of <see cref="OrderedSection"/>.
         /// </summary>
         /// <param name="activatePropertyName">Material property that will drive the section enable state</param>
+        /// <param name="enableValue">Float value that the material property will have if the section is enabled, optional (default: 1).</param>
+        /// <param name="disableValue">Float value that the material property will have if the section is disabled, optional (default: 0).</param>
         [LimitAccessScope(typeof(OrderedSectionGroup))]
         public OrderedSection(string activatePropertyName, float enableValue = 1, float disableValue = 0) : base()
         {
@@ -225,7 +232,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         }
 
         /// <summary>
-        /// Draws and hanles the up, down and delete icon on the side.
+        /// Draws and handles the up, down and delete icon on the side.
         /// </summary>
         protected void DrawSideButtons()
         {

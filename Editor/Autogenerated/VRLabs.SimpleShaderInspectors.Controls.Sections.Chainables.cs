@@ -15,15 +15,15 @@
             return control;
         }
 
-        public static OrderedSection AddOrderedSection(this OrderedSectionGroup container, System.String activatePropertyName, System.String showPropertyName, System.Single hideValue = 0, System.Single showValue = 1)
+        public static OrderedSection AddOrderedSection(this OrderedSectionGroup container, System.String activatePropertyName, System.String showPropertyName, System.Single enableValue = 1, System.Single disableValue = 0, System.Single showValue = 1, System.Single hideValue = 0)
         {
-            var control = new OrderedSection(activatePropertyName, showPropertyName, hideValue, showValue);
+            var control = new OrderedSection(activatePropertyName, showPropertyName, enableValue, disableValue, showValue, hideValue);
             container.AddControl(control);
             return control;
         }
-        public static OrderedSection AddOrderedSection(this OrderedSectionGroup container, System.String activatePropertyName)
+        public static OrderedSection AddOrderedSection(this OrderedSectionGroup container, System.String activatePropertyName, System.Single enableValue = 1, System.Single disableValue = 0)
         {
-            var control = new OrderedSection(activatePropertyName);
+            var control = new OrderedSection(activatePropertyName, enableValue, disableValue);
             container.AddControl(control);
             return control;
         }
