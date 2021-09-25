@@ -74,14 +74,14 @@
 <div class="markdown level0 conceptual"></div>
 
 <a id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection__ctor_" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.#ctor*"></a>
-<h4 id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection__ctor_System_String_System_String_System_Single_System_Single_" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.#ctor(System.String,System.String,System.Single,System.Single)">OrderedSection(String, String, Single, Single)</h4>
+<h4 id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection__ctor_System_String_System_String_System_Single_System_Single_System_Single_System_Single_" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.#ctor(System.String,System.String,System.Single,System.Single,System.Single,System.Single)">OrderedSection(String, String, Single, Single, Single, Single)</h4>
 <div class="markdown level1 summary"><p>Constructor of <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.html">OrderedSection</a> used when creating a property driven OrderedSection.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="decalaration">Declaration</h5>
 <div class="codewrapper">
   <pre><code class="lang-csharp hljs">[LimitAccessScope(typeof(OrderedSectionGroup))]
-public OrderedSection(string activatePropertyName, string showPropertyName, float hideValue = 0F, float showValue = 1F)</code></pre>
+public OrderedSection(string activatePropertyName, string showPropertyName, float enableValue = 1F, float disableValue = 0F, float showValue = 1F, float hideValue = 0F)</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
 <table class="table table-bordered table-striped table-condensed">
@@ -107,8 +107,14 @@ public OrderedSection(string activatePropertyName, string showPropertyName, floa
     </tr>
     <tr>
       <td><span class="xref">System.Single</span></td>
-      <td><span class="parametername">hideValue</span></td>
-      <td><p>Float value that the material property will have if the section is collapsed, optional (default: 0).</p>
+      <td><span class="parametername">enableValue</span></td>
+      <td><p>Float value that the material property will have if the section is enabled, optional (default: 1).</p>
+</td>
+    </tr>
+    <tr>
+      <td><span class="xref">System.Single</span></td>
+      <td><span class="parametername">disableValue</span></td>
+      <td><p>Float value that the material property will have if the section is disabled, optional (default: 0).</p>
 </td>
     </tr>
     <tr>
@@ -117,17 +123,23 @@ public OrderedSection(string activatePropertyName, string showPropertyName, floa
       <td><p>Float value that the material property will have if the section is visible, optional (default: 1).</p>
 </td>
     </tr>
+    <tr>
+      <td><span class="xref">System.Single</span></td>
+      <td><span class="parametername">hideValue</span></td>
+      <td><p>Float value that the material property will have if the section is collapsed, optional (default: 0).</p>
+</td>
+    </tr>
   </tbody>
 </table>
 <a id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection__ctor_" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.#ctor*"></a>
-<h4 id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection__ctor_System_String_" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.#ctor(System.String)">OrderedSection(String)</h4>
+<h4 id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection__ctor_System_String_System_Single_System_Single_" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.#ctor(System.String,System.Single,System.Single)">OrderedSection(String, Single, Single)</h4>
 <div class="markdown level1 summary"><p>Default constructor of <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.html">OrderedSection</a>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="decalaration">Declaration</h5>
 <div class="codewrapper">
   <pre><code class="lang-csharp hljs">[LimitAccessScope(typeof(OrderedSectionGroup))]
-public OrderedSection(string activatePropertyName)</code></pre>
+public OrderedSection(string activatePropertyName, float enableValue = 1F, float disableValue = 0F)</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
 <table class="table table-bordered table-striped table-condensed">
@@ -143,6 +155,18 @@ public OrderedSection(string activatePropertyName)</code></pre>
       <td><span class="xref">System.String</span></td>
       <td><span class="parametername">activatePropertyName</span></td>
       <td><p>Material property that will drive the section enable state</p>
+</td>
+    </tr>
+    <tr>
+      <td><span class="xref">System.Single</span></td>
+      <td><span class="parametername">enableValue</span></td>
+      <td><p>Float value that the material property will have if the section is enabled, optional (default: 1).</p>
+</td>
+    </tr>
+    <tr>
+      <td><span class="xref">System.Single</span></td>
+      <td><span class="parametername">disableValue</span></td>
+      <td><p>Float value that the material property will have if the section is disabled, optional (default: 0).</p>
 </td>
     </tr>
   </tbody>

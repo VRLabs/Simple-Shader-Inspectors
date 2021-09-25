@@ -74,12 +74,12 @@
 <div class="markdown level0 conceptual"></div>
 
 <a id="VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddOrderedSection_" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection*"></a>
-<h4 id="VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddOrderedSection_VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_System_String_System_String_System_Single_System_Single_" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup,System.String,System.String,System.Single,System.Single)">AddOrderedSection(OrderedSectionGroup, String, String, Single, Single)</h4>
+<h4 id="VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddOrderedSection_VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_System_String_System_String_System_Single_System_Single_System_Single_System_Single_" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup,System.String,System.String,System.Single,System.Single,System.Single,System.Single)">AddOrderedSection(OrderedSectionGroup, String, String, Single, Single, Single, Single)</h4>
 <div class="markdown level1 summary"></div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="decalaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">public static OrderedSection AddOrderedSection(this OrderedSectionGroup container, string activatePropertyName, string showPropertyName, float hideValue = 0F, float showValue = 1F)</code></pre>
+  <pre><code class="lang-csharp hljs">public static OrderedSection AddOrderedSection(this OrderedSectionGroup container, string activatePropertyName, string showPropertyName, float enableValue = 1F, float disableValue = 0F, float showValue = 1F, float hideValue = 0F)</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
 <table class="table table-bordered table-striped table-condensed">
@@ -108,12 +108,22 @@
     </tr>
     <tr>
       <td><span class="xref">System.Single</span></td>
-      <td><span class="parametername">hideValue</span></td>
+      <td><span class="parametername">enableValue</span></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><span class="xref">System.Single</span></td>
+      <td><span class="parametername">disableValue</span></td>
       <td></td>
     </tr>
     <tr>
       <td><span class="xref">System.Single</span></td>
       <td><span class="parametername">showValue</span></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><span class="xref">System.Single</span></td>
+      <td><span class="parametername">hideValue</span></td>
       <td></td>
     </tr>
   </tbody>
@@ -134,12 +144,12 @@
   </tbody>
 </table>
 <a id="VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddOrderedSection_" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection*"></a>
-<h4 id="VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddOrderedSection_VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_System_String_" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup,System.String)">AddOrderedSection(OrderedSectionGroup, String)</h4>
+<h4 id="VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddOrderedSection_VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_System_String_System_Single_System_Single_" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup,System.String,System.Single,System.Single)">AddOrderedSection(OrderedSectionGroup, String, Single, Single)</h4>
 <div class="markdown level1 summary"></div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="decalaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">public static OrderedSection AddOrderedSection(this OrderedSectionGroup container, string activatePropertyName)</code></pre>
+  <pre><code class="lang-csharp hljs">public static OrderedSection AddOrderedSection(this OrderedSectionGroup container, string activatePropertyName, float enableValue = 1F, float disableValue = 0F)</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
 <table class="table table-bordered table-striped table-condensed">
@@ -159,6 +169,16 @@
     <tr>
       <td><span class="xref">System.String</span></td>
       <td><span class="parametername">activatePropertyName</span></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><span class="xref">System.Single</span></td>
+      <td><span class="parametername">enableValue</span></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><span class="xref">System.Single</span></td>
+      <td><span class="parametername">disableValue</span></td>
       <td></td>
     </tr>
   </tbody>

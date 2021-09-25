@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class StaticDictionaries
+    <title>Class SerializedDictionaries
    | Simple Shader Inspectors Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class StaticDictionaries
+    <meta name="title" content="Class SerializedDictionaries
    | Simple Shader Inspectors Documentation ">
     <meta name="generator" content="docfx 2.58.2.0">
     
@@ -66,32 +66,37 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="VRLabs.SimpleShaderInspectors.StaticDictionaries">
+            <article class="content wrap" id="_content" data-uid="VRLabs.SimpleShaderInspectors.SerializedDictionaries">
   
-  <h1 id="VRLabs_SimpleShaderInspectors_StaticDictionaries" data-uid="VRLabs.SimpleShaderInspectors.StaticDictionaries">Class StaticDictionaries
+  <h1 id="VRLabs_SimpleShaderInspectors_SerializedDictionaries" data-uid="VRLabs.SimpleShaderInspectors.SerializedDictionaries">Class SerializedDictionaries
   </h1>
-  <div class="markdown level0 summary"><p>Static class containing dictionaries that can be used by controls for various needs.</p>
+  <div class="markdown level0 summary"><p>Class used to save the dictionaries used by the API</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">StaticDictionaries</span></div>
+    <div class="level1"><span class="xref">UnityEngine.Object</span></div>
+    <div class="level2"><span class="xref">UnityEngine.ScriptableObject</span></div>
+    <div class="level3"><span class="xref">SerializedDictionaries</span></div>
   </div>
   
   <h6><strong>Namespace</strong>: <a class="xref" href="VRLabs.SimpleShaderInspectors.html">VRLabs.SimpleShaderInspectors</a></h6>
   
-  <h5 id="VRLabs_SimpleShaderInspectors_StaticDictionaries_syntax">Syntax</h5>
+  <h5 id="VRLabs_SimpleShaderInspectors_SerializedDictionaries_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class StaticDictionaries</code></pre>
+    <pre><code class="lang-csharp hljs">public class SerializedDictionaries : ScriptableObject</code></pre>
   </div>
   
   
   
   
+  <h5 id="VRLabs_SimpleShaderInspectors_SerializedDictionaries_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>The API provides dictionaries to store data by identifier up to 30 days, those dictionaries are automatically saved into this asset.</p>
+</div>
   
-  <h3 id="properties">Properties
+  <h3 id="constructors">Constructors
   </h3>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -102,18 +107,59 @@
     </thead>
     <tbody>
       <tr>
-        <td id="VRLabs_SimpleShaderInspectors_StaticDictionaries_BoolDictionary" data-uid="VRLabs.SimpleShaderInspectors.StaticDictionaries.BoolDictionary">
-          <a class="xref" href="VRLabs.SimpleShaderInspectors.StaticDictionaries.BoolDictionary.html#VRLabs_SimpleShaderInspectors_StaticDictionaries_BoolDictionary">BoolDictionary</a>
+        <td id="VRLabs_SimpleShaderInspectors_SerializedDictionaries__ctor" data-uid="VRLabs.SimpleShaderInspectors.SerializedDictionaries.#ctor">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.SerializedDictionaries.-ctor.html#VRLabs_SimpleShaderInspectors_SerializedDictionaries__ctor">SerializedDictionaries()</a>
         </td>
-        <td class="markdown level1 summary"><p>Dictionary containing boolean values.</p>
+        <td class="markdown level1 summary"></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="VRLabs_SimpleShaderInspectors_SerializedDictionaries_boolDictionary" data-uid="VRLabs.SimpleShaderInspectors.SerializedDictionaries.boolDictionary">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.SerializedDictionaries.boolDictionary.html">boolDictionary</a>
+        </td>
+        <td class="markdown level1 summary"><p>list for the bool dictionary</p>
 </td>
       </tr>
       <tr>
-        <td id="VRLabs_SimpleShaderInspectors_StaticDictionaries_IntDictionary" data-uid="VRLabs.SimpleShaderInspectors.StaticDictionaries.IntDictionary">
-          <a class="xref" href="VRLabs.SimpleShaderInspectors.StaticDictionaries.IntDictionary.html#VRLabs_SimpleShaderInspectors_StaticDictionaries_IntDictionary">IntDictionary</a>
+        <td id="VRLabs_SimpleShaderInspectors_SerializedDictionaries_intDictionary" data-uid="VRLabs.SimpleShaderInspectors.SerializedDictionaries.intDictionary">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.SerializedDictionaries.intDictionary.html">intDictionary</a>
         </td>
-        <td class="markdown level1 summary"><p>Dictionary containing integer values.</p>
-</td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="VRLabs_SimpleShaderInspectors_SerializedDictionaries_SetBoolDictionary_System_Collections_Generic_List_System_ValueTuple_System_String_System_Boolean_System_DateTime___" data-uid="VRLabs.SimpleShaderInspectors.SerializedDictionaries.SetBoolDictionary(System.Collections.Generic.List{System.ValueTuple{System.String,System.Boolean,System.DateTime}})">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.SerializedDictionaries.SetBoolDictionary.html#VRLabs_SimpleShaderInspectors_SerializedDictionaries_SetBoolDictionary_System_Collections_Generic_List_System_ValueTuple_System_String_System_Boolean_System_DateTime___">SetBoolDictionary(List&lt;(String, Boolean, DateTime)&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
+      </tr>
+      <tr>
+        <td id="VRLabs_SimpleShaderInspectors_SerializedDictionaries_SetIntDictionary_System_Collections_Generic_List_System_ValueTuple_System_String_System_Int32_System_DateTime___" data-uid="VRLabs.SimpleShaderInspectors.SerializedDictionaries.SetIntDictionary(System.Collections.Generic.List{System.ValueTuple{System.String,System.Int32,System.DateTime}})">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.SerializedDictionaries.SetIntDictionary.html#VRLabs_SimpleShaderInspectors_SerializedDictionaries_SetIntDictionary_System_Collections_Generic_List_System_ValueTuple_System_String_System_Int32_System_DateTime___">SetIntDictionary(List&lt;(String, Int32, DateTime)&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
       </tr>
     </tbody>
   </table>

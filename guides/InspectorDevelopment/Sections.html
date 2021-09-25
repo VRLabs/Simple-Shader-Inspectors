@@ -86,9 +86,9 @@ For example you can change the color of the header background with <code>.SetBac
 <p>The checkbox will control if the content of the section will be enabled or not, and in case it is disabled all the controls under this section will be disabled and not modifiable.</p>
 <p>Currently this section does not have chainable methods on top of what is already available from <code>Section</code>.</p>
 <h2 id="orderedsection">OrderedSection</h2>
-<pre><code class="lang-csharp">   AddOrderedSection(string activatePropertyName);
+<pre><code class="lang-csharp">   AddOrderedSection(string activatePropertyName, float enableValue = 1, float disableValue = 0);
 </code></pre>
-<p>This type of section could be interpreted as a different implementation of <code>ActivatableSection</code> since it works similarly on the surfaace, but there's one problem, you <em>can't</em> create it with the usual <code>this.AddOrderedSection</code> this time.</p>
+<p>This type of section could be interpreted as a different implementation of <code>ActivatableSection</code> since it works similarly on the surface, but there's one problem, you <em>can't</em> create it with the usual <code>this.AddOrderedSection</code> this time.</p>
 <div class="CAUTION">
 <h5>Caution</h5>
 <p>You could create a new <code>OrderedSection</code> using its default constructor, but you should not do that. You would not get a working section out of that anyways.</p>

@@ -1516,18 +1516,18 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddActivatableSection
   fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddActivatableSection
   nameWithType: Chainables.AddActivatableSection
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup,System.String)
-  name: AddOrderedSection(OrderedSectionGroup, String)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddOrderedSection_VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_System_String_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup,System.String)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup, System.String)
-  nameWithType: Chainables.AddOrderedSection(OrderedSectionGroup, String)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup,System.String,System.String,System.Single,System.Single)
-  name: AddOrderedSection(OrderedSectionGroup, String, String, Single, Single)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddOrderedSection_VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_System_String_System_String_System_Single_System_Single_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup,System.String,System.String,System.Single,System.Single)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup, System.String, System.String, System.Single, System.Single)
-  nameWithType: Chainables.AddOrderedSection(OrderedSectionGroup, String, String, Single, Single)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup,System.String,System.Single,System.Single)
+  name: AddOrderedSection(OrderedSectionGroup, String, Single, Single)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddOrderedSection_VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_System_String_System_Single_System_Single_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup,System.String,System.Single,System.Single)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup, System.String, System.Single, System.Single)
+  nameWithType: Chainables.AddOrderedSection(OrderedSectionGroup, String, Single, Single)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup,System.String,System.String,System.Single,System.Single,System.Single,System.Single)
+  name: AddOrderedSection(OrderedSectionGroup, String, String, Single, Single, Single, Single)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddOrderedSection_VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_System_String_System_String_System_Single_System_Single_System_Single_System_Single_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup,System.String,System.String,System.Single,System.Single,System.Single,System.Single)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup, System.String, System.String, System.Single, System.Single, System.Single, System.Single)
+  nameWithType: Chainables.AddOrderedSection(OrderedSectionGroup, String, String, Single, Single, Single, Single)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection*
   name: AddOrderedSection
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection.html
@@ -1750,18 +1750,18 @@ references:
   commentId: T:VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection
   fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection
   nameWithType: OrderedSection
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.#ctor(System.String)
-  name: OrderedSection(String)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.-ctor.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection__ctor_System_String_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.#ctor(System.String)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.OrderedSection(System.String)
-  nameWithType: OrderedSection.OrderedSection(String)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.#ctor(System.String,System.String,System.Single,System.Single)
-  name: OrderedSection(String, String, Single, Single)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.-ctor.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection__ctor_System_String_System_String_System_Single_System_Single_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.#ctor(System.String,System.String,System.Single,System.Single)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.OrderedSection(System.String, System.String, System.Single, System.Single)
-  nameWithType: OrderedSection.OrderedSection(String, String, Single, Single)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.#ctor(System.String,System.Single,System.Single)
+  name: OrderedSection(String, Single, Single)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.-ctor.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection__ctor_System_String_System_Single_System_Single_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.#ctor(System.String,System.Single,System.Single)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.OrderedSection(System.String, System.Single, System.Single)
+  nameWithType: OrderedSection.OrderedSection(String, Single, Single)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.#ctor(System.String,System.String,System.Single,System.Single,System.Single,System.Single)
+  name: OrderedSection(String, String, Single, Single, Single, Single)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.-ctor.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection__ctor_System_String_System_String_System_Single_System_Single_System_Single_System_Single_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.#ctor(System.String,System.String,System.Single,System.Single,System.Single,System.Single)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.OrderedSection(System.String, System.String, System.Single, System.Single, System.Single, System.Single)
+  nameWithType: OrderedSection.OrderedSection(String, String, Single, Single, Single, Single)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.#ctor*
   name: OrderedSection
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.-ctor.html
@@ -1816,6 +1816,12 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.DeleteIcon
   fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.DeleteIcon
   nameWithType: OrderedSection.DeleteIcon
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.disableValue
+  name: disableValue
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.disableValue.html
+  commentId: F:VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.disableValue
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.disableValue
+  nameWithType: OrderedSection.disableValue
 - uid: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.DownColor
   name: DownColor
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.DownColor.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection_DownColor
@@ -1864,6 +1870,12 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.Enabled
   fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.Enabled
   nameWithType: OrderedSection.Enabled
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.enableValue
+  name: enableValue
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.enableValue.html
+  commentId: F:VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.enableValue
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.enableValue
+  nameWithType: OrderedSection.enableValue
 - uid: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.HasActivatePropertyUpdated
   name: HasActivatePropertyUpdated
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.HasActivatePropertyUpdated.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection_HasActivatePropertyUpdated
@@ -1906,6 +1918,18 @@ references:
   commentId: F:VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.PushState
   fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.PushState
   nameWithType: OrderedSection.PushState
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.SectionPosition
+  name: SectionPosition
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.SectionPosition.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection_SectionPosition
+  commentId: P:VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.SectionPosition
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.SectionPosition
+  nameWithType: OrderedSection.SectionPosition
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.SectionPosition*
+  name: SectionPosition
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.SectionPosition.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.SectionPosition
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.SectionPosition
+  nameWithType: OrderedSection.SectionPosition
 - uid: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.UpColor
   name: UpColor
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.UpColor.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection_UpColor
@@ -3386,6 +3410,114 @@ references:
   commentId: F:VRLabs.SimpleShaderInspectors.PropertyInfo.Tooltip
   fullName: VRLabs.SimpleShaderInspectors.PropertyInfo.Tooltip
   nameWithType: PropertyInfo.Tooltip
+- uid: VRLabs.SimpleShaderInspectors.SerializedDictionaries
+  name: SerializedDictionaries
+  href: Next/api/VRLabs.SimpleShaderInspectors.SerializedDictionaries.html
+  commentId: T:VRLabs.SimpleShaderInspectors.SerializedDictionaries
+  fullName: VRLabs.SimpleShaderInspectors.SerializedDictionaries
+  nameWithType: SerializedDictionaries
+- uid: VRLabs.SimpleShaderInspectors.SerializedDictionaries.#ctor
+  name: SerializedDictionaries()
+  href: Next/api/VRLabs.SimpleShaderInspectors.SerializedDictionaries.-ctor.html#VRLabs_SimpleShaderInspectors_SerializedDictionaries__ctor
+  commentId: M:VRLabs.SimpleShaderInspectors.SerializedDictionaries.#ctor
+  fullName: VRLabs.SimpleShaderInspectors.SerializedDictionaries.SerializedDictionaries()
+  nameWithType: SerializedDictionaries.SerializedDictionaries()
+- uid: VRLabs.SimpleShaderInspectors.SerializedDictionaries.#ctor*
+  name: SerializedDictionaries
+  href: Next/api/VRLabs.SimpleShaderInspectors.SerializedDictionaries.-ctor.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.SerializedDictionaries.#ctor
+  fullName: VRLabs.SimpleShaderInspectors.SerializedDictionaries.SerializedDictionaries
+  nameWithType: SerializedDictionaries.SerializedDictionaries
+- uid: VRLabs.SimpleShaderInspectors.SerializedDictionaries.boolDictionary
+  name: boolDictionary
+  href: Next/api/VRLabs.SimpleShaderInspectors.SerializedDictionaries.boolDictionary.html
+  commentId: F:VRLabs.SimpleShaderInspectors.SerializedDictionaries.boolDictionary
+  fullName: VRLabs.SimpleShaderInspectors.SerializedDictionaries.boolDictionary
+  nameWithType: SerializedDictionaries.boolDictionary
+- uid: VRLabs.SimpleShaderInspectors.SerializedDictionaries.BoolItem
+  name: SerializedDictionaries.BoolItem
+  href: Next/api/VRLabs.SimpleShaderInspectors.SerializedDictionaries.BoolItem.html
+  commentId: T:VRLabs.SimpleShaderInspectors.SerializedDictionaries.BoolItem
+  fullName: VRLabs.SimpleShaderInspectors.SerializedDictionaries.BoolItem
+  nameWithType: SerializedDictionaries.BoolItem
+- uid: VRLabs.SimpleShaderInspectors.SerializedDictionaries.BoolItem.date
+  name: date
+  href: Next/api/VRLabs.SimpleShaderInspectors.SerializedDictionaries.BoolItem.date.html
+  commentId: F:VRLabs.SimpleShaderInspectors.SerializedDictionaries.BoolItem.date
+  fullName: VRLabs.SimpleShaderInspectors.SerializedDictionaries.BoolItem.date
+  nameWithType: SerializedDictionaries.BoolItem.date
+- uid: VRLabs.SimpleShaderInspectors.SerializedDictionaries.BoolItem.key
+  name: key
+  href: Next/api/VRLabs.SimpleShaderInspectors.SerializedDictionaries.BoolItem.key.html
+  commentId: F:VRLabs.SimpleShaderInspectors.SerializedDictionaries.BoolItem.key
+  fullName: VRLabs.SimpleShaderInspectors.SerializedDictionaries.BoolItem.key
+  nameWithType: SerializedDictionaries.BoolItem.key
+- uid: VRLabs.SimpleShaderInspectors.SerializedDictionaries.BoolItem.value
+  name: value
+  href: Next/api/VRLabs.SimpleShaderInspectors.SerializedDictionaries.BoolItem.value.html
+  commentId: F:VRLabs.SimpleShaderInspectors.SerializedDictionaries.BoolItem.value
+  fullName: VRLabs.SimpleShaderInspectors.SerializedDictionaries.BoolItem.value
+  nameWithType: SerializedDictionaries.BoolItem.value
+- uid: VRLabs.SimpleShaderInspectors.SerializedDictionaries.intDictionary
+  name: intDictionary
+  href: Next/api/VRLabs.SimpleShaderInspectors.SerializedDictionaries.intDictionary.html
+  commentId: F:VRLabs.SimpleShaderInspectors.SerializedDictionaries.intDictionary
+  fullName: VRLabs.SimpleShaderInspectors.SerializedDictionaries.intDictionary
+  nameWithType: SerializedDictionaries.intDictionary
+- uid: VRLabs.SimpleShaderInspectors.SerializedDictionaries.IntItem
+  name: SerializedDictionaries.IntItem
+  href: Next/api/VRLabs.SimpleShaderInspectors.SerializedDictionaries.IntItem.html
+  commentId: T:VRLabs.SimpleShaderInspectors.SerializedDictionaries.IntItem
+  fullName: VRLabs.SimpleShaderInspectors.SerializedDictionaries.IntItem
+  nameWithType: SerializedDictionaries.IntItem
+- uid: VRLabs.SimpleShaderInspectors.SerializedDictionaries.IntItem.date
+  name: date
+  href: Next/api/VRLabs.SimpleShaderInspectors.SerializedDictionaries.IntItem.date.html
+  commentId: F:VRLabs.SimpleShaderInspectors.SerializedDictionaries.IntItem.date
+  fullName: VRLabs.SimpleShaderInspectors.SerializedDictionaries.IntItem.date
+  nameWithType: SerializedDictionaries.IntItem.date
+- uid: VRLabs.SimpleShaderInspectors.SerializedDictionaries.IntItem.key
+  name: key
+  href: Next/api/VRLabs.SimpleShaderInspectors.SerializedDictionaries.IntItem.key.html
+  commentId: F:VRLabs.SimpleShaderInspectors.SerializedDictionaries.IntItem.key
+  fullName: VRLabs.SimpleShaderInspectors.SerializedDictionaries.IntItem.key
+  nameWithType: SerializedDictionaries.IntItem.key
+- uid: VRLabs.SimpleShaderInspectors.SerializedDictionaries.IntItem.value
+  name: value
+  href: Next/api/VRLabs.SimpleShaderInspectors.SerializedDictionaries.IntItem.value.html
+  commentId: F:VRLabs.SimpleShaderInspectors.SerializedDictionaries.IntItem.value
+  fullName: VRLabs.SimpleShaderInspectors.SerializedDictionaries.IntItem.value
+  nameWithType: SerializedDictionaries.IntItem.value
+- uid: VRLabs.SimpleShaderInspectors.SerializedDictionaries.SetBoolDictionary(System.Collections.Generic.List{System.ValueTuple{System.String,System.Boolean,System.DateTime}})
+  name: SetBoolDictionary(List<(String, Boolean, DateTime)>)
+  href: Next/api/VRLabs.SimpleShaderInspectors.SerializedDictionaries.SetBoolDictionary.html#VRLabs_SimpleShaderInspectors_SerializedDictionaries_SetBoolDictionary_System_Collections_Generic_List_System_ValueTuple_System_String_System_Boolean_System_DateTime___
+  commentId: M:VRLabs.SimpleShaderInspectors.SerializedDictionaries.SetBoolDictionary(System.Collections.Generic.List{System.ValueTuple{System.String,System.Boolean,System.DateTime}})
+  name.vb: SetBoolDictionary(List(Of (String, Boolean, DateTime)(Of String, Boolean, DateTime)))
+  fullName: VRLabs.SimpleShaderInspectors.SerializedDictionaries.SetBoolDictionary(System.Collections.Generic.List<System.ValueTuple<System.String, System.Boolean, System.DateTime>>)
+  fullName.vb: VRLabs.SimpleShaderInspectors.SerializedDictionaries.SetBoolDictionary(System.Collections.Generic.List(Of System.ValueTuple(Of System.String, System.Boolean, System.DateTime)))
+  nameWithType: SerializedDictionaries.SetBoolDictionary(List<(String, Boolean, DateTime)>)
+  nameWithType.vb: SerializedDictionaries.SetBoolDictionary(List(Of (String, Boolean, DateTime)(Of String, Boolean, DateTime)))
+- uid: VRLabs.SimpleShaderInspectors.SerializedDictionaries.SetBoolDictionary*
+  name: SetBoolDictionary
+  href: Next/api/VRLabs.SimpleShaderInspectors.SerializedDictionaries.SetBoolDictionary.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.SerializedDictionaries.SetBoolDictionary
+  fullName: VRLabs.SimpleShaderInspectors.SerializedDictionaries.SetBoolDictionary
+  nameWithType: SerializedDictionaries.SetBoolDictionary
+- uid: VRLabs.SimpleShaderInspectors.SerializedDictionaries.SetIntDictionary(System.Collections.Generic.List{System.ValueTuple{System.String,System.Int32,System.DateTime}})
+  name: SetIntDictionary(List<(String, Int32, DateTime)>)
+  href: Next/api/VRLabs.SimpleShaderInspectors.SerializedDictionaries.SetIntDictionary.html#VRLabs_SimpleShaderInspectors_SerializedDictionaries_SetIntDictionary_System_Collections_Generic_List_System_ValueTuple_System_String_System_Int32_System_DateTime___
+  commentId: M:VRLabs.SimpleShaderInspectors.SerializedDictionaries.SetIntDictionary(System.Collections.Generic.List{System.ValueTuple{System.String,System.Int32,System.DateTime}})
+  name.vb: SetIntDictionary(List(Of (String, Int32, DateTime)(Of String, Int32, DateTime)))
+  fullName: VRLabs.SimpleShaderInspectors.SerializedDictionaries.SetIntDictionary(System.Collections.Generic.List<System.ValueTuple<System.String, System.Int32, System.DateTime>>)
+  fullName.vb: VRLabs.SimpleShaderInspectors.SerializedDictionaries.SetIntDictionary(System.Collections.Generic.List(Of System.ValueTuple(Of System.String, System.Int32, System.DateTime)))
+  nameWithType: SerializedDictionaries.SetIntDictionary(List<(String, Int32, DateTime)>)
+  nameWithType.vb: SerializedDictionaries.SetIntDictionary(List(Of (String, Int32, DateTime)(Of String, Int32, DateTime)))
+- uid: VRLabs.SimpleShaderInspectors.SerializedDictionaries.SetIntDictionary*
+  name: SetIntDictionary
+  href: Next/api/VRLabs.SimpleShaderInspectors.SerializedDictionaries.SetIntDictionary.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.SerializedDictionaries.SetIntDictionary
+  fullName: VRLabs.SimpleShaderInspectors.SerializedDictionaries.SetIntDictionary
+  nameWithType: SerializedDictionaries.SetIntDictionary
 - uid: VRLabs.SimpleShaderInspectors.SettingsFile
   name: SettingsFile
   href: Next/api/VRLabs.SimpleShaderInspectors.SettingsFile.html
@@ -3866,6 +3998,24 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.StaticDictionaries.BoolDictionary
   fullName: VRLabs.SimpleShaderInspectors.StaticDictionaries.BoolDictionary
   nameWithType: StaticDictionaries.BoolDictionary
+- uid: VRLabs.SimpleShaderInspectors.StaticDictionaries.IntDictionary
+  name: IntDictionary
+  href: Next/api/VRLabs.SimpleShaderInspectors.StaticDictionaries.IntDictionary.html#VRLabs_SimpleShaderInspectors_StaticDictionaries_IntDictionary
+  commentId: P:VRLabs.SimpleShaderInspectors.StaticDictionaries.IntDictionary
+  fullName: VRLabs.SimpleShaderInspectors.StaticDictionaries.IntDictionary
+  nameWithType: StaticDictionaries.IntDictionary
+- uid: VRLabs.SimpleShaderInspectors.StaticDictionaries.IntDictionary*
+  name: IntDictionary
+  href: Next/api/VRLabs.SimpleShaderInspectors.StaticDictionaries.IntDictionary.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.StaticDictionaries.IntDictionary
+  fullName: VRLabs.SimpleShaderInspectors.StaticDictionaries.IntDictionary
+  nameWithType: StaticDictionaries.IntDictionary
+- uid: VRLabs.SimpleShaderInspectors.StaticDictionaries.Startup
+  name: StaticDictionaries.Startup
+  href: Next/api/VRLabs.SimpleShaderInspectors.StaticDictionaries.Startup.html
+  commentId: T:VRLabs.SimpleShaderInspectors.StaticDictionaries.Startup
+  fullName: VRLabs.SimpleShaderInspectors.StaticDictionaries.Startup
+  nameWithType: StaticDictionaries.Startup
 - uid: VRLabs.SimpleShaderInspectors.Styles
   name: Styles
   href: Next/api/VRLabs.SimpleShaderInspectors.Styles.html
@@ -4148,6 +4298,120 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Textures.ColorIconBorderSelected
   fullName: VRLabs.SimpleShaderInspectors.Textures.ColorIconBorderSelected
   nameWithType: Textures.ColorIconBorderSelected
+- uid: VRLabs.SimpleShaderInspectors.TimedDictionary`2
+  name: TimedDictionary<TKey, TValue>
+  href: Next/api/VRLabs.SimpleShaderInspectors.TimedDictionary-2.html
+  commentId: T:VRLabs.SimpleShaderInspectors.TimedDictionary`2
+  name.vb: TimedDictionary(Of TKey, TValue)
+  fullName: VRLabs.SimpleShaderInspectors.TimedDictionary<TKey, TValue>
+  fullName.vb: VRLabs.SimpleShaderInspectors.TimedDictionary(Of TKey, TValue)
+  nameWithType: TimedDictionary<TKey, TValue>
+  nameWithType.vb: TimedDictionary(Of TKey, TValue)
+- uid: VRLabs.SimpleShaderInspectors.TimedDictionary`2.#ctor
+  name: TimedDictionary()
+  href: Next/api/VRLabs.SimpleShaderInspectors.TimedDictionary-2.-ctor.html#VRLabs_SimpleShaderInspectors_TimedDictionary_2__ctor
+  commentId: M:VRLabs.SimpleShaderInspectors.TimedDictionary`2.#ctor
+  fullName: VRLabs.SimpleShaderInspectors.TimedDictionary<TKey, TValue>.TimedDictionary()
+  fullName.vb: VRLabs.SimpleShaderInspectors.TimedDictionary(Of TKey, TValue).TimedDictionary()
+  nameWithType: TimedDictionary<TKey, TValue>.TimedDictionary()
+  nameWithType.vb: TimedDictionary(Of TKey, TValue).TimedDictionary()
+- uid: VRLabs.SimpleShaderInspectors.TimedDictionary`2.#ctor*
+  name: TimedDictionary
+  href: Next/api/VRLabs.SimpleShaderInspectors.TimedDictionary-2.-ctor.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.TimedDictionary`2.#ctor
+  fullName: VRLabs.SimpleShaderInspectors.TimedDictionary<TKey, TValue>.TimedDictionary
+  fullName.vb: VRLabs.SimpleShaderInspectors.TimedDictionary(Of TKey, TValue).TimedDictionary
+  nameWithType: TimedDictionary<TKey, TValue>.TimedDictionary
+  nameWithType.vb: TimedDictionary(Of TKey, TValue).TimedDictionary
+- uid: VRLabs.SimpleShaderInspectors.TimedDictionary`2.ClearOld
+  name: ClearOld()
+  href: Next/api/VRLabs.SimpleShaderInspectors.TimedDictionary-2.ClearOld.html#VRLabs_SimpleShaderInspectors_TimedDictionary_2_ClearOld
+  commentId: M:VRLabs.SimpleShaderInspectors.TimedDictionary`2.ClearOld
+  fullName: VRLabs.SimpleShaderInspectors.TimedDictionary<TKey, TValue>.ClearOld()
+  fullName.vb: VRLabs.SimpleShaderInspectors.TimedDictionary(Of TKey, TValue).ClearOld()
+  nameWithType: TimedDictionary<TKey, TValue>.ClearOld()
+  nameWithType.vb: TimedDictionary(Of TKey, TValue).ClearOld()
+- uid: VRLabs.SimpleShaderInspectors.TimedDictionary`2.ClearOld*
+  name: ClearOld
+  href: Next/api/VRLabs.SimpleShaderInspectors.TimedDictionary-2.ClearOld.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.TimedDictionary`2.ClearOld
+  fullName: VRLabs.SimpleShaderInspectors.TimedDictionary<TKey, TValue>.ClearOld
+  fullName.vb: VRLabs.SimpleShaderInspectors.TimedDictionary(Of TKey, TValue).ClearOld
+  nameWithType: TimedDictionary<TKey, TValue>.ClearOld
+  nameWithType.vb: TimedDictionary(Of TKey, TValue).ClearOld
+- uid: VRLabs.SimpleShaderInspectors.TimedDictionary`2.GetSerializedDictionary
+  name: GetSerializedDictionary()
+  href: Next/api/VRLabs.SimpleShaderInspectors.TimedDictionary-2.GetSerializedDictionary.html#VRLabs_SimpleShaderInspectors_TimedDictionary_2_GetSerializedDictionary
+  commentId: M:VRLabs.SimpleShaderInspectors.TimedDictionary`2.GetSerializedDictionary
+  fullName: VRLabs.SimpleShaderInspectors.TimedDictionary<TKey, TValue>.GetSerializedDictionary()
+  fullName.vb: VRLabs.SimpleShaderInspectors.TimedDictionary(Of TKey, TValue).GetSerializedDictionary()
+  nameWithType: TimedDictionary<TKey, TValue>.GetSerializedDictionary()
+  nameWithType.vb: TimedDictionary(Of TKey, TValue).GetSerializedDictionary()
+- uid: VRLabs.SimpleShaderInspectors.TimedDictionary`2.GetSerializedDictionary*
+  name: GetSerializedDictionary
+  href: Next/api/VRLabs.SimpleShaderInspectors.TimedDictionary-2.GetSerializedDictionary.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.TimedDictionary`2.GetSerializedDictionary
+  fullName: VRLabs.SimpleShaderInspectors.TimedDictionary<TKey, TValue>.GetSerializedDictionary
+  fullName.vb: VRLabs.SimpleShaderInspectors.TimedDictionary(Of TKey, TValue).GetSerializedDictionary
+  nameWithType: TimedDictionary<TKey, TValue>.GetSerializedDictionary
+  nameWithType.vb: TimedDictionary(Of TKey, TValue).GetSerializedDictionary
+- uid: VRLabs.SimpleShaderInspectors.TimedDictionary`2.Keys
+  name: Keys
+  href: Next/api/VRLabs.SimpleShaderInspectors.TimedDictionary-2.Keys.html#VRLabs_SimpleShaderInspectors_TimedDictionary_2_Keys
+  commentId: P:VRLabs.SimpleShaderInspectors.TimedDictionary`2.Keys
+  fullName: VRLabs.SimpleShaderInspectors.TimedDictionary<TKey, TValue>.Keys
+  fullName.vb: VRLabs.SimpleShaderInspectors.TimedDictionary(Of TKey, TValue).Keys
+  nameWithType: TimedDictionary<TKey, TValue>.Keys
+  nameWithType.vb: TimedDictionary(Of TKey, TValue).Keys
+- uid: VRLabs.SimpleShaderInspectors.TimedDictionary`2.Keys*
+  name: Keys
+  href: Next/api/VRLabs.SimpleShaderInspectors.TimedDictionary-2.Keys.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.TimedDictionary`2.Keys
+  fullName: VRLabs.SimpleShaderInspectors.TimedDictionary<TKey, TValue>.Keys
+  fullName.vb: VRLabs.SimpleShaderInspectors.TimedDictionary(Of TKey, TValue).Keys
+  nameWithType: TimedDictionary<TKey, TValue>.Keys
+  nameWithType.vb: TimedDictionary(Of TKey, TValue).Keys
+- uid: VRLabs.SimpleShaderInspectors.TimedDictionary`2.SetValue(`0,`1)
+  name: SetValue(TKey, TValue)
+  href: Next/api/VRLabs.SimpleShaderInspectors.TimedDictionary-2.SetValue.html#VRLabs_SimpleShaderInspectors_TimedDictionary_2_SetValue__0__1_
+  commentId: M:VRLabs.SimpleShaderInspectors.TimedDictionary`2.SetValue(`0,`1)
+  fullName: VRLabs.SimpleShaderInspectors.TimedDictionary<TKey, TValue>.SetValue(TKey, TValue)
+  fullName.vb: VRLabs.SimpleShaderInspectors.TimedDictionary(Of TKey, TValue).SetValue(TKey, TValue)
+  nameWithType: TimedDictionary<TKey, TValue>.SetValue(TKey, TValue)
+  nameWithType.vb: TimedDictionary(Of TKey, TValue).SetValue(TKey, TValue)
+- uid: VRLabs.SimpleShaderInspectors.TimedDictionary`2.SetValue(`0,`1,System.DateTime)
+  name: SetValue(TKey, TValue, DateTime)
+  href: Next/api/VRLabs.SimpleShaderInspectors.TimedDictionary-2.SetValue.html#VRLabs_SimpleShaderInspectors_TimedDictionary_2_SetValue__0__1_System_DateTime_
+  commentId: M:VRLabs.SimpleShaderInspectors.TimedDictionary`2.SetValue(`0,`1,System.DateTime)
+  fullName: VRLabs.SimpleShaderInspectors.TimedDictionary<TKey, TValue>.SetValue(TKey, TValue, System.DateTime)
+  fullName.vb: VRLabs.SimpleShaderInspectors.TimedDictionary(Of TKey, TValue).SetValue(TKey, TValue, System.DateTime)
+  nameWithType: TimedDictionary<TKey, TValue>.SetValue(TKey, TValue, DateTime)
+  nameWithType.vb: TimedDictionary(Of TKey, TValue).SetValue(TKey, TValue, DateTime)
+- uid: VRLabs.SimpleShaderInspectors.TimedDictionary`2.SetValue*
+  name: SetValue
+  href: Next/api/VRLabs.SimpleShaderInspectors.TimedDictionary-2.SetValue.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.TimedDictionary`2.SetValue
+  fullName: VRLabs.SimpleShaderInspectors.TimedDictionary<TKey, TValue>.SetValue
+  fullName.vb: VRLabs.SimpleShaderInspectors.TimedDictionary(Of TKey, TValue).SetValue
+  nameWithType: TimedDictionary<TKey, TValue>.SetValue
+  nameWithType.vb: TimedDictionary(Of TKey, TValue).SetValue
+- uid: VRLabs.SimpleShaderInspectors.TimedDictionary`2.TryGetValue(`0,`1@)
+  name: TryGetValue(TKey, out TValue)
+  href: Next/api/VRLabs.SimpleShaderInspectors.TimedDictionary-2.TryGetValue.html#VRLabs_SimpleShaderInspectors_TimedDictionary_2_TryGetValue__0__1__
+  commentId: M:VRLabs.SimpleShaderInspectors.TimedDictionary`2.TryGetValue(`0,`1@)
+  name.vb: TryGetValue(TKey, ByRef TValue)
+  fullName: VRLabs.SimpleShaderInspectors.TimedDictionary<TKey, TValue>.TryGetValue(TKey, out TValue)
+  fullName.vb: VRLabs.SimpleShaderInspectors.TimedDictionary(Of TKey, TValue).TryGetValue(TKey, ByRef TValue)
+  nameWithType: TimedDictionary<TKey, TValue>.TryGetValue(TKey, out TValue)
+  nameWithType.vb: TimedDictionary(Of TKey, TValue).TryGetValue(TKey, ByRef TValue)
+- uid: VRLabs.SimpleShaderInspectors.TimedDictionary`2.TryGetValue*
+  name: TryGetValue
+  href: Next/api/VRLabs.SimpleShaderInspectors.TimedDictionary-2.TryGetValue.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.TimedDictionary`2.TryGetValue
+  fullName: VRLabs.SimpleShaderInspectors.TimedDictionary<TKey, TValue>.TryGetValue
+  fullName.vb: VRLabs.SimpleShaderInspectors.TimedDictionary(Of TKey, TValue).TryGetValue
+  nameWithType: TimedDictionary<TKey, TValue>.TryGetValue
+  nameWithType.vb: TimedDictionary(Of TKey, TValue).TryGetValue
 - uid: VRLabs.SimpleShaderInspectors.Tools
   name: VRLabs.SimpleShaderInspectors.Tools
   href: Next/api/VRLabs.SimpleShaderInspectors.Tools.html
@@ -4166,6 +4430,12 @@ references:
   commentId: T:VRLabs.SimpleShaderInspectors.Tools.EmbedLibraryEditor
   fullName: VRLabs.SimpleShaderInspectors.Tools.EmbedLibraryEditor
   nameWithType: EmbedLibraryEditor
+- uid: VRLabs.SimpleShaderInspectors.Tools.EmbedLibraryEditor.IDENTIFIER
+  name: IDENTIFIER
+  href: Next/api/VRLabs.SimpleShaderInspectors.Tools.EmbedLibraryEditor.IDENTIFIER.html
+  commentId: F:VRLabs.SimpleShaderInspectors.Tools.EmbedLibraryEditor.IDENTIFIER
+  fullName: VRLabs.SimpleShaderInspectors.Tools.EmbedLibraryEditor.IDENTIFIER
+  nameWithType: EmbedLibraryEditor.IDENTIFIER
 - uid: VRLabs.SimpleShaderInspectors.Tools.LocalizationEditorWindow
   name: LocalizationEditorWindow
   href: Next/api/VRLabs.SimpleShaderInspectors.Tools.LocalizationEditorWindow.html

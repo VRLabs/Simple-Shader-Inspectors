@@ -111,8 +111,6 @@ In fact the only way to enable a previously disabled <a class="xref" href="VRLab
 </p>
 <p>
 Another quirk of this type of section is that it can be moved up or down relative to the sections of the same group, letting the user order them in whichever way they see fit best.
-As a result of this behaviour the value the property driving the enabled state will be 0 when not enabled, or the ordering index of the section when enabled, meaning that when
-enabled the material property can have any value > 0.
 </p>
 </div>
   
@@ -124,12 +122,17 @@ OrderedSectionGroup group = this.AddOrderedSectionGroup(&quot;GroupAlias&quot;);
 // Adds an OrderedSection using the specified property as activation property
 group.AddOrderedSection(&quot;_ActivateProperty&quot;);  
 
+ // Adds an OrderedSection using the specified property as activation property,
+ // the values for activation are set to 2-3 respectively when disabled and enabled
+group.AddOrderedSection(&quot;_ActivateProperty&quot;, 2, 3); 
+
 // Adds an OrderedSection using the specified properties for activation and folding state
 group.AddOrderedSection(&quot;_ActivateProperty&quot;, &quot;_ShowProperty&quot;); 
 
 // Adds an OrderedSection using the specified properties for activation and folding state,
-// the values for folding are set to 2/3 respectively when disabled and enabled
-group.AddOrderedSection(&quot;_ActivateProperty&quot;, &quot;_ShowProperty&quot;, 2, 3); </code></pre>
+// the values for activation are set to 2-3 respectively when disabled and enabled
+// the values for folding are set to 4-6 respectively when folded in and out
+group.AddOrderedSection(&quot;_ActivateProperty&quot;, &quot;_ShowProperty&quot;, 2, 3, 4, 6); </code></pre>
 
   <h3 id="constructors">Constructors
   </h3>
@@ -142,15 +145,15 @@ group.AddOrderedSection(&quot;_ActivateProperty&quot;, &quot;_ShowProperty&quot;
     </thead>
     <tbody>
       <tr>
-        <td id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection__ctor_System_String_" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.#ctor(System.String)">
-          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.-ctor.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection__ctor_System_String_">OrderedSection(String)</a>
+        <td id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection__ctor_System_String_System_Single_System_Single_" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.#ctor(System.String,System.Single,System.Single)">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.-ctor.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection__ctor_System_String_System_Single_System_Single_">OrderedSection(String, Single, Single)</a>
         </td>
         <td class="markdown level1 summary"><p>Default constructor of <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.html">OrderedSection</a>.</p>
 </td>
       </tr>
       <tr>
-        <td id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection__ctor_System_String_System_String_System_Single_System_Single_" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.#ctor(System.String,System.String,System.Single,System.Single)">
-          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.-ctor.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection__ctor_System_String_System_String_System_Single_System_Single_">OrderedSection(String, String, Single, Single)</a>
+        <td id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection__ctor_System_String_System_String_System_Single_System_Single_System_Single_System_Single_" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.#ctor(System.String,System.String,System.Single,System.Single,System.Single,System.Single)">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.-ctor.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection__ctor_System_String_System_String_System_Single_System_Single_System_Single_System_Single_">OrderedSection(String, String, Single, Single, Single, Single)</a>
         </td>
         <td class="markdown level1 summary"><p>Constructor of <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.html">OrderedSection</a> used when creating a property driven OrderedSection.</p>
 </td>
@@ -167,6 +170,20 @@ group.AddOrderedSection(&quot;_ActivateProperty&quot;, &quot;_ShowProperty&quot;
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection_disableValue" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.disableValue">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.disableValue.html">disableValue</a>
+        </td>
+        <td class="markdown level1 summary"><p>Float value that the Show bool gets converted if false.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection_enableValue" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.enableValue">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.enableValue.html">enableValue</a>
+        </td>
+        <td class="markdown level1 summary"><p>Float value that the Show bool gets converted if true.</p>
+</td>
+      </tr>
       <tr>
         <td id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection_PushState" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.PushState">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.PushState.html">PushState</a>
@@ -243,6 +260,13 @@ group.AddOrderedSection(&quot;_ActivateProperty&quot;, &quot;_ShowProperty&quot;
 </td>
       </tr>
       <tr>
+        <td id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection_SectionPosition" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.SectionPosition">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.SectionPosition.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection_SectionPosition">SectionPosition</a>
+        </td>
+        <td class="markdown level1 summary"><p>integer indicating the position of the section in the group.</p>
+</td>
+      </tr>
+      <tr>
         <td id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection_UpColor" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.UpColor">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.UpColor.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection_UpColor">UpColor</a>
         </td>
@@ -279,7 +303,7 @@ group.AddOrderedSection(&quot;_ActivateProperty&quot;, &quot;_ShowProperty&quot;
         <td id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection_DrawSideButtons" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.DrawSideButtons">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.DrawSideButtons.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection_DrawSideButtons">DrawSideButtons()</a>
         </td>
-        <td class="markdown level1 summary"><p>Draws and hanles the up, down and delete icon on the side.</p>
+        <td class="markdown level1 summary"><p>Draws and handles the up, down and delete icon on the side.</p>
 </td>
       </tr>
       <tr>
