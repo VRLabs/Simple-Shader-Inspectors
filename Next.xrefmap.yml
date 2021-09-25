@@ -3152,6 +3152,18 @@ references:
   commentId: T:VRLabs.SimpleShaderInspectors.LocalizationFile
   fullName: VRLabs.SimpleShaderInspectors.LocalizationFile
   nameWithType: LocalizationFile
+- uid: VRLabs.SimpleShaderInspectors.LocalizationFile.#ctor
+  name: LocalizationFile()
+  href: Next/api/VRLabs.SimpleShaderInspectors.LocalizationFile.-ctor.html#VRLabs_SimpleShaderInspectors_LocalizationFile__ctor
+  commentId: M:VRLabs.SimpleShaderInspectors.LocalizationFile.#ctor
+  fullName: VRLabs.SimpleShaderInspectors.LocalizationFile.LocalizationFile()
+  nameWithType: LocalizationFile.LocalizationFile()
+- uid: VRLabs.SimpleShaderInspectors.LocalizationFile.#ctor*
+  name: LocalizationFile
+  href: Next/api/VRLabs.SimpleShaderInspectors.LocalizationFile.-ctor.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.LocalizationFile.#ctor
+  fullName: VRLabs.SimpleShaderInspectors.LocalizationFile.LocalizationFile
+  nameWithType: LocalizationFile.LocalizationFile
 - uid: VRLabs.SimpleShaderInspectors.LocalizationFile.Properties
   name: Properties
   href: Next/api/VRLabs.SimpleShaderInspectors.LocalizationFile.Properties.html
