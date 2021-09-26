@@ -118,10 +118,17 @@ for (let i = 0; i < tags.length; i++) {
     var tocFile = '- name: ' + tagName + '\n';
     tocFile += '  dropdown: true\n';
     tocFile += '  items:\n';
+    
+    var lastBigTagTOC = "nothing";
+    var currentlyInTOC = 0;
 
     for (let j = 0; j < tags.length; j++) {
+        if (currentlyInTOC > 5) break;
         if (!tags[j]) continue;
+        if (tags[j].lastIndexOf(".") != -1 && tags[j].substring(0, tags[j].lastIndexOf(".")) === lastBigTagTOC) continue;
 
+        currentlyInTOC++;
+        lastBigTagTOC = tags[j].lastIndexOf(".") != -1 ? tags[j].substring(0, tags[j].lastIndexOf(".")) : "nothing";
         var internalTag = tags[j];
         tocFile += '    - name: ' + (internalTag === "master" ? "Next" : internalTag) + '\n';
 
