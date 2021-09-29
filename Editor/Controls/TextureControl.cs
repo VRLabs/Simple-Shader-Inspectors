@@ -34,7 +34,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <value>
         /// True if the control had the first extra property, false otherwise.
         /// </value>
-        protected bool _hasExtra1 = false;
+        protected bool HasExtra1;
 
         /// <summary>
         /// Indicates if the control has the second extra property.
@@ -42,7 +42,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <value>
         /// True if the control had the second extra property, false otherwise.
         /// </value>
-        protected bool _hasExtra2 = false;
+        protected bool HasExtra2;
 
         /// <summary>
         /// Indicates if the uv button is pressed and the tiling and offset area is visible.
@@ -50,7 +50,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <value>
         /// True if the button is pressed, false otherwise.
         /// </value>
-        protected bool _isUVButtonPressed = false;
+        protected bool IsUVButtonPressed;
 
         /// <summary>
         /// Extra properties array. Implementation of <see cref="IAdditionalProperties"/>.
@@ -126,11 +126,11 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             AdditionalProperties = new AdditionalProperty[2];
             AdditionalProperties[0] = new AdditionalProperty(extraPropertyName1);
             if (!string.IsNullOrWhiteSpace(extraPropertyName1))
-                _hasExtra1 = true;
+                HasExtra1 = true;
             
             AdditionalProperties[1] = new AdditionalProperty(extraPropertyName2);
             if (!string.IsNullOrWhiteSpace(extraPropertyName2))
-                _hasExtra2 = true;
+                HasExtra2 = true;
 
             UVButtonStyle = Styles.GearIcon;
             UVAreaStyle = Styles.TextureBoxHeavyBorder;
@@ -155,11 +155,11 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             if (ShowUvOptions)
                 EditorGUILayout.BeginHorizontal();
             
-            if (_hasExtra2)
+            if (HasExtra2)
             {
                 materialEditor.TexturePropertySingleLine(Content, Property, AdditionalProperties[0].Property, AdditionalProperties[1].Property);
             }
-            else if (_hasExtra1)
+            else if (HasExtra1)
             {
                 if (AdditionalProperties[0].Property.type == MaterialProperty.PropType.Color && HasHDRColor)
                     materialEditor.TexturePropertyWithHDRColorFixed(Content, Property, AdditionalProperties[0].Property, true);
@@ -173,10 +173,10 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             if (ShowUvOptions)
             {
                 GUI.backgroundColor = UVButtonColor;
-                _isUVButtonPressed = EditorGUILayout.Toggle(_isUVButtonPressed, UVButtonStyle, GUILayout.Width(16.0f), GUILayout.Height(16.0f));
+                IsUVButtonPressed = EditorGUILayout.Toggle(IsUVButtonPressed, UVButtonStyle, GUILayout.Width(16.0f), GUILayout.Height(16.0f));
                 GUI.backgroundColor = SimpleShaderInspector.DefaultBgColor;
                 EditorGUILayout.EndHorizontal();
-                if (_isUVButtonPressed)
+                if (IsUVButtonPressed)
                 {
                     GUI.backgroundColor = UVAreaColor;
                     EditorGUILayout.BeginVertical(UVAreaStyle);

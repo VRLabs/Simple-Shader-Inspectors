@@ -1,5 +1,5 @@
+using System;
 using UnityEngine;
-using UnityEditor;
 using System.Collections.Generic;
 namespace VRLabs.SimpleShaderInspectors.Utility
 {
@@ -20,7 +20,6 @@ namespace VRLabs.SimpleShaderInspectors.Utility
         /// <summary>
         /// List of gradient keys.
         /// </summary>
-        [SerializeField]
         public List<ColorKey> Keys = new List<ColorKey>();
 
         /// <summary>
@@ -100,7 +99,7 @@ namespace VRLabs.SimpleShaderInspectors.Utility
                     return i;
                 }
 
-                if (time == Keys[i].Time && shouldDelete)
+                if (Math.Abs(time - Keys[i].Time) < 0.001 && shouldDelete)
                 {
                     Keys[i] = new ColorKey(color, time);
                     UpdateTexture();
@@ -211,7 +210,7 @@ namespace VRLabs.SimpleShaderInspectors.Utility
         /// <summary>
         /// Structure containing a color and a float indicating at which time the color is.
         /// </summary>
-        [System.Serializable]
+        [Serializable]
         public struct ColorKey
         {
             /// <summary>

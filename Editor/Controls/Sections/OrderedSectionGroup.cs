@@ -169,7 +169,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         private static bool HasAtLeastOneDisabled(OrderedSection section)
         {
             bool yesItHas = false;
-            foreach (Material mat in section.AdditionalProperties[0].Property.targets)
+            foreach (Material mat in section.Inspector.Materials)
             {
                 yesItHas = mat.GetFloat(section.AdditionalProperties[0].Property.name) == 0;
                 if (yesItHas) break;

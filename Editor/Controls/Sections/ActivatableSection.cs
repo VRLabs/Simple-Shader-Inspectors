@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
@@ -104,7 +103,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// <param name="activatePropertyName">Material property that will drive the section enable state</param>
         /// <param name="enableValue">Float value that the material property will have if the section is disabled, optional (default: 0).</param>
         /// <param name="disableValue">Float value that the material property will have if the section is enabled, optional (default: 1).</param>
-        public ActivatableSection(string activatePropertyName, float enableValue = 1, float disableValue = 0) : base()
+        public ActivatableSection(string activatePropertyName, float enableValue = 1, float disableValue = 0)
         {
             AdditionalProperties = new AdditionalProperty[1];
             AdditionalProperties[0] = new AdditionalProperty(activatePropertyName);

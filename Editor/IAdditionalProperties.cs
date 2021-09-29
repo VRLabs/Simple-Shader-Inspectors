@@ -1,6 +1,4 @@
-using System.Collections.Generic;
 using UnityEditor;
-using UnityEngine;
 
 namespace VRLabs.SimpleShaderInspectors
 {
@@ -62,10 +60,7 @@ namespace VRLabs.SimpleShaderInspectors
             if (_propertyIndex == -2)
                 SetPropertyIndex(properties);
 
-            if (_propertyIndex != -1)
-                Property = properties[_propertyIndex];
-            else
-                Property = null;
+            Property = _propertyIndex != -1 ? properties[_propertyIndex] : null;
         }
     }
 }

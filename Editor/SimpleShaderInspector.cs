@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using System;
-using Object = UnityEngine.Object;
 
 
 namespace VRLabs.SimpleShaderInspectors
@@ -172,7 +171,7 @@ namespace VRLabs.SimpleShaderInspectors
                 SSIHelper.UpdateNonAnimatableProperties(_nonAnimatablePropertyControls, materialEditor, NeedsNonAnimatableUpdate);
 
             // Draw footer and inspector logo.
-            DrawFooter(materialEditor);
+            DrawFooter();
 
             CheckChanges(materialEditor);
         }
@@ -261,7 +260,7 @@ namespace VRLabs.SimpleShaderInspectors
         }
         
         // Draws the footer
-        private void DrawFooter(MaterialEditor materialEditor)
+        private void DrawFooter()
         {
             GUILayout.FlexibleSpace();
             EditorGUILayout.BeginHorizontal();

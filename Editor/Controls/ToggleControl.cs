@@ -1,6 +1,5 @@
 using System;
 using UnityEditor;
-using UnityEngine;
 
 namespace VRLabs.SimpleShaderInspectors.Controls
 {
@@ -29,15 +28,15 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <value>
         /// Float value of the property if the toggle is disabled.
         /// </value>
-        protected readonly float falseValue;
+        protected readonly float FalseValue;
 
         /// <summary>
         /// Float value that the Enabled bool gets converted if true.
         /// </summary>
         /// <value>
-        /// Float value of the proeprty if the toggle is enabled
+        /// Float value of the property if the toggle is enabled
         /// </value>
-        protected readonly float trueValue;
+        protected readonly float TrueValue;
 
         /// <summary>
         /// Boolean indicating if the toggle is enabled or not.
@@ -45,7 +44,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <value>
         /// True if the toggle is enabled, false otherwise.
         /// </value>
-        public bool ToggleEnabled => Math.Abs((Property?.floatValue ?? 0) - trueValue) < 0.001;
+        public bool ToggleEnabled => Math.Abs((Property?.floatValue ?? 0) - TrueValue) < 0.001;
 
         /// <summary>
         /// Default constructor of <see cref="ToggleControl"/>
@@ -56,8 +55,8 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <returns>A new <see cref="ToggleControl"/> object.</returns>
         public ToggleControl(string propertyName, float falseValue = 0, float trueValue = 1) : base(propertyName)
         {
-            this.falseValue = falseValue;
-            this.trueValue = trueValue;
+            this.FalseValue = falseValue;
+            this.TrueValue = trueValue;
         }
 
         /// <summary>
@@ -74,7 +73,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             if (HasPropertyUpdated)
             {
                 materialEditor.RegisterPropertyChangeUndo(Property.displayName);
-                Property.floatValue = toggle ? trueValue : falseValue;
+                Property.floatValue = toggle ? TrueValue : FalseValue;
             }
 
             EditorGUI.showMixedValue = false;

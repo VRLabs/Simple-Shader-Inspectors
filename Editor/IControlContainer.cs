@@ -1,6 +1,4 @@
 using System.Collections.Generic;
-using UnityEditor;
-using VRLabs.SimpleShaderInspectors.Controls;
 
 namespace VRLabs.SimpleShaderInspectors
 {

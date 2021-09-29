@@ -1,6 +1,5 @@
 using System;
 using System.IO;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
@@ -57,7 +56,7 @@ namespace VRLabs.SimpleShaderInspectors
             foreach(SerializedDictionaries.BoolItem item in _dictionaries.boolDictionary)
                 _boolDictionary.SetValue(item.key, item.value, DateTime.FromBinary(item.date));
 
-             _intDictionary = new TimedDictionary<string, int>();
+            _intDictionary = new TimedDictionary<string, int>();
             foreach(SerializedDictionaries.IntItem item in _dictionaries.intDictionary)
                 _intDictionary.SetValue(item.key, item.value, DateTime.FromBinary(item.date));
         }
@@ -69,14 +68,12 @@ namespace VRLabs.SimpleShaderInspectors
 
             private static void SaveAsset()
             {
-                if(_dictionaries != null) 
-                {
-                    StaticDictionaries.BoolDictionary.ClearOld();
-                    StaticDictionaries.IntDictionary.ClearOld();
-                    _dictionaries.SetBoolDictionary(StaticDictionaries.BoolDictionary.GetSerializedDictionary());
-                    _dictionaries.SetIntDictionary(StaticDictionaries.IntDictionary.GetSerializedDictionary());
-                    EditorUtility.SetDirty(_dictionaries);
-                }
+                if (_dictionaries == null) return;
+                BoolDictionary.ClearOld();
+                IntDictionary.ClearOld();
+                _dictionaries.SetBoolDictionary(BoolDictionary.GetSerializedDictionary());
+                _dictionaries.SetIntDictionary(IntDictionary.GetSerializedDictionary());
+                EditorUtility.SetDirty(_dictionaries);
             }
         }
     }

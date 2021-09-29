@@ -106,6 +106,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         private void CacheRenderers(Material material)
         {
             ParticleSystemRenderer[] renderers = Resources.FindObjectsOfTypeAll(typeof(ParticleSystemRenderer)) as ParticleSystemRenderer[];
+            if (renderers == null) return;
             foreach (var renderer in renderers)
             {
                 var go = renderer.gameObject;

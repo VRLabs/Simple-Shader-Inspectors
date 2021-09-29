@@ -24,8 +24,8 @@ namespace VRLabs.SimpleShaderInspectors.Tools
             return window;
         }
 
-        private string _destinationPath = null;
-        private string _namespace = null;
+        private string _destinationPath;
+        private string _namespace;
 
         void OnGUI()
         {
@@ -95,7 +95,7 @@ namespace VRLabs.SimpleShaderInspectors.Tools
                 content.Append(Indentation(indent))
                     .AppendLine("}");
 
-                File.WriteAllText($"{destinationPath}\\{group.Key}.Chainables.cs", content.ToString().Replace("\r\n", "\n"), System.Text.Encoding.UTF8);
+                File.WriteAllText($"{destinationPath}\\{group.Key}.Chainables.cs", content.ToString().Replace("\r\n", "\n"), Encoding.UTF8);
             }
 
             AssetDatabase.Refresh();
@@ -121,19 +121,14 @@ namespace VRLabs.SimpleShaderInspectors.Tools
         }
 
         // Append a chainable constructor implementation to the given content.
-        private static void BuildConstructorChainable(StringBuilder content, Type type, System.Reflection.ConstructorInfo constructor, int indentLevel)
+        private static void BuildConstructorChainable(StringBuilder content, Type type, ConstructorInfo constructor, int indentLevel)
         {
             // Check if the constructor has the limitAccessScope attribute to limit the objects that can access the chainable
             LimitAccessScopeAttribute limitScopeAttribute =
                 (LimitAccessScopeAttribute)Array.Find(constructor.GetCustomAttributes(false), x => x.GetType() == typeof(LimitAccessScopeAttribute));
 
-            string typeName;
-            if (limitScopeAttribute != null)
-                typeName = limitScopeAttribute.BaseType.Name;
-            else
-                typeName = "VRLabs.SimpleShaderInspectors.IControlContainer";
-
-
+            string typeName = limitScopeAttribute != null ? limitScopeAttribute.BaseType.Name : "VRLabs.SimpleShaderInspectors.IControlContainer";
+            
             // Chainable constructor header
             content.Append(Indentation(indentLevel))
                 .Append($"public static {GenerateGenericListString(type)} Add{GenerateGenericListString(type)}(this {typeName} container");
@@ -159,13 +154,13 @@ namespace VRLabs.SimpleShaderInspectors.Tools
             indentLevel++;
             content.Append(Indentation(indentLevel))
                 .Append("var control = new ").Append(GenerateGenericListString(type)).Append('(');
-            bool needcomma = false;
+            bool needComma = false;
             foreach (var parameter in constructor.GetParameters())
             {
-                if (needcomma)
+                if (needComma)
                     content.Append(", ");
                 else
-                    needcomma = true;
+                    needComma = true;
                 content.Append(parameter.Name);
             }
             content.AppendLine(");")
