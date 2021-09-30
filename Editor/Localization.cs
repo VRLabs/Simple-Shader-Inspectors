@@ -35,8 +35,33 @@ namespace VRLabs.SimpleShaderInspectors
                 File.WriteAllText(localizationFilePath, JsonUtility.ToJson(localizationFile, true));
             }
         }
+        
+        /// <summary>
+        /// Apply Localization strings to a control.
+        /// </summary>
+        /// <param name="control">Control to apply a localization</param>
+        /// <param name="localizationFilePath">Path of the localization file</param>
+        /// <param name="writeIfNotFound">Generate empty fields / new localization file if the provided one is missing or incomplete.</param>
+        public static void ApplyLocalization(this SimpleControl control, string localizationFilePath, bool writeIfNotFound = false)
+        {
+            LocalizationFile localizationFile;
 
-        private static IEnumerable<PropertyInfo> SetPropertiesLocalization(IEnumerable<SimpleControl> controls, PropertyInfo[] propertyInfos)
+            if (File.Exists(localizationFilePath))
+                localizationFile = JsonUtility.FromJson<LocalizationFile>(File.ReadAllText(localizationFilePath));
+            else
+                localizationFile = new LocalizationFile();
+
+            List<PropertyInfo> missingInfo = SetPropertiesLocalization(new []{control}, localizationFile.Properties, false).ToList();
+
+            if (missingInfo.Count > 0 && writeIfNotFound)
+            {
+                missingInfo.AddRange(localizationFile.Properties);
+                localizationFile.Properties = missingInfo.ToArray();
+                File.WriteAllText(localizationFilePath, JsonUtility.ToJson(localizationFile, true));
+            }
+        }
+
+        private static IEnumerable<PropertyInfo> SetPropertiesLocalization(IEnumerable<SimpleControl> controls, PropertyInfo[] propertyInfos, bool recursive = true)
         {
             List<PropertyInfo> missingInfo = new List<PropertyInfo>();
             foreach (var control in controls)
@@ -83,7 +108,7 @@ namespace VRLabs.SimpleShaderInspectors
 
                     // Recursively set property localization for all properties inside this control if it has the IControlContainer interface.
                     case IControlContainer container:
-                        missingInfo.AddRange(SetPropertiesLocalization(container.GetControlList(), propertyInfos));
+                        if (recursive) missingInfo.AddRange(SetPropertiesLocalization(container.GetControlList(), propertyInfos));
                         break;
                 }
             }

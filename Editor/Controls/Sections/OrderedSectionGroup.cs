@@ -120,7 +120,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             {
                 GenericMenu menu = new GenericMenu();
                 foreach (var section in Controls)
-                    if (HasAtLeastOneDisabled(section))
+                    if (section.HasAtLeastOneMaterialDisabled())
                         menu.AddItem(section.Content, false, TurnOnSection, section);
                 
                 menu.ShowAsContext();
@@ -160,21 +160,10 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             bool yesThereAre = false;
             foreach (var section in Controls)
             {
-                yesThereAre = HasAtLeastOneDisabled(section);
+                yesThereAre = section.HasAtLeastOneMaterialDisabled();
                 if (yesThereAre) break;
             }
             return yesThereAre;
-        }
-
-        private static bool HasAtLeastOneDisabled(OrderedSection section)
-        {
-            bool yesItHas = false;
-            foreach (Material mat in section.Inspector.Materials)
-            {
-                yesItHas = mat.GetFloat(section.AdditionalProperties[0].Property.name) == 0;
-                if (yesItHas) break;
-            }
-            return yesItHas;
         }
 
         /// <summary>

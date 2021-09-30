@@ -167,7 +167,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// <summary>
         /// Default constructor of <see cref="Section"/>.
         /// </summary>
-        public Section() : base("")
+        public Section() : base("SSI_UNUSED_PROP")
         {
             InitSection();
             UseDictionary = true;

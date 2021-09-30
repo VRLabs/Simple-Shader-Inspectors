@@ -292,6 +292,17 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             AdditionalProperties[0].Property.floatValue = Enabled ? enableValue : disableValue;
             HasActivatePropertyUpdated = false;
         }
+        
+        public bool HasAtLeastOneMaterialDisabled()
+        {
+            bool yesItHas = false;
+            foreach (Material mat in Inspector.Materials)
+            {
+                yesItHas = Math.Abs(mat.GetFloat(AdditionalProperties[0].Property.name) - disableValue) < 0.001;
+                if (yesItHas) break;
+            }
+            return yesItHas;
+        }
 
         /// <summary>
         /// Draws the control represented by this object.

@@ -46,7 +46,7 @@ namespace VRLabs.SimpleShaderInspectors
                 if (control is PropertyControl pr)
                 {
                     pr.FetchProperty(properties);
-                    if(pr.Property == null)
+                    if(pr.Property == null && !pr.PropertyName.Equals("SSI_UNUSED_PROP"))
                         errs.Add(pr.PropertyName);
                 }
 
@@ -94,6 +94,8 @@ namespace VRLabs.SimpleShaderInspectors
         /// <returns>The material property with the wanted name.</returns>
         internal static int FindPropertyIndex(string propertyName, MaterialProperty[] properties, bool propertyIsMandatory = false)
         {
+            if (!string.IsNullOrWhiteSpace(propertyName) && propertyName.Equals("SSI_UNUSED_PROP")) return -1;
+            
             for (int i = 0; i < properties.Length; i++)
                 if (properties[i] != null && properties[i].name == propertyName)
                     return i;
