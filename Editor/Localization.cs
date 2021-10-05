@@ -17,7 +17,8 @@ namespace VRLabs.SimpleShaderInspectors
         /// <param name="controls">Controls to apply a localization</param>
         /// <param name="localizationFilePath">Path of the localization file</param>
         /// <param name="writeIfNotFound">Generate empty fields / new localization file if the provided one is missing or incomplete.</param>
-        public static void ApplyLocalization(this IEnumerable<SimpleControl> controls, string localizationFilePath, bool writeIfNotFound = false)
+        /// <param name="recursive">If the localization setup should be done recursively on all children of a control</param>
+        public static void ApplyLocalization(this IEnumerable<SimpleControl> controls, string localizationFilePath, bool writeIfNotFound = false, bool recursive = true)
         {
             LocalizationFile localizationFile;
 
@@ -26,7 +27,7 @@ namespace VRLabs.SimpleShaderInspectors
             else
                 localizationFile = new LocalizationFile();
 
-            List<PropertyInfo> missingInfo = SetPropertiesLocalization(controls, localizationFile.Properties).ToList();
+            List<PropertyInfo> missingInfo = SetPropertiesLocalization(controls, localizationFile.Properties, recursive).ToList();
 
             if (missingInfo.Count > 0 && writeIfNotFound)
             {
@@ -42,7 +43,8 @@ namespace VRLabs.SimpleShaderInspectors
         /// <param name="control">Control to apply a localization</param>
         /// <param name="localizationFilePath">Path of the localization file</param>
         /// <param name="writeIfNotFound">Generate empty fields / new localization file if the provided one is missing or incomplete.</param>
-        public static void ApplyLocalization(this SimpleControl control, string localizationFilePath, bool writeIfNotFound = false)
+        /// /// <param name="recursive">If the localization setup should be done recursively on all children of a control</param>
+        public static void ApplyLocalization(this SimpleControl control, string localizationFilePath, bool writeIfNotFound = false, bool recursive = false)
         {
             LocalizationFile localizationFile;
 
@@ -51,7 +53,7 @@ namespace VRLabs.SimpleShaderInspectors
             else
                 localizationFile = new LocalizationFile();
 
-            List<PropertyInfo> missingInfo = SetPropertiesLocalization(new []{control}, localizationFile.Properties, false).ToList();
+            List<PropertyInfo> missingInfo = SetPropertiesLocalization(new []{control}, localizationFile.Properties, recursive).ToList();
 
             if (missingInfo.Count > 0 && writeIfNotFound)
             {
@@ -67,7 +69,8 @@ namespace VRLabs.SimpleShaderInspectors
             foreach (var control in controls)
             {
                 // Find localization of the control content. 
-                var selectedInfo = propertyInfos.FindPropertyByName(control.ControlAlias);
+                var selectedInfo = propertyInfos.FindPropertyByName(control.ControlAlias) ?? missingInfo.FindPropertyByName(control.ControlAlias);
+
                 if (selectedInfo == null)
                 {
                     selectedInfo = new PropertyInfo
