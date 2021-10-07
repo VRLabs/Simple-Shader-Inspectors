@@ -18,7 +18,7 @@ namespace VRLabs.SimpleShaderInspectors
         /// <param name="materials">Material array this method extends to.</param>
         /// <param name="keyword">The keyword that is being toggled.</param>
         /// <param name="state">Toggle value.</param>
-        public static void SetKeyword(this Material[] materials, string keyword, bool state)
+        public static void SetKeyword(this IEnumerable<Material> materials, string keyword, bool state)
         {
             foreach (var m in materials)
             {
