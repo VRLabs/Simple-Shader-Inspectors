@@ -70,8 +70,8 @@
   
   <h1 id="VRLabs_SimpleShaderInspectors_Controls_KeywordToggleListControl" data-uid="VRLabs.SimpleShaderInspectors.Controls.KeywordToggleListControl">Class KeywordToggleListControl
   </h1>
-  <div class="markdown level0 summary"><p>Represents a control with a checkbox for setting a keyword.
-Also shows and hides a list of controls based on its state.</p>
+  <div class="markdown level0 summary"><p>Represents a control with a checkbox for setting a keyword.</p>
+<p>Also shows and hides a list of controls based on its state.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   
@@ -97,7 +97,15 @@ Also shows and hides a list of controls based on its state.</p>
   
   
   
+  <h5 id="VRLabs_SimpleShaderInspectors_Controls_KeywordToggleListControl_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>it's effectively a combination of <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.KeywordToggleControl.html">KeywordToggleControl</a> and <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.ControlContainer.html">ControlContainer</a>, where the controls list is enabled based on the keyword
+enable state.</p>
+</div>
   
+  <h5 id="VRLabs_SimpleShaderInspectors_Controls_KeywordToggleListControl_examples"><strong>Examples</strong></h5>
+  <p>Example usage:</p>
+<pre><code>this.AddKeywordToggleListControl(&quot;KEYWORD_TO_TOGGLE&quot;);</code></pre>
+
   <h3 id="constructors">Constructors
   </h3>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,7 +139,7 @@ Also shows and hides a list of controls based on its state.</p>
         <td id="VRLabs_SimpleShaderInspectors_Controls_KeywordToggleListControl_Controls" data-uid="VRLabs.SimpleShaderInspectors.Controls.KeywordToggleListControl.Controls">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.KeywordToggleListControl.Controls.html#VRLabs_SimpleShaderInspectors_Controls_KeywordToggleListControl_Controls">Controls</a>
         </td>
-        <td class="markdown level1 summary"><p>List of controls that can be hidden by this control.</p>
+        <td class="markdown level1 summary"><p>List of controls under this control.</p>
 </td>
       </tr>
     </tbody>
@@ -150,7 +158,8 @@ Also shows and hides a list of controls based on its state.</p>
         <td id="VRLabs_SimpleShaderInspectors_Controls_KeywordToggleListControl_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_" data-uid="VRLabs.SimpleShaderInspectors.Controls.KeywordToggleListControl.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.KeywordToggleListControl.AddControl.html#VRLabs_SimpleShaderInspectors_Controls_KeywordToggleListControl_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_">AddControl(SimpleControl)</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Implementation needed by <a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer.html">IControlContainer</a> to add controls. All controls added are stored in <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.KeywordToggleListControl.Controls.html#VRLabs_SimpleShaderInspectors_Controls_KeywordToggleListControl_Controls">Controls</a></p>
+</td>
       </tr>
       <tr>
         <td id="VRLabs_SimpleShaderInspectors_Controls_KeywordToggleListControl_ControlGUI_UnityEditor_MaterialEditor_" data-uid="VRLabs.SimpleShaderInspectors.Controls.KeywordToggleListControl.ControlGUI(UnityEditor.MaterialEditor)">
@@ -163,7 +172,8 @@ Also shows and hides a list of controls based on its state.</p>
         <td id="VRLabs_SimpleShaderInspectors_Controls_KeywordToggleListControl_GetControlList" data-uid="VRLabs.SimpleShaderInspectors.Controls.KeywordToggleListControl.GetControlList">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.KeywordToggleListControl.GetControlList.html#VRLabs_SimpleShaderInspectors_Controls_KeywordToggleListControl_GetControlList">GetControlList()</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Implementation needed by <a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer.html">IControlContainer</a> to get the object's controls list.</p>
+</td>
       </tr>
     </tbody>
   </table>

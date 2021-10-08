@@ -70,7 +70,8 @@
   
   <h1 id="VRLabs_SimpleShaderInspectors_Controls_VertexStreamsControl" data-uid="VRLabs.SimpleShaderInspectors.Controls.VertexStreamsControl">Class VertexStreamsControl
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Control for viewing and setting particle vertex streams used</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   
   <div class="inheritance">
@@ -94,7 +95,19 @@
   
   
   
+  <h5 id="VRLabs_SimpleShaderInspectors_Controls_VertexStreamsControl_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+When making particle shaders there may be a need to set the particles vertex streams so that the shader can access the data it needs.
+Using this control you can easily view which vertex streams are needed and set them in the particle systems that have a material using this shader, in a similar way the
+standard unity particle shader inspector does.
+</p>
+<p>Since the control does not use any material property, it requires an alias in order to work.</p>
+</div>
   
+  <h5 id="VRLabs_SimpleShaderInspectors_Controls_VertexStreamsControl_examples"><strong>Examples</strong></h5>
+  <p>Example usage:</p>
+<pre><code>this.AddVertexStreamsControl(&quot;AliasToUse&quot;);</code></pre>
+
   <h3 id="constructors">Constructors
   </h3>
   <table class="table table-bordered table-striped table-condensed">
@@ -109,7 +122,8 @@
         <td id="VRLabs_SimpleShaderInspectors_Controls_VertexStreamsControl__ctor_System_String_" data-uid="VRLabs.SimpleShaderInspectors.Controls.VertexStreamsControl.#ctor(System.String)">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.VertexStreamsControl.-ctor.html#VRLabs_SimpleShaderInspectors_Controls_VertexStreamsControl__ctor_System_String_">VertexStreamsControl(String)</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Default constructor of <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.VertexStreamsControl.html">VertexStreamsControl</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -127,7 +141,8 @@
         <td id="VRLabs_SimpleShaderInspectors_Controls_VertexStreamsControl_AdditionalContent" data-uid="VRLabs.SimpleShaderInspectors.Controls.VertexStreamsControl.AdditionalContent">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.VertexStreamsControl.AdditionalContent.html#VRLabs_SimpleShaderInspectors_Controls_VertexStreamsControl_AdditionalContent">AdditionalContent</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Additional localization needed by the control, Implementation required by the <a class="xref" href="VRLabs.SimpleShaderInspectors.IAdditionalLocalization.html">IAdditionalLocalization</a> interface.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -145,19 +160,22 @@
         <td id="VRLabs_SimpleShaderInspectors_Controls_VertexStreamsControl_AddVertexStream_UnityEngine_ParticleSystemVertexStream_" data-uid="VRLabs.SimpleShaderInspectors.Controls.VertexStreamsControl.AddVertexStream(UnityEngine.ParticleSystemVertexStream)">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.VertexStreamsControl.AddVertexStream.html#VRLabs_SimpleShaderInspectors_Controls_VertexStreamsControl_AddVertexStream_UnityEngine_ParticleSystemVertexStream_">AddVertexStream(ParticleSystemVertexStream)</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Adds a vertex stream to the list of used streams.</p>
+</td>
       </tr>
       <tr>
         <td id="VRLabs_SimpleShaderInspectors_Controls_VertexStreamsControl_ControlGUI_UnityEditor_MaterialEditor_" data-uid="VRLabs.SimpleShaderInspectors.Controls.VertexStreamsControl.ControlGUI(UnityEditor.MaterialEditor)">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.VertexStreamsControl.ControlGUI.html#VRLabs_SimpleShaderInspectors_Controls_VertexStreamsControl_ControlGUI_UnityEditor_MaterialEditor_">ControlGUI(MaterialEditor)</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Draws the control represented by this object.</p>
+</td>
       </tr>
       <tr>
         <td id="VRLabs_SimpleShaderInspectors_Controls_VertexStreamsControl_RemoveVertexStream_UnityEngine_ParticleSystemVertexStream_" data-uid="VRLabs.SimpleShaderInspectors.Controls.VertexStreamsControl.RemoveVertexStream(UnityEngine.ParticleSystemVertexStream)">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.VertexStreamsControl.RemoveVertexStream.html#VRLabs_SimpleShaderInspectors_Controls_VertexStreamsControl_RemoveVertexStream_UnityEngine_ParticleSystemVertexStream_">RemoveVertexStream(ParticleSystemVertexStream)</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Removes a vertex stream from the list of used streams.</p>
+</td>
       </tr>
     </tbody>
   </table>

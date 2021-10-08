@@ -74,13 +74,13 @@
 <div class="markdown level0 conceptual"></div>
 
 <a id="VRLabs_SimpleShaderInspectors_Localization_ApplyLocalization_" data-uid="VRLabs.SimpleShaderInspectors.Localization.ApplyLocalization*"></a>
-<h4 id="VRLabs_SimpleShaderInspectors_Localization_ApplyLocalization_System_Collections_Generic_IEnumerable_VRLabs_SimpleShaderInspectors_SimpleControl__System_String_System_Boolean_" data-uid="VRLabs.SimpleShaderInspectors.Localization.ApplyLocalization(System.Collections.Generic.IEnumerable{VRLabs.SimpleShaderInspectors.SimpleControl},System.String,System.Boolean)">ApplyLocalization(IEnumerable&lt;SimpleControl&gt;, String, Boolean)</h4>
+<h4 id="VRLabs_SimpleShaderInspectors_Localization_ApplyLocalization_System_Collections_Generic_IEnumerable_VRLabs_SimpleShaderInspectors_SimpleControl__System_String_System_Boolean_System_Boolean_" data-uid="VRLabs.SimpleShaderInspectors.Localization.ApplyLocalization(System.Collections.Generic.IEnumerable{VRLabs.SimpleShaderInspectors.SimpleControl},System.String,System.Boolean,System.Boolean)">ApplyLocalization(IEnumerable&lt;SimpleControl&gt;, String, Boolean, Boolean)</h4>
 <div class="markdown level1 summary"><p>Apply Localization strings to a list of controls.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="decalaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">public static void ApplyLocalization(this IEnumerable&lt;SimpleControl&gt; controls, string localizationFilePath, bool writeIfNotFound = false)</code></pre>
+  <pre><code class="lang-csharp hljs">public static void ApplyLocalization(this IEnumerable&lt;SimpleControl&gt; controls, string localizationFilePath, bool writeIfNotFound = false, bool recursive = true)</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
 <table class="table table-bordered table-striped table-condensed">
@@ -108,6 +108,57 @@
       <td><span class="xref">System.Boolean</span></td>
       <td><span class="parametername">writeIfNotFound</span></td>
       <td><p>Generate empty fields / new localization file if the provided one is missing or incomplete.</p>
+</td>
+    </tr>
+    <tr>
+      <td><span class="xref">System.Boolean</span></td>
+      <td><span class="parametername">recursive</span></td>
+      <td><p>If the localization setup should be done recursively on all children of a control</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<a id="VRLabs_SimpleShaderInspectors_Localization_ApplyLocalization_" data-uid="VRLabs.SimpleShaderInspectors.Localization.ApplyLocalization*"></a>
+<h4 id="VRLabs_SimpleShaderInspectors_Localization_ApplyLocalization_VRLabs_SimpleShaderInspectors_SimpleControl_System_String_System_Boolean_System_Boolean_" data-uid="VRLabs.SimpleShaderInspectors.Localization.ApplyLocalization(VRLabs.SimpleShaderInspectors.SimpleControl,System.String,System.Boolean,System.Boolean)">ApplyLocalization(SimpleControl, String, Boolean, Boolean)</h4>
+<div class="markdown level1 summary"><p>Apply Localization strings to a control.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+<h5 class="decalaration">Declaration</h5>
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static void ApplyLocalization(this SimpleControl control, string localizationFilePath, bool writeIfNotFound = false, bool recursive = false)</code></pre>
+</div>
+<h5 class="parameters">Parameters</h5>
+<table class="table table-bordered table-striped table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleControl.html">SimpleControl</a></td>
+      <td><span class="parametername">control</span></td>
+      <td><p>Control to apply a localization</p>
+</td>
+    </tr>
+    <tr>
+      <td><span class="xref">System.String</span></td>
+      <td><span class="parametername">localizationFilePath</span></td>
+      <td><p>Path of the localization file</p>
+</td>
+    </tr>
+    <tr>
+      <td><span class="xref">System.Boolean</span></td>
+      <td><span class="parametername">writeIfNotFound</span></td>
+      <td><p>Generate empty fields / new localization file if the provided one is missing or incomplete.</p>
+</td>
+    </tr>
+    <tr>
+      <td><span class="xref">System.Boolean</span></td>
+      <td><span class="parametername">recursive</span></td>
+      <td><p>If the localization setup should be done recursively on all children of a control</p>
 </td>
     </tr>
   </tbody>

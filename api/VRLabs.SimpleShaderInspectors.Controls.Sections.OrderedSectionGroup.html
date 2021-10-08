@@ -70,7 +70,7 @@
   
   <h1 id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup">Class OrderedSectionGroup
   </h1>
-  <div class="markdown level0 summary"><p>Control that contains a list of OrderedSections and controls their lifecycle</p>
+  <div class="markdown level0 summary"><p>Control that contains a list of OrderedSections and manages their lifecycle.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   
@@ -96,7 +96,19 @@
   
   
   
+  <h5 id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>The main purpose of this control is to manage multiple <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.html">OrderedSection</a> controls, reordering them when needed, and provide a button to enable disabled ones</p>
+<p>In practice this control is what makes the entire ordered section system work, and that&apos;s the reason to why controls of type <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.html">OrderedSection</a> can only live inside this control.</p>
+</div>
   
+  <h5 id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_examples"><strong>Examples</strong></h5>
+  <p>Example usage:</p>
+<pre><code>OrderedSectionGroup group = this.AddOrderedSectionGroup(&quot;GroupAlias&quot;);
+
+group.AddOrderedSection(&quot;_ActivateProperty1&quot;);
+group.AddOrderedSection(&quot;_ActivateProperty2&quot;);
+group.AddOrderedSection(&quot;_ActivateProperty3&quot;);</code></pre>
+
   <h3 id="constructors">Constructors
   </h3>
   <table class="table table-bordered table-striped table-condensed">
@@ -137,14 +149,14 @@
         <td id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_ButtonStyle" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.ButtonStyle">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.ButtonStyle.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_ButtonStyle">ButtonStyle</a>
         </td>
-        <td class="markdown level1 summary"><p>GUIStyle for the add button</p>
+        <td class="markdown level1 summary"><p>Style for the add button.</p>
 </td>
       </tr>
       <tr>
         <td id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_Controls" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.Controls">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.Controls.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_Controls">Controls</a>
         </td>
-        <td class="markdown level1 summary"><p>List of available Ordered Sections</p>
+        <td class="markdown level1 summary"><p>List of available Ordered Sections.</p>
 </td>
       </tr>
     </tbody>
@@ -163,7 +175,8 @@
         <td id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_AddControl_VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection_" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.AddControl(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection)">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.AddControl.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_AddControl_VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection_">AddControl(OrderedSection)</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Implementation needed by <a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer-1.html">IControlContainer&lt;T&gt;</a> to add controls. All controls added are stored in <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.Controls.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_Controls">Controls</a></p>
+</td>
       </tr>
       <tr>
         <td id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_ControlGUI_UnityEditor_MaterialEditor_" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.ControlGUI(UnityEditor.MaterialEditor)">
@@ -176,7 +189,8 @@
         <td id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_GetControlList" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.GetControlList">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.GetControlList.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_GetControlList">GetControlList()</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Implementation needed by <a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer-1.html">IControlContainer&lt;T&gt;</a> to get the object's controls list.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -194,13 +208,16 @@
         <td id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_VRLabs_SimpleShaderInspectors_IControlContainer_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.VRLabs#SimpleShaderInspectors#IControlContainer#AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.VRLabs-SimpleShaderInspectors-IControlContainer-AddControl.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_VRLabs_SimpleShaderInspectors_IControlContainer_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_">IControlContainer.AddControl(SimpleControl)</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Implementation needed by <a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer.html">IControlContainer</a> to add controls. All controls added are stored in <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.Controls.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_Controls">Controls</a> only if the parameter
+is of type <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.html">OrderedSection</a></p>
+</td>
       </tr>
       <tr>
         <td id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_VRLabs_SimpleShaderInspectors_IControlContainer_GetControlList" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.VRLabs#SimpleShaderInspectors#IControlContainer#GetControlList">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.VRLabs-SimpleShaderInspectors-IControlContainer-GetControlList.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_VRLabs_SimpleShaderInspectors_IControlContainer_GetControlList">IControlContainer.GetControlList()</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Implementation needed by <a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer.html">IControlContainer</a> to get the object's controls list.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -275,10 +292,10 @@
       <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddActivatableSection.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddActivatableSection_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_Single_System_Single_">Chainables.AddActivatableSection(IControlContainer, String, Single, Single)</a>
   </div>
   <div>
-      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddOrderedSection_VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_System_String_System_String_System_Single_System_Single_">Chainables.AddOrderedSection(OrderedSectionGroup, String, String, Single, Single)</a>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddOrderedSection_VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_System_String_System_String_System_Single_System_Single_System_Single_System_Single_">Chainables.AddOrderedSection(OrderedSectionGroup, String, String, Single, Single, Single, Single)</a>
   </div>
   <div>
-      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddOrderedSection_VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_System_String_">Chainables.AddOrderedSection(OrderedSectionGroup, String)</a>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddOrderedSection_VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_System_String_System_Single_System_Single_">Chainables.AddOrderedSection(OrderedSectionGroup, String, Single, Single)</a>
   </div>
   <div>
       <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSectionGroup.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddOrderedSectionGroup_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_">Chainables.AddOrderedSectionGroup(IControlContainer, String)</a>

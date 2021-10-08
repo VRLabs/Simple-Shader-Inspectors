@@ -70,7 +70,7 @@
   
   <h1 id="VRLabs_SimpleShaderInspectors_SimpleShaderInspector" data-uid="VRLabs.SimpleShaderInspectors.SimpleShaderInspector">Class SimpleShaderInspector
   </h1>
-  <div class="markdown level0 summary"><p>Base class for creating new inspectors.</p>
+  <div class="markdown level0 summary"><p>Default base class for creating new inspectors.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   
@@ -96,6 +96,10 @@
   
   
   
+  <h5 id="VRLabs_SimpleShaderInspectors_SimpleShaderInspector_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>If you want to make an inspector with Simple Shader Inspectors you need to either derive from this class, or create your own implementing <a class="xref" href="VRLabs.SimpleShaderInspectors.ISimpleShaderInspector.html">ISimpleShaderInspector</a>,
+but in this second case you need to implement a lot of stuff manually, so it isn't advised unless you need really custom inspector behaviours.</p>
+</div>
   
   <h3 id="properties">Properties
   </h3>
@@ -146,7 +150,8 @@
         <td id="VRLabs_SimpleShaderInspectors_SimpleShaderInspector_Shader" data-uid="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.Shader">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.Shader.html#VRLabs_SimpleShaderInspectors_SimpleShaderInspector_Shader">Shader</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Shader currently used</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -164,7 +169,8 @@
         <td id="VRLabs_SimpleShaderInspectors_SimpleShaderInspector_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_" data-uid="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.AddControl.html#VRLabs_SimpleShaderInspectors_SimpleShaderInspector_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_">AddControl(SimpleControl)</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Implementation needed by <a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer.html">IControlContainer</a> to add controls.</p>
+</td>
       </tr>
       <tr>
         <td id="VRLabs_SimpleShaderInspectors_SimpleShaderInspector_CheckChanges_UnityEditor_MaterialEditor_" data-uid="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.CheckChanges(UnityEditor.MaterialEditor)">
@@ -184,7 +190,8 @@
         <td id="VRLabs_SimpleShaderInspectors_SimpleShaderInspector_GetControlList" data-uid="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.GetControlList">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.GetControlList.html#VRLabs_SimpleShaderInspectors_SimpleShaderInspector_GetControlList">GetControlList()</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Implementation needed by <a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer.html">IControlContainer</a> to get the object's controls list.</p>
+</td>
       </tr>
       <tr>
         <td id="VRLabs_SimpleShaderInspectors_SimpleShaderInspector_Header" data-uid="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.Header">
@@ -204,7 +211,7 @@
         <td id="VRLabs_SimpleShaderInspectors_SimpleShaderInspector_Start" data-uid="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.Start">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.Start.html#VRLabs_SimpleShaderInspectors_SimpleShaderInspector_Start">Start()</a>
         </td>
-        <td class="markdown level1 summary"><p>Inizialization method where all the controls are instanced. You need to override it.</p>
+        <td class="markdown level1 summary"><p>Initialization method where all the controls are instanced. You need to override it.</p>
 </td>
       </tr>
       <tr>

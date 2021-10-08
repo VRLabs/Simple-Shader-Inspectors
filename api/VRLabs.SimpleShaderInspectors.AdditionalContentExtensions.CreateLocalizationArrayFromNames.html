@@ -75,7 +75,8 @@
 
 <a id="VRLabs_SimpleShaderInspectors_AdditionalContentExtensions_CreateLocalizationArrayFromNames_" data-uid="VRLabs.SimpleShaderInspectors.AdditionalContentExtensions.CreateLocalizationArrayFromNames*"></a>
 <h4 id="VRLabs_SimpleShaderInspectors_AdditionalContentExtensions_CreateLocalizationArrayFromNames_System_String___" data-uid="VRLabs.SimpleShaderInspectors.AdditionalContentExtensions.CreateLocalizationArrayFromNames(System.String[])">CreateLocalizationArrayFromNames(String[])</h4>
-<div class="markdown level1 summary"></div>
+<div class="markdown level1 summary"><p>Creates an <a class="xref" href="VRLabs.SimpleShaderInspectors.AdditionalLocalization.html">AdditionalLocalization</a> array from an array of names.</p>
+</div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="decalaration">Declaration</h5>
 <div class="codewrapper">
@@ -94,7 +95,8 @@
     <tr>
       <td><span class="xref">System.String</span>[]</td>
       <td><span class="parametername">contentNames</span></td>
-      <td></td>
+      <td><p>Array of names.</p>
+</td>
     </tr>
   </tbody>
 </table>
@@ -109,10 +111,16 @@
   <tbody>
     <tr>
       <td><a class="xref" href="VRLabs.SimpleShaderInspectors.AdditionalLocalization.html">AdditionalLocalization</a>[]</td>
-      <td></td>
+      <td><p>An array of <a class="xref" href="VRLabs.SimpleShaderInspectors.AdditionalLocalization.html">AdditionalLocalization</a> objects.</p>
+</td>
     </tr>
   </tbody>
 </table>
+<h5 id="VRLabs_SimpleShaderInspectors_AdditionalContentExtensions_CreateLocalizationArrayFromNames_System_String____remarks">Remarks</h5>
+<div class="markdown level1 remarks"><p>Functionally is the same as <a class="xref" href="VRLabs.SimpleShaderInspectors.AdditionalContentExtensions.InitializeLocalizationWithNames.html#VRLabs_SimpleShaderInspectors_AdditionalContentExtensions_InitializeLocalizationWithNames_VRLabs_SimpleShaderInspectors_IAdditionalLocalization_System_String___">InitializeLocalizationWithNames(IAdditionalLocalization, String[])</a>, but instead of automatically assigning the resulting <a class="xref" href="VRLabs.SimpleShaderInspectors.AdditionalLocalization.html">AdditionalLocalization</a> array to the
+calling object, it returns the generated array, so that more things can be done with it later. A possible example is generating 2 sets of contents, and then exposing a combination
+of the 2 dynamically based on some conditional logic.</p>
+</div>
 </article>
           </div>
           

@@ -70,7 +70,8 @@
   
   <h1 id="VRLabs_SimpleShaderInspectors_ISimpleShaderInspector" data-uid="VRLabs.SimpleShaderInspectors.ISimpleShaderInspector">Interface ISimpleShaderInspector
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Interface indicating that the object is a valid Simple Shader Inspector and can use its features.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   
   
@@ -84,6 +85,13 @@
   
   
   
+  <h5 id="VRLabs_SimpleShaderInspectors_ISimpleShaderInspector_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>By implementing this interface you can create your own inspector that uses the Simple Shader Inspectors library.</p>
+<p>
+It can be useful when you need some really custom behaviour, at the cost oh having to manage the controls initialization, property fetching etc.
+It can be a good starting point to see the source code of <a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.html">SimpleShaderInspector</a>.
+</p>
+</div>
   
   <h3 id="properties">Properties
   </h3>
@@ -99,13 +107,15 @@
         <td id="VRLabs_SimpleShaderInspectors_ISimpleShaderInspector_Materials" data-uid="VRLabs.SimpleShaderInspectors.ISimpleShaderInspector.Materials">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.ISimpleShaderInspector.Materials.html#VRLabs_SimpleShaderInspectors_ISimpleShaderInspector_Materials">Materials</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Array of the materials selected.</p>
+</td>
       </tr>
       <tr>
         <td id="VRLabs_SimpleShaderInspectors_ISimpleShaderInspector_Shader" data-uid="VRLabs.SimpleShaderInspectors.ISimpleShaderInspector.Shader">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.ISimpleShaderInspector.Shader.html#VRLabs_SimpleShaderInspectors_ISimpleShaderInspector_Shader">Shader</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Shader this inspector is viewing.</p>
+</td>
       </tr>
     </tbody>
   </table>

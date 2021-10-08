@@ -70,7 +70,7 @@
   
   <h1 id="VRLabs_SimpleShaderInspectors_Controls_KeywordToggleControl" data-uid="VRLabs.SimpleShaderInspectors.Controls.KeywordToggleControl">Class KeywordToggleControl
   </h1>
-  <div class="markdown level0 summary"><p>Represents a control with a checkbox for setting a float property to 2 defined values.</p>
+  <div class="markdown level0 summary"><p>Represents a control with a checkbox for toggling a keyword on and off.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   
@@ -93,7 +93,15 @@
   
   
   
+  <h5 id="VRLabs_SimpleShaderInspectors_Controls_KeywordToggleControl_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>With this control, by passing the keyword name you can have a toggle that will enable and disable the keyword on the material.</p>
+</div>
   
+  <h5 id="VRLabs_SimpleShaderInspectors_Controls_KeywordToggleControl_examples"><strong>Examples</strong></h5>
+  <p>Example usage:</p>
+<pre><code>this.AddKeywordToggleControl(&quot;KEYWORD_TO_TOGGLE&quot;);</code></pre>
+<p>By default the keyword name will be used as Alias.</p>
+
   <h3 id="constructors">Constructors
   </h3>
   <table class="table table-bordered table-striped table-condensed">
@@ -127,7 +135,8 @@
         <td id="VRLabs_SimpleShaderInspectors_Controls_KeywordToggleControl_keyword" data-uid="VRLabs.SimpleShaderInspectors.Controls.KeywordToggleControl.keyword">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.KeywordToggleControl.keyword.html">keyword</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Keyword that this toggle sets on and off, once set by the constructor it cannot be changed.</p>
+</td>
       </tr>
     </tbody>
   </table>

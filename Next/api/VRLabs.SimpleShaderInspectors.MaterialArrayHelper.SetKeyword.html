@@ -74,13 +74,13 @@
 <div class="markdown level0 conceptual"></div>
 
 <a id="VRLabs_SimpleShaderInspectors_MaterialArrayHelper_SetKeyword_" data-uid="VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetKeyword*"></a>
-<h4 id="VRLabs_SimpleShaderInspectors_MaterialArrayHelper_SetKeyword_UnityEngine_Material___System_String_System_Boolean_" data-uid="VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetKeyword(UnityEngine.Material[],System.String,System.Boolean)">SetKeyword(Material[], String, Boolean)</h4>
+<h4 id="VRLabs_SimpleShaderInspectors_MaterialArrayHelper_SetKeyword_System_Collections_Generic_IEnumerable_UnityEngine_Material__System_String_System_Boolean_" data-uid="VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetKeyword(System.Collections.Generic.IEnumerable{UnityEngine.Material},System.String,System.Boolean)">SetKeyword(IEnumerable&lt;Material&gt;, String, Boolean)</h4>
 <div class="markdown level1 summary"><p>Sets a keyword state to all materials in the array.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="decalaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">public static void SetKeyword(this Material[] materials, string keyword, bool state)</code></pre>
+  <pre><code class="lang-csharp hljs">public static void SetKeyword(this IEnumerable&lt;Material&gt; materials, string keyword, bool state)</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
 <table class="table table-bordered table-striped table-condensed">
@@ -93,7 +93,7 @@
   </thead>
   <tbody>
     <tr>
-      <td><span class="xref">UnityEngine.Material</span>[]</td>
+      <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">UnityEngine.Material</span>&gt;</td>
       <td><span class="parametername">materials</span></td>
       <td><p>Material array this method extends to.</p>
 </td>

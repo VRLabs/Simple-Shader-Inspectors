@@ -151,18 +151,6 @@ references:
   commentId: T:VRLabs.SimpleShaderInspectors.ChainableAttribute
   fullName: VRLabs.SimpleShaderInspectors.ChainableAttribute
   nameWithType: ChainableAttribute
-- uid: VRLabs.SimpleShaderInspectors.ChainableAttribute.#ctor
-  name: ChainableAttribute()
-  href: Next/api/VRLabs.SimpleShaderInspectors.ChainableAttribute.-ctor.html#VRLabs_SimpleShaderInspectors_ChainableAttribute__ctor
-  commentId: M:VRLabs.SimpleShaderInspectors.ChainableAttribute.#ctor
-  fullName: VRLabs.SimpleShaderInspectors.ChainableAttribute.ChainableAttribute()
-  nameWithType: ChainableAttribute.ChainableAttribute()
-- uid: VRLabs.SimpleShaderInspectors.ChainableAttribute.#ctor*
-  name: ChainableAttribute
-  href: Next/api/VRLabs.SimpleShaderInspectors.ChainableAttribute.-ctor.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.ChainableAttribute.#ctor
-  fullName: VRLabs.SimpleShaderInspectors.ChainableAttribute.ChainableAttribute
-  nameWithType: ChainableAttribute.ChainableAttribute
 - uid: VRLabs.SimpleShaderInspectors.Chainables
   name: Chainables
   href: Next/api/VRLabs.SimpleShaderInspectors.Chainables.html
@@ -1192,12 +1180,12 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.KeywordToggleControl.HasKeywordUpdated
   fullName: VRLabs.SimpleShaderInspectors.Controls.KeywordToggleControl.HasKeywordUpdated
   nameWithType: KeywordToggleControl.HasKeywordUpdated
-- uid: VRLabs.SimpleShaderInspectors.Controls.KeywordToggleControl.keyword
-  name: keyword
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.KeywordToggleControl.keyword.html
-  commentId: F:VRLabs.SimpleShaderInspectors.Controls.KeywordToggleControl.keyword
-  fullName: VRLabs.SimpleShaderInspectors.Controls.KeywordToggleControl.keyword
-  nameWithType: KeywordToggleControl.keyword
+- uid: VRLabs.SimpleShaderInspectors.Controls.KeywordToggleControl.Keyword
+  name: Keyword
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.KeywordToggleControl.Keyword.html
+  commentId: F:VRLabs.SimpleShaderInspectors.Controls.KeywordToggleControl.Keyword
+  fullName: VRLabs.SimpleShaderInspectors.Controls.KeywordToggleControl.Keyword
+  nameWithType: KeywordToggleControl.Keyword
 - uid: VRLabs.SimpleShaderInspectors.Controls.KeywordToggleControl.ToggleEnabled
   name: ToggleEnabled
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.KeywordToggleControl.ToggleEnabled.html#VRLabs_SimpleShaderInspectors_Controls_KeywordToggleControl_ToggleEnabled
@@ -1888,6 +1876,18 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.HasActivatePropertyUpdated
   fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.HasActivatePropertyUpdated
   nameWithType: OrderedSection.HasActivatePropertyUpdated
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.HasAtLeastOneMaterialDisabled
+  name: HasAtLeastOneMaterialDisabled()
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.HasAtLeastOneMaterialDisabled.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection_HasAtLeastOneMaterialDisabled
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.HasAtLeastOneMaterialDisabled
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.HasAtLeastOneMaterialDisabled()
+  nameWithType: OrderedSection.HasAtLeastOneMaterialDisabled()
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.HasAtLeastOneMaterialDisabled*
+  name: HasAtLeastOneMaterialDisabled
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.HasAtLeastOneMaterialDisabled.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.HasAtLeastOneMaterialDisabled
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.HasAtLeastOneMaterialDisabled
+  nameWithType: OrderedSection.HasAtLeastOneMaterialDisabled
 - uid: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.HasSectionTurnedOn
   name: HasSectionTurnedOn
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.HasSectionTurnedOn.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection_HasSectionTurnedOn
@@ -2172,12 +2172,12 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Section.Controls
   fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.Controls
   nameWithType: Section.Controls
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.dictionaryKey
-  name: dictionaryKey
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.dictionaryKey.html
-  commentId: F:VRLabs.SimpleShaderInspectors.Controls.Sections.Section.dictionaryKey
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.dictionaryKey
-  nameWithType: Section.dictionaryKey
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.DictionaryKey
+  name: DictionaryKey
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.DictionaryKey.html
+  commentId: F:VRLabs.SimpleShaderInspectors.Controls.Sections.Section.DictionaryKey
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.DictionaryKey
+  nameWithType: Section.DictionaryKey
 - uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.DrawControls(UnityEditor.MaterialEditor)
   name: DrawControls(MaterialEditor)
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.DrawControls.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Section_DrawControls_UnityEditor_MaterialEditor_
@@ -2190,12 +2190,12 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Section.DrawControls
   fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.DrawControls
   nameWithType: Section.DrawControls
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.firstCycle
-  name: firstCycle
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.firstCycle.html
-  commentId: F:VRLabs.SimpleShaderInspectors.Controls.Sections.Section.firstCycle
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.firstCycle
-  nameWithType: Section.firstCycle
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.FirstCycle
+  name: FirstCycle
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.FirstCycle.html
+  commentId: F:VRLabs.SimpleShaderInspectors.Controls.Sections.Section.FirstCycle
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.FirstCycle
+  nameWithType: Section.FirstCycle
 - uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.GetControlList
   name: GetControlList()
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.GetControlList.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Section_GetControlList
@@ -2208,12 +2208,12 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Section.GetControlList
   fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.GetControlList
   nameWithType: Section.GetControlList
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.hideValue
-  name: hideValue
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.hideValue.html
-  commentId: F:VRLabs.SimpleShaderInspectors.Controls.Sections.Section.hideValue
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.hideValue
-  nameWithType: Section.hideValue
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.HideValue
+  name: HideValue
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.HideValue.html
+  commentId: F:VRLabs.SimpleShaderInspectors.Controls.Sections.Section.HideValue
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.HideValue
+  nameWithType: Section.HideValue
 - uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.IsPropertyAnimatable
   name: IsPropertyAnimatable
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.IsPropertyAnimatable.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Section_IsPropertyAnimatable
@@ -2286,12 +2286,12 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Section.ShowFoldoutArrow
   fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.ShowFoldoutArrow
   nameWithType: Section.ShowFoldoutArrow
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.showValue
-  name: showValue
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.showValue.html
-  commentId: F:VRLabs.SimpleShaderInspectors.Controls.Sections.Section.showValue
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.showValue
-  nameWithType: Section.showValue
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.ShowValue
+  name: ShowValue
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.ShowValue.html
+  commentId: F:VRLabs.SimpleShaderInspectors.Controls.Sections.Section.ShowValue
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.ShowValue
+  nameWithType: Section.ShowValue
 - uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.UpdateEnabled(UnityEditor.MaterialEditor)
   name: UpdateEnabled(MaterialEditor)
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.UpdateEnabled.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Section_UpdateEnabled_UnityEditor_MaterialEditor_
@@ -2316,12 +2316,12 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Section.UpdateNonAnimatableProperty
   fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.UpdateNonAnimatableProperty
   nameWithType: Section.UpdateNonAnimatableProperty
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.useDictionary
-  name: useDictionary
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.useDictionary.html
-  commentId: F:VRLabs.SimpleShaderInspectors.Controls.Sections.Section.useDictionary
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.useDictionary
-  nameWithType: Section.useDictionary
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.UseDictionary
+  name: UseDictionary
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.UseDictionary.html
+  commentId: F:VRLabs.SimpleShaderInspectors.Controls.Sections.Section.UseDictionary
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.UseDictionary
+  nameWithType: Section.UseDictionary
 - uid: VRLabs.SimpleShaderInspectors.Controls.SpaceControl
   name: SpaceControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.SpaceControl.html
@@ -2382,24 +2382,6 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.TextureControl.#ctor
   fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.TextureControl
   nameWithType: TextureControl.TextureControl
-- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl._hasExtra1
-  name: _hasExtra1
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl._hasExtra1.html
-  commentId: F:VRLabs.SimpleShaderInspectors.Controls.TextureControl._hasExtra1
-  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl._hasExtra1
-  nameWithType: TextureControl._hasExtra1
-- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl._hasExtra2
-  name: _hasExtra2
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl._hasExtra2.html
-  commentId: F:VRLabs.SimpleShaderInspectors.Controls.TextureControl._hasExtra2
-  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl._hasExtra2
-  nameWithType: TextureControl._hasExtra2
-- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl._isUVButtonPressed
-  name: _isUVButtonPressed
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl._isUVButtonPressed.html
-  commentId: F:VRLabs.SimpleShaderInspectors.Controls.TextureControl._isUVButtonPressed
-  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl._isUVButtonPressed
-  nameWithType: TextureControl._isUVButtonPressed
 - uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.AdditionalProperties
   name: AdditionalProperties
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.AdditionalProperties.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_AdditionalProperties
@@ -2436,6 +2418,18 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.TextureControl.DrawTextureSingleLine
   fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.DrawTextureSingleLine
   nameWithType: TextureControl.DrawTextureSingleLine
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.HasExtra1
+  name: HasExtra1
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.HasExtra1.html
+  commentId: F:VRLabs.SimpleShaderInspectors.Controls.TextureControl.HasExtra1
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.HasExtra1
+  nameWithType: TextureControl.HasExtra1
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.HasExtra2
+  name: HasExtra2
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.HasExtra2.html
+  commentId: F:VRLabs.SimpleShaderInspectors.Controls.TextureControl.HasExtra2
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.HasExtra2
+  nameWithType: TextureControl.HasExtra2
 - uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.HasHDRColor
   name: HasHDRColor
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.HasHDRColor.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_HasHDRColor
@@ -2448,6 +2442,12 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.TextureControl.HasHDRColor
   fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.HasHDRColor
   nameWithType: TextureControl.HasHDRColor
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.IsUVButtonPressed
+  name: IsUVButtonPressed
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.IsUVButtonPressed.html
+  commentId: F:VRLabs.SimpleShaderInspectors.Controls.TextureControl.IsUVButtonPressed
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.IsUVButtonPressed
+  nameWithType: TextureControl.IsUVButtonPressed
 - uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.ShowUvOptions
   name: ShowUvOptions
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.ShowUvOptions.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_ShowUvOptions
@@ -2718,12 +2718,12 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.ToggleControl.ControlGUI
   fullName: VRLabs.SimpleShaderInspectors.Controls.ToggleControl.ControlGUI
   nameWithType: ToggleControl.ControlGUI
-- uid: VRLabs.SimpleShaderInspectors.Controls.ToggleControl.falseValue
-  name: falseValue
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.ToggleControl.falseValue.html
-  commentId: F:VRLabs.SimpleShaderInspectors.Controls.ToggleControl.falseValue
-  fullName: VRLabs.SimpleShaderInspectors.Controls.ToggleControl.falseValue
-  nameWithType: ToggleControl.falseValue
+- uid: VRLabs.SimpleShaderInspectors.Controls.ToggleControl.FalseValue
+  name: FalseValue
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.ToggleControl.FalseValue.html
+  commentId: F:VRLabs.SimpleShaderInspectors.Controls.ToggleControl.FalseValue
+  fullName: VRLabs.SimpleShaderInspectors.Controls.ToggleControl.FalseValue
+  nameWithType: ToggleControl.FalseValue
 - uid: VRLabs.SimpleShaderInspectors.Controls.ToggleControl.ToggleEnabled
   name: ToggleEnabled
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.ToggleControl.ToggleEnabled.html#VRLabs_SimpleShaderInspectors_Controls_ToggleControl_ToggleEnabled
@@ -2736,12 +2736,12 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.ToggleControl.ToggleEnabled
   fullName: VRLabs.SimpleShaderInspectors.Controls.ToggleControl.ToggleEnabled
   nameWithType: ToggleControl.ToggleEnabled
-- uid: VRLabs.SimpleShaderInspectors.Controls.ToggleControl.trueValue
-  name: trueValue
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.ToggleControl.trueValue.html
-  commentId: F:VRLabs.SimpleShaderInspectors.Controls.ToggleControl.trueValue
-  fullName: VRLabs.SimpleShaderInspectors.Controls.ToggleControl.trueValue
-  nameWithType: ToggleControl.trueValue
+- uid: VRLabs.SimpleShaderInspectors.Controls.ToggleControl.TrueValue
+  name: TrueValue
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.ToggleControl.TrueValue.html
+  commentId: F:VRLabs.SimpleShaderInspectors.Controls.ToggleControl.TrueValue
+  fullName: VRLabs.SimpleShaderInspectors.Controls.ToggleControl.TrueValue
+  nameWithType: ToggleControl.TrueValue
 - uid: VRLabs.SimpleShaderInspectors.Controls.ToggleListControl
   name: ToggleListControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.ToggleListControl.html
@@ -3155,15 +3155,21 @@ references:
   commentId: T:VRLabs.SimpleShaderInspectors.Localization
   fullName: VRLabs.SimpleShaderInspectors.Localization
   nameWithType: Localization
-- uid: VRLabs.SimpleShaderInspectors.Localization.ApplyLocalization(System.Collections.Generic.IEnumerable{VRLabs.SimpleShaderInspectors.SimpleControl},System.String,System.Boolean)
-  name: ApplyLocalization(IEnumerable<SimpleControl>, String, Boolean)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Localization.ApplyLocalization.html#VRLabs_SimpleShaderInspectors_Localization_ApplyLocalization_System_Collections_Generic_IEnumerable_VRLabs_SimpleShaderInspectors_SimpleControl__System_String_System_Boolean_
-  commentId: M:VRLabs.SimpleShaderInspectors.Localization.ApplyLocalization(System.Collections.Generic.IEnumerable{VRLabs.SimpleShaderInspectors.SimpleControl},System.String,System.Boolean)
-  name.vb: ApplyLocalization(IEnumerable(Of SimpleControl), String, Boolean)
-  fullName: VRLabs.SimpleShaderInspectors.Localization.ApplyLocalization(System.Collections.Generic.IEnumerable<VRLabs.SimpleShaderInspectors.SimpleControl>, System.String, System.Boolean)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Localization.ApplyLocalization(System.Collections.Generic.IEnumerable(Of VRLabs.SimpleShaderInspectors.SimpleControl), System.String, System.Boolean)
-  nameWithType: Localization.ApplyLocalization(IEnumerable<SimpleControl>, String, Boolean)
-  nameWithType.vb: Localization.ApplyLocalization(IEnumerable(Of SimpleControl), String, Boolean)
+- uid: VRLabs.SimpleShaderInspectors.Localization.ApplyLocalization(System.Collections.Generic.IEnumerable{VRLabs.SimpleShaderInspectors.SimpleControl},System.String,System.Boolean,System.Boolean)
+  name: ApplyLocalization(IEnumerable<SimpleControl>, String, Boolean, Boolean)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Localization.ApplyLocalization.html#VRLabs_SimpleShaderInspectors_Localization_ApplyLocalization_System_Collections_Generic_IEnumerable_VRLabs_SimpleShaderInspectors_SimpleControl__System_String_System_Boolean_System_Boolean_
+  commentId: M:VRLabs.SimpleShaderInspectors.Localization.ApplyLocalization(System.Collections.Generic.IEnumerable{VRLabs.SimpleShaderInspectors.SimpleControl},System.String,System.Boolean,System.Boolean)
+  name.vb: ApplyLocalization(IEnumerable(Of SimpleControl), String, Boolean, Boolean)
+  fullName: VRLabs.SimpleShaderInspectors.Localization.ApplyLocalization(System.Collections.Generic.IEnumerable<VRLabs.SimpleShaderInspectors.SimpleControl>, System.String, System.Boolean, System.Boolean)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Localization.ApplyLocalization(System.Collections.Generic.IEnumerable(Of VRLabs.SimpleShaderInspectors.SimpleControl), System.String, System.Boolean, System.Boolean)
+  nameWithType: Localization.ApplyLocalization(IEnumerable<SimpleControl>, String, Boolean, Boolean)
+  nameWithType.vb: Localization.ApplyLocalization(IEnumerable(Of SimpleControl), String, Boolean, Boolean)
+- uid: VRLabs.SimpleShaderInspectors.Localization.ApplyLocalization(VRLabs.SimpleShaderInspectors.SimpleControl,System.String,System.Boolean,System.Boolean)
+  name: ApplyLocalization(SimpleControl, String, Boolean, Boolean)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Localization.ApplyLocalization.html#VRLabs_SimpleShaderInspectors_Localization_ApplyLocalization_VRLabs_SimpleShaderInspectors_SimpleControl_System_String_System_Boolean_System_Boolean_
+  commentId: M:VRLabs.SimpleShaderInspectors.Localization.ApplyLocalization(VRLabs.SimpleShaderInspectors.SimpleControl,System.String,System.Boolean,System.Boolean)
+  fullName: VRLabs.SimpleShaderInspectors.Localization.ApplyLocalization(VRLabs.SimpleShaderInspectors.SimpleControl, System.String, System.Boolean, System.Boolean)
+  nameWithType: Localization.ApplyLocalization(SimpleControl, String, Boolean, Boolean)
 - uid: VRLabs.SimpleShaderInspectors.Localization.ApplyLocalization*
   name: ApplyLocalization
   href: Next/api/VRLabs.SimpleShaderInspectors.Localization.ApplyLocalization.html
@@ -3245,6 +3251,36 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.MaterialArrayHelper.IsKeywordMixedValue
   fullName: VRLabs.SimpleShaderInspectors.MaterialArrayHelper.IsKeywordMixedValue
   nameWithType: MaterialArrayHelper.IsKeywordMixedValue
+- uid: VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetColor(System.Collections.Generic.IEnumerable{UnityEngine.Material},System.String,UnityEngine.Color)
+  name: SetColor(IEnumerable<Material>, String, Color)
+  href: Next/api/VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetColor.html#VRLabs_SimpleShaderInspectors_MaterialArrayHelper_SetColor_System_Collections_Generic_IEnumerable_UnityEngine_Material__System_String_UnityEngine_Color_
+  commentId: M:VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetColor(System.Collections.Generic.IEnumerable{UnityEngine.Material},System.String,UnityEngine.Color)
+  name.vb: SetColor(IEnumerable(Of Material), String, Color)
+  fullName: VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetColor(System.Collections.Generic.IEnumerable<UnityEngine.Material>, System.String, UnityEngine.Color)
+  fullName.vb: VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetColor(System.Collections.Generic.IEnumerable(Of UnityEngine.Material), System.String, UnityEngine.Color)
+  nameWithType: MaterialArrayHelper.SetColor(IEnumerable<Material>, String, Color)
+  nameWithType.vb: MaterialArrayHelper.SetColor(IEnumerable(Of Material), String, Color)
+- uid: VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetColor*
+  name: SetColor
+  href: Next/api/VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetColor.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetColor
+  fullName: VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetColor
+  nameWithType: MaterialArrayHelper.SetColor
+- uid: VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetFloat(System.Collections.Generic.IEnumerable{UnityEngine.Material},System.String,System.Single)
+  name: SetFloat(IEnumerable<Material>, String, Single)
+  href: Next/api/VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetFloat.html#VRLabs_SimpleShaderInspectors_MaterialArrayHelper_SetFloat_System_Collections_Generic_IEnumerable_UnityEngine_Material__System_String_System_Single_
+  commentId: M:VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetFloat(System.Collections.Generic.IEnumerable{UnityEngine.Material},System.String,System.Single)
+  name.vb: SetFloat(IEnumerable(Of Material), String, Single)
+  fullName: VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetFloat(System.Collections.Generic.IEnumerable<UnityEngine.Material>, System.String, System.Single)
+  fullName.vb: VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetFloat(System.Collections.Generic.IEnumerable(Of UnityEngine.Material), System.String, System.Single)
+  nameWithType: MaterialArrayHelper.SetFloat(IEnumerable<Material>, String, Single)
+  nameWithType.vb: MaterialArrayHelper.SetFloat(IEnumerable(Of Material), String, Single)
+- uid: VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetFloat*
+  name: SetFloat
+  href: Next/api/VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetFloat.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetFloat
+  fullName: VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetFloat
+  nameWithType: MaterialArrayHelper.SetFloat
 - uid: VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetInt(System.Collections.Generic.IEnumerable{UnityEngine.Material},System.String,System.Int32)
   name: SetInt(IEnumerable<Material>, String, Int32)
   href: Next/api/VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetInt.html#VRLabs_SimpleShaderInspectors_MaterialArrayHelper_SetInt_System_Collections_Generic_IEnumerable_UnityEngine_Material__System_String_System_Int32_
@@ -3260,15 +3296,15 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetInt
   fullName: VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetInt
   nameWithType: MaterialArrayHelper.SetInt
-- uid: VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetKeyword(UnityEngine.Material[],System.String,System.Boolean)
-  name: SetKeyword(Material[], String, Boolean)
-  href: Next/api/VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetKeyword.html#VRLabs_SimpleShaderInspectors_MaterialArrayHelper_SetKeyword_UnityEngine_Material___System_String_System_Boolean_
-  commentId: M:VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetKeyword(UnityEngine.Material[],System.String,System.Boolean)
-  name.vb: SetKeyword(Material(), String, Boolean)
-  fullName: VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetKeyword(UnityEngine.Material[], System.String, System.Boolean)
-  fullName.vb: VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetKeyword(UnityEngine.Material(), System.String, System.Boolean)
-  nameWithType: MaterialArrayHelper.SetKeyword(Material[], String, Boolean)
-  nameWithType.vb: MaterialArrayHelper.SetKeyword(Material(), String, Boolean)
+- uid: VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetKeyword(System.Collections.Generic.IEnumerable{UnityEngine.Material},System.String,System.Boolean)
+  name: SetKeyword(IEnumerable<Material>, String, Boolean)
+  href: Next/api/VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetKeyword.html#VRLabs_SimpleShaderInspectors_MaterialArrayHelper_SetKeyword_System_Collections_Generic_IEnumerable_UnityEngine_Material__System_String_System_Boolean_
+  commentId: M:VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetKeyword(System.Collections.Generic.IEnumerable{UnityEngine.Material},System.String,System.Boolean)
+  name.vb: SetKeyword(IEnumerable(Of Material), String, Boolean)
+  fullName: VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetKeyword(System.Collections.Generic.IEnumerable<UnityEngine.Material>, System.String, System.Boolean)
+  fullName.vb: VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetKeyword(System.Collections.Generic.IEnumerable(Of UnityEngine.Material), System.String, System.Boolean)
+  nameWithType: MaterialArrayHelper.SetKeyword(IEnumerable<Material>, String, Boolean)
+  nameWithType.vb: MaterialArrayHelper.SetKeyword(IEnumerable(Of Material), String, Boolean)
 - uid: VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetKeyword*
   name: SetKeyword
   href: Next/api/VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetKeyword.html
@@ -3305,6 +3341,21 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetRenderQueue
   fullName: VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetRenderQueue
   nameWithType: MaterialArrayHelper.SetRenderQueue
+- uid: VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetTexture(System.Collections.Generic.IEnumerable{UnityEngine.Material},System.String,UnityEngine.Texture)
+  name: SetTexture(IEnumerable<Material>, String, Texture)
+  href: Next/api/VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetTexture.html#VRLabs_SimpleShaderInspectors_MaterialArrayHelper_SetTexture_System_Collections_Generic_IEnumerable_UnityEngine_Material__System_String_UnityEngine_Texture_
+  commentId: M:VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetTexture(System.Collections.Generic.IEnumerable{UnityEngine.Material},System.String,UnityEngine.Texture)
+  name.vb: SetTexture(IEnumerable(Of Material), String, Texture)
+  fullName: VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetTexture(System.Collections.Generic.IEnumerable<UnityEngine.Material>, System.String, UnityEngine.Texture)
+  fullName.vb: VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetTexture(System.Collections.Generic.IEnumerable(Of UnityEngine.Material), System.String, UnityEngine.Texture)
+  nameWithType: MaterialArrayHelper.SetTexture(IEnumerable<Material>, String, Texture)
+  nameWithType.vb: MaterialArrayHelper.SetTexture(IEnumerable(Of Material), String, Texture)
+- uid: VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetTexture*
+  name: SetTexture
+  href: Next/api/VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetTexture.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetTexture
+  fullName: VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetTexture
+  nameWithType: MaterialArrayHelper.SetTexture
 - uid: VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetVector(System.Collections.Generic.IEnumerable{UnityEngine.Material},System.String,UnityEngine.Vector4)
   name: SetVector(IEnumerable<Material>, String, Vector4)
   href: Next/api/VRLabs.SimpleShaderInspectors.MaterialArrayHelper.SetVector.html#VRLabs_SimpleShaderInspectors_MaterialArrayHelper_SetVector_System_Collections_Generic_IEnumerable_UnityEngine_Material__System_String_UnityEngine_Vector4_
@@ -3854,6 +3905,15 @@ references:
   fullName.vb: VRLabs.SimpleShaderInspectors.SSIHelper.FetchProperties(System.Collections.Generic.IEnumerable(Of VRLabs.SimpleShaderInspectors.SimpleControl), UnityEditor.MaterialProperty())
   nameWithType: SSIHelper.FetchProperties(IEnumerable<SimpleControl>, MaterialProperty[])
   nameWithType.vb: SSIHelper.FetchProperties(IEnumerable(Of SimpleControl), MaterialProperty())
+- uid: VRLabs.SimpleShaderInspectors.SSIHelper.FetchProperties(System.Collections.Generic.IEnumerable{VRLabs.SimpleShaderInspectors.SimpleControl},UnityEditor.MaterialProperty[],System.Collections.Generic.List{System.String}@)
+  name: FetchProperties(IEnumerable<SimpleControl>, MaterialProperty[], out List<String>)
+  href: Next/api/VRLabs.SimpleShaderInspectors.SSIHelper.FetchProperties.html#VRLabs_SimpleShaderInspectors_SSIHelper_FetchProperties_System_Collections_Generic_IEnumerable_VRLabs_SimpleShaderInspectors_SimpleControl__UnityEditor_MaterialProperty___System_Collections_Generic_List_System_String___
+  commentId: M:VRLabs.SimpleShaderInspectors.SSIHelper.FetchProperties(System.Collections.Generic.IEnumerable{VRLabs.SimpleShaderInspectors.SimpleControl},UnityEditor.MaterialProperty[],System.Collections.Generic.List{System.String}@)
+  name.vb: FetchProperties(IEnumerable(Of SimpleControl), MaterialProperty(), ByRef List(Of String))
+  fullName: VRLabs.SimpleShaderInspectors.SSIHelper.FetchProperties(System.Collections.Generic.IEnumerable<VRLabs.SimpleShaderInspectors.SimpleControl>, UnityEditor.MaterialProperty[], out System.Collections.Generic.List<System.String>)
+  fullName.vb: VRLabs.SimpleShaderInspectors.SSIHelper.FetchProperties(System.Collections.Generic.IEnumerable(Of VRLabs.SimpleShaderInspectors.SimpleControl), UnityEditor.MaterialProperty(), ByRef System.Collections.Generic.List(Of System.String))
+  nameWithType: SSIHelper.FetchProperties(IEnumerable<SimpleControl>, MaterialProperty[], out List<String>)
+  nameWithType.vb: SSIHelper.FetchProperties(IEnumerable(Of SimpleControl), MaterialProperty(), ByRef List(Of String))
 - uid: VRLabs.SimpleShaderInspectors.SSIHelper.FetchProperties*
   name: FetchProperties
   href: Next/api/VRLabs.SimpleShaderInspectors.SSIHelper.FetchProperties.html

@@ -75,7 +75,8 @@
 
 <a id="VRLabs_SimpleShaderInspectors_IControlContainer_GetControlList_" data-uid="VRLabs.SimpleShaderInspectors.IControlContainer.GetControlList*"></a>
 <h4 id="VRLabs_SimpleShaderInspectors_IControlContainer_GetControlList" data-uid="VRLabs.SimpleShaderInspectors.IControlContainer.GetControlList">GetControlList()</h4>
-<div class="markdown level1 summary"></div>
+<div class="markdown level1 summary"><p>Method used to get the list of stored controls.</p>
+</div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="decalaration">Declaration</h5>
 <div class="codewrapper">
@@ -92,10 +93,15 @@
   <tbody>
     <tr>
       <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleControl.html">SimpleControl</a>&gt;</td>
-      <td></td>
+      <td><p>An IEnumerable of the controls stored in this object.</p>
+</td>
     </tr>
   </tbody>
 </table>
+<h5 id="VRLabs_SimpleShaderInspectors_IControlContainer_GetControlList_remarks">Remarks</h5>
+<div class="markdown level1 remarks"><p>Just like <a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer.AddControl.html#VRLabs_SimpleShaderInspectors_IControlContainer_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_">AddControl(SimpleControl)</a> this is used by Simple Shader Inspector to have a way to retrieve controls stored inside this object, to then do operations with it
+(for example, fetching the current localization content needed by the controls).</p>
+</div>
 </article>
           </div>
           

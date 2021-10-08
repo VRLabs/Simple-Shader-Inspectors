@@ -101,7 +101,33 @@
   
   
   
+  <h5 id="VRLabs_SimpleShaderInspectors_Controls_Sections_Section_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+On bigger shaders it may be needed to organize options in categories to make easier for the user to find the option they want to modify. This control makes you able to
+organize it with ease, by grouping controls under categories with a dedicated title.
+</p>
+<p>
+The folding state can be controlled either by the control alone, or driven by a material property.
+In this last case the folding state will stay saved between editor sessions.
+</p>
+<p>
+In case a material property isn&apos;t used, a default alias is used.
+This alias is shared between al sections, so you need to override it if you want to use a different string for each section.
+</p>
+</div>
   
+  <h5 id="VRLabs_SimpleShaderInspectors_Controls_Sections_Section_examples"><strong>Examples</strong></h5>
+  <p>Example usage:</p>
+<pre><code>// Adds a section and sets its alias
+this.AddSection().Alias(&quot;ExampleAlias&quot;); 
+
+// Adds a section that uses a material property for its folding state.
+this.AddSection(&quot;_ExampleProperty&quot;); 
+
+// Adds a section that uses a material property for its folding state.
+// When not folded out the property value will be 2, when folded out 6
+this.AddSection(&quot;_ExampleProperty&quot;, 2, 6); </code></pre>
+
   <h3 id="constructors">Constructors
   </h3>
   <table class="table table-bordered table-striped table-condensed">
@@ -231,7 +257,7 @@
         <td id="VRLabs_SimpleShaderInspectors_Controls_Sections_Section_NonAnimatablePropertyChanged" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.Section.NonAnimatablePropertyChanged">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.Section.NonAnimatablePropertyChanged.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Section_NonAnimatablePropertyChanged">NonAnimatablePropertyChanged</a>
         </td>
-        <td class="markdown level1 summary"><p>Boolean indicating if the folding state material property needs to be updated</p>
+        <td class="markdown level1 summary"><p>Boolean indicating if the folding state material property needs to be updated. Implementation needed by <a class="xref" href="VRLabs.SimpleShaderInspectors.INonAnimatableProperty.html">INonAnimatableProperty</a>.</p>
 </td>
       </tr>
       <tr>
@@ -291,21 +317,22 @@
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.Section.SetupEnabled.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Section_SetupEnabled_UnityEditor_MaterialEditor_">SetupEnabled(MaterialEditor)</a>
         </td>
         <td class="markdown level1 summary"><p>Sets the Enabled boolean to the value currently in the source based on the settings of this control.
-Should only be used inside <see cref="!:DrawControl"></see>.</p>
+Should only be used inside <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.Section.ControlGUI.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Section_ControlGUI_UnityEditor_MaterialEditor_">ControlGUI(MaterialEditor)</a>.</p>
 </td>
       </tr>
       <tr>
         <td id="VRLabs_SimpleShaderInspectors_Controls_Sections_Section_UpdateEnabled_UnityEditor_MaterialEditor_" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.Section.UpdateEnabled(UnityEditor.MaterialEditor)">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.Section.UpdateEnabled.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Section_UpdateEnabled_UnityEditor_MaterialEditor_">UpdateEnabled(MaterialEditor)</a>
         </td>
-        <td class="markdown level1 summary"><p>Updates the source of the Enabled boolean base on the settings of this control.</p>
+        <td class="markdown level1 summary"><p>Updates the source of the Enabled boolean base on the settings of this control.
+Should only be used inside <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.Section.ControlGUI.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Section_ControlGUI_UnityEditor_MaterialEditor_">ControlGUI(MaterialEditor)</a>.</p>
 </td>
       </tr>
       <tr>
         <td id="VRLabs_SimpleShaderInspectors_Controls_Sections_Section_UpdateNonAnimatableProperty_UnityEditor_MaterialEditor_" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.Section.UpdateNonAnimatableProperty(UnityEditor.MaterialEditor)">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.Section.UpdateNonAnimatableProperty.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Section_UpdateNonAnimatableProperty_UnityEditor_MaterialEditor_">UpdateNonAnimatableProperty(MaterialEditor)</a>
         </td>
-        <td class="markdown level1 summary"><p>Updates properties that should not be animated</p>
+        <td class="markdown level1 summary"><p>Updates properties that should not be animated, implementation needed by <a class="xref" href="VRLabs.SimpleShaderInspectors.INonAnimatableProperty.html">INonAnimatableProperty</a></p>
 </td>
       </tr>
     </tbody>

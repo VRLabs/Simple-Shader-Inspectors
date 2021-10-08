@@ -106,6 +106,45 @@
     </tr>
   </tbody>
 </table>
+<a id="VRLabs_SimpleShaderInspectors_SSIHelper_FetchProperties_" data-uid="VRLabs.SimpleShaderInspectors.SSIHelper.FetchProperties*"></a>
+<h4 id="VRLabs_SimpleShaderInspectors_SSIHelper_FetchProperties_System_Collections_Generic_IEnumerable_VRLabs_SimpleShaderInspectors_SimpleControl__UnityEditor_MaterialProperty___System_Collections_Generic_List_System_String___" data-uid="VRLabs.SimpleShaderInspectors.SSIHelper.FetchProperties(System.Collections.Generic.IEnumerable{VRLabs.SimpleShaderInspectors.SimpleControl},UnityEditor.MaterialProperty[],System.Collections.Generic.List{System.String}@)">FetchProperties(IEnumerable&lt;SimpleControl&gt;, MaterialProperty[], out List&lt;String&gt;)</h4>
+<div class="markdown level1 summary"><p>Fetches properties for all the given controls.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+<h5 class="decalaration">Declaration</h5>
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static void FetchProperties(this IEnumerable&lt;SimpleControl&gt; controls, MaterialProperty[] properties, out List&lt;string&gt; missingProperties)</code></pre>
+</div>
+<h5 class="parameters">Parameters</h5>
+<table class="table table-bordered table-striped table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleControl.html">SimpleControl</a>&gt;</td>
+      <td><span class="parametername">controls</span></td>
+      <td><p>Controls needing to fetch properties.</p>
+</td>
+    </tr>
+    <tr>
+      <td><span class="xref">UnityEditor.MaterialProperty</span>[]</td>
+      <td><span class="parametername">properties</span></td>
+      <td><p>Property array to fetch properties from.</p>
+</td>
+    </tr>
+    <tr>
+      <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+      <td><span class="parametername">missingProperties</span></td>
+      <td><p>(Out) Properties defined in the inspector that are missing in the shader</p>
+</td>
+    </tr>
+  </tbody>
+</table>
 </article>
           </div>
           

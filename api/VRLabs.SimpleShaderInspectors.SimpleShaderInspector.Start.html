@@ -75,12 +75,19 @@
 
 <a id="VRLabs_SimpleShaderInspectors_SimpleShaderInspector_Start_" data-uid="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.Start*"></a>
 <h4 id="VRLabs_SimpleShaderInspectors_SimpleShaderInspector_Start" data-uid="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.Start">Start()</h4>
-<div class="markdown level1 summary"><p>Inizialization method where all the controls are instanced. You need to override it.</p>
+<div class="markdown level1 summary"><p>Initialization method where all the controls are instanced. You need to override it.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="decalaration">Declaration</h5>
 <div class="codewrapper">
   <pre><code class="lang-csharp hljs">protected abstract void Start()</code></pre>
+</div>
+<h5 id="VRLabs_SimpleShaderInspectors_SimpleShaderInspector_Start_remarks">Remarks</h5>
+<div class="markdown level1 remarks"><p>
+This method is called only once at the beginning of the inspector lifecycle, and it should be used to create all controls that are needed, and set properties like
+<a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.NeedsNonAnimatableUpdate.html#VRLabs_SimpleShaderInspectors_SimpleShaderInspector_NeedsNonAnimatableUpdate">NeedsNonAnimatableUpdate</a> or <a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.CustomLocalizationShaderName.html#VRLabs_SimpleShaderInspectors_SimpleShaderInspector_CustomLocalizationShaderName">CustomLocalizationShaderName</a> if a value different than the default one is needed.
+</p>
+<p>Keep in mind that <code>MaterialProperties</code> inside controls at this stage have not been filled in yet, so any attempt to use them would result in a <code>NullReferenceException</code></p>
 </div>
 </article>
           </div>

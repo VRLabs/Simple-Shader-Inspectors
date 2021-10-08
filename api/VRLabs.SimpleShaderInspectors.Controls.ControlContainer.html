@@ -70,7 +70,7 @@
   
   <h1 id="VRLabs_SimpleShaderInspectors_Controls_ControlContainer" data-uid="VRLabs.SimpleShaderInspectors.Controls.ControlContainer">Class ControlContainer
   </h1>
-  <div class="markdown level0 summary"><p>Represents a group of conrols.</p>
+  <div class="markdown level0 summary"><p>Represents a group of controls.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   
@@ -95,7 +95,21 @@
   
   
   
+  <h5 id="VRLabs_SimpleShaderInspectors_Controls_ControlContainer_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>This control has no UI for itself, instead it just displays all controls it has inside itself.</p>
+<p>It can be useful whenever you need to enable, disable or, in general, manage an entire group of controls at once.</p>
+<p>Since it has no UI, it does not need an alias, and setting one would not do much.</p>
+</div>
   
+  <h5 id="VRLabs_SimpleShaderInspectors_Controls_ControlContainer_examples"><strong>Examples</strong></h5>
+  <p>Example Usage:</p>
+<pre><code>// Create control
+ControlContainer control = this.AddControlContainer();
+
+// Add controls inside of it
+control.AddPropertyControl(&quot;_ExampleProperty&quot;);
+control.AddColorControl(&quot;_ExampleColor&quot;);</code></pre>
+
   <h3 id="constructors">Constructors
   </h3>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,7 +162,8 @@
         <td id="VRLabs_SimpleShaderInspectors_Controls_ControlContainer_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_" data-uid="VRLabs.SimpleShaderInspectors.Controls.ControlContainer.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.ControlContainer.AddControl.html#VRLabs_SimpleShaderInspectors_Controls_ControlContainer_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_">AddControl(SimpleControl)</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Implementation needed by <a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer.html">IControlContainer</a> to add controls. All controls added are stored in <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.ControlContainer.Controls.html#VRLabs_SimpleShaderInspectors_Controls_ControlContainer_Controls">Controls</a></p>
+</td>
       </tr>
       <tr>
         <td id="VRLabs_SimpleShaderInspectors_Controls_ControlContainer_ControlGUI_UnityEditor_MaterialEditor_" data-uid="VRLabs.SimpleShaderInspectors.Controls.ControlContainer.ControlGUI(UnityEditor.MaterialEditor)">
@@ -161,7 +176,8 @@
         <td id="VRLabs_SimpleShaderInspectors_Controls_ControlContainer_GetControlList" data-uid="VRLabs.SimpleShaderInspectors.Controls.ControlContainer.GetControlList">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.ControlContainer.GetControlList.html#VRLabs_SimpleShaderInspectors_Controls_ControlContainer_GetControlList">GetControlList()</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Implementation needed by <a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer.html">IControlContainer</a> to get the object's controls list.</p>
+</td>
       </tr>
     </tbody>
   </table>

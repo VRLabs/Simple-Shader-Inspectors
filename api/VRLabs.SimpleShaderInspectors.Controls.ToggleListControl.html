@@ -98,7 +98,17 @@ Also shows and hides a list of controls based on its state.</p>
   
   
   
+  <h5 id="VRLabs_SimpleShaderInspectors_Controls_ToggleListControl_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>It's effectively a combination of <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.ToggleListControl.html">ToggleListControl</a> and <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.ControlContainer.html">ControlContainer</a>, where the controls list is displayed only when the toggle is enabled.</p>
+</div>
   
+  <h5 id="VRLabs_SimpleShaderInspectors_Controls_ToggleListControl_examples"><strong>Examples</strong></h5>
+  <p>Example usage:</p>
+<pre><code>// adds a toggle that toggles between 0 and 1
+this.AddToggleListControl(&quot;_ExampleProperty&quot;);
+// adds a toggle that toggles between 3 and 7
+this.AddToggleListControl(&quot;_ExampleProperty&quot;, 3, 7); </code></pre>
+
   <h3 id="constructors">Constructors
   </h3>
   <table class="table table-bordered table-striped table-condensed">
@@ -151,7 +161,8 @@ Also shows and hides a list of controls based on its state.</p>
         <td id="VRLabs_SimpleShaderInspectors_Controls_ToggleListControl_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_" data-uid="VRLabs.SimpleShaderInspectors.Controls.ToggleListControl.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.ToggleListControl.AddControl.html#VRLabs_SimpleShaderInspectors_Controls_ToggleListControl_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_">AddControl(SimpleControl)</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Implementation needed by <a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer.html">IControlContainer</a> to add controls. All controls added are stored in <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.ToggleListControl.Controls.html#VRLabs_SimpleShaderInspectors_Controls_ToggleListControl_Controls">Controls</a></p>
+</td>
       </tr>
       <tr>
         <td id="VRLabs_SimpleShaderInspectors_Controls_ToggleListControl_ControlGUI_UnityEditor_MaterialEditor_" data-uid="VRLabs.SimpleShaderInspectors.Controls.ToggleListControl.ControlGUI(UnityEditor.MaterialEditor)">
@@ -164,7 +175,8 @@ Also shows and hides a list of controls based on its state.</p>
         <td id="VRLabs_SimpleShaderInspectors_Controls_ToggleListControl_GetControlList" data-uid="VRLabs.SimpleShaderInspectors.Controls.ToggleListControl.GetControlList">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.ToggleListControl.GetControlList.html#VRLabs_SimpleShaderInspectors_Controls_ToggleListControl_GetControlList">GetControlList()</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Implementation needed by <a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer.html">IControlContainer</a> to get the object's controls list.</p>
+</td>
       </tr>
     </tbody>
   </table>

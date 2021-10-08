@@ -94,7 +94,19 @@
   
   
   
+  <h5 id="VRLabs_SimpleShaderInspectors_Controls_ToggleControl_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>This control can be used to set a float property between 2 values, which can come useful when there&apos;s a need to toggle on and off features using a float value in shader.</p>
+<p>Both the enabled and disabled state can be set to give the material property a specific float value. If not set in the constructor they will be set
+to 0 for disabled and 1 for enabled.</p>
+</div>
   
+  <h5 id="VRLabs_SimpleShaderInspectors_Controls_ToggleControl_examples"><strong>Examples</strong></h5>
+  <p>Example usage:</p>
+<pre><code>// adds a toggle that toggles between 0 and 1
+this.AddToggleControl(&quot;_ExampleProperty&quot;);
+// adds a toggle that toggles between 3 and 7
+this.AddToggleControl(&quot;_ExampleProperty&quot;, 3, 7); </code></pre>
+
   <h3 id="constructors">Constructors
   </h3>
   <table class="table table-bordered table-striped table-condensed">

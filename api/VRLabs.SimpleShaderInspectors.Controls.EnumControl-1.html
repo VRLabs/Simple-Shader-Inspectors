@@ -96,12 +96,30 @@
     <tr>
       <td>
         <span class="parametername">TEnum</span>
-        <p>
+        <p><p>Type of enum used by the control</p>
+</p>
       </td>
     </tr>
   </table>
   
+  <h5 id="VRLabs_SimpleShaderInspectors_Controls_EnumControl_1_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>With this control you can make selectors that are based on an enum, without the need to have an array of strings for options, since the enum name will be used instead.</p>
+</div>
   
+  <h5 id="VRLabs_SimpleShaderInspectors_Controls_EnumControl_1_examples"><strong>Examples</strong></h5>
+  <p>Example usage:</p>
+<pre><code>//...
+public enum ExampleEnum
+{
+    Option1,
+    Option2,
+    Option3
+}
+//...
+// Inside the controls declarations
+this.AddEnumControl&lt;ExampleEnum>(&quot;_ExampleProperty&quot;);</code></pre>
+<p>The value of the material property will be the index of the enum.</p>
+
   <h3 id="constructors">Constructors
   </h3>
   <table class="table table-bordered table-striped table-condensed">
@@ -116,7 +134,8 @@
         <td id="VRLabs_SimpleShaderInspectors_Controls_EnumControl_1__ctor_System_String_" data-uid="VRLabs.SimpleShaderInspectors.Controls.EnumControl`1.#ctor(System.String)">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.EnumControl-1.-ctor.html#VRLabs_SimpleShaderInspectors_Controls_EnumControl_1__ctor_System_String_">EnumControl(String)</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Default constructor of <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.EnumControl-1.html">EnumControl&lt;TEnum&gt;</a></p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -134,7 +153,8 @@
         <td id="VRLabs_SimpleShaderInspectors_Controls_EnumControl_1_SelectedOption" data-uid="VRLabs.SimpleShaderInspectors.Controls.EnumControl`1.SelectedOption">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.EnumControl-1.SelectedOption.html#VRLabs_SimpleShaderInspectors_Controls_EnumControl_1_SelectedOption">SelectedOption</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Option currently selected.</p>
+</td>
       </tr>
     </tbody>
   </table>

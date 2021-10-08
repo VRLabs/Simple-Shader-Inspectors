@@ -5,17 +5,17 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Field dictionaryKey
+    <title>Method GetSerializedDictionary
    | Simple Shader Inspectors Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Field dictionaryKey
+    <meta name="title" content="Method GetSerializedDictionary
    | Simple Shader Inspectors Documentation ">
     <meta name="generator" content="docfx 2.58.2.0">
     
-    <link rel="shortcut icon" href="../../favicon.ico">
-    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../styles/docfx.css">
-    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
@@ -35,8 +35,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="../../index.html">
-                <img id="logo" class="png" src="../../logo.png" alt="">
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="png" src="../logo.png" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -66,36 +66,38 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.Section.dictionaryKey">
+            <article class="content wrap" id="_content" data-uid="VRLabs.SimpleShaderInspectors.TimedDictionary`2.GetSerializedDictionary*">
 
-<h1 id="VRLabs_SimpleShaderInspectors_Controls_Sections_Section_dictionaryKey" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.Section.dictionaryKey">Field dictionaryKey
+<h1 id="VRLabs_SimpleShaderInspectors_TimedDictionary_2_GetSerializedDictionary_" data-uid="VRLabs.SimpleShaderInspectors.TimedDictionary`2.GetSerializedDictionary*">Method GetSerializedDictionary
 </h1>
-<div class="markdown level0 summary"><p>String containing the key value that the section will use for the dictionary.</p>
-</div>
+<div class="markdown level0 summary"></div>
 <div class="markdown level0 conceptual"></div>
 
-
-<h6><strong>Namespace</strong>: <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.html">VRLabs.SimpleShaderInspectors.Controls.Sections</a></h6>
-
-<h5 id="VRLabs_SimpleShaderInspectors_Controls_Sections_Section_dictionaryKey_syntax">Syntax</h5>
-<div class="codewrapper">
-  <pre><code class="lang-csharp hljs">protected string dictionaryKey</code></pre>
+<a id="VRLabs_SimpleShaderInspectors_TimedDictionary_2_GetSerializedDictionary_" data-uid="VRLabs.SimpleShaderInspectors.TimedDictionary`2.GetSerializedDictionary*"></a>
+<h4 id="VRLabs_SimpleShaderInspectors_TimedDictionary_2_GetSerializedDictionary" data-uid="VRLabs.SimpleShaderInspectors.TimedDictionary`2.GetSerializedDictionary">GetSerializedDictionary()</h4>
+<div class="markdown level1 summary"><p>Gets a list of all values stored in the dictionary in an easier to serialize form.</p>
 </div>
-
-
+<div class="markdown level1 conceptual"></div>
+<h5 class="decalaration">Declaration</h5>
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public List&lt;(TKey, TValue, DateTime)&gt; GetSerializedDictionary()</code></pre>
+</div>
 <h5 class="returns">Returns</h5>
-<table>
-  <tr>
-    <td>
-      <span class="xref">System.String</span>
-      <p><p>The key used for the dictionary value.</p>
-</p>
-    </td>
-  </tr>
+<table class="table table-bordered table-striped table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.ValueTuple</span>&lt;TKey, TValue, <span class="xref">System.DateTime</span>&gt;&gt;</td>
+      <td><p>A list with the data</p>
+</td>
+    </tr>
+  </tbody>
 </table>
-
-
-
 </article>
           </div>
           
@@ -124,8 +126,8 @@
       </footer>
     </div>
     
-    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../../styles/docfx.js"></script>
-    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
   </body>
 </html>

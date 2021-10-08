@@ -92,7 +92,25 @@
   
   
   
+  <h5 id="VRLabs_SimpleShaderInspectors_Controls_VectorControl_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+While using a <a class="xref" href="VRLabs.SimpleShaderInspectors.PropertyControl.html">PropertyControl</a> for a vector property can work just fine, it will default to displaying all 4 float values, even if the shader property represents
+a float2 or float3. This is due to unity treating all of them as a Vector4 inside inspectors, resulting on having a 4 float display.
+</p>
+<p>With this control you have the ability to fine tune which of the 4 floats to show.</p>
+<p>
+This can also be useful if you pack different values into a single Vector4 for various reasons, cause you can just create different vector controls where each one access
+different parts of the Vector4, so you can manage them independently inside your editor.
+</p>
+</div>
   
+  <h5 id="VRLabs_SimpleShaderInspectors_Controls_VectorControl_examples"><strong>Examples</strong></h5>
+  <p>Example usage:</p>
+<pre><code>// adds a vector control
+this.AddVectorControl(&quot;ExampleVector&quot;);
+// adds a vector control where only the y and w values are displayed
+this.AddVectorControl(&quot;ExampleVector&quot;, false, true, false, true); </code></pre>
+
   <h3 id="constructors">Constructors
   </h3>
   <table class="table table-bordered table-striped table-condensed">
@@ -126,25 +144,29 @@
         <td id="VRLabs_SimpleShaderInspectors_Controls_VectorControl_IsWVisible" data-uid="VRLabs.SimpleShaderInspectors.Controls.VectorControl.IsWVisible">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.VectorControl.IsWVisible.html#VRLabs_SimpleShaderInspectors_Controls_VectorControl_IsWVisible">IsWVisible</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Visibility state of the w value</p>
+</td>
       </tr>
       <tr>
         <td id="VRLabs_SimpleShaderInspectors_Controls_VectorControl_IsXVisible" data-uid="VRLabs.SimpleShaderInspectors.Controls.VectorControl.IsXVisible">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.VectorControl.IsXVisible.html#VRLabs_SimpleShaderInspectors_Controls_VectorControl_IsXVisible">IsXVisible</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Visibility state of the x value</p>
+</td>
       </tr>
       <tr>
         <td id="VRLabs_SimpleShaderInspectors_Controls_VectorControl_IsYVisible" data-uid="VRLabs.SimpleShaderInspectors.Controls.VectorControl.IsYVisible">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.VectorControl.IsYVisible.html#VRLabs_SimpleShaderInspectors_Controls_VectorControl_IsYVisible">IsYVisible</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Visibility state of the y value</p>
+</td>
       </tr>
       <tr>
         <td id="VRLabs_SimpleShaderInspectors_Controls_VectorControl_IsZVisible" data-uid="VRLabs.SimpleShaderInspectors.Controls.VectorControl.IsZVisible">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.VectorControl.IsZVisible.html#VRLabs_SimpleShaderInspectors_Controls_VectorControl_IsZVisible">IsZVisible</a>
         </td>
-        <td class="markdown level1 summary"></td>
+        <td class="markdown level1 summary"><p>Visibility state of the z value</p>
+</td>
       </tr>
     </tbody>
   </table>
