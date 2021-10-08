@@ -28,6 +28,11 @@ namespace VRLabs.SimpleShaderInspectors
         /// String containing the additional property name.
         /// </summary>
         public string PropertyName { get; }
+        
+        /// <summary>
+        /// Indicates if the property is required for the control to work.
+        /// </summary>
+        public bool IsPropertyMandatory { get; }
 
         /// <summary>
         /// Array containing the index needed to fetch.
@@ -43,8 +48,10 @@ namespace VRLabs.SimpleShaderInspectors
         /// Default constructor of AdditionalProperty.
         /// </summary>
         /// <param name="propertyName">Name of the materialProperty to fetch.</param>
-        public AdditionalProperty(string propertyName)
+        /// <param name="isPropertyMandatory">If the property is required</param>
+        public AdditionalProperty(string propertyName, bool isPropertyMandatory = true)
         {
+            IsPropertyMandatory = isPropertyMandatory;
             PropertyName = propertyName;
         }
 

@@ -39,7 +39,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <remarks>
         /// Since this control does not need an alias, no alias strings are needed, and the alias will be set as "".
         /// </remarks>
-        public ControlContainer() : base("")
+        public ControlContainer() : base("SSI_UNUSED_PROP")
         {
             Controls = new List<SimpleControl>();
         }

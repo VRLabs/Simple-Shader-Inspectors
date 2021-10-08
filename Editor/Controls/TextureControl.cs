@@ -124,11 +124,11 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         public TextureControl(string propertyName, string extraPropertyName1 = null, string extraPropertyName2 = null) : base(propertyName)
         {
             AdditionalProperties = new AdditionalProperty[2];
-            AdditionalProperties[0] = new AdditionalProperty(extraPropertyName1);
+            AdditionalProperties[0] = new AdditionalProperty(extraPropertyName1, false);
             if (!string.IsNullOrWhiteSpace(extraPropertyName1))
                 HasExtra1 = true;
             
-            AdditionalProperties[1] = new AdditionalProperty(extraPropertyName2);
+            AdditionalProperties[1] = new AdditionalProperty(extraPropertyName2, false);
             if (!string.IsNullOrWhiteSpace(extraPropertyName2))
                 HasExtra2 = true;
 
