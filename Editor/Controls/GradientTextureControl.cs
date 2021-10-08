@@ -128,7 +128,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             AdditionalProperties[0] = new AdditionalProperty(colorPropertyName);
             if (!string.IsNullOrWhiteSpace(colorPropertyName))
             {
-                _hasExtra1 = true;
+                HasExtra1 = true;
             }
             GradientButtonStyle = Styles.Bubble;
             GradientEditorStyle = Styles.TextureBoxHeavyBorder;
@@ -161,7 +161,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             if (ShowUvOptions)
                 EditorGUILayout.BeginHorizontal();
             
-            if (_hasExtra1)
+            if (HasExtra1)
                 materialEditor.TexturePropertySingleLine(Content, Property, AdditionalProperties[0].Property);
             else
                 materialEditor.TexturePropertySingleLine(Content, Property);
@@ -169,10 +169,10 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             if (ShowUvOptions)
             {
                 GUI.backgroundColor = UVButtonColor;
-                _isUVButtonPressed = EditorGUILayout.Toggle(_isUVButtonPressed, UVButtonStyle, GUILayout.Width(14.0f), GUILayout.Height(14.0f));
+                IsUVButtonPressed = EditorGUILayout.Toggle(IsUVButtonPressed, UVButtonStyle, GUILayout.Width(14.0f), GUILayout.Height(14.0f));
                 GUI.backgroundColor = SimpleShaderInspector.DefaultBgColor;
                 EditorGUILayout.EndHorizontal();
-                if (_isUVButtonPressed)
+                if (IsUVButtonPressed)
                 {
                     GUI.backgroundColor = UVAreaColor;
                     EditorGUILayout.BeginVertical(UVAreaStyle);

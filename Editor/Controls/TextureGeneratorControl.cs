@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using VRLabs.SimpleShaderInspectors.Utility;
 
 namespace VRLabs.SimpleShaderInspectors.Controls
 {
@@ -11,7 +10,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
     /// <remarks>
     /// <para>
     /// It is a more complex and specialized version of <see cref="TextureControl"/>, where on top of the base functionality of <see cref="TextureControl"/> it also has
-    /// a fuull blown texture generator.
+    /// a full blown texture generator.
     /// </para>
     /// <para>
     /// When using it right away the texture generator will default to a simple 4 channel merger where for each channel you can select a texture, select which channel of
@@ -39,14 +38,14 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         private readonly AdditionalLocalization[] _textureContent;
         private readonly AdditionalLocalization[] _colorContent;
         private readonly AdditionalLocalization[] _namesContent;
-        private bool _isGeneratorOpen = false;
+        private bool _isGeneratorOpen;
         private readonly ComputeShader _compute;
         private readonly string _kernelName;
         private Resolution _resolution;
         private readonly List<ComputeInputBase> _inputs;
         private RenderTexture _result;
         private Texture2D _resultTex;
-        private readonly bool _containsTextures = false;
+        private readonly bool _containsTextures;
 
         private static readonly string[] _baseNames =
                         {
@@ -65,7 +64,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             "ColorSpace"            //[0]
         };
 
-        private readonly bool _containsColors = false;
+        private readonly bool _containsColors;
 
         /// <summary>
         /// Style for the texture generator button.
@@ -169,6 +168,8 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <summary>
         /// Default constructor of <see cref="TextureGeneratorControl"/>
         /// </summary>
+        /// <param name="compute">Compute shader used</param>
+        /// <param name="computeOptionsJson">Settings Json used for the compute shader</param>
         /// <param name="propertyName">Material property name.</param>
         /// <param name="extraPropertyName1">First additional material property name. Optional.</param>
         /// <param name="extraPropertyName2">Second additional material property name. Optional.</param>
@@ -277,11 +278,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
                     }
                 }
 
-                AdditionalLocalization[] selectedArray;
-                if (_inputs[i] is ComputeTextureInput)
-                    selectedArray = _textureContent;
-                else
-                    selectedArray = _colorContent;
+                AdditionalLocalization[] selectedArray = _inputs[i] is ComputeTextureInput ? _textureContent : _colorContent;
                 
                 GUI.backgroundColor = GeneratorInputColor;
                 EditorGUILayout.BeginVertical(GeneratorInputStyle);

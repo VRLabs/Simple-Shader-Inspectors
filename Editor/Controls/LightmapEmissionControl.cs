@@ -41,7 +41,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             HasLightmapEmissionUpdated = EditorGUI.EndChangeCheck();
             if (HasLightmapEmissionUpdated)
             {
-                foreach (Material mat in materialEditor.targets)
+                foreach (Material mat in Inspector.Materials)
                 {
                     MaterialEditor.FixupEmissiveFlag(mat);
                     bool shouldEmissionBeEnabled = (mat.globalIlluminationFlags & MaterialGlobalIlluminationFlags.EmissiveIsBlack) == 0;

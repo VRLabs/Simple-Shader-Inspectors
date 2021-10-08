@@ -56,7 +56,7 @@ namespace VRLabs.SimpleShaderInspectors
     /// </summary>
     public static class ComputeShaders
     {
-        private static ComputeShader _RGBAPacker;
+        private static ComputeShader _rgbaPacker;
         /// <summary>
         /// Compute shader that packs 4 texture channels into a single texture.
         /// </summary>
@@ -64,9 +64,9 @@ namespace VRLabs.SimpleShaderInspectors
         {
             get
             {
-                if (_RGBAPacker != null) return _RGBAPacker;
-                _RGBAPacker = Resources.Load<ComputeShader>("ComputeShaders/SSIRGBAPacker");
-                return _RGBAPacker;
+                if (_rgbaPacker != null) return _rgbaPacker;
+                _rgbaPacker = Resources.Load<ComputeShader>("ComputeShaders/SSIRGBAPacker");
+                return _rgbaPacker;
             }
         }
         /// <summary>
@@ -191,7 +191,7 @@ namespace VRLabs.SimpleShaderInspectors
             }
         }
 
-        private static Texture2D _SSILogoLight;
+        private static Texture2D _ssiLogoLight;
         /// <summary>
         /// Simple Shader Inspectors logo for light theme.
         /// </summary>
@@ -199,15 +199,15 @@ namespace VRLabs.SimpleShaderInspectors
         {
             get
             {
-                if (_SSILogoLight != null) return _SSILogoLight;
+                if (_ssiLogoLight != null) return _ssiLogoLight;
 
-                _SSILogoLight = Resources.Load<Texture2D>("Textures/Logo/SSILogoLight");
-                return _SSILogoLight;
+                _ssiLogoLight = Resources.Load<Texture2D>("Textures/Logo/SSILogoLight");
+                return _ssiLogoLight;
 
             }
         }
 
-        private static Texture2D _SSILogoDark;
+        private static Texture2D _ssiLogoDark;
         /// <summary>
         /// Simple Shader Inspectors logo for dark theme.
         /// </summary>
@@ -215,10 +215,10 @@ namespace VRLabs.SimpleShaderInspectors
         {
             get
             {
-                if (_SSILogoDark != null) return _SSILogoDark;
+                if (_ssiLogoDark != null) return _ssiLogoDark;
 
-                _SSILogoDark = Resources.Load<Texture2D>("Textures/Logo/SSILogoDark");
-                return _SSILogoDark;
+                _ssiLogoDark = Resources.Load<Texture2D>("Textures/Logo/SSILogoDark");
+                return _ssiLogoDark;
             }
         }
 

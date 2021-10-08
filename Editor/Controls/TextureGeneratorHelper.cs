@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
 using UnityEditor;
 using UnityEngine;
 
@@ -141,19 +140,19 @@ namespace VRLabs.SimpleShaderInspectors.Controls
                         break;
                 }
             }
-            ComputeInputs.TextureMetadata textureMetadata = new ComputeInputs.TextureMetadata
+            var textureMetadata = new ComputeInputs.TextureMetadata
             {
-                Width = def?.width ?? Texture.width,
-                Height = def?.height ?? Texture.height,
+                Width = def != null ? def.width : Texture.width,
+                Height = def != null ? def.height : Texture.height,
                 SelectedChannel = Channel,
                 Reverse = Invert ? 1 : 0,
                 Gamma = IsGamma()
             };
 
-            ComputeInputs.TextureData textureData = new ComputeInputs.TextureData
+            var textureData = new ComputeInputs.TextureData
             {
                 Name = InputName,
-                Texture = def ?? Texture
+                Texture = def != null ? def : Texture
             };
 
             inputs.Textures.Add(textureData);
@@ -167,7 +166,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             rect.x += 10; rect.y += 5;
             rect.width -= 20; rect.height -= 10;
             Texture = (Texture2D)EditorGUI.ObjectField(rect, Texture, typeof(Texture2D), false);
-            if (UseSpecificChannel) Channel = GUILayout.Toolbar(Channel, new string[] { "R", "G", "B", "A" }); //extraContent[0].Content,
+            if (UseSpecificChannel) Channel = GUILayout.Toolbar(Channel, new[] { "R", "G", "B", "A" }); //extraContent[0].Content,
             if (UseInvert)
             {
                 rect = GUILayoutUtility.GetRect(100, 16);
@@ -219,7 +218,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         {
             GUILayout.Label(name);
             EditorGUILayout.ColorField(Color);
-            if (UseColorspace) Colorspace = GUILayout.Toolbar(Colorspace, new string[] { "Linear", "Gamma" }, EditorStyles.miniLabel); //extraContent[1].Content
+            if (UseColorspace) Colorspace = GUILayout.Toolbar(Colorspace, new [] { "Linear", "Gamma" }, EditorStyles.miniLabel); //extraContent[1].Content
         }
     }
 

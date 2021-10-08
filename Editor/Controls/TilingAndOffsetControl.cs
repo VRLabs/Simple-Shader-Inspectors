@@ -1,7 +1,5 @@
 using UnityEditor;
 
-using VRLabs.SimpleShaderInspectors;
-
 namespace VRLabs.SimpleShaderInspectors.Controls
 {
     /// <summary>

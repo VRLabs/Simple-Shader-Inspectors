@@ -18,7 +18,7 @@ namespace VRLabs.SimpleShaderInspectors
         /// <param name="materials">Material array this method extends to.</param>
         /// <param name="keyword">The keyword that is being toggled.</param>
         /// <param name="state">Toggle value.</param>
-        public static void SetKeyword(this Material[] materials, string keyword, bool state)
+        public static void SetKeyword(this IEnumerable<Material> materials, string keyword, bool state)
         {
             foreach (var m in materials)
             {
@@ -67,6 +67,18 @@ namespace VRLabs.SimpleShaderInspectors
             foreach (var m in materials)
                 m.SetInt(name, value);
         }
+        
+        /// <summary>
+        /// Set float to all materials in the array.
+        /// </summary>
+        /// <param name="materials">Material array this method extends to.</param>
+        /// <param name="name">Name of the float.</param>
+        /// <param name="value">Value of the float.</param>
+        public static void SetFloat(this IEnumerable<Material> materials, string name, float value)
+        {
+            foreach (var m in materials)
+                m.SetFloat(name, value);
+        }
 
         /// <summary>
         /// Set vector to all materials in the array.
@@ -78,6 +90,30 @@ namespace VRLabs.SimpleShaderInspectors
         {
             foreach (var m in materials)
                 m.SetVector(name, value);
+        }
+        
+        /// <summary>
+        /// Set color to all materials in the array.
+        /// </summary>
+        /// <param name="materials">Material array this method extends to.</param>
+        /// <param name="name">Name of the Color.</param>
+        /// <param name="value">Value of the Color.</param>
+        public static void SetColor(this IEnumerable<Material> materials, string name, Color value)
+        {
+            foreach (var m in materials)
+                m.SetColor(name, value);
+        }
+        
+        /// <summary>
+        /// Set texture to all materials in the array.
+        /// </summary>
+        /// <param name="materials">Material array this method extends to.</param>
+        /// <param name="name">Name of the texture.</param>
+        /// <param name="value">Value of the texture.</param>
+        public static void SetTexture(this IEnumerable<Material> materials, string name, Texture value)
+        {
+            foreach (var m in materials)
+                m.SetTexture(name, value);
         }
 
         /// <summary>

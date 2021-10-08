@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
 using UnityEngine;
-using Object = UnityEngine.Object;
 
 namespace VRLabs.SimpleShaderInspectors
 {
@@ -34,6 +33,43 @@ namespace VRLabs.SimpleShaderInspectors
         }
 
         /// <summary>
+        /// Fetches properties for all the given controls.
+        /// </summary>
+        /// <param name="controls">Controls needing to fetch properties.</param>
+        /// <param name="properties">Property array to fetch properties from.</param>
+        /// <param name="missingProperties">(Out) Properties defined in the inspector that are missing in the shader</param>
+        public static void FetchProperties(this IEnumerable<SimpleControl> controls, MaterialProperty[] properties, out List<string> missingProperties)
+        {
+            var errs = new List<string>();
+            foreach (var control in controls)
+            {
+                if (control is PropertyControl pr)
+                {
+                    pr.FetchProperty(properties);
+                    if(pr.Property == null && !pr.PropertyName.Equals("SSI_UNUSED_PROP"))
+                        errs.Add(pr.PropertyName);
+                }
+
+                if (control is IAdditionalProperties add)
+                {
+                    foreach (var t in add.AdditionalProperties)
+                    {
+                        t.FetchProperty(properties);
+                        if(t.Property == null)
+                            errs.Add(t.PropertyName);
+                    }
+                }
+
+                if (control is IControlContainer con)
+                {
+                    con.GetControlList().FetchProperties(properties, out List<string> ms);
+                    errs.AddRange(ms);
+                }
+            }
+            missingProperties = errs;
+        }
+
+        /// <summary>
         /// Set the inspector of each control of the list.
         /// </summary>
         /// <param name="controls">Controls this method extends from.</param>
@@ -52,12 +88,14 @@ namespace VRLabs.SimpleShaderInspectors
         /// <summary>
         /// Find a material property from its name.
         /// </summary>
-        /// <param name="propertyName">Name of the material proeperty.</param>
+        /// <param name="propertyName">Name of the material property.</param>
         /// <param name="properties">Array of material properties to search from.</param>
         /// <param name="propertyIsMandatory">Boolean indicating if it's mandatory to find the requested material property</param>
         /// <returns>The material property with the wanted name.</returns>
         internal static int FindPropertyIndex(string propertyName, MaterialProperty[] properties, bool propertyIsMandatory = false)
         {
+            if (!string.IsNullOrWhiteSpace(propertyName) && propertyName.Equals("SSI_UNUSED_PROP")) return -1;
+            
             for (int i = 0; i < properties.Length; i++)
                 if (properties[i] != null && properties[i].name == propertyName)
                     return i;
@@ -73,7 +111,7 @@ namespace VRLabs.SimpleShaderInspectors
         /// Finds all controls that implement the INonAnimatableProperty interface.
         /// </summary>
         /// <param name="controls">Controls to search from</param>
-        /// <returns>An enumerable containing all INonAnimarableProperty instances found</returns>
+        /// <returns>An enumerable containing all INonAnimatableProperty instances found</returns>
         public static IEnumerable<INonAnimatableProperty> FindNonAnimatablePropertyControls(this IEnumerable<SimpleControl> controls)
         {
             List<INonAnimatableProperty> nonAnimatablePropertyControls = new List<INonAnimatableProperty>();
@@ -117,7 +155,7 @@ namespace VRLabs.SimpleShaderInspectors
 
                 foreach (var t in windowInstances)
                 {
-                    bool isRecording = (bool)isRecordingProp.GetValue
+                    bool isRecording = isRecordingProp != null && (bool)isRecordingProp.GetValue
                         (t, null);
 
                     if (!isRecording) continue;
@@ -142,8 +180,7 @@ namespace VRLabs.SimpleShaderInspectors
             }
             else
             {
-                foreach (var t in propertiesNeedingUpdate)
-                    SetNonAnimatableProperties(materialEditor, propertiesNeedingUpdate);
+                SetNonAnimatableProperties(materialEditor, propertiesNeedingUpdate);
             }
         }
         
@@ -166,8 +203,8 @@ namespace VRLabs.SimpleShaderInspectors
         public static string GetTextureDestinationPath(Material mat, string name)
         {
             string path = AssetDatabase.GetAssetPath(mat);
-            path = Directory.GetParent(path).FullName;
-            string pathParent = Directory.GetParent(path).FullName;
+            path = Directory.GetParent(path)?.FullName;
+            string pathParent = Directory.GetParent(path)?.FullName;
 
             if (Directory.Exists(pathParent + "/Textures/"))
                 return pathParent + "/Textures/" + mat.name + name;
@@ -185,12 +222,16 @@ namespace VRLabs.SimpleShaderInspectors
         {
             byte[] bytes = texture.EncodeToPNG();
 
-            System.IO.File.WriteAllBytes(path, bytes);
+            File.WriteAllBytes(path, bytes);
             AssetDatabase.Refresh();
-            path = path.Substring(path.LastIndexOf("Assets"));
+            path = path.Substring(path.LastIndexOf("Assets", StringComparison.Ordinal));
             var t = AssetImporter.GetAtPath(path) as TextureImporter;
-            t.wrapMode = mode;
-            t.isReadable = true;
+            if (t != null)
+            {
+                t.wrapMode = mode;
+                t.isReadable = true;
+            }
+
             AssetDatabase.ImportAsset(path);
         }
 
@@ -204,7 +245,7 @@ namespace VRLabs.SimpleShaderInspectors
         public static Texture2D SaveAndGetTexture(Texture2D texture, string path, TextureWrapMode mode = TextureWrapMode.Repeat)
         {
             SaveTexture(texture, path, mode);
-            path = path.Substring(path.LastIndexOf("Assets"));
+            path = path.Substring(path.LastIndexOf("Assets", StringComparison.Ordinal));
             return AssetDatabase.LoadAssetAtPath<Texture2D>(path);
         }
 

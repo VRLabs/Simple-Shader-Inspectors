@@ -32,7 +32,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <summary>
         /// Default constructor of <see cref="LabelControl"/>.
         /// </summary>
-        /// <param name="alias">Alias of the control.</param>
+        /// <param name="space">amount of space to use, if set to 0 it defaults to 1 line worth of space.</param>
         /// <returns>A new <see cref="LabelControl"/> object.</returns>
         public SpaceControl(int space = 0) : base("")
         {
