@@ -55,7 +55,7 @@ namespace VRLabs.SimpleShaderInspectors
                     foreach (var t in add.AdditionalProperties)
                     {
                         t.FetchProperty(properties);
-                        if(t.Property == null)
+                        if(t.Property == null && t.IsPropertyMandatory)
                             errs.Add(t.PropertyName);
                     }
                 }

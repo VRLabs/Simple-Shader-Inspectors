@@ -125,7 +125,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         public GradientTextureControl(string propertyName, string colorPropertyName = null) : base(propertyName)
         {
             AdditionalProperties = new AdditionalProperty[1];
-            AdditionalProperties[0] = new AdditionalProperty(colorPropertyName);
+            AdditionalProperties[0] = new AdditionalProperty(colorPropertyName, false);
             if (!string.IsNullOrWhiteSpace(colorPropertyName))
             {
                 HasExtra1 = true;
