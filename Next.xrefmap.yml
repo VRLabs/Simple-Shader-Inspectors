@@ -109,18 +109,30 @@ references:
   commentId: T:VRLabs.SimpleShaderInspectors.AdditionalProperty
   fullName: VRLabs.SimpleShaderInspectors.AdditionalProperty
   nameWithType: AdditionalProperty
-- uid: VRLabs.SimpleShaderInspectors.AdditionalProperty.#ctor(System.String)
-  name: AdditionalProperty(String)
-  href: Next/api/VRLabs.SimpleShaderInspectors.AdditionalProperty.-ctor.html#VRLabs_SimpleShaderInspectors_AdditionalProperty__ctor_System_String_
-  commentId: M:VRLabs.SimpleShaderInspectors.AdditionalProperty.#ctor(System.String)
-  fullName: VRLabs.SimpleShaderInspectors.AdditionalProperty.AdditionalProperty(System.String)
-  nameWithType: AdditionalProperty.AdditionalProperty(String)
+- uid: VRLabs.SimpleShaderInspectors.AdditionalProperty.#ctor(System.String,System.Boolean)
+  name: AdditionalProperty(String, Boolean)
+  href: Next/api/VRLabs.SimpleShaderInspectors.AdditionalProperty.-ctor.html#VRLabs_SimpleShaderInspectors_AdditionalProperty__ctor_System_String_System_Boolean_
+  commentId: M:VRLabs.SimpleShaderInspectors.AdditionalProperty.#ctor(System.String,System.Boolean)
+  fullName: VRLabs.SimpleShaderInspectors.AdditionalProperty.AdditionalProperty(System.String, System.Boolean)
+  nameWithType: AdditionalProperty.AdditionalProperty(String, Boolean)
 - uid: VRLabs.SimpleShaderInspectors.AdditionalProperty.#ctor*
   name: AdditionalProperty
   href: Next/api/VRLabs.SimpleShaderInspectors.AdditionalProperty.-ctor.html
   commentId: Overload:VRLabs.SimpleShaderInspectors.AdditionalProperty.#ctor
   fullName: VRLabs.SimpleShaderInspectors.AdditionalProperty.AdditionalProperty
   nameWithType: AdditionalProperty.AdditionalProperty
+- uid: VRLabs.SimpleShaderInspectors.AdditionalProperty.IsPropertyMandatory
+  name: IsPropertyMandatory
+  href: Next/api/VRLabs.SimpleShaderInspectors.AdditionalProperty.IsPropertyMandatory.html#VRLabs_SimpleShaderInspectors_AdditionalProperty_IsPropertyMandatory
+  commentId: P:VRLabs.SimpleShaderInspectors.AdditionalProperty.IsPropertyMandatory
+  fullName: VRLabs.SimpleShaderInspectors.AdditionalProperty.IsPropertyMandatory
+  nameWithType: AdditionalProperty.IsPropertyMandatory
+- uid: VRLabs.SimpleShaderInspectors.AdditionalProperty.IsPropertyMandatory*
+  name: IsPropertyMandatory
+  href: Next/api/VRLabs.SimpleShaderInspectors.AdditionalProperty.IsPropertyMandatory.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.AdditionalProperty.IsPropertyMandatory
+  fullName: VRLabs.SimpleShaderInspectors.AdditionalProperty.IsPropertyMandatory
+  nameWithType: AdditionalProperty.IsPropertyMandatory
 - uid: VRLabs.SimpleShaderInspectors.AdditionalProperty.Property
   name: Property
   href: Next/api/VRLabs.SimpleShaderInspectors.AdditionalProperty.Property.html#VRLabs_SimpleShaderInspectors_AdditionalProperty_Property
