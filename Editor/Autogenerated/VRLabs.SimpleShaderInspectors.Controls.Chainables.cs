@@ -14,6 +14,18 @@
             return control;
         }
 
+        public static ConditionalControlContainer AddConditionalControlContainer(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String conditionalProperty, System.Single enableValue)
+        {
+            var control = new ConditionalControlContainer(conditionalProperty, enableValue);
+            container.AddControl(control);
+            return control;
+        }
+        public static T SetIndent<T>(this T control, System.Boolean property) where T : ConditionalControlContainer
+        {
+            control.Indent = property;
+            return control;
+        }
+
         public static ControlContainer AddControlContainer(this VRLabs.SimpleShaderInspectors.IControlContainer container)
         {
             var control = new ControlContainer();
