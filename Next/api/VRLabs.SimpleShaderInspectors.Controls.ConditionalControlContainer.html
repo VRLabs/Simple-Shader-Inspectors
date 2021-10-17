@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface ISimpleShaderInspector
+    <title>Class ConditionalControlContainer
    | Simple Shader Inspectors Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface ISimpleShaderInspector
+    <meta name="title" content="Class ConditionalControlContainer
    | Simple Shader Inspectors Documentation ">
     <meta name="generator" content="docfx 2.58.2.0">
     
@@ -66,33 +66,89 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="VRLabs.SimpleShaderInspectors.ISimpleShaderInspector">
+            <article class="content wrap" id="_content" data-uid="VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer">
   
-  <h1 id="VRLabs_SimpleShaderInspectors_ISimpleShaderInspector" data-uid="VRLabs.SimpleShaderInspectors.ISimpleShaderInspector">Interface ISimpleShaderInspector
+  <h1 id="VRLabs_SimpleShaderInspectors_Controls_ConditionalControlContainer" data-uid="VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer">Class ConditionalControlContainer
   </h1>
-  <div class="markdown level0 summary"><p>Interface indicating that the object is a valid Simple Shader Inspector and can use its features.</p>
+  <div class="markdown level0 summary"><p>Represents a group of controls that is visible only on when a property has a specific float value.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleControl.html">SimpleControl</a></div>
+    <div class="level2"><a class="xref" href="VRLabs.SimpleShaderInspectors.PropertyControl.html">PropertyControl</a></div>
+    <div class="level3"><span class="xref">ConditionalControlContainer</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer.html">IControlContainer</a></div>
+  </div>
   
-  <h6><strong>Namespace</strong>: <a class="xref" href="VRLabs.SimpleShaderInspectors.html">VRLabs.SimpleShaderInspectors</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.html">VRLabs.SimpleShaderInspectors.Controls</a></h6>
   
-  <h5 id="VRLabs_SimpleShaderInspectors_ISimpleShaderInspector_syntax">Syntax</h5>
+  <h5 id="VRLabs_SimpleShaderInspectors_Controls_ConditionalControlContainer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface ISimpleShaderInspector : IControlContainer</code></pre>
+    <pre><code class="lang-csharp hljs">public class ConditionalControlContainer : PropertyControl, IControlContainer</code></pre>
   </div>
   
   
   
   
-  <h5 id="VRLabs_SimpleShaderInspectors_ISimpleShaderInspector_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>By implementing this interface you can create your own inspector that uses the Simple Shader Inspectors library.</p>
-<p>
-It can be useful when you need some really custom behaviour, at the cost oh having to manage the controls initialization, property fetching etc.
-It can be a good starting point to see the source code of <a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleShaderInspector.html">SimpleShaderInspector</a>.
-</p>
+  <h5 id="VRLabs_SimpleShaderInspectors_Controls_ConditionalControlContainer_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>This control has no UI for itself, instead it just displays all controls it has inside itself.</p>
+<p>It can be useful whenever you need to enable, disable or, in general, manage an entire group of controls at once.</p>
+<p>Unlike <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.ControlContainer.html">ControlContainer</a> it has embedded logic to automatically display or hide content based on the given property float value</p>
 </div>
   
+  <h5 id="VRLabs_SimpleShaderInspectors_Controls_ConditionalControlContainer_examples"><strong>Examples</strong></h5>
+  <p>Example Usage:</p>
+<pre><code>// Create control
+ConditionalControlContainer control = this.AddConditionalControlContainer();
+
+// Add controls inside of it
+control.AddPropertyControl(&quot;_ExampleProperty&quot;);
+control.AddColorControl(&quot;_ExampleColor&quot;);</code></pre>
+
+  <h3 id="constructors">Constructors
+  </h3>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="VRLabs_SimpleShaderInspectors_Controls_ConditionalControlContainer__ctor_System_String_System_Single_" data-uid="VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.#ctor(System.String,System.Single)">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.-ctor.html#VRLabs_SimpleShaderInspectors_Controls_ConditionalControlContainer__ctor_System_String_System_Single_">ConditionalControlContainer(String, Single)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Default constructor of <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.html">ConditionalControlContainer</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="VRLabs_SimpleShaderInspectors_Controls_ConditionalControlContainer_EnableValue" data-uid="VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.EnableValue">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.EnableValue.html">EnableValue</a>
+        </td>
+        <td class="markdown level1 summary"><p>Which value enables the control container</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   <table class="table table-bordered table-striped table-condensed">
@@ -104,17 +160,50 @@ It can be a good starting point to see the source code of <a class="xref" href="
     </thead>
     <tbody>
       <tr>
-        <td id="VRLabs_SimpleShaderInspectors_ISimpleShaderInspector_Materials" data-uid="VRLabs.SimpleShaderInspectors.ISimpleShaderInspector.Materials">
-          <a class="xref" href="VRLabs.SimpleShaderInspectors.ISimpleShaderInspector.Materials.html#VRLabs_SimpleShaderInspectors_ISimpleShaderInspector_Materials">Materials</a>
+        <td id="VRLabs_SimpleShaderInspectors_Controls_ConditionalControlContainer_Controls" data-uid="VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.Controls">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.Controls.html#VRLabs_SimpleShaderInspectors_Controls_ConditionalControlContainer_Controls">Controls</a>
         </td>
-        <td class="markdown level1 summary"><p>Array of the materials selected.</p>
+        <td class="markdown level1 summary"><p>List of controls under this control.</p>
 </td>
       </tr>
       <tr>
-        <td id="VRLabs_SimpleShaderInspectors_ISimpleShaderInspector_Shader" data-uid="VRLabs.SimpleShaderInspectors.ISimpleShaderInspector.Shader">
-          <a class="xref" href="VRLabs.SimpleShaderInspectors.ISimpleShaderInspector.Shader.html#VRLabs_SimpleShaderInspectors_ISimpleShaderInspector_Shader">Shader</a>
+        <td id="VRLabs_SimpleShaderInspectors_Controls_ConditionalControlContainer_Indent" data-uid="VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.Indent">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.Indent.html#VRLabs_SimpleShaderInspectors_Controls_ConditionalControlContainer_Indent">Indent</a>
         </td>
-        <td class="markdown level1 summary"><p>Shader this inspector is viewing.</p>
+        <td class="markdown level1 summary"><p>If the controls inside get indented or not.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="VRLabs_SimpleShaderInspectors_Controls_ConditionalControlContainer_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_" data-uid="VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.AddControl.html#VRLabs_SimpleShaderInspectors_Controls_ConditionalControlContainer_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_">AddControl(SimpleControl)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Implementation needed by <a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer.html">IControlContainer</a> to add controls. All controls added are stored in <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.Controls.html#VRLabs_SimpleShaderInspectors_Controls_ConditionalControlContainer_Controls">Controls</a></p>
+</td>
+      </tr>
+      <tr>
+        <td id="VRLabs_SimpleShaderInspectors_Controls_ConditionalControlContainer_ControlGUI_UnityEditor_MaterialEditor_" data-uid="VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.ControlGUI(UnityEditor.MaterialEditor)">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.ControlGUI.html#VRLabs_SimpleShaderInspectors_Controls_ConditionalControlContainer_ControlGUI_UnityEditor_MaterialEditor_">ControlGUI(MaterialEditor)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Draws the control represented by this object.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="VRLabs_SimpleShaderInspectors_Controls_ConditionalControlContainer_GetControlList" data-uid="VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.GetControlList">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.GetControlList.html#VRLabs_SimpleShaderInspectors_Controls_ConditionalControlContainer_GetControlList">GetControlList()</a>
+        </td>
+        <td class="markdown level1 summary"><p>Implementation needed by <a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer.html">IControlContainer</a> to get the object's controls list.</p>
 </td>
       </tr>
     </tbody>
@@ -124,10 +213,25 @@ It can be a good starting point to see the source code of <a class="xref" href="
       <a class="xref" href="VRLabs.SimpleShaderInspectors.Chainables.AddPropertyControl.html#VRLabs_SimpleShaderInspectors_Chainables_AddPropertyControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_">Chainables.AddPropertyControl(IControlContainer, String)</a>
   </div>
   <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Chainables.Alias.html#VRLabs_SimpleShaderInspectors_Chainables_Alias__1___0_System_String_">Chainables.Alias&lt;T&gt;(T, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Chainables.SetVisibility.html#VRLabs_SimpleShaderInspectors_Chainables_SetVisibility__1___0_System_Boolean_">Chainables.SetVisibility&lt;T&gt;(T, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Chainables.SetEnabled.html#VRLabs_SimpleShaderInspectors_Chainables_SetEnabled__1___0_System_Boolean_">Chainables.SetEnabled&lt;T&gt;(T, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Localization.ApplyLocalization.html#VRLabs_SimpleShaderInspectors_Localization_ApplyLocalization_VRLabs_SimpleShaderInspectors_SimpleControl_System_String_System_Boolean_System_Boolean_">Localization.ApplyLocalization(SimpleControl, String, Boolean, Boolean)</a>
+  </div>
+  <div>
       <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddColorControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddColorControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_Boolean_">Chainables.AddColorControl(IControlContainer, String, Boolean)</a>
   </div>
   <div>
       <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddConditionalControlContainer.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddConditionalControlContainer_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_Single_">Chainables.AddConditionalControlContainer(IControlContainer, String, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIndent.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetIndent__1___0_System_Boolean_">Chainables.SetIndent&lt;T&gt;(T, Boolean)</a>
   </div>
   <div>
       <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddControlContainer.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddControlContainer_VRLabs_SimpleShaderInspectors_IControlContainer_">Chainables.AddControlContainer(IControlContainer)</a>

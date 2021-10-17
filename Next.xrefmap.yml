@@ -280,6 +280,18 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddColorControl
   fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddColorControl
   nameWithType: Chainables.AddColorControl
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddConditionalControlContainer(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.Single)
+  name: AddConditionalControlContainer(IControlContainer, String, Single)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddConditionalControlContainer.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddConditionalControlContainer_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_Single_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddConditionalControlContainer(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.Single)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddConditionalControlContainer(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.Single)
+  nameWithType: Chainables.AddConditionalControlContainer(IControlContainer, String, Single)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddConditionalControlContainer*
+  name: AddConditionalControlContainer
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddConditionalControlContainer.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddConditionalControlContainer
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddConditionalControlContainer
+  nameWithType: Chainables.AddConditionalControlContainer
 - uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddControlContainer(VRLabs.SimpleShaderInspectors.IControlContainer)
   name: AddControlContainer(IControlContainer)
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddControlContainer.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddControlContainer_VRLabs_SimpleShaderInspectors_IControlContainer_
@@ -694,6 +706,21 @@ references:
   fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetHasHDRColor(Of T)(T, System.Boolean)
   nameWithType: Chainables.SetHasHDRColor<T>(T, Boolean)
   nameWithType.vb: Chainables.SetHasHDRColor(Of T)(T, Boolean)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIndent*
+  name: SetIndent
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIndent.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIndent
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIndent
+  nameWithType: Chainables.SetIndent
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIndent``1(``0,System.Boolean)
+  name: SetIndent<T>(T, Boolean)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIndent.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetIndent__1___0_System_Boolean_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIndent``1(``0,System.Boolean)
+  name.vb: SetIndent(Of T)(T, Boolean)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIndent<T>(T, System.Boolean)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIndent(Of T)(T, System.Boolean)
+  nameWithType: Chainables.SetIndent<T>(T, Boolean)
+  nameWithType.vb: Chainables.SetIndent(Of T)(T, Boolean)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetLabelStyle*
   name: SetLabelStyle
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetLabelStyle.html
@@ -853,6 +880,90 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.ColorControl.ShowAlphaValue
   fullName: VRLabs.SimpleShaderInspectors.Controls.ColorControl.ShowAlphaValue
   nameWithType: ColorControl.ShowAlphaValue
+- uid: VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer
+  name: ConditionalControlContainer
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.html
+  commentId: T:VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer
+  fullName: VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer
+  nameWithType: ConditionalControlContainer
+- uid: VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.#ctor(System.String,System.Single)
+  name: ConditionalControlContainer(String, Single)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.-ctor.html#VRLabs_SimpleShaderInspectors_Controls_ConditionalControlContainer__ctor_System_String_System_Single_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.#ctor(System.String,System.Single)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.ConditionalControlContainer(System.String, System.Single)
+  nameWithType: ConditionalControlContainer.ConditionalControlContainer(String, Single)
+- uid: VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.#ctor*
+  name: ConditionalControlContainer
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.-ctor.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.#ctor
+  fullName: VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.ConditionalControlContainer
+  nameWithType: ConditionalControlContainer.ConditionalControlContainer
+- uid: VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)
+  name: AddControl(SimpleControl)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.AddControl.html#VRLabs_SimpleShaderInspectors_Controls_ConditionalControlContainer_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)
+  nameWithType: ConditionalControlContainer.AddControl(SimpleControl)
+- uid: VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.AddControl*
+  name: AddControl
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.AddControl.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.AddControl
+  fullName: VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.AddControl
+  nameWithType: ConditionalControlContainer.AddControl
+- uid: VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.ControlGUI(UnityEditor.MaterialEditor)
+  name: ControlGUI(MaterialEditor)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.ControlGUI.html#VRLabs_SimpleShaderInspectors_Controls_ConditionalControlContainer_ControlGUI_UnityEditor_MaterialEditor_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.ControlGUI(UnityEditor.MaterialEditor)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.ControlGUI(UnityEditor.MaterialEditor)
+  nameWithType: ConditionalControlContainer.ControlGUI(MaterialEditor)
+- uid: VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.ControlGUI*
+  name: ControlGUI
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.ControlGUI.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.ControlGUI
+  fullName: VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.ControlGUI
+  nameWithType: ConditionalControlContainer.ControlGUI
+- uid: VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.Controls
+  name: Controls
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.Controls.html#VRLabs_SimpleShaderInspectors_Controls_ConditionalControlContainer_Controls
+  commentId: P:VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.Controls
+  fullName: VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.Controls
+  nameWithType: ConditionalControlContainer.Controls
+- uid: VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.Controls*
+  name: Controls
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.Controls.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.Controls
+  fullName: VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.Controls
+  nameWithType: ConditionalControlContainer.Controls
+- uid: VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.EnableValue
+  name: EnableValue
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.EnableValue.html
+  commentId: F:VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.EnableValue
+  fullName: VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.EnableValue
+  nameWithType: ConditionalControlContainer.EnableValue
+- uid: VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.GetControlList
+  name: GetControlList()
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.GetControlList.html#VRLabs_SimpleShaderInspectors_Controls_ConditionalControlContainer_GetControlList
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.GetControlList
+  fullName: VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.GetControlList()
+  nameWithType: ConditionalControlContainer.GetControlList()
+- uid: VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.GetControlList*
+  name: GetControlList
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.GetControlList.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.GetControlList
+  fullName: VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.GetControlList
+  nameWithType: ConditionalControlContainer.GetControlList
+- uid: VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.Indent
+  name: Indent
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.Indent.html#VRLabs_SimpleShaderInspectors_Controls_ConditionalControlContainer_Indent
+  commentId: P:VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.Indent
+  fullName: VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.Indent
+  nameWithType: ConditionalControlContainer.Indent
+- uid: VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.Indent*
+  name: Indent
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.Indent.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.Indent
+  fullName: VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.Indent
+  nameWithType: ConditionalControlContainer.Indent
 - uid: VRLabs.SimpleShaderInspectors.Controls.ControlContainer
   name: ControlContainer
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.ControlContainer.html
