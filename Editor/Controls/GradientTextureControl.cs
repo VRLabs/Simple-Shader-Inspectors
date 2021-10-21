@@ -26,7 +26,6 @@ namespace VRLabs.SimpleShaderInspectors.Controls
     {
         private GradientTexture _gradient;
         private GradientBlendMode _blendMode;
-        private Material[] _materials;
 
         private GradientWidth _rampWidth;
         private Texture2D[] _previousTextures;
@@ -38,6 +37,8 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         private int _selectedKeyIndex;
 
         private bool _mouseIsDownOverKey;
+        private bool _hasMinValue;
+        private bool _hasMaxValue;
 
         private static readonly string[] _contentNames = {
             "GradientOpenEditor",
@@ -122,14 +123,30 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// </summary>
         /// <param name="propertyName">Name of the gradient texture property.</param>
         /// <param name="colorPropertyName">Name of the relative color property (default: null).</param>
-        public GradientTextureControl(string propertyName, string colorPropertyName = null) : base(propertyName)
+        public GradientTextureControl(string propertyName, string colorPropertyName = null) : this(propertyName, null, null, colorPropertyName)
         {
-            AdditionalProperties = new AdditionalProperty[1];
-            AdditionalProperties[0] = new AdditionalProperty(colorPropertyName, false);
+        }
+        
+        /// <summary>
+        /// Constructor with additional min and max texture color properties.
+        /// </summary>
+        /// <param name="propertyName">Name of the gradient texture property.</param>
+        /// <param name="minColorPropertyName">Minimum color of the gradient.</param>
+        /// <param name="maxColorPropertyName">Maximum color of the gradient.</param>
+        /// <param name="colorPropertyName">Name of the relative color property (default: null).</param>
+        public GradientTextureControl(string propertyName, string minColorPropertyName, string maxColorPropertyName, string colorPropertyName = null) : base(propertyName)
+        {
+            AdditionalProperties = new AdditionalProperty[3];
+            AdditionalProperties[0] = new AdditionalProperty(colorPropertyName);
+            AdditionalProperties[1] = new AdditionalProperty(minColorPropertyName);
+            AdditionalProperties[2] = new AdditionalProperty(maxColorPropertyName);
             if (!string.IsNullOrWhiteSpace(colorPropertyName))
-            {
                 HasExtra1 = true;
-            }
+            if (!string.IsNullOrWhiteSpace(minColorPropertyName))
+                _hasMinValue = true;
+            if (!string.IsNullOrWhiteSpace(maxColorPropertyName))
+                _hasMaxValue = true;
+            
             GradientButtonStyle = Styles.Bubble;
             GradientEditorStyle = Styles.TextureBoxHeavyBorder;
             GradientSaveButtonStyle = Styles.Bubble;
@@ -154,12 +171,8 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <param name="materialEditor">Material editor.</param>
         protected override void ControlGUI(MaterialEditor materialEditor)
         {
-            if (_materials == null)
-                _materials = Array.ConvertAll(materialEditor.targets, item => (Material)item);
-            
             EditorGUI.BeginChangeCheck();
-            if (ShowUvOptions)
-                EditorGUILayout.BeginHorizontal();
+            EditorGUILayout.BeginHorizontal();
             
             if (HasExtra1)
                 materialEditor.TexturePropertySingleLine(Content, Property, AdditionalProperties[0].Property);
@@ -171,20 +184,8 @@ namespace VRLabs.SimpleShaderInspectors.Controls
                 GUI.backgroundColor = UVButtonColor;
                 IsUVButtonPressed = EditorGUILayout.Toggle(IsUVButtonPressed, UVButtonStyle, GUILayout.Width(14.0f), GUILayout.Height(14.0f));
                 GUI.backgroundColor = SimpleShaderInspector.DefaultBgColor;
-                EditorGUILayout.EndHorizontal();
-                if (IsUVButtonPressed)
-                {
-                    GUI.backgroundColor = UVAreaColor;
-                    EditorGUILayout.BeginVertical(UVAreaStyle);
-                    GUI.backgroundColor = SimpleShaderInspector.DefaultBgColor;
-                    EditorGUI.indentLevel++;
-                    materialEditor.TextureScaleOffsetProperty(Property);
-                    EditorGUI.indentLevel--;
-                    EditorGUILayout.EndVertical();
-                }
             }
-            HasPropertyUpdated = EditorGUI.EndChangeCheck();
-
+            
             if (!_isGradientEditorOpen)
             {
                 GUI.backgroundColor = GradientButtonColor;
@@ -192,33 +193,124 @@ namespace VRLabs.SimpleShaderInspectors.Controls
                 {
                     _isGradientEditorOpen = true;
                     _previousTextures = new Texture2D[materialEditor.targets.Length];
-                    for (int i = 0; i < materialEditor.targets.Length; i++)
-                        _previousTextures[i] = (Texture2D)_materials[i].GetTexture(PropertyName);
+                    for (int i = 0; i < Inspector.Materials.Length; i++)
+                        _previousTextures[i] = (Texture2D)Inspector.Materials[i].GetTexture(PropertyName);
                     
                     Selection.selectionChanged += ResetGradientTexture;
                     if (_previousTextures != null)
                         TranslateTextureToGradient(_previousTextures[0]);
-                    
-                    /*else
-                    {
-                        _gradient.Keys = new List<GradientTexture.ColorKey>();
-                        _gradient.Keys.Add(new GradientTexture.ColorKey(Color.white, 0));
-                        _gradient.BlendMode = GradientBlendMode.Linear;
-                        _selectedKeyIndex = 0;
-                    }*/
+
                     Property.textureValue = _gradient.GetTexture();
                 }
                 GUI.backgroundColor = SimpleShaderInspector.DefaultBgColor;
             }
+            
+            HasPropertyUpdated = EditorGUI.EndChangeCheck();
+            
+            EditorGUILayout.EndHorizontal();
+            
+            if (IsUVButtonPressed)
+            {
+                GUI.backgroundColor = UVAreaColor;
+                EditorGUILayout.BeginVertical(UVAreaStyle);
+                GUI.backgroundColor = SimpleShaderInspector.DefaultBgColor;
+                EditorGUI.indentLevel++;
+                materialEditor.TextureScaleOffsetProperty(Property);
+                EditorGUI.indentLevel--;
+                EditorGUILayout.EndVertical();
+            }
+            
+            if (HasPropertyUpdated && (_hasMinValue || _hasMaxValue))
+                UpdateMinMaxProperties();
 
             if (_isGradientEditorOpen)
             {
+                
                 GUI.backgroundColor = GradientEditorColor;
+                EditorGUILayout.BeginHorizontal();
+                int previousIndent = EditorGUI.indentLevel;
+                GUILayout.Space(EditorGUI.indentLevel * 15);
+                EditorGUI.indentLevel = 0;
                 EditorGUILayout.BeginVertical(GradientEditorStyle);
                 GUI.backgroundColor = SimpleShaderInspector.DefaultBgColor;
                 DrawGradientEditor(materialEditor);
                 EditorGUILayout.EndVertical();
+                EditorGUI.indentLevel = previousIndent;
+                EditorGUILayout.EndHorizontal();
             }
+        }
+        
+        private void UpdateMinMaxProperties()
+        {
+            Texture2D ramp = (Texture2D)Property.textureValue;
+            Color min = new Color(100, 100, 100, 0);
+            Color max = new Color(0, 0, 0, 1);
+            if (ramp != null)
+            {
+                if (!ramp.isReadable)
+                {
+                    SSIHelper.SetTextureImporterReadable(ramp, true);
+                }
+                foreach (Color c in ramp.GetPixels())
+                {
+                    if (min.r > c.r) min.r = c.r; 
+                    if (min.g > c.g) min.g = c.g;
+                    if (min.b > c.b) min.b = c.b;
+                    if (max.r < c.r) max.r = c.r;
+                    if (max.g < c.g) max.g = c.g;
+                    if (max.b < c.b) max.b = c.b;
+                }
+            }
+            else
+            {
+                min = new Color(0.9f, 0.9f, 0.9f, 1);
+                max = Color.white;
+            }
+
+            bool textureGamma = ramp.IsSrgb();
+            if (HasExtra1)
+            {
+                bool colorGamma = AdditionalProperties[0].Property.flags != MaterialProperty.PropFlags.HDR;
+                if ( colorGamma && !textureGamma)
+                {
+                    min *= AdditionalProperties[0].Property.colorValue.linear;
+                    max *= AdditionalProperties[0].Property.colorValue.linear;
+                }
+                else if ( !colorGamma && textureGamma)
+                {
+                    min *= AdditionalProperties[0].Property.colorValue.gamma;
+                    max *= AdditionalProperties[0].Property.colorValue.gamma;
+                }
+                else
+                {
+                    min *= AdditionalProperties[0].Property.colorValue;
+                    max *= AdditionalProperties[0].Property.colorValue;
+                }
+                
+            }
+
+            if (_hasMinValue)
+            {
+                bool minColorGamma = AdditionalProperties[1].Property.flags != MaterialProperty.PropFlags.HDR;
+                if (minColorGamma && !textureGamma)
+                    AdditionalProperties[1].Property.colorValue = min.gamma;
+                else if (!minColorGamma && textureGamma)
+                    AdditionalProperties[1].Property.colorValue = min.linear;
+                else
+                    AdditionalProperties[1].Property.colorValue = min;
+            }
+
+            if (_hasMaxValue)
+            {
+                bool maxColorGamma = AdditionalProperties[2].Property.flags != MaterialProperty.PropFlags.HDR;
+                if (maxColorGamma && !textureGamma)
+                    AdditionalProperties[2].Property.colorValue = max.gamma;
+                else if (!maxColorGamma && textureGamma)
+                    AdditionalProperties[2].Property.colorValue = max.linear;
+                else
+                    AdditionalProperties[2].Property.colorValue = max;
+            }
+
         }
 
         private void DrawGradientEditor(MaterialEditor materialEditor)
@@ -475,8 +567,8 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         {
             if (_previousTextures != null)
             {
-                for (int i = 0; i < _materials.Length; i++)
-                    _materials[i].SetTexture(PropertyName, _previousTextures[i]);
+                for (int i = 0; i < Inspector.Materials.Length; i++)
+                    Inspector.Materials[i].SetTexture(PropertyName, _previousTextures[i]);
 
                 _previousTextures = null;
             }
