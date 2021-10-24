@@ -46,6 +46,12 @@
             container.AddControl(control);
             return control;
         }
+        public static GradientTextureControl AddGradientTextureControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String propertyName, System.String minColorPropertyName, System.String maxColorPropertyName, System.String colorPropertyName = null)
+        {
+            var control = new GradientTextureControl(propertyName, minColorPropertyName, maxColorPropertyName, colorPropertyName);
+            container.AddControl(control);
+            return control;
+        }
         public static T SetGradientButtonStyle<T>(this T control, UnityEngine.GUIStyle property) where T : GradientTextureControl
         {
             control.GradientButtonStyle = property;
