@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering;
 
 namespace VRLabs.SimpleShaderInspectors
 {
@@ -218,7 +219,8 @@ namespace VRLabs.SimpleShaderInspectors
         /// <param name="texture">Texture to save.</param>
         /// <param name="path">path where you want to save the texture.</param>
         /// <param name="mode">Texture wrap mode (default: Repeat).</param>
-        public static void SaveTexture(Texture2D texture, string path, TextureWrapMode mode = TextureWrapMode.Repeat)
+        /// <param name="linear">If the texture should be saved as linear.</param>
+        public static void SaveTexture(Texture2D texture, string path, TextureWrapMode mode = TextureWrapMode.Repeat, bool linear = false)
         {
             byte[] bytes = texture.EncodeToPNG();
 
@@ -230,6 +232,7 @@ namespace VRLabs.SimpleShaderInspectors
             {
                 t.wrapMode = mode;
                 t.isReadable = true;
+                t.sRGBTexture = !linear;
             }
 
             AssetDatabase.ImportAsset(path);
@@ -242,9 +245,10 @@ namespace VRLabs.SimpleShaderInspectors
         /// <param name="path">path where you want to save the texture.</param>
         /// <param name="mode">Texture wrap mode (default: Repeat).</param>
         /// <returns>A Texture2D that references the newly created asset.</returns>
-        public static Texture2D SaveAndGetTexture(Texture2D texture, string path, TextureWrapMode mode = TextureWrapMode.Repeat)
+        /// <param name="linear">If the texture should be saved as linear</param>
+        public static Texture2D SaveAndGetTexture(Texture2D texture, string path, TextureWrapMode mode = TextureWrapMode.Repeat, bool linear = false)
         {
-            SaveTexture(texture, path, mode);
+            SaveTexture(texture, path, mode, linear);
             path = path.Substring(path.LastIndexOf("Assets", StringComparison.Ordinal));
             return AssetDatabase.LoadAssetAtPath<Texture2D>(path);
         }
@@ -266,6 +270,42 @@ namespace VRLabs.SimpleShaderInspectors
             tImporter.isReadable = isReadable;
             AssetDatabase.ImportAsset(assetPath);
             //AssetDatabase.Refresh();
+        }
+        
+        /// <summary>
+        /// Check if the texture is in srgb.
+        /// </summary>
+        /// <param name="texture">Texture.</param>
+        public static bool IsSrgb(this Texture2D texture)
+        {
+            switch (texture.graphicsFormat)
+            {
+                case GraphicsFormat.R8_SRGB:
+                case GraphicsFormat.R8G8_SRGB:
+                case GraphicsFormat.R8G8B8_SRGB:
+                case GraphicsFormat.R8G8B8A8_SRGB:
+                case GraphicsFormat.B8G8R8_SRGB:
+                case GraphicsFormat.B8G8R8A8_SRGB:
+                case GraphicsFormat.RGBA_DXT3_SRGB:
+                case GraphicsFormat.RGBA_DXT5_SRGB:
+                case GraphicsFormat.RGBA_BC7_SRGB:
+                case GraphicsFormat.RGB_PVRTC_2Bpp_SRGB:
+                case GraphicsFormat.RGB_PVRTC_4Bpp_SRGB:
+                case GraphicsFormat.RGBA_PVRTC_2Bpp_SRGB:
+                case GraphicsFormat.RGBA_PVRTC_4Bpp_SRGB:
+                case GraphicsFormat.RGB_ETC2_SRGB:
+                case GraphicsFormat.RGB_A1_ETC2_SRGB:
+                case GraphicsFormat.RGBA_ETC2_SRGB:
+                case GraphicsFormat.RGBA_ASTC4X4_SRGB:
+                case GraphicsFormat.RGBA_ASTC5X5_SRGB:
+                case GraphicsFormat.RGBA_ASTC6X6_SRGB:
+                case GraphicsFormat.RGBA_ASTC8X8_SRGB:
+                case GraphicsFormat.RGBA_ASTC10X10_SRGB:
+                case GraphicsFormat.RGBA_ASTC12X12_SRGB:
+                    return true;
+                default:
+                    return false;
+            }
         }
         
         /// <summary>
