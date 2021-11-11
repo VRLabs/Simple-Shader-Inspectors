@@ -74,13 +74,13 @@
 <div class="markdown level0 conceptual"></div>
 
 <a id="VRLabs_SimpleShaderInspectors_SSIHelper_SaveAndGetTexture_" data-uid="VRLabs.SimpleShaderInspectors.SSIHelper.SaveAndGetTexture*"></a>
-<h4 id="VRLabs_SimpleShaderInspectors_SSIHelper_SaveAndGetTexture_UnityEngine_Texture2D_System_String_UnityEngine_TextureWrapMode_" data-uid="VRLabs.SimpleShaderInspectors.SSIHelper.SaveAndGetTexture(UnityEngine.Texture2D,System.String,UnityEngine.TextureWrapMode)">SaveAndGetTexture(Texture2D, String, TextureWrapMode)</h4>
+<h4 id="VRLabs_SimpleShaderInspectors_SSIHelper_SaveAndGetTexture_UnityEngine_Texture2D_System_String_UnityEngine_TextureWrapMode_System_Boolean_" data-uid="VRLabs.SimpleShaderInspectors.SSIHelper.SaveAndGetTexture(UnityEngine.Texture2D,System.String,UnityEngine.TextureWrapMode,System.Boolean)">SaveAndGetTexture(Texture2D, String, TextureWrapMode, Boolean)</h4>
 <div class="markdown level1 summary"><p>Saves a texture to a specified path, and returns a reference of the new asset.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="decalaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">public static Texture2D SaveAndGetTexture(Texture2D texture, string path, TextureWrapMode mode = TextureWrapMode.Repeat)</code></pre>
+  <pre><code class="lang-csharp hljs">public static Texture2D SaveAndGetTexture(Texture2D texture, string path, TextureWrapMode mode = TextureWrapMode.Repeat, bool linear = false)</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
 <table class="table table-bordered table-striped table-condensed">
@@ -108,6 +108,12 @@
       <td><span class="xref">UnityEngine.TextureWrapMode</span></td>
       <td><span class="parametername">mode</span></td>
       <td><p>Texture wrap mode (default: Repeat).</p>
+</td>
+    </tr>
+    <tr>
+      <td><span class="xref">System.Boolean</span></td>
+      <td><span class="parametername">linear</span></td>
+      <td><p>If the texture should be saved as linear</p>
 </td>
     </tr>
   </tbody>

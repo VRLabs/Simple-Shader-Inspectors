@@ -325,6 +325,12 @@ references:
   commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String)
   fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.String)
   nameWithType: Chainables.AddGradientTextureControl(IControlContainer, String, String)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String,System.String,System.String)
+  name: AddGradientTextureControl(IControlContainer, String, String, String, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddGradientTextureControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_System_String_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String,System.String,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.String, System.String, System.String)
+  nameWithType: Chainables.AddGradientTextureControl(IControlContainer, String, String, String, String)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl*
   name: AddGradientTextureControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl.html
@@ -1099,6 +1105,12 @@ references:
   commentId: M:VRLabs.SimpleShaderInspectors.Controls.GradientTextureControl.#ctor(System.String,System.String)
   fullName: VRLabs.SimpleShaderInspectors.Controls.GradientTextureControl.GradientTextureControl(System.String, System.String)
   nameWithType: GradientTextureControl.GradientTextureControl(String, String)
+- uid: VRLabs.SimpleShaderInspectors.Controls.GradientTextureControl.#ctor(System.String,System.String,System.String,System.String)
+  name: GradientTextureControl(String, String, String, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.GradientTextureControl.-ctor.html#VRLabs_SimpleShaderInspectors_Controls_GradientTextureControl__ctor_System_String_System_String_System_String_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.GradientTextureControl.#ctor(System.String,System.String,System.String,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.GradientTextureControl.GradientTextureControl(System.String, System.String, System.String, System.String)
+  nameWithType: GradientTextureControl.GradientTextureControl(String, String, String, String)
 - uid: VRLabs.SimpleShaderInspectors.Controls.GradientTextureControl.#ctor*
   name: GradientTextureControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.GradientTextureControl.-ctor.html
@@ -2529,6 +2541,18 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.TextureControl.ControlGUI
   fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.ControlGUI
   nameWithType: TextureControl.ControlGUI
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.DrawSideContent(UnityEditor.MaterialEditor)
+  name: DrawSideContent(MaterialEditor)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.DrawSideContent.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_DrawSideContent_UnityEditor_MaterialEditor_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.TextureControl.DrawSideContent(UnityEditor.MaterialEditor)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.DrawSideContent(UnityEditor.MaterialEditor)
+  nameWithType: TextureControl.DrawSideContent(MaterialEditor)
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.DrawSideContent*
+  name: DrawSideContent
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.DrawSideContent.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.TextureControl.DrawSideContent
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.DrawSideContent
+  nameWithType: TextureControl.DrawSideContent
 - uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.DrawTextureSingleLine(UnityEditor.MaterialEditor)
   name: DrawTextureSingleLine(MaterialEditor)
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.DrawTextureSingleLine.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_DrawTextureSingleLine_UnityEditor_MaterialEditor_
@@ -2541,6 +2565,12 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.TextureControl.DrawTextureSingleLine
   fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.DrawTextureSingleLine
   nameWithType: TextureControl.DrawTextureSingleLine
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.HasCustomInlineContent
+  name: HasCustomInlineContent
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.HasCustomInlineContent.html
+  commentId: F:VRLabs.SimpleShaderInspectors.Controls.TextureControl.HasCustomInlineContent
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.HasCustomInlineContent
+  nameWithType: TextureControl.HasCustomInlineContent
 - uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.HasExtra1
   name: HasExtra1
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.HasExtra1.html
@@ -2679,6 +2709,18 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.ControlGUI
   fullName: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.ControlGUI
   nameWithType: TextureGeneratorControl.ControlGUI
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.DrawSideContent(UnityEditor.MaterialEditor)
+  name: DrawSideContent(MaterialEditor)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.DrawSideContent.html#VRLabs_SimpleShaderInspectors_Controls_TextureGeneratorControl_DrawSideContent_UnityEditor_MaterialEditor_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.DrawSideContent(UnityEditor.MaterialEditor)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.DrawSideContent(UnityEditor.MaterialEditor)
+  nameWithType: TextureGeneratorControl.DrawSideContent(MaterialEditor)
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.DrawSideContent*
+  name: DrawSideContent
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.DrawSideContent.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.DrawSideContent
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.DrawSideContent
+  nameWithType: TextureGeneratorControl.DrawSideContent
 - uid: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.GeneratorButtonColor
   name: GeneratorButtonColor
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.GeneratorButtonColor.html#VRLabs_SimpleShaderInspectors_Controls_TextureGeneratorControl_GeneratorButtonColor
@@ -4070,24 +4112,36 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.SSIHelper.GetTextureDestinationPath
   fullName: VRLabs.SimpleShaderInspectors.SSIHelper.GetTextureDestinationPath
   nameWithType: SSIHelper.GetTextureDestinationPath
-- uid: VRLabs.SimpleShaderInspectors.SSIHelper.SaveAndGetTexture(UnityEngine.Texture2D,System.String,UnityEngine.TextureWrapMode)
-  name: SaveAndGetTexture(Texture2D, String, TextureWrapMode)
-  href: Next/api/VRLabs.SimpleShaderInspectors.SSIHelper.SaveAndGetTexture.html#VRLabs_SimpleShaderInspectors_SSIHelper_SaveAndGetTexture_UnityEngine_Texture2D_System_String_UnityEngine_TextureWrapMode_
-  commentId: M:VRLabs.SimpleShaderInspectors.SSIHelper.SaveAndGetTexture(UnityEngine.Texture2D,System.String,UnityEngine.TextureWrapMode)
-  fullName: VRLabs.SimpleShaderInspectors.SSIHelper.SaveAndGetTexture(UnityEngine.Texture2D, System.String, UnityEngine.TextureWrapMode)
-  nameWithType: SSIHelper.SaveAndGetTexture(Texture2D, String, TextureWrapMode)
+- uid: VRLabs.SimpleShaderInspectors.SSIHelper.IsSrgb(UnityEngine.Texture2D)
+  name: IsSrgb(Texture2D)
+  href: Next/api/VRLabs.SimpleShaderInspectors.SSIHelper.IsSrgb.html#VRLabs_SimpleShaderInspectors_SSIHelper_IsSrgb_UnityEngine_Texture2D_
+  commentId: M:VRLabs.SimpleShaderInspectors.SSIHelper.IsSrgb(UnityEngine.Texture2D)
+  fullName: VRLabs.SimpleShaderInspectors.SSIHelper.IsSrgb(UnityEngine.Texture2D)
+  nameWithType: SSIHelper.IsSrgb(Texture2D)
+- uid: VRLabs.SimpleShaderInspectors.SSIHelper.IsSrgb*
+  name: IsSrgb
+  href: Next/api/VRLabs.SimpleShaderInspectors.SSIHelper.IsSrgb.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.SSIHelper.IsSrgb
+  fullName: VRLabs.SimpleShaderInspectors.SSIHelper.IsSrgb
+  nameWithType: SSIHelper.IsSrgb
+- uid: VRLabs.SimpleShaderInspectors.SSIHelper.SaveAndGetTexture(UnityEngine.Texture2D,System.String,UnityEngine.TextureWrapMode,System.Boolean)
+  name: SaveAndGetTexture(Texture2D, String, TextureWrapMode, Boolean)
+  href: Next/api/VRLabs.SimpleShaderInspectors.SSIHelper.SaveAndGetTexture.html#VRLabs_SimpleShaderInspectors_SSIHelper_SaveAndGetTexture_UnityEngine_Texture2D_System_String_UnityEngine_TextureWrapMode_System_Boolean_
+  commentId: M:VRLabs.SimpleShaderInspectors.SSIHelper.SaveAndGetTexture(UnityEngine.Texture2D,System.String,UnityEngine.TextureWrapMode,System.Boolean)
+  fullName: VRLabs.SimpleShaderInspectors.SSIHelper.SaveAndGetTexture(UnityEngine.Texture2D, System.String, UnityEngine.TextureWrapMode, System.Boolean)
+  nameWithType: SSIHelper.SaveAndGetTexture(Texture2D, String, TextureWrapMode, Boolean)
 - uid: VRLabs.SimpleShaderInspectors.SSIHelper.SaveAndGetTexture*
   name: SaveAndGetTexture
   href: Next/api/VRLabs.SimpleShaderInspectors.SSIHelper.SaveAndGetTexture.html
   commentId: Overload:VRLabs.SimpleShaderInspectors.SSIHelper.SaveAndGetTexture
   fullName: VRLabs.SimpleShaderInspectors.SSIHelper.SaveAndGetTexture
   nameWithType: SSIHelper.SaveAndGetTexture
-- uid: VRLabs.SimpleShaderInspectors.SSIHelper.SaveTexture(UnityEngine.Texture2D,System.String,UnityEngine.TextureWrapMode)
-  name: SaveTexture(Texture2D, String, TextureWrapMode)
-  href: Next/api/VRLabs.SimpleShaderInspectors.SSIHelper.SaveTexture.html#VRLabs_SimpleShaderInspectors_SSIHelper_SaveTexture_UnityEngine_Texture2D_System_String_UnityEngine_TextureWrapMode_
-  commentId: M:VRLabs.SimpleShaderInspectors.SSIHelper.SaveTexture(UnityEngine.Texture2D,System.String,UnityEngine.TextureWrapMode)
-  fullName: VRLabs.SimpleShaderInspectors.SSIHelper.SaveTexture(UnityEngine.Texture2D, System.String, UnityEngine.TextureWrapMode)
-  nameWithType: SSIHelper.SaveTexture(Texture2D, String, TextureWrapMode)
+- uid: VRLabs.SimpleShaderInspectors.SSIHelper.SaveTexture(UnityEngine.Texture2D,System.String,UnityEngine.TextureWrapMode,System.Boolean)
+  name: SaveTexture(Texture2D, String, TextureWrapMode, Boolean)
+  href: Next/api/VRLabs.SimpleShaderInspectors.SSIHelper.SaveTexture.html#VRLabs_SimpleShaderInspectors_SSIHelper_SaveTexture_UnityEngine_Texture2D_System_String_UnityEngine_TextureWrapMode_System_Boolean_
+  commentId: M:VRLabs.SimpleShaderInspectors.SSIHelper.SaveTexture(UnityEngine.Texture2D,System.String,UnityEngine.TextureWrapMode,System.Boolean)
+  fullName: VRLabs.SimpleShaderInspectors.SSIHelper.SaveTexture(UnityEngine.Texture2D, System.String, UnityEngine.TextureWrapMode, System.Boolean)
+  nameWithType: SSIHelper.SaveTexture(Texture2D, String, TextureWrapMode, Boolean)
 - uid: VRLabs.SimpleShaderInspectors.SSIHelper.SaveTexture*
   name: SaveTexture
   href: Next/api/VRLabs.SimpleShaderInspectors.SSIHelper.SaveTexture.html

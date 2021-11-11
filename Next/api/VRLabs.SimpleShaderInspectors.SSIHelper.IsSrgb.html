@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Method AddGradientTextureControl
+    <title>Method IsSrgb
    | Simple Shader Inspectors Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Method AddGradientTextureControl
+    <meta name="title" content="Method IsSrgb
    | Simple Shader Inspectors Documentation ">
     <meta name="generator" content="docfx 2.58.2.0">
     
@@ -66,20 +66,21 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl*">
+            <article class="content wrap" id="_content" data-uid="VRLabs.SimpleShaderInspectors.SSIHelper.IsSrgb*">
 
-<h1 id="VRLabs_SimpleShaderInspectors_Controls_Chainables_AddGradientTextureControl_" data-uid="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl*">Method AddGradientTextureControl
+<h1 id="VRLabs_SimpleShaderInspectors_SSIHelper_IsSrgb_" data-uid="VRLabs.SimpleShaderInspectors.SSIHelper.IsSrgb*">Method IsSrgb
 </h1>
 <div class="markdown level0 summary"></div>
 <div class="markdown level0 conceptual"></div>
 
-<a id="VRLabs_SimpleShaderInspectors_Controls_Chainables_AddGradientTextureControl_" data-uid="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl*"></a>
-<h4 id="VRLabs_SimpleShaderInspectors_Controls_Chainables_AddGradientTextureControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_" data-uid="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String)">AddGradientTextureControl(IControlContainer, String, String)</h4>
-<div class="markdown level1 summary"></div>
+<a id="VRLabs_SimpleShaderInspectors_SSIHelper_IsSrgb_" data-uid="VRLabs.SimpleShaderInspectors.SSIHelper.IsSrgb*"></a>
+<h4 id="VRLabs_SimpleShaderInspectors_SSIHelper_IsSrgb_UnityEngine_Texture2D_" data-uid="VRLabs.SimpleShaderInspectors.SSIHelper.IsSrgb(UnityEngine.Texture2D)">IsSrgb(Texture2D)</h4>
+<div class="markdown level1 summary"><p>Check if the texture is in srgb.</p>
+</div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="decalaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">public static GradientTextureControl AddGradientTextureControl(this IControlContainer container, string propertyName, string colorPropertyName = null)</code></pre>
+  <pre><code class="lang-csharp hljs">public static bool IsSrgb(this Texture2D texture)</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
 <table class="table table-bordered table-striped table-condensed">
@@ -92,19 +93,10 @@
   </thead>
   <tbody>
     <tr>
-      <td><a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer.html">IControlContainer</a></td>
-      <td><span class="parametername">container</span></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><span class="xref">System.String</span></td>
-      <td><span class="parametername">propertyName</span></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><span class="xref">System.String</span></td>
-      <td><span class="parametername">colorPropertyName</span></td>
-      <td></td>
+      <td><span class="xref">UnityEngine.Texture2D</span></td>
+      <td><span class="parametername">texture</span></td>
+      <td><p>Texture.</p>
+</td>
     </tr>
   </tbody>
 </table>
@@ -118,67 +110,7 @@
   </thead>
   <tbody>
     <tr>
-      <td><a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.GradientTextureControl.html">GradientTextureControl</a></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
-<a id="VRLabs_SimpleShaderInspectors_Controls_Chainables_AddGradientTextureControl_" data-uid="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl*"></a>
-<h4 id="VRLabs_SimpleShaderInspectors_Controls_Chainables_AddGradientTextureControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_System_String_System_String_" data-uid="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String,System.String,System.String)">AddGradientTextureControl(IControlContainer, String, String, String, String)</h4>
-<div class="markdown level1 summary"></div>
-<div class="markdown level1 conceptual"></div>
-<h5 class="decalaration">Declaration</h5>
-<div class="codewrapper">
-  <pre><code class="lang-csharp hljs">public static GradientTextureControl AddGradientTextureControl(this IControlContainer container, string propertyName, string minColorPropertyName, string maxColorPropertyName, string colorPropertyName = null)</code></pre>
-</div>
-<h5 class="parameters">Parameters</h5>
-<table class="table table-bordered table-striped table-condensed">
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Name</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer.html">IControlContainer</a></td>
-      <td><span class="parametername">container</span></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><span class="xref">System.String</span></td>
-      <td><span class="parametername">propertyName</span></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><span class="xref">System.String</span></td>
-      <td><span class="parametername">minColorPropertyName</span></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><span class="xref">System.String</span></td>
-      <td><span class="parametername">maxColorPropertyName</span></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><span class="xref">System.String</span></td>
-      <td><span class="parametername">colorPropertyName</span></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
-<h5 class="returns">Returns</h5>
-<table class="table table-bordered table-striped table-condensed">
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.GradientTextureControl.html">GradientTextureControl</a></td>
+      <td><span class="xref">System.Boolean</span></td>
       <td></td>
     </tr>
   </tbody>
