@@ -133,7 +133,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             GradientButtonStyle = Styles.Bubble;
             GradientEditorStyle = Styles.TextureBoxHeavyBorder;
             GradientSaveButtonStyle = Styles.Bubble;
-            ShowOptions = false;
+            ShowTilingAndOffset = false;
 
             GradientButtonColor = Color.white;
             GradientEditorColor = Color.white;
@@ -158,7 +158,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
                 _materials = Array.ConvertAll(materialEditor.targets, item => (Material)item);
             
             EditorGUI.BeginChangeCheck();
-            if (ShowOptions)
+            if (ShowTilingAndOffset || Controls.Count > 0)
                 EditorGUILayout.BeginHorizontal();
             
             if (_hasExtra1)
@@ -166,7 +166,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             else
                 materialEditor.TexturePropertySingleLine(Content, Property);
             
-            if (ShowOptions)
+            if (ShowTilingAndOffset || Controls.Count > 0)
             {
                 GUI.backgroundColor = OptionsButtonColor;
                 _isOptionsButtonPressed = EditorGUILayout.Toggle(_isOptionsButtonPressed, OptionsButtonStyle, GUILayout.Width(18.0f), GUILayout.Height(18.0f));
@@ -178,7 +178,8 @@ namespace VRLabs.SimpleShaderInspectors.Controls
                     EditorGUILayout.BeginVertical(OptionsAreaStyle);
                     GUI.backgroundColor = SimpleShaderInspector.DefaultBgColor;
                     EditorGUI.indentLevel++;
-                    materialEditor.TextureScaleOffsetProperty(Property);
+                    if (ShowTilingAndOffset)
+                        materialEditor.TextureScaleOffsetProperty(Property);
                     foreach (var control in Controls)
                         control.DrawControl(materialEditor);
                     EditorGUI.indentLevel--;

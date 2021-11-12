@@ -73,15 +73,15 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// All controls that have been added by extension methods.
         /// </value>
         public List<SimpleControl> Controls { get; set; }
-        
+
         /// <summary>
-        /// Boolean that defines if the control will show up an additional button to have access to the texture tiling and offset options.
+        /// Boolean that defines if the control will show up the texture tiling and offset options in the options area.
         /// </summary>
         /// <value>
-        /// True if the control has to show the button for uv tiling and offset, false otherwise.
+        /// True if the control has to show the uv tiling and offset, false otherwise.
         /// </value>
-        [Chainable] public bool ShowOptions { get; set; }
-
+        [Chainable] public bool ShowTilingAndOffset { get; set; }
+        
         /// <summary>
         /// Boolean that defines if the control needs to render the second material property as an hdr color field,
         /// only works if there is only one extra property and it's a color property.
@@ -92,34 +92,34 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         [Chainable] public bool HasHDRColor { get; set; }
 
         /// <summary>
-        /// Style for the tiling and offset options button.
+        /// Style for the options button.
         /// </summary>
         /// <value>
-        /// GUIStyle used when displaying the tiling and offset button.
+        /// GUIStyle used when displaying the button.
         /// </value>
         [Chainable] public GUIStyle OptionsButtonStyle { get; set; }
         
         /// <summary>
-        /// Style for the tiling and offset background area.
+        /// Style for the options background area.
         /// </summary>
         /// <value>
-        /// GUIStyle used for the background of the tiling and offset area.
+        /// GUIStyle used for the background of the options area.
         /// </value>
         [Chainable] public GUIStyle OptionsAreaStyle { get; set; }
 
         /// <summary>
-        /// Color for the tiling and offset button.
+        /// Color for the options button.
         /// </summary>
         /// <value>
-        /// Color used when displaying the tiling and offset button.
+        /// Color used when displaying the options button.
         /// </value>
         [Chainable] public Color OptionsButtonColor { get; set; }
         
         /// <summary>
-        /// Background color for the uv button.
+        /// Background color for the options area.
         /// </summary>
         /// <value>
-        /// Color used when displaying the background for the tiling and offset area.
+        /// Color used when displaying the background for options area.
         /// </value>
         [Chainable] public Color OptionsAreaColor { get; set; }
 
@@ -147,8 +147,8 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             OptionsAreaStyle = Styles.TextureBoxHeavyBorder;
             OptionsButtonColor = Color.white;
             OptionsAreaColor = Color.white;
-
-            ShowOptions = false;
+            
+            ShowTilingAndOffset = false;
         }
 
         /// <summary>
@@ -163,7 +163,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         protected void DrawTextureSingleLine(MaterialEditor materialEditor)
         {
             EditorGUI.BeginChangeCheck();
-            if (ShowOptions)
+            if (ShowTilingAndOffset || Controls.Count > 0)
                 EditorGUILayout.BeginHorizontal();
             
             if (_hasExtra2)
@@ -181,7 +181,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             {
                 materialEditor.TexturePropertySingleLine(Content, Property);
             }
-            if (ShowOptions)
+            if (ShowTilingAndOffset || Controls.Count > 0)
             {
                 GUI.backgroundColor = OptionsButtonColor;
                 _isOptionsButtonPressed = EditorGUILayout.Toggle(_isOptionsButtonPressed, OptionsButtonStyle, GUILayout.Width(18.0f), GUILayout.Height(18.0f));
@@ -193,7 +193,8 @@ namespace VRLabs.SimpleShaderInspectors.Controls
                     EditorGUILayout.BeginVertical(OptionsAreaStyle);
                     GUI.backgroundColor = SimpleShaderInspector.DefaultBgColor;
                     EditorGUI.indentLevel++;
-                    materialEditor.TextureScaleOffsetProperty(Property);
+                    if (ShowTilingAndOffset)
+                        materialEditor.TextureScaleOffsetProperty(Property);
                     foreach (var control in Controls)
                         control.DrawControl(materialEditor);
                     EditorGUI.indentLevel--;
@@ -206,7 +207,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <summary>
         /// Implementation needed by <see cref="IControlContainer"/> to add controls. All controls added are stored in <see cref="Controls"/>.
         ///
-        /// These controls are going to be displayed inside the options area, so if the control is set to not show options these controls won't effectively be displayed at all.
+        /// These controls are going to be displayed inside the options area, after the tiling and offset option (it enabled).
         /// </summary>
         /// <param name="control">Control to add.</param>
         public void AddControl(SimpleControl control) => Controls.Add(control);

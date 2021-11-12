@@ -111,9 +111,9 @@
             container.AddControl(control);
             return control;
         }
-        public static T SetShowOptions<T>(this T control, System.Boolean property) where T : TextureControl
+        public static T SetShowTilingAndOffset<T>(this T control, System.Boolean property) where T : TextureControl
         {
-            control.ShowOptions = property;
+            control.ShowTilingAndOffset = property;
             return control;
         }
         public static T SetHasHDRColor<T>(this T control, System.Boolean property) where T : TextureControl

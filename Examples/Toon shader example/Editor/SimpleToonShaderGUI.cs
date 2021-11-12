@@ -9,7 +9,7 @@ namespace VRLabs.SimpleShaderInspectorsExamples
     {
         protected override void Start()
         {
-            this.AddTextureControl("_MainTex", "_Color").Alias("Main texture").SetShowOptions(true);
+            this.AddTextureControl("_MainTex", "_Color").Alias("Main texture").SetShowTilingAndOffset(true);
             this.AddGradientTextureControl("_Ramp", "_RampColor").Alias("Ramp");
             this.AddPropertyControl("_ShadowIntensity").Alias("Shadow intensity");
         }
