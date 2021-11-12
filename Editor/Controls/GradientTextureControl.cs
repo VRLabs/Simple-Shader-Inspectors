@@ -147,10 +147,12 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             if (!string.IsNullOrWhiteSpace(maxColorPropertyName))
                 _hasMaxValue = true;
             
+            Controls = new List<SimpleControl>();
+            
             GradientButtonStyle = Styles.Bubble;
             GradientEditorStyle = Styles.TextureBoxHeavyBorder;
             GradientSaveButtonStyle = Styles.Bubble;
-            ShowUvOptions = false;
+            ShowTilingAndOffset = false;
 
             GradientButtonColor = Color.white;
             GradientEditorColor = Color.white;
@@ -179,10 +181,10 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             else
                 materialEditor.TexturePropertySingleLine(Content, Property);
             
-            if (ShowUvOptions)
+            if (ShowTilingAndOffset || Controls.Count > 0)
             {
-                GUI.backgroundColor = UVButtonColor;
-                IsUVButtonPressed = EditorGUILayout.Toggle(IsUVButtonPressed, UVButtonStyle, GUILayout.Width(14.0f), GUILayout.Height(14.0f));
+                GUI.backgroundColor = OptionsButtonColor;
+                IsOptionsButtonPressed = EditorGUILayout.Toggle(IsOptionsButtonPressed, OptionsButtonStyle, GUILayout.Width(19.0f), GUILayout.Height(19.0f));
                 GUI.backgroundColor = SimpleShaderInspector.DefaultBgColor;
             }
             
@@ -209,13 +211,16 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             
             EditorGUILayout.EndHorizontal();
             
-            if (IsUVButtonPressed)
+            if (IsOptionsButtonPressed)
             {
-                GUI.backgroundColor = UVAreaColor;
-                EditorGUILayout.BeginVertical(UVAreaStyle);
+                GUI.backgroundColor = OptionsAreaColor;
+                EditorGUILayout.BeginVertical(OptionsAreaStyle);
                 GUI.backgroundColor = SimpleShaderInspector.DefaultBgColor;
                 EditorGUI.indentLevel++;
-                materialEditor.TextureScaleOffsetProperty(Property);
+                if (ShowTilingAndOffset)
+                    materialEditor.TextureScaleOffsetProperty(Property);
+                foreach (var control in Controls)
+                    control.DrawControl(materialEditor);
                 EditorGUI.indentLevel--;
                 EditorGUILayout.EndVertical();
             }

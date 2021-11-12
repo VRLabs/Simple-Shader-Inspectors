@@ -21,11 +21,11 @@ namespace VRLabs.SimpleShaderInspectorsExamples
         private OrderedSection _ordered4;
         protected override void Start()
         {
-            this.AddTextureControl("_MainTex", "_Color").Alias("Main texture").SetShowUvOptions(true);
+            this.AddTextureControl("_MainTex", "_Color").Alias("Main texture").SetShowTilingAndOffset(true);
 
             _layersSection = this.AddActivatableSection("_AdditionalMasksEnable").Alias("Layers header")
                 .SetBackgroundColor(Color.cyan).SetAreControlsInHeader(true);
-            _layersSection.AddTextureGeneratorControl("_AdditionalMasks").Alias("Layers mask").SetShowUvOptions(true);
+            _layersSection.AddTextureGeneratorControl("_AdditionalMasks").Alias("Layers mask").SetShowTilingAndOffset(true);
             _layersSection.AddSpaceControl();
 
             _rChannel = _layersSection.AddSection().Alias("Red channel");
