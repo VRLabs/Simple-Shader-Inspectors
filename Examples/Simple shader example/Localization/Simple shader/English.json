@@ -1,6 +1,11 @@
 {
     "Properties": [
         {
+            "Name": "HelpBox",
+            "DisplayName": "This is an Example Info TextBox with the \"IsWideBox\" value set to false",
+            "Tooltip": ""
+        },
+        {
             "Name": "Main texture",
             "DisplayName": "Albedo (RGB)",
             "Tooltip": "Albedo (RGB)"
