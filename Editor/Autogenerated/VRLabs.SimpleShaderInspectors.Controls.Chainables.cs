@@ -111,9 +111,9 @@
             container.AddControl(control);
             return control;
         }
-        public static T SetShowUvOptions<T>(this T control, System.Boolean property) where T : TextureControl
+        public static T SetShowOptions<T>(this T control, System.Boolean property) where T : TextureControl
         {
-            control.ShowUvOptions = property;
+            control.ShowOptions = property;
             return control;
         }
         public static T SetHasHDRColor<T>(this T control, System.Boolean property) where T : TextureControl
@@ -121,24 +121,24 @@
             control.HasHDRColor = property;
             return control;
         }
-        public static T SetUVButtonStyle<T>(this T control, UnityEngine.GUIStyle property) where T : TextureControl
+        public static T SetOptionsButtonStyle<T>(this T control, UnityEngine.GUIStyle property) where T : TextureControl
         {
-            control.UVButtonStyle = property;
+            control.OptionsButtonStyle = property;
             return control;
         }
-        public static T SetUVAreaStyle<T>(this T control, UnityEngine.GUIStyle property) where T : TextureControl
+        public static T SetOptionsAreaStyle<T>(this T control, UnityEngine.GUIStyle property) where T : TextureControl
         {
-            control.UVAreaStyle = property;
+            control.OptionsAreaStyle = property;
             return control;
         }
-        public static T SetUVButtonColor<T>(this T control, UnityEngine.Color property) where T : TextureControl
+        public static T SetOptionsButtonColor<T>(this T control, UnityEngine.Color property) where T : TextureControl
         {
-            control.UVButtonColor = property;
+            control.OptionsButtonColor = property;
             return control;
         }
-        public static T SetUVAreaColor<T>(this T control, UnityEngine.Color property) where T : TextureControl
+        public static T SetOptionsAreaColor<T>(this T control, UnityEngine.Color property) where T : TextureControl
         {
-            control.UVAreaColor = property;
+            control.OptionsAreaColor = property;
             return control;
         }
 
