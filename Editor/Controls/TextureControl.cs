@@ -174,6 +174,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             if (ShowTilingAndOffset || Controls.Count > 0 || HasCustomInlineContent)
                 EditorGUILayout.BeginHorizontal();
             
+            EditorGUILayout.BeginVertical();
             if (HasExtra2)
             {
                 materialEditor.TexturePropertySingleLine(Content, Property, AdditionalProperties[0].Property, AdditionalProperties[1].Property);
@@ -189,6 +190,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             {
                 materialEditor.TexturePropertySingleLine(Content, Property);
             }
+            EditorGUILayout.EndVertical();
             
             if (HasCustomInlineContent)
                 DrawSideContent(materialEditor);
@@ -208,15 +210,19 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             if (IsOptionsButtonPressed)
             {
                 GUI.backgroundColor = OptionsAreaColor;
+                EditorGUILayout.BeginHorizontal();
+                int previousIndent = EditorGUI.indentLevel;
+                GUILayout.Space(EditorGUI.indentLevel * 15);
+                EditorGUI.indentLevel = 0;
                 EditorGUILayout.BeginVertical(OptionsAreaStyle);
                 GUI.backgroundColor = SimpleShaderInspector.DefaultBgColor;
-                EditorGUI.indentLevel++;
                 if (ShowTilingAndOffset)
                     materialEditor.TextureScaleOffsetProperty(Property);
                 foreach (var control in Controls)
                     control.DrawControl(materialEditor);
-                EditorGUI.indentLevel--;
                 EditorGUILayout.EndVertical();
+                EditorGUI.indentLevel = previousIndent;
+                EditorGUILayout.EndHorizontal();
             }
         }
         

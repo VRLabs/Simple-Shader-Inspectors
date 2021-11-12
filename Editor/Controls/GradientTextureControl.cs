@@ -214,6 +214,10 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             if (IsOptionsButtonPressed)
             {
                 GUI.backgroundColor = OptionsAreaColor;
+                EditorGUILayout.BeginHorizontal();
+                int previousIndent = EditorGUI.indentLevel;
+                GUILayout.Space(EditorGUI.indentLevel * 15);
+                EditorGUI.indentLevel = 0;
                 EditorGUILayout.BeginVertical(OptionsAreaStyle);
                 GUI.backgroundColor = SimpleShaderInspector.DefaultBgColor;
                 EditorGUI.indentLevel++;
@@ -223,6 +227,8 @@ namespace VRLabs.SimpleShaderInspectors.Controls
                     control.DrawControl(materialEditor);
                 EditorGUI.indentLevel--;
                 EditorGUILayout.EndVertical();
+                EditorGUI.indentLevel = previousIndent;
+                EditorGUILayout.EndHorizontal();
             }
             
             if (HasPropertyUpdated && (_hasMinValue || _hasMaxValue))
