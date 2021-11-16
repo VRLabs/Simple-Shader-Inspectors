@@ -137,7 +137,10 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             EditorGUI.BeginChangeCheck();
             Enabled = EditorGUILayout.Toggle(Enabled, GUILayout.MaxWidth(20.0f));
             HasActivatePropertyUpdated = EditorGUI.EndChangeCheck();
-            EditorGUILayout.LabelField(Content, LabelStyle);
+            float rectWidth = GUILayoutUtility.GetLastRect().width;
+            float rectHeight = GUILayoutUtility.GetRect(Content, LabelStyle).height;
+            Rect r2 = new Rect(r.x + rectWidth, r.y, r.width - (rectWidth * 2), Math.Max(rectHeight, r.height));
+            GUI.Label(r2, Content, LabelStyle);
 
             Show = GUI.Toggle(r, Show, GUIContent.none, new GUIStyle());
             HasPropertyUpdated = EditorGUI.EndChangeCheck();

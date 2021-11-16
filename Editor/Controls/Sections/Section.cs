@@ -271,7 +271,10 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             if (ShowFoldoutArrow)
                 Show = EditorGUILayout.Toggle(Show, EditorStyles.foldout, GUILayout.MaxWidth(15.0f));
             
-            EditorGUILayout.LabelField(Content, LabelStyle);
+            float rectWidth = GUILayoutUtility.GetLastRect().width;
+            float rectHeight = GUILayoutUtility.GetRect(Content, LabelStyle).height;
+            Rect r2 = new Rect(r.x + rectWidth, r.y, r.width - (rectWidth * 2), Math.Max(rectHeight, r.height));
+            GUI.Label(r2, Content, LabelStyle);
             //DrawUpDownButtons();
             //isEnabled = EditorGUILayout.Toggle(isEnabled, TSConstants.Styles.deleteStyle, GUILayout.MaxWidth(15.0f));
 
