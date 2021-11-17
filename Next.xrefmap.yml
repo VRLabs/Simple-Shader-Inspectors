@@ -4025,6 +4025,24 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.SimpleShaderInspector.StartChecks
   fullName: VRLabs.SimpleShaderInspectors.SimpleShaderInspector.StartChecks
   nameWithType: SimpleShaderInspector.StartChecks
+- uid: VRLabs.SimpleShaderInspectors.SSIConstants
+  name: SSIConstants
+  href: Next/api/VRLabs.SimpleShaderInspectors.SSIConstants.html
+  commentId: T:VRLabs.SimpleShaderInspectors.SSIConstants
+  fullName: VRLabs.SimpleShaderInspectors.SSIConstants
+  nameWithType: SSIConstants
+- uid: VRLabs.SimpleShaderInspectors.SSIConstants.RESOURCES_FOLDER
+  name: RESOURCES_FOLDER
+  href: Next/api/VRLabs.SimpleShaderInspectors.SSIConstants.RESOURCES_FOLDER.html
+  commentId: F:VRLabs.SimpleShaderInspectors.SSIConstants.RESOURCES_FOLDER
+  fullName: VRLabs.SimpleShaderInspectors.SSIConstants.RESOURCES_FOLDER
+  nameWithType: SSIConstants.RESOURCES_FOLDER
+- uid: VRLabs.SimpleShaderInspectors.SSIConstants.WINDOW_PATH
+  name: WINDOW_PATH
+  href: Next/api/VRLabs.SimpleShaderInspectors.SSIConstants.WINDOW_PATH.html
+  commentId: F:VRLabs.SimpleShaderInspectors.SSIConstants.WINDOW_PATH
+  fullName: VRLabs.SimpleShaderInspectors.SSIConstants.WINDOW_PATH
+  nameWithType: SSIConstants.WINDOW_PATH
 - uid: VRLabs.SimpleShaderInspectors.SSIGUIHelper
   name: SSIGUIHelper
   href: Next/api/VRLabs.SimpleShaderInspectors.SSIGUIHelper.html
@@ -4667,12 +4685,18 @@ references:
   commentId: T:VRLabs.SimpleShaderInspectors.Tools.EmbedLibraryEditor
   fullName: VRLabs.SimpleShaderInspectors.Tools.EmbedLibraryEditor
   nameWithType: EmbedLibraryEditor
-- uid: VRLabs.SimpleShaderInspectors.Tools.EmbedLibraryEditor.IDENTIFIER
-  name: IDENTIFIER
-  href: Next/api/VRLabs.SimpleShaderInspectors.Tools.EmbedLibraryEditor.IDENTIFIER.html
-  commentId: F:VRLabs.SimpleShaderInspectors.Tools.EmbedLibraryEditor.IDENTIFIER
-  fullName: VRLabs.SimpleShaderInspectors.Tools.EmbedLibraryEditor.IDENTIFIER
-  nameWithType: EmbedLibraryEditor.IDENTIFIER
+- uid: VRLabs.SimpleShaderInspectors.Tools.EmbedLibraryEditor.CreateGUI
+  name: CreateGUI()
+  href: Next/api/VRLabs.SimpleShaderInspectors.Tools.EmbedLibraryEditor.CreateGUI.html#VRLabs_SimpleShaderInspectors_Tools_EmbedLibraryEditor_CreateGUI
+  commentId: M:VRLabs.SimpleShaderInspectors.Tools.EmbedLibraryEditor.CreateGUI
+  fullName: VRLabs.SimpleShaderInspectors.Tools.EmbedLibraryEditor.CreateGUI()
+  nameWithType: EmbedLibraryEditor.CreateGUI()
+- uid: VRLabs.SimpleShaderInspectors.Tools.EmbedLibraryEditor.CreateGUI*
+  name: CreateGUI
+  href: Next/api/VRLabs.SimpleShaderInspectors.Tools.EmbedLibraryEditor.CreateGUI.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Tools.EmbedLibraryEditor.CreateGUI
+  fullName: VRLabs.SimpleShaderInspectors.Tools.EmbedLibraryEditor.CreateGUI
+  nameWithType: EmbedLibraryEditor.CreateGUI
 - uid: VRLabs.SimpleShaderInspectors.Tools.LocalizationEditorWindow
   name: LocalizationEditorWindow
   href: Next/api/VRLabs.SimpleShaderInspectors.Tools.LocalizationEditorWindow.html

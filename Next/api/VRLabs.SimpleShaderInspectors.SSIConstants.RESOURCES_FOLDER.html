@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class EmbedLibraryEditor
+    <title>Field RESOURCES_FOLDER
    | Simple Shader Inspectors Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class EmbedLibraryEditor
+    <meta name="title" content="Field RESOURCES_FOLDER
    | Simple Shader Inspectors Documentation ">
     <meta name="generator" content="docfx 2.58.2.0">
     
@@ -66,52 +66,39 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="VRLabs.SimpleShaderInspectors.Tools.EmbedLibraryEditor">
-  
-  <h1 id="VRLabs_SimpleShaderInspectors_Tools_EmbedLibraryEditor" data-uid="VRLabs.SimpleShaderInspectors.Tools.EmbedLibraryEditor">Class EmbedLibraryEditor
-  </h1>
-  <div class="markdown level0 summary"><p>Editor window that embeds the Simple Shader Inspectors library into any custom editor folder with customized namespace.</p>
+            <article class="content wrap" id="_content" data-uid="VRLabs.SimpleShaderInspectors.SSIConstants.RESOURCES_FOLDER">
+
+<h1 id="VRLabs_SimpleShaderInspectors_SSIConstants_RESOURCES_FOLDER" data-uid="VRLabs.SimpleShaderInspectors.SSIConstants.RESOURCES_FOLDER">Field RESOURCES_FOLDER
+</h1>
+<div class="markdown level0 summary"><p>Default name of the subfolder of the Resources folder containing all the resources needed for the library.</p>
 </div>
-  <div class="markdown level0 conceptual"></div>
-  
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">UnityEngine.Object</span></div>
-    <div class="level2"><span class="xref">UnityEngine.ScriptableObject</span></div>
-    <div class="level3"><span class="xref">UnityEditor.EditorWindow</span></div>
-    <div class="level4"><span class="xref">EmbedLibraryEditor</span></div>
-  </div>
-  
-  <h6><strong>Namespace</strong>: <a class="xref" href="VRLabs.SimpleShaderInspectors.Tools.html">VRLabs.SimpleShaderInspectors.Tools</a></h6>
-  
-  <h5 id="VRLabs_SimpleShaderInspectors_Tools_EmbedLibraryEditor_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class EmbedLibraryEditor : EditorWindow</code></pre>
-  </div>
-  
-  
-  
-  
-  
-  <h3 id="methods">Methods
-  </h3>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td id="VRLabs_SimpleShaderInspectors_Tools_EmbedLibraryEditor_CreateGUI" data-uid="VRLabs.SimpleShaderInspectors.Tools.EmbedLibraryEditor.CreateGUI">
-          <a class="xref" href="VRLabs.SimpleShaderInspectors.Tools.EmbedLibraryEditor.CreateGUI.html#VRLabs_SimpleShaderInspectors_Tools_EmbedLibraryEditor_CreateGUI">CreateGUI()</a>
-        </td>
-        <td class="markdown level1 summary"></td>
-      </tr>
-    </tbody>
-  </table>
+<div class="markdown level0 conceptual"></div>
+
+
+<h6><strong>Namespace</strong>: <a class="xref" href="VRLabs.SimpleShaderInspectors.html">VRLabs.SimpleShaderInspectors</a></h6>
+
+<h5 id="VRLabs_SimpleShaderInspectors_SSIConstants_RESOURCES_FOLDER_syntax">Syntax</h5>
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public const string RESOURCES_FOLDER = &quot;SSI&quot;</code></pre>
+</div>
+
+
+<h5 class="returns">Returns</h5>
+<table>
+  <tr>
+    <td>
+      <span class="xref">System.String</span>
+      <p>
+    </td>
+  </tr>
+</table>
+
+
+<h5 id="VRLabs_SimpleShaderInspectors_SSIConstants_RESOURCES_FOLDER_remarks"><strong>Remarks</strong></h5>
+<div class="markdown level0 remarks"><p>A custom folder name is needed to differentiate different installed versions of the libraries from multiple shaders, you HAVE to use a different name when embedding the library to your shader project,
+or else conflicts may arise whenever someone who already has the official library will also download your shader, especially when the 2 versions don't match up.</p>
+</div>
+
 </article>
           </div>
           
