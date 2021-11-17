@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://github.com/VRLabs/SimpleShaderInspectors">
-    <img alt="Simple Shader Inspectors" width="200" heigth="200" src="https://github.com/VRLabs/SimpleShaderInspectors/blob/master/Editor/Resources/Textures/Logo/SSILogo.png">
+    <img alt="Simple Shader Inspectors" width="200" heigth="200" src="https://github.com/VRLabs/SimpleShaderInspectors/blob/master/Editor/Resources/SSI/Textures/Logo/SSILogo.png">
   </a>
   <h1>Simple Shader Inspectors</h1>
   <p>
@@ -83,8 +83,8 @@ Simple Shader Inspectors is available as-is under MIT. For more information see 
 
 There are 3 packages available in [Releases](https://github.com/VRLabs/SimpleShaderInspectors/releases/latest):
 
-- **Simple Shader Inspector:** base library for the end user.
-- **Simple Shader Inspector dev:** development vesion for shader creators, contains some extra tools compared to the base library.
+- **Simple Shader Inspectors:** base library for the end user.
+- **Simple Shader Inspectors dev:** development vesion for shader creators, contains some extra tools compared to the base library.
 - **Example inspectors:** good place to start looking on how the library works, requires one of the 2 packages above in order to work.
 
 You can also download the repository itself, but unless you're looking into contributing in the project it is highly discouraged since it will very likely not end up in the right folder, possibly ending up causing problems later down the road.
