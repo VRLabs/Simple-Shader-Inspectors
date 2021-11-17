@@ -367,9 +367,9 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             if (!col.Equals(_gradient.Keys[_selectedKeyIndex].Color))
                 _gradient.UpdateKeyColor(_selectedKeyIndex, col);
 
-            float time = EditorGUILayout.FloatField(_gradient.Keys[_selectedKeyIndex].Time);
-            if (time != _gradient.Keys[_selectedKeyIndex].Time)
-                _gradient.UpdateKeyTime(_selectedKeyIndex, time);
+            float time = (float)Math.Round(EditorGUILayout.FloatField(_gradient.Keys[_selectedKeyIndex].Time), 3);
+            if (Math.Abs(time - _gradient.Keys[_selectedKeyIndex].Time) > 0.0001)
+                _selectedKeyIndex = _gradient.UpdateKeyTime(_selectedKeyIndex, time);
 
             _rampWidth = (GradientWidth)EditorGUILayout.EnumPopup(_rampWidth);
             if ((int)_rampWidth != _gradient.GetTexture().width)
@@ -472,6 +472,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
 
         private void TranslateTextureToGradient(Texture2D texture)
         {
+            if (texture == null) return;
             if (!texture.isReadable)
                 SSIHelper.SetTextureImporterReadable(texture, true);
             
