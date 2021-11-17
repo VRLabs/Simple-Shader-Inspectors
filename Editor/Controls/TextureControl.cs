@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
@@ -26,7 +27,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
     /// this.AddTextureControl("_TextureProperty", "_ColorProperty").SetShowUvOptions(true);
     /// </code>
     /// </example>
-    public class TextureControl : PropertyControl, IAdditionalProperties
+    public class TextureControl : PropertyControl, IAdditionalProperties, IControlContainer
     {
         /// <summary>
         /// Indicates if the control has the first extra property.
@@ -34,7 +35,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <value>
         /// True if the control had the first extra property, false otherwise.
         /// </value>
-        protected bool _hasExtra1 = false;
+        protected bool HasExtra1;
 
         /// <summary>
         /// Indicates if the control has the second extra property.
@@ -42,15 +43,31 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <value>
         /// True if the control had the second extra property, false otherwise.
         /// </value>
-        protected bool _hasExtra2 = false;
+        protected bool HasExtra2;
+        
+        /// <summary>
+        /// Indicates if controls inheriting from this one have something to display inlined with the texture.
+        /// </summary>
+        /// <value>
+        /// True if the control has something to inline to the texture, false otherwise.
+        /// </value>
+        protected bool HasCustomInlineContent = false;
 
         /// <summary>
-        /// Indicates if the uv button is pressed and the tiling and offset area is visible.
+        /// Indicates if the options button is pressed and the option area is visible.
         /// </summary>
         /// <value>
         /// True if the button is pressed, false otherwise.
         /// </value>
-        protected bool _isUVButtonPressed = false;
+        protected bool IsOptionsButtonPressed;
+        
+        /// <summary>
+        /// List of controls under this control's options.
+        /// </summary>
+        /// <value>
+        /// All controls that have been added by extension methods.
+        /// </value>
+        public List<SimpleControl> Controls { get; set; }
 
         /// <summary>
         /// Extra properties array. Implementation of <see cref="IAdditionalProperties"/>.
@@ -66,12 +83,12 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         public AdditionalProperty[] AdditionalProperties { get; set; }
 
         /// <summary>
-        /// Boolean that defines if the control will show up an additional button to have access to the texture tiling and offset options.
+        /// Boolean that defines if the control will show up the texture tiling and offset options in the options area.
         /// </summary>
         /// <value>
-        /// True if the control has to show the button for uv tiling and offset, false otherwise.
+        /// True if the control has to show the uv tiling and offset, false otherwise.
         /// </value>
-        [Chainable] public bool ShowUvOptions { get; set; }
+        [Chainable] public bool ShowTilingAndOffset { get; set; }
 
         /// <summary>
         /// Boolean that defines if the control needs to render the second material property as an hdr color field,
@@ -83,36 +100,36 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         [Chainable] public bool HasHDRColor { get; set; }
 
         /// <summary>
-        /// Style for the tiling and offset options button.
+        /// Style for the options button.
         /// </summary>
         /// <value>
-        /// GUIStyle used when displaying the tiling and offset button.
+        /// GUIStyle used when displaying the button.
         /// </value>
-        [Chainable] public GUIStyle UVButtonStyle { get; set; }
+        [Chainable] public GUIStyle OptionsButtonStyle { get; set; }
         
         /// <summary>
-        /// Style for the tiling and offset background area.
+        /// Style for the options background area.
         /// </summary>
         /// <value>
-        /// GUIStyle used for the background of the tiling and offset area.
+        /// GUIStyle used for the background of the options area.
         /// </value>
-        [Chainable] public GUIStyle UVAreaStyle { get; set; }
+        [Chainable] public GUIStyle OptionsAreaStyle { get; set; }
 
         /// <summary>
-        /// Color for the tiling and offset button.
+        /// Color for the options button.
         /// </summary>
         /// <value>
-        /// Color used when displaying the tiling and offset button.
+        /// Color used when displaying the options button.
         /// </value>
-        [Chainable] public Color UVButtonColor { get; set; }
+        [Chainable] public Color OptionsButtonColor { get; set; }
         
         /// <summary>
-        /// Background color for the uv button.
+        /// Background color for the options area.
         /// </summary>
         /// <value>
-        /// Color used when displaying the background for the tiling and offset area.
+        /// Color used when displaying the background for options area.
         /// </value>
-        [Chainable] public Color UVAreaColor { get; set; }
+        [Chainable] public Color OptionsAreaColor { get; set; }
 
         /// <summary>
         /// Default constructor of <see cref="TextureControl"/>
@@ -124,20 +141,22 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         public TextureControl(string propertyName, string extraPropertyName1 = null, string extraPropertyName2 = null) : base(propertyName)
         {
             AdditionalProperties = new AdditionalProperty[2];
-            AdditionalProperties[0] = new AdditionalProperty(extraPropertyName1);
+            AdditionalProperties[0] = new AdditionalProperty(extraPropertyName1, false);
             if (!string.IsNullOrWhiteSpace(extraPropertyName1))
-                _hasExtra1 = true;
+                HasExtra1 = true;
             
-            AdditionalProperties[1] = new AdditionalProperty(extraPropertyName2);
+            AdditionalProperties[1] = new AdditionalProperty(extraPropertyName2, false);
             if (!string.IsNullOrWhiteSpace(extraPropertyName2))
-                _hasExtra2 = true;
+                HasExtra2 = true;
+            
+            Controls = new List<SimpleControl>();
 
-            UVButtonStyle = Styles.GearIcon;
-            UVAreaStyle = Styles.TextureBoxHeavyBorder;
-            UVButtonColor = Color.white;
-            UVAreaColor = Color.white;
+            OptionsButtonStyle = Styles.GearIcon;
+            OptionsAreaStyle = Styles.TextureBoxHeavyBorder;
+            OptionsButtonColor = Color.white;
+            OptionsAreaColor = Color.white;
 
-            ShowUvOptions = false;
+            ShowTilingAndOffset = false;
         }
 
         /// <summary>
@@ -152,14 +171,15 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         protected void DrawTextureSingleLine(MaterialEditor materialEditor)
         {
             EditorGUI.BeginChangeCheck();
-            if (ShowUvOptions)
+            if (ShowTilingAndOffset || Controls.Count > 0 || HasCustomInlineContent)
                 EditorGUILayout.BeginHorizontal();
             
-            if (_hasExtra2)
+            EditorGUILayout.BeginVertical();
+            if (HasExtra2)
             {
                 materialEditor.TexturePropertySingleLine(Content, Property, AdditionalProperties[0].Property, AdditionalProperties[1].Property);
             }
-            else if (_hasExtra1)
+            else if (HasExtra1)
             {
                 if (AdditionalProperties[0].Property.type == MaterialProperty.PropType.Color && HasHDRColor)
                     materialEditor.TexturePropertyWithHDRColorFixed(Content, Property, AdditionalProperties[0].Property, true);
@@ -170,24 +190,59 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             {
                 materialEditor.TexturePropertySingleLine(Content, Property);
             }
-            if (ShowUvOptions)
+            EditorGUILayout.EndVertical();
+            
+            if (HasCustomInlineContent)
+                DrawSideContent(materialEditor);
+            
+            if (ShowTilingAndOffset || Controls.Count > 0)
             {
-                GUI.backgroundColor = UVButtonColor;
-                _isUVButtonPressed = EditorGUILayout.Toggle(_isUVButtonPressed, UVButtonStyle, GUILayout.Width(16.0f), GUILayout.Height(16.0f));
+                GUI.backgroundColor = OptionsButtonColor;
+                IsOptionsButtonPressed = EditorGUILayout.Toggle(IsOptionsButtonPressed, OptionsButtonStyle, GUILayout.Width(19.0f), GUILayout.Height(19.0f));
                 GUI.backgroundColor = SimpleShaderInspector.DefaultBgColor;
-                EditorGUILayout.EndHorizontal();
-                if (_isUVButtonPressed)
-                {
-                    GUI.backgroundColor = UVAreaColor;
-                    EditorGUILayout.BeginVertical(UVAreaStyle);
-                    GUI.backgroundColor = SimpleShaderInspector.DefaultBgColor;
-                    EditorGUI.indentLevel++;
-                    materialEditor.TextureScaleOffsetProperty(Property);
-                    EditorGUI.indentLevel--;
-                    EditorGUILayout.EndVertical();
-                }
+                
             }
+            if (ShowTilingAndOffset || Controls.Count > 0 || HasCustomInlineContent)
+                EditorGUILayout.EndHorizontal();
+            
             HasPropertyUpdated = EditorGUI.EndChangeCheck();
+            
+            if (IsOptionsButtonPressed)
+            {
+                GUI.backgroundColor = OptionsAreaColor;
+                EditorGUILayout.BeginHorizontal();
+                int previousIndent = EditorGUI.indentLevel;
+                GUILayout.Space(EditorGUI.indentLevel * 15);
+                EditorGUI.indentLevel = 0;
+                EditorGUILayout.BeginVertical(OptionsAreaStyle);
+                GUI.backgroundColor = SimpleShaderInspector.DefaultBgColor;
+                if (ShowTilingAndOffset)
+                    materialEditor.TextureScaleOffsetProperty(Property);
+                foreach (var control in Controls)
+                    control.DrawControl(materialEditor);
+                EditorGUILayout.EndVertical();
+                EditorGUI.indentLevel = previousIndent;
+                EditorGUILayout.EndHorizontal();
+            }
         }
+        
+        protected virtual void DrawSideContent(MaterialEditor materialEditor)
+        {
+        }
+        
+        /// <summary>
+        /// Implementation needed by <see cref="IControlContainer"/> to add controls. All controls added are stored in <see cref="Controls"/>.
+        ///
+        /// These controls are going to be displayed inside the options area, after the tiling and offset option (it enabled).
+        /// </summary>
+        /// <param name="control">Control to add.</param>
+        public void AddControl(SimpleControl control) => Controls.Add(control);
+
+
+        /// <summary>
+        /// Implementation needed by <see cref="IControlContainer"/> to get the object's controls list.
+        /// </summary>
+        /// <returns><see cref="Controls"/></returns>
+        public IEnumerable<SimpleControl> GetControlList() => Controls;
     }
 }

@@ -24,37 +24,67 @@ namespace VRLabs.SimpleShaderInspectors.Tools
             return window;
         }
 
-        private string _destinationPath = null;
-        private string _namespace = null;
+        private int _selectedNamespace;
+        private string _controlsNamespace;
+
+        private string[] _namespaces;
 
         void OnGUI()
         {
-            EditorGUILayout.Space();
-            if (GUILayout.Button("Select destination folder"))
-            {
-                string path = EditorUtility.OpenFolderPanel("Select destination folder to use", "Assets", "Editor");
-                _destinationPath = path.Length == 0 ? null : path;
-            }
-            GUILayout.Label("Selected folder: " + _destinationPath, Styles.MultilineLabel);
-            if (_destinationPath is null)
-                EditorGUILayout.HelpBox("You need to select a folder.", MessageType.Warning);
+            if (_namespaces == null) _namespaces = GetCompatibleNamespaces();
             
+            EditorGUILayout.Space();
             EditorGUILayout.Space();
             EditorGUI.BeginChangeCheck();
-            _namespace = EditorGUILayout.TextField("Namespace", _namespace);
+            _selectedNamespace = EditorGUILayout.Popup("SSI Namespace", _selectedNamespace, _namespaces);
+            _controlsNamespace = EditorGUILayout.TextField("Controls Namespace", _controlsNamespace);
             EditorGUILayout.Space();
-
-            EditorGUI.BeginDisabledGroup(string.IsNullOrWhiteSpace(_destinationPath) || string.IsNullOrWhiteSpace(_namespace));
-            if (GUILayout.Button("Generate chainables"))
-                GenerateChainables(_destinationPath, _namespace);
             
+            if (GUILayout.Button("Generate chainables"))
+            {
+                string path = EditorUtility.OpenFolderPanel("Select destination folder to use", "Assets", "Editor");
+                string destinationPath = path.Length == 0 ? null : path;
+                if (!string.IsNullOrWhiteSpace(destinationPath))
+                {
+                    if (string.IsNullOrWhiteSpace(_controlsNamespace)) _controlsNamespace = _namespaces[_selectedNamespace];
+                    GenerateChainables(destinationPath, _namespaces[_selectedNamespace], _controlsNamespace);
+                }
+            }
+
             EditorGUI.EndDisabledGroup();
         }
-        private static void GenerateChainables(string destinationPath, string nmsc)
+
+        private static string[] GetCompatibleNamespaces()
         {
-            var types = AppDomain.CurrentDomain.GetAssemblies()
+            return AppDomain.CurrentDomain
+                .GetAssemblies()
                 .SelectMany(x => x.GetTypes())
-                .Where(x => x.IsClass && !string.IsNullOrEmpty(x.Namespace) && x.Namespace.Contains(nmsc) && x.IsSubclassOf(typeof(SimpleControl)))
+                .Where(x => x.IsClass && x.Name.Equals("SimpleControl"))
+                .Select(x => x.Namespace)
+                .ToArray();
+        }
+
+        private static void GenerateChainables(string destinationPath, string nmsc, string controlsNmsc)
+        {
+            var ssiTypes = AppDomain.CurrentDomain
+                .GetAssemblies()
+                .SelectMany(x => x.GetTypes())
+                .Where(x => !string.IsNullOrEmpty(x.Namespace) && x.Namespace.Contains(nmsc))
+                .ToList();
+            
+            var simpleControlType = ssiTypes.FirstOrDefault(x => x.IsClass && x.Name.Equals("SimpleControl"));
+            if (simpleControlType == null) return;
+            
+            var chainableAttributeType = ssiTypes.FirstOrDefault(x => x.IsClass && x.Name.Equals("ChainableAttribute"));
+            if (chainableAttributeType == null) return;
+            
+            var limitScopeAttributeType = ssiTypes.FirstOrDefault(x => x.IsClass && x.Name.Equals("LimitAccessScopeAttribute"));
+            if (limitScopeAttributeType == null) return;
+
+            var types = AppDomain.CurrentDomain
+                .GetAssemblies()
+                .SelectMany(x => x.GetTypes())
+                .Where(x => x.IsClass && !string.IsNullOrEmpty(x.Namespace) && x.Namespace.Contains(controlsNmsc) && x.IsSubclassOf(simpleControlType))
                 .ToList();
 
             foreach (var group in types.GroupBy(x => x.Namespace))
@@ -77,10 +107,10 @@ namespace VRLabs.SimpleShaderInspectors.Tools
                 foreach (var type in group)
                 {
                     foreach (var constructor in type.GetConstructors())
-                        BuildConstructorChainable(content, type, constructor, indent);
+                        BuildConstructorChainable(content, type, limitScopeAttributeType, constructor, indent);
 
                     var chainableProperties = type.GetProperties(BindingFlags.DeclaredOnly | BindingFlags.Instance | BindingFlags.Public)
-                        .Where(y => y.CustomAttributes.Any(z => z.AttributeType == typeof(ChainableAttribute)));
+                        .Where(y => y.CustomAttributes.Any(z => z.AttributeType == chainableAttributeType));
 
                     foreach (var prop in chainableProperties)
                         BuildPropertyChainable(content, type, prop, indent);
@@ -95,7 +125,7 @@ namespace VRLabs.SimpleShaderInspectors.Tools
                 content.Append(Indentation(indent))
                     .AppendLine("}");
 
-                File.WriteAllText($"{destinationPath}\\{group.Key}.Chainables.cs", content.ToString().Replace("\r\n", "\n"), System.Text.Encoding.UTF8);
+                File.WriteAllText($"{destinationPath}\\{group.Key}.Chainables.cs", content.ToString().Replace("\r\n", "\n"), Encoding.UTF8);
             }
 
             AssetDatabase.Refresh();
@@ -121,19 +151,15 @@ namespace VRLabs.SimpleShaderInspectors.Tools
         }
 
         // Append a chainable constructor implementation to the given content.
-        private static void BuildConstructorChainable(StringBuilder content, Type type, System.Reflection.ConstructorInfo constructor, int indentLevel)
+        private static void BuildConstructorChainable(StringBuilder content, Type type, Type limitScopeAttributeType, ConstructorInfo constructor, int indentLevel)
         {
             // Check if the constructor has the limitAccessScope attribute to limit the objects that can access the chainable
-            LimitAccessScopeAttribute limitScopeAttribute =
-                (LimitAccessScopeAttribute)Array.Find(constructor.GetCustomAttributes(false), x => x.GetType() == typeof(LimitAccessScopeAttribute));
+            var limitScopeAttribute = Array.Find(constructor.GetCustomAttributes(false), x => x.GetType() == limitScopeAttributeType);
+            var a = limitScopeAttributeType.GetProperty("BaseType");
+            Type baseType = limitScopeAttribute== null ? null : (Type) a?.GetValue(limitScopeAttribute);
 
-            string typeName;
-            if (limitScopeAttribute != null)
-                typeName = limitScopeAttribute.BaseType.Name;
-            else
-                typeName = "VRLabs.SimpleShaderInspectors.IControlContainer";
-
-
+            string typeName = baseType != null ? baseType.FullName : limitScopeAttributeType.Namespace +".IControlContainer";
+            
             // Chainable constructor header
             content.Append(Indentation(indentLevel))
                 .Append($"public static {GenerateGenericListString(type)} Add{GenerateGenericListString(type)}(this {typeName} container");
@@ -159,13 +185,13 @@ namespace VRLabs.SimpleShaderInspectors.Tools
             indentLevel++;
             content.Append(Indentation(indentLevel))
                 .Append("var control = new ").Append(GenerateGenericListString(type)).Append('(');
-            bool needcomma = false;
+            bool needComma = false;
             foreach (var parameter in constructor.GetParameters())
             {
-                if (needcomma)
+                if (needComma)
                     content.Append(", ");
                 else
-                    needcomma = true;
+                    needComma = true;
                 content.Append(parameter.Name);
             }
             content.AppendLine(");")

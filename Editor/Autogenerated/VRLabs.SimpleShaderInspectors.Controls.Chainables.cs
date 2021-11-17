@@ -14,6 +14,18 @@
             return control;
         }
 
+        public static ConditionalControlContainer AddConditionalControlContainer(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String conditionalProperty, System.Single enableValue)
+        {
+            var control = new ConditionalControlContainer(conditionalProperty, enableValue);
+            container.AddControl(control);
+            return control;
+        }
+        public static T SetIndent<T>(this T control, System.Boolean property) where T : ConditionalControlContainer
+        {
+            control.Indent = property;
+            return control;
+        }
+
         public static ControlContainer AddControlContainer(this VRLabs.SimpleShaderInspectors.IControlContainer container)
         {
             var control = new ControlContainer();
@@ -31,6 +43,12 @@
         public static GradientTextureControl AddGradientTextureControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String propertyName, System.String colorPropertyName = null)
         {
             var control = new GradientTextureControl(propertyName, colorPropertyName);
+            container.AddControl(control);
+            return control;
+        }
+        public static GradientTextureControl AddGradientTextureControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String propertyName, System.String minColorPropertyName, System.String maxColorPropertyName, System.String colorPropertyName = null)
+        {
+            var control = new GradientTextureControl(propertyName, minColorPropertyName, maxColorPropertyName, colorPropertyName);
             container.AddControl(control);
             return control;
         }
@@ -128,9 +146,9 @@
             container.AddControl(control);
             return control;
         }
-        public static T SetShowUvOptions<T>(this T control, System.Boolean property) where T : TextureControl
+        public static T SetShowTilingAndOffset<T>(this T control, System.Boolean property) where T : TextureControl
         {
-            control.ShowUvOptions = property;
+            control.ShowTilingAndOffset = property;
             return control;
         }
         public static T SetHasHDRColor<T>(this T control, System.Boolean property) where T : TextureControl
@@ -138,24 +156,24 @@
             control.HasHDRColor = property;
             return control;
         }
-        public static T SetUVButtonStyle<T>(this T control, UnityEngine.GUIStyle property) where T : TextureControl
+        public static T SetOptionsButtonStyle<T>(this T control, UnityEngine.GUIStyle property) where T : TextureControl
         {
-            control.UVButtonStyle = property;
+            control.OptionsButtonStyle = property;
             return control;
         }
-        public static T SetUVAreaStyle<T>(this T control, UnityEngine.GUIStyle property) where T : TextureControl
+        public static T SetOptionsAreaStyle<T>(this T control, UnityEngine.GUIStyle property) where T : TextureControl
         {
-            control.UVAreaStyle = property;
+            control.OptionsAreaStyle = property;
             return control;
         }
-        public static T SetUVButtonColor<T>(this T control, UnityEngine.Color property) where T : TextureControl
+        public static T SetOptionsButtonColor<T>(this T control, UnityEngine.Color property) where T : TextureControl
         {
-            control.UVButtonColor = property;
+            control.OptionsButtonColor = property;
             return control;
         }
-        public static T SetUVAreaColor<T>(this T control, UnityEngine.Color property) where T : TextureControl
+        public static T SetOptionsAreaColor<T>(this T control, UnityEngine.Color property) where T : TextureControl
         {
-            control.UVAreaColor = property;
+            control.OptionsAreaColor = property;
             return control;
         }
 

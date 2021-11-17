@@ -44,7 +44,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// <value>
         /// Value of the material property when the section is open.
         /// </value>
-        protected readonly float showValue;
+        protected readonly float ShowValue;
 
         /// <summary>
         /// Float value that the Show bool gets converted if false.
@@ -52,7 +52,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// <value>
         /// Value of the material property when the section is closed.
         /// </value>
-        protected readonly float hideValue;
+        protected readonly float HideValue;
 
         /// <summary>
         /// Boolean indicating if the section folding state is driven by an internal dictionary or not. It will be true in case you don't use a material property.
@@ -60,7 +60,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// <value>
         /// True if it uses the internal dictionary, false when it uses a material property.
         /// </value>
-        protected readonly bool useDictionary;
+        protected readonly bool UseDictionary;
 
         /// <summary>
         /// String containing the key value that the section will use for the dictionary.
@@ -68,7 +68,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// <value>
         /// The key used for the dictionary value.
         /// </value>
-        protected string dictionaryKey = null;
+        protected string DictionaryKey;
 
         /// <summary>
         /// Boolean indicating if it's the first ui update.
@@ -76,7 +76,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// <value>
         /// True if it's the first UI update, false otherwise.
         /// </value>
-        protected bool firstCycle = true;
+        protected bool FirstCycle = true;
 
         /// <summary>
         /// List of controls inside this section.
@@ -159,21 +159,21 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         public Section(string propertyName, float hideValue = 0, float showValue = 1) : base(propertyName)
         {
             InitSection();
-            useDictionary = false;
-            this.hideValue = hideValue;
-            this.showValue = showValue;
+            UseDictionary = false;
+            this.HideValue = hideValue;
+            this.ShowValue = showValue;
         }
 
         /// <summary>
         /// Default constructor of <see cref="Section"/>.
         /// </summary>
-        public Section() : base("")
+        public Section() : base("SSI_UNUSED_PROP")
         {
             InitSection();
-            useDictionary = true;
+            UseDictionary = true;
             ControlAlias = "Section";
-            hideValue = 0;
-            showValue = 1;
+            HideValue = 0;
+            ShowValue = 1;
         }
 
         private void InitSection()
@@ -199,27 +199,27 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         protected void SetupEnabled(MaterialEditor materialEditor)
         {
             //bool previousShow = Show;
-            if (useDictionary)
+            if (UseDictionary)
             {
-                if (!firstCycle) return;
+                if (!FirstCycle) return;
                 
-                if (string.IsNullOrWhiteSpace(dictionaryKey))
-                    dictionaryKey = $"{ControlAlias}_{AssetDatabase.AssetPathToGUID(AssetDatabase.GetAssetPath(Inspector.Materials[0]))}_Show";
+                if (string.IsNullOrWhiteSpace(DictionaryKey))
+                    DictionaryKey = $"{ControlAlias}_{AssetDatabase.AssetPathToGUID(AssetDatabase.GetAssetPath(Inspector.Materials[0]))}_Show";
                 
-                if (StaticDictionaries.BoolDictionary.TryGetValue(dictionaryKey, out bool show))
+                if (StaticDictionaries.BoolDictionary.TryGetValue(DictionaryKey, out bool show))
                 {
                     Show = show;
                 }
                 else
                 {
                     Show = false;
-                    StaticDictionaries.BoolDictionary.SetValue(dictionaryKey, Show);
+                    StaticDictionaries.BoolDictionary.SetValue(DictionaryKey, Show);
                 }
-                firstCycle = false;
+                FirstCycle = false;
             }
             else
             {
-                Show = Math.Abs(Property.floatValue - showValue) < 0.001;
+                Show = Math.Abs(Property.floatValue - ShowValue) < 0.001;
             }
         }
 
@@ -234,16 +234,16 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// </remarks>
         protected void UpdateEnabled(MaterialEditor materialEditor)
         {
-            if (useDictionary)
+            if (UseDictionary)
             {
-                StaticDictionaries.BoolDictionary.SetValue(dictionaryKey, Show);
+                StaticDictionaries.BoolDictionary.SetValue(DictionaryKey, Show);
             }
             else
             {
                 if (IsPropertyAnimatable)
                 {
                     materialEditor.RegisterPropertyChangeUndo(Property.displayName);
-                    Property.floatValue = Show ? showValue : hideValue;
+                    Property.floatValue = Show ? ShowValue : HideValue;
                 }
                 else
                 {
@@ -271,7 +271,10 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             if (ShowFoldoutArrow)
                 Show = EditorGUILayout.Toggle(Show, EditorStyles.foldout, GUILayout.MaxWidth(15.0f));
             
-            EditorGUILayout.LabelField(Content, LabelStyle);
+            float rectWidth = ShowFoldoutArrow ? GUILayoutUtility.GetLastRect().width : 0;
+            float rectHeight = GUILayoutUtility.GetRect(Content, LabelStyle).height;
+            Rect r2 = new Rect(r.x + rectWidth, r.y, r.width - (rectWidth * 2), Math.Max(rectHeight, r.height));
+            GUI.Label(r2, Content, LabelStyle);
             //DrawUpDownButtons();
             //isEnabled = EditorGUILayout.Toggle(isEnabled, TSConstants.Styles.deleteStyle, GUILayout.MaxWidth(15.0f));
 
@@ -313,9 +316,9 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// <param name="materialEditor">Material editor.</param>
         public virtual void UpdateNonAnimatableProperty(MaterialEditor materialEditor)
         {
-            if (useDictionary || !HasPropertyUpdated) return;
+            if (UseDictionary || !HasPropertyUpdated) return;
             materialEditor.RegisterPropertyChangeUndo(Property.displayName);
-            Property.floatValue = Show ? showValue : hideValue;
+            Property.floatValue = Show ? ShowValue : HideValue;
         }
         
         public void AddControl(SimpleControl control) => Controls.Add(control);

@@ -42,7 +42,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <value>
         /// String containing the keyword.
         /// </value>
-        protected readonly string keyword;
+        protected readonly string Keyword;
 
         private Material[] _materials;
 
@@ -53,7 +53,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <returns>A new <see cref="KeywordToggleControl"/> object.</returns>
         public KeywordToggleControl(string keyword) : base(keyword)
         {
-            this.keyword = keyword;
+            this.Keyword = keyword;
         }
 
         /// <summary>
@@ -65,16 +65,16 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             if (_materials == null)
                 _materials = Array.ConvertAll(materialEditor.targets, item => (Material)item);
             
-            EditorGUI.showMixedValue = _materials.IsKeywordMixedValue(keyword);
-            ToggleEnabled = _materials[0].IsKeywordEnabled(keyword);
+            EditorGUI.showMixedValue = _materials.IsKeywordMixedValue(Keyword);
+            ToggleEnabled = _materials[0].IsKeywordEnabled(Keyword);
 
             EditorGUI.BeginChangeCheck();
             ToggleEnabled = EditorGUILayout.Toggle(Content, ToggleEnabled);
             HasKeywordUpdated = EditorGUI.EndChangeCheck();
             if (HasKeywordUpdated)
             {
-                materialEditor.RegisterPropertyChangeUndo(keyword);
-                _materials.SetKeyword(keyword, ToggleEnabled);
+                materialEditor.RegisterPropertyChangeUndo(Keyword);
+                _materials.SetKeyword(Keyword, ToggleEnabled);
             }
 
             EditorGUI.showMixedValue = false;

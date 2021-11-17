@@ -1,10 +1,7 @@
 using UnityEditor;
 using UnityEngine;
-using System;
 using System.IO;
-using System.Linq;
 using System.Collections.Generic;
-using System.Text.RegularExpressions;
 using UnityEditorInternal;
 
 namespace VRLabs.SimpleShaderInspectors.Tools
@@ -14,7 +11,7 @@ namespace VRLabs.SimpleShaderInspectors.Tools
     /// </summary>
     public class LocalizationEditorWindow : EditorWindow
     {
-        [MenuItem("VRLabs/Simple Shader Inspectors/Localization file editor")]
+        [MenuItem(SSIConstants.WINDOW_PATH + "/Localization file editor")]
         private static LocalizationEditorWindow CreateWindow()
         {
             LocalizationEditorWindow window = EditorWindow.GetWindow<LocalizationEditorWindow>();
@@ -23,17 +20,23 @@ namespace VRLabs.SimpleShaderInspectors.Tools
         }
 
         private PropertyInfo _activeProperty;
-        private bool _enableNameEditing = false;
+        private bool _enableNameEditing;
         private ReorderableList _list;
         private List<PropertyInfo> _properties;
         private GUIStyle _rightSubLabel;
-        private string _selectedPath = null;
+        private string _selectedPath;
         private Vector2 _scroll;
 
         private void OnEnable()
         {
-            _rightSubLabel = new GUIStyle { alignment = TextAnchor.MiddleRight };
-            _rightSubLabel.normal.textColor = Color.gray;
+            _rightSubLabel = new GUIStyle
+            {
+                alignment = TextAnchor.MiddleRight,
+                normal =
+                {
+                    textColor = Color.gray
+                }
+            };
         }
 
         void OnGUI()
@@ -114,13 +117,13 @@ namespace VRLabs.SimpleShaderInspectors.Tools
                 _list = new ReorderableList(_properties, typeof(PropertyInfo), true, false, true, true)
                 {
                     drawElementCallback = DrawListItems,
-                    onSelectCallback = (ReorderableList l) =>
+                    onSelectCallback = l =>
                     {
                         _activeProperty = _properties[l.index];
                         _enableNameEditing = false;
-                    }
+                    },
+                    index = 0
                 };
-                _list.index = 0;
                 _activeProperty = _properties[0];
             }
             else

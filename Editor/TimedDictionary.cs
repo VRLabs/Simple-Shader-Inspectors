@@ -73,7 +73,7 @@ namespace VRLabs.SimpleShaderInspectors
             foreach(var key in keys)
             {
                 if(_dictionary[key].Item1 < oldestDate)
-                _dictionary.Remove(key);
+                    _dictionary.Remove(key);
             }
         }
 
@@ -83,11 +83,11 @@ namespace VRLabs.SimpleShaderInspectors
         /// <returns>A list with the data</returns>
         public List<(TKey, TValue, DateTime)> GetSerializedDictionary()
         {
-            var srdc = new List<(TKey, TValue, DateTime)>();
+            var serializedDictionary = new List<(TKey, TValue, DateTime)>();
             var keys = _dictionary.Keys;
             foreach(var key in keys)
-                srdc.Add((key, _dictionary[key].Item2, _dictionary[key].Item1));
-            return srdc;
+                serializedDictionary.Add((key, _dictionary[key].Item2, _dictionary[key].Item1));
+            return serializedDictionary;
         }
     }
 }

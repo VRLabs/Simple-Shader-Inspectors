@@ -1,6 +1,26 @@
 {
     "Properties": [
         {
+            "Name": "Ordered1_Path",
+            "DisplayName": "AAA",
+            "Tooltip": ""
+        },
+        {
+            "Name": "Ordered2_Path",
+            "DisplayName": "BBB/CCC",
+            "Tooltip": ""
+        },
+        {
+            "Name": "Ordered3_Path",
+            "DisplayName": "BBB/CCC",
+            "Tooltip": ""
+        },
+        {
+            "Name": "Ordered4_Path",
+            "DisplayName": "",
+            "Tooltip": ""
+        },
+        {
             "Name": "OrderedLabel",
             "DisplayName": "Ordered Sections:",
             "Tooltip": ""

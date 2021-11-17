@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
@@ -44,15 +43,15 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
     /// group.AddOrderedSection("_ActivateProperty", "_ShowProperty", 2, 3, 4, 6); 
     /// </code>
     /// </example>
-    public class OrderedSection : Section, IAdditionalProperties
+    public class OrderedSection : Section, IAdditionalProperties, IAdditionalLocalization
     {
         /// <summary>
         /// Indicates if the section should be pushed up or down relative to its neighbour sections.
         /// </summary>
         /// <value>0 when not moving, -1 when needs to go up, 1 when needs to go down.</value>
         public int PushState;
-        private bool isUp;
-        private bool isDown;
+        private bool _isUp;
+        private bool _isDown;
 
         /// <summary>
         /// Extra properties array. Implementation needed by <see cref="IAdditionalProperties"/>.
@@ -70,6 +69,17 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// </list>
         /// </remarks>
         public AdditionalProperty[] AdditionalProperties { get; set; }
+        
+        /// <summary>
+        /// Extra localization array. Implementation needed by <see cref="IAdditionalLocalization"/>.
+        /// </summary>
+        /// <value>
+        /// Array of <see cref="AdditionalLocalization"/>
+        /// </value>
+        /// <remarks>
+        /// This array will contain 1 element containing the custom path for the ordered section item in the popup menu of the <see cref="OrderedSectionGroup"/> add button.
+        /// </remarks>
+        public AdditionalLocalization[] AdditionalContent { get; set; }
 
         /// <summary>
         /// Boolean indicating if the activate property has been updated this cycle.
@@ -107,11 +117,21 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             set
             {
                 _sectionPosition = value;
-                if (string.IsNullOrWhiteSpace(positionDictionaryKey))
-                    positionDictionaryKey = $"{ControlAlias}_{AssetDatabase.AssetPathToGUID(AssetDatabase.GetAssetPath(Inspector.Materials[0]))}_SectionPosition";
-                StaticDictionaries.IntDictionary.SetValue(positionDictionaryKey, _sectionPosition);
+                if (string.IsNullOrWhiteSpace(_positionDictionaryKey))
+                    _positionDictionaryKey = $"{ControlAlias}_{AssetDatabase.AssetPathToGUID(AssetDatabase.GetAssetPath(Inspector.Materials[0]))}_SectionPosition";
+                StaticDictionaries.IntDictionary.SetValue(_positionDictionaryKey, _sectionPosition);
             }
         }
+
+        /// <summary>
+        /// Custom path for the selection inside the popup of the ordered section group
+        /// </summary>
+        /// <value>The custom path (does not include the section name itself</value>
+        /// <remarks>
+        /// The custom path is taken directly from the localization of it, so that different languages can have their own path names.
+        /// If the path found in the localization equals to the combined "Alias_Name" used for finding the localization, it will automatically be assumed that no path has been given
+        /// </remarks>
+        public string CustomPopupPath => AdditionalContent[0].Content.text.Equals(ControlAlias + "_" + AdditionalContent[0].Name) ? "" : AdditionalContent[0].Content.text;
 
         /// <summary>
         /// Style for the up icon.
@@ -177,7 +197,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// </value>
         protected float disableValue;
 
-        private string positionDictionaryKey;
+        private string _positionDictionaryKey;
 
         /// <summary>
         /// Constructor of <see cref="OrderedSection"/> used when creating a property driven OrderedSection.
@@ -194,6 +214,9 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         {
             AdditionalProperties = new AdditionalProperty[1];
             AdditionalProperties[0] = new AdditionalProperty(activatePropertyName);
+
+            AdditionalContent = new AdditionalLocalization[1];
+            AdditionalContent[0] = new AdditionalLocalization{Name = "Path"};
 
             UpIcon = Styles.UpIcon;
             DownIcon = Styles.DownIcon;
@@ -213,10 +236,13 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// <param name="enableValue">Float value that the material property will have if the section is enabled, optional (default: 1).</param>
         /// <param name="disableValue">Float value that the material property will have if the section is disabled, optional (default: 0).</param>
         [LimitAccessScope(typeof(OrderedSectionGroup))]
-        public OrderedSection(string activatePropertyName, float enableValue = 1, float disableValue = 0) : base()
+        public OrderedSection(string activatePropertyName, float enableValue = 1, float disableValue = 0)
         {
             AdditionalProperties = new AdditionalProperty[1];
             AdditionalProperties[0] = new AdditionalProperty(activatePropertyName);
+            
+            AdditionalContent = new AdditionalLocalization[1];
+            AdditionalContent[0] = new AdditionalLocalization{Name = "Path"};
 
             ControlAlias = activatePropertyName;
 
@@ -236,20 +262,20 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// </summary>
         protected void DrawSideButtons()
         {
-            Color bgcolor = GUI.backgroundColor;
+            Color bgColor = GUI.backgroundColor;
             GUI.backgroundColor = UpColor;
-            isUp = EditorGUILayout.Toggle(isUp, UpIcon, GUILayout.Width(14.0f), GUILayout.Height(14.0f));
+            _isUp = EditorGUILayout.Toggle(_isUp, UpIcon, GUILayout.Width(14.0f), GUILayout.Height(14.0f));
             GUI.backgroundColor = DownColor;
-            isDown = EditorGUILayout.Toggle(isDown, DownIcon, GUILayout.Width(14.0f), GUILayout.Height(14.0f));
-            if (isUp)
+            _isDown = EditorGUILayout.Toggle(_isDown, DownIcon, GUILayout.Width(14.0f), GUILayout.Height(14.0f));
+            if (_isUp)
             {
                 PushState = -1;
-                isUp = false;
+                _isUp = false;
             }
-            else if (isDown)
+            else if (_isDown)
             {
                 PushState = 1;
-                isDown = false;
+                _isDown = false;
             }
 
             EditorGUI.BeginChangeCheck();
@@ -261,25 +287,25 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
                 SectionPosition = 0;
             }
             HasActivatePropertyUpdated = EditorGUI.EndChangeCheck();
-            GUI.backgroundColor = bgcolor;
+            GUI.backgroundColor = bgColor;
         }
 
         public void PredrawUpdate(MaterialEditor materialEditor)
         {
             SetupEnabled(materialEditor);
 
-            if (string.IsNullOrWhiteSpace(positionDictionaryKey))
+            if (string.IsNullOrWhiteSpace(_positionDictionaryKey))
             {
-                positionDictionaryKey = $"{ControlAlias}_{AssetDatabase.AssetPathToGUID(AssetDatabase.GetAssetPath(Inspector.Materials[0]))}_SectionPosition";
+                _positionDictionaryKey = $"{ControlAlias}_{AssetDatabase.AssetPathToGUID(AssetDatabase.GetAssetPath(Inspector.Materials[0]))}_SectionPosition";
 
-                if (StaticDictionaries.IntDictionary.TryGetValue(positionDictionaryKey, out int position))
+                if (StaticDictionaries.IntDictionary.TryGetValue(_positionDictionaryKey, out int position))
                 {
                     _sectionPosition = position;
                 }
                 else
                 {
                     _sectionPosition = 0;
-                    StaticDictionaries.IntDictionary.SetValue(positionDictionaryKey, _sectionPosition);
+                    StaticDictionaries.IntDictionary.SetValue(_positionDictionaryKey, _sectionPosition);
                 }
                 
                 if(Math.Abs(AdditionalProperties[0].Property.floatValue - disableValue) > 0.001 && _sectionPosition == 0)
@@ -292,6 +318,17 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             Enabled = SectionPosition > 0;
             AdditionalProperties[0].Property.floatValue = Enabled ? enableValue : disableValue;
             HasActivatePropertyUpdated = false;
+        }
+        
+        public bool HasAtLeastOneMaterialDisabled()
+        {
+            bool yesItHas = false;
+            foreach (Material mat in Inspector.Materials)
+            {
+                yesItHas = Math.Abs(mat.GetFloat(AdditionalProperties[0].Property.name) - disableValue) < 0.001;
+                if (yesItHas) break;
+            }
+            return yesItHas;
         }
 
         /// <summary>
@@ -313,9 +350,10 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             if (ShowFoldoutArrow)
                 Show = EditorGUILayout.Toggle(Show, EditorStyles.foldout, GUILayout.MaxWidth(15.0f));
             
-            Rect temp = GUILayoutUtility.GetLastRect();
-            Rect r2 = new Rect(r.x + temp.width, r.y, r.width - (temp.width * 2), r.height);
-            EditorGUI.LabelField(r2, Content, LabelStyle);
+            float rectWidth = ShowFoldoutArrow ? GUILayoutUtility.GetLastRect().width : 0;
+            float rectHeight = GUILayoutUtility.GetRect(Content, LabelStyle).height;
+            Rect r2 = new Rect(r.x + rectWidth, r.y, r.width - (rectWidth * 2), Math.Max(rectHeight, r.height));
+            GUI.Label(r2, Content, LabelStyle);
             GUILayout.FlexibleSpace();
 
             DrawSideButtons();

@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using UnityEditor;
+using UnityEditor.IMGUI.Controls;
 using UnityEngine;
+
 namespace VRLabs.SimpleShaderInspectors.Controls.Sections
 {
     /// <summary>
@@ -109,32 +111,35 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             DrawAddButton();
         }
 
+        //draw the add button and handles the dropdown when pressed
         private void DrawAddButton()
         {
             if (!(_areNewSectionsAvailable ?? true)) return;
             
             Color bCol = GUI.backgroundColor;
             GUI.backgroundColor = ButtonColor;
-            bool buttonPressed = GUILayout.Button(Content, ButtonStyle);
+            var buttonRect = GUILayoutUtility.GetRect(Content, ButtonStyle);
+            bool buttonPressed = GUI.Button(buttonRect, Content, ButtonStyle);
+            
             if (buttonPressed)
             {
-                GenericMenu menu = new GenericMenu();
+                List<OrderedSection> items = new List<OrderedSection>();
                 foreach (var section in Controls)
-                    if (HasAtLeastOneDisabled(section))
-                        menu.AddItem(section.Content, false, TurnOnSection, section);
+                    if (section.HasAtLeastOneMaterialDisabled())
+                        items.Add(section);
                 
-                menu.ShowAsContext();
+                var dropdown = new OrderedSectionDropdown(Content.text, new AdvancedDropdownState(), items, TurnOnSection);
+                dropdown.Show(buttonRect);
             }
             GUI.backgroundColor = bCol;
         }
 
         /// <summary>
-        /// Turns on a section, setting it's index to the best number
+        /// Turns on a section, setting its index to the best number
         /// </summary>
-        /// <param name="sectionVariable">The section to turn on</param>
-        private void TurnOnSection(object sectionVariable)
+        /// <param name="section">The section to turn on</param>
+        private void TurnOnSection(OrderedSection section)
         {
-            var section = (OrderedSection)sectionVariable;
             section.SectionPosition = 753;
             section.HasSectionTurnedOn = true;
             _areNewSectionsAvailable = AreNewSectionsAvailable();
@@ -160,21 +165,10 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             bool yesThereAre = false;
             foreach (var section in Controls)
             {
-                yesThereAre = HasAtLeastOneDisabled(section);
+                yesThereAre = section.HasAtLeastOneMaterialDisabled();
                 if (yesThereAre) break;
             }
             return yesThereAre;
-        }
-
-        private static bool HasAtLeastOneDisabled(OrderedSection section)
-        {
-            bool yesItHas = false;
-            foreach (Material mat in section.AdditionalProperties[0].Property.targets)
-            {
-                yesItHas = mat.GetFloat(section.AdditionalProperties[0].Property.name) == 0;
-                if (yesItHas) break;
-            }
-            return yesItHas;
         }
 
         /// <summary>

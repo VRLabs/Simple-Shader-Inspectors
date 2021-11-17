@@ -1,28 +1,30 @@
+﻿using System;
 using System.Collections.Generic;
 using UnityEditor;
+using UnityEngine;
 
 namespace VRLabs.SimpleShaderInspectors.Controls
 {
     /// <summary>
-    /// Represents a group of controls.
+    /// Represents a group of controls that is visible only on when a property has a specific float value.
     /// </summary>
     /// <remarks>
     /// <para>This control has no UI for itself, instead it just displays all controls it has inside itself.</para>
     /// <para>It can be useful whenever you need to enable, disable or, in general, manage an entire group of controls at once.</para>
-    /// <para>Since it has no UI, it does not need an alias, and setting one would not do much.</para>
+    /// <para>Unlike <see cref="ControlContainer"/> it has embedded logic to automatically display or hide content based on the given property float value</para>
     /// </remarks>
     /// <example>
     /// Example Usage:
     /// <code>
     /// // Create control
-    /// ControlContainer control = this.AddControlContainer();
+    /// ConditionalControlContainer control = this.AddConditionalControlContainer();
     ///
     /// // Add controls inside of it
     /// control.AddPropertyControl("_ExampleProperty");
     /// control.AddColorControl("_ExampleColor");
     /// </code>
     /// </example>
-    public class ControlContainer : SimpleControl, IControlContainer
+    public class ConditionalControlContainer : PropertyControl, IControlContainer
     {
         /// <summary>
         /// List of controls under this control.
@@ -31,16 +33,31 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// All controls that have been added by extension methods.
         /// </value>
         public List<SimpleControl> Controls { get; set; }
+        
+        /// <summary>
+        /// If the controls inside get indented or not.
+        /// </summary>
+        /// <value>
+        /// True if the controls inside will get indented, false otherwise.
+        /// </value>
+        [Chainable]
+        public bool Indent { get; set; }
+        
+        /// <summary>
+        /// Which value enables the control container
+        /// </summary>
+        /// <value>
+        /// Float value of the property if the toggle is enabled
+        /// </value>
+        protected readonly float EnableValue;
 
         /// <summary>
-        /// Default constructor of <see cref="ControlContainer"/>.
+        /// Default constructor of <see cref="ConditionalControlContainer"/>.
         /// </summary>
-        /// <returns>A new <see cref="ControlContainer"/> object.</returns>
-        /// <remarks>
-        /// Since this control does not need an alias, no alias strings are needed, and the alias will be set as "".
-        /// </remarks>
-        public ControlContainer() : base("")
+        /// <returns>A new <see cref="ConditionalControlContainer"/> object.</returns>
+        public ConditionalControlContainer(string conditionalProperty, float enableValue) : base(conditionalProperty)
         {
+            EnableValue = enableValue;
             Controls = new List<SimpleControl>();
         }
 
@@ -50,8 +67,11 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <param name="materialEditor">Material editor.</param>
         protected override void ControlGUI(MaterialEditor materialEditor)
         {
+            if (!(Math.Abs(Property.floatValue - EnableValue) < 0.001)) return;
+            if(Indent) EditorGUI.indentLevel++;
             foreach (var control in Controls)
                 control.DrawControl(materialEditor);
+            if (Indent) EditorGUI.indentLevel--;
         }
         
         /// <summary>
