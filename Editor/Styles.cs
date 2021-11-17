@@ -17,7 +17,7 @@ namespace VRLabs.SimpleShaderInspectors
             get
             {
                 if (_colorIconBorder != null) return _colorIconBorder;
-                _colorIconBorder = Resources.Load<Texture2D>("Textures/SSIColorIconBorder");
+                _colorIconBorder = Resources.Load<Texture2D>($"{SSIConstants.RESOURCES_FOLDER}/Textures/ColorIconBorder");
                 return _colorIconBorder;
             }
         }
@@ -31,7 +31,7 @@ namespace VRLabs.SimpleShaderInspectors
             get
             {
                 if (_colorIconBorderSelected != null) return _colorIconBorderSelected;
-                _colorIconBorderSelected = Resources.Load<Texture2D>("Textures/SSIColorIconBorderSelected");
+                _colorIconBorderSelected = Resources.Load<Texture2D>($"{SSIConstants.RESOURCES_FOLDER}/Textures/ColorIconBorderSelected");
                 return _colorIconBorderSelected;
             }
         }
@@ -45,7 +45,7 @@ namespace VRLabs.SimpleShaderInspectors
             get
             {
                 if (_colorIcon != null) return _colorIcon;
-                _colorIcon = Resources.Load<Texture2D>("Textures/SSIColorIcon");
+                _colorIcon = Resources.Load<Texture2D>($"{SSIConstants.RESOURCES_FOLDER}/Textures/ColorIcon");
                 return _colorIcon;
             }
         }
@@ -65,14 +65,14 @@ namespace VRLabs.SimpleShaderInspectors
             get
             {
                 if (_rgbaPacker != null) return _rgbaPacker;
-                _rgbaPacker = Resources.Load<ComputeShader>("ComputeShaders/SSIRGBAPacker");
+                _rgbaPacker = Resources.Load<ComputeShader>($"{SSIConstants.RESOURCES_FOLDER}/ComputeShaders/RGBAPacker");
                 return _rgbaPacker;
             }
         }
         /// <summary>
         /// default input settings for the RGBAPacker compute shader.
         /// </summary>
-        public static string RGBAPackerSettings => Resources.Load<TextAsset>("ComputeShaderSettings/SSIRGBAPackerDefault").text;
+        public static string RGBAPackerSettings => Resources.Load<TextAsset>($"{SSIConstants.RESOURCES_FOLDER}/ComputeShaderSettings/RGBAPackerDefault").text;
     }
 
     /// <summary>
@@ -122,7 +122,7 @@ namespace VRLabs.SimpleShaderInspectors
             get
             {
                 if (_textureBoxLightBorder != null) return _textureBoxLightBorder;
-                _textureBoxLightBorder = CreateStyleFromSprite(new RectOffset(4, 4, 11, 4), "Textures/SSITextureBoxLight");
+                _textureBoxLightBorder = CreateStyleFromSprite(new RectOffset(4, 4, 11, 4), $"{SSIConstants.RESOURCES_FOLDER}/Textures/TextureBoxLight");
                 return _textureBoxLightBorder;
             }
         }
@@ -140,7 +140,7 @@ namespace VRLabs.SimpleShaderInspectors
             get
             {
                 if (_textureBoxHeavyBorder != null) return _textureBoxHeavyBorder;
-                _textureBoxHeavyBorder = CreateStyleFromSprite(new RectOffset(4, 4, 11, 4), "Textures/SSITextureBoxHeavy");
+                _textureBoxHeavyBorder = CreateStyleFromSprite(new RectOffset(4, 4, 11, 4), $"{SSIConstants.RESOURCES_FOLDER}/Textures/TextureBoxHeavy");
                 return _textureBoxHeavyBorder;
             }
         }
@@ -158,7 +158,7 @@ namespace VRLabs.SimpleShaderInspectors
             get
             {
                 if (_boxLightBorder != null) return _boxLightBorder;
-                _boxLightBorder = CreateStyleFromSprite(new RectOffset(4, 4, 4, 4), "Textures/SSIBoxLight");
+                _boxLightBorder = CreateStyleFromSprite(new RectOffset(4, 4, 4, 4), $"{SSIConstants.RESOURCES_FOLDER}/Textures/BoxLight");
                 _boxLightBorder.alignment = TextAnchor.MiddleCenter;
                 _boxLightBorder.normal.textColor = EditorStyles.label.normal.textColor;
                 _boxLightBorder.active.textColor = EditorStyles.label.active.textColor;
@@ -181,7 +181,7 @@ namespace VRLabs.SimpleShaderInspectors
             get
             {
                 if (_boxHeavyBorder != null) return _boxHeavyBorder;
-                _boxHeavyBorder = CreateStyleFromSprite(new RectOffset(4, 4, 4, 4), "Textures/SSIBoxHeavy");
+                _boxHeavyBorder = CreateStyleFromSprite(new RectOffset(4, 4, 4, 4), $"{SSIConstants.RESOURCES_FOLDER}/Textures/BoxHeavy");
                 _boxHeavyBorder.alignment = TextAnchor.MiddleCenter;
                 _boxHeavyBorder.normal.textColor = EditorStyles.label.normal.textColor;
                 _boxHeavyBorder.active.textColor = EditorStyles.label.active.textColor;
@@ -201,7 +201,7 @@ namespace VRLabs.SimpleShaderInspectors
             {
                 if (_ssiLogoLight != null) return _ssiLogoLight;
 
-                _ssiLogoLight = Resources.Load<Texture2D>("Textures/Logo/SSILogoLight");
+                _ssiLogoLight = Resources.Load<Texture2D>($"{SSIConstants.RESOURCES_FOLDER}/Textures/Logo/LogoLight");
                 return _ssiLogoLight;
 
             }
@@ -217,7 +217,7 @@ namespace VRLabs.SimpleShaderInspectors
             {
                 if (_ssiLogoDark != null) return _ssiLogoDark;
 
-                _ssiLogoDark = Resources.Load<Texture2D>("Textures/Logo/SSILogoDark");
+                _ssiLogoDark = Resources.Load<Texture2D>($"{SSIConstants.RESOURCES_FOLDER}/Textures/Logo/LogoDark");
                 return _ssiLogoDark;
             }
         }
@@ -232,9 +232,9 @@ namespace VRLabs.SimpleShaderInspectors
             get
             {
                 if (_deleteIcon != null) return _deleteIcon;
-                _deleteIcon = CreateStyleFromSprite(normal: "Textures/SSIDelecteIcon",
-                                                    active: "Textures/SSIDeleteIconPressed",
-                                                     hover: "Textures/SSIDeleteIconHover"); //new GUIStyle("WinBtnClose");
+                _deleteIcon = CreateStyleFromSprite(normal: $"{SSIConstants.RESOURCES_FOLDER}/Textures/DeleteIcon",
+                                                    active: $"{SSIConstants.RESOURCES_FOLDER}/Textures/DeleteIconPressed",
+                                                     hover: $"{SSIConstants.RESOURCES_FOLDER}/Textures/DeleteIconHover"); //new GUIStyle("WinBtnClose");
                 return _deleteIcon;
             }
         }
@@ -249,9 +249,9 @@ namespace VRLabs.SimpleShaderInspectors
             get
             {
                 if (_upIcon != null) return _upIcon;
-                _upIcon = CreateStyleFromSprite(normal: "Textures/SSIUpIcon",
-                                                active: "Textures/SSIUpIconPressed",
-                                                 hover: "Textures/SSIUpIconHover"); //new GUIStyle("ProfilerTimelineRollUpArrow");
+                _upIcon = CreateStyleFromSprite(normal: $"{SSIConstants.RESOURCES_FOLDER}/Textures/UpIcon",
+                                                active: $"{SSIConstants.RESOURCES_FOLDER}/Textures/UpIconPressed",
+                                                 hover: $"{SSIConstants.RESOURCES_FOLDER}/Textures/UpIconHover"); //new GUIStyle("ProfilerTimelineRollUpArrow");
                 return _upIcon;
             }
         }
@@ -266,9 +266,9 @@ namespace VRLabs.SimpleShaderInspectors
             get
             {
                 if (_downIcon != null) return _downIcon;
-                _downIcon = CreateStyleFromSprite(normal: "Textures/SSIDownIcon",
-                                                  active: "Textures/SSIDownIconPressed",
-                                                   hover: "Textures/SSIDownIconHover"); //new GUIStyle("ProfilerTimelineDigDownArrow");
+                _downIcon = CreateStyleFromSprite(normal: $"{SSIConstants.RESOURCES_FOLDER}/Textures/DownIcon",
+                                                  active: $"{SSIConstants.RESOURCES_FOLDER}/Textures/DownIconPressed",
+                                                   hover: $"{SSIConstants.RESOURCES_FOLDER}/Textures/DownIconHover"); //new GUIStyle("ProfilerTimelineDigDownArrow");
                 return _downIcon;
             }
         }
@@ -283,13 +283,13 @@ namespace VRLabs.SimpleShaderInspectors
             get
             {
                 if (_gearIcon != null) return _gearIcon;
-                _gearIcon = CreateStyleFromSprite(normal: "Textures/SSIGearIcon",
-                                                  active: "Textures/SSIGearIconPressed",
-                                                   hover: "Textures/SSIGearIconHover");
+                _gearIcon = CreateStyleFromSprite(normal: $"{SSIConstants.RESOURCES_FOLDER}/Textures/GearIcon",
+                                                  active: $"{SSIConstants.RESOURCES_FOLDER}/Textures/GearIconPressed",
+                                                   hover: $"{SSIConstants.RESOURCES_FOLDER}/Textures/GearIconHover");
                 return _gearIcon;
             }
-        }
-
+        } 
+ 
         private static GUIStyle _boldCenter;
         /// <summary>
         /// Style of a bold label with a center anchor.
@@ -403,12 +403,15 @@ namespace VRLabs.SimpleShaderInspectors
             var style = new GUIStyle();
             Sprite sprite = Resources.Load<Sprite>(normal);
             style.padding = padding;
-            style.border.left = (int)sprite.border.x;
-            style.border.bottom = (int)sprite.border.y;
-            style.border.right = (int)sprite.border.z;
-            style.border.top = (int)sprite.border.w;
+            if (sprite != null)
+            {
+                style.border.left = (int)sprite.border.x;
+                style.border.bottom = (int)sprite.border.y;
+                style.border.right = (int)sprite.border.z;
+                style.border.top = (int)sprite.border.w;
+            }
 
-            style.normal.background = Resources.Load<Texture2D>(normal);
+            if (!string.IsNullOrEmpty(normal)) style.normal.background = Resources.Load<Texture2D>(normal);
             if (!string.IsNullOrEmpty(active)) style.active.background = Resources.Load<Texture2D>(active);
             if (!string.IsNullOrEmpty(focused)) style.focused.background = Resources.Load<Texture2D>(focused);
             if (!string.IsNullOrEmpty(hover)) style.hover.background = Resources.Load<Texture2D>(hover);

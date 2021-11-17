@@ -42,13 +42,13 @@ namespace VRLabs.SimpleShaderInspectors
         
         private static void LoadDictionaries()
         {
-            _dictionaries = Resources.Load<SerializedDictionaries>("Dictionaries/SSIDictionaries");
+            _dictionaries = Resources.Load<SerializedDictionaries>($"{SSIConstants.RESOURCES_FOLDER}/Dictionaries/Dictionaries");
 
             if(_dictionaries == null)
             {
                 _dictionaries = ScriptableObject.CreateInstance<SerializedDictionaries>();
                 Directory.CreateDirectory("Assets/Resources/Dictionaries");
-                AssetDatabase.CreateAsset(_dictionaries,"Assets/Resources/Dictionaries/SSIDictionaries.asset");
+                AssetDatabase.CreateAsset(_dictionaries,"Assets/Resources/Dictionaries/Dictionaries.asset");
                 AssetDatabase.SaveAssets();
             }
 

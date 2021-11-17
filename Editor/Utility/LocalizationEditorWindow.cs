@@ -11,7 +11,7 @@ namespace VRLabs.SimpleShaderInspectors.Tools
     /// </summary>
     public class LocalizationEditorWindow : EditorWindow
     {
-        [MenuItem("VRLabs/Simple Shader Inspectors/Localization file editor")]
+        [MenuItem(SSIConstants.WINDOW_PATH + "/Localization file editor")]
         private static LocalizationEditorWindow CreateWindow()
         {
             LocalizationEditorWindow window = EditorWindow.GetWindow<LocalizationEditorWindow>();
