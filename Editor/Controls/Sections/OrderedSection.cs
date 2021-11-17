@@ -43,7 +43,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
     /// group.AddOrderedSection("_ActivateProperty", "_ShowProperty", 2, 3, 4, 6); 
     /// </code>
     /// </example>
-    public class OrderedSection : Section, IAdditionalProperties
+    public class OrderedSection : Section, IAdditionalProperties, IAdditionalLocalization
     {
         /// <summary>
         /// Indicates if the section should be pushed up or down relative to its neighbour sections.
@@ -69,6 +69,17 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// </list>
         /// </remarks>
         public AdditionalProperty[] AdditionalProperties { get; set; }
+        
+        /// <summary>
+        /// Extra localization array. Implementation needed by <see cref="IAdditionalLocalization"/>.
+        /// </summary>
+        /// <value>
+        /// Array of <see cref="AdditionalLocalization"/>
+        /// </value>
+        /// <remarks>
+        /// This array will contain 1 element containing the custom path for the ordered section item in the popup menu of the <see cref="OrderedSectionGroup"/> add button.
+        /// </remarks>
+        public AdditionalLocalization[] AdditionalContent { get; set; }
 
         /// <summary>
         /// Boolean indicating if the activate property has been updated this cycle.
@@ -111,6 +122,16 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
                 StaticDictionaries.IntDictionary.SetValue(_positionDictionaryKey, _sectionPosition);
             }
         }
+
+        /// <summary>
+        /// Custom path for the selection inside the popup of the ordered section group
+        /// </summary>
+        /// <value>The custom path (does not include the section name itself</value>
+        /// <remarks>
+        /// The custom path is taken directly from the localization of it, so that different languages can have their own path names.
+        /// If the path found in the localization equals to the combined "Alias_Name" used for finding the localization, it will automatically be assumed that no path has been given
+        /// </remarks>
+        public string CustomPopupPath => AdditionalContent[0].Content.text.Equals(ControlAlias + "_" + AdditionalContent[0].Name) ? "" : AdditionalContent[0].Content.text;
 
         /// <summary>
         /// Style for the up icon.
@@ -194,6 +215,9 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             AdditionalProperties = new AdditionalProperty[1];
             AdditionalProperties[0] = new AdditionalProperty(activatePropertyName);
 
+            AdditionalContent = new AdditionalLocalization[1];
+            AdditionalContent[0] = new AdditionalLocalization{Name = "Path"};
+
             UpIcon = Styles.UpIcon;
             DownIcon = Styles.DownIcon;
             DeleteIcon = Styles.DeleteIcon;
@@ -216,6 +240,9 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         {
             AdditionalProperties = new AdditionalProperty[1];
             AdditionalProperties[0] = new AdditionalProperty(activatePropertyName);
+            
+            AdditionalContent = new AdditionalLocalization[1];
+            AdditionalContent[0] = new AdditionalLocalization{Name = "Path"};
 
             ControlAlias = activatePropertyName;
 

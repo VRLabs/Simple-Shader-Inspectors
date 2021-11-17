@@ -84,11 +84,9 @@ namespace VRLabs.SimpleShaderInspectors
                         missingInfo.Add(selectedInfo);
                 }
                 control.Content = new GUIContent(selectedInfo.DisplayName, selectedInfo.Tooltip);
-
-                switch (control)
-                {
+                
                     // Find additional content in case it implements the IAdditionalLocalization interface.
-                    case IAdditionalLocalization additional:
+                    if(control is IAdditionalLocalization additional)
                         foreach (var content in additional.AdditionalContent)
                         {
                             string fullName = control.ControlAlias + "_" + content.Name;
@@ -107,13 +105,11 @@ namespace VRLabs.SimpleShaderInspectors
 
                             content.Content = new GUIContent(extraInfo.DisplayName, extraInfo.Tooltip);
                         }
-                        break;
 
                     // Recursively set property localization for all properties inside this control if it has the IControlContainer interface.
-                    case IControlContainer container:
+                    if(control is IControlContainer container)
                         if (recursive) missingInfo.AddRange(SetPropertiesLocalization(container.GetControlList(), propertyInfos));
-                        break;
-                }
+                
             }
             return missingInfo;
         }
