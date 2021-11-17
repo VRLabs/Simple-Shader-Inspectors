@@ -337,6 +337,18 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl
   fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl
   nameWithType: Chainables.AddGradientTextureControl
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddHelpBoxControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String)
+  name: AddHelpBoxControl(IControlContainer, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddHelpBoxControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddHelpBoxControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddHelpBoxControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddHelpBoxControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String)
+  nameWithType: Chainables.AddHelpBoxControl(IControlContainer, String)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddHelpBoxControl*
+  name: AddHelpBoxControl
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddHelpBoxControl.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddHelpBoxControl
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddHelpBoxControl
+  nameWithType: Chainables.AddHelpBoxControl
 - uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddKeywordToggleControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String)
   name: AddKeywordToggleControl(IControlContainer, String)
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddKeywordToggleControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddKeywordToggleControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_
@@ -487,6 +499,21 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddVertexStreamsControl
   fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddVertexStreamsControl
   nameWithType: Chainables.AddVertexStreamsControl
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetBoxType*
+  name: SetBoxType
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetBoxType.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetBoxType
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetBoxType
+  nameWithType: Chainables.SetBoxType
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetBoxType``1(``0,UnityEditor.MessageType)
+  name: SetBoxType<T>(T, MessageType)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetBoxType.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetBoxType__1___0_UnityEditor_MessageType_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetBoxType``1(``0,UnityEditor.MessageType)
+  name.vb: SetBoxType(Of T)(T, MessageType)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetBoxType<T>(T, UnityEditor.MessageType)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetBoxType(Of T)(T, UnityEditor.MessageType)
+  nameWithType: Chainables.SetBoxType<T>(T, MessageType)
+  nameWithType.vb: Chainables.SetBoxType(Of T)(T, MessageType)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorButtonColor*
   name: SetGeneratorButtonColor
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorButtonColor.html
@@ -727,6 +754,21 @@ references:
   fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIndent(Of T)(T, System.Boolean)
   nameWithType: Chainables.SetIndent<T>(T, Boolean)
   nameWithType.vb: Chainables.SetIndent(Of T)(T, Boolean)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIsWideBox*
+  name: SetIsWideBox
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIsWideBox.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIsWideBox
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIsWideBox
+  nameWithType: Chainables.SetIsWideBox
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIsWideBox``1(``0,System.Boolean)
+  name: SetIsWideBox<T>(T, Boolean)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIsWideBox.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetIsWideBox__1___0_System_Boolean_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIsWideBox``1(``0,System.Boolean)
+  name.vb: SetIsWideBox(Of T)(T, Boolean)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIsWideBox<T>(T, System.Boolean)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIsWideBox(Of T)(T, System.Boolean)
+  nameWithType: Chainables.SetIsWideBox<T>(T, Boolean)
+  nameWithType.vb: Chainables.SetIsWideBox(Of T)(T, Boolean)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetLabelStyle*
   name: SetLabelStyle
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetLabelStyle.html
@@ -1255,6 +1297,60 @@ references:
   commentId: F:VRLabs.SimpleShaderInspectors.Controls.GradientWidth.XXL_4096
   fullName: VRLabs.SimpleShaderInspectors.Controls.GradientWidth.XXL_4096
   nameWithType: GradientWidth.XXL_4096
+- uid: VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl
+  name: HelpBoxControl
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.html
+  commentId: T:VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl
+  fullName: VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl
+  nameWithType: HelpBoxControl
+- uid: VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.#ctor(System.String)
+  name: HelpBoxControl(String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.-ctor.html#VRLabs_SimpleShaderInspectors_Controls_HelpBoxControl__ctor_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.#ctor(System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.HelpBoxControl(System.String)
+  nameWithType: HelpBoxControl.HelpBoxControl(String)
+- uid: VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.#ctor*
+  name: HelpBoxControl
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.-ctor.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.#ctor
+  fullName: VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.HelpBoxControl
+  nameWithType: HelpBoxControl.HelpBoxControl
+- uid: VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.BoxType
+  name: BoxType
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.BoxType.html#VRLabs_SimpleShaderInspectors_Controls_HelpBoxControl_BoxType
+  commentId: P:VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.BoxType
+  fullName: VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.BoxType
+  nameWithType: HelpBoxControl.BoxType
+- uid: VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.BoxType*
+  name: BoxType
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.BoxType.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.BoxType
+  fullName: VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.BoxType
+  nameWithType: HelpBoxControl.BoxType
+- uid: VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.ControlGUI(UnityEditor.MaterialEditor)
+  name: ControlGUI(MaterialEditor)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.ControlGUI.html#VRLabs_SimpleShaderInspectors_Controls_HelpBoxControl_ControlGUI_UnityEditor_MaterialEditor_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.ControlGUI(UnityEditor.MaterialEditor)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.ControlGUI(UnityEditor.MaterialEditor)
+  nameWithType: HelpBoxControl.ControlGUI(MaterialEditor)
+- uid: VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.ControlGUI*
+  name: ControlGUI
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.ControlGUI.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.ControlGUI
+  fullName: VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.ControlGUI
+  nameWithType: HelpBoxControl.ControlGUI
+- uid: VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.IsWideBox
+  name: IsWideBox
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.IsWideBox.html#VRLabs_SimpleShaderInspectors_Controls_HelpBoxControl_IsWideBox
+  commentId: P:VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.IsWideBox
+  fullName: VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.IsWideBox
+  nameWithType: HelpBoxControl.IsWideBox
+- uid: VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.IsWideBox*
+  name: IsWideBox
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.IsWideBox.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.IsWideBox
+  fullName: VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.IsWideBox
+  nameWithType: HelpBoxControl.IsWideBox
 - uid: VRLabs.SimpleShaderInspectors.Controls.InputType
   name: InputType
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.InputType.html

@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class SimpleControl
+    <title>Class HelpBoxControl
    | Simple Shader Inspectors Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class SimpleControl
+    <meta name="title" content="Class HelpBoxControl
    | Simple Shader Inspectors Documentation ">
     <meta name="generator" content="docfx 2.58.2.0">
     
@@ -66,40 +66,44 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="VRLabs.SimpleShaderInspectors.SimpleControl">
+            <article class="content wrap" id="_content" data-uid="VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl">
   
-  <h1 id="VRLabs_SimpleShaderInspectors_SimpleControl" data-uid="VRLabs.SimpleShaderInspectors.SimpleControl">Class SimpleControl
+  <h1 id="VRLabs_SimpleShaderInspectors_Controls_HelpBoxControl" data-uid="VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl">Class HelpBoxControl
   </h1>
-  <div class="markdown level0 summary"><p>Base class of all controls used by Simple Shader Inspectors.</p>
+  <div class="markdown level0 summary"><p>Represents a control containing an helpbox to display information</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">SimpleControl</span></div>
-      <div class="level2"><a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.ControlContainer.html">ControlContainer</a></div>
-      <div class="level2"><a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.html">HelpBoxControl</a></div>
-      <div class="level2"><a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.KeywordToggleControl.html">KeywordToggleControl</a></div>
-      <div class="level2"><a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.LabelControl.html">LabelControl</a></div>
-      <div class="level2"><a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.LightmapEmissionControl.html">LightmapEmissionControl</a></div>
-      <div class="level2"><a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.html">OrderedSectionGroup</a></div>
-      <div class="level2"><a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.SpaceControl.html">SpaceControl</a></div>
-      <div class="level2"><a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.VertexStreamsControl.html">VertexStreamsControl</a></div>
-      <div class="level2"><a class="xref" href="VRLabs.SimpleShaderInspectors.PropertyControl.html">PropertyControl</a></div>
+    <div class="level1"><a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleControl.html">SimpleControl</a></div>
+    <div class="level2"><span class="xref">HelpBoxControl</span></div>
   </div>
   
-  <h6><strong>Namespace</strong>: <a class="xref" href="VRLabs.SimpleShaderInspectors.html">VRLabs.SimpleShaderInspectors</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.html">VRLabs.SimpleShaderInspectors.Controls</a></h6>
   
-  <h5 id="VRLabs_SimpleShaderInspectors_SimpleControl_syntax">Syntax</h5>
+  <h5 id="VRLabs_SimpleShaderInspectors_Controls_HelpBoxControl_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class SimpleControl</code></pre>
+    <pre><code class="lang-csharp hljs">public class HelpBoxControl : SimpleControl</code></pre>
   </div>
   
   
   
   
+  <h5 id="VRLabs_SimpleShaderInspectors_Controls_HelpBoxControl_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Whenever you want to display some important information of some kind, this is the control that will help you make it more visible.</p>
+</div>
   
+  <h5 id="VRLabs_SimpleShaderInspectors_Controls_HelpBoxControl_examples"><strong>Examples</strong></h5>
+  <p>Initialize the control inside the inspector:</p>
+<pre><code>// initialize an HelpBoxControl
+this.AddHelpBoxControl(&quot;ExampleHelpBox&quot;);
+// initialize an HelpBoxControl and specifies the type of message shown (by default is set to MessageType.None).
+this.AddHelpBoxControl(&quot;ExampleHelpBox2&quot;).SetBoxType(MessageType.Info);
+// initialize an HelpBoxControl and specifies that the HelpBox should not be wide (by default is set to True).
+this.AddHelpBoxControl(&quot;ExampleHelpBox3&quot;).SetIsWideBox(false);</code></pre>
+
   <h3 id="constructors">Constructors
   </h3>
   <table class="table table-bordered table-striped table-condensed">
@@ -111,10 +115,10 @@
     </thead>
     <tbody>
       <tr>
-        <td id="VRLabs_SimpleShaderInspectors_SimpleControl__ctor_System_String_" data-uid="VRLabs.SimpleShaderInspectors.SimpleControl.#ctor(System.String)">
-          <a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleControl.-ctor.html#VRLabs_SimpleShaderInspectors_SimpleControl__ctor_System_String_">SimpleControl(String)</a>
+        <td id="VRLabs_SimpleShaderInspectors_Controls_HelpBoxControl__ctor_System_String_" data-uid="VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.#ctor(System.String)">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.-ctor.html#VRLabs_SimpleShaderInspectors_Controls_HelpBoxControl__ctor_System_String_">HelpBoxControl(String)</a>
         </td>
-        <td class="markdown level1 summary"><p>Default constructor of <a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleControl.html">SimpleControl</a></p>
+        <td class="markdown level1 summary"><p>Default constructor of <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.html">HelpBoxControl</a></p>
 </td>
       </tr>
     </tbody>
@@ -130,38 +134,17 @@
     </thead>
     <tbody>
       <tr>
-        <td id="VRLabs_SimpleShaderInspectors_SimpleControl_Content" data-uid="VRLabs.SimpleShaderInspectors.SimpleControl.Content">
-          <a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleControl.Content.html#VRLabs_SimpleShaderInspectors_SimpleControl_Content">Content</a>
+        <td id="VRLabs_SimpleShaderInspectors_Controls_HelpBoxControl_BoxType" data-uid="VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.BoxType">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.BoxType.html#VRLabs_SimpleShaderInspectors_Controls_HelpBoxControl_BoxType">BoxType</a>
         </td>
-        <td class="markdown level1 summary"><p>Localized GuiContent set by the inspector.</p>
+        <td class="markdown level1 summary"><p>Indicates the type of message that is contained in the box.</p>
 </td>
       </tr>
       <tr>
-        <td id="VRLabs_SimpleShaderInspectors_SimpleControl_ControlAlias" data-uid="VRLabs.SimpleShaderInspectors.SimpleControl.ControlAlias">
-          <a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleControl.ControlAlias.html#VRLabs_SimpleShaderInspectors_SimpleControl_ControlAlias">ControlAlias</a>
+        <td id="VRLabs_SimpleShaderInspectors_Controls_HelpBoxControl_IsWideBox" data-uid="VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.IsWideBox">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.IsWideBox.html#VRLabs_SimpleShaderInspectors_Controls_HelpBoxControl_IsWideBox">IsWideBox</a>
         </td>
-        <td class="markdown level1 summary"><p>Name used for localization.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="VRLabs_SimpleShaderInspectors_SimpleControl_Inspector" data-uid="VRLabs.SimpleShaderInspectors.SimpleControl.Inspector">
-          <a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleControl.Inspector.html#VRLabs_SimpleShaderInspectors_SimpleControl_Inspector">Inspector</a>
-        </td>
-        <td class="markdown level1 summary"><p>Inspector that contains this control.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="VRLabs_SimpleShaderInspectors_SimpleControl_IsEnabled" data-uid="VRLabs.SimpleShaderInspectors.SimpleControl.IsEnabled">
-          <a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleControl.IsEnabled.html#VRLabs_SimpleShaderInspectors_SimpleControl_IsEnabled">IsEnabled</a>
-        </td>
-        <td class="markdown level1 summary"><p>Boolean that defines if the control is enabled.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="VRLabs_SimpleShaderInspectors_SimpleControl_IsVisible" data-uid="VRLabs.SimpleShaderInspectors.SimpleControl.IsVisible">
-          <a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleControl.IsVisible.html#VRLabs_SimpleShaderInspectors_SimpleControl_IsVisible">IsVisible</a>
-        </td>
-        <td class="markdown level1 summary"><p>Boolean that defines if the control is visible.</p>
+        <td class="markdown level1 summary"><p>Indicates if the HelpBox is a wide box (spans to the entire length of the window) or not (is only as large as the area where input fields are usually placed)</p>
 </td>
       </tr>
     </tbody>
@@ -177,17 +160,10 @@
     </thead>
     <tbody>
       <tr>
-        <td id="VRLabs_SimpleShaderInspectors_SimpleControl_ControlGUI_UnityEditor_MaterialEditor_" data-uid="VRLabs.SimpleShaderInspectors.SimpleControl.ControlGUI(UnityEditor.MaterialEditor)">
-          <a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleControl.ControlGUI.html#VRLabs_SimpleShaderInspectors_SimpleControl_ControlGUI_UnityEditor_MaterialEditor_">ControlGUI(MaterialEditor)</a>
+        <td id="VRLabs_SimpleShaderInspectors_Controls_HelpBoxControl_ControlGUI_UnityEditor_MaterialEditor_" data-uid="VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.ControlGUI(UnityEditor.MaterialEditor)">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.ControlGUI.html#VRLabs_SimpleShaderInspectors_Controls_HelpBoxControl_ControlGUI_UnityEditor_MaterialEditor_">ControlGUI(MaterialEditor)</a>
         </td>
-        <td class="markdown level1 summary"><p>Content of the control that is drawn.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="VRLabs_SimpleShaderInspectors_SimpleControl_DrawControl_UnityEditor_MaterialEditor_" data-uid="VRLabs.SimpleShaderInspectors.SimpleControl.DrawControl(UnityEditor.MaterialEditor)">
-          <a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleControl.DrawControl.html#VRLabs_SimpleShaderInspectors_SimpleControl_DrawControl_UnityEditor_MaterialEditor_">DrawControl(MaterialEditor)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Content of the control that is drawn.</p>
+        <td class="markdown level1 summary"><p>Draws the control represented by this object.</p>
 </td>
       </tr>
     </tbody>
@@ -204,6 +180,12 @@
   </div>
   <div>
       <a class="xref" href="VRLabs.SimpleShaderInspectors.Localization.ApplyLocalization.html#VRLabs_SimpleShaderInspectors_Localization_ApplyLocalization_VRLabs_SimpleShaderInspectors_SimpleControl_System_String_System_Boolean_System_Boolean_">Localization.ApplyLocalization(SimpleControl, String, Boolean, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.SetBoxType.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetBoxType__1___0_UnityEditor_MessageType_">Chainables.SetBoxType&lt;T&gt;(T, MessageType)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIsWideBox.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetIsWideBox__1___0_System_Boolean_">Chainables.SetIsWideBox&lt;T&gt;(T, Boolean)</a>
   </div>
 </article>
           </div>
