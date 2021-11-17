@@ -83,6 +83,23 @@
             return control;
         }
 
+        public static HelpBoxControl AddHelpBoxControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String alias)
+        {
+            var control = new HelpBoxControl(alias);
+            container.AddControl(control);
+            return control;
+        }
+        public static T SetBoxType<T>(this T control, UnityEditor.MessageType property) where T : HelpBoxControl
+        {
+            control.BoxType = property;
+            return control;
+        }
+        public static T SetIsWideBox<T>(this T control, System.Boolean property) where T : HelpBoxControl
+        {
+            control.IsWideBox = property;
+            return control;
+        }
+
         public static KeywordToggleControl AddKeywordToggleControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String keyword)
         {
             var control = new KeywordToggleControl(keyword);

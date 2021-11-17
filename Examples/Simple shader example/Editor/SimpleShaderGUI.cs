@@ -12,7 +12,9 @@ namespace VRLabs.SimpleShaderInspectorsExamples
         {
             this.AddTextureControl("_MainTex", "_Color").Alias("Main texture").SetShowTilingAndOffset(true);
             _toggle = this.AddToggleListControl("_EnableNormal").Alias("Normal toggle");
+            
             _toggle.AddTextureControl("_BumpMap", "_BumpIntensity").Alias("Normal map").SetShowTilingAndOffset(true);
+            _toggle.AddHelpBoxControl("HelpBox").SetBoxType(MessageType.Info).SetIsWideBox(false);
         }
 
         protected override void Header()
@@ -24,7 +26,7 @@ namespace VRLabs.SimpleShaderInspectorsExamples
             GUILayout.Label("- Header");
             GUILayout.Label("- Footer");
             GUILayout.Label("- Texture control");
-            GUILayout.Label("- Toggle control with hidable content inside");
+            GUILayout.Label("- Toggle control with hideable content inside");
             EditorGUI.indentLevel--;
             EditorGUILayout.Space();
         }
