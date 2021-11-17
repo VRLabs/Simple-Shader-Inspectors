@@ -1,0 +1,17 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    
+    <ui:VisualElement style="flex-direction: row; flex-grow: 1; margin-bottom: 5px;">
+        <ui:Button text="Load Settings" name="LoadButton" style="flex-grow: 1;" />
+        <ui:Button text="Save Settings" name="SaveButton" style="flex-grow: 1;" />
+    </ui:VisualElement>
+    
+    <ui:TextField picking-mode="Ignore" label="Namespace" value="VRLabs" text="VRLabs" name="NamespaceField" />
+    <ui:VisualElement style="flex-direction: row; margin-bottom: 5px;">
+        <ui:Label text="Preview:" style="margin-left: 15px;" />
+        <ui:Label text="VRLabs.SimpleShaderInspectors" name="NamespacePreview" style="-unity-font-style: italic;" />
+    </ui:VisualElement>
+    <ui:TextField picking-mode="Ignore" label="Resource folder" value="SSI" text="SSI" name="ResourceFolderField" />
+    <ui:TextField picking-mode="Ignore" label="Editor window menu path" value="VRLabs/Simple Shader Inspector" text="VRLabs/Simple Shader Inspector" name="WindowPathField" />
+    <ui:Toggle label="Keep code documentation" value="false" name="CommentsField"/>
+    <ui:Button text="Embed" name="EmbedButton" />
+</ui:UXML>

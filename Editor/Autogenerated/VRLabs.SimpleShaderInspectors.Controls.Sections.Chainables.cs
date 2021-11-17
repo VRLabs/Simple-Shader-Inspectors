@@ -15,13 +15,13 @@
             return control;
         }
 
-        public static OrderedSection AddOrderedSection(this OrderedSectionGroup container, System.String activatePropertyName, System.String showPropertyName, System.Single enableValue = 1, System.Single disableValue = 0, System.Single showValue = 1, System.Single hideValue = 0)
+        public static OrderedSection AddOrderedSection(this VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup container, System.String activatePropertyName, System.String showPropertyName, System.Single enableValue = 1, System.Single disableValue = 0, System.Single showValue = 1, System.Single hideValue = 0)
         {
             var control = new OrderedSection(activatePropertyName, showPropertyName, enableValue, disableValue, showValue, hideValue);
             container.AddControl(control);
             return control;
         }
-        public static OrderedSection AddOrderedSection(this OrderedSectionGroup container, System.String activatePropertyName, System.Single enableValue = 1, System.Single disableValue = 0)
+        public static OrderedSection AddOrderedSection(this VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup container, System.String activatePropertyName, System.Single enableValue = 1, System.Single disableValue = 0)
         {
             var control = new OrderedSection(activatePropertyName, enableValue, disableValue);
             container.AddControl(control);

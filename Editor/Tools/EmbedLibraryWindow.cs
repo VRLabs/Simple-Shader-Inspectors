@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using UnityEngine.UIElements;
 
 namespace VRLabs.SimpleShaderInspectors.Tools
 {
@@ -15,153 +16,181 @@ namespace VRLabs.SimpleShaderInspectors.Tools
     {
         private const string PATH = "Assets/VRLabs/SimpleShaderInspectors/Editor";
         private const string NAMESPACE = "VRLabs.SimpleShaderInspectors";
-        public const string IDENTIFIER = "SSI";
 
         private static readonly Regex _namespaceRegex = new Regex("^[a-zA-Z0-9.]*$");
 
-        [MenuItem("VRLabs/Simple Shader Inspectors/Embed to shader editor folder")]
+        [MenuItem(SSIConstants.WINDOW_PATH + "/Embed to shader editor folder")]
         private static EmbedLibraryEditor CreateWindow()
         {
-            EmbedLibraryEditor window = EditorWindow.GetWindow<EmbedLibraryEditor>();
-            window.titleContent = new GUIContent("Embred");
-            window.minSize = new Vector2(400, 280);
-            window.maxSize = new Vector2(400, 280);
+            var window = EditorWindow.GetWindow<EmbedLibraryEditor>();
+            window.titleContent = new GUIContent("Embed");
             return window;
+        }
+        
+        [Serializable]
+        private class LibrarySettings
+        {
+            public string nmsc;
+            public string rscfName;
+            public string windowPath;
         }
 
         private string _selectedPath = null;
         private string _customNamespace = null;
         private string _acronym = null;
         private bool _keepComments;
+        private TextField _namespaceField;
+        private TextField _resourceFolderField;
+        private Button _saveButton;
+        private TextField _windowPathField;
+        private Label _namespaceLabel;
+        private Button _embedButton;
+        private Button _loadButton;
+        private Toggle _commentsFiels;
 
-        void OnGUI()
+
+        public void CreateGUI()
         {
-            EditorGUILayout.Space();
-            if (GUILayout.Button("Select folder"))
+            // Each editor window contains a root VisualElement object
+            VisualElement root = rootVisualElement;
+            
+            var visualTree =Resources.Load<VisualTreeAsset>(SSIConstants.RESOURCES_FOLDER +"/UIElements/EmbedLibraryWindow");
+            VisualElement labelFromUxml = visualTree.CloneTree();
+            root.Add(labelFromUxml);
+        
+            _namespaceField = root.Q<TextField>("NamespaceField");
+            _resourceFolderField = root.Q<TextField>("ResourceFolderField");
+            _windowPathField = root.Q<TextField>("WindowPathField");
+            _namespaceLabel = root.Q<Label>("NamespacePreview");
+            _commentsFiels = root.Q<Toggle>("CommentsField");
+            _embedButton = root.Q<Button>("EmbedButton");
+            _loadButton = root.Q<Button>("LoadButton");
+            _saveButton = root.Q<Button>("SaveButton");
+
+            _embedButton.clicked += EmbedButtonOnclick;
+            _loadButton.clicked += LoadSettingsFromFile;
+            _saveButton.clicked += SaveSettingsOnFile;
+
+            _namespaceField.RegisterValueChangedCallback(x =>
             {
-                string path = EditorUtility.OpenFolderPanel("Select editor folder to use", "Assets", "Editor");
-                if (path.Length == 0 || !Path.GetFileName(path).Equals("Editor"))
-                {
-                    _selectedPath = null;
-                }
+                if (_namespaceRegex.IsMatch(x.newValue))
+                    _namespaceLabel.text = x.newValue + ".SimpleShaderInspectors";
                 else
-                {
-                    _selectedPath = path;
-                }
-            }
-            GUILayout.Label("Selected folder: " + _selectedPath, Styles.MultilineLabel);
-            if (_selectedPath == null)
-            {
-                EditorGUILayout.HelpBox("You need to select a valid Editor folder.", MessageType.Warning);
-            }
-            EditorGUILayout.Space();
-            EditorGUI.BeginChangeCheck();
-            string cn = EditorGUILayout.TextField("Custom Namespace", _customNamespace);
-            if (EditorGUI.EndChangeCheck() && _namespaceRegex.IsMatch(cn))
-            {
-                _customNamespace = cn;
-            }
-
-            GUILayout.Label("The namespace will be: " + _customNamespace + ".SimpleShaderInspectors", Styles.MultilineLabel);
-            EditorGUILayout.HelpBox("Remember to change the namespace on your shader editor as well.", MessageType.Info);
-            EditorGUILayout.Space();
-
-            EditorGUI.BeginChangeCheck();
-            cn = EditorGUILayout.TextField("Assets acronym", _acronym);
-            if (EditorGUI.EndChangeCheck() && !string.IsNullOrWhiteSpace(cn))
-            {
-                _acronym = cn;
-            }
-
-            GUILayout.Label("The used acronym will be: " + _acronym, Styles.MultilineLabel);
-            EditorGUILayout.HelpBox("Some assets in the resource folder contain an acronym, multiple copies of those assets are not allowed to have the same acronym, so choose an original one.", MessageType.Info);
-            EditorGUILayout.Space();
-
-            _keepComments = EditorGUILayout.Toggle("Keep comments", _keepComments);
-            EditorGUILayout.Space();
-
-            EditorGUI.BeginDisabledGroup(string.IsNullOrWhiteSpace(_selectedPath) || string.IsNullOrWhiteSpace(_customNamespace) || string.IsNullOrWhiteSpace(_acronym));
-            if (GUILayout.Button("Embed SimpleShaderInspectors"))
-            {
-                CopyLibrary(_selectedPath, _customNamespace, _acronym, _keepComments);
-                this.Close();
-            }
-            EditorGUI.EndDisabledGroup();
+                    _namespaceField.value = x.previousValue;
+            });
         }
 
-        private static void CopyLibrary(string path, string customNamespace, string assetIdentifier, bool keepComments = false)
+        private void EmbedButtonOnclick()
         {
             if (!Directory.Exists(PATH))
-                throw new DirectoryNotFoundException("Simple Shader Inspectors has not been found in its default location, consider deleting it and reinstalling it using the official UnityPackage.");
+                EditorUtility.DisplayDialog("Error", "Simple Shader Inspectors has not been found in its default location, consider deleting it and reinstalling it using the official UnityPackage.", "Ok");
+        
+            string path = EditorUtility.OpenFolderPanel("Select editor folder to use", "Assets", "Editor");
+            if (path.Length == 0)
+                return;
+
+            if (!Path.GetFileName(path).Equals("Editor"))
+            {
+                EditorUtility.DisplayDialog("Error", "The folder must be an \"Editor\" folder", "Ok");
+                return;
+            }
             
             if (Directory.Exists(path + "/SimpleShaderInspectors"))
                 Directory.Delete(path + "/SimpleShaderInspectors", true);
             
-            CopyDirectory(PATH, path, customNamespace, assetIdentifier, "", keepComments);
+            CopyDirectory(PATH, path, "", _commentsFiels.value);
+            
+            string licencePath = PATH.Replace("Editor", "LICENSE");
+            if (File.Exists(licencePath))
+                File.Copy(licencePath, path + "/SimpleShaderInspectors/LICENSE");
 
             AssetDatabase.Refresh();
         }
+        
+        private void SaveSettingsOnFile()
+        {
+            string path = EditorUtility.SaveFilePanel("Save settings to file", "Assets", "embedSettings.json", "json");
+            if (path.Length == 0)
+                return;
+        
+            var settings = new LibrarySettings
+            {
+                nmsc = _namespaceField.value,
+                rscfName = _resourceFolderField.value,
+                windowPath = _windowPathField.value
+            };
+        
+            File.WriteAllText(path,JsonUtility.ToJson(settings));
+        }
+    
+        private void LoadSettingsFromFile()
+        {
+            string path = EditorUtility.OpenFilePanel("Load settings", "Assets", "json");
+            if (!File.Exists(path))
+            {
+                EditorUtility.DisplayDialog("Error", "File does not exist", "Ok");
+                return;
+            }
 
-        private static void CopyDirectory(string oldPath, string newPath, string customNamespace, string assetIdentifier, string subpath, bool keepComments)
+            var settings = JsonUtility.FromJson<LibrarySettings>(File.ReadAllText(path));
+
+            _namespaceField.value = settings.nmsc;
+            _resourceFolderField.value = settings.rscfName;
+            _windowPathField.value = settings.windowPath;
+        }
+
+        private void CopyDirectory(string oldPath, string newPath, string subpath, bool keepComments)
         {
             foreach (var file in Directory.GetFiles(oldPath).Where(x => !Path.GetExtension(x).Equals(".meta")))
             {
-                if (Path.GetExtension(file).Equals(".cs"))
+                if (Path.GetFileName(file).Contains("EmbedLibraryWindow")) continue;
+                
+                if (Path.GetExtension(file).Equals(".cs") || Path.GetExtension(file).Equals(".uxml"))
                 {
-                    List<string> lines = new List<string>();
-                    lines.AddRange(File.ReadAllLines(file));
-                    int index = 0;
-                    int i = 0;
-                    while (i < lines.Count && !keepComments)
+                    var lines = new List<string>(File.ReadAllLines(file));
+                    var newLines = lines.Where(line => !line.Trim().StartsWith("//")).ToList();
+                    string text = string.Join(System.Environment.NewLine, newLines);
+
+                    text = text.Replace(NAMESPACE, _namespaceField.value + ".SimpleShaderInspectors");
+                    if (Path.GetFileName(file).Equals("SSIConstants.cs"))
                     {
-                        index = lines[i].IndexOf("//");
-                        if (index != -1)
-                        {
-                            if (!string.IsNullOrEmpty(lines[i].Substring(0, index).Trim()))
-                            {
-                                lines[i] = lines[i].Substring(0, index);
-                                i++;
-                            }
-                            else
-                            {
-                                lines.RemoveAt(i);
-                            }
-                        }
-                        else
-                        {
-                            i++;
-                        }
+                        text = text.Replace($"\"{SSIConstants.WINDOW_PATH}\"", $"\"{_windowPathField.value}\"");
+                        text = text.Replace($"\"{SSIConstants.RESOURCES_FOLDER}\"", $"\"{_resourceFolderField.value}\"");
                     }
 
-                    string text = string.Join(System.Environment.NewLine, lines);
-
-                    text = text.Replace(NAMESPACE, customNamespace + ".SimpleShaderInspectors");
-
-                    string filePath = Path.GetFileName(file);
-                    if (filePath.Equals("Styles.cs") || filePath.Equals("StaticDictionaries.cs"))
-                        text = text.Replace(IDENTIFIER, assetIdentifier);
-                    
                     string finalPath = file.Replace(oldPath, newPath + "/SimpleShaderInspectors" + subpath);
-                    Directory.CreateDirectory(Path.GetDirectoryName(finalPath));
+                    Directory.CreateDirectory(Path.GetDirectoryName(finalPath) ?? string.Empty);
                     File.WriteAllText(finalPath, text);
                 }
                 else if (Path.GetDirectoryName(file).Contains("Resources"))
                 {
                     string finalPath = file.Replace(oldPath, newPath + "/SimpleShaderInspectors" + subpath);
-                    finalPath = finalPath.Replace(IDENTIFIER, assetIdentifier);
-                    Directory.CreateDirectory(Path.GetDirectoryName(finalPath));
-                    finalPath = finalPath.Substring(finalPath.IndexOf("Assets"));
+                    Directory.CreateDirectory(Path.GetDirectoryName(finalPath) ?? string.Empty);
+                    finalPath = finalPath.Substring(finalPath.IndexOf("Assets", StringComparison.Ordinal));
                     AssetDatabase.CopyAsset(file, finalPath);
+                    
+                    if (Path.GetExtension(finalPath).Equals(".uss"))
+                    {
+                        string text = File.ReadAllText(finalPath);
+                        text = text.Replace($"resource(\"{SSIConstants.RESOURCES_FOLDER}/", $"resource(\"{_resourceFolderField.value}/");
+                        File.WriteAllText(finalPath, text);
+                    }
+                }
+                else if (Path.GetFileName(file).Equals("LICENSE"))
+                {
+                    string finalPath = file.Replace(oldPath, newPath + "/SimpleShaderInspectors" + subpath);
+                    File.Copy(file, finalPath);
                 }
             }
 
             foreach (string directory in Directory.GetDirectories(oldPath))
             {
-                if (!Path.GetFileName(directory).Equals("Tools"))
-                {
-                    string newSubPath = subpath + directory.Replace(PATH + subpath, "");
-                    CopyDirectory(directory, newPath, customNamespace, assetIdentifier, newSubPath, keepComments);
-                }
+                if (Path.GetFileName(directory).Equals("Tools")) continue;
+
+                string newSubPath = subpath + "/" + Path.GetFileName(directory);
+                if (Path.GetFileName(directory).Equals(SSIConstants.RESOURCES_FOLDER) && Path.GetFileName(Path.GetDirectoryName(directory)).Equals("Resources"))
+                    newSubPath = subpath + "/" + _resourceFolderField.value;
+                CopyDirectory(directory, newPath,  newSubPath, keepComments);
             }
         }
     }
