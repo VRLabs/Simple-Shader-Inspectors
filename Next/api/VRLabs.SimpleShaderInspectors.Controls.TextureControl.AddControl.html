@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Property UVAreaStyle
+    <title>Method AddControl
    | Simple Shader Inspectors Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Property UVAreaStyle
+    <meta name="title" content="Method AddControl
    | Simple Shader Inspectors Documentation ">
     <meta name="generator" content="docfx 2.58.2.0">
     
@@ -66,38 +66,43 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVAreaStyle*">
+            <article class="content wrap" id="_content" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureControl.AddControl*">
 
-<h1 id="VRLabs_SimpleShaderInspectors_Controls_TextureControl_UVAreaStyle_" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVAreaStyle*">Property UVAreaStyle
+<h1 id="VRLabs_SimpleShaderInspectors_Controls_TextureControl_AddControl_" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureControl.AddControl*">Method AddControl
 </h1>
 <div class="markdown level0 summary"></div>
 <div class="markdown level0 conceptual"></div>
 
-<a id="VRLabs_SimpleShaderInspectors_Controls_TextureControl_UVAreaStyle_" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVAreaStyle*"></a>
-<h4 id="VRLabs_SimpleShaderInspectors_Controls_TextureControl_UVAreaStyle" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVAreaStyle">UVAreaStyle</h4>
-<div class="markdown level1 summary"><p>Style for the tiling and offset background area.</p>
+<a id="VRLabs_SimpleShaderInspectors_Controls_TextureControl_AddControl_" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureControl.AddControl*"></a>
+<h4 id="VRLabs_SimpleShaderInspectors_Controls_TextureControl_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureControl.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)">AddControl(SimpleControl)</h4>
+<div class="markdown level1 summary"><p>Implementation needed by <a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer.html">IControlContainer</a> to add controls. All controls added are stored in <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.TextureControl.Controls.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_Controls">Controls</a>.</p>
+<p>These controls are going to be displayed inside the options area, after the tiling and offset option (it enabled).</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="decalaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">public GUIStyle UVAreaStyle { get; set; }</code></pre>
+  <pre><code class="lang-csharp hljs">public void AddControl(SimpleControl control)</code></pre>
 </div>
-<h5 class="propertyValue">Property Value</h5>
+<h5 class="parameters">Parameters</h5>
 <table class="table table-bordered table-striped table-condensed">
   <thead>
     <tr>
       <th>Type</th>
+      <th>Name</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><span class="xref">UnityEngine.GUIStyle</span></td>
-      <td><p>GUIStyle used for the background of the tiling and offset area.</p>
+      <td><a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleControl.html">SimpleControl</a></td>
+      <td><span class="parametername">control</span></td>
+      <td><p>Control to add.</p>
 </td>
     </tr>
   </tbody>
 </table>
+<h5 class="implements">Implements</h5>
+    <div><a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer.AddControl.html#VRLabs_SimpleShaderInspectors_IControlContainer_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_">IControlContainer.AddControl(SimpleControl)</a></div>
 </article>
           </div>
           

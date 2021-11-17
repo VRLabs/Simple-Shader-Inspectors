@@ -86,13 +86,14 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="VRLabs.SimpleShaderInspectors.IAdditionalProperties.html">IAdditionalProperties</a></div>
+    <div><a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer.html">IControlContainer</a></div>
   </div>
   
   <h6><strong>Namespace</strong>: <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.html">VRLabs.SimpleShaderInspectors.Controls</a></h6>
   
   <h5 id="VRLabs_SimpleShaderInspectors_Controls_TextureControl_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TextureControl : PropertyControl, IAdditionalProperties</code></pre>
+    <pre><code class="lang-csharp hljs">public class TextureControl : PropertyControl, IAdditionalProperties, IControlContainer</code></pre>
   </div>
   
   
@@ -168,10 +169,10 @@ this.AddTextureControl(&quot;_TextureProperty&quot;, &quot;_ColorProperty&quot;)
 </td>
       </tr>
       <tr>
-        <td id="VRLabs_SimpleShaderInspectors_Controls_TextureControl_IsUVButtonPressed" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureControl.IsUVButtonPressed">
-          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.TextureControl.IsUVButtonPressed.html">IsUVButtonPressed</a>
+        <td id="VRLabs_SimpleShaderInspectors_Controls_TextureControl_IsOptionsButtonPressed" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureControl.IsOptionsButtonPressed">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.TextureControl.IsOptionsButtonPressed.html">IsOptionsButtonPressed</a>
         </td>
-        <td class="markdown level1 summary"><p>Indicates if the uv button is pressed and the tiling and offset area is visible.</p>
+        <td class="markdown level1 summary"><p>Indicates if the options button is pressed and the option area is visible.</p>
 </td>
       </tr>
     </tbody>
@@ -194,6 +195,13 @@ this.AddTextureControl(&quot;_TextureProperty&quot;, &quot;_ColorProperty&quot;)
 </td>
       </tr>
       <tr>
+        <td id="VRLabs_SimpleShaderInspectors_Controls_TextureControl_Controls" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureControl.Controls">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.TextureControl.Controls.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_Controls">Controls</a>
+        </td>
+        <td class="markdown level1 summary"><p>List of controls under this control's options.</p>
+</td>
+      </tr>
+      <tr>
         <td id="VRLabs_SimpleShaderInspectors_Controls_TextureControl_HasHDRColor" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureControl.HasHDRColor">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.TextureControl.HasHDRColor.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_HasHDRColor">HasHDRColor</a>
         </td>
@@ -202,38 +210,38 @@ only works if there is only one extra property and it's a color property.</p>
 </td>
       </tr>
       <tr>
-        <td id="VRLabs_SimpleShaderInspectors_Controls_TextureControl_ShowUvOptions" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureControl.ShowUvOptions">
-          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.TextureControl.ShowUvOptions.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_ShowUvOptions">ShowUvOptions</a>
+        <td id="VRLabs_SimpleShaderInspectors_Controls_TextureControl_OptionsAreaColor" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsAreaColor">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsAreaColor.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_OptionsAreaColor">OptionsAreaColor</a>
         </td>
-        <td class="markdown level1 summary"><p>Boolean that defines if the control will show up an additional button to have access to the texture tiling and offset options.</p>
+        <td class="markdown level1 summary"><p>Background color for the options area.</p>
 </td>
       </tr>
       <tr>
-        <td id="VRLabs_SimpleShaderInspectors_Controls_TextureControl_UVAreaColor" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVAreaColor">
-          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVAreaColor.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_UVAreaColor">UVAreaColor</a>
+        <td id="VRLabs_SimpleShaderInspectors_Controls_TextureControl_OptionsAreaStyle" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsAreaStyle">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsAreaStyle.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_OptionsAreaStyle">OptionsAreaStyle</a>
         </td>
-        <td class="markdown level1 summary"><p>Background color for the uv button.</p>
+        <td class="markdown level1 summary"><p>Style for the options background area.</p>
 </td>
       </tr>
       <tr>
-        <td id="VRLabs_SimpleShaderInspectors_Controls_TextureControl_UVAreaStyle" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVAreaStyle">
-          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVAreaStyle.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_UVAreaStyle">UVAreaStyle</a>
+        <td id="VRLabs_SimpleShaderInspectors_Controls_TextureControl_OptionsButtonColor" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsButtonColor">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsButtonColor.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_OptionsButtonColor">OptionsButtonColor</a>
         </td>
-        <td class="markdown level1 summary"><p>Style for the tiling and offset background area.</p>
+        <td class="markdown level1 summary"><p>Color for the options button.</p>
 </td>
       </tr>
       <tr>
-        <td id="VRLabs_SimpleShaderInspectors_Controls_TextureControl_UVButtonColor" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVButtonColor">
-          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVButtonColor.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_UVButtonColor">UVButtonColor</a>
+        <td id="VRLabs_SimpleShaderInspectors_Controls_TextureControl_OptionsButtonStyle" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsButtonStyle">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsButtonStyle.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_OptionsButtonStyle">OptionsButtonStyle</a>
         </td>
-        <td class="markdown level1 summary"><p>Color for the tiling and offset button.</p>
+        <td class="markdown level1 summary"><p>Style for the options button.</p>
 </td>
       </tr>
       <tr>
-        <td id="VRLabs_SimpleShaderInspectors_Controls_TextureControl_UVButtonStyle" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVButtonStyle">
-          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVButtonStyle.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_UVButtonStyle">UVButtonStyle</a>
+        <td id="VRLabs_SimpleShaderInspectors_Controls_TextureControl_ShowTilingAndOffset" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureControl.ShowTilingAndOffset">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.TextureControl.ShowTilingAndOffset.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_ShowTilingAndOffset">ShowTilingAndOffset</a>
         </td>
-        <td class="markdown level1 summary"><p>Style for the tiling and offset options button.</p>
+        <td class="markdown level1 summary"><p>Boolean that defines if the control will show up the texture tiling and offset options in the options area.</p>
 </td>
       </tr>
     </tbody>
@@ -248,6 +256,14 @@ only works if there is only one extra property and it's a color property.</p>
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td id="VRLabs_SimpleShaderInspectors_Controls_TextureControl_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureControl.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.TextureControl.AddControl.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_">AddControl(SimpleControl)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Implementation needed by <a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer.html">IControlContainer</a> to add controls. All controls added are stored in <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.TextureControl.Controls.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_Controls">Controls</a>.</p>
+<p>These controls are going to be displayed inside the options area, after the tiling and offset option (it enabled).</p>
+</td>
+      </tr>
       <tr>
         <td id="VRLabs_SimpleShaderInspectors_Controls_TextureControl_ControlGUI_UnityEditor_MaterialEditor_" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureControl.ControlGUI(UnityEditor.MaterialEditor)">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.TextureControl.ControlGUI.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_ControlGUI_UnityEditor_MaterialEditor_">ControlGUI(MaterialEditor)</a>
@@ -267,9 +283,19 @@ only works if there is only one extra property and it's a color property.</p>
         </td>
         <td class="markdown level1 summary"></td>
       </tr>
+      <tr>
+        <td id="VRLabs_SimpleShaderInspectors_Controls_TextureControl_GetControlList" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureControl.GetControlList">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.TextureControl.GetControlList.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_GetControlList">GetControlList()</a>
+        </td>
+        <td class="markdown level1 summary"><p>Implementation needed by <a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer.html">IControlContainer</a> to get the object's controls list.</p>
+</td>
+      </tr>
     </tbody>
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Chainables.AddPropertyControl.html#VRLabs_SimpleShaderInspectors_Chainables_AddPropertyControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_">Chainables.AddPropertyControl(IControlContainer, String)</a>
+  </div>
   <div>
       <a class="xref" href="VRLabs.SimpleShaderInspectors.Chainables.Alias.html#VRLabs_SimpleShaderInspectors_Chainables_Alias__1___0_System_String_">Chainables.Alias&lt;T&gt;(T, String)</a>
   </div>
@@ -283,22 +309,94 @@ only works if there is only one extra property and it's a color property.</p>
       <a class="xref" href="VRLabs.SimpleShaderInspectors.Localization.ApplyLocalization.html#VRLabs_SimpleShaderInspectors_Localization_ApplyLocalization_VRLabs_SimpleShaderInspectors_SimpleControl_System_String_System_Boolean_System_Boolean_">Localization.ApplyLocalization(SimpleControl, String, Boolean, Boolean)</a>
   </div>
   <div>
-      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowUvOptions.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetShowUvOptions__1___0_System_Boolean_">Chainables.SetShowUvOptions&lt;T&gt;(T, Boolean)</a>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddColorControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddColorControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_Boolean_">Chainables.AddColorControl(IControlContainer, String, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddConditionalControlContainer.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddConditionalControlContainer_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_Single_">Chainables.AddConditionalControlContainer(IControlContainer, String, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddControlContainer.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddControlContainer_VRLabs_SimpleShaderInspectors_IControlContainer_">Chainables.AddControlContainer(IControlContainer)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddEnumControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddEnumControl__1_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_">Chainables.AddEnumControl&lt;TEnum&gt;(IControlContainer, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddGradientTextureControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_">Chainables.AddGradientTextureControl(IControlContainer, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddGradientTextureControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_System_String_System_String_">Chainables.AddGradientTextureControl(IControlContainer, String, String, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddKeywordToggleControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddKeywordToggleControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_">Chainables.AddKeywordToggleControl(IControlContainer, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddKeywordToggleListControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddKeywordToggleListControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_">Chainables.AddKeywordToggleListControl(IControlContainer, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddLabelControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddLabelControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_">Chainables.AddLabelControl(IControlContainer, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddLightmapEmissionControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddLightmapEmissionControl_VRLabs_SimpleShaderInspectors_IControlContainer_">Chainables.AddLightmapEmissionControl(IControlContainer)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddSpaceControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddSpaceControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_Int32_">Chainables.AddSpaceControl(IControlContainer, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddTextureControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_System_String_">Chainables.AddTextureControl(IControlContainer, String, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowTilingAndOffset.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetShowTilingAndOffset__1___0_System_Boolean_">Chainables.SetShowTilingAndOffset&lt;T&gt;(T, Boolean)</a>
   </div>
   <div>
       <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.SetHasHDRColor.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetHasHDRColor__1___0_System_Boolean_">Chainables.SetHasHDRColor&lt;T&gt;(T, Boolean)</a>
   </div>
   <div>
-      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVButtonStyle.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetUVButtonStyle__1___0_UnityEngine_GUIStyle_">Chainables.SetUVButtonStyle&lt;T&gt;(T, GUIStyle)</a>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonStyle.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetOptionsButtonStyle__1___0_UnityEngine_GUIStyle_">Chainables.SetOptionsButtonStyle&lt;T&gt;(T, GUIStyle)</a>
   </div>
   <div>
-      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVAreaStyle.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetUVAreaStyle__1___0_UnityEngine_GUIStyle_">Chainables.SetUVAreaStyle&lt;T&gt;(T, GUIStyle)</a>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaStyle.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetOptionsAreaStyle__1___0_UnityEngine_GUIStyle_">Chainables.SetOptionsAreaStyle&lt;T&gt;(T, GUIStyle)</a>
   </div>
   <div>
-      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVButtonColor.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetUVButtonColor__1___0_UnityEngine_Color_">Chainables.SetUVButtonColor&lt;T&gt;(T, Color)</a>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonColor.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetOptionsButtonColor__1___0_UnityEngine_Color_">Chainables.SetOptionsButtonColor&lt;T&gt;(T, Color)</a>
   </div>
   <div>
-      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVAreaColor.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetUVAreaColor__1___0_UnityEngine_Color_">Chainables.SetUVAreaColor&lt;T&gt;(T, Color)</a>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaColor.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetOptionsAreaColor__1___0_UnityEngine_Color_">Chainables.SetOptionsAreaColor&lt;T&gt;(T, Color)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddTextureGeneratorControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_System_String_">Chainables.AddTextureGeneratorControl(IControlContainer, String, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddTextureGeneratorControl_VRLabs_SimpleShaderInspectors_IControlContainer_UnityEngine_ComputeShader_System_String_System_String_System_String_System_String_">Chainables.AddTextureGeneratorControl(IControlContainer, ComputeShader, String, String, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTilingAndOffsetControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddTilingAndOffsetControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_">Chainables.AddTilingAndOffsetControl(IControlContainer, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddToggleControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddToggleControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_Single_System_Single_">Chainables.AddToggleControl(IControlContainer, String, Single, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddToggleListControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddToggleListControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_Single_System_Single_">Chainables.AddToggleListControl(IControlContainer, String, Single, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddVectorControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddVectorControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_Boolean_System_Boolean_System_Boolean_System_Boolean_">Chainables.AddVectorControl(IControlContainer, String, Boolean, Boolean, Boolean, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddVertexStreamsControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddVertexStreamsControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_">Chainables.AddVertexStreamsControl(IControlContainer, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddActivatableSection.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddActivatableSection_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_System_Single_System_Single_System_Single_System_Single_">Chainables.AddActivatableSection(IControlContainer, String, String, Single, Single, Single, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddActivatableSection.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddActivatableSection_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_Single_System_Single_">Chainables.AddActivatableSection(IControlContainer, String, Single, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSectionGroup.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddOrderedSectionGroup_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_">Chainables.AddOrderedSectionGroup(IControlContainer, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddSection.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddSection_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_Single_System_Single_">Chainables.AddSection(IControlContainer, String, Single, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddSection.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddSection_VRLabs_SimpleShaderInspectors_IControlContainer_">Chainables.AddSection(IControlContainer)</a>
   </div>
 </article>
           </div>

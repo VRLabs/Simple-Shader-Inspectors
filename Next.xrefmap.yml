@@ -742,6 +742,66 @@ references:
   fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetLabelStyle(Of T)(T, UnityEngine.GUIStyle)
   nameWithType: Chainables.SetLabelStyle<T>(T, GUIStyle)
   nameWithType.vb: Chainables.SetLabelStyle(Of T)(T, GUIStyle)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaColor*
+  name: SetOptionsAreaColor
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaColor.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaColor
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaColor
+  nameWithType: Chainables.SetOptionsAreaColor
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaColor``1(``0,UnityEngine.Color)
+  name: SetOptionsAreaColor<T>(T, Color)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaColor.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetOptionsAreaColor__1___0_UnityEngine_Color_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaColor``1(``0,UnityEngine.Color)
+  name.vb: SetOptionsAreaColor(Of T)(T, Color)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaColor<T>(T, UnityEngine.Color)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaColor(Of T)(T, UnityEngine.Color)
+  nameWithType: Chainables.SetOptionsAreaColor<T>(T, Color)
+  nameWithType.vb: Chainables.SetOptionsAreaColor(Of T)(T, Color)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaStyle*
+  name: SetOptionsAreaStyle
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaStyle.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaStyle
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaStyle
+  nameWithType: Chainables.SetOptionsAreaStyle
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaStyle``1(``0,UnityEngine.GUIStyle)
+  name: SetOptionsAreaStyle<T>(T, GUIStyle)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaStyle.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetOptionsAreaStyle__1___0_UnityEngine_GUIStyle_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaStyle``1(``0,UnityEngine.GUIStyle)
+  name.vb: SetOptionsAreaStyle(Of T)(T, GUIStyle)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaStyle<T>(T, UnityEngine.GUIStyle)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaStyle(Of T)(T, UnityEngine.GUIStyle)
+  nameWithType: Chainables.SetOptionsAreaStyle<T>(T, GUIStyle)
+  nameWithType.vb: Chainables.SetOptionsAreaStyle(Of T)(T, GUIStyle)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonColor*
+  name: SetOptionsButtonColor
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonColor.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonColor
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonColor
+  nameWithType: Chainables.SetOptionsButtonColor
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonColor``1(``0,UnityEngine.Color)
+  name: SetOptionsButtonColor<T>(T, Color)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonColor.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetOptionsButtonColor__1___0_UnityEngine_Color_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonColor``1(``0,UnityEngine.Color)
+  name.vb: SetOptionsButtonColor(Of T)(T, Color)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonColor<T>(T, UnityEngine.Color)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonColor(Of T)(T, UnityEngine.Color)
+  nameWithType: Chainables.SetOptionsButtonColor<T>(T, Color)
+  nameWithType.vb: Chainables.SetOptionsButtonColor(Of T)(T, Color)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonStyle*
+  name: SetOptionsButtonStyle
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonStyle.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonStyle
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonStyle
+  nameWithType: Chainables.SetOptionsButtonStyle
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonStyle``1(``0,UnityEngine.GUIStyle)
+  name: SetOptionsButtonStyle<T>(T, GUIStyle)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonStyle.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetOptionsButtonStyle__1___0_UnityEngine_GUIStyle_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonStyle``1(``0,UnityEngine.GUIStyle)
+  name.vb: SetOptionsButtonStyle(Of T)(T, GUIStyle)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonStyle<T>(T, UnityEngine.GUIStyle)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonStyle(Of T)(T, UnityEngine.GUIStyle)
+  nameWithType: Chainables.SetOptionsButtonStyle<T>(T, GUIStyle)
+  nameWithType.vb: Chainables.SetOptionsButtonStyle(Of T)(T, GUIStyle)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowAlphaValue*
   name: SetShowAlphaValue
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowAlphaValue.html
@@ -757,81 +817,21 @@ references:
   fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowAlphaValue(Of T)(T, System.Boolean)
   nameWithType: Chainables.SetShowAlphaValue<T>(T, Boolean)
   nameWithType.vb: Chainables.SetShowAlphaValue(Of T)(T, Boolean)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowUvOptions*
-  name: SetShowUvOptions
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowUvOptions.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowUvOptions
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowUvOptions
-  nameWithType: Chainables.SetShowUvOptions
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowUvOptions``1(``0,System.Boolean)
-  name: SetShowUvOptions<T>(T, Boolean)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowUvOptions.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetShowUvOptions__1___0_System_Boolean_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowUvOptions``1(``0,System.Boolean)
-  name.vb: SetShowUvOptions(Of T)(T, Boolean)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowUvOptions<T>(T, System.Boolean)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowUvOptions(Of T)(T, System.Boolean)
-  nameWithType: Chainables.SetShowUvOptions<T>(T, Boolean)
-  nameWithType.vb: Chainables.SetShowUvOptions(Of T)(T, Boolean)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVAreaColor*
-  name: SetUVAreaColor
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVAreaColor.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVAreaColor
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVAreaColor
-  nameWithType: Chainables.SetUVAreaColor
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVAreaColor``1(``0,UnityEngine.Color)
-  name: SetUVAreaColor<T>(T, Color)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVAreaColor.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetUVAreaColor__1___0_UnityEngine_Color_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVAreaColor``1(``0,UnityEngine.Color)
-  name.vb: SetUVAreaColor(Of T)(T, Color)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVAreaColor<T>(T, UnityEngine.Color)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVAreaColor(Of T)(T, UnityEngine.Color)
-  nameWithType: Chainables.SetUVAreaColor<T>(T, Color)
-  nameWithType.vb: Chainables.SetUVAreaColor(Of T)(T, Color)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVAreaStyle*
-  name: SetUVAreaStyle
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVAreaStyle.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVAreaStyle
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVAreaStyle
-  nameWithType: Chainables.SetUVAreaStyle
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVAreaStyle``1(``0,UnityEngine.GUIStyle)
-  name: SetUVAreaStyle<T>(T, GUIStyle)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVAreaStyle.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetUVAreaStyle__1___0_UnityEngine_GUIStyle_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVAreaStyle``1(``0,UnityEngine.GUIStyle)
-  name.vb: SetUVAreaStyle(Of T)(T, GUIStyle)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVAreaStyle<T>(T, UnityEngine.GUIStyle)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVAreaStyle(Of T)(T, UnityEngine.GUIStyle)
-  nameWithType: Chainables.SetUVAreaStyle<T>(T, GUIStyle)
-  nameWithType.vb: Chainables.SetUVAreaStyle(Of T)(T, GUIStyle)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVButtonColor*
-  name: SetUVButtonColor
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVButtonColor.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVButtonColor
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVButtonColor
-  nameWithType: Chainables.SetUVButtonColor
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVButtonColor``1(``0,UnityEngine.Color)
-  name: SetUVButtonColor<T>(T, Color)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVButtonColor.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetUVButtonColor__1___0_UnityEngine_Color_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVButtonColor``1(``0,UnityEngine.Color)
-  name.vb: SetUVButtonColor(Of T)(T, Color)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVButtonColor<T>(T, UnityEngine.Color)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVButtonColor(Of T)(T, UnityEngine.Color)
-  nameWithType: Chainables.SetUVButtonColor<T>(T, Color)
-  nameWithType.vb: Chainables.SetUVButtonColor(Of T)(T, Color)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVButtonStyle*
-  name: SetUVButtonStyle
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVButtonStyle.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVButtonStyle
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVButtonStyle
-  nameWithType: Chainables.SetUVButtonStyle
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVButtonStyle``1(``0,UnityEngine.GUIStyle)
-  name: SetUVButtonStyle<T>(T, GUIStyle)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVButtonStyle.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetUVButtonStyle__1___0_UnityEngine_GUIStyle_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVButtonStyle``1(``0,UnityEngine.GUIStyle)
-  name.vb: SetUVButtonStyle(Of T)(T, GUIStyle)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVButtonStyle<T>(T, UnityEngine.GUIStyle)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetUVButtonStyle(Of T)(T, UnityEngine.GUIStyle)
-  nameWithType: Chainables.SetUVButtonStyle<T>(T, GUIStyle)
-  nameWithType.vb: Chainables.SetUVButtonStyle(Of T)(T, GUIStyle)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowTilingAndOffset*
+  name: SetShowTilingAndOffset
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowTilingAndOffset.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowTilingAndOffset
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowTilingAndOffset
+  nameWithType: Chainables.SetShowTilingAndOffset
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowTilingAndOffset``1(``0,System.Boolean)
+  name: SetShowTilingAndOffset<T>(T, Boolean)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowTilingAndOffset.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetShowTilingAndOffset__1___0_System_Boolean_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowTilingAndOffset``1(``0,System.Boolean)
+  name.vb: SetShowTilingAndOffset(Of T)(T, Boolean)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowTilingAndOffset<T>(T, System.Boolean)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowTilingAndOffset(Of T)(T, System.Boolean)
+  nameWithType: Chainables.SetShowTilingAndOffset<T>(T, Boolean)
+  nameWithType.vb: Chainables.SetShowTilingAndOffset(Of T)(T, Boolean)
 - uid: VRLabs.SimpleShaderInspectors.Controls.ColorControl
   name: ColorControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.ColorControl.html
@@ -2517,6 +2517,18 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.TextureControl.#ctor
   fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.TextureControl
   nameWithType: TextureControl.TextureControl
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)
+  name: AddControl(SimpleControl)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.AddControl.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.TextureControl.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)
+  nameWithType: TextureControl.AddControl(SimpleControl)
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.AddControl*
+  name: AddControl
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.AddControl.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.TextureControl.AddControl
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.AddControl
+  nameWithType: TextureControl.AddControl
 - uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.AdditionalProperties
   name: AdditionalProperties
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.AdditionalProperties.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_AdditionalProperties
@@ -2541,6 +2553,18 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.TextureControl.ControlGUI
   fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.ControlGUI
   nameWithType: TextureControl.ControlGUI
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.Controls
+  name: Controls
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.Controls.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_Controls
+  commentId: P:VRLabs.SimpleShaderInspectors.Controls.TextureControl.Controls
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.Controls
+  nameWithType: TextureControl.Controls
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.Controls*
+  name: Controls
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.Controls.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.TextureControl.Controls
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.Controls
+  nameWithType: TextureControl.Controls
 - uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.DrawSideContent(UnityEditor.MaterialEditor)
   name: DrawSideContent(MaterialEditor)
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.DrawSideContent.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_DrawSideContent_UnityEditor_MaterialEditor_
@@ -2565,6 +2589,18 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.TextureControl.DrawTextureSingleLine
   fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.DrawTextureSingleLine
   nameWithType: TextureControl.DrawTextureSingleLine
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.GetControlList
+  name: GetControlList()
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.GetControlList.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_GetControlList
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.TextureControl.GetControlList
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.GetControlList()
+  nameWithType: TextureControl.GetControlList()
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.GetControlList*
+  name: GetControlList
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.GetControlList.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.TextureControl.GetControlList
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.GetControlList
+  nameWithType: TextureControl.GetControlList
 - uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.HasCustomInlineContent
   name: HasCustomInlineContent
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.HasCustomInlineContent.html
@@ -2595,72 +2631,72 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.TextureControl.HasHDRColor
   fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.HasHDRColor
   nameWithType: TextureControl.HasHDRColor
-- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.IsUVButtonPressed
-  name: IsUVButtonPressed
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.IsUVButtonPressed.html
-  commentId: F:VRLabs.SimpleShaderInspectors.Controls.TextureControl.IsUVButtonPressed
-  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.IsUVButtonPressed
-  nameWithType: TextureControl.IsUVButtonPressed
-- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.ShowUvOptions
-  name: ShowUvOptions
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.ShowUvOptions.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_ShowUvOptions
-  commentId: P:VRLabs.SimpleShaderInspectors.Controls.TextureControl.ShowUvOptions
-  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.ShowUvOptions
-  nameWithType: TextureControl.ShowUvOptions
-- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.ShowUvOptions*
-  name: ShowUvOptions
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.ShowUvOptions.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.TextureControl.ShowUvOptions
-  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.ShowUvOptions
-  nameWithType: TextureControl.ShowUvOptions
-- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVAreaColor
-  name: UVAreaColor
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVAreaColor.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_UVAreaColor
-  commentId: P:VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVAreaColor
-  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVAreaColor
-  nameWithType: TextureControl.UVAreaColor
-- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVAreaColor*
-  name: UVAreaColor
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVAreaColor.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVAreaColor
-  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVAreaColor
-  nameWithType: TextureControl.UVAreaColor
-- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVAreaStyle
-  name: UVAreaStyle
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVAreaStyle.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_UVAreaStyle
-  commentId: P:VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVAreaStyle
-  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVAreaStyle
-  nameWithType: TextureControl.UVAreaStyle
-- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVAreaStyle*
-  name: UVAreaStyle
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVAreaStyle.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVAreaStyle
-  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVAreaStyle
-  nameWithType: TextureControl.UVAreaStyle
-- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVButtonColor
-  name: UVButtonColor
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVButtonColor.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_UVButtonColor
-  commentId: P:VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVButtonColor
-  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVButtonColor
-  nameWithType: TextureControl.UVButtonColor
-- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVButtonColor*
-  name: UVButtonColor
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVButtonColor.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVButtonColor
-  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVButtonColor
-  nameWithType: TextureControl.UVButtonColor
-- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVButtonStyle
-  name: UVButtonStyle
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVButtonStyle.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_UVButtonStyle
-  commentId: P:VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVButtonStyle
-  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVButtonStyle
-  nameWithType: TextureControl.UVButtonStyle
-- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVButtonStyle*
-  name: UVButtonStyle
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVButtonStyle.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVButtonStyle
-  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.UVButtonStyle
-  nameWithType: TextureControl.UVButtonStyle
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.IsOptionsButtonPressed
+  name: IsOptionsButtonPressed
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.IsOptionsButtonPressed.html
+  commentId: F:VRLabs.SimpleShaderInspectors.Controls.TextureControl.IsOptionsButtonPressed
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.IsOptionsButtonPressed
+  nameWithType: TextureControl.IsOptionsButtonPressed
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsAreaColor
+  name: OptionsAreaColor
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsAreaColor.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_OptionsAreaColor
+  commentId: P:VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsAreaColor
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsAreaColor
+  nameWithType: TextureControl.OptionsAreaColor
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsAreaColor*
+  name: OptionsAreaColor
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsAreaColor.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsAreaColor
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsAreaColor
+  nameWithType: TextureControl.OptionsAreaColor
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsAreaStyle
+  name: OptionsAreaStyle
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsAreaStyle.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_OptionsAreaStyle
+  commentId: P:VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsAreaStyle
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsAreaStyle
+  nameWithType: TextureControl.OptionsAreaStyle
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsAreaStyle*
+  name: OptionsAreaStyle
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsAreaStyle.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsAreaStyle
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsAreaStyle
+  nameWithType: TextureControl.OptionsAreaStyle
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsButtonColor
+  name: OptionsButtonColor
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsButtonColor.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_OptionsButtonColor
+  commentId: P:VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsButtonColor
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsButtonColor
+  nameWithType: TextureControl.OptionsButtonColor
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsButtonColor*
+  name: OptionsButtonColor
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsButtonColor.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsButtonColor
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsButtonColor
+  nameWithType: TextureControl.OptionsButtonColor
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsButtonStyle
+  name: OptionsButtonStyle
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsButtonStyle.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_OptionsButtonStyle
+  commentId: P:VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsButtonStyle
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsButtonStyle
+  nameWithType: TextureControl.OptionsButtonStyle
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsButtonStyle*
+  name: OptionsButtonStyle
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsButtonStyle.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsButtonStyle
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.OptionsButtonStyle
+  nameWithType: TextureControl.OptionsButtonStyle
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.ShowTilingAndOffset
+  name: ShowTilingAndOffset
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.ShowTilingAndOffset.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_ShowTilingAndOffset
+  commentId: P:VRLabs.SimpleShaderInspectors.Controls.TextureControl.ShowTilingAndOffset
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.ShowTilingAndOffset
+  nameWithType: TextureControl.ShowTilingAndOffset
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.ShowTilingAndOffset*
+  name: ShowTilingAndOffset
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.ShowTilingAndOffset.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.TextureControl.ShowTilingAndOffset
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.ShowTilingAndOffset
+  nameWithType: TextureControl.ShowTilingAndOffset
 - uid: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl
   name: TextureGeneratorControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.html

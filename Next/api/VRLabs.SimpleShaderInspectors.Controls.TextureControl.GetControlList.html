@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Property ShowUvOptions
+    <title>Method GetControlList
    | Simple Shader Inspectors Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Property ShowUvOptions
+    <meta name="title" content="Method GetControlList
    | Simple Shader Inspectors Documentation ">
     <meta name="generator" content="docfx 2.58.2.0">
     
@@ -66,23 +66,23 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureControl.ShowUvOptions*">
+            <article class="content wrap" id="_content" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureControl.GetControlList*">
 
-<h1 id="VRLabs_SimpleShaderInspectors_Controls_TextureControl_ShowUvOptions_" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureControl.ShowUvOptions*">Property ShowUvOptions
+<h1 id="VRLabs_SimpleShaderInspectors_Controls_TextureControl_GetControlList_" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureControl.GetControlList*">Method GetControlList
 </h1>
 <div class="markdown level0 summary"></div>
 <div class="markdown level0 conceptual"></div>
 
-<a id="VRLabs_SimpleShaderInspectors_Controls_TextureControl_ShowUvOptions_" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureControl.ShowUvOptions*"></a>
-<h4 id="VRLabs_SimpleShaderInspectors_Controls_TextureControl_ShowUvOptions" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureControl.ShowUvOptions">ShowUvOptions</h4>
-<div class="markdown level1 summary"><p>Boolean that defines if the control will show up an additional button to have access to the texture tiling and offset options.</p>
+<a id="VRLabs_SimpleShaderInspectors_Controls_TextureControl_GetControlList_" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureControl.GetControlList*"></a>
+<h4 id="VRLabs_SimpleShaderInspectors_Controls_TextureControl_GetControlList" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureControl.GetControlList">GetControlList()</h4>
+<div class="markdown level1 summary"><p>Implementation needed by <a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer.html">IControlContainer</a> to get the object's controls list.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="decalaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">public bool ShowUvOptions { get; set; }</code></pre>
+  <pre><code class="lang-csharp hljs">public IEnumerable&lt;SimpleControl&gt; GetControlList()</code></pre>
 </div>
-<h5 class="propertyValue">Property Value</h5>
+<h5 class="returns">Returns</h5>
 <table class="table table-bordered table-striped table-condensed">
   <thead>
     <tr>
@@ -92,12 +92,14 @@
   </thead>
   <tbody>
     <tr>
-      <td><span class="xref">System.Boolean</span></td>
-      <td><p>True if the control has to show the button for uv tiling and offset, false otherwise.</p>
+      <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleControl.html">SimpleControl</a>&gt;</td>
+      <td><p><a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.TextureControl.Controls.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_Controls">Controls</a></p>
 </td>
     </tr>
   </tbody>
 </table>
+<h5 class="implements">Implements</h5>
+    <div><a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer.GetControlList.html#VRLabs_SimpleShaderInspectors_IControlContainer_GetControlList">IControlContainer.GetControlList()</a></div>
 </article>
           </div>
           
