@@ -87,13 +87,14 @@
     <div><a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer.html">IControlContainer</a></div>
     <div><a class="xref" href="VRLabs.SimpleShaderInspectors.INonAnimatableProperty.html">INonAnimatableProperty</a></div>
     <div><a class="xref" href="VRLabs.SimpleShaderInspectors.IAdditionalProperties.html">IAdditionalProperties</a></div>
+    <div><a class="xref" href="VRLabs.SimpleShaderInspectors.IAdditionalLocalization.html">IAdditionalLocalization</a></div>
   </div>
   
   <h6><strong>Namespace</strong>: <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.html">VRLabs.SimpleShaderInspectors.Controls.Sections</a></h6>
   
   <h5 id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class OrderedSection : Section, IControlContainer, INonAnimatableProperty, IAdditionalProperties</code></pre>
+    <pre><code class="lang-csharp hljs">public class OrderedSection : Section, IControlContainer, INonAnimatableProperty, IAdditionalProperties, IAdditionalLocalization</code></pre>
   </div>
   
   
@@ -204,10 +205,24 @@ group.AddOrderedSection(&quot;_ActivateProperty&quot;, &quot;_ShowProperty&quot;
     </thead>
     <tbody>
       <tr>
+        <td id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection_AdditionalContent" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.AdditionalContent">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.AdditionalContent.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection_AdditionalContent">AdditionalContent</a>
+        </td>
+        <td class="markdown level1 summary"><p>Extra localization array. Implementation needed by <a class="xref" href="VRLabs.SimpleShaderInspectors.IAdditionalLocalization.html">IAdditionalLocalization</a>.</p>
+</td>
+      </tr>
+      <tr>
         <td id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection_AdditionalProperties" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.AdditionalProperties">
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.AdditionalProperties.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection_AdditionalProperties">AdditionalProperties</a>
         </td>
         <td class="markdown level1 summary"><p>Extra properties array. Implementation needed by <a class="xref" href="VRLabs.SimpleShaderInspectors.IAdditionalProperties.html">IAdditionalProperties</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection_CustomPopupPath" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.CustomPopupPath">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.CustomPopupPath.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection_CustomPopupPath">CustomPopupPath</a>
+        </td>
+        <td class="markdown level1 summary"><p>Custom path for the selection inside the popup of the ordered section group</p>
 </td>
       </tr>
       <tr>
@@ -332,6 +347,9 @@ group.AddOrderedSection(&quot;_ActivateProperty&quot;, &quot;_ShowProperty&quot;
   </div>
   <div>
       <a class="xref" href="VRLabs.SimpleShaderInspectors.Chainables.SetEnabled.html#VRLabs_SimpleShaderInspectors_Chainables_SetEnabled__1___0_System_Boolean_">Chainables.SetEnabled&lt;T&gt;(T, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.AdditionalContentExtensions.InitializeLocalizationWithNames.html#VRLabs_SimpleShaderInspectors_AdditionalContentExtensions_InitializeLocalizationWithNames_VRLabs_SimpleShaderInspectors_IAdditionalLocalization_System_String___">AdditionalContentExtensions.InitializeLocalizationWithNames(IAdditionalLocalization, String[])</a>
   </div>
   <div>
       <a class="xref" href="VRLabs.SimpleShaderInspectors.Localization.ApplyLocalization.html#VRLabs_SimpleShaderInspectors_Localization_ApplyLocalization_VRLabs_SimpleShaderInspectors_SimpleControl_System_String_System_Boolean_System_Boolean_">Localization.ApplyLocalization(SimpleControl, String, Boolean, Boolean)</a>
