@@ -34,10 +34,7 @@ namespace VRLabs.SimpleShaderInspectors.Tools
             public string rscfName;
             public string windowPath;
         }
-
-        private string _selectedPath = null;
-        private string _customNamespace = null;
-        private string _acronym = null;
+        
         private bool _keepComments;
         private TextField _namespaceField;
         private TextField _resourceFolderField;
