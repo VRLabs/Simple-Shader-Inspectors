@@ -229,14 +229,15 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         protected virtual void DrawSideContent(MaterialEditor materialEditor)
         {
         }
-        
+
         /// <summary>
         /// Implementation needed by <see cref="IControlContainer"/> to add controls. All controls added are stored in <see cref="Controls"/>.
-        ///
+        /// 
         /// These controls are going to be displayed inside the options area, after the tiling and offset option (it enabled).
         /// </summary>
         /// <param name="control">Control to add.</param>
-        public void AddControl(SimpleControl control) => Controls.Add(control);
+        /// <param name="alias">Optional alias to say where a control is appended after.</param>
+        public void AddControl(SimpleControl control, string alias = "") => Controls.AddControl(control, alias);
 
 
         /// <summary>

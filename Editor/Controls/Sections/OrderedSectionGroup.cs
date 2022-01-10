@@ -199,17 +199,19 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// Implementation needed by <see cref="IControlContainer{T}"/> to add controls. All controls added are stored in <see cref="Controls"/>
         /// </summary>
         /// <param name="control">Control to add.</param>
-        public void AddControl(OrderedSection control) => Controls.Add(control);
+        /// <param name="alias">Optional alias to say where a control is appended after.</param>
+        public void AddControl(OrderedSection control, string alias = "") => Controls.AddControl(control, alias);
 
         /// <summary>
         /// Implementation needed by <see cref="IControlContainer"/> to add controls. All controls added are stored in <see cref="Controls"/> only if the parameter
         /// is of type <see cref="OrderedSection"/>
         /// </summary>
         /// <param name="control">Control to add.</param>
-        void IControlContainer.AddControl(SimpleControl control)
+        /// <param name="alias">Optional alias to say where a control is appended after.</param>
+        void IControlContainer.AddControl(SimpleControl control, string alias = "")
         {
             if(control is OrderedSection section)
-                Controls.Add(section);
+                Controls.AddControl(section, alias);
         }
 
         /// <summary>

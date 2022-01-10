@@ -58,18 +58,13 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// Implementation needed by <see cref="IControlContainer"/> to add controls. All controls added are stored in <see cref="Controls"/>
         /// </summary>
         /// <param name="control">Control to add.</param>
-        public void AddControl(SimpleControl control)
-        {
-            Controls.Add(control);
-        }
-        
+        /// <param name="alias">Optional alias to say where a control is appended after.</param>
+        public void AddControl(SimpleControl control, string alias = "") => Controls.AddControl(control, alias);
+
         /// <summary>
         /// Implementation needed by <see cref="IControlContainer"/> to get the object's controls list.
         /// </summary>
         /// <returns><see cref="Controls"/></returns>
-        public IEnumerable<SimpleControl> GetControlList()
-        {
-            return Controls;
-        }
+        public IEnumerable<SimpleControl> GetControlList() => Controls;
     }
 }

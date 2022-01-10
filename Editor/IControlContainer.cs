@@ -13,8 +13,12 @@ namespace VRLabs.SimpleShaderInspectors
         /// <summary>
         /// Generic version of <see cref="IControlContainer.AddControl"/>.
         /// </summary>
+        /// <remarks>
+        /// The optional alias string should be used to place the control after the control with said alias, and if the alias is null or empty it should be placed at the end.
+        /// </remarks>
         /// <param name="control">Control to add.</param>
-        void AddControl(T control);
+        /// <param name="alias">Alias to append after.</param>
+        void AddControl(T control, string alias = "");
         
         /// <summary>
         /// Generic version of <see cref="IControlContainer.GetControlList"/>.
@@ -32,11 +36,13 @@ namespace VRLabs.SimpleShaderInspectors
         /// Method used to add a control to the list of controls that are under this object
         /// </summary>
         /// <param name="control">Control to add</param>
+        /// <param name="alias">Alias to append after.</param>
         /// <remarks>
         /// <para>Simple Shader Inspectors needs an endpoint to add controls inside <see cref="IControlContainer"/> objects using Chainable methods, and this is the one it uses.</para>
         /// <para>This approach is preferable compared to defining a list because it will leave the control the freedom to handle how to store ad manage controls passed by the inspector.</para>
+        /// <para>The optional alias string should be used to place the control after the control with said alias, and if the alias is null or empty it should be placed at the end.</para>
         /// </remarks>
-        void AddControl(SimpleControl control);
+        void AddControl(SimpleControl control, string alias = "");
         
         /// <summary>
         /// Method used to get the list of stored controls.
@@ -48,4 +54,44 @@ namespace VRLabs.SimpleShaderInspectors
         /// </remarks>
         IEnumerable<SimpleControl> GetControlList();
     }
+
+    /// <summary>
+    /// Extension methods for dealing with IControlContainer type of objects
+    /// </summary>
+    public static class ContainerExtensions
+    {
+        /// <summary>
+        /// Default behaviour that should be used for adding new controls into a list of controls.
+        /// </summary>
+        /// <remarks>
+        /// <para>If you're using an IList derivative list object to contain the list of controls in your <see cref="IControlContainer"/> object you can just use this method to add a new control.</para>
+        /// <para>If you're dealing with controls differently you should implement your own method with the following sequence of actions:</para>
+        /// <list type="bullet">
+        /// <item>Check if the alias is valid by calling "string.IsNullOrWhiteSpace(alias)", in case it's not valid just append the new control at the end.</item>
+        /// <item>Find the position of the control with the given alias and insert the new control after it.</item>
+        /// <item>If the control with the given alias is not found, append the new control at the end.</item>
+        /// </list>
+        /// </remarks>
+        /// <param name="items">List of items to add the new control to.</param>
+        /// <param name="control">Control to add.</param>
+        /// <param name="alias">alias to append after to, default value is an empty string.</param>
+        public static void AddControl<T>(this IList<T> items, T control, string alias = "") where T : SimpleControl
+        {
+            if (string.IsNullOrWhiteSpace(alias))
+            {
+                items.Add(control);
+                return;
+            }
+
+            for (int i = 0; i < items.Count; i++)
+            {
+                if (items[i].ControlAlias != alias) continue;
+                items.Insert(i+1, control);
+                return;
+            }
+            
+            items.Add(control);
+        }
+    }
+    
 }

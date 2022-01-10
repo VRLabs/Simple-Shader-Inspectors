@@ -2,29 +2,29 @@
 {
     public static partial class Chainables
     {
-        public static ActivatableSection AddActivatableSection(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String activatePropertyName, System.String showPropertyName, System.Single enableValue = 1, System.Single disableValue = 0, System.Single hideValue = 0, System.Single showValue = 1)
+        public static ActivatableSection AddActivatableSection(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String activatePropertyName, System.String showPropertyName, System.Single enableValue = 1, System.Single disableValue = 0, System.Single hideValue = 0, System.Single showValue = 1, string appendAfterAlias = "")
         {
             var control = new ActivatableSection(activatePropertyName, showPropertyName, enableValue, disableValue, hideValue, showValue);
-            container.AddControl(control);
+            container.AddControl(control, appendAfterAlias);
             return control;
         }
-        public static ActivatableSection AddActivatableSection(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String activatePropertyName, System.Single enableValue = 1, System.Single disableValue = 0)
+        public static ActivatableSection AddActivatableSection(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String activatePropertyName, System.Single enableValue = 1, System.Single disableValue = 0, string appendAfterAlias = "")
         {
             var control = new ActivatableSection(activatePropertyName, enableValue, disableValue);
-            container.AddControl(control);
+            container.AddControl(control, appendAfterAlias);
             return control;
         }
 
-        public static OrderedSection AddOrderedSection(this VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup container, System.String activatePropertyName, System.String showPropertyName, System.Single enableValue = 1, System.Single disableValue = 0, System.Single showValue = 1, System.Single hideValue = 0)
+        public static OrderedSection AddOrderedSection(this VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup container, System.String activatePropertyName, System.String showPropertyName, System.Single enableValue = 1, System.Single disableValue = 0, System.Single showValue = 1, System.Single hideValue = 0, string appendAfterAlias = "")
         {
             var control = new OrderedSection(activatePropertyName, showPropertyName, enableValue, disableValue, showValue, hideValue);
-            container.AddControl(control);
+            container.AddControl(control, appendAfterAlias);
             return control;
         }
-        public static OrderedSection AddOrderedSection(this VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup container, System.String activatePropertyName, System.Single enableValue = 1, System.Single disableValue = 0)
+        public static OrderedSection AddOrderedSection(this VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup container, System.String activatePropertyName, System.Single enableValue = 1, System.Single disableValue = 0, string appendAfterAlias = "")
         {
             var control = new OrderedSection(activatePropertyName, enableValue, disableValue);
-            container.AddControl(control);
+            container.AddControl(control, appendAfterAlias);
             return control;
         }
         public static T SetUpIcon<T>(this T control, UnityEngine.GUIStyle property) where T : OrderedSection
@@ -58,23 +58,23 @@
             return control;
         }
 
-        public static OrderedSectionGroup AddOrderedSectionGroup(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String alias)
+        public static OrderedSectionGroup AddOrderedSectionGroup(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String alias, string appendAfterAlias = "")
         {
             var control = new OrderedSectionGroup(alias);
-            container.AddControl(control);
+            container.AddControl(control, appendAfterAlias);
             return control;
         }
 
-        public static Section AddSection(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String propertyName, System.Single hideValue = 0, System.Single showValue = 1)
+        public static Section AddSection(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String propertyName, System.Single hideValue = 0, System.Single showValue = 1, string appendAfterAlias = "")
         {
             var control = new Section(propertyName, hideValue, showValue);
-            container.AddControl(control);
+            container.AddControl(control, appendAfterAlias);
             return control;
         }
-        public static Section AddSection(this VRLabs.SimpleShaderInspectors.IControlContainer container)
+        public static Section AddSection(this VRLabs.SimpleShaderInspectors.IControlContainer container, string appendAfterAlias = "")
         {
             var control = new Section();
-            container.AddControl(control);
+            container.AddControl(control, appendAfterAlias);
             return control;
         }
         public static T SetLabelStyle<T>(this T control, UnityEngine.GUIStyle property) where T : Section

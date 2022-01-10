@@ -1,6 +1,11 @@
 {
     "Properties": [
         {
+            "Name": "InfoBox",
+            "DisplayName": "This box is instanced last, but it's placed after alias \"Main texture\"",
+            "Tooltip": ""
+        },
+        {
             "Name": "Main texture",
             "DisplayName": "Albedo (RGB)",
             "Tooltip": "Albedo (RGB)"

@@ -321,7 +321,12 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
             Property.floatValue = Show ? ShowValue : HideValue;
         }
         
-        public void AddControl(SimpleControl control) => Controls.Add(control);
+        /// <summary>
+        /// Implementation needed by <see cref="IControlContainer"/> to add controls. All controls added are stored in <see cref="Controls"/>
+        /// </summary>
+        /// <param name="control">Control to add.</param>
+        /// <param name="alias">Optional alias to say where a control is appended after.</param>
+        public void AddControl(SimpleControl control, string alias = "") => Controls.AddControl(control, alias);
 
         public IEnumerable<SimpleControl> GetControlList() => Controls;
     }

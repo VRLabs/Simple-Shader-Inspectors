@@ -2,10 +2,10 @@
 {
     public static partial class Chainables
     {
-        public static ColorControl AddColorControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String propertyName, System.Boolean showAlphaValue = true)
+        public static ColorControl AddColorControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String propertyName, System.Boolean showAlphaValue = true, string appendAfterAlias = "")
         {
             var control = new ColorControl(propertyName, showAlphaValue);
-            container.AddControl(control);
+            container.AddControl(control, appendAfterAlias);
             return control;
         }
         public static T SetShowAlphaValue<T>(this T control, System.Boolean property) where T : ColorControl
@@ -14,10 +14,10 @@
             return control;
         }
 
-        public static ConditionalControlContainer AddConditionalControlContainer(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String conditionalProperty, System.Single enableValue)
+        public static ConditionalControlContainer AddConditionalControlContainer(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String conditionalProperty, System.Single enableValue, string appendAfterAlias = "")
         {
             var control = new ConditionalControlContainer(conditionalProperty, enableValue);
-            container.AddControl(control);
+            container.AddControl(control, appendAfterAlias);
             return control;
         }
         public static T SetIndent<T>(this T control, System.Boolean property) where T : ConditionalControlContainer
@@ -26,30 +26,30 @@
             return control;
         }
 
-        public static ControlContainer AddControlContainer(this VRLabs.SimpleShaderInspectors.IControlContainer container)
+        public static ControlContainer AddControlContainer(this VRLabs.SimpleShaderInspectors.IControlContainer container, string appendAfterAlias = "")
         {
             var control = new ControlContainer();
-            container.AddControl(control);
+            container.AddControl(control, appendAfterAlias);
             return control;
         }
 
-        public static EnumControl<TEnum> AddEnumControl<TEnum>(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String propertyName) where TEnum : System.Enum
+        public static EnumControl<TEnum> AddEnumControl<TEnum>(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String propertyName, string appendAfterAlias = "") where TEnum : System.Enum
         {
             var control = new EnumControl<TEnum>(propertyName);
-            container.AddControl(control);
+            container.AddControl(control, appendAfterAlias);
             return control;
         }
 
-        public static GradientTextureControl AddGradientTextureControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String propertyName, System.String colorPropertyName = null)
+        public static GradientTextureControl AddGradientTextureControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String propertyName, System.String colorPropertyName = null, string appendAfterAlias = "")
         {
             var control = new GradientTextureControl(propertyName, colorPropertyName);
-            container.AddControl(control);
+            container.AddControl(control, appendAfterAlias);
             return control;
         }
-        public static GradientTextureControl AddGradientTextureControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String propertyName, System.String minColorPropertyName, System.String maxColorPropertyName, System.String colorPropertyName = null)
+        public static GradientTextureControl AddGradientTextureControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String propertyName, System.String minColorPropertyName, System.String maxColorPropertyName, System.String colorPropertyName = null, string appendAfterAlias = "")
         {
             var control = new GradientTextureControl(propertyName, minColorPropertyName, maxColorPropertyName, colorPropertyName);
-            container.AddControl(control);
+            container.AddControl(control, appendAfterAlias);
             return control;
         }
         public static T SetGradientButtonStyle<T>(this T control, UnityEngine.GUIStyle property) where T : GradientTextureControl
@@ -83,10 +83,10 @@
             return control;
         }
 
-        public static HelpBoxControl AddHelpBoxControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String alias)
+        public static HelpBoxControl AddHelpBoxControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String alias, string appendAfterAlias = "")
         {
             var control = new HelpBoxControl(alias);
-            container.AddControl(control);
+            container.AddControl(control, appendAfterAlias);
             return control;
         }
         public static T SetBoxType<T>(this T control, UnityEditor.MessageType property) where T : HelpBoxControl
@@ -100,24 +100,24 @@
             return control;
         }
 
-        public static KeywordToggleControl AddKeywordToggleControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String keyword)
+        public static KeywordToggleControl AddKeywordToggleControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String keyword, string appendAfterAlias = "")
         {
             var control = new KeywordToggleControl(keyword);
-            container.AddControl(control);
+            container.AddControl(control, appendAfterAlias);
             return control;
         }
 
-        public static KeywordToggleListControl AddKeywordToggleListControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String keyword)
+        public static KeywordToggleListControl AddKeywordToggleListControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String keyword, string appendAfterAlias = "")
         {
             var control = new KeywordToggleListControl(keyword);
-            container.AddControl(control);
+            container.AddControl(control, appendAfterAlias);
             return control;
         }
 
-        public static LabelControl AddLabelControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String alias)
+        public static LabelControl AddLabelControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String alias, string appendAfterAlias = "")
         {
             var control = new LabelControl(alias);
-            container.AddControl(control);
+            container.AddControl(control, appendAfterAlias);
             return control;
         }
         public static T SetLabelStyle<T>(this T control, UnityEngine.GUIStyle property) where T : LabelControl
@@ -126,24 +126,24 @@
             return control;
         }
 
-        public static LightmapEmissionControl AddLightmapEmissionControl(this VRLabs.SimpleShaderInspectors.IControlContainer container)
+        public static LightmapEmissionControl AddLightmapEmissionControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, string appendAfterAlias = "")
         {
             var control = new LightmapEmissionControl();
-            container.AddControl(control);
+            container.AddControl(control, appendAfterAlias);
             return control;
         }
 
-        public static SpaceControl AddSpaceControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.Int32 space = 0)
+        public static SpaceControl AddSpaceControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.Int32 space = 0, string appendAfterAlias = "")
         {
             var control = new SpaceControl(space);
-            container.AddControl(control);
+            container.AddControl(control, appendAfterAlias);
             return control;
         }
 
-        public static TextureControl AddTextureControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String propertyName, System.String extraPropertyName1 = null, System.String extraPropertyName2 = null)
+        public static TextureControl AddTextureControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String propertyName, System.String extraPropertyName1 = null, System.String extraPropertyName2 = null, string appendAfterAlias = "")
         {
             var control = new TextureControl(propertyName, extraPropertyName1, extraPropertyName2);
-            container.AddControl(control);
+            container.AddControl(control, appendAfterAlias);
             return control;
         }
         public static T SetShowTilingAndOffset<T>(this T control, System.Boolean property) where T : TextureControl
@@ -177,16 +177,16 @@
             return control;
         }
 
-        public static TextureGeneratorControl AddTextureGeneratorControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String propertyName, System.String extraPropertyName1 = null, System.String extraPropertyName2 = null)
+        public static TextureGeneratorControl AddTextureGeneratorControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String propertyName, System.String extraPropertyName1 = null, System.String extraPropertyName2 = null, string appendAfterAlias = "")
         {
             var control = new TextureGeneratorControl(propertyName, extraPropertyName1, extraPropertyName2);
-            container.AddControl(control);
+            container.AddControl(control, appendAfterAlias);
             return control;
         }
-        public static TextureGeneratorControl AddTextureGeneratorControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, UnityEngine.ComputeShader compute, System.String computeOptionsJson, System.String propertyName, System.String extraPropertyName1 = null, System.String extraPropertyName2 = null)
+        public static TextureGeneratorControl AddTextureGeneratorControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, UnityEngine.ComputeShader compute, System.String computeOptionsJson, System.String propertyName, System.String extraPropertyName1 = null, System.String extraPropertyName2 = null, string appendAfterAlias = "")
         {
             var control = new TextureGeneratorControl(compute, computeOptionsJson, propertyName, extraPropertyName1, extraPropertyName2);
-            container.AddControl(control);
+            container.AddControl(control, appendAfterAlias);
             return control;
         }
         public static T SetGeneratorButtonStyle<T>(this T control, UnityEngine.GUIStyle property) where T : TextureGeneratorControl
@@ -230,38 +230,38 @@
             return control;
         }
 
-        public static TilingAndOffsetControl AddTilingAndOffsetControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String propertyName)
+        public static TilingAndOffsetControl AddTilingAndOffsetControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String propertyName, string appendAfterAlias = "")
         {
             var control = new TilingAndOffsetControl(propertyName);
-            container.AddControl(control);
+            container.AddControl(control, appendAfterAlias);
             return control;
         }
 
-        public static ToggleControl AddToggleControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String propertyName, System.Single falseValue = 0, System.Single trueValue = 1)
+        public static ToggleControl AddToggleControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String propertyName, System.Single falseValue = 0, System.Single trueValue = 1, string appendAfterAlias = "")
         {
             var control = new ToggleControl(propertyName, falseValue, trueValue);
-            container.AddControl(control);
+            container.AddControl(control, appendAfterAlias);
             return control;
         }
 
-        public static ToggleListControl AddToggleListControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String propertyName, System.Single falseValue = 0, System.Single trueValue = 1)
+        public static ToggleListControl AddToggleListControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String propertyName, System.Single falseValue = 0, System.Single trueValue = 1, string appendAfterAlias = "")
         {
             var control = new ToggleListControl(propertyName, falseValue, trueValue);
-            container.AddControl(control);
+            container.AddControl(control, appendAfterAlias);
             return control;
         }
 
-        public static VectorControl AddVectorControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String propertyName, System.Boolean isXVisible = true, System.Boolean isYVisible = true, System.Boolean isZVisible = true, System.Boolean isWVisible = true)
+        public static VectorControl AddVectorControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String propertyName, System.Boolean isXVisible = true, System.Boolean isYVisible = true, System.Boolean isZVisible = true, System.Boolean isWVisible = true, string appendAfterAlias = "")
         {
             var control = new VectorControl(propertyName, isXVisible, isYVisible, isZVisible, isWVisible);
-            container.AddControl(control);
+            container.AddControl(control, appendAfterAlias);
             return control;
         }
 
-        public static VertexStreamsControl AddVertexStreamsControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String alias)
+        public static VertexStreamsControl AddVertexStreamsControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String alias, string appendAfterAlias = "")
         {
             var control = new VertexStreamsControl(alias);
-            container.AddControl(control);
+            container.AddControl(control, appendAfterAlias);
             return control;
         }
 
