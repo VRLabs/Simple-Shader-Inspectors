@@ -74,13 +74,13 @@
 <div class="markdown level0 conceptual"></div>
 
 <a id="VRLabs_SimpleShaderInspectors_IControlContainer_1_AddControl_" data-uid="VRLabs.SimpleShaderInspectors.IControlContainer`1.AddControl*"></a>
-<h4 id="VRLabs_SimpleShaderInspectors_IControlContainer_1_AddControl__0_" data-uid="VRLabs.SimpleShaderInspectors.IControlContainer`1.AddControl(`0)">AddControl(T)</h4>
-<div class="markdown level1 summary"><p>Generic version of <a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer.AddControl.html#VRLabs_SimpleShaderInspectors_IControlContainer_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_">AddControl(SimpleControl)</a>.</p>
+<h4 id="VRLabs_SimpleShaderInspectors_IControlContainer_1_AddControl__0_System_String_" data-uid="VRLabs.SimpleShaderInspectors.IControlContainer`1.AddControl(`0,System.String)">AddControl(T, String)</h4>
+<div class="markdown level1 summary"><p>Generic version of <a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer.AddControl.html#VRLabs_SimpleShaderInspectors_IControlContainer_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_System_String_">AddControl(SimpleControl, String)</a>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="decalaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">void AddControl(T control)</code></pre>
+  <pre><code class="lang-csharp hljs">void AddControl(T control, string alias = &quot;&quot;)</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
 <table class="table table-bordered table-striped table-condensed">
@@ -98,8 +98,17 @@
       <td><p>Control to add.</p>
 </td>
     </tr>
+    <tr>
+      <td><span class="xref">System.String</span></td>
+      <td><span class="parametername">alias</span></td>
+      <td><p>Alias to append after.</p>
+</td>
+    </tr>
   </tbody>
 </table>
+<h5 id="VRLabs_SimpleShaderInspectors_IControlContainer_1_AddControl__0_System_String__remarks">Remarks</h5>
+<div class="markdown level1 remarks"><p>The optional alias string should be used to place the control after the control with said alias, and if the alias is null or empty it should be placed at the end.</p>
+</div>
 </article>
           </div>
           

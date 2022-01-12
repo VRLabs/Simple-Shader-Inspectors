@@ -74,13 +74,13 @@
 <div class="markdown level0 conceptual"></div>
 
 <a id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_AddControl_" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.AddControl*"></a>
-<h4 id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_AddControl_VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection_" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.AddControl(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection)">AddControl(OrderedSection)</h4>
+<h4 id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_AddControl_VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection_System_String_" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.AddControl(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection,System.String)">AddControl(OrderedSection, String)</h4>
 <div class="markdown level1 summary"><p>Implementation needed by <a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer-1.html">IControlContainer&lt;T&gt;</a> to add controls. All controls added are stored in <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.Controls.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_Controls">Controls</a></p>
 </div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="decalaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">public void AddControl(OrderedSection control)</code></pre>
+  <pre><code class="lang-csharp hljs">public void AddControl(OrderedSection control, string alias = &quot;&quot;)</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
 <table class="table table-bordered table-striped table-condensed">
@@ -98,10 +98,16 @@
       <td><p>Control to add.</p>
 </td>
     </tr>
+    <tr>
+      <td><span class="xref">System.String</span></td>
+      <td><span class="parametername">alias</span></td>
+      <td><p>Optional alias to say where a control is appended after.</p>
+</td>
+    </tr>
   </tbody>
 </table>
 <h5 class="implements">Implements</h5>
-    <div><a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer-1.AddControl.html#VRLabs_SimpleShaderInspectors_IControlContainer_1_AddControl__0_">IControlContainer&lt;T&gt;.AddControl(T)</a></div>
+    <div><a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer-1.AddControl.html#VRLabs_SimpleShaderInspectors_IControlContainer_1_AddControl__0_System_String_">IControlContainer&lt;T&gt;.AddControl(T, String)</a></div>
 </article>
           </div>
           

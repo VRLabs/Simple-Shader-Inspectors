@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Method IControlContainer.AddControl
+    <title>Class ContainerExtensions
    | Simple Shader Inspectors Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Method IControlContainer.AddControl
+    <meta name="title" content="Class ContainerExtensions
    | Simple Shader Inspectors Documentation ">
     <meta name="generator" content="docfx 2.58.2.0">
     
@@ -66,49 +66,50 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.VRLabs#SimpleShaderInspectors#IControlContainer#AddControl*">
-
-<h1 id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_VRLabs_SimpleShaderInspectors_IControlContainer_AddControl_" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.VRLabs#SimpleShaderInspectors#IControlContainer#AddControl*">Method IControlContainer.AddControl
-</h1>
-<div class="markdown level0 summary"></div>
-<div class="markdown level0 conceptual"></div>
-
-<a id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_VRLabs_SimpleShaderInspectors_IControlContainer_AddControl_" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.VRLabs#SimpleShaderInspectors#IControlContainer#AddControl*"></a>
-<h4 id="VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_VRLabs_SimpleShaderInspectors_IControlContainer_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_System_String_" data-uid="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.VRLabs#SimpleShaderInspectors#IControlContainer#AddControl(VRLabs.SimpleShaderInspectors.SimpleControl,System.String)">IControlContainer.AddControl(SimpleControl, String)</h4>
-<div class="markdown level1 summary"><p>Implementation needed by <a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer.html">IControlContainer</a> to add controls. All controls added are stored in <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.Controls.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_Controls">Controls</a> only if the parameter
-is of type <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.html">OrderedSection</a></p>
+            <article class="content wrap" id="_content" data-uid="VRLabs.SimpleShaderInspectors.ContainerExtensions">
+  
+  <h1 id="VRLabs_SimpleShaderInspectors_ContainerExtensions" data-uid="VRLabs.SimpleShaderInspectors.ContainerExtensions">Class ContainerExtensions
+  </h1>
+  <div class="markdown level0 summary"><p>Extension methods for dealing with IControlContainer type of objects</p>
 </div>
-<div class="markdown level1 conceptual"></div>
-<h5 class="decalaration">Declaration</h5>
-<div class="codewrapper">
-  <pre><code class="lang-csharp hljs">void IControlContainer.AddControl(SimpleControl control, string alias = &quot;&quot;)</code></pre>
-</div>
-<h5 class="parameters">Parameters</h5>
-<table class="table table-bordered table-striped table-condensed">
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Name</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleControl.html">SimpleControl</a></td>
-      <td><span class="parametername">control</span></td>
-      <td><p>Control to add.</p>
+  <div class="markdown level0 conceptual"></div>
+  
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ContainerExtensions</span></div>
+  </div>
+  
+  <h6><strong>Namespace</strong>: <a class="xref" href="VRLabs.SimpleShaderInspectors.html">VRLabs.SimpleShaderInspectors</a></h6>
+  
+  <h5 id="VRLabs_SimpleShaderInspectors_ContainerExtensions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class ContainerExtensions</code></pre>
+  </div>
+  
+  
+  
+  
+  
+  <h3 id="methods">Methods
+  </h3>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="VRLabs_SimpleShaderInspectors_ContainerExtensions_AddControl__1_System_Collections_Generic_IList___0____0_System_String_" data-uid="VRLabs.SimpleShaderInspectors.ContainerExtensions.AddControl``1(System.Collections.Generic.IList{``0},``0,System.String)">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.ContainerExtensions.AddControl.html#VRLabs_SimpleShaderInspectors_ContainerExtensions_AddControl__1_System_Collections_Generic_IList___0____0_System_String_">AddControl&lt;T&gt;(IList&lt;T&gt;, T, String)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Default behaviour that should be used for adding new controls into a list of controls.</p>
 </td>
-    </tr>
-    <tr>
-      <td><span class="xref">System.String</span></td>
-      <td><span class="parametername">alias</span></td>
-      <td><p>Optional alias to say where a control is appended after.</p>
-</td>
-    </tr>
-  </tbody>
-</table>
-<h5 class="implements">Implements</h5>
-    <div><a class="xref" href="VRLabs.SimpleShaderInspectors.IControlContainer.AddControl.html#VRLabs_SimpleShaderInspectors_IControlContainer_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_System_String_">IControlContainer.AddControl(SimpleControl, String)</a></div>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           

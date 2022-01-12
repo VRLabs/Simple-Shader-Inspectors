@@ -169,12 +169,12 @@ references:
   commentId: T:VRLabs.SimpleShaderInspectors.Chainables
   fullName: VRLabs.SimpleShaderInspectors.Chainables
   nameWithType: Chainables
-- uid: VRLabs.SimpleShaderInspectors.Chainables.AddPropertyControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String)
-  name: AddPropertyControl(IControlContainer, String)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Chainables.AddPropertyControl.html#VRLabs_SimpleShaderInspectors_Chainables_AddPropertyControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_
-  commentId: M:VRLabs.SimpleShaderInspectors.Chainables.AddPropertyControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String)
-  fullName: VRLabs.SimpleShaderInspectors.Chainables.AddPropertyControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String)
-  nameWithType: Chainables.AddPropertyControl(IControlContainer, String)
+- uid: VRLabs.SimpleShaderInspectors.Chainables.AddPropertyControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String)
+  name: AddPropertyControl(IControlContainer, String, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Chainables.AddPropertyControl.html#VRLabs_SimpleShaderInspectors_Chainables_AddPropertyControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Chainables.AddPropertyControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Chainables.AddPropertyControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.String)
+  nameWithType: Chainables.AddPropertyControl(IControlContainer, String, String)
 - uid: VRLabs.SimpleShaderInspectors.Chainables.AddPropertyControl*
   name: AddPropertyControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Chainables.AddPropertyControl.html
@@ -256,6 +256,27 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.ComputeShaders.RGBAPackerSettings
   fullName: VRLabs.SimpleShaderInspectors.ComputeShaders.RGBAPackerSettings
   nameWithType: ComputeShaders.RGBAPackerSettings
+- uid: VRLabs.SimpleShaderInspectors.ContainerExtensions
+  name: ContainerExtensions
+  href: Next/api/VRLabs.SimpleShaderInspectors.ContainerExtensions.html
+  commentId: T:VRLabs.SimpleShaderInspectors.ContainerExtensions
+  fullName: VRLabs.SimpleShaderInspectors.ContainerExtensions
+  nameWithType: ContainerExtensions
+- uid: VRLabs.SimpleShaderInspectors.ContainerExtensions.AddControl*
+  name: AddControl
+  href: Next/api/VRLabs.SimpleShaderInspectors.ContainerExtensions.AddControl.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.ContainerExtensions.AddControl
+  fullName: VRLabs.SimpleShaderInspectors.ContainerExtensions.AddControl
+  nameWithType: ContainerExtensions.AddControl
+- uid: VRLabs.SimpleShaderInspectors.ContainerExtensions.AddControl``1(System.Collections.Generic.IList{``0},``0,System.String)
+  name: AddControl<T>(IList<T>, T, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.ContainerExtensions.AddControl.html#VRLabs_SimpleShaderInspectors_ContainerExtensions_AddControl__1_System_Collections_Generic_IList___0____0_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.ContainerExtensions.AddControl``1(System.Collections.Generic.IList{``0},``0,System.String)
+  name.vb: AddControl(Of T)(IList(Of T), T, String)
+  fullName: VRLabs.SimpleShaderInspectors.ContainerExtensions.AddControl<T>(System.Collections.Generic.IList<T>, T, System.String)
+  fullName.vb: VRLabs.SimpleShaderInspectors.ContainerExtensions.AddControl(Of T)(System.Collections.Generic.IList(Of T), T, System.String)
+  nameWithType: ContainerExtensions.AddControl<T>(IList<T>, T, String)
+  nameWithType.vb: ContainerExtensions.AddControl(Of T)(IList(Of T), T, String)
 - uid: VRLabs.SimpleShaderInspectors.Controls
   name: VRLabs.SimpleShaderInspectors.Controls
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.html
@@ -268,36 +289,36 @@ references:
   commentId: T:VRLabs.SimpleShaderInspectors.Controls.Chainables
   fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables
   nameWithType: Chainables
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddColorControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.Boolean)
-  name: AddColorControl(IControlContainer, String, Boolean)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddColorControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddColorControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_Boolean_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddColorControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.Boolean)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddColorControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.Boolean)
-  nameWithType: Chainables.AddColorControl(IControlContainer, String, Boolean)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddColorControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.Boolean,System.String)
+  name: AddColorControl(IControlContainer, String, Boolean, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddColorControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddColorControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_Boolean_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddColorControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.Boolean,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddColorControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.Boolean, System.String)
+  nameWithType: Chainables.AddColorControl(IControlContainer, String, Boolean, String)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddColorControl*
   name: AddColorControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddColorControl.html
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddColorControl
   fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddColorControl
   nameWithType: Chainables.AddColorControl
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddConditionalControlContainer(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.Single)
-  name: AddConditionalControlContainer(IControlContainer, String, Single)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddConditionalControlContainer.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddConditionalControlContainer_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_Single_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddConditionalControlContainer(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.Single)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddConditionalControlContainer(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.Single)
-  nameWithType: Chainables.AddConditionalControlContainer(IControlContainer, String, Single)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddConditionalControlContainer(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.Single,System.String)
+  name: AddConditionalControlContainer(IControlContainer, String, Single, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddConditionalControlContainer.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddConditionalControlContainer_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_Single_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddConditionalControlContainer(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.Single,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddConditionalControlContainer(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.Single, System.String)
+  nameWithType: Chainables.AddConditionalControlContainer(IControlContainer, String, Single, String)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddConditionalControlContainer*
   name: AddConditionalControlContainer
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddConditionalControlContainer.html
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddConditionalControlContainer
   fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddConditionalControlContainer
   nameWithType: Chainables.AddConditionalControlContainer
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddControlContainer(VRLabs.SimpleShaderInspectors.IControlContainer)
-  name: AddControlContainer(IControlContainer)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddControlContainer.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddControlContainer_VRLabs_SimpleShaderInspectors_IControlContainer_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddControlContainer(VRLabs.SimpleShaderInspectors.IControlContainer)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddControlContainer(VRLabs.SimpleShaderInspectors.IControlContainer)
-  nameWithType: Chainables.AddControlContainer(IControlContainer)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddControlContainer(VRLabs.SimpleShaderInspectors.IControlContainer,System.String)
+  name: AddControlContainer(IControlContainer, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddControlContainer.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddControlContainer_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddControlContainer(VRLabs.SimpleShaderInspectors.IControlContainer,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddControlContainer(VRLabs.SimpleShaderInspectors.IControlContainer, System.String)
+  nameWithType: Chainables.AddControlContainer(IControlContainer, String)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddControlContainer*
   name: AddControlContainer
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddControlContainer.html
@@ -310,189 +331,189 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddEnumControl
   fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddEnumControl
   nameWithType: Chainables.AddEnumControl
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddEnumControl``1(VRLabs.SimpleShaderInspectors.IControlContainer,System.String)
-  name: AddEnumControl<TEnum>(IControlContainer, String)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddEnumControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddEnumControl__1_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddEnumControl``1(VRLabs.SimpleShaderInspectors.IControlContainer,System.String)
-  name.vb: AddEnumControl(Of TEnum)(IControlContainer, String)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddEnumControl<TEnum>(VRLabs.SimpleShaderInspectors.IControlContainer, System.String)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddEnumControl(Of TEnum)(VRLabs.SimpleShaderInspectors.IControlContainer, System.String)
-  nameWithType: Chainables.AddEnumControl<TEnum>(IControlContainer, String)
-  nameWithType.vb: Chainables.AddEnumControl(Of TEnum)(IControlContainer, String)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String)
-  name: AddGradientTextureControl(IControlContainer, String, String)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddGradientTextureControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.String)
-  nameWithType: Chainables.AddGradientTextureControl(IControlContainer, String, String)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String,System.String,System.String)
-  name: AddGradientTextureControl(IControlContainer, String, String, String, String)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddGradientTextureControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_System_String_System_String_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String,System.String,System.String)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.String, System.String, System.String)
-  nameWithType: Chainables.AddGradientTextureControl(IControlContainer, String, String, String, String)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddEnumControl``1(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String)
+  name: AddEnumControl<TEnum>(IControlContainer, String, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddEnumControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddEnumControl__1_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddEnumControl``1(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String)
+  name.vb: AddEnumControl(Of TEnum)(IControlContainer, String, String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddEnumControl<TEnum>(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.String)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddEnumControl(Of TEnum)(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.String)
+  nameWithType: Chainables.AddEnumControl<TEnum>(IControlContainer, String, String)
+  nameWithType.vb: Chainables.AddEnumControl(Of TEnum)(IControlContainer, String, String)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String,System.String)
+  name: AddGradientTextureControl(IControlContainer, String, String, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddGradientTextureControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.String, System.String)
+  nameWithType: Chainables.AddGradientTextureControl(IControlContainer, String, String, String)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String,System.String,System.String,System.String)
+  name: AddGradientTextureControl(IControlContainer, String, String, String, String, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddGradientTextureControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_System_String_System_String_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String,System.String,System.String,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.String, System.String, System.String, System.String)
+  nameWithType: Chainables.AddGradientTextureControl(IControlContainer, String, String, String, String, String)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl*
   name: AddGradientTextureControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl.html
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl
   fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl
   nameWithType: Chainables.AddGradientTextureControl
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddHelpBoxControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String)
-  name: AddHelpBoxControl(IControlContainer, String)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddHelpBoxControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddHelpBoxControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddHelpBoxControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddHelpBoxControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String)
-  nameWithType: Chainables.AddHelpBoxControl(IControlContainer, String)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddHelpBoxControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String)
+  name: AddHelpBoxControl(IControlContainer, String, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddHelpBoxControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddHelpBoxControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddHelpBoxControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddHelpBoxControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.String)
+  nameWithType: Chainables.AddHelpBoxControl(IControlContainer, String, String)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddHelpBoxControl*
   name: AddHelpBoxControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddHelpBoxControl.html
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddHelpBoxControl
   fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddHelpBoxControl
   nameWithType: Chainables.AddHelpBoxControl
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddKeywordToggleControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String)
-  name: AddKeywordToggleControl(IControlContainer, String)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddKeywordToggleControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddKeywordToggleControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddKeywordToggleControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddKeywordToggleControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String)
-  nameWithType: Chainables.AddKeywordToggleControl(IControlContainer, String)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddKeywordToggleControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String)
+  name: AddKeywordToggleControl(IControlContainer, String, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddKeywordToggleControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddKeywordToggleControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddKeywordToggleControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddKeywordToggleControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.String)
+  nameWithType: Chainables.AddKeywordToggleControl(IControlContainer, String, String)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddKeywordToggleControl*
   name: AddKeywordToggleControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddKeywordToggleControl.html
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddKeywordToggleControl
   fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddKeywordToggleControl
   nameWithType: Chainables.AddKeywordToggleControl
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddKeywordToggleListControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String)
-  name: AddKeywordToggleListControl(IControlContainer, String)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddKeywordToggleListControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddKeywordToggleListControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddKeywordToggleListControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddKeywordToggleListControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String)
-  nameWithType: Chainables.AddKeywordToggleListControl(IControlContainer, String)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddKeywordToggleListControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String)
+  name: AddKeywordToggleListControl(IControlContainer, String, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddKeywordToggleListControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddKeywordToggleListControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddKeywordToggleListControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddKeywordToggleListControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.String)
+  nameWithType: Chainables.AddKeywordToggleListControl(IControlContainer, String, String)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddKeywordToggleListControl*
   name: AddKeywordToggleListControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddKeywordToggleListControl.html
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddKeywordToggleListControl
   fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddKeywordToggleListControl
   nameWithType: Chainables.AddKeywordToggleListControl
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddLabelControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String)
-  name: AddLabelControl(IControlContainer, String)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddLabelControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddLabelControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddLabelControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddLabelControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String)
-  nameWithType: Chainables.AddLabelControl(IControlContainer, String)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddLabelControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String)
+  name: AddLabelControl(IControlContainer, String, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddLabelControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddLabelControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddLabelControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddLabelControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.String)
+  nameWithType: Chainables.AddLabelControl(IControlContainer, String, String)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddLabelControl*
   name: AddLabelControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddLabelControl.html
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddLabelControl
   fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddLabelControl
   nameWithType: Chainables.AddLabelControl
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddLightmapEmissionControl(VRLabs.SimpleShaderInspectors.IControlContainer)
-  name: AddLightmapEmissionControl(IControlContainer)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddLightmapEmissionControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddLightmapEmissionControl_VRLabs_SimpleShaderInspectors_IControlContainer_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddLightmapEmissionControl(VRLabs.SimpleShaderInspectors.IControlContainer)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddLightmapEmissionControl(VRLabs.SimpleShaderInspectors.IControlContainer)
-  nameWithType: Chainables.AddLightmapEmissionControl(IControlContainer)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddLightmapEmissionControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String)
+  name: AddLightmapEmissionControl(IControlContainer, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddLightmapEmissionControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddLightmapEmissionControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddLightmapEmissionControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddLightmapEmissionControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String)
+  nameWithType: Chainables.AddLightmapEmissionControl(IControlContainer, String)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddLightmapEmissionControl*
   name: AddLightmapEmissionControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddLightmapEmissionControl.html
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddLightmapEmissionControl
   fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddLightmapEmissionControl
   nameWithType: Chainables.AddLightmapEmissionControl
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddSpaceControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.Int32)
-  name: AddSpaceControl(IControlContainer, Int32)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddSpaceControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddSpaceControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_Int32_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddSpaceControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.Int32)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddSpaceControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.Int32)
-  nameWithType: Chainables.AddSpaceControl(IControlContainer, Int32)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddSpaceControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.Int32,System.String)
+  name: AddSpaceControl(IControlContainer, Int32, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddSpaceControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddSpaceControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_Int32_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddSpaceControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.Int32,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddSpaceControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.Int32, System.String)
+  nameWithType: Chainables.AddSpaceControl(IControlContainer, Int32, String)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddSpaceControl*
   name: AddSpaceControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddSpaceControl.html
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddSpaceControl
   fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddSpaceControl
   nameWithType: Chainables.AddSpaceControl
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String,System.String)
-  name: AddTextureControl(IControlContainer, String, String, String)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddTextureControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_System_String_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String,System.String)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.String, System.String)
-  nameWithType: Chainables.AddTextureControl(IControlContainer, String, String, String)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String,System.String,System.String)
+  name: AddTextureControl(IControlContainer, String, String, String, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddTextureControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_System_String_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String,System.String,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.String, System.String, System.String)
+  nameWithType: Chainables.AddTextureControl(IControlContainer, String, String, String, String)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureControl*
   name: AddTextureControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureControl.html
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureControl
   fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureControl
   nameWithType: Chainables.AddTextureControl
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String,System.String)
-  name: AddTextureGeneratorControl(IControlContainer, String, String, String)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddTextureGeneratorControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_System_String_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String,System.String)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.String, System.String)
-  nameWithType: Chainables.AddTextureGeneratorControl(IControlContainer, String, String, String)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl(VRLabs.SimpleShaderInspectors.IControlContainer,UnityEngine.ComputeShader,System.String,System.String,System.String,System.String)
-  name: AddTextureGeneratorControl(IControlContainer, ComputeShader, String, String, String, String)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddTextureGeneratorControl_VRLabs_SimpleShaderInspectors_IControlContainer_UnityEngine_ComputeShader_System_String_System_String_System_String_System_String_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl(VRLabs.SimpleShaderInspectors.IControlContainer,UnityEngine.ComputeShader,System.String,System.String,System.String,System.String)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl(VRLabs.SimpleShaderInspectors.IControlContainer, UnityEngine.ComputeShader, System.String, System.String, System.String, System.String)
-  nameWithType: Chainables.AddTextureGeneratorControl(IControlContainer, ComputeShader, String, String, String, String)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String,System.String,System.String)
+  name: AddTextureGeneratorControl(IControlContainer, String, String, String, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddTextureGeneratorControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_System_String_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String,System.String,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.String, System.String, System.String)
+  nameWithType: Chainables.AddTextureGeneratorControl(IControlContainer, String, String, String, String)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl(VRLabs.SimpleShaderInspectors.IControlContainer,UnityEngine.ComputeShader,System.String,System.String,System.String,System.String,System.String)
+  name: AddTextureGeneratorControl(IControlContainer, ComputeShader, String, String, String, String, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddTextureGeneratorControl_VRLabs_SimpleShaderInspectors_IControlContainer_UnityEngine_ComputeShader_System_String_System_String_System_String_System_String_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl(VRLabs.SimpleShaderInspectors.IControlContainer,UnityEngine.ComputeShader,System.String,System.String,System.String,System.String,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl(VRLabs.SimpleShaderInspectors.IControlContainer, UnityEngine.ComputeShader, System.String, System.String, System.String, System.String, System.String)
+  nameWithType: Chainables.AddTextureGeneratorControl(IControlContainer, ComputeShader, String, String, String, String, String)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl*
   name: AddTextureGeneratorControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl.html
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl
   fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl
   nameWithType: Chainables.AddTextureGeneratorControl
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTilingAndOffsetControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String)
-  name: AddTilingAndOffsetControl(IControlContainer, String)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTilingAndOffsetControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddTilingAndOffsetControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTilingAndOffsetControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTilingAndOffsetControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String)
-  nameWithType: Chainables.AddTilingAndOffsetControl(IControlContainer, String)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTilingAndOffsetControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String)
+  name: AddTilingAndOffsetControl(IControlContainer, String, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTilingAndOffsetControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddTilingAndOffsetControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTilingAndOffsetControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTilingAndOffsetControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.String)
+  nameWithType: Chainables.AddTilingAndOffsetControl(IControlContainer, String, String)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTilingAndOffsetControl*
   name: AddTilingAndOffsetControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTilingAndOffsetControl.html
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTilingAndOffsetControl
   fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTilingAndOffsetControl
   nameWithType: Chainables.AddTilingAndOffsetControl
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddToggleControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.Single,System.Single)
-  name: AddToggleControl(IControlContainer, String, Single, Single)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddToggleControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddToggleControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_Single_System_Single_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddToggleControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.Single,System.Single)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddToggleControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.Single, System.Single)
-  nameWithType: Chainables.AddToggleControl(IControlContainer, String, Single, Single)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddToggleControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.Single,System.Single,System.String)
+  name: AddToggleControl(IControlContainer, String, Single, Single, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddToggleControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddToggleControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_Single_System_Single_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddToggleControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.Single,System.Single,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddToggleControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.Single, System.Single, System.String)
+  nameWithType: Chainables.AddToggleControl(IControlContainer, String, Single, Single, String)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddToggleControl*
   name: AddToggleControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddToggleControl.html
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddToggleControl
   fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddToggleControl
   nameWithType: Chainables.AddToggleControl
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddToggleListControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.Single,System.Single)
-  name: AddToggleListControl(IControlContainer, String, Single, Single)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddToggleListControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddToggleListControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_Single_System_Single_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddToggleListControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.Single,System.Single)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddToggleListControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.Single, System.Single)
-  nameWithType: Chainables.AddToggleListControl(IControlContainer, String, Single, Single)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddToggleListControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.Single,System.Single,System.String)
+  name: AddToggleListControl(IControlContainer, String, Single, Single, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddToggleListControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddToggleListControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_Single_System_Single_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddToggleListControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.Single,System.Single,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddToggleListControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.Single, System.Single, System.String)
+  nameWithType: Chainables.AddToggleListControl(IControlContainer, String, Single, Single, String)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddToggleListControl*
   name: AddToggleListControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddToggleListControl.html
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddToggleListControl
   fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddToggleListControl
   nameWithType: Chainables.AddToggleListControl
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddVectorControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
-  name: AddVectorControl(IControlContainer, String, Boolean, Boolean, Boolean, Boolean)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddVectorControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddVectorControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_Boolean_System_Boolean_System_Boolean_System_Boolean_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddVectorControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddVectorControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.Boolean, System.Boolean, System.Boolean, System.Boolean)
-  nameWithType: Chainables.AddVectorControl(IControlContainer, String, Boolean, Boolean, Boolean, Boolean)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddVectorControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.String)
+  name: AddVectorControl(IControlContainer, String, Boolean, Boolean, Boolean, Boolean, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddVectorControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddVectorControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddVectorControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddVectorControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.Boolean, System.Boolean, System.Boolean, System.Boolean, System.String)
+  nameWithType: Chainables.AddVectorControl(IControlContainer, String, Boolean, Boolean, Boolean, Boolean, String)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddVectorControl*
   name: AddVectorControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddVectorControl.html
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddVectorControl
   fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddVectorControl
   nameWithType: Chainables.AddVectorControl
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddVertexStreamsControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String)
-  name: AddVertexStreamsControl(IControlContainer, String)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddVertexStreamsControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddVertexStreamsControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddVertexStreamsControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddVertexStreamsControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String)
-  nameWithType: Chainables.AddVertexStreamsControl(IControlContainer, String)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddVertexStreamsControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String)
+  name: AddVertexStreamsControl(IControlContainer, String, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddVertexStreamsControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddVertexStreamsControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddVertexStreamsControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddVertexStreamsControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.String)
+  nameWithType: Chainables.AddVertexStreamsControl(IControlContainer, String, String)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddVertexStreamsControl*
   name: AddVertexStreamsControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddVertexStreamsControl.html
@@ -946,12 +967,12 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.#ctor
   fullName: VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.ConditionalControlContainer
   nameWithType: ConditionalControlContainer.ConditionalControlContainer
-- uid: VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)
-  name: AddControl(SimpleControl)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.AddControl.html#VRLabs_SimpleShaderInspectors_Controls_ConditionalControlContainer_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)
-  nameWithType: ConditionalControlContainer.AddControl(SimpleControl)
+- uid: VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl,System.String)
+  name: AddControl(SimpleControl, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.AddControl.html#VRLabs_SimpleShaderInspectors_Controls_ConditionalControlContainer_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl, System.String)
+  nameWithType: ConditionalControlContainer.AddControl(SimpleControl, String)
 - uid: VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.AddControl*
   name: AddControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.AddControl.html
@@ -1030,12 +1051,12 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.ControlContainer.#ctor
   fullName: VRLabs.SimpleShaderInspectors.Controls.ControlContainer.ControlContainer
   nameWithType: ControlContainer.ControlContainer
-- uid: VRLabs.SimpleShaderInspectors.Controls.ControlContainer.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)
-  name: AddControl(SimpleControl)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.ControlContainer.AddControl.html#VRLabs_SimpleShaderInspectors_Controls_ControlContainer_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.ControlContainer.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.ControlContainer.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)
-  nameWithType: ControlContainer.AddControl(SimpleControl)
+- uid: VRLabs.SimpleShaderInspectors.Controls.ControlContainer.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl,System.String)
+  name: AddControl(SimpleControl, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.ControlContainer.AddControl.html#VRLabs_SimpleShaderInspectors_Controls_ControlContainer_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.ControlContainer.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.ControlContainer.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl, System.String)
+  nameWithType: ControlContainer.AddControl(SimpleControl, String)
 - uid: VRLabs.SimpleShaderInspectors.Controls.ControlContainer.AddControl*
   name: AddControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.ControlContainer.AddControl.html
@@ -1447,12 +1468,12 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.KeywordToggleListControl.#ctor
   fullName: VRLabs.SimpleShaderInspectors.Controls.KeywordToggleListControl.KeywordToggleListControl
   nameWithType: KeywordToggleListControl.KeywordToggleListControl
-- uid: VRLabs.SimpleShaderInspectors.Controls.KeywordToggleListControl.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)
-  name: AddControl(SimpleControl)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.KeywordToggleListControl.AddControl.html#VRLabs_SimpleShaderInspectors_Controls_KeywordToggleListControl_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.KeywordToggleListControl.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.KeywordToggleListControl.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)
-  nameWithType: KeywordToggleListControl.AddControl(SimpleControl)
+- uid: VRLabs.SimpleShaderInspectors.Controls.KeywordToggleListControl.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl,System.String)
+  name: AddControl(SimpleControl, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.KeywordToggleListControl.AddControl.html#VRLabs_SimpleShaderInspectors_Controls_KeywordToggleListControl_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.KeywordToggleListControl.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.KeywordToggleListControl.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl, System.String)
+  nameWithType: KeywordToggleListControl.AddControl(SimpleControl, String)
 - uid: VRLabs.SimpleShaderInspectors.Controls.KeywordToggleListControl.AddControl*
   name: AddControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.KeywordToggleListControl.AddControl.html
@@ -1717,66 +1738,66 @@ references:
   commentId: T:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables
   fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables
   nameWithType: Chainables
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddActivatableSection(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.Single,System.Single)
-  name: AddActivatableSection(IControlContainer, String, Single, Single)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddActivatableSection.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddActivatableSection_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_Single_System_Single_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddActivatableSection(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.Single,System.Single)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddActivatableSection(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.Single, System.Single)
-  nameWithType: Chainables.AddActivatableSection(IControlContainer, String, Single, Single)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddActivatableSection(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String,System.Single,System.Single,System.Single,System.Single)
-  name: AddActivatableSection(IControlContainer, String, String, Single, Single, Single, Single)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddActivatableSection.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddActivatableSection_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_System_Single_System_Single_System_Single_System_Single_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddActivatableSection(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String,System.Single,System.Single,System.Single,System.Single)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddActivatableSection(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.String, System.Single, System.Single, System.Single, System.Single)
-  nameWithType: Chainables.AddActivatableSection(IControlContainer, String, String, Single, Single, Single, Single)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddActivatableSection(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.Single,System.Single,System.String)
+  name: AddActivatableSection(IControlContainer, String, Single, Single, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddActivatableSection.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddActivatableSection_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_Single_System_Single_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddActivatableSection(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.Single,System.Single,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddActivatableSection(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.Single, System.Single, System.String)
+  nameWithType: Chainables.AddActivatableSection(IControlContainer, String, Single, Single, String)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddActivatableSection(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String,System.Single,System.Single,System.Single,System.Single,System.String)
+  name: AddActivatableSection(IControlContainer, String, String, Single, Single, Single, Single, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddActivatableSection.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddActivatableSection_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_System_Single_System_Single_System_Single_System_Single_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddActivatableSection(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String,System.Single,System.Single,System.Single,System.Single,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddActivatableSection(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.String, System.Single, System.Single, System.Single, System.Single, System.String)
+  nameWithType: Chainables.AddActivatableSection(IControlContainer, String, String, Single, Single, Single, Single, String)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddActivatableSection*
   name: AddActivatableSection
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddActivatableSection.html
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddActivatableSection
   fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddActivatableSection
   nameWithType: Chainables.AddActivatableSection
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup,System.String,System.Single,System.Single)
-  name: AddOrderedSection(OrderedSectionGroup, String, Single, Single)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddOrderedSection_VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_System_String_System_Single_System_Single_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup,System.String,System.Single,System.Single)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup, System.String, System.Single, System.Single)
-  nameWithType: Chainables.AddOrderedSection(OrderedSectionGroup, String, Single, Single)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup,System.String,System.String,System.Single,System.Single,System.Single,System.Single)
-  name: AddOrderedSection(OrderedSectionGroup, String, String, Single, Single, Single, Single)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddOrderedSection_VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_System_String_System_String_System_Single_System_Single_System_Single_System_Single_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup,System.String,System.String,System.Single,System.Single,System.Single,System.Single)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup, System.String, System.String, System.Single, System.Single, System.Single, System.Single)
-  nameWithType: Chainables.AddOrderedSection(OrderedSectionGroup, String, String, Single, Single, Single, Single)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup,System.String,System.Single,System.Single,System.String)
+  name: AddOrderedSection(OrderedSectionGroup, String, Single, Single, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddOrderedSection_VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_System_String_System_Single_System_Single_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup,System.String,System.Single,System.Single,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup, System.String, System.Single, System.Single, System.String)
+  nameWithType: Chainables.AddOrderedSection(OrderedSectionGroup, String, Single, Single, String)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup,System.String,System.String,System.Single,System.Single,System.Single,System.Single,System.String)
+  name: AddOrderedSection(OrderedSectionGroup, String, String, Single, Single, Single, Single, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddOrderedSection_VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_System_String_System_String_System_Single_System_Single_System_Single_System_Single_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup,System.String,System.String,System.Single,System.Single,System.Single,System.Single,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup, System.String, System.String, System.Single, System.Single, System.Single, System.Single, System.String)
+  nameWithType: Chainables.AddOrderedSection(OrderedSectionGroup, String, String, Single, Single, Single, Single, String)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection*
   name: AddOrderedSection
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection.html
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection
   fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSection
   nameWithType: Chainables.AddOrderedSection
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSectionGroup(VRLabs.SimpleShaderInspectors.IControlContainer,System.String)
-  name: AddOrderedSectionGroup(IControlContainer, String)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSectionGroup.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddOrderedSectionGroup_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSectionGroup(VRLabs.SimpleShaderInspectors.IControlContainer,System.String)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSectionGroup(VRLabs.SimpleShaderInspectors.IControlContainer, System.String)
-  nameWithType: Chainables.AddOrderedSectionGroup(IControlContainer, String)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSectionGroup(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String)
+  name: AddOrderedSectionGroup(IControlContainer, String, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSectionGroup.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddOrderedSectionGroup_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSectionGroup(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSectionGroup(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.String)
+  nameWithType: Chainables.AddOrderedSectionGroup(IControlContainer, String, String)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSectionGroup*
   name: AddOrderedSectionGroup
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSectionGroup.html
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSectionGroup
   fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddOrderedSectionGroup
   nameWithType: Chainables.AddOrderedSectionGroup
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddSection(VRLabs.SimpleShaderInspectors.IControlContainer)
-  name: AddSection(IControlContainer)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddSection.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddSection_VRLabs_SimpleShaderInspectors_IControlContainer_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddSection(VRLabs.SimpleShaderInspectors.IControlContainer)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddSection(VRLabs.SimpleShaderInspectors.IControlContainer)
-  nameWithType: Chainables.AddSection(IControlContainer)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddSection(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.Single,System.Single)
-  name: AddSection(IControlContainer, String, Single, Single)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddSection.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddSection_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_Single_System_Single_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddSection(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.Single,System.Single)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddSection(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.Single, System.Single)
-  nameWithType: Chainables.AddSection(IControlContainer, String, Single, Single)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddSection(VRLabs.SimpleShaderInspectors.IControlContainer,System.String)
+  name: AddSection(IControlContainer, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddSection.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddSection_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddSection(VRLabs.SimpleShaderInspectors.IControlContainer,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddSection(VRLabs.SimpleShaderInspectors.IControlContainer, System.String)
+  nameWithType: Chainables.AddSection(IControlContainer, String)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddSection(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.Single,System.Single,System.String)
+  name: AddSection(IControlContainer, String, Single, Single, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddSection.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_AddSection_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_Single_System_Single_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddSection(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.Single,System.Single,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddSection(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.Single, System.Single, System.String)
+  nameWithType: Chainables.AddSection(IControlContainer, String, Single, Single, String)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddSection*
   name: AddSection
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddSection.html
@@ -2272,12 +2293,12 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.#ctor
   fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.OrderedSectionGroup
   nameWithType: OrderedSectionGroup.OrderedSectionGroup
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.AddControl(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection)
-  name: AddControl(OrderedSection)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.AddControl.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_AddControl_VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.AddControl(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.AddControl(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection)
-  nameWithType: OrderedSectionGroup.AddControl(OrderedSection)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.AddControl(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection,System.String)
+  name: AddControl(OrderedSection, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.AddControl.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_AddControl_VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.AddControl(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.AddControl(VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection, System.String)
+  nameWithType: OrderedSectionGroup.AddControl(OrderedSection, String)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.AddControl*
   name: AddControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.AddControl.html
@@ -2344,14 +2365,14 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.GetControlList
   fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.GetControlList
   nameWithType: OrderedSectionGroup.GetControlList
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.VRLabs#SimpleShaderInspectors#IControlContainer#AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)
-  name: IControlContainer.AddControl(SimpleControl)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.VRLabs-SimpleShaderInspectors-IControlContainer-AddControl.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_VRLabs_SimpleShaderInspectors_IControlContainer_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.VRLabs#SimpleShaderInspectors#IControlContainer#AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)
-  name.vb: VRLabs.SimpleShaderInspectors.IControlContainer.AddControl(SimpleControl)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.VRLabs.SimpleShaderInspectors.IControlContainer.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)
-  nameWithType: OrderedSectionGroup.IControlContainer.AddControl(SimpleControl)
-  nameWithType.vb: OrderedSectionGroup.VRLabs.SimpleShaderInspectors.IControlContainer.AddControl(SimpleControl)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.VRLabs#SimpleShaderInspectors#IControlContainer#AddControl(VRLabs.SimpleShaderInspectors.SimpleControl,System.String)
+  name: IControlContainer.AddControl(SimpleControl, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.VRLabs-SimpleShaderInspectors-IControlContainer-AddControl.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionGroup_VRLabs_SimpleShaderInspectors_IControlContainer_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.VRLabs#SimpleShaderInspectors#IControlContainer#AddControl(VRLabs.SimpleShaderInspectors.SimpleControl,System.String)
+  name.vb: VRLabs.SimpleShaderInspectors.IControlContainer.AddControl(SimpleControl, String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.VRLabs.SimpleShaderInspectors.IControlContainer.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl, System.String)
+  nameWithType: OrderedSectionGroup.IControlContainer.AddControl(SimpleControl, String)
+  nameWithType.vb: OrderedSectionGroup.VRLabs.SimpleShaderInspectors.IControlContainer.AddControl(SimpleControl, String)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.VRLabs#SimpleShaderInspectors#IControlContainer#AddControl*
   name: IControlContainer.AddControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.VRLabs-SimpleShaderInspectors-IControlContainer-AddControl.html
@@ -2400,12 +2421,12 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Section.#ctor
   fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.Section
   nameWithType: Section.Section
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)
-  name: AddControl(SimpleControl)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.AddControl.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Section_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Section.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)
-  nameWithType: Section.AddControl(SimpleControl)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl,System.String)
+  name: AddControl(SimpleControl, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.AddControl.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Section_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Section.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl, System.String)
+  nameWithType: Section.AddControl(SimpleControl, String)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Section.AddControl*
   name: AddControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.AddControl.html
@@ -2706,12 +2727,12 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.TextureControl.#ctor
   fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.TextureControl
   nameWithType: TextureControl.TextureControl
-- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)
-  name: AddControl(SimpleControl)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.AddControl.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.TextureControl.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)
-  nameWithType: TextureControl.AddControl(SimpleControl)
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl,System.String)
+  name: AddControl(SimpleControl, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.AddControl.html#VRLabs_SimpleShaderInspectors_Controls_TextureControl_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.TextureControl.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureControl.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl, System.String)
+  nameWithType: TextureControl.AddControl(SimpleControl, String)
 - uid: VRLabs.SimpleShaderInspectors.Controls.TextureControl.AddControl*
   name: AddControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.AddControl.html
@@ -3150,12 +3171,12 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.ToggleListControl.#ctor
   fullName: VRLabs.SimpleShaderInspectors.Controls.ToggleListControl.ToggleListControl
   nameWithType: ToggleListControl.ToggleListControl
-- uid: VRLabs.SimpleShaderInspectors.Controls.ToggleListControl.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)
-  name: AddControl(SimpleControl)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.ToggleListControl.AddControl.html#VRLabs_SimpleShaderInspectors_Controls_ToggleListControl_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.ToggleListControl.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.ToggleListControl.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)
-  nameWithType: ToggleListControl.AddControl(SimpleControl)
+- uid: VRLabs.SimpleShaderInspectors.Controls.ToggleListControl.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl,System.String)
+  name: AddControl(SimpleControl, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.ToggleListControl.AddControl.html#VRLabs_SimpleShaderInspectors_Controls_ToggleListControl_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.ToggleListControl.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.ToggleListControl.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl, System.String)
+  nameWithType: ToggleListControl.AddControl(SimpleControl, String)
 - uid: VRLabs.SimpleShaderInspectors.Controls.ToggleListControl.AddControl*
   name: AddControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.ToggleListControl.AddControl.html
@@ -3384,12 +3405,12 @@ references:
   commentId: T:VRLabs.SimpleShaderInspectors.IControlContainer
   fullName: VRLabs.SimpleShaderInspectors.IControlContainer
   nameWithType: IControlContainer
-- uid: VRLabs.SimpleShaderInspectors.IControlContainer.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)
-  name: AddControl(SimpleControl)
-  href: Next/api/VRLabs.SimpleShaderInspectors.IControlContainer.AddControl.html#VRLabs_SimpleShaderInspectors_IControlContainer_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_
-  commentId: M:VRLabs.SimpleShaderInspectors.IControlContainer.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)
-  fullName: VRLabs.SimpleShaderInspectors.IControlContainer.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)
-  nameWithType: IControlContainer.AddControl(SimpleControl)
+- uid: VRLabs.SimpleShaderInspectors.IControlContainer.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl,System.String)
+  name: AddControl(SimpleControl, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.IControlContainer.AddControl.html#VRLabs_SimpleShaderInspectors_IControlContainer_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.IControlContainer.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.IControlContainer.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl, System.String)
+  nameWithType: IControlContainer.AddControl(SimpleControl, String)
 - uid: VRLabs.SimpleShaderInspectors.IControlContainer.AddControl*
   name: AddControl
   href: Next/api/VRLabs.SimpleShaderInspectors.IControlContainer.AddControl.html
@@ -3417,14 +3438,14 @@ references:
   fullName.vb: VRLabs.SimpleShaderInspectors.IControlContainer(Of T)
   nameWithType: IControlContainer<T>
   nameWithType.vb: IControlContainer(Of T)
-- uid: VRLabs.SimpleShaderInspectors.IControlContainer`1.AddControl(`0)
-  name: AddControl(T)
-  href: Next/api/VRLabs.SimpleShaderInspectors.IControlContainer-1.AddControl.html#VRLabs_SimpleShaderInspectors_IControlContainer_1_AddControl__0_
-  commentId: M:VRLabs.SimpleShaderInspectors.IControlContainer`1.AddControl(`0)
-  fullName: VRLabs.SimpleShaderInspectors.IControlContainer<T>.AddControl(T)
-  fullName.vb: VRLabs.SimpleShaderInspectors.IControlContainer(Of T).AddControl(T)
-  nameWithType: IControlContainer<T>.AddControl(T)
-  nameWithType.vb: IControlContainer(Of T).AddControl(T)
+- uid: VRLabs.SimpleShaderInspectors.IControlContainer`1.AddControl(`0,System.String)
+  name: AddControl(T, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.IControlContainer-1.AddControl.html#VRLabs_SimpleShaderInspectors_IControlContainer_1_AddControl__0_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.IControlContainer`1.AddControl(`0,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.IControlContainer<T>.AddControl(T, System.String)
+  fullName.vb: VRLabs.SimpleShaderInspectors.IControlContainer(Of T).AddControl(T, System.String)
+  nameWithType: IControlContainer<T>.AddControl(T, String)
+  nameWithType.vb: IControlContainer(Of T).AddControl(T, String)
 - uid: VRLabs.SimpleShaderInspectors.IControlContainer`1.AddControl*
   name: AddControl
   href: Next/api/VRLabs.SimpleShaderInspectors.IControlContainer-1.AddControl.html
@@ -4079,12 +4100,12 @@ references:
   commentId: T:VRLabs.SimpleShaderInspectors.SimpleShaderInspector
   fullName: VRLabs.SimpleShaderInspectors.SimpleShaderInspector
   nameWithType: SimpleShaderInspector
-- uid: VRLabs.SimpleShaderInspectors.SimpleShaderInspector.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)
-  name: AddControl(SimpleControl)
-  href: Next/api/VRLabs.SimpleShaderInspectors.SimpleShaderInspector.AddControl.html#VRLabs_SimpleShaderInspectors_SimpleShaderInspector_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_
-  commentId: M:VRLabs.SimpleShaderInspectors.SimpleShaderInspector.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)
-  fullName: VRLabs.SimpleShaderInspectors.SimpleShaderInspector.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl)
-  nameWithType: SimpleShaderInspector.AddControl(SimpleControl)
+- uid: VRLabs.SimpleShaderInspectors.SimpleShaderInspector.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl,System.String)
+  name: AddControl(SimpleControl, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.SimpleShaderInspector.AddControl.html#VRLabs_SimpleShaderInspectors_SimpleShaderInspector_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.SimpleShaderInspector.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.SimpleShaderInspector.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl, System.String)
+  nameWithType: SimpleShaderInspector.AddControl(SimpleControl, String)
 - uid: VRLabs.SimpleShaderInspectors.SimpleShaderInspector.AddControl*
   name: AddControl
   href: Next/api/VRLabs.SimpleShaderInspectors.SimpleShaderInspector.AddControl.html
