@@ -177,7 +177,7 @@ namespace VRLabs.SimpleShaderInspectors.Tools
                         content.Append($" = {parameter.DefaultValue}");
                 }
             }
-            content.Append(")").AppendLine(GenerateGenericConstraintsString(type))
+            content.Append(", string appendAfterAlias = \"\")").AppendLine(GenerateGenericConstraintsString(type))
                 .Append(Indentation(indentLevel))
                 .AppendLine("{");
 
@@ -196,7 +196,7 @@ namespace VRLabs.SimpleShaderInspectors.Tools
             }
             content.AppendLine(");")
                 .Append(Indentation(indentLevel))
-                .AppendLine("container.AddControl(control);")
+                .AppendLine("container.AddControl(control, appendAfterAlias);")
                 .Append(Indentation(indentLevel))
                 .AppendLine("return control;");
             indentLevel--;
