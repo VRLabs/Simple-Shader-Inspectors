@@ -14,7 +14,7 @@ namespace VRLabs.SimpleShaderInspectors.Tools
     public class ExtensionsGeneratorWindow : EditorWindow
     {
 
-        [MenuItem("VRLabs/Simple Shader Inspectors/Generate Chainable Methods")]
+        [MenuItem("VRLabs/Simple Shader Inspectors/Generate Extension Methods")]
         private static ExtensionsGeneratorWindow CreateWindow()
         {
             ExtensionsGeneratorWindow window = EditorWindow.GetWindow<ExtensionsGeneratorWindow>();
