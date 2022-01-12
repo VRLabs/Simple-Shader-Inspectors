@@ -7,7 +7,7 @@ namespace TestControlNamespace
     public class MyCustomControl : PropertyControl
     {
         public string ExtraText { get; protected set; }
-        [Chainable]
+        [FluentSet]
         public bool IsExtraLabelVisible { get; set; }
 
         public MyCustomControl(string propertyName, string extraText) : base(propertyName)

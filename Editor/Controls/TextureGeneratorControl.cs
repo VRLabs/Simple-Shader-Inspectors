@@ -72,7 +72,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <value>
         /// GUIStyle used when displaying the generator "open" button.
         /// </value>
-        [Chainable] public GUIStyle GeneratorButtonStyle { get; set; }
+        [FluentSet] public GUIStyle GeneratorButtonStyle { get; set; }
         
         /// <summary>
         /// Style for the texture generator save button.
@@ -80,7 +80,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <value>
         /// GUIStyle used when displaying the generator "save" button.
         /// </value>
-        [Chainable] public GUIStyle GeneratorSaveButtonStyle { get; set; }
+        [FluentSet] public GUIStyle GeneratorSaveButtonStyle { get; set; }
 
         /// <summary>
         /// Style for the texture generator background.
@@ -88,7 +88,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <value>
         /// GUIStyle used when displaying the generator background.
         /// </value>
-        [Chainable] public GUIStyle GeneratorStyle { get; set; }
+        [FluentSet] public GUIStyle GeneratorStyle { get; set; }
 
         /// <summary>
         /// Style for the generator input background.
@@ -96,7 +96,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <value>
         /// GUIStyle used when displaying the background of a generator input field.
         /// </value>
-        [Chainable] public GUIStyle GeneratorInputStyle { get; set; }
+        [FluentSet] public GUIStyle GeneratorInputStyle { get; set; }
 
         /// <summary>
         /// Background color for the texture generator button.
@@ -104,7 +104,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <value>
         /// Color used when displaying the generator "open" button.
         /// </value>
-        [Chainable] public Color GeneratorButtonColor { get; set; }
+        [FluentSet] public Color GeneratorButtonColor { get; set; }
 
         /// <summary>
         /// Background color for the generator save button.
@@ -112,7 +112,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <value>
         /// Color used when displaying the generator "save" button.
         /// </value>
-        [Chainable] public Color GeneratorSaveButtonColor { get; set; }
+        [FluentSet] public Color GeneratorSaveButtonColor { get; set; }
 
         /// <summary>
         /// Background color for the generator background.
@@ -120,7 +120,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <value>
         /// Color used when displaying the generator background.
         /// </value>
-        [Chainable] public Color GeneratorColor { get; set; }
+        [FluentSet] public Color GeneratorColor { get; set; }
 
         /// <summary>
         /// Background color for the generator input background.
@@ -128,7 +128,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <value>
         /// Color used when displaying the background of a generator input field.
         /// </value>
-        [Chainable] public Color GeneratorInputColor { get; set; }
+        [FluentSet] public Color GeneratorInputColor { get; set; }
 
         /// <summary>
         /// Additional localization strings. Implementation for <see cref="IAdditionalLocalization"/>.

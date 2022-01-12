@@ -3,61 +3,33 @@ using UnityEngine;
 
 namespace VRLabs.SimpleShaderInspectors.Controls
 {
-    public class TextureControl : PropertyControl, IAdditionalProperties
+    public class TextureControl : PropertyControl, IAdditionalProperties, IControlContainer
     {
-        protected bool _hasExtra1 = false;
-        protected bool _hasExtra2 = false;
-        protected bool _isUVButtonPressed = false;
         //..
         public AdditionalProperty[] AdditionalProperties { get; set; }
         //..
-        [Chainable] public bool ShowUvOptions { get; set; }
-
-        [Chainable] public bool HasHDRColor { get; set; }
-
-        [Chainable] public GUIStyle UVButtonStyle { get; set; }
-        
-        [Chainable] public GUIStyle UVAreaStyle { get; set; }
-
-        [Chainable] public Color UVButtonColor { get; set; }
-        
-        [Chainable] public Color UVAreaColor { get; set; }
 
         public TextureControl(string propertyName, string extraPropertyName1 = null, string extraPropertyName2 = null) : base(propertyName)
         {
             AdditionalProperties = new AdditionalProperty[2];
             AdditionalProperties[0] = new AdditionalProperty(extraPropertyName1);
             if (!string.IsNullOrWhiteSpace(extraPropertyName1))
-                _hasExtra1 = true;
+                HasExtra1 = true;
             
             AdditionalProperties[1] = new AdditionalProperty(extraPropertyName2);
             if (!string.IsNullOrWhiteSpace(extraPropertyName2))
-                _hasExtra2 = true;
-
-            UVButtonStyle = Styles.GearIcon;
-            UVAreaStyle = Styles.TextureBoxHeavyBorder;
-            UVButtonColor = Color.white;
-            UVAreaColor = Color.white;
-
-            ShowUvOptions = false;
+                HasExtra2 = true;
+            //..
         }
-
-        protected override void ControlGUI(MaterialEditor materialEditor)
-        {
-            DrawTextureSingleLine(materialEditor);
-        }
-
+        
         protected void DrawTextureSingleLine(MaterialEditor materialEditor)
         {
-            EditorGUI.BeginChangeCheck();
-            if (ShowUvOptions)
-                EditorGUILayout.BeginHorizontal();
-            
-            if (_hasExtra2)
+            //..
+            if (HasExtra2)
             {
                 materialEditor.TexturePropertySingleLine(Content, Property, AdditionalProperties[0].Property, AdditionalProperties[1].Property);
             }
-            else if (_hasExtra1)
+            else if (HasExtra1)
             {
                 if (AdditionalProperties[0].Property.type == MaterialProperty.PropType.Color && HasHDRColor)
                     materialEditor.TexturePropertyWithHDRColorFixed(Content, Property, AdditionalProperties[0].Property, true);
@@ -68,24 +40,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             {
                 materialEditor.TexturePropertySingleLine(Content, Property);
             }
-            if (ShowUvOptions)
-            {
-                GUI.backgroundColor = UVButtonColor;
-                _isUVButtonPressed = EditorGUILayout.Toggle(_isUVButtonPressed, UVButtonStyle, GUILayout.Width(16.0f), GUILayout.Height(16.0f));
-                GUI.backgroundColor = SimpleShaderInspector.DefaultBgColor;
-                EditorGUILayout.EndHorizontal();
-                if (_isUVButtonPressed)
-                {
-                    GUI.backgroundColor = UVAreaColor;
-                    EditorGUILayout.BeginVertical(UVAreaStyle);
-                    GUI.backgroundColor = SimpleShaderInspector.DefaultBgColor;
-                    EditorGUI.indentLevel++;
-                    materialEditor.TextureScaleOffsetProperty(Property);
-                    EditorGUI.indentLevel--;
-                    EditorGUILayout.EndVertical();
-                }
-            }
-            HasPropertyUpdated = EditorGUI.EndChangeCheck();
+            //..
         }
     }
 }

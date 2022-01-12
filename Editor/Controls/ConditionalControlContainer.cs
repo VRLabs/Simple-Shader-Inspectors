@@ -40,7 +40,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <value>
         /// True if the controls inside will get indented, false otherwise.
         /// </value>
-        [Chainable]
+        [FluentSet]
         public bool Indent { get; set; }
         
         /// <summary>

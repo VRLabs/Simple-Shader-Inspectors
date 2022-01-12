@@ -23,7 +23,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// Style used for the label control.
         /// </summary>
         /// <value>GUIStyle for the label.</value>
-        [Chainable] public GUIStyle LabelStyle { get; set; }
+        [FluentSet] public GUIStyle LabelStyle { get; set; }
 
         /// <summary>
         /// Default constructor of <see cref="LabelControl"/>.

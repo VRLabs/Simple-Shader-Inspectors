@@ -26,7 +26,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
     /// Example usage:
     /// <code>
     /// // Adds a section and sets its alias
-    /// this.AddSection().Alias("ExampleAlias"); 
+    /// this.AddSection().WithAlias("ExampleAlias"); 
     ///
     /// // Adds a section that uses a material property for its folding state.
     /// this.AddSection("_ExampleProperty"); 
@@ -108,7 +108,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// <value>
         /// GUIStyle used when displaying the header label.
         /// </value>
-        [Chainable] public GUIStyle LabelStyle { get; set; }
+        [FluentSet] public GUIStyle LabelStyle { get; set; }
 
         /// <summary>
         /// Style of the header background.
@@ -116,7 +116,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// <value>
         /// GUIStyle used when displaying the header background.
         /// </value>
-        [Chainable] public GUIStyle BackgroundStyle { get; set; }
+        [FluentSet] public GUIStyle BackgroundStyle { get; set; }
 
         /// <summary>
         /// Boolean indicating if child controls will be inside the header background.
@@ -124,7 +124,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// <value>
         /// True if the child controls are displayed inside the background style of the header, false otherwise.
         /// </value>
-        [Chainable] public bool AreControlsInHeader { get; set; }
+        [FluentSet] public bool AreControlsInHeader { get; set; }
 
         /// <summary>
         /// Boolean indicating if the folding state material property is animatable or not.
@@ -132,7 +132,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// <value>
         /// True if the property can be animated, false otherwise.
         /// </value>
-        [Chainable] public bool IsPropertyAnimatable { get; set; }
+        [FluentSet] public bool IsPropertyAnimatable { get; set; }
 
         /// <summary>
         /// Boolean indicating if the foldout arrow is enabled or not.
@@ -140,7 +140,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// <value>
         /// True if the foldout arrow in the header is visible, false otherwise.
         /// </value>
-        [Chainable] public bool ShowFoldoutArrow { get; set; }
+        [FluentSet] public bool ShowFoldoutArrow { get; set; }
 
         /// <summary>
         /// Background color of the header.
@@ -148,7 +148,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// <value>
         /// Color used when displaying the header background.
         /// </value>
-        [Chainable] public Color BackgroundColor { get; set; }
+        [FluentSet] public Color BackgroundColor { get; set; }
 
         /// <summary>
         /// Constructor of <see cref="Section"/> used when creating a property driven section

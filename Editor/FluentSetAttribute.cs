@@ -9,7 +9,7 @@ namespace VRLabs.SimpleShaderInspectors
     /// The attribute by itself does nothing, but it is used by the chainables generator tool to generate extension methods for properties that have it
     /// </remarks>
     [AttributeUsage(AttributeTargets.Property)]
-    public class ChainableAttribute : Attribute
+    public class FluentSetAttribute : Attribute
     {}
 
     /// <summary>

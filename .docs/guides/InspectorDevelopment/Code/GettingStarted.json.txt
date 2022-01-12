@@ -2,13 +2,13 @@
     "Properties": [
         {
             "Name": "MyFloatProperty",
-            "DisplayName": "My float property",
-            "Tooltip": "My float property"
+            "DisplayName": "MyFloatProperty",
+            "Tooltip": ""
         },
         {
             "Name": "_FloatProperty",
-            "DisplayName": "My float property",
-            "Tooltip": "My float property"
+            "DisplayName": "_FloatProperty",
+            "Tooltip": ""
         }
     ]
 }

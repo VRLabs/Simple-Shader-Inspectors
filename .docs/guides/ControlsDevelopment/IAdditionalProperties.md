@@ -9,7 +9,7 @@ In some cases you may need to use multiple material properties in a single contr
 
 An example is making a texture control similar in functionality to `MaterialEditor.TexturePropertySingleLine`.
 
-Just like the `IAdditionalLocalization` interface can make you get multiple localized strings, `IAdditionalProperties` can be used for material properties themself. The biggest difference is that in this case you need a way to get the material property name of the additional properties from the inspector.
+Just like the `IAdditionalLocalization` interface can make you get multiple localized strings, `IAdditionalProperties` can be used for material properties themselves. The biggest difference is that in this case you need a way to get the material property name of the additional properties from the inspector.
 
 This time let's check the `TextureControl` code that Simple Shader Inspectors comes with, since it uses this interface to have 2 extra properties. The file can be found inside `"VRLabs/SimpleShaderInspectors/Editor/Controls/TextureControl.cs"`.
 
@@ -19,19 +19,19 @@ This time let's check the `TextureControl` code that Simple Shader Inspectors co
 
 First let's look at the implementation of the `IAdditionalProperties` interface.
 
-[!code-csharp[Main](Code/TextureControl.cs.txt?range=6-7,11-13)]
+[!code-csharp[Main](Code/TextureControl.cs.txt?range=6-10)]
 
 As you can see, to implement the interface we need to add an array of type `AdditionalProperty[]`, which will contain both our property name string and out material property that will automatically be fetched by the inspector.
 
 let's now check in the constructor:
 
-[!code-csharp[Main](Code/TextureControl.cs.txt?range=26-35)]
+[!code-csharp[Main](Code/TextureControl.cs.txt?range=12-22)]
 
 Here the array is initialized with an array length of 2, and then we initialize both of them by giving them the name of the material property they need to fetch. (we are purposely ignoring the 2 extra checks since they're out of the scope of this page).
 
 Now during `ControlGUI` we can use them as we wish (the example below is taken from the `DrawTextureSingleLine` method, but that method is called inside `ControlGUI` so for our example is the same thing).
 
-[!code-csharp[Main](Code/TextureControl.cs.txt?range=56-70)]
+[!code-csharp[Main](Code/TextureControl.cs.txt?range=25-43)]
 
 ## Overuse of IAdditionalProperties interface
 
