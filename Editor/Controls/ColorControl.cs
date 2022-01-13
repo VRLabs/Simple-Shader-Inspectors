@@ -24,7 +24,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <value>
         /// True if the control should show the alpha value, false otherwise (default: true)
         /// </value>
-        [Chainable] public bool ShowAlphaValue { get; set; }
+        [FluentSet] public bool ShowAlphaValue { get; set; }
 
         /// <summary>
         /// Selected color of the property stored in this control.

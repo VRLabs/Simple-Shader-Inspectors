@@ -226,7 +226,6 @@ namespace VRLabs.SimpleShaderInspectors
         /// <summary>
         /// Style for a delete button.
         /// </summary>
-        // TODO: fix the texture name.
         public static GUIStyle DeleteIcon
         {
             get

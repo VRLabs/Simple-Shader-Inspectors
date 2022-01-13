@@ -9,9 +9,9 @@ namespace VRLabs.SimpleShaderInspectorsExamples
     {
         protected override void Start()
         {
-            this.AddTextureControl("_MainTex", "_Color").Alias("Main texture").SetShowTilingAndOffset(true);
-            this.AddTextureControl("_BumpMap", "_BumpIntensity").Alias("Normal map").SetShowTilingAndOffset(true);
-            this.AddTextureGeneratorControl("_MultiMask").Alias("Multi mask").SetShowTilingAndOffset(true);
+            this.AddTextureControl("_MainTex", "_Color").WithAlias("Main texture").WithShowTilingAndOffset(true);
+            this.AddTextureControl("_BumpMap", "_BumpIntensity").WithAlias("Normal map").WithShowTilingAndOffset(true);
+            this.AddTextureGeneratorControl("_MultiMask").WithAlias("Multi mask").WithShowTilingAndOffset(true);
             this.AddSpaceControl();
             this.AddLabelControl("MaskControls");
             this.AddPropertyControl("_Metallic");

@@ -56,7 +56,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <value>
         /// GUIStyle used.
         /// </value>
-        [Chainable] public GUIStyle GradientButtonStyle { get; set; }
+        [FluentSet] public GUIStyle GradientButtonStyle { get; set; }
         
         /// <summary>
         /// Style used to display the gradient editor save button.
@@ -64,7 +64,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <value>
         /// GUIStyle used.
         /// </value>
-        [Chainable] public GUIStyle GradientSaveButtonStyle { get; set; }
+        [FluentSet] public GUIStyle GradientSaveButtonStyle { get; set; }
         
         /// <summary>
         /// Style used to display the gradient editor background.
@@ -72,7 +72,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <value>
         /// GUIStyle used.
         /// </value>
-        [Chainable] public GUIStyle GradientEditorStyle { get; set; }
+        [FluentSet] public GUIStyle GradientEditorStyle { get; set; }
 
         /// <summary>
         /// Background color used to display the gradient editor button.
@@ -80,7 +80,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <value>
         /// Color used.
         /// </value>
-        [Chainable] public Color GradientButtonColor { get; set; }
+        [FluentSet] public Color GradientButtonColor { get; set; }
         
         /// <summary>
         /// Background color used to display the gradient editor save button.
@@ -88,7 +88,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <value>
         /// Color used.
         /// </value>
-        [Chainable] public Color GradientSaveButtonColor { get; set; }
+        [FluentSet] public Color GradientSaveButtonColor { get; set; }
         
         /// <summary>
         /// Background color used to display the gradient editor background.
@@ -96,7 +96,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <value>
         /// Color used.
         /// </value>
-        [Chainable] public Color GradientEditorColor { get; set; }
+        [FluentSet] public Color GradientEditorColor { get; set; }
 
         /// <summary>
         /// Implementation of <see cref="IAdditionalLocalization"/> for the additional localization strings.

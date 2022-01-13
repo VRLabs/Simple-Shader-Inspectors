@@ -24,12 +24,12 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <summary>
         /// Indicates the type of message that is contained in the box.
         /// </summary>
-        [Chainable] public MessageType BoxType { get; set; }
+        [FluentSet] public MessageType BoxType { get; set; }
         
         /// <summary>
         /// Indicates if the HelpBox is a wide box (spans to the entire length of the window) or not (is only as large as the area where input fields are usually placed)
         /// </summary>
-        [Chainable] public bool IsWideBox { get; set; }
+        [FluentSet] public bool IsWideBox { get; set; }
         
         /// <summary>
         /// Default constructor of <see cref="HelpBoxControl"/>

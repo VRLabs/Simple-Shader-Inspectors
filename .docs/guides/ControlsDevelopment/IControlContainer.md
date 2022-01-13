@@ -18,7 +18,7 @@ Let's take our custom control template and implement the IControlContainer inter
 
 The implement the interface you need to implement the `AddControl` and `GetControlList` methods in you class.
 
-The first method is generally used in the generated chainable methods to add a new control under this one, meanwhile the second one is used when the inspector fetches properties.
+The first method is generally used in the generated extension methods to add a new control under this one, meanwhile the second one is used when the inspector fetches properties.
 
 How you store those controls is up to you, in this case we will use a list.
 
@@ -26,8 +26,10 @@ And in the meantime, we also add a simple range property and get the control to 
 
 [!code-csharp[Main](Code/IControlContainerExample.cs.txt?range=1-20,28-34&highlight=9,13,18-20,23,25)]
 
-Only notable mentions are the 2 methods implementation being done in an unusual way, this is for the most part just a "shortcut" that can be done when the method implementation consist in only one operation (if you're not confortable with it, you can just write it like you're used to, the result is the same).
-Also the `RangeProperty` method for some reason doesn't have an overload that accepts a `GUIContent`, so we had to pass just the `text` string of it (unity pls fix this thanks).
+Some notable mentions here:
+- The 2 methods implementation being done in an unusual way, this is for the most part just a "shortcut" that can be done when the method implementation consist in only one operation (if you're not comfortable with it, you can just write it like you're used to, the result is the same).
+- We use `Controls.AddControl(control, alias)` to add the control in the list. `AddControl` applied to this list is a method that automatically adds the control after a control with the given alias, this should be the default implementation of an IControlContainer `AddControl`, and eventual custom implementations (if you don't use something that can be cast into an [`IList`](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ilist)) should be implemented in a similar way.
+- The `RangeProperty` method for some reason doesn't have an overload that accepts a `GUIContent`, so we had to pass just the `text` string of it (unity pls fix this thanks).
 
 Now our control properly displays any float property that is being given to it, but if you add any control to this one they will simply not display, that's cause it's our responsibility to handle that:
 

@@ -139,7 +139,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// <value>
         /// GUIStyle used for the up icon display.
         /// </value>
-        [Chainable] public GUIStyle UpIcon { get; set; }
+        [FluentSet] public GUIStyle UpIcon { get; set; }
 
         /// <summary>
         /// Style for the down icon.
@@ -147,7 +147,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// <value>
         /// GUIStyle used for the down icon display.
         /// </value>
-        [Chainable] public GUIStyle DownIcon { get; set; }
+        [FluentSet] public GUIStyle DownIcon { get; set; }
 
         /// <summary>
         /// Style for the delete icon.
@@ -155,7 +155,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// <value>
         /// GUIStyle used for the delete icon display.
         /// </value>
-        [Chainable] public GUIStyle DeleteIcon { get; set; }
+        [FluentSet] public GUIStyle DeleteIcon { get; set; }
 
         /// <summary>
         /// Color of the up icon.
@@ -163,7 +163,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// <value>
         /// Color used to display the up icon.
         /// </value>
-        [Chainable] public Color UpColor { get; set; }
+        [FluentSet] public Color UpColor { get; set; }
 
         /// <summary>
         /// Color of the down icon.
@@ -171,7 +171,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// <value>
         /// Color used to display the down icon.
         /// </value>
-        [Chainable] public Color DownColor { get; set; }
+        [FluentSet] public Color DownColor { get; set; }
 
         /// <summary>
         /// Color of the delete icon.
@@ -179,7 +179,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls.Sections
         /// <value>
         /// Color used to display the down icon.
         /// </value>
-        [Chainable] public Color DeleteColor { get; set; }
+        [FluentSet] public Color DeleteColor { get; set; }
 
         /// <summary>
         /// Float value that the Show bool gets converted if true.

@@ -282,7 +282,7 @@ namespace VRLabs.SimpleShaderInspectors
         private void SSILogo(float logoHeight)
         {
             if (GUILayout.Button(new GUIContent(_logo, "Check out Simple Shader Inspectors!"), Styles.BottomCenterLabel, 
-                GUILayout.Width(logoHeight), GUILayout.MaxHeight(logoHeight+10), GUILayout.ExpandHeight(true)))
+                GUILayout.Width(logoHeight), GUILayout.MaxHeight(logoHeight), GUILayout.ExpandHeight(true)))
                 Application.OpenURL("https://github.com/VRLabs/SimpleShaderInspectors");
         }
         

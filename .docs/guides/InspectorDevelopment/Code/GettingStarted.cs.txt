@@ -9,7 +9,7 @@ public class TestShaderInspector : SimpleShaderInspector
 
     protected override void Start()
     {
-        _floatControl = this.AddPropertyControl("_FloatProperty").Alias("MyFloatProperty");
+        _floatControl = this.AddPropertyControl("_FloatProperty").WithAlias("MyFloatProperty");
         _labelControl = this.AddLabelControl("MyLabel");
     }
 
@@ -28,4 +28,4 @@ public class TestShaderInspector : SimpleShaderInspector
 }
 
         this.AddPropertyControl("_FloatProperty");
-        this.AddPropertyControl("_FloatProperty").Alias("MyFloatProperty");
+        this.AddPropertyControl("_FloatProperty").WithAlias("MyFloatProperty");

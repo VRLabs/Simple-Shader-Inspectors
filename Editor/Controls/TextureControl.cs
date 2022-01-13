@@ -88,7 +88,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <value>
         /// True if the control has to show the uv tiling and offset, false otherwise.
         /// </value>
-        [Chainable] public bool ShowTilingAndOffset { get; set; }
+        [FluentSet] public bool ShowTilingAndOffset { get; set; }
 
         /// <summary>
         /// Boolean that defines if the control needs to render the second material property as an hdr color field,
@@ -97,7 +97,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <value>
         /// True if the color property should have an HDR color field, false otherwise.
         /// </value>
-        [Chainable] public bool HasHDRColor { get; set; }
+        [FluentSet] public bool HasHDRColor { get; set; }
 
         /// <summary>
         /// Style for the options button.
@@ -105,7 +105,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <value>
         /// GUIStyle used when displaying the button.
         /// </value>
-        [Chainable] public GUIStyle OptionsButtonStyle { get; set; }
+        [FluentSet] public GUIStyle OptionsButtonStyle { get; set; }
         
         /// <summary>
         /// Style for the options background area.
@@ -113,7 +113,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <value>
         /// GUIStyle used for the background of the options area.
         /// </value>
-        [Chainable] public GUIStyle OptionsAreaStyle { get; set; }
+        [FluentSet] public GUIStyle OptionsAreaStyle { get; set; }
 
         /// <summary>
         /// Color for the options button.
@@ -121,7 +121,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <value>
         /// Color used when displaying the options button.
         /// </value>
-        [Chainable] public Color OptionsButtonColor { get; set; }
+        [FluentSet] public Color OptionsButtonColor { get; set; }
         
         /// <summary>
         /// Background color for the options area.
@@ -129,7 +129,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// <value>
         /// Color used when displaying the background for options area.
         /// </value>
-        [Chainable] public Color OptionsAreaColor { get; set; }
+        [FluentSet] public Color OptionsAreaColor { get; set; }
 
         /// <summary>
         /// Default constructor of <see cref="TextureControl"/>

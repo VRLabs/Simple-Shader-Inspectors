@@ -14,7 +14,7 @@ Right now there are 3 types of sections available and they each have their own u
 ## Section
 
 ```csharp
-    AddSection(string alias);
+    AddSection();
 ```
 
 This is the basic section with no fancy extras to it, and, as we already seen with the `LabelControl`, since it doesn't have any material property it will have a default `Alias` that will be the same for every section control, so it's advised to assign a custom one.
@@ -23,8 +23,8 @@ It also is the base class of the other 2 types of sections, so everything that i
 
 Practically speaking it doesn't have too much in terms of functionality, click on the header to toggle the visibility on and off, and *that's it*.
 
-You do however have quite a bit of appearance customizability with its chainable methods.
-For example you can change the color of the header background with `.SetBackgroundColor` or change the label style with `.SetLabelStyle`, or you can change the background itself by changing its style with `.SetBackgroundStyle`.
+You do however have quite a bit of appearance customizability with its extension methods.
+For example you can change the color of the header background with `.WithBackgroundColor` or change the label style with `.WithLabelStyle`, or you can change the background itself by changing its style with `.WithBackgroundStyle`.
 
 ## ActivatableSection
 
@@ -67,7 +67,7 @@ All of these icons can be customized by making a new style for them with a diffe
 
 ## Using properties for Visibility
 
-All the sections we've seen keep memorized their visibility state per each material internally with a [Dictionary](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2), while this is good enough for the majority of use cases, it will lose the memorized state when unity closes, resulting on all sections being closed the next time you open unity.
+All the sections we've seen keep memorized their visibility state per each material internally, while this is good enough for the majority of use cases, it can lose the memorized state when if you haven't edited the material in a while, since the data regarding the state is removed after 30 days of not being used, resulting on all sections being closed when that happens.
 
 As an alternative solution for that (or in case you want to keep the visibility state tracked in a `MaterialProperty`) you can use pass another property to the constructor.
 
@@ -79,4 +79,4 @@ This property will be used to keep track of the visibility state, and you can al
 >[!CAUTION]
 >You can create float properties in you shader property list without using them in the shader code, just to keep track of the visibility state of section. Just beware that is usually not considered best practice to do that.
 
-When using this method to create sections you also can decide if the property used for the visibility state will be recorded or not when you're [recording an animation](https://docs.unity3d.com/Manual/animeditor-AnimatingAGameObject.html) by using `SetPropertyAnimatable`.
+When using this method to create sections you also can decide if the property used for the visibility state will be recorded or not when you're [recording an animation](https://docs.unity3d.com/Manual/animeditor-AnimatingAGameObject.html) by using `WithIsPropertyAnimatable`.

@@ -185,8 +185,7 @@ namespace VRLabs.SimpleShaderInspectors
             }
         }
         
-        // TODO: set method private
-        public static void SetNonAnimatableProperties(MaterialEditor materialEditor, IEnumerable<INonAnimatableProperty> nonAnimatableProperties)
+        private static void SetNonAnimatableProperties(MaterialEditor materialEditor, IEnumerable<INonAnimatableProperty> nonAnimatableProperties)
         {
             foreach(var nonAnimatableProperty in nonAnimatableProperties)
             {

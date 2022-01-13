@@ -11,14 +11,14 @@ namespace VRLabs.SimpleShaderInspectors.Tools
     /// <summary>
     /// Editor window that embeds the Simple Shader Inspectors library into any custom editor folder with customized namespace.
     /// </summary>
-    public class ChainableGeneratorWindow : EditorWindow
+    public class ExtensionsGeneratorWindow : EditorWindow
     {
 
-        [MenuItem("VRLabs/Simple Shader Inspectors/Generate Chainable Methods")]
-        private static ChainableGeneratorWindow CreateWindow()
+        [MenuItem("VRLabs/Simple Shader Inspectors/Generate Extension Methods")]
+        private static ExtensionsGeneratorWindow CreateWindow()
         {
-            ChainableGeneratorWindow window = EditorWindow.GetWindow<ChainableGeneratorWindow>();
-            window.titleContent = new GUIContent("Chainables");
+            ExtensionsGeneratorWindow window = EditorWindow.GetWindow<ExtensionsGeneratorWindow>();
+            window.titleContent = new GUIContent("Extensions");
             window.minSize = new Vector2(400, 280);
             window.maxSize = new Vector2(400, 280);
             return window;
@@ -40,14 +40,14 @@ namespace VRLabs.SimpleShaderInspectors.Tools
             _controlsNamespace = EditorGUILayout.TextField("Controls Namespace", _controlsNamespace);
             EditorGUILayout.Space();
             
-            if (GUILayout.Button("Generate chainables"))
+            if (GUILayout.Button("Generate extension methods"))
             {
                 string path = EditorUtility.OpenFolderPanel("Select destination folder to use", "Assets", "Editor");
                 string destinationPath = path.Length == 0 ? null : path;
                 if (!string.IsNullOrWhiteSpace(destinationPath))
                 {
                     if (string.IsNullOrWhiteSpace(_controlsNamespace)) _controlsNamespace = _namespaces[_selectedNamespace];
-                    GenerateChainables(destinationPath, _namespaces[_selectedNamespace], _controlsNamespace);
+                    GenerateExtensions(destinationPath, _namespaces[_selectedNamespace], _controlsNamespace);
                 }
             }
 
@@ -64,7 +64,7 @@ namespace VRLabs.SimpleShaderInspectors.Tools
                 .ToArray();
         }
 
-        private static void GenerateChainables(string destinationPath, string nmsc, string controlsNmsc)
+        private static void GenerateExtensions(string destinationPath, string nmsc, string controlsNmsc)
         {
             var ssiTypes = AppDomain.CurrentDomain
                 .GetAssemblies()
@@ -75,8 +75,8 @@ namespace VRLabs.SimpleShaderInspectors.Tools
             var simpleControlType = ssiTypes.FirstOrDefault(x => x.IsClass && x.Name.Equals("SimpleControl"));
             if (simpleControlType == null) return;
             
-            var chainableAttributeType = ssiTypes.FirstOrDefault(x => x.IsClass && x.Name.Equals("ChainableAttribute"));
-            if (chainableAttributeType == null) return;
+            var fluentSetAttributeType = ssiTypes.FirstOrDefault(x => x.IsClass && x.Name.Equals("FluentSetAttribute"));
+            if (fluentSetAttributeType == null) return;
             
             var limitScopeAttributeType = ssiTypes.FirstOrDefault(x => x.IsClass && x.Name.Equals("LimitAccessScopeAttribute"));
             if (limitScopeAttributeType == null) return;
@@ -107,12 +107,12 @@ namespace VRLabs.SimpleShaderInspectors.Tools
                 foreach (var type in group)
                 {
                     foreach (var constructor in type.GetConstructors())
-                        BuildConstructorChainable(content, type, limitScopeAttributeType, constructor, indent);
+                        BuildConstructorExtensions(content, type, limitScopeAttributeType, constructor, indent);
 
-                    var chainableProperties = type.GetProperties(BindingFlags.DeclaredOnly | BindingFlags.Instance | BindingFlags.Public)
-                        .Where(y => y.CustomAttributes.Any(z => z.AttributeType == chainableAttributeType));
+                    var fluentSetProperties = type.GetProperties(BindingFlags.DeclaredOnly | BindingFlags.Instance | BindingFlags.Public)
+                        .Where(y => y.CustomAttributes.Any(z => z.AttributeType == fluentSetAttributeType));
 
-                    foreach (var prop in chainableProperties)
+                    foreach (var prop in fluentSetProperties)
                         BuildPropertyChainable(content, type, prop, indent);
                     
                     content.AppendLine();
@@ -125,7 +125,7 @@ namespace VRLabs.SimpleShaderInspectors.Tools
                 content.Append(Indentation(indent))
                     .AppendLine("}");
 
-                File.WriteAllText($"{destinationPath}\\{group.Key}.Chainables.cs", content.ToString().Replace("\r\n", "\n"), Encoding.UTF8);
+                File.WriteAllText($"{destinationPath}\\{group.Key}.Extensions.cs", content.ToString().Replace("\r\n", "\n"), Encoding.UTF8);
             }
 
             AssetDatabase.Refresh();
@@ -135,7 +135,7 @@ namespace VRLabs.SimpleShaderInspectors.Tools
         {
             // Chainable Header
             content.Append(Indentation(indentLevel))
-                .AppendLine($"public static T Set{prop.Name}<T>(this T control, {prop.PropertyType.FullName} property) where T : {type.Name}")
+                .AppendLine($"public static T With{prop.Name}<T>(this T control, {GenerateGenericListString(prop.PropertyType, true)} property) where T : {type.Name}")
                 .Append(Indentation(indentLevel))
                 .AppendLine("{");
 
@@ -151,7 +151,7 @@ namespace VRLabs.SimpleShaderInspectors.Tools
         }
 
         // Append a chainable constructor implementation to the given content.
-        private static void BuildConstructorChainable(StringBuilder content, Type type, Type limitScopeAttributeType, ConstructorInfo constructor, int indentLevel)
+        private static void BuildConstructorExtensions(StringBuilder content, Type type, Type limitScopeAttributeType, ConstructorInfo constructor, int indentLevel)
         {
             // Check if the constructor has the limitAccessScope attribute to limit the objects that can access the chainable
             var limitScopeAttribute = Array.Find(constructor.GetCustomAttributes(false), x => x.GetType() == limitScopeAttributeType);
@@ -162,11 +162,11 @@ namespace VRLabs.SimpleShaderInspectors.Tools
             
             // Chainable constructor header
             content.Append(Indentation(indentLevel))
-                .Append($"public static {GenerateGenericListString(type)} Add{GenerateGenericListString(type)}(this {typeName} container");
+                .Append($"public static {GenerateGenericListString(type, true)} Add{GenerateGenericListString(type)}(this {typeName} container");
 
             foreach (var parameter in constructor.GetParameters())
             {
-                content.Append($", {parameter.ParameterType.FullName} {parameter.Name}");
+                content.Append($", {GenerateGenericListString(parameter.ParameterType, true)} {parameter.Name}");
                 if (parameter.HasDefaultValue)
                 {
                     if (parameter.DefaultValue is bool b)
@@ -184,7 +184,7 @@ namespace VRLabs.SimpleShaderInspectors.Tools
             // Chainable constructor body
             indentLevel++;
             content.Append(Indentation(indentLevel))
-                .Append("var control = new ").Append(GenerateGenericListString(type)).Append('(');
+                .Append("var control = new ").Append(GenerateGenericListString(type, true)).Append('(');
             bool needComma = false;
             foreach (var parameter in constructor.GetParameters())
             {
@@ -206,13 +206,14 @@ namespace VRLabs.SimpleShaderInspectors.Tools
         }
 
         //shamelessly taken from: https://stackoverflow.com/questions/17480990/get-name-of-generic-class-without-tilde
-        private static string GenerateGenericListString(Type t)
+        private static string GenerateGenericListString(Type t, bool useFullName = false)
         {
+            string name = useFullName ? t.FullName : t.Name;
             if (!t.IsGenericType)
-                return t.Name;
+                return name;
 
             var sb = new StringBuilder();
-            sb.Append(t.Name, 0, t.Name.IndexOf('`'));
+            sb.Append(name, 0, name.IndexOf('`'));
             sb.Append('<');
             bool appendComma = false;
             foreach (Type arg in t.GetGenericArguments())

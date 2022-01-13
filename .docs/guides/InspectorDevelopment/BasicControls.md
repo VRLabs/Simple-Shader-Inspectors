@@ -18,6 +18,7 @@ AddPropertyControl(propertyName);
 This is the definition of basic, will just display the material property like the inspector would do automatically (it uses `MaterialEditor.ShaderProperty`).
 It can come really useful when a property doesn't need anything fancy to display and is already nicely done automatically, for example a range property.
 This is also the base control that all controls that use material properties inherit from.
+It also has an optional settings area that contains tiling and offset settings and can contain other controls as well.
 
 ## TextureControl
 
@@ -44,6 +45,6 @@ While you can show color properties just fine with a `PropertyControl` you end u
 AddLabelControl(string alias);
 ```
 
-It's one of those weird controls that does not use any property and instead requires you to insert an `Alias` to get its own localization.
+It's one of those controls that does not use any property and instead requires you to insert an `Alias` to get its own localization.
 
 In this case it draws a simple label with nothing more going on.

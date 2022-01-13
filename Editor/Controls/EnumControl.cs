@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace VRLabs.SimpleShaderInspectors.Controls
 {
-    // TODO: make so the value set to the property is not always the index of the enum but it's value, to support enums with user defined values
     /// <summary>
     /// Represents a control with options based on an enum
     /// </summary>

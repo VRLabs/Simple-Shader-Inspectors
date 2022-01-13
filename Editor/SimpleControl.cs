@@ -27,10 +27,10 @@ namespace VRLabs.SimpleShaderInspectors
         /// String containing the alias used for localization.
         /// </value>
         /// <remarks>
-        /// <para>By default the alias should be set by the constructor and modified with the chainable <c><see cref="Chainables.Alias{T}"/></c> method.</para>
+        /// <para>By default the alias should be set by the constructor and modified with the chainable <c><see cref="Chainables.WithAlias{T}"/></c> method.</para>
         /// <para>
         /// Is up to the controls derived from this class to decide what should be used as default value, just keep in mind that using hardcoded strings means that all
-        /// instances of that class would share the same localization string unless <c><see cref="Chainables.Alias{T}"/></c> is used in the inspector.
+        /// instances of that class would share the same localization string unless <c><see cref="Chainables.WithAlias{T}"/></c> is used in the inspector.
         /// </para>
         /// <para>
         /// Controls using a <c>MaterialProperty</c> should use the material property name as alias (which should be done by default if you inherit from <see cref="PropertyControl"/>
@@ -95,7 +95,7 @@ namespace VRLabs.SimpleShaderInspectors
     /// <summary>
     /// Static class containing all control extension methods in the base namespace of Simple Shader Inspectors.
     /// </summary>
-    public static partial class Chainables
+    public static partial class Extensions
     {
         /// <summary>
         /// Set a custom alias for control localization.
@@ -104,7 +104,7 @@ namespace VRLabs.SimpleShaderInspectors
         /// <param name="alias">Name used for localization.</param>
         /// <typeparam name="T">Type of the control. Has to be child of SimpleControl.</typeparam>
         /// <returns>The control modified.</returns>
-        public static T Alias<T>(this T control, string alias) where T : SimpleControl
+        public static T WithAlias<T>(this T control, string alias) where T : SimpleControl
         {
             control.ControlAlias = alias;
             return control;
@@ -117,7 +117,7 @@ namespace VRLabs.SimpleShaderInspectors
         /// <param name="visible">If the control is visible.</param>
         /// <typeparam name="T">Type of the control. Has to be child of SimpleControl.</typeparam>
         /// <returns>The control modified.</returns>
-        public static T SetVisibility<T>(this T control, bool visible) where T : SimpleControl
+        public static T WithVisibility<T>(this T control, bool visible) where T : SimpleControl
         {
             control.IsVisible = visible;
             return control;
@@ -130,7 +130,7 @@ namespace VRLabs.SimpleShaderInspectors
         /// <param name="enabled">If the control is enabled.</param>
         /// <typeparam name="T">Type of the control. Has to be child of SimpleControl.</typeparam>
         /// <returns>The control modified.</returns>
-        public static T SetEnabled<T>(this T control, bool enabled) where T : SimpleControl
+        public static T WithEnabled<T>(this T control, bool enabled) where T : SimpleControl
         {
             control.IsEnabled = enabled;
             return control;

@@ -22,7 +22,7 @@ To use it, we just need to initialize the array with the number of additional st
 [!code-csharp[Main](Code/IAdditionalLocalization.cs.txt?range=14-20&highlight=5-6)]
 
 >[!TIP]
->If you have questions about the way the AdditionalLocalization object has been initialized here, check [here](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers#object-initializers).
+>If you have questions about the way the AdditionalLocalization object has been initialized here, check [this page](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers#object-initializers).
 
 >[!NOTE]
 >The localization system when searching for strings of the extra localization will combine the control alias and the extra localization name in this way: `Alias_AdditionalContentName`.
