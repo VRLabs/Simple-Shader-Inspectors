@@ -99,10 +99,10 @@
   </tbody>
 </table>
 <h5 id="VRLabs_SimpleShaderInspectors_SimpleControl_ControlAlias_remarks">Remarks</h5>
-<div class="markdown level1 remarks"><p>By default the alias should be set by the constructor and modified with the chainable <code><a class="xref" href="VRLabs.SimpleShaderInspectors.Chainables.Alias.html#VRLabs_SimpleShaderInspectors_Chainables_Alias__1___0_System_String_">Alias&lt;T&gt;(T, String)</a></code> method.</p>
+<div class="markdown level1 remarks"><p>By default the alias should be set by the constructor and modified with the chainable <code><see cref="!:Chainables.WithAlias&lt;T>"></see></code> method.</p>
 <p>
 Is up to the controls derived from this class to decide what should be used as default value, just keep in mind that using hardcoded strings means that all
-instances of that class would share the same localization string unless <code><a class="xref" href="VRLabs.SimpleShaderInspectors.Chainables.Alias.html#VRLabs_SimpleShaderInspectors_Chainables_Alias__1___0_System_String_">Alias&lt;T&gt;(T, String)</a></code> is used in the inspector.
+instances of that class would share the same localization string unless <code><see cref="!:Chainables.WithAlias&lt;T>"></see></code> is used in the inspector.
 </p>
 <p>
 Controls using a <code>MaterialProperty</code> should use the material property name as alias (which should be done by default if you inherit from <a class="xref" href="VRLabs.SimpleShaderInspectors.PropertyControl.html">PropertyControl</a>

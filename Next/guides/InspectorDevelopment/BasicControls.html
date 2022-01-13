@@ -74,7 +74,8 @@
 </code></pre>
 <p>This is the definition of basic, will just display the material property like the inspector would do automatically (it uses <code>MaterialEditor.ShaderProperty</code>).
 It can come really useful when a property doesn't need anything fancy to display and is already nicely done automatically, for example a range property.
-This is also the base control that all controls that use material properties inherit from.</p>
+This is also the base control that all controls that use material properties inherit from.
+It also has an optional settings area that contains tiling and offset settings and can contain other controls as well.</p>
 <h2 id="texturecontrol">TextureControl</h2>
 <pre><code class="lang-csharp">AddTextureControl(texturePropertyName, extraPropertyName1, extraPropertyName2);
 </code></pre>
@@ -90,7 +91,7 @@ This is also the base control that all controls that use material properties inh
 <h2 id="labelcontrol">LabelControl</h2>
 <pre><code class="lang-csharp">AddLabelControl(string alias);
 </code></pre>
-<p>It's one of those weird controls that does not use any property and instead requires you to insert an <code>Alias</code> to get its own localization.</p>
+<p>It's one of those controls that does not use any property and instead requires you to insert an <code>Alias</code> to get its own localization.</p>
 <p>In this case it draws a simple label with nothing more going on.</p>
 </article>
           </div>

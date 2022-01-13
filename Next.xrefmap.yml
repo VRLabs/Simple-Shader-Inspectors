@@ -157,12 +157,6 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.AdditionalProperty.PropertyName
   fullName: VRLabs.SimpleShaderInspectors.AdditionalProperty.PropertyName
   nameWithType: AdditionalProperty.PropertyName
-- uid: VRLabs.SimpleShaderInspectors.ChainableAttribute
-  name: ChainableAttribute
-  href: Next/api/VRLabs.SimpleShaderInspectors.ChainableAttribute.html
-  commentId: T:VRLabs.SimpleShaderInspectors.ChainableAttribute
-  fullName: VRLabs.SimpleShaderInspectors.ChainableAttribute
-  nameWithType: ChainableAttribute
 - uid: VRLabs.SimpleShaderInspectors.Chainables
   name: Chainables
   href: Next/api/VRLabs.SimpleShaderInspectors.Chainables.html
@@ -181,51 +175,6 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Chainables.AddPropertyControl
   fullName: VRLabs.SimpleShaderInspectors.Chainables.AddPropertyControl
   nameWithType: Chainables.AddPropertyControl
-- uid: VRLabs.SimpleShaderInspectors.Chainables.Alias*
-  name: Alias
-  href: Next/api/VRLabs.SimpleShaderInspectors.Chainables.Alias.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Chainables.Alias
-  fullName: VRLabs.SimpleShaderInspectors.Chainables.Alias
-  nameWithType: Chainables.Alias
-- uid: VRLabs.SimpleShaderInspectors.Chainables.Alias``1(``0,System.String)
-  name: Alias<T>(T, String)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Chainables.Alias.html#VRLabs_SimpleShaderInspectors_Chainables_Alias__1___0_System_String_
-  commentId: M:VRLabs.SimpleShaderInspectors.Chainables.Alias``1(``0,System.String)
-  name.vb: Alias(Of T)(T, String)
-  fullName: VRLabs.SimpleShaderInspectors.Chainables.Alias<T>(T, System.String)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Chainables.Alias(Of T)(T, System.String)
-  nameWithType: Chainables.Alias<T>(T, String)
-  nameWithType.vb: Chainables.Alias(Of T)(T, String)
-- uid: VRLabs.SimpleShaderInspectors.Chainables.SetEnabled*
-  name: SetEnabled
-  href: Next/api/VRLabs.SimpleShaderInspectors.Chainables.SetEnabled.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Chainables.SetEnabled
-  fullName: VRLabs.SimpleShaderInspectors.Chainables.SetEnabled
-  nameWithType: Chainables.SetEnabled
-- uid: VRLabs.SimpleShaderInspectors.Chainables.SetEnabled``1(``0,System.Boolean)
-  name: SetEnabled<T>(T, Boolean)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Chainables.SetEnabled.html#VRLabs_SimpleShaderInspectors_Chainables_SetEnabled__1___0_System_Boolean_
-  commentId: M:VRLabs.SimpleShaderInspectors.Chainables.SetEnabled``1(``0,System.Boolean)
-  name.vb: SetEnabled(Of T)(T, Boolean)
-  fullName: VRLabs.SimpleShaderInspectors.Chainables.SetEnabled<T>(T, System.Boolean)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Chainables.SetEnabled(Of T)(T, System.Boolean)
-  nameWithType: Chainables.SetEnabled<T>(T, Boolean)
-  nameWithType.vb: Chainables.SetEnabled(Of T)(T, Boolean)
-- uid: VRLabs.SimpleShaderInspectors.Chainables.SetVisibility*
-  name: SetVisibility
-  href: Next/api/VRLabs.SimpleShaderInspectors.Chainables.SetVisibility.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Chainables.SetVisibility
-  fullName: VRLabs.SimpleShaderInspectors.Chainables.SetVisibility
-  nameWithType: Chainables.SetVisibility
-- uid: VRLabs.SimpleShaderInspectors.Chainables.SetVisibility``1(``0,System.Boolean)
-  name: SetVisibility<T>(T, Boolean)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Chainables.SetVisibility.html#VRLabs_SimpleShaderInspectors_Chainables_SetVisibility__1___0_System_Boolean_
-  commentId: M:VRLabs.SimpleShaderInspectors.Chainables.SetVisibility``1(``0,System.Boolean)
-  name.vb: SetVisibility(Of T)(T, Boolean)
-  fullName: VRLabs.SimpleShaderInspectors.Chainables.SetVisibility<T>(T, System.Boolean)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Chainables.SetVisibility(Of T)(T, System.Boolean)
-  nameWithType: Chainables.SetVisibility<T>(T, Boolean)
-  nameWithType.vb: Chainables.SetVisibility(Of T)(T, Boolean)
 - uid: VRLabs.SimpleShaderInspectors.ComputeShaders
   name: ComputeShaders
   href: Next/api/VRLabs.SimpleShaderInspectors.ComputeShaders.html
@@ -520,381 +469,381 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddVertexStreamsControl
   fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddVertexStreamsControl
   nameWithType: Chainables.AddVertexStreamsControl
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetBoxType*
-  name: SetBoxType
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetBoxType.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetBoxType
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetBoxType
-  nameWithType: Chainables.SetBoxType
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetBoxType``1(``0,UnityEditor.MessageType)
-  name: SetBoxType<T>(T, MessageType)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetBoxType.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetBoxType__1___0_UnityEditor_MessageType_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetBoxType``1(``0,UnityEditor.MessageType)
-  name.vb: SetBoxType(Of T)(T, MessageType)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetBoxType<T>(T, UnityEditor.MessageType)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetBoxType(Of T)(T, UnityEditor.MessageType)
-  nameWithType: Chainables.SetBoxType<T>(T, MessageType)
-  nameWithType.vb: Chainables.SetBoxType(Of T)(T, MessageType)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorButtonColor*
-  name: SetGeneratorButtonColor
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorButtonColor.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorButtonColor
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorButtonColor
-  nameWithType: Chainables.SetGeneratorButtonColor
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorButtonColor``1(``0,UnityEngine.Color)
-  name: SetGeneratorButtonColor<T>(T, Color)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorButtonColor.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetGeneratorButtonColor__1___0_UnityEngine_Color_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorButtonColor``1(``0,UnityEngine.Color)
-  name.vb: SetGeneratorButtonColor(Of T)(T, Color)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorButtonColor<T>(T, UnityEngine.Color)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorButtonColor(Of T)(T, UnityEngine.Color)
-  nameWithType: Chainables.SetGeneratorButtonColor<T>(T, Color)
-  nameWithType.vb: Chainables.SetGeneratorButtonColor(Of T)(T, Color)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorButtonStyle*
-  name: SetGeneratorButtonStyle
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorButtonStyle.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorButtonStyle
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorButtonStyle
-  nameWithType: Chainables.SetGeneratorButtonStyle
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorButtonStyle``1(``0,UnityEngine.GUIStyle)
-  name: SetGeneratorButtonStyle<T>(T, GUIStyle)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorButtonStyle.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetGeneratorButtonStyle__1___0_UnityEngine_GUIStyle_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorButtonStyle``1(``0,UnityEngine.GUIStyle)
-  name.vb: SetGeneratorButtonStyle(Of T)(T, GUIStyle)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorButtonStyle<T>(T, UnityEngine.GUIStyle)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorButtonStyle(Of T)(T, UnityEngine.GUIStyle)
-  nameWithType: Chainables.SetGeneratorButtonStyle<T>(T, GUIStyle)
-  nameWithType.vb: Chainables.SetGeneratorButtonStyle(Of T)(T, GUIStyle)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorColor*
-  name: SetGeneratorColor
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorColor.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorColor
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorColor
-  nameWithType: Chainables.SetGeneratorColor
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorColor``1(``0,UnityEngine.Color)
-  name: SetGeneratorColor<T>(T, Color)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorColor.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetGeneratorColor__1___0_UnityEngine_Color_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorColor``1(``0,UnityEngine.Color)
-  name.vb: SetGeneratorColor(Of T)(T, Color)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorColor<T>(T, UnityEngine.Color)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorColor(Of T)(T, UnityEngine.Color)
-  nameWithType: Chainables.SetGeneratorColor<T>(T, Color)
-  nameWithType.vb: Chainables.SetGeneratorColor(Of T)(T, Color)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorInputColor*
-  name: SetGeneratorInputColor
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorInputColor.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorInputColor
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorInputColor
-  nameWithType: Chainables.SetGeneratorInputColor
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorInputColor``1(``0,UnityEngine.Color)
-  name: SetGeneratorInputColor<T>(T, Color)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorInputColor.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetGeneratorInputColor__1___0_UnityEngine_Color_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorInputColor``1(``0,UnityEngine.Color)
-  name.vb: SetGeneratorInputColor(Of T)(T, Color)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorInputColor<T>(T, UnityEngine.Color)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorInputColor(Of T)(T, UnityEngine.Color)
-  nameWithType: Chainables.SetGeneratorInputColor<T>(T, Color)
-  nameWithType.vb: Chainables.SetGeneratorInputColor(Of T)(T, Color)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorInputStyle*
-  name: SetGeneratorInputStyle
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorInputStyle.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorInputStyle
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorInputStyle
-  nameWithType: Chainables.SetGeneratorInputStyle
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorInputStyle``1(``0,UnityEngine.GUIStyle)
-  name: SetGeneratorInputStyle<T>(T, GUIStyle)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorInputStyle.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetGeneratorInputStyle__1___0_UnityEngine_GUIStyle_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorInputStyle``1(``0,UnityEngine.GUIStyle)
-  name.vb: SetGeneratorInputStyle(Of T)(T, GUIStyle)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorInputStyle<T>(T, UnityEngine.GUIStyle)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorInputStyle(Of T)(T, UnityEngine.GUIStyle)
-  nameWithType: Chainables.SetGeneratorInputStyle<T>(T, GUIStyle)
-  nameWithType.vb: Chainables.SetGeneratorInputStyle(Of T)(T, GUIStyle)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorSaveButtonColor*
-  name: SetGeneratorSaveButtonColor
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorSaveButtonColor.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorSaveButtonColor
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorSaveButtonColor
-  nameWithType: Chainables.SetGeneratorSaveButtonColor
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorSaveButtonColor``1(``0,UnityEngine.Color)
-  name: SetGeneratorSaveButtonColor<T>(T, Color)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorSaveButtonColor.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetGeneratorSaveButtonColor__1___0_UnityEngine_Color_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorSaveButtonColor``1(``0,UnityEngine.Color)
-  name.vb: SetGeneratorSaveButtonColor(Of T)(T, Color)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorSaveButtonColor<T>(T, UnityEngine.Color)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorSaveButtonColor(Of T)(T, UnityEngine.Color)
-  nameWithType: Chainables.SetGeneratorSaveButtonColor<T>(T, Color)
-  nameWithType.vb: Chainables.SetGeneratorSaveButtonColor(Of T)(T, Color)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorSaveButtonStyle*
-  name: SetGeneratorSaveButtonStyle
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorSaveButtonStyle.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorSaveButtonStyle
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorSaveButtonStyle
-  nameWithType: Chainables.SetGeneratorSaveButtonStyle
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorSaveButtonStyle``1(``0,UnityEngine.GUIStyle)
-  name: SetGeneratorSaveButtonStyle<T>(T, GUIStyle)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorSaveButtonStyle.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetGeneratorSaveButtonStyle__1___0_UnityEngine_GUIStyle_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorSaveButtonStyle``1(``0,UnityEngine.GUIStyle)
-  name.vb: SetGeneratorSaveButtonStyle(Of T)(T, GUIStyle)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorSaveButtonStyle<T>(T, UnityEngine.GUIStyle)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorSaveButtonStyle(Of T)(T, UnityEngine.GUIStyle)
-  nameWithType: Chainables.SetGeneratorSaveButtonStyle<T>(T, GUIStyle)
-  nameWithType.vb: Chainables.SetGeneratorSaveButtonStyle(Of T)(T, GUIStyle)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorStyle*
-  name: SetGeneratorStyle
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorStyle.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorStyle
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorStyle
-  nameWithType: Chainables.SetGeneratorStyle
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorStyle``1(``0,UnityEngine.GUIStyle)
-  name: SetGeneratorStyle<T>(T, GUIStyle)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorStyle.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetGeneratorStyle__1___0_UnityEngine_GUIStyle_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorStyle``1(``0,UnityEngine.GUIStyle)
-  name.vb: SetGeneratorStyle(Of T)(T, GUIStyle)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorStyle<T>(T, UnityEngine.GUIStyle)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGeneratorStyle(Of T)(T, UnityEngine.GUIStyle)
-  nameWithType: Chainables.SetGeneratorStyle<T>(T, GUIStyle)
-  nameWithType.vb: Chainables.SetGeneratorStyle(Of T)(T, GUIStyle)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientButtonColor*
-  name: SetGradientButtonColor
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientButtonColor.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientButtonColor
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientButtonColor
-  nameWithType: Chainables.SetGradientButtonColor
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientButtonColor``1(``0,UnityEngine.Color)
-  name: SetGradientButtonColor<T>(T, Color)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientButtonColor.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetGradientButtonColor__1___0_UnityEngine_Color_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientButtonColor``1(``0,UnityEngine.Color)
-  name.vb: SetGradientButtonColor(Of T)(T, Color)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientButtonColor<T>(T, UnityEngine.Color)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientButtonColor(Of T)(T, UnityEngine.Color)
-  nameWithType: Chainables.SetGradientButtonColor<T>(T, Color)
-  nameWithType.vb: Chainables.SetGradientButtonColor(Of T)(T, Color)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientButtonStyle*
-  name: SetGradientButtonStyle
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientButtonStyle.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientButtonStyle
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientButtonStyle
-  nameWithType: Chainables.SetGradientButtonStyle
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientButtonStyle``1(``0,UnityEngine.GUIStyle)
-  name: SetGradientButtonStyle<T>(T, GUIStyle)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientButtonStyle.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetGradientButtonStyle__1___0_UnityEngine_GUIStyle_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientButtonStyle``1(``0,UnityEngine.GUIStyle)
-  name.vb: SetGradientButtonStyle(Of T)(T, GUIStyle)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientButtonStyle<T>(T, UnityEngine.GUIStyle)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientButtonStyle(Of T)(T, UnityEngine.GUIStyle)
-  nameWithType: Chainables.SetGradientButtonStyle<T>(T, GUIStyle)
-  nameWithType.vb: Chainables.SetGradientButtonStyle(Of T)(T, GUIStyle)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientEditorColor*
-  name: SetGradientEditorColor
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientEditorColor.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientEditorColor
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientEditorColor
-  nameWithType: Chainables.SetGradientEditorColor
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientEditorColor``1(``0,UnityEngine.Color)
-  name: SetGradientEditorColor<T>(T, Color)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientEditorColor.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetGradientEditorColor__1___0_UnityEngine_Color_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientEditorColor``1(``0,UnityEngine.Color)
-  name.vb: SetGradientEditorColor(Of T)(T, Color)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientEditorColor<T>(T, UnityEngine.Color)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientEditorColor(Of T)(T, UnityEngine.Color)
-  nameWithType: Chainables.SetGradientEditorColor<T>(T, Color)
-  nameWithType.vb: Chainables.SetGradientEditorColor(Of T)(T, Color)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientEditorStyle*
-  name: SetGradientEditorStyle
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientEditorStyle.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientEditorStyle
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientEditorStyle
-  nameWithType: Chainables.SetGradientEditorStyle
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientEditorStyle``1(``0,UnityEngine.GUIStyle)
-  name: SetGradientEditorStyle<T>(T, GUIStyle)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientEditorStyle.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetGradientEditorStyle__1___0_UnityEngine_GUIStyle_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientEditorStyle``1(``0,UnityEngine.GUIStyle)
-  name.vb: SetGradientEditorStyle(Of T)(T, GUIStyle)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientEditorStyle<T>(T, UnityEngine.GUIStyle)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientEditorStyle(Of T)(T, UnityEngine.GUIStyle)
-  nameWithType: Chainables.SetGradientEditorStyle<T>(T, GUIStyle)
-  nameWithType.vb: Chainables.SetGradientEditorStyle(Of T)(T, GUIStyle)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientSaveButtonColor*
-  name: SetGradientSaveButtonColor
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientSaveButtonColor.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientSaveButtonColor
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientSaveButtonColor
-  nameWithType: Chainables.SetGradientSaveButtonColor
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientSaveButtonColor``1(``0,UnityEngine.Color)
-  name: SetGradientSaveButtonColor<T>(T, Color)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientSaveButtonColor.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetGradientSaveButtonColor__1___0_UnityEngine_Color_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientSaveButtonColor``1(``0,UnityEngine.Color)
-  name.vb: SetGradientSaveButtonColor(Of T)(T, Color)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientSaveButtonColor<T>(T, UnityEngine.Color)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientSaveButtonColor(Of T)(T, UnityEngine.Color)
-  nameWithType: Chainables.SetGradientSaveButtonColor<T>(T, Color)
-  nameWithType.vb: Chainables.SetGradientSaveButtonColor(Of T)(T, Color)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientSaveButtonStyle*
-  name: SetGradientSaveButtonStyle
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientSaveButtonStyle.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientSaveButtonStyle
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientSaveButtonStyle
-  nameWithType: Chainables.SetGradientSaveButtonStyle
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientSaveButtonStyle``1(``0,UnityEngine.GUIStyle)
-  name: SetGradientSaveButtonStyle<T>(T, GUIStyle)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientSaveButtonStyle.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetGradientSaveButtonStyle__1___0_UnityEngine_GUIStyle_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientSaveButtonStyle``1(``0,UnityEngine.GUIStyle)
-  name.vb: SetGradientSaveButtonStyle(Of T)(T, GUIStyle)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientSaveButtonStyle<T>(T, UnityEngine.GUIStyle)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetGradientSaveButtonStyle(Of T)(T, UnityEngine.GUIStyle)
-  nameWithType: Chainables.SetGradientSaveButtonStyle<T>(T, GUIStyle)
-  nameWithType.vb: Chainables.SetGradientSaveButtonStyle(Of T)(T, GUIStyle)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetHasHDRColor*
-  name: SetHasHDRColor
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetHasHDRColor.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetHasHDRColor
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetHasHDRColor
-  nameWithType: Chainables.SetHasHDRColor
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetHasHDRColor``1(``0,System.Boolean)
-  name: SetHasHDRColor<T>(T, Boolean)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetHasHDRColor.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetHasHDRColor__1___0_System_Boolean_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetHasHDRColor``1(``0,System.Boolean)
-  name.vb: SetHasHDRColor(Of T)(T, Boolean)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetHasHDRColor<T>(T, System.Boolean)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetHasHDRColor(Of T)(T, System.Boolean)
-  nameWithType: Chainables.SetHasHDRColor<T>(T, Boolean)
-  nameWithType.vb: Chainables.SetHasHDRColor(Of T)(T, Boolean)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIndent*
-  name: SetIndent
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIndent.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIndent
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIndent
-  nameWithType: Chainables.SetIndent
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIndent``1(``0,System.Boolean)
-  name: SetIndent<T>(T, Boolean)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIndent.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetIndent__1___0_System_Boolean_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIndent``1(``0,System.Boolean)
-  name.vb: SetIndent(Of T)(T, Boolean)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIndent<T>(T, System.Boolean)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIndent(Of T)(T, System.Boolean)
-  nameWithType: Chainables.SetIndent<T>(T, Boolean)
-  nameWithType.vb: Chainables.SetIndent(Of T)(T, Boolean)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIsWideBox*
-  name: SetIsWideBox
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIsWideBox.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIsWideBox
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIsWideBox
-  nameWithType: Chainables.SetIsWideBox
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIsWideBox``1(``0,System.Boolean)
-  name: SetIsWideBox<T>(T, Boolean)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIsWideBox.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetIsWideBox__1___0_System_Boolean_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIsWideBox``1(``0,System.Boolean)
-  name.vb: SetIsWideBox(Of T)(T, Boolean)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIsWideBox<T>(T, System.Boolean)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetIsWideBox(Of T)(T, System.Boolean)
-  nameWithType: Chainables.SetIsWideBox<T>(T, Boolean)
-  nameWithType.vb: Chainables.SetIsWideBox(Of T)(T, Boolean)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetLabelStyle*
-  name: SetLabelStyle
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetLabelStyle.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetLabelStyle
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetLabelStyle
-  nameWithType: Chainables.SetLabelStyle
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetLabelStyle``1(``0,UnityEngine.GUIStyle)
-  name: SetLabelStyle<T>(T, GUIStyle)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetLabelStyle.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetLabelStyle__1___0_UnityEngine_GUIStyle_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetLabelStyle``1(``0,UnityEngine.GUIStyle)
-  name.vb: SetLabelStyle(Of T)(T, GUIStyle)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetLabelStyle<T>(T, UnityEngine.GUIStyle)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetLabelStyle(Of T)(T, UnityEngine.GUIStyle)
-  nameWithType: Chainables.SetLabelStyle<T>(T, GUIStyle)
-  nameWithType.vb: Chainables.SetLabelStyle(Of T)(T, GUIStyle)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaColor*
-  name: SetOptionsAreaColor
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaColor.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaColor
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaColor
-  nameWithType: Chainables.SetOptionsAreaColor
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaColor``1(``0,UnityEngine.Color)
-  name: SetOptionsAreaColor<T>(T, Color)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaColor.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetOptionsAreaColor__1___0_UnityEngine_Color_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaColor``1(``0,UnityEngine.Color)
-  name.vb: SetOptionsAreaColor(Of T)(T, Color)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaColor<T>(T, UnityEngine.Color)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaColor(Of T)(T, UnityEngine.Color)
-  nameWithType: Chainables.SetOptionsAreaColor<T>(T, Color)
-  nameWithType.vb: Chainables.SetOptionsAreaColor(Of T)(T, Color)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaStyle*
-  name: SetOptionsAreaStyle
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaStyle.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaStyle
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaStyle
-  nameWithType: Chainables.SetOptionsAreaStyle
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaStyle``1(``0,UnityEngine.GUIStyle)
-  name: SetOptionsAreaStyle<T>(T, GUIStyle)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaStyle.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetOptionsAreaStyle__1___0_UnityEngine_GUIStyle_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaStyle``1(``0,UnityEngine.GUIStyle)
-  name.vb: SetOptionsAreaStyle(Of T)(T, GUIStyle)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaStyle<T>(T, UnityEngine.GUIStyle)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsAreaStyle(Of T)(T, UnityEngine.GUIStyle)
-  nameWithType: Chainables.SetOptionsAreaStyle<T>(T, GUIStyle)
-  nameWithType.vb: Chainables.SetOptionsAreaStyle(Of T)(T, GUIStyle)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonColor*
-  name: SetOptionsButtonColor
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonColor.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonColor
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonColor
-  nameWithType: Chainables.SetOptionsButtonColor
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonColor``1(``0,UnityEngine.Color)
-  name: SetOptionsButtonColor<T>(T, Color)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonColor.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetOptionsButtonColor__1___0_UnityEngine_Color_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonColor``1(``0,UnityEngine.Color)
-  name.vb: SetOptionsButtonColor(Of T)(T, Color)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonColor<T>(T, UnityEngine.Color)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonColor(Of T)(T, UnityEngine.Color)
-  nameWithType: Chainables.SetOptionsButtonColor<T>(T, Color)
-  nameWithType.vb: Chainables.SetOptionsButtonColor(Of T)(T, Color)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonStyle*
-  name: SetOptionsButtonStyle
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonStyle.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonStyle
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonStyle
-  nameWithType: Chainables.SetOptionsButtonStyle
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonStyle``1(``0,UnityEngine.GUIStyle)
-  name: SetOptionsButtonStyle<T>(T, GUIStyle)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonStyle.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetOptionsButtonStyle__1___0_UnityEngine_GUIStyle_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonStyle``1(``0,UnityEngine.GUIStyle)
-  name.vb: SetOptionsButtonStyle(Of T)(T, GUIStyle)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonStyle<T>(T, UnityEngine.GUIStyle)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetOptionsButtonStyle(Of T)(T, UnityEngine.GUIStyle)
-  nameWithType: Chainables.SetOptionsButtonStyle<T>(T, GUIStyle)
-  nameWithType.vb: Chainables.SetOptionsButtonStyle(Of T)(T, GUIStyle)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowAlphaValue*
-  name: SetShowAlphaValue
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowAlphaValue.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowAlphaValue
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowAlphaValue
-  nameWithType: Chainables.SetShowAlphaValue
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowAlphaValue``1(``0,System.Boolean)
-  name: SetShowAlphaValue<T>(T, Boolean)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowAlphaValue.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetShowAlphaValue__1___0_System_Boolean_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowAlphaValue``1(``0,System.Boolean)
-  name.vb: SetShowAlphaValue(Of T)(T, Boolean)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowAlphaValue<T>(T, System.Boolean)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowAlphaValue(Of T)(T, System.Boolean)
-  nameWithType: Chainables.SetShowAlphaValue<T>(T, Boolean)
-  nameWithType.vb: Chainables.SetShowAlphaValue(Of T)(T, Boolean)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowTilingAndOffset*
-  name: SetShowTilingAndOffset
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowTilingAndOffset.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowTilingAndOffset
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowTilingAndOffset
-  nameWithType: Chainables.SetShowTilingAndOffset
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowTilingAndOffset``1(``0,System.Boolean)
-  name: SetShowTilingAndOffset<T>(T, Boolean)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowTilingAndOffset.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_SetShowTilingAndOffset__1___0_System_Boolean_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowTilingAndOffset``1(``0,System.Boolean)
-  name.vb: SetShowTilingAndOffset(Of T)(T, Boolean)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowTilingAndOffset<T>(T, System.Boolean)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.SetShowTilingAndOffset(Of T)(T, System.Boolean)
-  nameWithType: Chainables.SetShowTilingAndOffset<T>(T, Boolean)
-  nameWithType.vb: Chainables.SetShowTilingAndOffset(Of T)(T, Boolean)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithBoxType*
+  name: WithBoxType
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithBoxType.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithBoxType
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithBoxType
+  nameWithType: Chainables.WithBoxType
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithBoxType``1(``0,UnityEditor.MessageType)
+  name: WithBoxType<T>(T, MessageType)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithBoxType.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_WithBoxType__1___0_UnityEditor_MessageType_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithBoxType``1(``0,UnityEditor.MessageType)
+  name.vb: WithBoxType(Of T)(T, MessageType)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithBoxType<T>(T, UnityEditor.MessageType)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithBoxType(Of T)(T, UnityEditor.MessageType)
+  nameWithType: Chainables.WithBoxType<T>(T, MessageType)
+  nameWithType.vb: Chainables.WithBoxType(Of T)(T, MessageType)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorButtonColor*
+  name: WithGeneratorButtonColor
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorButtonColor.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorButtonColor
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorButtonColor
+  nameWithType: Chainables.WithGeneratorButtonColor
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorButtonColor``1(``0,UnityEngine.Color)
+  name: WithGeneratorButtonColor<T>(T, Color)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorButtonColor.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_WithGeneratorButtonColor__1___0_UnityEngine_Color_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorButtonColor``1(``0,UnityEngine.Color)
+  name.vb: WithGeneratorButtonColor(Of T)(T, Color)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorButtonColor<T>(T, UnityEngine.Color)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorButtonColor(Of T)(T, UnityEngine.Color)
+  nameWithType: Chainables.WithGeneratorButtonColor<T>(T, Color)
+  nameWithType.vb: Chainables.WithGeneratorButtonColor(Of T)(T, Color)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorButtonStyle*
+  name: WithGeneratorButtonStyle
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorButtonStyle.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorButtonStyle
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorButtonStyle
+  nameWithType: Chainables.WithGeneratorButtonStyle
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorButtonStyle``1(``0,UnityEngine.GUIStyle)
+  name: WithGeneratorButtonStyle<T>(T, GUIStyle)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorButtonStyle.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_WithGeneratorButtonStyle__1___0_UnityEngine_GUIStyle_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorButtonStyle``1(``0,UnityEngine.GUIStyle)
+  name.vb: WithGeneratorButtonStyle(Of T)(T, GUIStyle)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorButtonStyle<T>(T, UnityEngine.GUIStyle)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorButtonStyle(Of T)(T, UnityEngine.GUIStyle)
+  nameWithType: Chainables.WithGeneratorButtonStyle<T>(T, GUIStyle)
+  nameWithType.vb: Chainables.WithGeneratorButtonStyle(Of T)(T, GUIStyle)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorColor*
+  name: WithGeneratorColor
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorColor.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorColor
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorColor
+  nameWithType: Chainables.WithGeneratorColor
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorColor``1(``0,UnityEngine.Color)
+  name: WithGeneratorColor<T>(T, Color)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorColor.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_WithGeneratorColor__1___0_UnityEngine_Color_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorColor``1(``0,UnityEngine.Color)
+  name.vb: WithGeneratorColor(Of T)(T, Color)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorColor<T>(T, UnityEngine.Color)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorColor(Of T)(T, UnityEngine.Color)
+  nameWithType: Chainables.WithGeneratorColor<T>(T, Color)
+  nameWithType.vb: Chainables.WithGeneratorColor(Of T)(T, Color)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorInputColor*
+  name: WithGeneratorInputColor
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorInputColor.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorInputColor
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorInputColor
+  nameWithType: Chainables.WithGeneratorInputColor
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorInputColor``1(``0,UnityEngine.Color)
+  name: WithGeneratorInputColor<T>(T, Color)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorInputColor.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_WithGeneratorInputColor__1___0_UnityEngine_Color_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorInputColor``1(``0,UnityEngine.Color)
+  name.vb: WithGeneratorInputColor(Of T)(T, Color)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorInputColor<T>(T, UnityEngine.Color)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorInputColor(Of T)(T, UnityEngine.Color)
+  nameWithType: Chainables.WithGeneratorInputColor<T>(T, Color)
+  nameWithType.vb: Chainables.WithGeneratorInputColor(Of T)(T, Color)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorInputStyle*
+  name: WithGeneratorInputStyle
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorInputStyle.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorInputStyle
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorInputStyle
+  nameWithType: Chainables.WithGeneratorInputStyle
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorInputStyle``1(``0,UnityEngine.GUIStyle)
+  name: WithGeneratorInputStyle<T>(T, GUIStyle)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorInputStyle.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_WithGeneratorInputStyle__1___0_UnityEngine_GUIStyle_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorInputStyle``1(``0,UnityEngine.GUIStyle)
+  name.vb: WithGeneratorInputStyle(Of T)(T, GUIStyle)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorInputStyle<T>(T, UnityEngine.GUIStyle)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorInputStyle(Of T)(T, UnityEngine.GUIStyle)
+  nameWithType: Chainables.WithGeneratorInputStyle<T>(T, GUIStyle)
+  nameWithType.vb: Chainables.WithGeneratorInputStyle(Of T)(T, GUIStyle)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorSaveButtonColor*
+  name: WithGeneratorSaveButtonColor
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorSaveButtonColor.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorSaveButtonColor
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorSaveButtonColor
+  nameWithType: Chainables.WithGeneratorSaveButtonColor
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorSaveButtonColor``1(``0,UnityEngine.Color)
+  name: WithGeneratorSaveButtonColor<T>(T, Color)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorSaveButtonColor.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_WithGeneratorSaveButtonColor__1___0_UnityEngine_Color_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorSaveButtonColor``1(``0,UnityEngine.Color)
+  name.vb: WithGeneratorSaveButtonColor(Of T)(T, Color)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorSaveButtonColor<T>(T, UnityEngine.Color)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorSaveButtonColor(Of T)(T, UnityEngine.Color)
+  nameWithType: Chainables.WithGeneratorSaveButtonColor<T>(T, Color)
+  nameWithType.vb: Chainables.WithGeneratorSaveButtonColor(Of T)(T, Color)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorSaveButtonStyle*
+  name: WithGeneratorSaveButtonStyle
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorSaveButtonStyle.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorSaveButtonStyle
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorSaveButtonStyle
+  nameWithType: Chainables.WithGeneratorSaveButtonStyle
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorSaveButtonStyle``1(``0,UnityEngine.GUIStyle)
+  name: WithGeneratorSaveButtonStyle<T>(T, GUIStyle)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorSaveButtonStyle.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_WithGeneratorSaveButtonStyle__1___0_UnityEngine_GUIStyle_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorSaveButtonStyle``1(``0,UnityEngine.GUIStyle)
+  name.vb: WithGeneratorSaveButtonStyle(Of T)(T, GUIStyle)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorSaveButtonStyle<T>(T, UnityEngine.GUIStyle)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorSaveButtonStyle(Of T)(T, UnityEngine.GUIStyle)
+  nameWithType: Chainables.WithGeneratorSaveButtonStyle<T>(T, GUIStyle)
+  nameWithType.vb: Chainables.WithGeneratorSaveButtonStyle(Of T)(T, GUIStyle)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorStyle*
+  name: WithGeneratorStyle
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorStyle.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorStyle
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorStyle
+  nameWithType: Chainables.WithGeneratorStyle
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorStyle``1(``0,UnityEngine.GUIStyle)
+  name: WithGeneratorStyle<T>(T, GUIStyle)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorStyle.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_WithGeneratorStyle__1___0_UnityEngine_GUIStyle_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorStyle``1(``0,UnityEngine.GUIStyle)
+  name.vb: WithGeneratorStyle(Of T)(T, GUIStyle)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorStyle<T>(T, UnityEngine.GUIStyle)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorStyle(Of T)(T, UnityEngine.GUIStyle)
+  nameWithType: Chainables.WithGeneratorStyle<T>(T, GUIStyle)
+  nameWithType.vb: Chainables.WithGeneratorStyle(Of T)(T, GUIStyle)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientButtonColor*
+  name: WithGradientButtonColor
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientButtonColor.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientButtonColor
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientButtonColor
+  nameWithType: Chainables.WithGradientButtonColor
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientButtonColor``1(``0,UnityEngine.Color)
+  name: WithGradientButtonColor<T>(T, Color)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientButtonColor.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_WithGradientButtonColor__1___0_UnityEngine_Color_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientButtonColor``1(``0,UnityEngine.Color)
+  name.vb: WithGradientButtonColor(Of T)(T, Color)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientButtonColor<T>(T, UnityEngine.Color)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientButtonColor(Of T)(T, UnityEngine.Color)
+  nameWithType: Chainables.WithGradientButtonColor<T>(T, Color)
+  nameWithType.vb: Chainables.WithGradientButtonColor(Of T)(T, Color)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientButtonStyle*
+  name: WithGradientButtonStyle
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientButtonStyle.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientButtonStyle
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientButtonStyle
+  nameWithType: Chainables.WithGradientButtonStyle
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientButtonStyle``1(``0,UnityEngine.GUIStyle)
+  name: WithGradientButtonStyle<T>(T, GUIStyle)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientButtonStyle.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_WithGradientButtonStyle__1___0_UnityEngine_GUIStyle_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientButtonStyle``1(``0,UnityEngine.GUIStyle)
+  name.vb: WithGradientButtonStyle(Of T)(T, GUIStyle)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientButtonStyle<T>(T, UnityEngine.GUIStyle)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientButtonStyle(Of T)(T, UnityEngine.GUIStyle)
+  nameWithType: Chainables.WithGradientButtonStyle<T>(T, GUIStyle)
+  nameWithType.vb: Chainables.WithGradientButtonStyle(Of T)(T, GUIStyle)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientEditorColor*
+  name: WithGradientEditorColor
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientEditorColor.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientEditorColor
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientEditorColor
+  nameWithType: Chainables.WithGradientEditorColor
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientEditorColor``1(``0,UnityEngine.Color)
+  name: WithGradientEditorColor<T>(T, Color)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientEditorColor.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_WithGradientEditorColor__1___0_UnityEngine_Color_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientEditorColor``1(``0,UnityEngine.Color)
+  name.vb: WithGradientEditorColor(Of T)(T, Color)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientEditorColor<T>(T, UnityEngine.Color)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientEditorColor(Of T)(T, UnityEngine.Color)
+  nameWithType: Chainables.WithGradientEditorColor<T>(T, Color)
+  nameWithType.vb: Chainables.WithGradientEditorColor(Of T)(T, Color)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientEditorStyle*
+  name: WithGradientEditorStyle
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientEditorStyle.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientEditorStyle
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientEditorStyle
+  nameWithType: Chainables.WithGradientEditorStyle
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientEditorStyle``1(``0,UnityEngine.GUIStyle)
+  name: WithGradientEditorStyle<T>(T, GUIStyle)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientEditorStyle.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_WithGradientEditorStyle__1___0_UnityEngine_GUIStyle_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientEditorStyle``1(``0,UnityEngine.GUIStyle)
+  name.vb: WithGradientEditorStyle(Of T)(T, GUIStyle)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientEditorStyle<T>(T, UnityEngine.GUIStyle)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientEditorStyle(Of T)(T, UnityEngine.GUIStyle)
+  nameWithType: Chainables.WithGradientEditorStyle<T>(T, GUIStyle)
+  nameWithType.vb: Chainables.WithGradientEditorStyle(Of T)(T, GUIStyle)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientSaveButtonColor*
+  name: WithGradientSaveButtonColor
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientSaveButtonColor.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientSaveButtonColor
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientSaveButtonColor
+  nameWithType: Chainables.WithGradientSaveButtonColor
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientSaveButtonColor``1(``0,UnityEngine.Color)
+  name: WithGradientSaveButtonColor<T>(T, Color)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientSaveButtonColor.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_WithGradientSaveButtonColor__1___0_UnityEngine_Color_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientSaveButtonColor``1(``0,UnityEngine.Color)
+  name.vb: WithGradientSaveButtonColor(Of T)(T, Color)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientSaveButtonColor<T>(T, UnityEngine.Color)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientSaveButtonColor(Of T)(T, UnityEngine.Color)
+  nameWithType: Chainables.WithGradientSaveButtonColor<T>(T, Color)
+  nameWithType.vb: Chainables.WithGradientSaveButtonColor(Of T)(T, Color)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientSaveButtonStyle*
+  name: WithGradientSaveButtonStyle
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientSaveButtonStyle.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientSaveButtonStyle
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientSaveButtonStyle
+  nameWithType: Chainables.WithGradientSaveButtonStyle
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientSaveButtonStyle``1(``0,UnityEngine.GUIStyle)
+  name: WithGradientSaveButtonStyle<T>(T, GUIStyle)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientSaveButtonStyle.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_WithGradientSaveButtonStyle__1___0_UnityEngine_GUIStyle_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientSaveButtonStyle``1(``0,UnityEngine.GUIStyle)
+  name.vb: WithGradientSaveButtonStyle(Of T)(T, GUIStyle)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientSaveButtonStyle<T>(T, UnityEngine.GUIStyle)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientSaveButtonStyle(Of T)(T, UnityEngine.GUIStyle)
+  nameWithType: Chainables.WithGradientSaveButtonStyle<T>(T, GUIStyle)
+  nameWithType.vb: Chainables.WithGradientSaveButtonStyle(Of T)(T, GUIStyle)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithHasHDRColor*
+  name: WithHasHDRColor
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithHasHDRColor.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithHasHDRColor
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithHasHDRColor
+  nameWithType: Chainables.WithHasHDRColor
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithHasHDRColor``1(``0,System.Boolean)
+  name: WithHasHDRColor<T>(T, Boolean)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithHasHDRColor.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_WithHasHDRColor__1___0_System_Boolean_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithHasHDRColor``1(``0,System.Boolean)
+  name.vb: WithHasHDRColor(Of T)(T, Boolean)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithHasHDRColor<T>(T, System.Boolean)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithHasHDRColor(Of T)(T, System.Boolean)
+  nameWithType: Chainables.WithHasHDRColor<T>(T, Boolean)
+  nameWithType.vb: Chainables.WithHasHDRColor(Of T)(T, Boolean)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithIndent*
+  name: WithIndent
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithIndent.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithIndent
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithIndent
+  nameWithType: Chainables.WithIndent
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithIndent``1(``0,System.Boolean)
+  name: WithIndent<T>(T, Boolean)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithIndent.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_WithIndent__1___0_System_Boolean_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithIndent``1(``0,System.Boolean)
+  name.vb: WithIndent(Of T)(T, Boolean)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithIndent<T>(T, System.Boolean)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithIndent(Of T)(T, System.Boolean)
+  nameWithType: Chainables.WithIndent<T>(T, Boolean)
+  nameWithType.vb: Chainables.WithIndent(Of T)(T, Boolean)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithIsWideBox*
+  name: WithIsWideBox
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithIsWideBox.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithIsWideBox
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithIsWideBox
+  nameWithType: Chainables.WithIsWideBox
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithIsWideBox``1(``0,System.Boolean)
+  name: WithIsWideBox<T>(T, Boolean)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithIsWideBox.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_WithIsWideBox__1___0_System_Boolean_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithIsWideBox``1(``0,System.Boolean)
+  name.vb: WithIsWideBox(Of T)(T, Boolean)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithIsWideBox<T>(T, System.Boolean)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithIsWideBox(Of T)(T, System.Boolean)
+  nameWithType: Chainables.WithIsWideBox<T>(T, Boolean)
+  nameWithType.vb: Chainables.WithIsWideBox(Of T)(T, Boolean)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithLabelStyle*
+  name: WithLabelStyle
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithLabelStyle.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithLabelStyle
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithLabelStyle
+  nameWithType: Chainables.WithLabelStyle
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithLabelStyle``1(``0,UnityEngine.GUIStyle)
+  name: WithLabelStyle<T>(T, GUIStyle)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithLabelStyle.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_WithLabelStyle__1___0_UnityEngine_GUIStyle_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithLabelStyle``1(``0,UnityEngine.GUIStyle)
+  name.vb: WithLabelStyle(Of T)(T, GUIStyle)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithLabelStyle<T>(T, UnityEngine.GUIStyle)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithLabelStyle(Of T)(T, UnityEngine.GUIStyle)
+  nameWithType: Chainables.WithLabelStyle<T>(T, GUIStyle)
+  nameWithType.vb: Chainables.WithLabelStyle(Of T)(T, GUIStyle)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsAreaColor*
+  name: WithOptionsAreaColor
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsAreaColor.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsAreaColor
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsAreaColor
+  nameWithType: Chainables.WithOptionsAreaColor
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsAreaColor``1(``0,UnityEngine.Color)
+  name: WithOptionsAreaColor<T>(T, Color)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsAreaColor.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_WithOptionsAreaColor__1___0_UnityEngine_Color_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsAreaColor``1(``0,UnityEngine.Color)
+  name.vb: WithOptionsAreaColor(Of T)(T, Color)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsAreaColor<T>(T, UnityEngine.Color)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsAreaColor(Of T)(T, UnityEngine.Color)
+  nameWithType: Chainables.WithOptionsAreaColor<T>(T, Color)
+  nameWithType.vb: Chainables.WithOptionsAreaColor(Of T)(T, Color)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsAreaStyle*
+  name: WithOptionsAreaStyle
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsAreaStyle.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsAreaStyle
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsAreaStyle
+  nameWithType: Chainables.WithOptionsAreaStyle
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsAreaStyle``1(``0,UnityEngine.GUIStyle)
+  name: WithOptionsAreaStyle<T>(T, GUIStyle)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsAreaStyle.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_WithOptionsAreaStyle__1___0_UnityEngine_GUIStyle_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsAreaStyle``1(``0,UnityEngine.GUIStyle)
+  name.vb: WithOptionsAreaStyle(Of T)(T, GUIStyle)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsAreaStyle<T>(T, UnityEngine.GUIStyle)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsAreaStyle(Of T)(T, UnityEngine.GUIStyle)
+  nameWithType: Chainables.WithOptionsAreaStyle<T>(T, GUIStyle)
+  nameWithType.vb: Chainables.WithOptionsAreaStyle(Of T)(T, GUIStyle)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsButtonColor*
+  name: WithOptionsButtonColor
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsButtonColor.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsButtonColor
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsButtonColor
+  nameWithType: Chainables.WithOptionsButtonColor
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsButtonColor``1(``0,UnityEngine.Color)
+  name: WithOptionsButtonColor<T>(T, Color)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsButtonColor.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_WithOptionsButtonColor__1___0_UnityEngine_Color_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsButtonColor``1(``0,UnityEngine.Color)
+  name.vb: WithOptionsButtonColor(Of T)(T, Color)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsButtonColor<T>(T, UnityEngine.Color)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsButtonColor(Of T)(T, UnityEngine.Color)
+  nameWithType: Chainables.WithOptionsButtonColor<T>(T, Color)
+  nameWithType.vb: Chainables.WithOptionsButtonColor(Of T)(T, Color)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsButtonStyle*
+  name: WithOptionsButtonStyle
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsButtonStyle.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsButtonStyle
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsButtonStyle
+  nameWithType: Chainables.WithOptionsButtonStyle
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsButtonStyle``1(``0,UnityEngine.GUIStyle)
+  name: WithOptionsButtonStyle<T>(T, GUIStyle)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsButtonStyle.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_WithOptionsButtonStyle__1___0_UnityEngine_GUIStyle_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsButtonStyle``1(``0,UnityEngine.GUIStyle)
+  name.vb: WithOptionsButtonStyle(Of T)(T, GUIStyle)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsButtonStyle<T>(T, UnityEngine.GUIStyle)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithOptionsButtonStyle(Of T)(T, UnityEngine.GUIStyle)
+  nameWithType: Chainables.WithOptionsButtonStyle<T>(T, GUIStyle)
+  nameWithType.vb: Chainables.WithOptionsButtonStyle(Of T)(T, GUIStyle)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithShowAlphaValue*
+  name: WithShowAlphaValue
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithShowAlphaValue.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithShowAlphaValue
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithShowAlphaValue
+  nameWithType: Chainables.WithShowAlphaValue
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithShowAlphaValue``1(``0,System.Boolean)
+  name: WithShowAlphaValue<T>(T, Boolean)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithShowAlphaValue.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_WithShowAlphaValue__1___0_System_Boolean_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithShowAlphaValue``1(``0,System.Boolean)
+  name.vb: WithShowAlphaValue(Of T)(T, Boolean)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithShowAlphaValue<T>(T, System.Boolean)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithShowAlphaValue(Of T)(T, System.Boolean)
+  nameWithType: Chainables.WithShowAlphaValue<T>(T, Boolean)
+  nameWithType.vb: Chainables.WithShowAlphaValue(Of T)(T, Boolean)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithShowTilingAndOffset*
+  name: WithShowTilingAndOffset
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithShowTilingAndOffset.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithShowTilingAndOffset
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithShowTilingAndOffset
+  nameWithType: Chainables.WithShowTilingAndOffset
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithShowTilingAndOffset``1(``0,System.Boolean)
+  name: WithShowTilingAndOffset<T>(T, Boolean)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithShowTilingAndOffset.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_WithShowTilingAndOffset__1___0_System_Boolean_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithShowTilingAndOffset``1(``0,System.Boolean)
+  name.vb: WithShowTilingAndOffset(Of T)(T, Boolean)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithShowTilingAndOffset<T>(T, System.Boolean)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithShowTilingAndOffset(Of T)(T, System.Boolean)
+  nameWithType: Chainables.WithShowTilingAndOffset<T>(T, Boolean)
+  nameWithType.vb: Chainables.WithShowTilingAndOffset(Of T)(T, Boolean)
 - uid: VRLabs.SimpleShaderInspectors.Controls.ColorControl
   name: ColorControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.ColorControl.html
@@ -1804,186 +1753,186 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddSection
   fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.AddSection
   nameWithType: Chainables.AddSection
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetAreControlsInHeader*
-  name: SetAreControlsInHeader
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetAreControlsInHeader.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetAreControlsInHeader
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetAreControlsInHeader
-  nameWithType: Chainables.SetAreControlsInHeader
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetAreControlsInHeader``1(``0,System.Boolean)
-  name: SetAreControlsInHeader<T>(T, Boolean)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetAreControlsInHeader.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_SetAreControlsInHeader__1___0_System_Boolean_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetAreControlsInHeader``1(``0,System.Boolean)
-  name.vb: SetAreControlsInHeader(Of T)(T, Boolean)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetAreControlsInHeader<T>(T, System.Boolean)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetAreControlsInHeader(Of T)(T, System.Boolean)
-  nameWithType: Chainables.SetAreControlsInHeader<T>(T, Boolean)
-  nameWithType.vb: Chainables.SetAreControlsInHeader(Of T)(T, Boolean)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetBackgroundColor*
-  name: SetBackgroundColor
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetBackgroundColor.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetBackgroundColor
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetBackgroundColor
-  nameWithType: Chainables.SetBackgroundColor
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetBackgroundColor``1(``0,UnityEngine.Color)
-  name: SetBackgroundColor<T>(T, Color)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetBackgroundColor.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_SetBackgroundColor__1___0_UnityEngine_Color_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetBackgroundColor``1(``0,UnityEngine.Color)
-  name.vb: SetBackgroundColor(Of T)(T, Color)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetBackgroundColor<T>(T, UnityEngine.Color)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetBackgroundColor(Of T)(T, UnityEngine.Color)
-  nameWithType: Chainables.SetBackgroundColor<T>(T, Color)
-  nameWithType.vb: Chainables.SetBackgroundColor(Of T)(T, Color)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetBackgroundStyle*
-  name: SetBackgroundStyle
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetBackgroundStyle.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetBackgroundStyle
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetBackgroundStyle
-  nameWithType: Chainables.SetBackgroundStyle
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetBackgroundStyle``1(``0,UnityEngine.GUIStyle)
-  name: SetBackgroundStyle<T>(T, GUIStyle)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetBackgroundStyle.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_SetBackgroundStyle__1___0_UnityEngine_GUIStyle_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetBackgroundStyle``1(``0,UnityEngine.GUIStyle)
-  name.vb: SetBackgroundStyle(Of T)(T, GUIStyle)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetBackgroundStyle<T>(T, UnityEngine.GUIStyle)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetBackgroundStyle(Of T)(T, UnityEngine.GUIStyle)
-  nameWithType: Chainables.SetBackgroundStyle<T>(T, GUIStyle)
-  nameWithType.vb: Chainables.SetBackgroundStyle(Of T)(T, GUIStyle)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDeleteColor*
-  name: SetDeleteColor
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDeleteColor.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDeleteColor
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDeleteColor
-  nameWithType: Chainables.SetDeleteColor
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDeleteColor``1(``0,UnityEngine.Color)
-  name: SetDeleteColor<T>(T, Color)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDeleteColor.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_SetDeleteColor__1___0_UnityEngine_Color_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDeleteColor``1(``0,UnityEngine.Color)
-  name.vb: SetDeleteColor(Of T)(T, Color)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDeleteColor<T>(T, UnityEngine.Color)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDeleteColor(Of T)(T, UnityEngine.Color)
-  nameWithType: Chainables.SetDeleteColor<T>(T, Color)
-  nameWithType.vb: Chainables.SetDeleteColor(Of T)(T, Color)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDeleteIcon*
-  name: SetDeleteIcon
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDeleteIcon.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDeleteIcon
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDeleteIcon
-  nameWithType: Chainables.SetDeleteIcon
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDeleteIcon``1(``0,UnityEngine.GUIStyle)
-  name: SetDeleteIcon<T>(T, GUIStyle)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDeleteIcon.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_SetDeleteIcon__1___0_UnityEngine_GUIStyle_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDeleteIcon``1(``0,UnityEngine.GUIStyle)
-  name.vb: SetDeleteIcon(Of T)(T, GUIStyle)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDeleteIcon<T>(T, UnityEngine.GUIStyle)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDeleteIcon(Of T)(T, UnityEngine.GUIStyle)
-  nameWithType: Chainables.SetDeleteIcon<T>(T, GUIStyle)
-  nameWithType.vb: Chainables.SetDeleteIcon(Of T)(T, GUIStyle)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDownColor*
-  name: SetDownColor
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDownColor.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDownColor
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDownColor
-  nameWithType: Chainables.SetDownColor
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDownColor``1(``0,UnityEngine.Color)
-  name: SetDownColor<T>(T, Color)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDownColor.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_SetDownColor__1___0_UnityEngine_Color_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDownColor``1(``0,UnityEngine.Color)
-  name.vb: SetDownColor(Of T)(T, Color)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDownColor<T>(T, UnityEngine.Color)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDownColor(Of T)(T, UnityEngine.Color)
-  nameWithType: Chainables.SetDownColor<T>(T, Color)
-  nameWithType.vb: Chainables.SetDownColor(Of T)(T, Color)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDownIcon*
-  name: SetDownIcon
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDownIcon.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDownIcon
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDownIcon
-  nameWithType: Chainables.SetDownIcon
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDownIcon``1(``0,UnityEngine.GUIStyle)
-  name: SetDownIcon<T>(T, GUIStyle)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDownIcon.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_SetDownIcon__1___0_UnityEngine_GUIStyle_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDownIcon``1(``0,UnityEngine.GUIStyle)
-  name.vb: SetDownIcon(Of T)(T, GUIStyle)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDownIcon<T>(T, UnityEngine.GUIStyle)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetDownIcon(Of T)(T, UnityEngine.GUIStyle)
-  nameWithType: Chainables.SetDownIcon<T>(T, GUIStyle)
-  nameWithType.vb: Chainables.SetDownIcon(Of T)(T, GUIStyle)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetIsPropertyAnimatable*
-  name: SetIsPropertyAnimatable
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetIsPropertyAnimatable.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetIsPropertyAnimatable
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetIsPropertyAnimatable
-  nameWithType: Chainables.SetIsPropertyAnimatable
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetIsPropertyAnimatable``1(``0,System.Boolean)
-  name: SetIsPropertyAnimatable<T>(T, Boolean)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetIsPropertyAnimatable.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_SetIsPropertyAnimatable__1___0_System_Boolean_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetIsPropertyAnimatable``1(``0,System.Boolean)
-  name.vb: SetIsPropertyAnimatable(Of T)(T, Boolean)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetIsPropertyAnimatable<T>(T, System.Boolean)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetIsPropertyAnimatable(Of T)(T, System.Boolean)
-  nameWithType: Chainables.SetIsPropertyAnimatable<T>(T, Boolean)
-  nameWithType.vb: Chainables.SetIsPropertyAnimatable(Of T)(T, Boolean)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetLabelStyle*
-  name: SetLabelStyle
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetLabelStyle.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetLabelStyle
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetLabelStyle
-  nameWithType: Chainables.SetLabelStyle
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetLabelStyle``1(``0,UnityEngine.GUIStyle)
-  name: SetLabelStyle<T>(T, GUIStyle)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetLabelStyle.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_SetLabelStyle__1___0_UnityEngine_GUIStyle_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetLabelStyle``1(``0,UnityEngine.GUIStyle)
-  name.vb: SetLabelStyle(Of T)(T, GUIStyle)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetLabelStyle<T>(T, UnityEngine.GUIStyle)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetLabelStyle(Of T)(T, UnityEngine.GUIStyle)
-  nameWithType: Chainables.SetLabelStyle<T>(T, GUIStyle)
-  nameWithType.vb: Chainables.SetLabelStyle(Of T)(T, GUIStyle)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetShowFoldoutArrow*
-  name: SetShowFoldoutArrow
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetShowFoldoutArrow.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetShowFoldoutArrow
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetShowFoldoutArrow
-  nameWithType: Chainables.SetShowFoldoutArrow
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetShowFoldoutArrow``1(``0,System.Boolean)
-  name: SetShowFoldoutArrow<T>(T, Boolean)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetShowFoldoutArrow.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_SetShowFoldoutArrow__1___0_System_Boolean_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetShowFoldoutArrow``1(``0,System.Boolean)
-  name.vb: SetShowFoldoutArrow(Of T)(T, Boolean)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetShowFoldoutArrow<T>(T, System.Boolean)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetShowFoldoutArrow(Of T)(T, System.Boolean)
-  nameWithType: Chainables.SetShowFoldoutArrow<T>(T, Boolean)
-  nameWithType.vb: Chainables.SetShowFoldoutArrow(Of T)(T, Boolean)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetUpColor*
-  name: SetUpColor
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetUpColor.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetUpColor
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetUpColor
-  nameWithType: Chainables.SetUpColor
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetUpColor``1(``0,UnityEngine.Color)
-  name: SetUpColor<T>(T, Color)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetUpColor.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_SetUpColor__1___0_UnityEngine_Color_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetUpColor``1(``0,UnityEngine.Color)
-  name.vb: SetUpColor(Of T)(T, Color)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetUpColor<T>(T, UnityEngine.Color)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetUpColor(Of T)(T, UnityEngine.Color)
-  nameWithType: Chainables.SetUpColor<T>(T, Color)
-  nameWithType.vb: Chainables.SetUpColor(Of T)(T, Color)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetUpIcon*
-  name: SetUpIcon
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetUpIcon.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetUpIcon
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetUpIcon
-  nameWithType: Chainables.SetUpIcon
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetUpIcon``1(``0,UnityEngine.GUIStyle)
-  name: SetUpIcon<T>(T, GUIStyle)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetUpIcon.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_SetUpIcon__1___0_UnityEngine_GUIStyle_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetUpIcon``1(``0,UnityEngine.GUIStyle)
-  name.vb: SetUpIcon(Of T)(T, GUIStyle)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetUpIcon<T>(T, UnityEngine.GUIStyle)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.SetUpIcon(Of T)(T, UnityEngine.GUIStyle)
-  nameWithType: Chainables.SetUpIcon<T>(T, GUIStyle)
-  nameWithType.vb: Chainables.SetUpIcon(Of T)(T, GUIStyle)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithAreControlsInHeader*
+  name: WithAreControlsInHeader
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithAreControlsInHeader.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithAreControlsInHeader
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithAreControlsInHeader
+  nameWithType: Chainables.WithAreControlsInHeader
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithAreControlsInHeader``1(``0,System.Boolean)
+  name: WithAreControlsInHeader<T>(T, Boolean)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithAreControlsInHeader.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_WithAreControlsInHeader__1___0_System_Boolean_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithAreControlsInHeader``1(``0,System.Boolean)
+  name.vb: WithAreControlsInHeader(Of T)(T, Boolean)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithAreControlsInHeader<T>(T, System.Boolean)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithAreControlsInHeader(Of T)(T, System.Boolean)
+  nameWithType: Chainables.WithAreControlsInHeader<T>(T, Boolean)
+  nameWithType.vb: Chainables.WithAreControlsInHeader(Of T)(T, Boolean)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithBackgroundColor*
+  name: WithBackgroundColor
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithBackgroundColor.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithBackgroundColor
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithBackgroundColor
+  nameWithType: Chainables.WithBackgroundColor
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithBackgroundColor``1(``0,UnityEngine.Color)
+  name: WithBackgroundColor<T>(T, Color)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithBackgroundColor.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_WithBackgroundColor__1___0_UnityEngine_Color_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithBackgroundColor``1(``0,UnityEngine.Color)
+  name.vb: WithBackgroundColor(Of T)(T, Color)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithBackgroundColor<T>(T, UnityEngine.Color)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithBackgroundColor(Of T)(T, UnityEngine.Color)
+  nameWithType: Chainables.WithBackgroundColor<T>(T, Color)
+  nameWithType.vb: Chainables.WithBackgroundColor(Of T)(T, Color)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithBackgroundStyle*
+  name: WithBackgroundStyle
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithBackgroundStyle.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithBackgroundStyle
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithBackgroundStyle
+  nameWithType: Chainables.WithBackgroundStyle
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithBackgroundStyle``1(``0,UnityEngine.GUIStyle)
+  name: WithBackgroundStyle<T>(T, GUIStyle)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithBackgroundStyle.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_WithBackgroundStyle__1___0_UnityEngine_GUIStyle_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithBackgroundStyle``1(``0,UnityEngine.GUIStyle)
+  name.vb: WithBackgroundStyle(Of T)(T, GUIStyle)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithBackgroundStyle<T>(T, UnityEngine.GUIStyle)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithBackgroundStyle(Of T)(T, UnityEngine.GUIStyle)
+  nameWithType: Chainables.WithBackgroundStyle<T>(T, GUIStyle)
+  nameWithType.vb: Chainables.WithBackgroundStyle(Of T)(T, GUIStyle)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDeleteColor*
+  name: WithDeleteColor
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDeleteColor.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDeleteColor
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDeleteColor
+  nameWithType: Chainables.WithDeleteColor
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDeleteColor``1(``0,UnityEngine.Color)
+  name: WithDeleteColor<T>(T, Color)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDeleteColor.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_WithDeleteColor__1___0_UnityEngine_Color_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDeleteColor``1(``0,UnityEngine.Color)
+  name.vb: WithDeleteColor(Of T)(T, Color)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDeleteColor<T>(T, UnityEngine.Color)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDeleteColor(Of T)(T, UnityEngine.Color)
+  nameWithType: Chainables.WithDeleteColor<T>(T, Color)
+  nameWithType.vb: Chainables.WithDeleteColor(Of T)(T, Color)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDeleteIcon*
+  name: WithDeleteIcon
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDeleteIcon.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDeleteIcon
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDeleteIcon
+  nameWithType: Chainables.WithDeleteIcon
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDeleteIcon``1(``0,UnityEngine.GUIStyle)
+  name: WithDeleteIcon<T>(T, GUIStyle)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDeleteIcon.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_WithDeleteIcon__1___0_UnityEngine_GUIStyle_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDeleteIcon``1(``0,UnityEngine.GUIStyle)
+  name.vb: WithDeleteIcon(Of T)(T, GUIStyle)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDeleteIcon<T>(T, UnityEngine.GUIStyle)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDeleteIcon(Of T)(T, UnityEngine.GUIStyle)
+  nameWithType: Chainables.WithDeleteIcon<T>(T, GUIStyle)
+  nameWithType.vb: Chainables.WithDeleteIcon(Of T)(T, GUIStyle)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDownColor*
+  name: WithDownColor
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDownColor.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDownColor
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDownColor
+  nameWithType: Chainables.WithDownColor
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDownColor``1(``0,UnityEngine.Color)
+  name: WithDownColor<T>(T, Color)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDownColor.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_WithDownColor__1___0_UnityEngine_Color_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDownColor``1(``0,UnityEngine.Color)
+  name.vb: WithDownColor(Of T)(T, Color)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDownColor<T>(T, UnityEngine.Color)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDownColor(Of T)(T, UnityEngine.Color)
+  nameWithType: Chainables.WithDownColor<T>(T, Color)
+  nameWithType.vb: Chainables.WithDownColor(Of T)(T, Color)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDownIcon*
+  name: WithDownIcon
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDownIcon.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDownIcon
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDownIcon
+  nameWithType: Chainables.WithDownIcon
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDownIcon``1(``0,UnityEngine.GUIStyle)
+  name: WithDownIcon<T>(T, GUIStyle)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDownIcon.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_WithDownIcon__1___0_UnityEngine_GUIStyle_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDownIcon``1(``0,UnityEngine.GUIStyle)
+  name.vb: WithDownIcon(Of T)(T, GUIStyle)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDownIcon<T>(T, UnityEngine.GUIStyle)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithDownIcon(Of T)(T, UnityEngine.GUIStyle)
+  nameWithType: Chainables.WithDownIcon<T>(T, GUIStyle)
+  nameWithType.vb: Chainables.WithDownIcon(Of T)(T, GUIStyle)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithIsPropertyAnimatable*
+  name: WithIsPropertyAnimatable
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithIsPropertyAnimatable.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithIsPropertyAnimatable
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithIsPropertyAnimatable
+  nameWithType: Chainables.WithIsPropertyAnimatable
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithIsPropertyAnimatable``1(``0,System.Boolean)
+  name: WithIsPropertyAnimatable<T>(T, Boolean)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithIsPropertyAnimatable.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_WithIsPropertyAnimatable__1___0_System_Boolean_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithIsPropertyAnimatable``1(``0,System.Boolean)
+  name.vb: WithIsPropertyAnimatable(Of T)(T, Boolean)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithIsPropertyAnimatable<T>(T, System.Boolean)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithIsPropertyAnimatable(Of T)(T, System.Boolean)
+  nameWithType: Chainables.WithIsPropertyAnimatable<T>(T, Boolean)
+  nameWithType.vb: Chainables.WithIsPropertyAnimatable(Of T)(T, Boolean)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithLabelStyle*
+  name: WithLabelStyle
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithLabelStyle.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithLabelStyle
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithLabelStyle
+  nameWithType: Chainables.WithLabelStyle
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithLabelStyle``1(``0,UnityEngine.GUIStyle)
+  name: WithLabelStyle<T>(T, GUIStyle)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithLabelStyle.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_WithLabelStyle__1___0_UnityEngine_GUIStyle_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithLabelStyle``1(``0,UnityEngine.GUIStyle)
+  name.vb: WithLabelStyle(Of T)(T, GUIStyle)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithLabelStyle<T>(T, UnityEngine.GUIStyle)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithLabelStyle(Of T)(T, UnityEngine.GUIStyle)
+  nameWithType: Chainables.WithLabelStyle<T>(T, GUIStyle)
+  nameWithType.vb: Chainables.WithLabelStyle(Of T)(T, GUIStyle)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithShowFoldoutArrow*
+  name: WithShowFoldoutArrow
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithShowFoldoutArrow.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithShowFoldoutArrow
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithShowFoldoutArrow
+  nameWithType: Chainables.WithShowFoldoutArrow
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithShowFoldoutArrow``1(``0,System.Boolean)
+  name: WithShowFoldoutArrow<T>(T, Boolean)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithShowFoldoutArrow.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_WithShowFoldoutArrow__1___0_System_Boolean_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithShowFoldoutArrow``1(``0,System.Boolean)
+  name.vb: WithShowFoldoutArrow(Of T)(T, Boolean)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithShowFoldoutArrow<T>(T, System.Boolean)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithShowFoldoutArrow(Of T)(T, System.Boolean)
+  nameWithType: Chainables.WithShowFoldoutArrow<T>(T, Boolean)
+  nameWithType.vb: Chainables.WithShowFoldoutArrow(Of T)(T, Boolean)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithUpColor*
+  name: WithUpColor
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithUpColor.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithUpColor
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithUpColor
+  nameWithType: Chainables.WithUpColor
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithUpColor``1(``0,UnityEngine.Color)
+  name: WithUpColor<T>(T, Color)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithUpColor.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_WithUpColor__1___0_UnityEngine_Color_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithUpColor``1(``0,UnityEngine.Color)
+  name.vb: WithUpColor(Of T)(T, Color)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithUpColor<T>(T, UnityEngine.Color)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithUpColor(Of T)(T, UnityEngine.Color)
+  nameWithType: Chainables.WithUpColor<T>(T, Color)
+  nameWithType.vb: Chainables.WithUpColor(Of T)(T, Color)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithUpIcon*
+  name: WithUpIcon
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithUpIcon.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithUpIcon
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithUpIcon
+  nameWithType: Chainables.WithUpIcon
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithUpIcon``1(``0,UnityEngine.GUIStyle)
+  name: WithUpIcon<T>(T, GUIStyle)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithUpIcon.html#VRLabs_SimpleShaderInspectors_Controls_Sections_Chainables_WithUpIcon__1___0_UnityEngine_GUIStyle_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithUpIcon``1(``0,UnityEngine.GUIStyle)
+  name.vb: WithUpIcon(Of T)(T, GUIStyle)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithUpIcon<T>(T, UnityEngine.GUIStyle)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Sections.Chainables.WithUpIcon(Of T)(T, UnityEngine.GUIStyle)
+  nameWithType: Chainables.WithUpIcon<T>(T, GUIStyle)
+  nameWithType.vb: Chainables.WithUpIcon(Of T)(T, GUIStyle)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection
   name: OrderedSection
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection.html
@@ -3363,6 +3312,63 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.VertexStreamsControl.RemoveVertexStream
   fullName: VRLabs.SimpleShaderInspectors.Controls.VertexStreamsControl.RemoveVertexStream
   nameWithType: VertexStreamsControl.RemoveVertexStream
+- uid: VRLabs.SimpleShaderInspectors.Extensions
+  name: Extensions
+  href: Next/api/VRLabs.SimpleShaderInspectors.Extensions.html
+  commentId: T:VRLabs.SimpleShaderInspectors.Extensions
+  fullName: VRLabs.SimpleShaderInspectors.Extensions
+  nameWithType: Extensions
+- uid: VRLabs.SimpleShaderInspectors.Extensions.WithAlias*
+  name: WithAlias
+  href: Next/api/VRLabs.SimpleShaderInspectors.Extensions.WithAlias.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Extensions.WithAlias
+  fullName: VRLabs.SimpleShaderInspectors.Extensions.WithAlias
+  nameWithType: Extensions.WithAlias
+- uid: VRLabs.SimpleShaderInspectors.Extensions.WithAlias``1(``0,System.String)
+  name: WithAlias<T>(T, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Extensions.WithAlias.html#VRLabs_SimpleShaderInspectors_Extensions_WithAlias__1___0_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Extensions.WithAlias``1(``0,System.String)
+  name.vb: WithAlias(Of T)(T, String)
+  fullName: VRLabs.SimpleShaderInspectors.Extensions.WithAlias<T>(T, System.String)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Extensions.WithAlias(Of T)(T, System.String)
+  nameWithType: Extensions.WithAlias<T>(T, String)
+  nameWithType.vb: Extensions.WithAlias(Of T)(T, String)
+- uid: VRLabs.SimpleShaderInspectors.Extensions.WithEnabled*
+  name: WithEnabled
+  href: Next/api/VRLabs.SimpleShaderInspectors.Extensions.WithEnabled.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Extensions.WithEnabled
+  fullName: VRLabs.SimpleShaderInspectors.Extensions.WithEnabled
+  nameWithType: Extensions.WithEnabled
+- uid: VRLabs.SimpleShaderInspectors.Extensions.WithEnabled``1(``0,System.Boolean)
+  name: WithEnabled<T>(T, Boolean)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Extensions.WithEnabled.html#VRLabs_SimpleShaderInspectors_Extensions_WithEnabled__1___0_System_Boolean_
+  commentId: M:VRLabs.SimpleShaderInspectors.Extensions.WithEnabled``1(``0,System.Boolean)
+  name.vb: WithEnabled(Of T)(T, Boolean)
+  fullName: VRLabs.SimpleShaderInspectors.Extensions.WithEnabled<T>(T, System.Boolean)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Extensions.WithEnabled(Of T)(T, System.Boolean)
+  nameWithType: Extensions.WithEnabled<T>(T, Boolean)
+  nameWithType.vb: Extensions.WithEnabled(Of T)(T, Boolean)
+- uid: VRLabs.SimpleShaderInspectors.Extensions.WithVisibility*
+  name: WithVisibility
+  href: Next/api/VRLabs.SimpleShaderInspectors.Extensions.WithVisibility.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Extensions.WithVisibility
+  fullName: VRLabs.SimpleShaderInspectors.Extensions.WithVisibility
+  nameWithType: Extensions.WithVisibility
+- uid: VRLabs.SimpleShaderInspectors.Extensions.WithVisibility``1(``0,System.Boolean)
+  name: WithVisibility<T>(T, Boolean)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Extensions.WithVisibility.html#VRLabs_SimpleShaderInspectors_Extensions_WithVisibility__1___0_System_Boolean_
+  commentId: M:VRLabs.SimpleShaderInspectors.Extensions.WithVisibility``1(``0,System.Boolean)
+  name.vb: WithVisibility(Of T)(T, Boolean)
+  fullName: VRLabs.SimpleShaderInspectors.Extensions.WithVisibility<T>(T, System.Boolean)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Extensions.WithVisibility(Of T)(T, System.Boolean)
+  nameWithType: Extensions.WithVisibility<T>(T, Boolean)
+  nameWithType.vb: Extensions.WithVisibility(Of T)(T, Boolean)
+- uid: VRLabs.SimpleShaderInspectors.FluentSetAttribute
+  name: FluentSetAttribute
+  href: Next/api/VRLabs.SimpleShaderInspectors.FluentSetAttribute.html
+  commentId: T:VRLabs.SimpleShaderInspectors.FluentSetAttribute
+  fullName: VRLabs.SimpleShaderInspectors.FluentSetAttribute
+  nameWithType: FluentSetAttribute
 - uid: VRLabs.SimpleShaderInspectors.IAdditionalLocalization
   name: IAdditionalLocalization
   href: Next/api/VRLabs.SimpleShaderInspectors.IAdditionalLocalization.html
@@ -4427,21 +4433,6 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.SSIHelper.SetInspector
   fullName: VRLabs.SimpleShaderInspectors.SSIHelper.SetInspector
   nameWithType: SSIHelper.SetInspector
-- uid: VRLabs.SimpleShaderInspectors.SSIHelper.SetNonAnimatableProperties(UnityEditor.MaterialEditor,System.Collections.Generic.IEnumerable{VRLabs.SimpleShaderInspectors.INonAnimatableProperty})
-  name: SetNonAnimatableProperties(MaterialEditor, IEnumerable<INonAnimatableProperty>)
-  href: Next/api/VRLabs.SimpleShaderInspectors.SSIHelper.SetNonAnimatableProperties.html#VRLabs_SimpleShaderInspectors_SSIHelper_SetNonAnimatableProperties_UnityEditor_MaterialEditor_System_Collections_Generic_IEnumerable_VRLabs_SimpleShaderInspectors_INonAnimatableProperty__
-  commentId: M:VRLabs.SimpleShaderInspectors.SSIHelper.SetNonAnimatableProperties(UnityEditor.MaterialEditor,System.Collections.Generic.IEnumerable{VRLabs.SimpleShaderInspectors.INonAnimatableProperty})
-  name.vb: SetNonAnimatableProperties(MaterialEditor, IEnumerable(Of INonAnimatableProperty))
-  fullName: VRLabs.SimpleShaderInspectors.SSIHelper.SetNonAnimatableProperties(UnityEditor.MaterialEditor, System.Collections.Generic.IEnumerable<VRLabs.SimpleShaderInspectors.INonAnimatableProperty>)
-  fullName.vb: VRLabs.SimpleShaderInspectors.SSIHelper.SetNonAnimatableProperties(UnityEditor.MaterialEditor, System.Collections.Generic.IEnumerable(Of VRLabs.SimpleShaderInspectors.INonAnimatableProperty))
-  nameWithType: SSIHelper.SetNonAnimatableProperties(MaterialEditor, IEnumerable<INonAnimatableProperty>)
-  nameWithType.vb: SSIHelper.SetNonAnimatableProperties(MaterialEditor, IEnumerable(Of INonAnimatableProperty))
-- uid: VRLabs.SimpleShaderInspectors.SSIHelper.SetNonAnimatableProperties*
-  name: SetNonAnimatableProperties
-  href: Next/api/VRLabs.SimpleShaderInspectors.SSIHelper.SetNonAnimatableProperties.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.SSIHelper.SetNonAnimatableProperties
-  fullName: VRLabs.SimpleShaderInspectors.SSIHelper.SetNonAnimatableProperties
-  nameWithType: SSIHelper.SetNonAnimatableProperties
 - uid: VRLabs.SimpleShaderInspectors.SSIHelper.SetTextureImporterAlpha(UnityEngine.Texture2D,System.Boolean)
   name: SetTextureImporterAlpha(Texture2D, Boolean)
   href: Next/api/VRLabs.SimpleShaderInspectors.SSIHelper.SetTextureImporterAlpha.html#VRLabs_SimpleShaderInspectors_SSIHelper_SetTextureImporterAlpha_UnityEngine_Texture2D_System_Boolean_
@@ -4919,12 +4910,6 @@ references:
   commentId: N:VRLabs.SimpleShaderInspectors.Tools
   fullName: VRLabs.SimpleShaderInspectors.Tools
   nameWithType: VRLabs.SimpleShaderInspectors.Tools
-- uid: VRLabs.SimpleShaderInspectors.Tools.ChainableGeneratorWindow
-  name: ChainableGeneratorWindow
-  href: Next/api/VRLabs.SimpleShaderInspectors.Tools.ChainableGeneratorWindow.html
-  commentId: T:VRLabs.SimpleShaderInspectors.Tools.ChainableGeneratorWindow
-  fullName: VRLabs.SimpleShaderInspectors.Tools.ChainableGeneratorWindow
-  nameWithType: ChainableGeneratorWindow
 - uid: VRLabs.SimpleShaderInspectors.Tools.EmbedLibraryEditor
   name: EmbedLibraryEditor
   href: Next/api/VRLabs.SimpleShaderInspectors.Tools.EmbedLibraryEditor.html
@@ -4943,6 +4928,12 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Tools.EmbedLibraryEditor.CreateGUI
   fullName: VRLabs.SimpleShaderInspectors.Tools.EmbedLibraryEditor.CreateGUI
   nameWithType: EmbedLibraryEditor.CreateGUI
+- uid: VRLabs.SimpleShaderInspectors.Tools.ExtensionsGeneratorWindow
+  name: ExtensionsGeneratorWindow
+  href: Next/api/VRLabs.SimpleShaderInspectors.Tools.ExtensionsGeneratorWindow.html
+  commentId: T:VRLabs.SimpleShaderInspectors.Tools.ExtensionsGeneratorWindow
+  fullName: VRLabs.SimpleShaderInspectors.Tools.ExtensionsGeneratorWindow
+  nameWithType: ExtensionsGeneratorWindow
 - uid: VRLabs.SimpleShaderInspectors.Tools.LocalizationEditorWindow
   name: LocalizationEditorWindow
   href: Next/api/VRLabs.SimpleShaderInspectors.Tools.LocalizationEditorWindow.html

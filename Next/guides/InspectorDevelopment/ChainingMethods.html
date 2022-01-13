@@ -65,10 +65,10 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="idev-ChainingMethods">
-<h1 id="chaining-methods">Chaining Methods</h1>
+<h1 id="chaining-methods">Chaining methods</h1>
 
 <p>Let's take the following line from our example inspector in <a class="xref" href="GettingStarted.html">getting started</a>:</p>
-<pre><code class="lang-csharp">    _floatControl = this.AddPropertyControl(&quot;_FloatProperty&quot;).Alias(&quot;MyFloatProperty&quot;);
+<pre><code class="lang-csharp">    _floatControl = this.AddPropertyControl(&quot;_FloatProperty&quot;).WithAlias(&quot;MyFloatProperty&quot;);
 </code></pre>
 <p>In this single line there's quite a bit going on. first it creates a new <code>PropertyControl</code> for our <code>_FloatProperty</code> and assigns it to an internal list.
 Then it takes this control and change its <code>Alias</code> to <code>&quot;MyFloatProperty&quot;</code>.
@@ -81,8 +81,8 @@ Finally the control is assigned to our local <code>_floatControl</code> field.</
 <p>In terms of what they do they are equivalent, but in the first case we use methods that give the control itself as a return value, giving you the possibility to &quot;chain up&quot; another method call to do something else, or to assign that control to a variable to use later.</p>
 <p>By manipulating controls this way we can reduce the code needed to do the same amount of things, and keep it relatively simple to read.</p>
 <p>The advantages of it become more apparent on more complex controls where you want to optionally modify different stuff on the spot:</p>
-<pre><code class="lang-csharp">    _section = this.AddSection(&quot;MySectionAlias&quot;).SetBackgroundColor(Color.red)
-        .IncludeControlsInHeader(true).ShowFoldoutArrow(false).SetEnabled(false);
+<pre><code class="lang-csharp">    _section = this.AddSection(&quot;MySectionAlias&quot;).WithBackgroundColor(Color.red)
+        .WithIncludeControlsInHeader(true).WithShowFoldoutArrow(false).WithEnabled(false);
 </code></pre>
 <pre><code class="lang-csharp">    _section = new Section();
     _section.PropertyAlias = &quot;MySectionAlias&quot;;
@@ -95,27 +95,27 @@ Finally the control is assigned to our local <code>_floatControl</code> field.</
 <p>As you can see, in this case we saved the need to write up a fairly sizeable amount of code just to initialize our <code>_section</code> control by chaining up method calls.</p>
 <div class="TIP">
 <h5>Tip</h5>
-<p>The <code>Section</code> control is a particular control that can help you a lot to organize an inspector, we talk more in depth about it <a class="xref" href="Sections.html">here</a>.</p>
+<p>The <code>Section</code> control is a particular control that can help you a lot to organize an inspector, we talk more in depth about it <a class="xref" href="Sections.html">in this page</a>.</p>
 </div>
-<p>Every control can have its own dedicated chainable methods, and controls derived from other controls also inherit them. If you want to know what chainable methods a control has you can check up the API.</p>
-<h2 id="default-chainable-methods">Default chainable methods</h2>
-<p>These chainable methods are available to all controls since they are inherited from the <code>SimpleControl</code> base class:</p>
-<pre><code class="lang-csharp">    Alias(string alias)
+<p>Every control can have its own dedicated extension methods, and controls derived from other controls also inherit them. If you want to know what extension methods a control has you can check up the API.</p>
+<h2 id="default-extension-methods">Default extension methods</h2>
+<p>These extension methods are available to all controls since they are inherited from the <code>SimpleControl</code> base class:</p>
+<pre><code class="lang-csharp">    WithAlias(string alias)
 </code></pre>
 <p>Set a custom alias for control localization.</p>
 <p>This is like a unique identifier that the inspector can use when looking for localization data.</p>
-<pre><code class="lang-csharp">    SetVisible(bool visible)
+<pre><code class="lang-csharp">    WithVisible(bool visible)
 </code></pre>
 <p>Set if the control should be visible or not.</p>
-<pre><code class="lang-csharp">    SetEnabled(bool enabled)
+<pre><code class="lang-csharp">    WithEnabled(bool enabled)
 </code></pre>
 <p>Set if the control should be enabled or not.</p>
-<h2 id="chainable-constructor-methods">Chainable constructor methods</h2>
-<p>As we saw until now, to avoid having to manually assing a control to the internal list of the inspector we use <code>this.Add*YourControlNameHere*</code>, this internally creates a new control and assings it to the object in which you called the method from (in our case <code>this</code>, or in other words out inspector).</p>
+<h2 id="extension-constructor-methods">Extension constructor methods</h2>
+<p>As we saw until now, to avoid having to manually assign a control to the internal list of the inspector we use <code>this.Add*YourControlNameHere*</code>, this internally creates a new control and assigns it to the object in which you called the method from (in our case <code>this</code>, or in other words out inspector).</p>
 <p>This is not limited to the inspector itself, since these methods will work on anything that implements the <code>IControlContainer</code> interface (<code>SimpleShaderInspector</code> itself implements this interface). This means that controls themself can contain more controls inside themself, and they will control how to display them.</p>
 <div class="TIP">
 <h5>Tip</h5>
-<p>These methods, like all chainable methods in the API, are <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/extension-methods"><code>Extension methods</code></a>, meaning that they're technically not part of the class itself, but can be applied to that class as if it was part of it.
+<p><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/extension-methods"><code>Extension methods</code></a> like the ones we've seen here are particular, they're technically not part of the class itself, but can be applied to that class as if it was part of it.
 The main limitation is that since extension methods are not part of the class they can only access to public properties or methods of the class they're targeting.
 This is also the reason to why we need to use <code>this.</code> when calling one of these methods in the inspector.</p>
 </div>
@@ -124,7 +124,7 @@ This is also the reason to why we need to use <code>this.</code> when calling on
 </code></pre>
 <div class="TIP">
 <h5>Tip</h5>
-<p><code>ToggleDropdownControl</code> is a toggle that when enabled will diplay other controls underneath itself, is useful when you need to make some properties visible only if something is enabled.</p>
+<p><code>ToggleDropdownControl</code> is a toggle that when enabled will display other controls underneath itself, is useful when you need to make some properties visible only if something is enabled.</p>
 </div>
 </article>
           </div>

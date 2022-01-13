@@ -87,7 +87,7 @@ namespace TestControlNamespace
         {
         }
 
-        public void AddControl(SimpleControl control)
+        public void AddControl(SimpleControl control, string alias = &quot;&quot;)
         {
         }
 
@@ -98,7 +98,7 @@ namespace TestControlNamespace
 }
 </code></pre>
 <p>The implement the interface you need to implement the <code>AddControl</code> and <code>GetControlList</code> methods in you class.</p>
-<p>The first method is generally used in the generated chainable methods to add a new control under this one, meanwhile the second one is used when the inspector fetches properties.</p>
+<p>The first method is generally used in the generated extension methods to add a new control under this one, meanwhile the second one is used when the inspector fetches properties.</p>
 <p>How you store those controls is up to you, in this case we will use a list.</p>
 <p>And in the meantime, we also add a simple range property and get the control to do something:</p>
 <pre><code class="lang-csharp" name="Main" highlight-lines="9,13,18-20,23,25">using System.Collections.Generic;
@@ -123,14 +123,18 @@ namespace TestControlNamespace
             HasPropertyUpdated = EditorGUI.EndChangeCheck();
         }
 
-        public void AddControl(SimpleControl control) =&gt; Controls.Add(control);
+        public void AddControl(SimpleControl control, string alias = &quot;&quot;) =&gt; Controls.AddControl(control, alias);
 
         public IEnumerable&lt;SimpleControl&gt; GetControlList() =&gt; Controls;
     }
 }
 </code></pre>
-<p>Only notable mentions are the 2 methods implementation being done in an unusual way, this is for the most part just a &quot;shortcut&quot; that can be done when the method implementation consist in only one operation (if you're not confortable with it, you can just write it like you're used to, the result is the same).
-Also the <code>RangeProperty</code> method for some reason doesn't have an overload that accepts a <code>GUIContent</code>, so we had to pass just the <code>text</code> string of it (unity pls fix this thanks).</p>
+<p>Some notable mentions here:</p>
+<ul>
+<li>The 2 methods implementation being done in an unusual way, this is for the most part just a &quot;shortcut&quot; that can be done when the method implementation consist in only one operation (if you're not comfortable with it, you can just write it like you're used to, the result is the same).</li>
+<li>We use <code>Controls.AddControl(control, alias)</code> to add the control in the list. <code>AddControl</code> applied to this list is a method that automatically adds the control after a control with the given alias, this should be the default implementation of an IControlContainer <code>AddControl</code>, and eventual custom implementations (if you don't use something that can be cast into an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.ilist"><code>IList</code></a>) should be implemented in a similar way.</li>
+<li>The <code>RangeProperty</code> method for some reason doesn't have an overload that accepts a <code>GUIContent</code>, so we had to pass just the <code>text</code> string of it (unity pls fix this thanks).</li>
+</ul>
 <p>Now our control properly displays any float property that is being given to it, but if you add any control to this one they will simply not display, that's cause it's our responsibility to handle that:</p>
 <pre><code class="lang-csharp" name="Main" highlight-lines="3-9">    materialEditor.RangeProperty(Property, Content.text);
     HasPropertyUpdated = EditorGUI.EndChangeCheck();
@@ -179,7 +183,7 @@ namespace TestControlNamespace
             }
         }
 
-        public void AddControl(SimpleControl control) =&gt; Controls.Add(control);
+        public void AddControl(SimpleControl control, string alias = &quot;&quot;) =&gt; Controls.AddControl(control, alias);
 
         public IEnumerable&lt;SimpleControl&gt; GetControlList() =&gt; Controls;
     }

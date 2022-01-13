@@ -69,14 +69,14 @@
 
 <p>In some cases you may need to use multiple material properties in a single control.</p>
 <p>An example is making a texture control similar in functionality to <code>MaterialEditor.TexturePropertySingleLine</code>.</p>
-<p>Just like the <code>IAdditionalLocalization</code> interface can make you get multiple localized strings, <code>IAdditionalProperties</code> can be used for material properties themself. The biggest difference is that in this case you need a way to get the material property name of the additional properties from the inspector.</p>
+<p>Just like the <code>IAdditionalLocalization</code> interface can make you get multiple localized strings, <code>IAdditionalProperties</code> can be used for material properties themselves. The biggest difference is that in this case you need a way to get the material property name of the additional properties from the inspector.</p>
 <p>This time let's check the <code>TextureControl</code> code that Simple Shader Inspectors comes with, since it uses this interface to have 2 extra properties. The file can be found inside <code>&quot;VRLabs/SimpleShaderInspectors/Editor/Controls/TextureControl.cs&quot;</code>.</p>
 <div class="TIP">
 <h5>Tip</h5>
 <p>This is also a good time to see a real control use case instead of examples that are done for the sake of an example.</p>
 </div>
 <p>First let's look at the implementation of the <code>IAdditionalProperties</code> interface.</p>
-<pre><code class="lang-csharp" name="Main">public class TextureControl : PropertyControl, IAdditionalProperties
+<pre><code class="lang-csharp" name="Main">public class TextureControl : PropertyControl, IAdditionalProperties, IControlContainer
 {
     //..
     public AdditionalProperty[] AdditionalProperties { get; set; }
@@ -89,29 +89,34 @@
     AdditionalProperties = new AdditionalProperty[2];
     AdditionalProperties[0] = new AdditionalProperty(extraPropertyName1);
     if (!string.IsNullOrWhiteSpace(extraPropertyName1))
-        _hasExtra1 = true;
+        HasExtra1 = true;
     
     AdditionalProperties[1] = new AdditionalProperty(extraPropertyName2);
     if (!string.IsNullOrWhiteSpace(extraPropertyName2))
-        _hasExtra2 = true;
+        HasExtra2 = true;
+    //..
 </code></pre>
 <p>Here the array is initialized with an array length of 2, and then we initialize both of them by giving them the name of the material property they need to fetch. (we are purposely ignoring the 2 extra checks since they're out of the scope of this page).</p>
 <p>Now during <code>ControlGUI</code> we can use them as we wish (the example below is taken from the <code>DrawTextureSingleLine</code> method, but that method is called inside <code>ControlGUI</code> so for our example is the same thing).</p>
-<pre><code class="lang-csharp" name="Main">if (_hasExtra2)
+<pre><code class="lang-csharp" name="Main">protected void DrawTextureSingleLine(MaterialEditor materialEditor)
 {
-    materialEditor.TexturePropertySingleLine(Content, Property, AdditionalProperties[0].Property, AdditionalProperties[1].Property);
-}
-else if (_hasExtra1)
-{
-    if (AdditionalProperties[0].Property.type == MaterialProperty.PropType.Color &amp;&amp; HasHDRColor)
-        materialEditor.TexturePropertyWithHDRColorFixed(Content, Property, AdditionalProperties[0].Property, true);
+    //..
+    if (HasExtra2)
+    {
+        materialEditor.TexturePropertySingleLine(Content, Property, AdditionalProperties[0].Property, AdditionalProperties[1].Property);
+    }
+    else if (HasExtra1)
+    {
+        if (AdditionalProperties[0].Property.type == MaterialProperty.PropType.Color &amp;&amp; HasHDRColor)
+            materialEditor.TexturePropertyWithHDRColorFixed(Content, Property, AdditionalProperties[0].Property, true);
+        else
+            materialEditor.TexturePropertySingleLine(Content, Property, AdditionalProperties[0].Property);
+    }
     else
-        materialEditor.TexturePropertySingleLine(Content, Property, AdditionalProperties[0].Property);
-}
-else
-{
-    materialEditor.TexturePropertySingleLine(Content, Property);
-}
+    {
+        materialEditor.TexturePropertySingleLine(Content, Property);
+    }
+    //..
 </code></pre><h2 id="overuse-of-iadditionalproperties-interface">Overuse of IAdditionalProperties interface</h2>
 <p>While this is incredibly useful in a lot of cases, a serious risk of abusing this interface is creating giant controls that handle half of the inspector alone.</p>
 <p>Let's take in consideration an hypotetical control that has 2 textures, one for a color map and one for a normal map, at first look it would make sense to merge them in a single control, due to their frequent use together, but it's really not.</p>

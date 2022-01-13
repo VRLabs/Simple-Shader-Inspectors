@@ -71,13 +71,13 @@
 <p>The main concept is simple: you create a section based on your needs, and then you add a number of controls to it with the usual <code>Add*YourControlNameHere*</code>, but applied to your section control instead of <code>this</code>. You can even add a section inside your section if you want.</p>
 <p>Right now there are 3 types of sections available and they each have their own use case.</p>
 <h2 id="section">Section</h2>
-<pre><code class="lang-csharp">    AddSection(string alias);
+<pre><code class="lang-csharp">    AddSection();
 </code></pre>
 <p>This is the basic section with no fancy extras to it, and, as we already seen with the <code>LabelControl</code>, since it doesn't have any material property it will have a default <code>Alias</code> that will be the same for every section control, so it's advised to assign a custom one.</p>
 <p>It also is the base class of the other 2 types of sections, so everything that is available here will be available on those as well.</p>
 <p>Practically speaking it doesn't have too much in terms of functionality, click on the header to toggle the visibility on and off, and <em>that's it</em>.</p>
-<p>You do however have quite a bit of appearance customizability with its chainable methods.
-For example you can change the color of the header background with <code>.SetBackgroundColor</code> or change the label style with <code>.SetLabelStyle</code>, or you can change the background itself by changing its style with <code>.SetBackgroundStyle</code>.</p>
+<p>You do however have quite a bit of appearance customizability with its extension methods.
+For example you can change the color of the header background with <code>.WithBackgroundColor</code> or change the label style with <code>.WithLabelStyle</code>, or you can change the background itself by changing its style with <code>.WithBackgroundStyle</code>.</p>
 <h2 id="activatablesection">ActivatableSection</h2>
 <pre><code class="lang-csharp">    AddActivatableSection( string activatePropertyName, float enableValue = 0, float disableValue = 1);
 </code></pre>
@@ -101,7 +101,7 @@ For example you can change the color of the header background with <code>.SetBac
 <p>The 2 arrows allow you to reorded the section relative to the other sections inside the <code>OrderedSectionGroup</code>, meanwhile the x button will disable the section, making it completely disappear from the inspector until you re-enable it from the section group button.</p>
 <p>All of these icons can be customized by making a new style for them with a different background image.</p>
 <h2 id="using-properties-for-visibility">Using properties for Visibility</h2>
-<p>All the sections we've seen keep memorized their visibility state per each material internally with a <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>, while this is good enough for the majority of use cases, it will lose the memorized state when unity closes, resulting on all sections being closed the next time you open unity.</p>
+<p>All the sections we've seen keep memorized their visibility state per each material internally, while this is good enough for the majority of use cases, it can lose the memorized state when if you haven't edited the material in a while, since the data regarding the state is removed after 30 days of not being used, resulting on all sections being closed when that happens.</p>
 <p>As an alternative solution for that (or in case you want to keep the visibility state tracked in a <code>MaterialProperty</code>) you can use pass another property to the constructor.</p>
 <p>This property will be used to keep track of the visibility state, and you can also add 2 float values to tell the section what value should set when visible and what value set when not visible.</p>
 <div class="NOTE">
@@ -112,7 +112,7 @@ For example you can change the color of the header background with <code>.SetBac
 <h5>Caution</h5>
 <p>You can create float properties in you shader property list without using them in the shader code, just to keep track of the visibility state of section. Just beware that is usually not considered best practice to do that.</p>
 </div>
-<p>When using this method to create sections you also can decide if the property used for the visibility state will be recorded or not when you're <a href="https://docs.unity3d.com/Manual/animeditor-AnimatingAGameObject.html">recording an animation</a> by using <code>SetPropertyAnimatable</code>.</p>
+<p>When using this method to create sections you also can decide if the property used for the visibility state will be recorded or not when you're <a href="https://docs.unity3d.com/Manual/animeditor-AnimatingAGameObject.html">recording an animation</a> by using <code>WithIsPropertyAnimatable</code>.</p>
 </article>
           </div>
           
