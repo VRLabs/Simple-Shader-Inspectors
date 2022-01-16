@@ -2,17 +2,28 @@ const fs = require('fs');
 const exec = require('child_process').execSync;
 
 // Fetch command parameters
+let gitRepo;
+let destinationFolder;
 
-if (!process.argv[2]) {
-    console.log("error: repository not provided");
-    return;
+if (!process.argv[2] && !process.argv[3]) {
+    gitRepo = ".";
+    destinationFolder = ".docsOutput";
+}
+else {
+    gitRepo = process.argv[2];
+    destinationFolder = process.argv[3] ?? ".";
 }
 
-const gitRepo = process.argv[2];
-const destinationFolder = process.argv[3] ?? ".";
+if(gitRepo === ".") {
+    destinationFolder = ".docsOutput";
+}
 
 var isSingleFolder = false;
 if (!gitRepo.endsWith(".git")) {
+    if(gitRepo !== ".") {
+        console.log("warning: when not using a repository the current directory is automatically used instead, regardless of the value set");
+        return;
+    }
     isSingleFolder = true;
 }
 
@@ -27,7 +38,11 @@ createDirectory(destinationDocsFolder);
 // Clone repo - copy folder
 if (isSingleFolder) {
     console.log('Not a repo, copy folder');
-    exec('cp -r  "' + gitRepo + '"/. "' + destinationMasterFolder + '"');
+    if(gitRepo === ".") {
+        exec('ls -A | grep -v ".docsOutput" | xargs cp -r -t "' + destinationMasterFolder + '"');
+    }
+    else
+        exec('cp -r  "' + gitRepo + '/." "' + destinationMasterFolder + '"');
 }
 else {
     console.log('Cloning repo');
@@ -94,7 +109,7 @@ for (let i = 0; i < tags.length; i++) {
     exec('cp -r "' + masterSrcFolder + '/." "' + srcFolder + '"');
 
     // Create csproj for unity references
-    fs.writeFileSync(srcFolder + '/SimpleShaderInspectors.csproj', '<Project Sdk="Microsoft.NET.Sdk">\n\n  <PropertyGroup>\n    <TargetFramework>.NETFramework,Version=v4.8</TargetFramework>\n  </PropertyGroup>\n\n  <ItemGroup>\n    <PackageReference Include="Unity3D.SDK" Version="2018.4.23.1" />\n  </ItemGroup>\n\n</Project>');
+    fs.writeFileSync(srcFolder + '/SimpleShaderInspectors.csproj', '<Project Sdk="Microsoft.NET.Sdk">\n\n  <PropertyGroup>\n    <TargetFramework>.NETFramework,Version=v4.8</TargetFramework>\n  </PropertyGroup>\n\n  <ItemGroup>\n    <PackageReference Include="Unity3D.SDK" Version="2019.4.15.1" />\n  </ItemGroup>\n\n</Project>');
     exec('dotnet restore "' + srcFolder + '/SimpleShaderInspectors.csproj"');
 
     // Copy api content
