@@ -234,7 +234,7 @@ $(function () {
     // Highlight the searching keywords
     function highlightKeywords() {
       var q = url('?q');
-      if (q !== null) {
+      if (q) {
         var keywords = q.split("%20");
         keywords.forEach(function (keyword) {
           if (keyword !== "") {
