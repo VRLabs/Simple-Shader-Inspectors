@@ -43,6 +43,17 @@ namespace VRLabs.SimpleShaderInspectors
                     return true;
             return false;
         }
+        
+        /// <summary>
+        /// Set shader to all materials in the array.
+        /// </summary>
+        /// <param name="materials">Material array this method extends to.</param>
+        /// <param name="shader">Shader to apply.</param>
+        public static void SetShader(this IEnumerable<Material> materials, Shader shader)
+        {
+            foreach (Material m in materials)
+                m.shader = shader;
+        }
 
         /// <summary>
         /// Set override tag to all materials in the array.
