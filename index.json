@@ -2942,7 +2942,7 @@
   "Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.BuildRoot.html": {
     "href": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.BuildRoot.html",
     "title": "Method BuildRoot | Simple Shader Inspectors Documentation",
-    "keywords": "Method BuildRoot BuildRoot() Declaration protected override AdvancedDropdownItem BuildRoot() Returns Type Description AdvancedDropdownItem Overrides AdvancedDropdown.BuildRoot()"
+    "keywords": "Method BuildRoot BuildRoot() Declaration protected override AdvancedDropdownItem BuildRoot() Returns Type Description AdvancedDropdownItem"
   },
   "Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.-ctor.html": {
     "href": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.-ctor.html",
@@ -2952,12 +2952,12 @@
   "Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.html": {
     "href": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.html",
     "title": "Class OrderedSectionDropdown | Simple Shader Inspectors Documentation",
-    "keywords": "Class OrderedSectionDropdown Dropdown used by the OrderedSectionGroup and used to give the user a searchable dropdown to enable disabled sections. Inheritance Object AdvancedDropdown OrderedSectionDropdown Namespace : VRLabs.SimpleShaderInspectors.Controls.Sections Syntax public class OrderedSectionDropdown : AdvancedDropdown Constructors Name Description OrderedSectionDropdown(String, AdvancedDropdownState, IEnumerable<OrderedSection>, Action<OrderedSection>) Main constructor of the OrderedSectionDropdown Methods Name Description BuildRoot() ItemSelected(AdvancedDropdownItem)"
+    "keywords": "Class OrderedSectionDropdown Dropdown used by the OrderedSectionGroup and used to give the user a searchable dropdown to enable disabled sections. Inheritance Object OrderedSectionDropdown Namespace : VRLabs.SimpleShaderInspectors.Controls.Sections Syntax public class OrderedSectionDropdown : AdvancedDropdown Constructors Name Description OrderedSectionDropdown(String, AdvancedDropdownState, IEnumerable<OrderedSection>, Action<OrderedSection>) Main constructor of the OrderedSectionDropdown Methods Name Description BuildRoot() ItemSelected(AdvancedDropdownItem)"
   },
   "Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.ItemSelected.html": {
     "href": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.ItemSelected.html",
     "title": "Method ItemSelected | Simple Shader Inspectors Documentation",
-    "keywords": "Method ItemSelected ItemSelected(AdvancedDropdownItem) Declaration protected override void ItemSelected(AdvancedDropdownItem item) Parameters Type Name Description AdvancedDropdownItem item Overrides AdvancedDropdown.ItemSelected(AdvancedDropdownItem)"
+    "keywords": "Method ItemSelected ItemSelected(AdvancedDropdownItem) Declaration protected override void ItemSelected(AdvancedDropdownItem item) Parameters Type Name Description AdvancedDropdownItem item"
   },
   "Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.AddControl.html": {
     "href": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionGroup.AddControl.html",
@@ -3132,7 +3132,7 @@
   "Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.SectionDropdownItem.html": {
     "href": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.SectionDropdownItem.html",
     "title": "Class SectionDropdownItem | Simple Shader Inspectors Documentation",
-    "keywords": "Class SectionDropdownItem Dropdown item used by OrderedSectionDropdown for its items Inheritance Object AdvancedDropdownItem SectionDropdownItem Implements IComparable Namespace : VRLabs.SimpleShaderInspectors.Controls.Sections Syntax public class SectionDropdownItem : AdvancedDropdownItem, IComparable Constructors Name Description SectionDropdownItem(OrderedSection) Main constructor of SectionDropdownItem Fields Name Description Section"
+    "keywords": "Class SectionDropdownItem Dropdown item used by OrderedSectionDropdown for its items Inheritance Object SectionDropdownItem Namespace : VRLabs.SimpleShaderInspectors.Controls.Sections Syntax public class SectionDropdownItem : AdvancedDropdownItem Constructors Name Description SectionDropdownItem(OrderedSection) Main constructor of SectionDropdownItem Fields Name Description Section"
   },
   "Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.SectionDropdownItem.Section.html": {
     "href": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.SectionDropdownItem.Section.html",

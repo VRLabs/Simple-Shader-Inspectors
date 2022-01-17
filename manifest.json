@@ -261,110 +261,6 @@
       "source_relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.yml",
       "output": {
         ".html": {
-          "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddColorControl.html",
-          "hash": "e6O2ZvHSNtyJZfMIwNlbXrF15YXUKzyDVOhNl9tbsoc="
-        }
-      },
-      "is_incremental": false,
-      "version": "Next",
-      "group": "Next"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.yml",
-      "output": {
-        ".html": {
-          "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithShowAlphaValue.html",
-          "hash": "7J1rjyNX47/VoEdG2hR+UvdpzQklvmlV2gL/Al4hfHY="
-        }
-      },
-      "is_incremental": false,
-      "version": "Next",
-      "group": "Next"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.yml",
-      "output": {
-        ".html": {
-          "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddConditionalControlContainer.html",
-          "hash": "qZ5rWOTa38ElDfxMjjahy/liGHgyGogSG7nNYRRVvHE="
-        }
-      },
-      "is_incremental": false,
-      "version": "Next",
-      "group": "Next"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.yml",
-      "output": {
-        ".html": {
-          "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithIndent.html",
-          "hash": "CwIPq9yVhVslrwiW9ChpvCmjXWtWb5QtHWS4jtKScww="
-        }
-      },
-      "is_incremental": false,
-      "version": "Next",
-      "group": "Next"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.yml",
-      "output": {
-        ".html": {
-          "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddControlContainer.html",
-          "hash": "pCwqwiz6avZjgu52yqqKfQbb8mlr48OP+mU8zWV+Ue4="
-        }
-      },
-      "is_incremental": false,
-      "version": "Next",
-      "group": "Next"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.yml",
-      "output": {
-        ".html": {
-          "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddEnumControl.html",
-          "hash": "RbfyVvjLWI0Uo/9sAFOJ5inuSWrEsyvPn0oXbtqFfWQ="
-        }
-      },
-      "is_incremental": false,
-      "version": "Next",
-      "group": "Next"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.yml",
-      "output": {
-        ".html": {
-          "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl.html",
-          "hash": "LJ6WO6a+w4KUxE941T2zUF+pAp23jtvSXNzvIZ9UztY="
-        }
-      },
-      "is_incremental": false,
-      "version": "Next",
-      "group": "Next"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.yml",
-      "output": {
-        ".html": {
-          "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientButtonStyle.html",
-          "hash": "4NT4LNiX2n69gyDMEGhlf5kLJ5DOb9VV+FZi+ywFAHI="
-        }
-      },
-      "is_incremental": false,
-      "version": "Next",
-      "group": "Next"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.yml",
-      "output": {
-        ".html": {
           "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientSaveButtonStyle.html",
           "hash": "N/v369gpO/m4RRrg+3xeEnrbIjs8Mir3WVXwqcy6UxM="
         }
@@ -562,6 +458,110 @@
         ".html": {
           "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithShowTilingAndOffset.html",
           "hash": "Pe2+vB4n8RYrM9YFpVbXGp0x0cV54yoOgB4IIqvHl5c="
+        }
+      },
+      "is_incremental": false,
+      "version": "Next",
+      "group": "Next"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddColorControl.html",
+          "hash": "e6O2ZvHSNtyJZfMIwNlbXrF15YXUKzyDVOhNl9tbsoc="
+        }
+      },
+      "is_incremental": false,
+      "version": "Next",
+      "group": "Next"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithShowAlphaValue.html",
+          "hash": "7J1rjyNX47/VoEdG2hR+UvdpzQklvmlV2gL/Al4hfHY="
+        }
+      },
+      "is_incremental": false,
+      "version": "Next",
+      "group": "Next"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddConditionalControlContainer.html",
+          "hash": "qZ5rWOTa38ElDfxMjjahy/liGHgyGogSG7nNYRRVvHE="
+        }
+      },
+      "is_incremental": false,
+      "version": "Next",
+      "group": "Next"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithIndent.html",
+          "hash": "CwIPq9yVhVslrwiW9ChpvCmjXWtWb5QtHWS4jtKScww="
+        }
+      },
+      "is_incremental": false,
+      "version": "Next",
+      "group": "Next"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddControlContainer.html",
+          "hash": "pCwqwiz6avZjgu52yqqKfQbb8mlr48OP+mU8zWV+Ue4="
+        }
+      },
+      "is_incremental": false,
+      "version": "Next",
+      "group": "Next"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddEnumControl.html",
+          "hash": "RbfyVvjLWI0Uo/9sAFOJ5inuSWrEsyvPn0oXbtqFfWQ="
+        }
+      },
+      "is_incremental": false,
+      "version": "Next",
+      "group": "Next"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddGradientTextureControl.html",
+          "hash": "LJ6WO6a+w4KUxE941T2zUF+pAp23jtvSXNzvIZ9UztY="
+        }
+      },
+      "is_incremental": false,
+      "version": "Next",
+      "group": "Next"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGradientButtonStyle.html",
+          "hash": "4NT4LNiX2n69gyDMEGhlf5kLJ5DOb9VV+FZi+ywFAHI="
         }
       },
       "is_incremental": false,
@@ -898,45 +898,6 @@
       "source_relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.yml",
       "output": {
         ".html": {
-          "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.AddControl.html",
-          "hash": "MTF+UH40dp13aXsbRU40gFAk6RZQHWZwKyfypt6N6CM="
-        }
-      },
-      "is_incremental": false,
-      "version": "Next",
-      "group": "Next"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.GetControlList.html",
-          "hash": "OBBVqgLIoQZYQ7qlh6Ijm/CBwl+tXi5yIvwTkqXEhFU="
-        }
-      },
-      "is_incremental": false,
-      "version": "Next",
-      "group": "Next"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.html",
-          "hash": "3YvS3jreA46ZQTrlmSwUx0mGVuc+REVh6KeaxQlyB1c="
-        }
-      },
-      "is_incremental": false,
-      "version": "Next",
-      "group": "Next"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.yml",
-      "output": {
-        ".html": {
           "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.Controls.html",
           "hash": "+FNT8CNmVg+d0NU/K3xg1oAzb3qeCnv54Ms7NgIFA3Q="
         }
@@ -991,6 +952,45 @@
         ".html": {
           "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.ControlGUI.html",
           "hash": "6P4wxvzidSr263DxBMOqL+JTLKXEtEP6xLRNR6kWdDg="
+        }
+      },
+      "is_incremental": false,
+      "version": "Next",
+      "group": "Next"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.AddControl.html",
+          "hash": "MTF+UH40dp13aXsbRU40gFAk6RZQHWZwKyfypt6N6CM="
+        }
+      },
+      "is_incremental": false,
+      "version": "Next",
+      "group": "Next"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.GetControlList.html",
+          "hash": "OBBVqgLIoQZYQ7qlh6Ijm/CBwl+tXi5yIvwTkqXEhFU="
+        }
+      },
+      "is_incremental": false,
+      "version": "Next",
+      "group": "Next"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.ConditionalControlContainer.html",
+          "hash": "3YvS3jreA46ZQTrlmSwUx0mGVuc+REVh6KeaxQlyB1c="
         }
       },
       "is_incremental": false,
@@ -2238,7 +2238,7 @@
       "output": {
         ".html": {
           "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.-ctor.html",
-          "hash": "dU5IKkxGBfapqTAgkl/CEEDZddWzo8ApY1rkitFgQE4="
+          "hash": "3f8rNpAhY52xGe6uIHgUZ+2ck9KqpB1vImB038kjA9k="
         }
       },
       "is_incremental": false,
@@ -2251,7 +2251,7 @@
       "output": {
         ".html": {
           "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.BuildRoot.html",
-          "hash": "ImB3wm7O1DUDnRVz9eQZ+REaSPUHHMQQaFEkJraLps4="
+          "hash": "o/s69flAtfINwwjUIuDQl41RBLDZoachXcn0HzX03Dw="
         }
       },
       "is_incremental": false,
@@ -2264,7 +2264,7 @@
       "output": {
         ".html": {
           "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.ItemSelected.html",
-          "hash": "Jey/vahF35qBrHzsOECzjS5jRNWjWjefutcm/pIh/FA="
+          "hash": "Gp0X1TJVrU/lH3YPxBCEFpj/VI4V03byPa1OtIWSD6U="
         }
       },
       "is_incremental": false,
@@ -2277,7 +2277,7 @@
       "output": {
         ".html": {
           "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.html",
-          "hash": "mYSmMKVnlPjm6wjnq3PzwnWjK+S0MtPCGktf4gcBV/Q="
+          "hash": "mvxjGERiYZiW65rwUodrgaagk213f/DflzbR51KJIbc="
         }
       },
       "is_incremental": false,
@@ -2745,7 +2745,7 @@
       "output": {
         ".html": {
           "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.SectionDropdownItem.html",
-          "hash": "89mWPsh/cz/6GtUE2wbsiqwVps8UHhMTqYk9BHbXpD4="
+          "hash": "51aH7cGmbbUYTKLBCzSRFe2/Igh3DHf1K36ZRwoMqXQ="
         }
       },
       "is_incremental": false,
@@ -3901,19 +3901,6 @@
       "source_relative_path": "Next/api/VRLabs.SimpleShaderInspectors.LimitAccessScopeAttribute.yml",
       "output": {
         ".html": {
-          "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.LimitAccessScopeAttribute.BaseType.html",
-          "hash": "AoV7w0iQCSdnpB/xYmyZZAHepZuYYjwMds2v6HndrH4="
-        }
-      },
-      "is_incremental": false,
-      "version": "Next",
-      "group": "Next"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "Next/api/VRLabs.SimpleShaderInspectors.LimitAccessScopeAttribute.yml",
-      "output": {
-        ".html": {
           "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.LimitAccessScopeAttribute.-ctor.html",
           "hash": "jiZvmG5TsMk72HkXzHyRSoyjnNwjXMPq9ILbtTWvwbc="
         }
@@ -3929,6 +3916,19 @@
         ".html": {
           "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.LimitAccessScopeAttribute.html",
           "hash": "v5TXYXKHZO08FCRjeN76SQryK+f4InOfJ6pRUTV9muI="
+        }
+      },
+      "is_incremental": false,
+      "version": "Next",
+      "group": "Next"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Next/api/VRLabs.SimpleShaderInspectors.LimitAccessScopeAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.LimitAccessScopeAttribute.BaseType.html",
+          "hash": "AoV7w0iQCSdnpB/xYmyZZAHepZuYYjwMds2v6HndrH4="
         }
       },
       "is_incremental": false,
@@ -5409,19 +5409,6 @@
       "source_relative_path": "Next/api/VRLabs.SimpleShaderInspectors.TimedDictionary-2.yml",
       "output": {
         ".html": {
-          "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.TimedDictionary-2.html",
-          "hash": "FhBUlAj65hvXp/h3w4uKURCiKmZvAW9ZK/7qsA967sg="
-        }
-      },
-      "is_incremental": false,
-      "version": "Next",
-      "group": "Next"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "Next/api/VRLabs.SimpleShaderInspectors.TimedDictionary-2.yml",
-      "output": {
-        ".html": {
           "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.TimedDictionary-2.Keys.html",
           "hash": "aUq2R4lB/BAiz+JJ+H2WyjNzLsdJ2nErnMRhF2ndeoE="
         }
@@ -5489,6 +5476,19 @@
         ".html": {
           "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.TimedDictionary-2.GetSerializedDictionary.html",
           "hash": "xmkH4jdGaFxl8chHQVvfUSozHxkyr8Fv2vijwLzZyk4="
+        }
+      },
+      "is_incremental": false,
+      "version": "Next",
+      "group": "Next"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Next/api/VRLabs.SimpleShaderInspectors.TimedDictionary-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Next/api/VRLabs.SimpleShaderInspectors.TimedDictionary-2.html",
+          "hash": "FhBUlAj65hvXp/h3w4uKURCiKmZvAW9ZK/7qsA967sg="
         }
       },
       "is_incremental": false,
@@ -6933,32 +6933,6 @@
       "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.EnumControl-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.EnumControl-1.ControlGUI.html",
-          "hash": "1ZXFUQjkO+9xDdwCaSj1Ui6UBn/I155UXB/w67/0iOI="
-        }
-      },
-      "is_incremental": false,
-      "version": "v0.2.2",
-      "group": "v0.2.2"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.EnumControl-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.EnumControl-1.html",
-          "hash": "YQmFsY/b679Y2TT9I2UhnofYEPnvlxgUZm1nn0mMaN4="
-        }
-      },
-      "is_incremental": false,
-      "version": "v0.2.2",
-      "group": "v0.2.2"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.EnumControl-1.yml",
-      "output": {
-        ".html": {
           "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.EnumControl-1.SelectedOption.html",
           "hash": "NaRI4A/tDe6HeX/Lz/89PIgPxYGTOyJmAvyx2vZRW/A="
         }
@@ -6974,6 +6948,32 @@
         ".html": {
           "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.EnumControl-1.-ctor.html",
           "hash": "9I0DFyYJ3eVlHfHgt8Tqo/Phnu5halskdFp1LUg/iQM="
+        }
+      },
+      "is_incremental": false,
+      "version": "v0.2.2",
+      "group": "v0.2.2"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.EnumControl-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.EnumControl-1.ControlGUI.html",
+          "hash": "1ZXFUQjkO+9xDdwCaSj1Ui6UBn/I155UXB/w67/0iOI="
+        }
+      },
+      "is_incremental": false,
+      "version": "v0.2.2",
+      "group": "v0.2.2"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.EnumControl-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.EnumControl-1.html",
+          "hash": "YQmFsY/b679Y2TT9I2UhnofYEPnvlxgUZm1nn0mMaN4="
         }
       },
       "is_incremental": false,
@@ -8116,6 +8116,123 @@
       "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
       "output": {
         ".html": {
+          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.showValue.html",
+          "hash": "9qBJutkhrUU2IrPCqfZDWLelv6OYG+3Gg+hiDxGiWTE="
+        }
+      },
+      "is_incremental": false,
+      "version": "v0.2.2",
+      "group": "v0.2.2"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.hideValue.html",
+          "hash": "IHzfFGTGJFniwvwNEfRZkKtigSYmsPKVuj6onMGW4Ko="
+        }
+      },
+      "is_incremental": false,
+      "version": "v0.2.2",
+      "group": "v0.2.2"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.useDictionary.html",
+          "hash": "YntjMpQ3sT0aMWgvs1hn8LegZ2TSupV+plB8HHQhvL4="
+        }
+      },
+      "is_incremental": false,
+      "version": "v0.2.2",
+      "group": "v0.2.2"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.dictionaryKey.html",
+          "hash": "92pkqAdoMbcR/vRrmDwfTf+ALeEg9FddtCQWrmQZpMA="
+        }
+      },
+      "is_incremental": false,
+      "version": "v0.2.2",
+      "group": "v0.2.2"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.firstCycle.html",
+          "hash": "p3TVZtLvB6xSLJOGwXxPCEOZNFa2r74PyHuH47w2exs="
+        }
+      },
+      "is_incremental": false,
+      "version": "v0.2.2",
+      "group": "v0.2.2"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.Controls.html",
+          "hash": "8dwXOjpFUGOLZoTor+8DBSKmzJ1nixpg5i3HsxYQB3w="
+        }
+      },
+      "is_incremental": false,
+      "version": "v0.2.2",
+      "group": "v0.2.2"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.NonAnimatablePropertyChanged.html",
+          "hash": "UdnTnNzbyXOfn9yjlpsnJOnGvuW1ZZoqwm5RN+77ysI="
+        }
+      },
+      "is_incremental": false,
+      "version": "v0.2.2",
+      "group": "v0.2.2"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.Show.html",
+          "hash": "7PddcMm/ICCyFEcjgSfjoH+a/fLvJIHNQLjVk5p8kxc="
+        }
+      },
+      "is_incremental": false,
+      "version": "v0.2.2",
+      "group": "v0.2.2"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.LabelStyle.html",
+          "hash": "J/ZgMy2jLRYtYHvAfhpa7606/EQ3IAEnXQSYQO/0ySE="
+        }
+      },
+      "is_incremental": false,
+      "version": "v0.2.2",
+      "group": "v0.2.2"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
+      "output": {
+        ".html": {
           "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.BackgroundStyle.html",
           "hash": "cqhE8pQdiYAOh0a2twF7VQQwhPoIpTn69iczY51KJb8="
         }
@@ -8295,123 +8412,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.showValue.html",
-          "hash": "9qBJutkhrUU2IrPCqfZDWLelv6OYG+3Gg+hiDxGiWTE="
-        }
-      },
-      "is_incremental": false,
-      "version": "v0.2.2",
-      "group": "v0.2.2"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.hideValue.html",
-          "hash": "IHzfFGTGJFniwvwNEfRZkKtigSYmsPKVuj6onMGW4Ko="
-        }
-      },
-      "is_incremental": false,
-      "version": "v0.2.2",
-      "group": "v0.2.2"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.useDictionary.html",
-          "hash": "YntjMpQ3sT0aMWgvs1hn8LegZ2TSupV+plB8HHQhvL4="
-        }
-      },
-      "is_incremental": false,
-      "version": "v0.2.2",
-      "group": "v0.2.2"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.dictionaryKey.html",
-          "hash": "92pkqAdoMbcR/vRrmDwfTf+ALeEg9FddtCQWrmQZpMA="
-        }
-      },
-      "is_incremental": false,
-      "version": "v0.2.2",
-      "group": "v0.2.2"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.firstCycle.html",
-          "hash": "p3TVZtLvB6xSLJOGwXxPCEOZNFa2r74PyHuH47w2exs="
-        }
-      },
-      "is_incremental": false,
-      "version": "v0.2.2",
-      "group": "v0.2.2"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.Controls.html",
-          "hash": "8dwXOjpFUGOLZoTor+8DBSKmzJ1nixpg5i3HsxYQB3w="
-        }
-      },
-      "is_incremental": false,
-      "version": "v0.2.2",
-      "group": "v0.2.2"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.NonAnimatablePropertyChanged.html",
-          "hash": "UdnTnNzbyXOfn9yjlpsnJOnGvuW1ZZoqwm5RN+77ysI="
-        }
-      },
-      "is_incremental": false,
-      "version": "v0.2.2",
-      "group": "v0.2.2"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.Show.html",
-          "hash": "7PddcMm/ICCyFEcjgSfjoH+a/fLvJIHNQLjVk5p8kxc="
-        }
-      },
-      "is_incremental": false,
-      "version": "v0.2.2",
-      "group": "v0.2.2"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.LabelStyle.html",
-          "hash": "J/ZgMy2jLRYtYHvAfhpa7606/EQ3IAEnXQSYQO/0ySE="
-        }
-      },
-      "is_incremental": false,
-      "version": "v0.2.2",
-      "group": "v0.2.2"
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.Sections.yml",
       "output": {
         ".html": {
@@ -8469,32 +8469,6 @@
         ".html": {
           "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.SpaceControl.html",
           "hash": "HD5UZSw6OB5/UOZ/0IsSTj9ELnGmRvBE9+G5UXHS5O4="
-        }
-      },
-      "is_incremental": false,
-      "version": "v0.2.2",
-      "group": "v0.2.2"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.TextureControl._hasExtra1.html",
-          "hash": "bkK3LJBYo36glwT41xlEuwwAS34xJxReOrusdq2NsFU="
-        }
-      },
-      "is_incremental": false,
-      "version": "v0.2.2",
-      "group": "v0.2.2"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.TextureControl._hasExtra2.html",
-          "hash": "9PhymeXr0HsEQOuKZ6T/ym24trovU9oDJ0tJSRj1rAs="
         }
       },
       "is_incremental": false,
@@ -8659,11 +8633,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.yml",
+      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.yml",
       "output": {
         ".html": {
-          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.AdditionalContent.html",
-          "hash": "J+H62/4aoJk7R3gn8G01S8U+XPAWck3HkW6087qGdc4="
+          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.TextureControl._hasExtra1.html",
+          "hash": "bkK3LJBYo36glwT41xlEuwwAS34xJxReOrusdq2NsFU="
         }
       },
       "is_incremental": false,
@@ -8672,37 +8646,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.yml",
+      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.TextureControl.yml",
       "output": {
         ".html": {
-          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.-ctor.html",
-          "hash": "dD7QilwNdh/+AQ5hLda0l8+MeGN3NQhQzraxqpyrwZU="
-        }
-      },
-      "is_incremental": false,
-      "version": "v0.2.2",
-      "group": "v0.2.2"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.ControlGUI.html",
-          "hash": "fG7m1JINCFxvS11ftPQ06zBr1CN42MixFJTpHmGJdLM="
-        }
-      },
-      "is_incremental": false,
-      "version": "v0.2.2",
-      "group": "v0.2.2"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.html",
-          "hash": "fYI7Kkj5Og37N0eHF8drpp4G+W/2zOn71xYzUTuzzHU="
+          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.TextureControl._hasExtra2.html",
+          "hash": "9PhymeXr0HsEQOuKZ6T/ym24trovU9oDJ0tJSRj1rAs="
         }
       },
       "is_incremental": false,
@@ -8807,6 +8755,58 @@
         ".html": {
           "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.GeneratorInputColor.html",
           "hash": "y/sh8zGnWf+Fbmsy/HRdv4+57UA4myUhb3OJXo7GM4o="
+        }
+      },
+      "is_incremental": false,
+      "version": "v0.2.2",
+      "group": "v0.2.2"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.AdditionalContent.html",
+          "hash": "J+H62/4aoJk7R3gn8G01S8U+XPAWck3HkW6087qGdc4="
+        }
+      },
+      "is_incremental": false,
+      "version": "v0.2.2",
+      "group": "v0.2.2"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.-ctor.html",
+          "hash": "dD7QilwNdh/+AQ5hLda0l8+MeGN3NQhQzraxqpyrwZU="
+        }
+      },
+      "is_incremental": false,
+      "version": "v0.2.2",
+      "group": "v0.2.2"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.ControlGUI.html",
+          "hash": "fG7m1JINCFxvS11ftPQ06zBr1CN42MixFJTpHmGJdLM="
+        }
+      },
+      "is_incremental": false,
+      "version": "v0.2.2",
+      "group": "v0.2.2"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.html",
+          "hash": "fYI7Kkj5Og37N0eHF8drpp4G+W/2zOn71xYzUTuzzHU="
         }
       },
       "is_incremental": false,
@@ -9117,19 +9117,6 @@
       "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.VertexStreamsControl.yml",
       "output": {
         ".html": {
-          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.VertexStreamsControl.html",
-          "hash": "sUBQR6xH7XAj5obyVENtMSfIH8h0LsodCZ1q7JwTuLQ="
-        }
-      },
-      "is_incremental": false,
-      "version": "v0.2.2",
-      "group": "v0.2.2"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.VertexStreamsControl.yml",
-      "output": {
-        ".html": {
           "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.VertexStreamsControl.AdditionalContent.html",
           "hash": "Vp6os9aBfGo1LRntzOEyvjfU8cwpryZC0dwvWVt5cJQ="
         }
@@ -9184,6 +9171,19 @@
         ".html": {
           "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.VertexStreamsControl.RemoveVertexStream.html",
           "hash": "eJFGJsSXYFSxMv29THD6rgAvzam0iKrOOTylc62sJCs="
+        }
+      },
+      "is_incremental": false,
+      "version": "v0.2.2",
+      "group": "v0.2.2"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.VertexStreamsControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/VRLabs.SimpleShaderInspectors.Controls.VertexStreamsControl.html",
+          "hash": "sUBQR6xH7XAj5obyVENtMSfIH8h0LsodCZ1q7JwTuLQ="
         }
       },
       "is_incremental": false,
@@ -11683,19 +11683,6 @@
       "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.AdditionalContentExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.AdditionalContentExtensions.InizializeLocalizationWithNames.html",
-          "hash": "TcMvcu15uqH5DE/P88Jy6jOSnYi2Zy8PRIa1+ZpHnEw="
-        }
-      },
-      "is_incremental": false,
-      "version": "v0.1.0",
-      "group": "v0.1.0"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.AdditionalContentExtensions.yml",
-      "output": {
-        ".html": {
           "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.AdditionalContentExtensions.CreatLocalizationArrayFromNames.html",
           "hash": "uFj14Q0fUzxxi+WH3ZhrKXyRE3NBgjLLtf77oCB9Xp0="
         }
@@ -11711,6 +11698,19 @@
         ".html": {
           "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.AdditionalContentExtensions.html",
           "hash": "gTc9AYUtGCXAwtqsYEV8V/HhX1hIvUPD0YXWNrK6ugo="
+        }
+      },
+      "is_incremental": false,
+      "version": "v0.1.0",
+      "group": "v0.1.0"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.AdditionalContentExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.AdditionalContentExtensions.InizializeLocalizationWithNames.html",
+          "hash": "TcMvcu15uqH5DE/P88Jy6jOSnYi2Zy8PRIa1+ZpHnEw="
         }
       },
       "is_incremental": false,
@@ -13373,175 +13373,6 @@
       "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
       "output": {
         ".html": {
-          "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.BackgroundColor.html",
-          "hash": "4cDBAmKySEcP8qCd66+7oxFD1vfZGTwKREjAR7u0ris="
-        }
-      },
-      "is_incremental": false,
-      "version": "v0.1.0",
-      "group": "v0.1.0"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
-      "output": {
-        ".html": {
-          "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.-ctor.html",
-          "hash": "9fzpcsrtk3HC48s+qMRFesXpueiuldXG0ioRhKH0m/U="
-        }
-      },
-      "is_incremental": false,
-      "version": "v0.1.0",
-      "group": "v0.1.0"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
-      "output": {
-        ".html": {
-          "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.SetupEnabled.html",
-          "hash": "RW8qQ3xPPvMFA1zIbsbup/m5CJi3oD6v65cBkHk0P6c="
-        }
-      },
-      "is_incremental": false,
-      "version": "v0.1.0",
-      "group": "v0.1.0"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
-      "output": {
-        ".html": {
-          "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.UpdateEnabled.html",
-          "hash": "/fQtfA7fAei4qfjmWYGbAcN+5GAP3h5bH4Tkbv5CLKw="
-        }
-      },
-      "is_incremental": false,
-      "version": "v0.1.0",
-      "group": "v0.1.0"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
-      "output": {
-        ".html": {
-          "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.ControlGUI.html",
-          "hash": "2eSD4XlXaPeqJfGd8CS911AUZ+4vL/q7tzlQ7q6lAWE="
-        }
-      },
-      "is_incremental": false,
-      "version": "v0.1.0",
-      "group": "v0.1.0"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
-      "output": {
-        ".html": {
-          "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.DrawControls.html",
-          "hash": "nt2lrSPgklyAx3cRhPC+WyGtwIc5VOUDAn0Ic3AsxQU="
-        }
-      },
-      "is_incremental": false,
-      "version": "v0.1.0",
-      "group": "v0.1.0"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
-      "output": {
-        ".html": {
-          "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.UpdateNonAnimatableProperty.html",
-          "hash": "6/IPvNRBZsfPbp5MLv3CMw9bRJKB47CKCnZSUAlBGQw="
-        }
-      },
-      "is_incremental": false,
-      "version": "v0.1.0",
-      "group": "v0.1.0"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
-      "output": {
-        ".html": {
-          "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.html",
-          "hash": "Vk0CcL0uFtdLQpy/aerjz82Kijzhuk/3JQbujBbEVPM="
-        }
-      },
-      "is_incremental": false,
-      "version": "v0.1.0",
-      "group": "v0.1.0"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
-      "output": {
-        ".html": {
-          "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.AreControlsInside.html",
-          "hash": "R2VoxMQ3LSnaHxUWmvZNrqpEI40dVy8lGXpezumWl8Q="
-        }
-      },
-      "is_incremental": false,
-      "version": "v0.1.0",
-      "group": "v0.1.0"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
-      "output": {
-        ".html": {
-          "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.NonAnimatablePropertyChanged.html",
-          "hash": "v1yrb9n+h9DFEz+q37eBi2eBYayJbhixaTlhBVRefEM="
-        }
-      },
-      "is_incremental": false,
-      "version": "v0.1.0",
-      "group": "v0.1.0"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
-      "output": {
-        ".html": {
-          "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.IsPropertyAnimatable.html",
-          "hash": "ALbOd+BJseo6/hfvIJu66day9DJMNOpDzbi8VOzNjSA="
-        }
-      },
-      "is_incremental": false,
-      "version": "v0.1.0",
-      "group": "v0.1.0"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
-      "output": {
-        ".html": {
-          "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.ShowFoldoutArrow.html",
-          "hash": "dqdvCNP87+2i1ZNjEBEGG2xXQILElnmKxYn+pRZEVBg="
-        }
-      },
-      "is_incremental": false,
-      "version": "v0.1.0",
-      "group": "v0.1.0"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
-      "output": {
-        ".html": {
-          "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.Show.html",
-          "hash": "CHFixZBlviVb4SQJCfgY7jNYc84BNqytr4b9yp484rY="
-        }
-      },
-      "is_incremental": false,
-      "version": "v0.1.0",
-      "group": "v0.1.0"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
-      "output": {
-        ".html": {
           "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.showValue.html",
           "hash": "nk5ZAbjPt0W/pvlKTxqrWVrdIIv7lsu2Hg8Wtp8qfl4="
         }
@@ -13635,6 +13466,175 @@
         ".html": {
           "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.BackgroundStyle.html",
           "hash": "196y5/64Dt5QFP9pAk7EUoCqRTh5I486IBlZ/p8CZco="
+        }
+      },
+      "is_incremental": false,
+      "version": "v0.1.0",
+      "group": "v0.1.0"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
+      "output": {
+        ".html": {
+          "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.AreControlsInside.html",
+          "hash": "R2VoxMQ3LSnaHxUWmvZNrqpEI40dVy8lGXpezumWl8Q="
+        }
+      },
+      "is_incremental": false,
+      "version": "v0.1.0",
+      "group": "v0.1.0"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
+      "output": {
+        ".html": {
+          "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.NonAnimatablePropertyChanged.html",
+          "hash": "v1yrb9n+h9DFEz+q37eBi2eBYayJbhixaTlhBVRefEM="
+        }
+      },
+      "is_incremental": false,
+      "version": "v0.1.0",
+      "group": "v0.1.0"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
+      "output": {
+        ".html": {
+          "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.IsPropertyAnimatable.html",
+          "hash": "ALbOd+BJseo6/hfvIJu66day9DJMNOpDzbi8VOzNjSA="
+        }
+      },
+      "is_incremental": false,
+      "version": "v0.1.0",
+      "group": "v0.1.0"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
+      "output": {
+        ".html": {
+          "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.ShowFoldoutArrow.html",
+          "hash": "dqdvCNP87+2i1ZNjEBEGG2xXQILElnmKxYn+pRZEVBg="
+        }
+      },
+      "is_incremental": false,
+      "version": "v0.1.0",
+      "group": "v0.1.0"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
+      "output": {
+        ".html": {
+          "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.Show.html",
+          "hash": "CHFixZBlviVb4SQJCfgY7jNYc84BNqytr4b9yp484rY="
+        }
+      },
+      "is_incremental": false,
+      "version": "v0.1.0",
+      "group": "v0.1.0"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
+      "output": {
+        ".html": {
+          "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.BackgroundColor.html",
+          "hash": "4cDBAmKySEcP8qCd66+7oxFD1vfZGTwKREjAR7u0ris="
+        }
+      },
+      "is_incremental": false,
+      "version": "v0.1.0",
+      "group": "v0.1.0"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
+      "output": {
+        ".html": {
+          "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.-ctor.html",
+          "hash": "9fzpcsrtk3HC48s+qMRFesXpueiuldXG0ioRhKH0m/U="
+        }
+      },
+      "is_incremental": false,
+      "version": "v0.1.0",
+      "group": "v0.1.0"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
+      "output": {
+        ".html": {
+          "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.SetupEnabled.html",
+          "hash": "RW8qQ3xPPvMFA1zIbsbup/m5CJi3oD6v65cBkHk0P6c="
+        }
+      },
+      "is_incremental": false,
+      "version": "v0.1.0",
+      "group": "v0.1.0"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
+      "output": {
+        ".html": {
+          "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.UpdateEnabled.html",
+          "hash": "/fQtfA7fAei4qfjmWYGbAcN+5GAP3h5bH4Tkbv5CLKw="
+        }
+      },
+      "is_incremental": false,
+      "version": "v0.1.0",
+      "group": "v0.1.0"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
+      "output": {
+        ".html": {
+          "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.ControlGUI.html",
+          "hash": "2eSD4XlXaPeqJfGd8CS911AUZ+4vL/q7tzlQ7q6lAWE="
+        }
+      },
+      "is_incremental": false,
+      "version": "v0.1.0",
+      "group": "v0.1.0"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
+      "output": {
+        ".html": {
+          "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.DrawControls.html",
+          "hash": "nt2lrSPgklyAx3cRhPC+WyGtwIc5VOUDAn0Ic3AsxQU="
+        }
+      },
+      "is_incremental": false,
+      "version": "v0.1.0",
+      "group": "v0.1.0"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
+      "output": {
+        ".html": {
+          "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.UpdateNonAnimatableProperty.html",
+          "hash": "6/IPvNRBZsfPbp5MLv3CMw9bRJKB47CKCnZSUAlBGQw="
+        }
+      },
+      "is_incremental": false,
+      "version": "v0.1.0",
+      "group": "v0.1.0"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.yml",
+      "output": {
+        ".html": {
+          "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.Controls.Sections.Section.html",
+          "hash": "Vk0CcL0uFtdLQpy/aerjz82Kijzhuk/3JQbujBbEVPM="
         }
       },
       "is_incremental": false,
@@ -14842,45 +14842,6 @@
       "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.SSIExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.SSIExtensions.SetKeyword.html",
-          "hash": "nPxnj+8X0powBXsjkPGV5PHKtL5cwxvrrbXzq0m1oKw="
-        }
-      },
-      "is_incremental": false,
-      "version": "v0.1.0",
-      "group": "v0.1.0"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.SSIExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.SSIExtensions.IsKeywordMixedValue.html",
-          "hash": "3JQjADiMbNLiKNZawQ50n/U1lwhJSlBr8ZuFf+Qr29E="
-        }
-      },
-      "is_incremental": false,
-      "version": "v0.1.0",
-      "group": "v0.1.0"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.SSIExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.SSIExtensions.SetOverrideTag.html",
-          "hash": "3jCOAq/vDduqDmcyGmFdl8dJgqHSCS8Hnj6kbxPUxwg="
-        }
-      },
-      "is_incremental": false,
-      "version": "v0.1.0",
-      "group": "v0.1.0"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.SSIExtensions.yml",
-      "output": {
-        ".html": {
           "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.SSIExtensions.SetInt.html",
           "hash": "wVfuQ2tDEuR0BcSfJocge6m7o2E7CgPA88De+Rc5SvQ="
         }
@@ -14922,6 +14883,45 @@
         ".html": {
           "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.SSIExtensions.html",
           "hash": "GCqh8E81/lShaGGLQghcOy7JX25seoXae2TFiSSXG4Q="
+        }
+      },
+      "is_incremental": false,
+      "version": "v0.1.0",
+      "group": "v0.1.0"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.SSIExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.SSIExtensions.SetKeyword.html",
+          "hash": "nPxnj+8X0powBXsjkPGV5PHKtL5cwxvrrbXzq0m1oKw="
+        }
+      },
+      "is_incremental": false,
+      "version": "v0.1.0",
+      "group": "v0.1.0"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.SSIExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.SSIExtensions.IsKeywordMixedValue.html",
+          "hash": "3JQjADiMbNLiKNZawQ50n/U1lwhJSlBr8ZuFf+Qr29E="
+        }
+      },
+      "is_incremental": false,
+      "version": "v0.1.0",
+      "group": "v0.1.0"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.SSIExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "v0.1.0/api/VRLabs.SimpleShaderInspectors.SSIExtensions.SetOverrideTag.html",
+          "hash": "3jCOAq/vDduqDmcyGmFdl8dJgqHSCS8Hnj6kbxPUxwg="
         }
       },
       "is_incremental": false,

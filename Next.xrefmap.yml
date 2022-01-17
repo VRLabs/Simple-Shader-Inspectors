@@ -2185,13 +2185,13 @@ references:
   commentId: T:VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown
   fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown
   nameWithType: OrderedSectionDropdown
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.#ctor(System.String,UnityEditor.IMGUI.Controls.AdvancedDropdownState,System.Collections.Generic.IEnumerable{VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection},System.Action{VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection})
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.#ctor(System.String,AdvancedDropdownState,System.Collections.Generic.IEnumerable{VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection},System.Action{VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection})
   name: OrderedSectionDropdown(String, AdvancedDropdownState, IEnumerable<OrderedSection>, Action<OrderedSection>)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.-ctor.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionDropdown__ctor_System_String_UnityEditor_IMGUI_Controls_AdvancedDropdownState_System_Collections_Generic_IEnumerable_VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection__System_Action_VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection__
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.#ctor(System.String,UnityEditor.IMGUI.Controls.AdvancedDropdownState,System.Collections.Generic.IEnumerable{VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection},System.Action{VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection})
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.-ctor.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionDropdown__ctor_System_String_AdvancedDropdownState_System_Collections_Generic_IEnumerable_VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection__System_Action_VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection__
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.#ctor(System.String,AdvancedDropdownState,System.Collections.Generic.IEnumerable{VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection},System.Action{VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection})
   name.vb: OrderedSectionDropdown(String, AdvancedDropdownState, IEnumerable(Of OrderedSection), Action(Of OrderedSection))
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.OrderedSectionDropdown(System.String, UnityEditor.IMGUI.Controls.AdvancedDropdownState, System.Collections.Generic.IEnumerable<VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection>, System.Action<VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection>)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.OrderedSectionDropdown(System.String, UnityEditor.IMGUI.Controls.AdvancedDropdownState, System.Collections.Generic.IEnumerable(Of VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection), System.Action(Of VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection))
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.OrderedSectionDropdown(System.String, AdvancedDropdownState, System.Collections.Generic.IEnumerable<VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection>, System.Action<VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection>)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.OrderedSectionDropdown(System.String, AdvancedDropdownState, System.Collections.Generic.IEnumerable(Of VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection), System.Action(Of VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection))
   nameWithType: OrderedSectionDropdown.OrderedSectionDropdown(String, AdvancedDropdownState, IEnumerable<OrderedSection>, Action<OrderedSection>)
   nameWithType.vb: OrderedSectionDropdown.OrderedSectionDropdown(String, AdvancedDropdownState, IEnumerable(Of OrderedSection), Action(Of OrderedSection))
 - uid: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.#ctor*
@@ -2212,11 +2212,11 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.BuildRoot
   fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.BuildRoot
   nameWithType: OrderedSectionDropdown.BuildRoot
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.ItemSelected(UnityEditor.IMGUI.Controls.AdvancedDropdownItem)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.ItemSelected(AdvancedDropdownItem)
   name: ItemSelected(AdvancedDropdownItem)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.ItemSelected.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionDropdown_ItemSelected_UnityEditor_IMGUI_Controls_AdvancedDropdownItem_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.ItemSelected(UnityEditor.IMGUI.Controls.AdvancedDropdownItem)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.ItemSelected(UnityEditor.IMGUI.Controls.AdvancedDropdownItem)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.ItemSelected.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionDropdown_ItemSelected_AdvancedDropdownItem_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.ItemSelected(AdvancedDropdownItem)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.ItemSelected(AdvancedDropdownItem)
   nameWithType: OrderedSectionDropdown.ItemSelected(AdvancedDropdownItem)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.ItemSelected*
   name: ItemSelected
