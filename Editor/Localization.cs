@@ -63,7 +63,7 @@ namespace VRLabs.SimpleShaderInspectors
             }
         }
 
-        private static List<PropertyInfo> SetPropertiesLocalization(IEnumerable<SimpleControl> controls, PropertyInfo[] propertyInfos, List<PropertyInfo> missingInfo, bool recursive = true)
+        internal static List<PropertyInfo> SetPropertiesLocalization(IEnumerable<SimpleControl> controls, PropertyInfo[] propertyInfos, List<PropertyInfo> missingInfo, bool recursive = true)
         {
             if(missingInfo == null) missingInfo = new List<PropertyInfo>();
             foreach (var control in controls)
