@@ -229,6 +229,39 @@ namespace VRLabs.SimpleShaderInspectors
             var t = AssetImporter.GetAtPath(path) as TextureImporter;
             if (t != null)
             {
+                t.streamingMipmaps = true;
+                t.wrapMode = mode;
+                t.isReadable = true;
+                t.sRGBTexture = !linear;
+            }
+
+            AssetDatabase.ImportAsset(path);
+        }
+        
+        /// <summary>
+        /// Saves a RenderTexture to a specified path.
+        /// </summary>
+        /// <param name="texture">Texture to save.</param>
+        /// <param name="path">path where you want to save the texture.</param>
+        /// <param name="mode">Texture wrap mode (default: Repeat).</param>
+        /// <param name="linear">If the texture should be saved as linear.</param>
+        public static void SaveTexture(RenderTexture texture, string path, TextureWrapMode mode = TextureWrapMode.Repeat, bool linear = false)
+        {
+            var oldRT = RenderTexture.active;
+ 
+            var tex = new Texture2D(texture.width, texture.height, TextureFormat.RGBA32, false);
+            RenderTexture.active = texture;
+            tex.ReadPixels(new Rect(0, 0, texture.width, texture.height), 0, 0);
+            tex.Apply();
+            RenderTexture.active = oldRT;
+            byte[] bytes = tex.EncodeToPNG();
+            File.WriteAllBytes(path, bytes);
+            AssetDatabase.Refresh();
+            path = path.Substring(path.LastIndexOf("Assets", StringComparison.Ordinal));
+            var t = AssetImporter.GetAtPath(path) as TextureImporter;
+            if (t != null)
+            {
+                t.streamingMipmaps = true;
                 t.wrapMode = mode;
                 t.isReadable = true;
                 t.sRGBTexture = !linear;
@@ -246,6 +279,21 @@ namespace VRLabs.SimpleShaderInspectors
         /// <returns>A Texture2D that references the newly created asset.</returns>
         /// <param name="linear">If the texture should be saved as linear</param>
         public static Texture2D SaveAndGetTexture(Texture2D texture, string path, TextureWrapMode mode = TextureWrapMode.Repeat, bool linear = false)
+        {
+            SaveTexture(texture, path, mode, linear);
+            path = path.Substring(path.LastIndexOf("Assets", StringComparison.Ordinal));
+            return AssetDatabase.LoadAssetAtPath<Texture2D>(path);
+        }
+        
+        /// <summary>
+        /// Saves a RenderTexture to a specified path, and returns a reference of the new asset.
+        /// </summary>
+        /// <param name="texture">Texture to save.</param>
+        /// <param name="path">path where you want to save the texture.</param>
+        /// <param name="mode">Texture wrap mode (default: Repeat).</param>
+        /// <returns>A Texture2D that references the newly created asset.</returns>
+        /// <param name="linear">If the texture should be saved as linear</param>
+        public static Texture2D SaveAndGetTexture(RenderTexture texture, string path, TextureWrapMode mode = TextureWrapMode.Repeat, bool linear = false)
         {
             SaveTexture(texture, path, mode, linear);
             path = path.Substring(path.LastIndexOf("Assets", StringComparison.Ordinal));

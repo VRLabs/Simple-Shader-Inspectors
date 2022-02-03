@@ -2,18 +2,22 @@
 
 namespace VRLabs.SimpleShaderInspectors
 {
-    public class RGBAPackerInspector : TextureGeneratorShaderInspector
+    // ReSharper disable once InconsistentNaming
+    internal class RGBAPackerInspector : TextureGeneratorShaderInspector
     {
         protected override void Start()
         {
-            this.AddTextureControl("_MainTex", "_RedMultiplier");
-            this.AddToggleControl("_RedInvert");
-            this.AddTextureControl("_GreenTexture", "_GreenMultiplier");
-            this.AddToggleControl("_GreenInvert");
-            this.AddTextureControl("_BlueTexture", "_BlueMultiplier");
-            this.AddToggleControl("_BluInvert");
-            this.AddTextureControl("_AlphaTexture", "_AlphaMultiplier");
-            this.AddToggleControl("_AlphaInvert");
+            this.AddTextureControl("_MainTex", "_RedMultiplier").WithAlias("RedTexture");
+            this.AddToggleControl("_RedInvert").WithAlias("Invert");
+            this.AddSpaceControl(20);
+            this.AddTextureControl("_GreenTexture", "_GreenMultiplier").WithAlias("GreenTexture");
+            this.AddToggleControl("_GreenInvert").WithAlias("Invert");
+            this.AddSpaceControl(20);
+            this.AddTextureControl("_BlueTexture", "_BlueMultiplier").WithAlias("BlueTexture");
+            this.AddToggleControl("_BluInvert").WithAlias("Invert");
+            this.AddSpaceControl(20);
+            this.AddTextureControl("_AlphaTexture", "_AlphaMultiplier").WithAlias("AlphaTexture");
+            this.AddToggleControl("_AlphaInvert").WithAlias("Invert");
         }
     }
 }

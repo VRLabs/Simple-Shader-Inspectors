@@ -24,30 +24,17 @@
     }
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
-        LOD 100
+        Lighting Off
+        Blend One Zero
 
         Pass
         {
             CGPROGRAM
-            #pragma vertex vert
+
+            #include "UnityCustomRenderTexture.cginc"
+            #pragma vertex CustomRenderTextureVertexShader
             #pragma fragment frag
-            // make fog work
-            #pragma multi_compile_fog
-
-            #include "UnityCG.cginc"
-
-            struct appdata
-            {
-                float4 vertex : POSITION;
-                float2 uv : TEXCOORD0;
-            };
-
-            struct v2f
-            {
-                float2 uv : TEXCOORD0;
-                float4 vertex : SV_POSITION;
-            };
+            #pragma target 3.0
 
             UNITY_DECLARE_TEX2D(_MainTex);
             UNITY_DECLARE_TEX2D_NOSAMPLER(_GreenTexture);
@@ -63,22 +50,13 @@
             {
                 return (1 - value) * invert + value * (1 - invert);
             }
-            
-            v2f vert (appdata v)
-            {
-                v2f o;
-                o.vertex = UnityObjectToClipPos(v.vertex);
-                o.uv = TRANSFORM_TEX(v.uv, _MainTex);
-                return o;
-            }
 
-            fixed4 frag (v2f i) : SV_Target
+            fixed4 frag (v2f_customrendertexture  i) : SV_Target
             {
-                // sample the texture
-                float r = UNITY_SAMPLE_TEX2D(_MainTex, i.uv)[_RedChannel] * _RedMultiplier;
-                float g = UNITY_SAMPLE_TEX2D_SAMPLER(_GreenTexture, _MainTex, i.uv)[_GreenChannel] * _GreenMultiplier;
-                float b = UNITY_SAMPLE_TEX2D_SAMPLER(_BlueTexture, _MainTex, i.uv)[_BlueChannel] * _BlueMultiplier;
-                float a = UNITY_SAMPLE_TEX2D_SAMPLER(_AlphaTexture, _MainTex, i.uv)[_AlphaChannel] * _AlphaMultiplier;
+                float r = UNITY_SAMPLE_TEX2D(_MainTex, i.localTexcoord.xy)[_RedChannel] * _RedMultiplier;
+                float g = UNITY_SAMPLE_TEX2D_SAMPLER(_GreenTexture, _MainTex, i.localTexcoord.xy)[_GreenChannel] * _GreenMultiplier;
+                float b = UNITY_SAMPLE_TEX2D_SAMPLER(_BlueTexture, _MainTex, i.localTexcoord.xy)[_BlueChannel] * _BlueMultiplier;
+                float a = UNITY_SAMPLE_TEX2D_SAMPLER(_AlphaTexture, _MainTex, i.localTexcoord.xy)[_AlphaChannel] * _AlphaMultiplier;
                 float4 rgba = float4(r, g, b, a);
                 rgba = conditionalInvert(rgba, float4(_RedInvert, _GreenInvert, _BlueInvert, _AlphaInvert));
                 return rgba;

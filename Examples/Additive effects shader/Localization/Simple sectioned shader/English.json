@@ -1,6 +1,41 @@
 {
     "Properties": [
         {
+            "Name": "Layers mask_GeneratorLinearSpace",
+            "DisplayName": "Linear Space",
+            "Tooltip": ""
+        },
+        {
+            "Name": "Layers mask_GeneratorPreview",
+            "DisplayName": "Preview",
+            "Tooltip": ""
+        },
+        {
+            "Name": "Layers mask_Input_RedTexture",
+            "DisplayName": "Red channel",
+            "Tooltip": "Red channel texture"
+        },
+        {
+            "Name": "Layers mask_Input_GreenTexture",
+            "DisplayName": "Green channel",
+            "Tooltip": "Green channel texture"
+        },
+        {
+            "Name": "Layers mask_Input_BlueTexture",
+            "DisplayName": "Blue channel",
+            "Tooltip": "Blue channel texture"
+        },
+        {
+            "Name": "Layers mask_Input_AlphaTexture",
+            "DisplayName": "Alpha channel",
+            "Tooltip": "Alpha channel texture"
+        },
+        {
+            "Name": "Layers mask_Input_Invert",
+            "DisplayName": "Invert",
+            "Tooltip": ""
+        },
+        {
             "Name": "Ordered1_Path",
             "DisplayName": "AAA",
             "Tooltip": ""

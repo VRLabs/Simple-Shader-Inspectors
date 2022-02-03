@@ -183,9 +183,9 @@
             container.AddControl(control, appendAfterAlias);
             return control;
         }
-        public static VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl AddTextureGeneratorControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, UnityEngine.ComputeShader compute, System.String computeOptionsJson, System.String propertyName, System.String extraPropertyName1 = null, System.String extraPropertyName2 = null, string appendAfterAlias = "")
+        public static VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl AddTextureGeneratorControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, UnityEngine.Shader shader, System.String propertyName, System.String extraPropertyName1 = null, System.String extraPropertyName2 = null, string appendAfterAlias = "")
         {
-            var control = new VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl(compute, computeOptionsJson, propertyName, extraPropertyName1, extraPropertyName2);
+            var control = new VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl(shader, propertyName, extraPropertyName1, extraPropertyName2);
             container.AddControl(control, appendAfterAlias);
             return control;
         }

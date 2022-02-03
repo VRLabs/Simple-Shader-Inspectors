@@ -65,14 +65,10 @@ namespace VRLabs.SimpleShaderInspectors
             get
             {
                 if (_rgbaPacker != null) return _rgbaPacker;
-                _rgbaPacker = Resources.Load<Shader>($"{SSIConstants.RESOURCES_FOLDER}/ComputeShaders/RGBAPacker");
+                _rgbaPacker = Resources.Load<Shader>($"{SSIConstants.RESOURCES_FOLDER}/Shaders/RGBAPacker");
                 return _rgbaPacker;
             }
         }
-        /// <summary>
-        /// default input settings for the RGBAPacker compute shader.
-        /// </summary>
-        public static string RGBAPackerSettings => Resources.Load<TextAsset>($"{SSIConstants.RESOURCES_FOLDER}/ComputeShaderSettings/RGBAPackerDefault").text;
     }
 
     /// <summary>
