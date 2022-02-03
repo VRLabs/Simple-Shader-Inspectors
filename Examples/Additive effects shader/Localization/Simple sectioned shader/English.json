@@ -1,6 +1,11 @@
 {
     "Properties": [
         {
+            "Name": "Layers mask_Input_Channel",
+            "DisplayName": "",
+            "Tooltip": ""
+        },
+        {
             "Name": "Layers mask_GeneratorLinearSpace",
             "DisplayName": "Linear Space",
             "Tooltip": ""

@@ -21,8 +21,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
     /// </para>
     /// <para>
     /// While this is already a great use of the control and a fairly common one (like merging 4 monochrome texture masks) it is just one possible use,
-    /// since it can load custom <c>compute shaders</c> and relative control input options to go along, enabling you to create your own generator that takes
-    /// your own defined parameters to get a specific output.
+    /// since it can load custom <c>shaders</c>, enabling you to create your own generator, and uses the shader's gui for setting inputs for the generator.
     /// </para>
     /// </remarks>
     /// <example>
@@ -32,7 +31,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
     /// this.AddTextureGeneratorControl("_TextureProperty", "_ColorProperty"); 
     ///
     /// // Adds a new texture generator control with a texture and color field, using a custom generator
-    /// this.AddTextureGeneratorControl(myCompute, computeInputJson, "_TextureProperty", "_ColorProperty"); 
+    /// this.AddTextureGeneratorControl(myShader, "_TextureProperty", "_ColorProperty"); 
     /// </code>
     /// </example>
     public class TextureGeneratorControl : TextureControl, IAdditionalLocalization
@@ -51,6 +50,9 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         private PropertyInfo[] _propertyInfos;
         
         private Texture2D[] _previousTextures;
+        
+        private float _width;
+        private float _windowWidth;
 
         private static readonly string[] _baseNames =
                         {
@@ -61,7 +63,6 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             "GeneratorPreview",     //[4]
             "GeneratorLinearSpace"  //[5]
         };
-        
 
         /// <summary>
         /// Style for the texture generator button.
@@ -222,7 +223,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
                 EditorGUI.indentLevel = 0;
                 EditorGUILayout.BeginVertical(GeneratorStyle);
                 GUI.backgroundColor = SimpleShaderInspector.DefaultBgColor;
-                DrawGenerator();
+                DrawGenerator(materialEditor);
                 EditorGUILayout.EndVertical();
                 EditorGUI.indentLevel = previousIndent;
                 EditorGUILayout.EndHorizontal();
@@ -245,7 +246,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             GUI.backgroundColor = SimpleShaderInspector.DefaultBgColor;
         }
 
-        private void DrawGenerator()
+        private void DrawGenerator(MaterialEditor materialEditor)
         {
             if (_crtMaterialEditor == null)
             {
@@ -282,22 +283,29 @@ namespace VRLabs.SimpleShaderInspectors.Controls
 
             EditorGUILayout.Space(20);
             
+            if(Event.current.type != EventType.Repaint)
+            {
+                float oldWindowWidth = _windowWidth;
+                _windowWidth = EditorGUIUtility.currentViewWidth;
+                float difference = _windowWidth - oldWindowWidth;
+                _width += difference;
+            }
+            
             EditorGUILayout.BeginHorizontal();
-            float width = EditorGUIUtility.currentViewWidth;
             EditorGUILayout.BeginVertical();
-            if (width <= 500)
+            if (_width <= 400)
             {
                 EditorGUILayout.BeginHorizontal();
                 GUILayout.FlexibleSpace();
                 EditorGUILayout.BeginVertical();
             }
             GUILayout.Label(_baseContent[4].Content);
-            Rect windowRect = GUILayoutUtility.GetRect(10, 200, 10, 200);
-            float squareSize = Mathf.Min(windowRect.width - 12, windowRect.height - 12);
-            var previewRect = new Rect(windowRect.x + 9, windowRect.y + 9, squareSize, squareSize);
+            Rect windowRect = GUILayoutUtility.GetRect(10, 126, 10, 132);
+            float squareSize = Mathf.Min(windowRect.width - 6, windowRect.height - 12);
+            var previewRect = new Rect(windowRect.x + 7, windowRect.y + 9, squareSize, squareSize);
             GUI.DrawTexture(previewRect, _crt, ScaleMode.StretchToFill, true);
-
-            if (width <= 500)
+            
+            if (_width <= 400)
             {
                 EditorGUILayout.EndVertical();
                 GUILayout.FlexibleSpace();
@@ -359,6 +367,13 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             
             EditorGUILayout.EndHorizontal();
             
+            if (Event.current.type == EventType.Repaint)
+            {
+                _windowWidth = EditorGUIUtility.currentViewWidth;
+                _width = GUILayoutUtility.GetLastRect().width;
+            }
+
+
         }
 
         private void GeneratorCloseCleanup()

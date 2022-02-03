@@ -100,6 +100,13 @@
             return control;
         }
 
+        public static VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer AddHorizontalContainer(this VRLabs.SimpleShaderInspectors.IControlContainer container, string appendAfterAlias = "")
+        {
+            var control = new VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer();
+            container.AddControl(control, appendAfterAlias);
+            return control;
+        }
+
         public static VRLabs.SimpleShaderInspectors.Controls.KeywordToggleControl AddKeywordToggleControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String keyword, string appendAfterAlias = "")
         {
             var control = new VRLabs.SimpleShaderInspectors.Controls.KeywordToggleControl(keyword);
@@ -129,6 +136,13 @@
         public static VRLabs.SimpleShaderInspectors.Controls.LightmapEmissionControl AddLightmapEmissionControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, string appendAfterAlias = "")
         {
             var control = new VRLabs.SimpleShaderInspectors.Controls.LightmapEmissionControl();
+            container.AddControl(control, appendAfterAlias);
+            return control;
+        }
+
+        public static VRLabs.SimpleShaderInspectors.Controls.RGBASelectorControl AddRGBASelectorControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String propertyName, string appendAfterAlias = "")
+        {
+            var control = new VRLabs.SimpleShaderInspectors.Controls.RGBASelectorControl(propertyName);
             container.AddControl(control, appendAfterAlias);
             return control;
         }
