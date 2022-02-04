@@ -131,31 +131,6 @@
             "Tooltip": "Texture size"
         },
         {
-            "Name": "Layers mask_TextureInvert",
-            "DisplayName": "Invert",
-            "Tooltip": "Invert the texture channel"
-        },
-        {
-            "Name": "Layers mask_Input1",
-            "DisplayName": "Red mask",
-            "Tooltip": "Red mask"
-        },
-        {
-            "Name": "Layers mask_Input2",
-            "DisplayName": "Green mask",
-            "Tooltip": "Green mask"
-        },
-        {
-            "Name": "Layers mask_Input3",
-            "DisplayName": "Blue mask",
-            "Tooltip": "Blue mask"
-        },
-        {
-            "Name": "Layers mask_Input4",
-            "DisplayName": "Alpha mask",
-            "Tooltip": "Alpha mask"
-        },
-        {
             "Name": "Red channel",
             "DisplayName": "Red channel",
             "Tooltip": "Red channel"

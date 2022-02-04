@@ -37,7 +37,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
     public class TextureGeneratorControl : TextureControl, IAdditionalLocalization
     {
         private readonly AdditionalLocalization[] _baseContent;
-        private readonly AdditionalLocalization[] _namesContent;
+        private AdditionalLocalization[] _namesContent;
         private bool _isGeneratorOpen;
         private readonly Shader _shader;
         private Resolution _resolution;
@@ -54,8 +54,10 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         private float _width;
         private float _windowWidth;
 
+        private List<Shader> generatorChildShaders;
+
         private static readonly string[] _baseNames =
-                        {
+        {
             "GeneratorOpen",        //[0]
             "GeneratorSaveButton",  //[1]
             "GeneratorCancelButton",//[2]
@@ -63,6 +65,52 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             "GeneratorPreview",     //[4]
             "GeneratorLinearSpace"  //[5]
         };
+
+        private bool _isCircularReference;
+        
+        private ISimpleShaderInspector _inspector;
+
+        public override ISimpleShaderInspector Inspector
+        {
+            get => _inspector;
+            set
+            {
+                _inspector = value;
+                _crtMaterial = new Material(_shader);
+                _crtMaterialEditor = Editor.CreateEditor(_crtMaterial) as MaterialEditor;
+                generatorChildShaders = new List<Shader>();
+                if (Inspector is TextureGeneratorShaderInspector generatorInspector)
+                    generatorChildShaders.AddRange(generatorInspector.shaderStack);
+                generatorChildShaders.Add(Inspector.Shader);
+            
+                if (_crtMaterialEditor.customShaderGUI != null && _crtMaterialEditor.customShaderGUI is TextureGeneratorShaderInspector compliantInspector)
+                {
+                    if (generatorChildShaders.Contains(((Material)_crtMaterialEditor.target).shader))
+                    {
+                        _namesContent = Array.Empty<AdditionalLocalization>();
+                        _isCircularReference = true;
+                        
+                    }
+                    else
+                    {
+                        //generatorChildShaders.Add(((Material)_crtMaterialEditor.target).shader);
+                        compliantInspector.shaderStack.AddRange(generatorChildShaders);
+                        compliantInspector.Setup(_crtMaterialEditor, MaterialEditor.GetMaterialProperties(_crtMaterialEditor.targets));
+                        _namesContent = compliantInspector.GetRequiredLocalization().Where(x => !string.IsNullOrWhiteSpace(x.Name)).ToArray();
+                    }
+                }
+                else
+                {
+                    _namesContent = Array.Empty<AdditionalLocalization>();
+                }
+
+                for (int i = 0; i < _namesContent.Length; i++)
+                    _namesContent[i].Name = "Input_" + _namesContent[i].Name;
+            
+                Object.DestroyImmediate(_crtMaterial);
+                Object.DestroyImmediate(_crtMaterialEditor);
+            }
+        }
 
         /// <summary>
         /// Style for the texture generator button.
@@ -186,24 +234,6 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             GeneratorSaveButtonColor = Color.white;
 
             _baseContent = AdditionalContentExtensions.CreateLocalizationArrayFromNames(_baseNames);
-
-            _crtMaterial = new Material(_shader);
-            _crtMaterialEditor = Editor.CreateEditor(_crtMaterial) as MaterialEditor;
-            if (_crtMaterialEditor.customShaderGUI != null && _crtMaterialEditor.customShaderGUI is TextureGeneratorShaderInspector compliantInspector)
-            {
-                compliantInspector.Setup(_crtMaterialEditor, MaterialEditor.GetMaterialProperties(_crtMaterialEditor.targets));
-                _namesContent = compliantInspector.GetRequiredLocalization().Where(x => !string.IsNullOrWhiteSpace(x.Name)).ToArray();
-            }
-            else
-            {
-                _namesContent = Array.Empty<AdditionalLocalization>();
-            }
-
-            for (int i = 0; i < _namesContent.Length; i++)
-                _namesContent[i].Name = "Input_" + _namesContent[i].Name;
-            
-            Object.DestroyImmediate(_crtMaterial);
-            Object.DestroyImmediate(_crtMaterialEditor);
         }
 
         /// <summary>
@@ -299,7 +329,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
                 GUILayout.FlexibleSpace();
                 EditorGUILayout.BeginVertical();
             }
-            GUILayout.Label(_baseContent[4].Content);
+            GUILayout.Label(_baseContent[4].Content,GUILayout.MinWidth(60));
             Rect windowRect = GUILayoutUtility.GetRect(10, 126, 10, 132);
             float squareSize = Mathf.Min(windowRect.width - 6, windowRect.height - 12);
             var previewRect = new Rect(windowRect.x + 7, windowRect.y + 9, squareSize, squareSize);
@@ -345,7 +375,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             EditorGUILayout.BeginHorizontal();
             GUI.backgroundColor = GeneratorSaveButtonColor;
             
-            if (GUILayout.Button(_baseContent[1].Content, GeneratorSaveButtonStyle))
+            if (GUILayout.Button(_baseContent[1].Content, GeneratorSaveButtonStyle,GUILayout.MinWidth(60)))
             {
                 GenerateTexture();
                 _previousTextures = null;
@@ -354,7 +384,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
                 
             }
 
-            if (GUILayout.Button(_baseContent[2].Content, GeneratorSaveButtonStyle))
+            if (GUILayout.Button(_baseContent[2].Content, GeneratorSaveButtonStyle,GUILayout.MinWidth(60)))
             {
                 _isGeneratorOpen = false;
                 GeneratorCloseCleanup();
@@ -405,7 +435,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         private void SetupInspector(TextureGeneratorShaderInspector compliantInspector)
         {
             compliantInspector.isFromGenerator = true;
-            if (_propertyInfos == null)
+            if (_propertyInfos == null && !_isCircularReference)
             {
                 _propertyInfos = new PropertyInfo[_namesContent.Length];
                 for (int i = 0; i < _propertyInfos.Length; i++)
@@ -416,7 +446,13 @@ namespace VRLabs.SimpleShaderInspectors.Controls
                         DisplayName = _namesContent[i].Content.text,
                         Tooltip = _namesContent[i].Content.tooltip
                     };
+                    
                 }
+            }
+            else
+            {
+                if (Inspector is TextureGeneratorShaderInspector ins)
+                    _propertyInfos = ins.stackedInfo;
             }
             compliantInspector.Setup(_crtMaterialEditor, MaterialEditor.GetMaterialProperties(_crtMaterialEditor.targets));
             compliantInspector.SetShaderLocalizationFromGenerator(_propertyInfos);

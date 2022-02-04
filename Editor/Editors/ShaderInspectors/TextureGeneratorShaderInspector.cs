@@ -22,6 +22,9 @@ namespace VRLabs.SimpleShaderInspectors
         private bool ContainsNonAnimatableProperties => _nonAnimatablePropertyControls.Count > 0;
         internal bool isFromGenerator = false;
 
+        internal List<Shader> shaderStack = new List<Shader>();
+        internal PropertyInfo[] stackedInfo;
+
         /// <summary>
         /// List of controls.
         /// </summary>
@@ -132,7 +135,8 @@ namespace VRLabs.SimpleShaderInspectors
         }
 
         internal void SetShaderLocalizationFromGenerator(PropertyInfo[] propertyInfos)
-        { 
+        {
+            stackedInfo = propertyInfos;
             Localization.SetPropertiesLocalization(Controls, propertyInfos, new List<PropertyInfo>());
         }
 
@@ -157,7 +161,7 @@ namespace VRLabs.SimpleShaderInspectors
                 
             // Find additional content in case it implements the IAdditionalLocalization interface.
             if(control is IAdditionalLocalization additional)
-                elements.AddRange(additional.AdditionalContent.Select(x => new AdditionalLocalization{Name = x.Name, Content = null}));
+                elements.AddRange(additional.AdditionalContent.Select(x => new AdditionalLocalization{Name = $"{control.ControlAlias}_{x.Name}", Content = null}));
 
             // Recursively set property localization for all properties inside this control if it has the IControlContainer interface.
             if(control is IControlContainer container)
