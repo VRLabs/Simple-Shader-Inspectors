@@ -213,6 +213,11 @@
             control.GeneratorSaveButtonStyle = property;
             return control;
         }
+        public static T WithGeneratorCloseButtonStyle<T>(this T control, UnityEngine.GUIStyle property) where T : TextureGeneratorControl
+        {
+            control.GeneratorCloseButtonStyle = property;
+            return control;
+        }
         public static T WithGeneratorStyle<T>(this T control, UnityEngine.GUIStyle property) where T : TextureGeneratorControl
         {
             control.GeneratorStyle = property;
@@ -231,6 +236,11 @@
         public static T WithGeneratorSaveButtonColor<T>(this T control, UnityEngine.Color property) where T : TextureGeneratorControl
         {
             control.GeneratorSaveButtonColor = property;
+            return control;
+        }
+        public static T WithGeneratorCloseButtonColor<T>(this T control, UnityEngine.Color property) where T : TextureGeneratorControl
+        {
+            control.GeneratorCloseButtonColor = property;
             return control;
         }
         public static T WithGeneratorColor<T>(this T control, UnityEngine.Color property) where T : TextureGeneratorControl

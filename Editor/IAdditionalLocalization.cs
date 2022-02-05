@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace VRLabs.SimpleShaderInspectors
@@ -24,7 +25,7 @@ namespace VRLabs.SimpleShaderInspectors
     /// <summary>
     /// This class is a simple class containing a Name used for finding the localization content and a GUIContent object containing said content.
     /// </summary>
-    public class AdditionalLocalization
+    public class AdditionalLocalization : IEquatable<AdditionalLocalization>
     {
         /// <summary>
         /// Name of the additional localized content.
@@ -35,6 +36,23 @@ namespace VRLabs.SimpleShaderInspectors
         /// GUIContent containing the localized content.
         /// </summary>
         public GUIContent Content { get; set; }
+
+        public bool Equals(AdditionalLocalization other)
+        {
+            if (ReferenceEquals(null, other)) return false;
+            if (ReferenceEquals(this, other)) return true;
+            return Name == other.Name;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != this.GetType()) return false;
+            return Equals((AdditionalLocalization)obj);
+        }
+
+        public override int GetHashCode() => Name != null ? Name.GetHashCode() : 0;
     }
 
     /// <summary>

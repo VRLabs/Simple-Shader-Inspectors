@@ -1,11 +1,6 @@
 {
     "Properties": [
         {
-            "Name": "Layers mask_Input_Channel",
-            "DisplayName": "",
-            "Tooltip": ""
-        },
-        {
             "Name": "Layers mask_GeneratorLinearSpace",
             "DisplayName": "Linear Space",
             "Tooltip": ""
@@ -16,28 +11,33 @@
             "Tooltip": ""
         },
         {
-            "Name": "Layers mask_Input_RedTexture",
+            "Name": "Layers mask_Input_RGBAPacker_RedTexture",
             "DisplayName": "Red channel",
             "Tooltip": "Red channel texture"
         },
         {
-            "Name": "Layers mask_Input_GreenTexture",
+            "Name": "Layers mask_Input_RGBAPacker_GreenTexture",
             "DisplayName": "Green channel",
             "Tooltip": "Green channel texture"
         },
         {
-            "Name": "Layers mask_Input_BlueTexture",
+            "Name": "Layers mask_Input_RGBAPacker_BlueTexture",
             "DisplayName": "Blue channel",
             "Tooltip": "Blue channel texture"
         },
         {
-            "Name": "Layers mask_Input_AlphaTexture",
+            "Name": "Layers mask_Input_RGBAPacker_AlphaTexture",
             "DisplayName": "Alpha channel",
             "Tooltip": "Alpha channel texture"
         },
         {
-            "Name": "Layers mask_Input_Invert",
+            "Name": "Layers mask_Input_RGBAPacker_Invert",
             "DisplayName": "Invert",
+            "Tooltip": ""
+        },
+        {
+            "Name": "Layers mask_Input_RGBAPacker_Channel",
+            "DisplayName": "",
             "Tooltip": ""
         },
         {

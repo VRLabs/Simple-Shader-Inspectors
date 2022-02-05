@@ -36,26 +36,35 @@ namespace VRLabs.SimpleShaderInspectors.Controls
     /// </example>
     public class TextureGeneratorControl : TextureControl, IAdditionalLocalization
     {
-        private readonly AdditionalLocalization[] _baseContent;
-        private AdditionalLocalization[] _namesContent;
+        // Static content for the generator
+        internal readonly AdditionalLocalization[] baseContent;
+        // Dynamic content based on che generator shader, empty if is in a circular reference
+        internal AdditionalLocalization[] namesContent;
+        
         private bool _isGeneratorOpen;
         private readonly Shader _shader;
         private Resolution _resolution;
         private bool _linearSpace;
         
+        // CRT used for preview and save, null when generator is not open
         private CustomRenderTexture _crt;
+        // Material used by the CRT, null when generator is not open
         private Material _crtMaterial;
+        // Material editor of the CRT material, null when generator is not open
         private MaterialEditor _crtMaterialEditor;
+        // Generator specific to show a generator shader, null when generator is not open OR when the shader used doesn't use this type of ShaderGUI
         private DefaultGeneratorGUI _crtEditorGUI;
+        // Localization for generator inspectors
         private PropertyInfo[] _propertyInfos;
-        
+        // Textures in the materials before the generator opened, they are restored to the material if the generator is closed or the selection has changed
         private Texture2D[] _previousTextures;
-        
+        // Width of the generator area
         private float _width;
+        // Width of the window, used to calculate differentials of the generator area during the layout phase
         private float _windowWidth;
-
-        private List<Shader> generatorChildShaders;
-
+        // List of all shaders visited in a possible generator tree, used to detect circular references of shaders with generators
+        private List<Shader> _shaderStack;
+        // Array of names used for base generator localization ids
         private static readonly string[] _baseNames =
         {
             "GeneratorOpen",        //[0]
@@ -65,8 +74,6 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             "GeneratorPreview",     //[4]
             "GeneratorLinearSpace"  //[5]
         };
-
-        private bool _isCircularReference;
         
         private ISimpleShaderInspector _inspector;
 
@@ -78,35 +85,38 @@ namespace VRLabs.SimpleShaderInspectors.Controls
                 _inspector = value;
                 _crtMaterial = new Material(_shader);
                 _crtMaterialEditor = Editor.CreateEditor(_crtMaterial) as MaterialEditor;
-                generatorChildShaders = new List<Shader>();
+                _shaderStack = new List<Shader>();
+                bool isRoot = true;
                 if (Inspector is TextureGeneratorShaderInspector generatorInspector)
-                    generatorChildShaders.AddRange(generatorInspector.shaderStack);
-                generatorChildShaders.Add(Inspector.Shader);
+                {
+                    _shaderStack.AddRange(generatorInspector.shaderStack);
+                    isRoot = false;
+                }
+                _shaderStack.Add(Inspector.Shader);
             
+                // ReSharper disable once PossibleNullReferenceException
                 if (_crtMaterialEditor.customShaderGUI != null && _crtMaterialEditor.customShaderGUI is TextureGeneratorShaderInspector compliantInspector)
                 {
-                    if (generatorChildShaders.Contains(((Material)_crtMaterialEditor.target).shader))
+                    if (_shaderStack.Contains(((Material)_crtMaterialEditor.target).shader))
                     {
-                        _namesContent = Array.Empty<AdditionalLocalization>();
-                        _isCircularReference = true;
-                        
+                        namesContent = Array.Empty<AdditionalLocalization>();
                     }
                     else
                     {
-                        //generatorChildShaders.Add(((Material)_crtMaterialEditor.target).shader);
-                        compliantInspector.shaderStack.AddRange(generatorChildShaders);
+                        compliantInspector.shaderStack.AddRange(_shaderStack);
                         compliantInspector.Setup(_crtMaterialEditor, MaterialEditor.GetMaterialProperties(_crtMaterialEditor.targets));
-                        _namesContent = compliantInspector.GetRequiredLocalization().Where(x => !string.IsNullOrWhiteSpace(x.Name)).ToArray();
+                        namesContent = compliantInspector.GetRequiredLocalization().Where(x => !string.IsNullOrWhiteSpace(x.Name)).Distinct().ToArray();
                     }
                 }
                 else
                 {
-                    _namesContent = Array.Empty<AdditionalLocalization>();
+                    namesContent = Array.Empty<AdditionalLocalization>();
                 }
 
-                for (int i = 0; i < _namesContent.Length; i++)
-                    _namesContent[i].Name = "Input_" + _namesContent[i].Name;
-            
+                if(isRoot)
+                    foreach (AdditionalLocalization t in namesContent)
+                        t.Name = "Input_" + t.Name;
+
                 Object.DestroyImmediate(_crtMaterial);
                 Object.DestroyImmediate(_crtMaterialEditor);
             }
@@ -127,6 +137,14 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// GUIStyle used when displaying the generator "save" button.
         /// </value>
         [FluentSet] public GUIStyle GeneratorSaveButtonStyle { get; set; }
+        
+        /// <summary>
+        /// Style for the texture generator close button.
+        /// </summary>
+        /// <value>
+        /// GUIStyle used when displaying the generator "close" button.
+        /// </value>
+        [FluentSet] public GUIStyle GeneratorCloseButtonStyle { get; set; }
 
         /// <summary>
         /// Style for the texture generator background.
@@ -159,6 +177,14 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         /// Color used when displaying the generator "save" button.
         /// </value>
         [FluentSet] public Color GeneratorSaveButtonColor { get; set; }
+        
+        /// <summary>
+        /// Background color for the generator close button.
+        /// </summary>
+        /// <value>
+        /// Color used when displaying the generator "close" button.
+        /// </value>
+        [FluentSet] public Color GeneratorCloseButtonColor { get; set; }
 
         /// <summary>
         /// Background color for the generator background.
@@ -191,8 +217,8 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             get
             {
                 List<AdditionalLocalization> content = new List<AdditionalLocalization>();
-                content.AddRange(_baseContent);
-                content.AddRange(_namesContent);
+                content.AddRange(baseContent);
+                content.AddRange(namesContent);
 
                 return content.ToArray();
             }
@@ -227,13 +253,15 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             GeneratorStyle = Styles.TextureBoxHeavyBorder;
             GeneratorInputStyle = Styles.Box;
             GeneratorSaveButtonStyle = Styles.Bubble;
+            GeneratorCloseButtonStyle = Styles.Bubble;
 
             GeneratorButtonColor = Color.white;
             GeneratorColor = Color.white;
             GeneratorInputColor = Color.white;
             GeneratorSaveButtonColor = Color.white;
+            GeneratorCloseButtonColor = Color.white;
 
-            _baseContent = AdditionalContentExtensions.CreateLocalizationArrayFromNames(_baseNames);
+            baseContent = AdditionalContentExtensions.CreateLocalizationArrayFromNames(_baseNames);
         }
 
         /// <summary>
@@ -253,7 +281,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
                 EditorGUI.indentLevel = 0;
                 EditorGUILayout.BeginVertical(GeneratorStyle);
                 GUI.backgroundColor = SimpleShaderInspector.DefaultBgColor;
-                DrawGenerator(materialEditor);
+                DrawGenerator();
                 EditorGUILayout.EndVertical();
                 EditorGUI.indentLevel = previousIndent;
                 EditorGUILayout.EndHorizontal();
@@ -265,7 +293,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             if (_isGeneratorOpen) return;
             
             GUI.backgroundColor = GeneratorButtonColor;
-            if (GUILayout.Button(_baseContent[0].Content, GeneratorButtonStyle))
+            if (GUILayout.Button(baseContent[0].Content, GeneratorButtonStyle))
             {
                 _isGeneratorOpen = true;
                 _previousTextures = new Texture2D[materialEditor.targets.Length];
@@ -276,7 +304,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             GUI.backgroundColor = SimpleShaderInspector.DefaultBgColor;
         }
 
-        private void DrawGenerator(MaterialEditor materialEditor)
+        private void DrawGenerator()
         {
             if (_crtMaterialEditor == null)
             {
@@ -287,6 +315,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
                 _crtMaterial = new Material(_shader);
                 _crt.material = _crtMaterial;
                 _crtMaterialEditor = Editor.CreateEditor(_crtMaterial) as MaterialEditor;
+                // ReSharper disable once PossibleNullReferenceException
                 switch (_crtMaterialEditor.customShaderGUI)
                 {
                     case null:
@@ -320,8 +349,9 @@ namespace VRLabs.SimpleShaderInspectors.Controls
                 float difference = _windowWidth - oldWindowWidth;
                 _width += difference;
             }
-            
-            EditorGUILayout.BeginHorizontal();
+
+            GUI.backgroundColor = GeneratorInputColor;
+            EditorGUILayout.BeginHorizontal(GeneratorInputStyle);
             EditorGUILayout.BeginVertical();
             if (_width <= 400)
             {
@@ -329,7 +359,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
                 GUILayout.FlexibleSpace();
                 EditorGUILayout.BeginVertical();
             }
-            GUILayout.Label(_baseContent[4].Content,GUILayout.MinWidth(60));
+            GUILayout.Label(baseContent[4].Content,GUILayout.MinWidth(60));
             Rect windowRect = GUILayoutUtility.GetRect(10, 126, 10, 132);
             float squareSize = Mathf.Min(windowRect.width - 6, windowRect.height - 12);
             var previewRect = new Rect(windowRect.x + 7, windowRect.y + 9, squareSize, squareSize);
@@ -351,13 +381,13 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             EditorGUI.BeginChangeCheck();
             
             EditorGUILayout.BeginHorizontal();
-            GUILayout.Label(_baseContent[5].Content,GUILayout.MinWidth(20));
+            GUILayout.Label(baseContent[5].Content,GUILayout.MinWidth(20));
             GUILayout.FlexibleSpace();
             _linearSpace = EditorGUILayout.Toggle( _linearSpace, GUILayout.Width(16));
             EditorGUILayout.EndHorizontal();
             
             EditorGUILayout.BeginHorizontal();
-            GUILayout.Label(_baseContent[3].Content, GUILayout.MinWidth(20));
+            GUILayout.Label(baseContent[3].Content, GUILayout.MinWidth(20));
             GUILayout.FlexibleSpace();
             _resolution = (Resolution)EditorGUILayout.EnumPopup(_resolution,GUILayout.Width(130));
             EditorGUILayout.EndHorizontal();
@@ -375,7 +405,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             EditorGUILayout.BeginHorizontal();
             GUI.backgroundColor = GeneratorSaveButtonColor;
             
-            if (GUILayout.Button(_baseContent[1].Content, GeneratorSaveButtonStyle,GUILayout.MinWidth(60)))
+            if (GUILayout.Button(baseContent[1].Content, GeneratorSaveButtonStyle,GUILayout.MinWidth(60)))
             {
                 GenerateTexture();
                 _previousTextures = null;
@@ -383,8 +413,8 @@ namespace VRLabs.SimpleShaderInspectors.Controls
                 GeneratorCloseCleanup();
                 
             }
-
-            if (GUILayout.Button(_baseContent[2].Content, GeneratorSaveButtonStyle,GUILayout.MinWidth(60)))
+            GUI.backgroundColor = GeneratorCloseButtonColor;
+            if (GUILayout.Button(baseContent[2].Content, GeneratorCloseButtonStyle,GUILayout.MinWidth(60)))
             {
                 _isGeneratorOpen = false;
                 GeneratorCloseCleanup();
@@ -412,10 +442,14 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             {
                 _crt.Release();
                 Object.DestroyImmediate(_crt);
+                _crt = null;
             }
 
             Object.DestroyImmediate(_crtMaterial);
             Object.DestroyImmediate(_crtMaterialEditor);
+            _crtMaterial = null;
+            _crtMaterialEditor = null;
+            _crtEditorGUI = null;
             
             if (_previousTextures != null)
             {
@@ -429,32 +463,31 @@ namespace VRLabs.SimpleShaderInspectors.Controls
                 _previousTextures = null;
             }
             
-            Selection.selectionChanged += GeneratorCloseCleanup;
+            Selection.selectionChanged -= GeneratorCloseCleanup;
         }
 
         private void SetupInspector(TextureGeneratorShaderInspector compliantInspector)
         {
             compliantInspector.isFromGenerator = true;
-            if (_propertyInfos == null && !_isCircularReference)
+            compliantInspector.shaderStack.AddRange(_shaderStack);
+            compliantInspector.Setup(_crtMaterialEditor, MaterialEditor.GetMaterialProperties(_crtMaterialEditor.targets));
+            
+            if (Inspector is TextureGeneratorShaderInspector ins)
+                _propertyInfos = ins.stackedInfo;
+            else
             {
-                _propertyInfos = new PropertyInfo[_namesContent.Length];
+                _propertyInfos = new PropertyInfo[namesContent.Length];
                 for (int i = 0; i < _propertyInfos.Length; i++)
                 {
                     _propertyInfos[i] = new PropertyInfo
                     {
-                        Name = _namesContent[i].Name.Substring(6),
-                        DisplayName = _namesContent[i].Content.text,
-                        Tooltip = _namesContent[i].Content.tooltip
+                        Name = namesContent[i].Name.Substring(6),
+                        DisplayName = namesContent[i].Content.text,
+                        Tooltip = namesContent[i].Content.tooltip
                     };
                     
                 }
             }
-            else
-            {
-                if (Inspector is TextureGeneratorShaderInspector ins)
-                    _propertyInfos = ins.stackedInfo;
-            }
-            compliantInspector.Setup(_crtMaterialEditor, MaterialEditor.GetMaterialProperties(_crtMaterialEditor.targets));
             compliantInspector.SetShaderLocalizationFromGenerator(_propertyInfos);
         }
 

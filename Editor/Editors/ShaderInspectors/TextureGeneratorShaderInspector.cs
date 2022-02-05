@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
+using VRLabs.SimpleShaderInspectors.Controls;
 
 namespace VRLabs.SimpleShaderInspectors
 {
@@ -22,7 +23,7 @@ namespace VRLabs.SimpleShaderInspectors
         private bool ContainsNonAnimatableProperties => _nonAnimatablePropertyControls.Count > 0;
         internal bool isFromGenerator = false;
 
-        internal List<Shader> shaderStack = new List<Shader>();
+        internal readonly List<Shader> shaderStack = new List<Shader>();
         internal PropertyInfo[] stackedInfo;
 
         /// <summary>
@@ -160,8 +161,20 @@ namespace VRLabs.SimpleShaderInspectors
             elements.Add(element);
                 
             // Find additional content in case it implements the IAdditionalLocalization interface.
-            if(control is IAdditionalLocalization additional)
-                elements.AddRange(additional.AdditionalContent.Select(x => new AdditionalLocalization{Name = $"{control.ControlAlias}_{x.Name}", Content = null}));
+            if (control is IAdditionalLocalization additional)
+            {
+                if (additional is TextureGeneratorControl texture)
+                {
+                    //if(!texture._isCircularReference)
+                        elements.AddRange(texture.namesContent.Select(x => new AdditionalLocalization{Name = $"{x.Name}", Content = null}));
+                        elements.AddRange(texture.baseContent.Select(x => new AdditionalLocalization { Name = $"{control.ControlAlias}_{x.Name}", Content = null }));
+                }
+                else
+                {
+                    elements.AddRange(additional.AdditionalContent.Select(x => new AdditionalLocalization { Name = $"{control.ControlAlias}_{x.Name}", Content = null }));
+                }
+            }
+                
 
             // Recursively set property localization for all properties inside this control if it has the IControlContainer interface.
             if(control is IControlContainer container)
