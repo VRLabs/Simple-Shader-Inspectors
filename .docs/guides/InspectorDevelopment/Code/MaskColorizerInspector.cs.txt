@@ -1,0 +1,20 @@
+using VRLabs.SimpleShaderInspectors;
+using VRLabs.SimpleShaderInspectors.Controls;
+
+namespace VRLabs.Examples
+{
+    public class MaskColorizerInspector : TextureGeneratorShaderInspector
+    {
+        protected override void Start()
+        {
+            this.AddTextureControl("_MainTex").WithAlias("Colorizer_Mask");
+            this.AddSpaceControl(10);
+            
+            this.AddColorControl("_BaseColor").WithAlias("Colorizer_BaseColor");
+            this.AddColorControl("_RedColor").WithAlias("Colorizer_RedColor");
+            this.AddColorControl("_GreenColor").WithAlias("Colorizer_GreenColor");
+            this.AddColorControl("_BlueColor").WithAlias("Colorizer_BlueColor");
+            this.AddColorControl("_AlphaColor").WithAlias("Colorizer_AlphaColor");
+        }
+    }
+}

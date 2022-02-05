@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://github.com/VRLabs/SimpleShaderInspectors">
-    <img alt="Simple Shader Inspectors" width="200" height="200" src="https://github.com/VRLabs/SimpleShaderInspectors/blob/master/Editor/Resources/SSI/Textures/Logo/Logo.png">
+    <img alt="Simple Shader Inspectors" width="200" src="https://github.com/VRLabs/SimpleShaderInspectors/blob/master/Editor/Resources/SSI/Textures/Logo/Logo.png">
   </a>
   <h1>Simple Shader Inspectors</h1>
   <p>
@@ -48,7 +48,7 @@ public class TestShaderInspector : SimpleShaderInspector
 
     public override void Start()
     {
-        _floatControl = this.AddPropertyControl("_FloatProperty").Alias("MyFloatProperty");
+        _floatControl = this.AddPropertyControl("_FloatProperty").WithAlias("MyFloatProperty");
         _labelControl = this.AddLabelControl("MyLabel");
     }
 

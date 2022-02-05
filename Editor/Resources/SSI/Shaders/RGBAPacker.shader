@@ -1,4 +1,4 @@
-﻿Shader ".Hidden/VRLabs/GeneratorShaders/RGBAPacking"
+﻿Shader "Hidden/VRLabs/GeneratorShaders/RGBAPacking"
 {
     Properties
     {
