@@ -7,114 +7,57 @@ title: Customizing The Texture Generator
 
 The `TextureGeneratorControl` is a really particular control, not only it is a good example of the level of complexity that a single control can reach in terms of functionality, but it is also an example of how is possible to make controls driven mainly by data and therefore customizable for the specific need.
 
-For example if there's a need to take a color mask and apply a specific color for each channel, we can just make a compute shader that does that, give it to the texture generator, and tell him to show 1 texture input and 4 color inputs to feed the compute shader on. 
+For example if there's a need to take a color mask and apply a specific color for each channel, we can just make a shader that does that and give it to the texture generator. 
 
 But *what* do you need to do in order to accomplish that?
 
-## Creating the compute shader
+## Creating the shader
 
-First of all, you need the compute shader that does what you want, and you also need it to have what the control expects to find to feed the data on.
+First of all, you need the shader that does what you want.
 
-We won't go too much into the details on how a compute shader works here since there are better guides elsewhere for that, but we will run down the main things that are important to get the compute shader to work in our context.
+We won't go too much into the details on how a shader works here since there are better guides elsewhere for that, but we will run down the main things that are important to get the shader to work in our context.
 
-First of all, create the file for the compute shader and call it however you want, in our case we call it `maskColorizer.compute`, but as long as the extension is right the name doesn't matter too much.
+First of all, create the shader and call it however you want, in our case we call it `maskColorizer`.
 
 Then just paste this code:
 
-[!code-glsl[Main](Code/MaskColorizer.compute.txt?range=1-21)]
+[!code-glsl[Main](Code/MaskColorizer.txt?range=1-5,12-28,32-33,49,42-45)]
 
-This code is required for each compute shader to work with the texture generator, since most of the input data will be fed here. But let's look a bit more into it:
+This code template is used for the shader to work with the texture generator, since it has to render to a Custom Render Texture.
 
-[!code-glsl[Main](Code/MaskColorizer.compute.txt?range=1)]
+> [!NOTE]
+> To avoid to clutter up the shader selector in a material, we start the shader path with `Hidden/`, since the shader is not meant to be used for materials anyways.
 
-This is a basic kernel definition for a compute shader, it says which function will be used as a valid entry point for the compute shader, in our case it will be `MaskColorizer`, you can edit the name to whatever you want, but the entry function will need to have the same name, also the name will also be used later to tell the control which entry point to use.
+> [!NOTE]
+> for more informations on the basics for a shader for Custom Render Textures, check the official [Unity docs](https://docs.unity3d.com/Manual/class-CustomRenderTexture.html).
 
->[!WARNING] 
->You can have more than one kernel in a single file, so theoretically you could have all your compute functions in a single file and tell the generator which one to use each time, we advise to NOT do that, mostly because it can become very messy very quickly.
+From here, you can implement whatever logic you want to make the shader output whatever you want from the properties you pass as inputs.
 
-[!code-glsl[Main](Code/MaskColorizer.compute.txt?range=4-6)]
+[!code-glsl[Main](Code/MaskColorizer.txt?range=1-45)]
 
-The first variable is our end result, here we will be saving the final texture generated, and is where the generator will take the texture to save it to a file.
+## Creating the inspector for the generator shader
 
-The other 2 floats are, as you can guess, the width and height the result texture.
+Now that we have a shader, we can tell the generator to use this shader, and the generator will show a default inspector for the shader. But we can do better than that.
 
-[!code-glsl[Main](Code/MaskColorizer.compute.txt?range=8-15)]
+The generator is smart enough to detect if the shader uses a custom `ShaderGUI` (it won't detect if it uses a custom `MaterialEditor` and will revert back to a default inspector in that case) and use said ShaderGUI to show up the properties.
 
-This structure is the informations that the generator will pass for each texture it feeds in (outside of the texture itself).
+This means that you can customize the editor to whatever you want by just making a custom inspector. 
+The library also provides a special type of inspector called `TextureGeneratorShaderInspector` to inherit from for texture generators, which will let the generator to pass on localization from the main shader inspector to the generator's shader inspector, making the localization of the generator shader dependent on the shader it's used from.
 
-[!code-glsl[Main](Code/MaskColorizer.compute.txt?range=17-18)]
+[!code-cs[Main](Code/MaskColorizerInspector.cs.txt)]
 
-These 2 buffers are arrays containing the texture metadata of all textures and all colors that the generator feeds to the compute shader, the order they are fed in is the same order of display in the generator itself.
-
-[!code-glsl[Main](Code/MaskColorizer.compute.txt?range=21)]
-
-Here each texture the generator has as an input has to be declared by its own, this is due to how textures need to be fed to the compute shader. In this case the generator only has a single texture, so only one variable is declared. You can name them however you want but keep their name in mind since you will need to use them later on.
-
-Outside of the declaring function with the same name of the kernel, this is all you need in the compute shader to make it work with the texture generator, *but* there is one more thing that you *should* add to the compute shader, and while it isn't always necessary, it makes some checks easier and more consistent with the options the generator provides with its inputs (and in this example you will need one of the functions in here).
-
-[!code-glsl[Main](Code/MaskColorizer.compute.txt?range=23-72)]
-
-As you can see they're mostly selection or color space conversion functions, which go along very well with the metadata provided by the generator for each texture.
-
-Now is finally time to do what we want the generator to do:
-
-[!code-glsl[Main](Code/MaskColorizer.compute.txt?range=74-92)]
-
-So, first of all, if you have no idea what `[numthreads(16,16,1)]` means, just leave it like that, it's actually needed to be exactly like that for the generator to work property.
-
-That said, the function declaration needs to have the same name of the kernel, in this case `MaskColorizer`.
-
-The `id` passed as a uint3 (3 ints packed into one structure) will be used as a way to get the textures uvs.
-
-[!code-glsl[Main](Code/MaskColorizer.compute.txt?range=78)]
-
-Unlike normal shaders "uvs" here are not normalized 0-1 values, but instead are indexes of the pixels of the textures. This means that for each texture you need to do a conversion to get the pixel at the same relative position, which is what is done here.
-
-[!code-glsl[Main](Code/MaskColorizer.compute.txt?range=81)]
-
-When working in compute shaders texture fed to it may be either in linear or gamma color space, so here we check the color space and convert it to linear in case it's in gamma space.
-
-[!code-glsl[Main](Code/MaskColorizer.compute.txt?range=84-88)]
-
-If you come from normal shaders should be fairly simple to understand what is done here to get the color masking done, if you don't come from normal shader we're not sure why you're in this site in the first place.
-
-The only notable thing is the `Colors` array: this is the array of colors fed by the generator, and in this case the first color is the base color, meanwhile the other 4 are the colors for each channel.
-
-[!code-csharp[Main](Code/MaskColorizer.compute.txt?range=91)]
-
-As last thing, we set the final value of the fragment with the color we calculated.
-
-## Creating the generator input settings json
-
-Now that we have a compute shader, we need to tell the generator which data it has to feed. This is done by giving it a json file with the required data (in this example the json will be saved as `maskColorizerSettings.json`).
-
-[!code-json[Main](Code/MaskColorizerSettings.json.txt)]
-
-Simple enough right? The json is laid out the following way:
-
- - KernelName: name of the kernel that the generator has to use, must be the same name of the function of the compute.
- - Inputs: array of all the inputs the generator has to use.
-   - Type: type of input, 0 = Texture, 1 = Color.
-   - InputName: Name of the input field, for textures it has to be the same of the name used in the compute shader, for colors it only matters for the localization string used by the generator
-   - Settings: Array of int values that indicates some additional settings for the input field
-
-Texture input settings:
- - [0] : Show texture channel selector (0 = hidden, 1 = shown)
- - [1] : Show reverse option (0 = hidden, 1 = shown)
-
-Color input settings:
- - [0] : Show colorspace selector (0 = hidden, 1 = shown)
+Now just add `CustomEditor "VRLabs.Examples.MaskColorizerInspector"` to the shader, with that the generator will use the custom inspector.
 
  ## Using the custom generator
 
- Now that we have both the compute shader and the input settings json we can use them on our `TextureGeneratorControl`.
+ Now that we have both the shader and the inspector we can use the shader on our `TextureGeneratorControl`.
 
- The easiest way is to put both the compute shader and the settings json inside a `Editor/Resources` folder, so what we can easily load them using `Resources.Load`, but you can use whatever method you want to load them.
+ The easiest way is to put the shader and inside an `Editor/Resources` folder, so what we can easily load them using `Resources.Load`, but you can use whatever method you want to load it.
 
- In this example the files will be inside a `Editor/Resources/Compute` folder.
+ In this example the file will be inside a `Editor/Resources/Shader` folder.
 
  [!code-csharp[Main](Code/TextureGeneratorExample.cs.txt)]
 
 And now the generator is ready to go and be used, give it a try!
 
-Now this was a fairly simple example of compute shader, but, just like normal shaders, you can go with much *much* more complex shaders to do more advanced stuff.
+Now this was a fairly simple example of a shader, but you can go with much *much* more complex shaders to do more advanced stuff.

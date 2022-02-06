@@ -100,6 +100,13 @@
             return control;
         }
 
+        public static VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer AddHorizontalContainer(this VRLabs.SimpleShaderInspectors.IControlContainer container, string appendAfterAlias = "")
+        {
+            var control = new VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer();
+            container.AddControl(control, appendAfterAlias);
+            return control;
+        }
+
         public static VRLabs.SimpleShaderInspectors.Controls.KeywordToggleControl AddKeywordToggleControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String keyword, string appendAfterAlias = "")
         {
             var control = new VRLabs.SimpleShaderInspectors.Controls.KeywordToggleControl(keyword);
@@ -129,6 +136,13 @@
         public static VRLabs.SimpleShaderInspectors.Controls.LightmapEmissionControl AddLightmapEmissionControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, string appendAfterAlias = "")
         {
             var control = new VRLabs.SimpleShaderInspectors.Controls.LightmapEmissionControl();
+            container.AddControl(control, appendAfterAlias);
+            return control;
+        }
+
+        public static VRLabs.SimpleShaderInspectors.Controls.RGBASelectorControl AddRGBASelectorControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String propertyName, string appendAfterAlias = "")
+        {
+            var control = new VRLabs.SimpleShaderInspectors.Controls.RGBASelectorControl(propertyName);
             container.AddControl(control, appendAfterAlias);
             return control;
         }
@@ -183,9 +197,9 @@
             container.AddControl(control, appendAfterAlias);
             return control;
         }
-        public static VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl AddTextureGeneratorControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, UnityEngine.ComputeShader compute, System.String computeOptionsJson, System.String propertyName, System.String extraPropertyName1 = null, System.String extraPropertyName2 = null, string appendAfterAlias = "")
+        public static VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl AddTextureGeneratorControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, UnityEngine.Shader shader, System.String propertyName, System.String extraPropertyName1 = null, System.String extraPropertyName2 = null, string appendAfterAlias = "")
         {
-            var control = new VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl(compute, computeOptionsJson, propertyName, extraPropertyName1, extraPropertyName2);
+            var control = new VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl(shader, propertyName, extraPropertyName1, extraPropertyName2);
             container.AddControl(control, appendAfterAlias);
             return control;
         }
@@ -197,6 +211,11 @@
         public static T WithGeneratorSaveButtonStyle<T>(this T control, UnityEngine.GUIStyle property) where T : TextureGeneratorControl
         {
             control.GeneratorSaveButtonStyle = property;
+            return control;
+        }
+        public static T WithGeneratorCloseButtonStyle<T>(this T control, UnityEngine.GUIStyle property) where T : TextureGeneratorControl
+        {
+            control.GeneratorCloseButtonStyle = property;
             return control;
         }
         public static T WithGeneratorStyle<T>(this T control, UnityEngine.GUIStyle property) where T : TextureGeneratorControl
@@ -217,6 +236,11 @@
         public static T WithGeneratorSaveButtonColor<T>(this T control, UnityEngine.Color property) where T : TextureGeneratorControl
         {
             control.GeneratorSaveButtonColor = property;
+            return control;
+        }
+        public static T WithGeneratorCloseButtonColor<T>(this T control, UnityEngine.Color property) where T : TextureGeneratorControl
+        {
+            control.GeneratorCloseButtonColor = property;
             return control;
         }
         public static T WithGeneratorColor<T>(this T control, UnityEngine.Color property) where T : TextureGeneratorControl

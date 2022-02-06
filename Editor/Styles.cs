@@ -54,25 +54,21 @@ namespace VRLabs.SimpleShaderInspectors
     /// <summary>
     /// Default compute shader assets and settings natively available in Simple Shader Inspectors.
     /// </summary>
-    public static class ComputeShaders
+    public static class Shaders
     {
-        private static ComputeShader _rgbaPacker;
+        private static Shader _rgbaPacker;
         /// <summary>
         /// Compute shader that packs 4 texture channels into a single texture.
         /// </summary>
-        public static ComputeShader RGBAPacker
+        public static Shader RGBAPacker
         {
             get
             {
                 if (_rgbaPacker != null) return _rgbaPacker;
-                _rgbaPacker = Resources.Load<ComputeShader>($"{SSIConstants.RESOURCES_FOLDER}/ComputeShaders/RGBAPacker");
+                _rgbaPacker = Resources.Load<Shader>($"{SSIConstants.RESOURCES_FOLDER}/Shaders/RGBAPacker");
                 return _rgbaPacker;
             }
         }
-        /// <summary>
-        /// default input settings for the RGBAPacker compute shader.
-        /// </summary>
-        public static string RGBAPackerSettings => Resources.Load<TextAsset>($"{SSIConstants.RESOURCES_FOLDER}/ComputeShaderSettings/RGBAPackerDefault").text;
     }
 
     /// <summary>

@@ -1,6 +1,46 @@
 {
     "Properties": [
         {
+            "Name": "Layers mask_GeneratorLinearSpace",
+            "DisplayName": "Linear Space",
+            "Tooltip": ""
+        },
+        {
+            "Name": "Layers mask_GeneratorPreview",
+            "DisplayName": "Preview",
+            "Tooltip": ""
+        },
+        {
+            "Name": "Layers mask_Input_RGBAPacker_RedTexture",
+            "DisplayName": "Red channel",
+            "Tooltip": "Red channel texture"
+        },
+        {
+            "Name": "Layers mask_Input_RGBAPacker_GreenTexture",
+            "DisplayName": "Green channel",
+            "Tooltip": "Green channel texture"
+        },
+        {
+            "Name": "Layers mask_Input_RGBAPacker_BlueTexture",
+            "DisplayName": "Blue channel",
+            "Tooltip": "Blue channel texture"
+        },
+        {
+            "Name": "Layers mask_Input_RGBAPacker_AlphaTexture",
+            "DisplayName": "Alpha channel",
+            "Tooltip": "Alpha channel texture"
+        },
+        {
+            "Name": "Layers mask_Input_RGBAPacker_Invert",
+            "DisplayName": "Invert",
+            "Tooltip": ""
+        },
+        {
+            "Name": "Layers mask_Input_RGBAPacker_Channel",
+            "DisplayName": "",
+            "Tooltip": ""
+        },
+        {
             "Name": "Ordered1_Path",
             "DisplayName": "AAA",
             "Tooltip": ""
@@ -89,31 +129,6 @@
             "Name": "Layers mask_GeneratorTextureSize",
             "DisplayName": "Texture size",
             "Tooltip": "Texture size"
-        },
-        {
-            "Name": "Layers mask_TextureInvert",
-            "DisplayName": "Invert",
-            "Tooltip": "Invert the texture channel"
-        },
-        {
-            "Name": "Layers mask_Input1",
-            "DisplayName": "Red mask",
-            "Tooltip": "Red mask"
-        },
-        {
-            "Name": "Layers mask_Input2",
-            "DisplayName": "Green mask",
-            "Tooltip": "Green mask"
-        },
-        {
-            "Name": "Layers mask_Input3",
-            "DisplayName": "Blue mask",
-            "Tooltip": "Blue mask"
-        },
-        {
-            "Name": "Layers mask_Input4",
-            "DisplayName": "Alpha mask",
-            "Tooltip": "Alpha mask"
         },
         {
             "Name": "Red channel",

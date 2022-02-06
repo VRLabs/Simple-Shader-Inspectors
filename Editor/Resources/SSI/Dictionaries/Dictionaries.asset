@@ -12,5 +12,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45db28035fecfe5408f3b903a531b7fd, type: 3}
   m_Name: Dictionaries
   m_EditorClassIdentifier: 
-  boolDictionary: []
-  intDictionary: []
+  boolDictionary:
+  - key: Layers header_1961dad63f51fe84494127b3a7bad0a1_Show
+    value: 1
+    date: -8585577530834203444
+  - key: Rim light header_1961dad63f51fe84494127b3a7bad0a1_Show
+    value: 0
+    date: -8585577530844070325
+  - key: Red channel_1961dad63f51fe84494127b3a7bad0a1_Show
+    value: 0
+    date: -8585577530834193430
+  - key: Green channel_1961dad63f51fe84494127b3a7bad0a1_Show
+    value: 0
+    date: -8585577530834193430
+  - key: Blue channel_1961dad63f51fe84494127b3a7bad0a1_Show
+    value: 0
+    date: -8585577530834183431
+  - key: Alpha channel_1961dad63f51fe84494127b3a7bad0a1_Show
+    value: 0
+    date: -8585577530834183431
+  - key: Ordered1_1961dad63f51fe84494127b3a7bad0a1_Show
+    value: 0
+    date: -8585577530834173434
+  - key: Ordered2_1961dad63f51fe84494127b3a7bad0a1_Show
+    value: 0
+    date: -8585577530834163441
+  - key: Ordered3_1961dad63f51fe84494127b3a7bad0a1_Show
+    value: 0
+    date: -8585577530834163441
+  - key: Ordered4_1961dad63f51fe84494127b3a7bad0a1_Show
+    value: 0
+    date: -8585577530834163441
+  intDictionary:
+  - key: Ordered1_1961dad63f51fe84494127b3a7bad0a1_SectionPosition
+    value: 0
+    date: -8585577530834173434
+  - key: Ordered2_1961dad63f51fe84494127b3a7bad0a1_SectionPosition
+    value: 0
+    date: -8585577530834163441
+  - key: Ordered3_1961dad63f51fe84494127b3a7bad0a1_SectionPosition
+    value: 0
+    date: -8585577530834163441
+  - key: Ordered4_1961dad63f51fe84494127b3a7bad0a1_SectionPosition
+    value: 0
+    date: -8585577530834163441

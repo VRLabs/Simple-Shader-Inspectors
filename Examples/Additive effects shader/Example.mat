@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _AdditionalMasks:
-        m_Texture: {fileID: 2800000, guid: d536686b8bc94494ca4bae111c7fab84, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -36,7 +36,7 @@ Material:
     - _OrderedSection2: 0
     - _OrderedSection3: 0
     - _OrderedSection4: 0
-    - _REmissive: 0
+    - _REmissive: 1
     - _RimLightEnable: 0
     - _RimLightPower: 0.284
     m_Colors:

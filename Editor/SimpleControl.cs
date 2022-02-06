@@ -11,7 +11,7 @@ namespace VRLabs.SimpleShaderInspectors
         /// <summary>
         /// Inspector that contains this control.
         /// </summary>
-        public ISimpleShaderInspector Inspector { get; set; }
+        public virtual ISimpleShaderInspector Inspector { get; set; }
         /// <summary>
         /// Localized GuiContent set by the inspector.
         /// </summary>

@@ -1,0 +1,49 @@
+Shader "Hidden/VRLabs/GeneratorShaders/MaskColorizer"
+{
+    Properties
+    {
+        _MainTex ("Mask", 2D) = "white" {}
+        
+        _BaseColor("Base Color", Color) = (1, 1, 1, 1)
+        _RedColor("Red Channel Color", Color) = (1, 1, 1, 1)
+        _GreenColor("Green Channel Color", Color) = (1, 1, 1, 1)
+        _BlueColor("Blue Channel Color", Color) = (1, 1, 1, 1)
+        _AlphaColor("Alpha Channel Color", Color) = (1, 1, 1, 1)
+    }
+    SubShader
+    {
+        Lighting Off
+        Blend One Zero
+
+        Pass
+        {
+            CGPROGRAM
+
+            #include "UnityCustomRenderTexture.cginc"
+            #pragma vertex CustomRenderTextureVertexShader
+            #pragma fragment frag
+            #pragma target 3.0
+
+            UNITY_DECLARE_TEX2D(_MainTex);
+            float4 _MainTex_ST;
+
+            float4 _BaseColor, _RedColor, _GreenColor, _BlueColor, _AlphaColor;
+
+            fixed4 frag (v2f_customrendertexture  i) : SV_Target
+            {
+                float4 mask = UNITY_SAMPLE_TEX2D(_MainTex, i.localTexcoord.xy);
+                float4 rgba = _BaseColor;
+                rgba = lerp(rgba, _RedColor, mask.r);
+                rgba = lerp(rgba, _GreenColor, mask.g);
+                rgba = lerp(rgba, _BlueColor, mask.b);
+                rgba = lerp(rgba, _AlphaColor, mask.a);
+                
+                return rgba;
+            }
+            ENDCG
+        }
+    }
+    CustomEditor "VRLabs.Examples.MaskColorizerInspector"
+    
+    
+                return float4(0,0,0,0);
