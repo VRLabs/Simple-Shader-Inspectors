@@ -120,8 +120,7 @@ the texture use, and use that as the channel for the final generated texture.
 </p>
 <p>
 While this is already a great use of the control and a fairly common one (like merging 4 monochrome texture masks) it is just one possible use,
-since it can load custom <code>compute shaders</code> and relative control input options to go along, enabling you to create your own generator that takes
-your own defined parameters to get a specific output.
+since it can load custom <code>shaders</code>, enabling you to create your own generator, and uses the shader&apos;s gui for setting inputs for the generator.
 </p>
 </div>
   
@@ -131,7 +130,7 @@ your own defined parameters to get a specific output.
 this.AddTextureGeneratorControl(&quot;_TextureProperty&quot;, &quot;_ColorProperty&quot;); 
 
 // Adds a new texture generator control with a texture and color field, using a custom generator
-this.AddTextureGeneratorControl(myCompute, computeInputJson, &quot;_TextureProperty&quot;, &quot;_ColorProperty&quot;); </code></pre>
+this.AddTextureGeneratorControl(myShader, &quot;_TextureProperty&quot;, &quot;_ColorProperty&quot;); </code></pre>
 
   <h3 id="constructors">Constructors
   </h3>
@@ -151,8 +150,8 @@ this.AddTextureGeneratorControl(myCompute, computeInputJson, &quot;_TexturePrope
 </td>
       </tr>
       <tr>
-        <td id="VRLabs_SimpleShaderInspectors_Controls_TextureGeneratorControl__ctor_UnityEngine_ComputeShader_System_String_System_String_System_String_System_String_" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.#ctor(UnityEngine.ComputeShader,System.String,System.String,System.String,System.String)">
-          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.-ctor.html#VRLabs_SimpleShaderInspectors_Controls_TextureGeneratorControl__ctor_UnityEngine_ComputeShader_System_String_System_String_System_String_System_String_">TextureGeneratorControl(ComputeShader, String, String, String, String)</a>
+        <td id="VRLabs_SimpleShaderInspectors_Controls_TextureGeneratorControl__ctor_UnityEngine_Shader_System_String_System_String_System_String_" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.#ctor(UnityEngine.Shader,System.String,System.String,System.String)">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.-ctor.html#VRLabs_SimpleShaderInspectors_Controls_TextureGeneratorControl__ctor_UnityEngine_Shader_System_String_System_String_System_String_">TextureGeneratorControl(Shader, String, String, String)</a>
         </td>
         <td class="markdown level1 summary"><p>Default constructor of <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.html">TextureGeneratorControl</a></p>
 </td>
@@ -188,6 +187,20 @@ this.AddTextureGeneratorControl(myCompute, computeInputJson, &quot;_TexturePrope
           <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.GeneratorButtonStyle.html#VRLabs_SimpleShaderInspectors_Controls_TextureGeneratorControl_GeneratorButtonStyle">GeneratorButtonStyle</a>
         </td>
         <td class="markdown level1 summary"><p>Style for the texture generator button.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="VRLabs_SimpleShaderInspectors_Controls_TextureGeneratorControl_GeneratorCloseButtonColor" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.GeneratorCloseButtonColor">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.GeneratorCloseButtonColor.html#VRLabs_SimpleShaderInspectors_Controls_TextureGeneratorControl_GeneratorCloseButtonColor">GeneratorCloseButtonColor</a>
+        </td>
+        <td class="markdown level1 summary"><p>Background color for the generator close button.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="VRLabs_SimpleShaderInspectors_Controls_TextureGeneratorControl_GeneratorCloseButtonStyle" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.GeneratorCloseButtonStyle">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.GeneratorCloseButtonStyle.html#VRLabs_SimpleShaderInspectors_Controls_TextureGeneratorControl_GeneratorCloseButtonStyle">GeneratorCloseButtonStyle</a>
+        </td>
+        <td class="markdown level1 summary"><p>Style for the texture generator close button.</p>
 </td>
       </tr>
       <tr>
@@ -231,6 +244,12 @@ this.AddTextureGeneratorControl(myCompute, computeInputJson, &quot;_TexturePrope
         </td>
         <td class="markdown level1 summary"><p>Style for the texture generator background.</p>
 </td>
+      </tr>
+      <tr>
+        <td id="VRLabs_SimpleShaderInspectors_Controls_TextureGeneratorControl_Inspector" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.Inspector">
+          <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.Inspector.html#VRLabs_SimpleShaderInspectors_Controls_TextureGeneratorControl_Inspector">Inspector</a>
+        </td>
+        <td class="markdown level1 summary"></td>
       </tr>
     </tbody>
   </table>
@@ -300,6 +319,9 @@ this.AddTextureGeneratorControl(myCompute, computeInputJson, &quot;_TexturePrope
       <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddHelpBoxControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddHelpBoxControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_">Chainables.AddHelpBoxControl(IControlContainer, String, String)</a>
   </div>
   <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddHorizontalContainer.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddHorizontalContainer_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_">Chainables.AddHorizontalContainer(IControlContainer, String)</a>
+  </div>
+  <div>
       <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddKeywordToggleControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddKeywordToggleControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_">Chainables.AddKeywordToggleControl(IControlContainer, String, String)</a>
   </div>
   <div>
@@ -310,6 +332,9 @@ this.AddTextureGeneratorControl(myCompute, computeInputJson, &quot;_TexturePrope
   </div>
   <div>
       <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddLightmapEmissionControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddLightmapEmissionControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_">Chainables.AddLightmapEmissionControl(IControlContainer, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddRGBASelectorControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddRGBASelectorControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_">Chainables.AddRGBASelectorControl(IControlContainer, String, String)</a>
   </div>
   <div>
       <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddSpaceControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddSpaceControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_Int32_System_String_">Chainables.AddSpaceControl(IControlContainer, Int32, String)</a>
@@ -339,13 +364,16 @@ this.AddTextureGeneratorControl(myCompute, computeInputJson, &quot;_TexturePrope
       <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddTextureGeneratorControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_System_String_System_String_">Chainables.AddTextureGeneratorControl(IControlContainer, String, String, String, String)</a>
   </div>
   <div>
-      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddTextureGeneratorControl_VRLabs_SimpleShaderInspectors_IControlContainer_UnityEngine_ComputeShader_System_String_System_String_System_String_System_String_System_String_">Chainables.AddTextureGeneratorControl(IControlContainer, ComputeShader, String, String, String, String, String)</a>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddTextureGeneratorControl_VRLabs_SimpleShaderInspectors_IControlContainer_UnityEngine_Shader_System_String_System_String_System_String_System_String_">Chainables.AddTextureGeneratorControl(IControlContainer, Shader, String, String, String, String)</a>
   </div>
   <div>
       <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorButtonStyle.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_WithGeneratorButtonStyle__1___0_UnityEngine_GUIStyle_">Chainables.WithGeneratorButtonStyle&lt;T&gt;(T, GUIStyle)</a>
   </div>
   <div>
       <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorSaveButtonStyle.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_WithGeneratorSaveButtonStyle__1___0_UnityEngine_GUIStyle_">Chainables.WithGeneratorSaveButtonStyle&lt;T&gt;(T, GUIStyle)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorCloseButtonStyle.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_WithGeneratorCloseButtonStyle__1___0_UnityEngine_GUIStyle_">Chainables.WithGeneratorCloseButtonStyle&lt;T&gt;(T, GUIStyle)</a>
   </div>
   <div>
       <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorStyle.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_WithGeneratorStyle__1___0_UnityEngine_GUIStyle_">Chainables.WithGeneratorStyle&lt;T&gt;(T, GUIStyle)</a>
@@ -358,6 +386,9 @@ this.AddTextureGeneratorControl(myCompute, computeInputJson, &quot;_TexturePrope
   </div>
   <div>
       <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorSaveButtonColor.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_WithGeneratorSaveButtonColor__1___0_UnityEngine_Color_">Chainables.WithGeneratorSaveButtonColor&lt;T&gt;(T, Color)</a>
+  </div>
+  <div>
+      <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorCloseButtonColor.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_WithGeneratorCloseButtonColor__1___0_UnityEngine_Color_">Chainables.WithGeneratorCloseButtonColor&lt;T&gt;(T, Color)</a>
   </div>
   <div>
       <a class="xref" href="VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorColor.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_WithGeneratorColor__1___0_UnityEngine_Color_">Chainables.WithGeneratorColor&lt;T&gt;(T, Color)</a>

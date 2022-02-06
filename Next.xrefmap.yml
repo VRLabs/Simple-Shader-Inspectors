@@ -91,6 +91,36 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.AdditionalLocalization.Content
   fullName: VRLabs.SimpleShaderInspectors.AdditionalLocalization.Content
   nameWithType: AdditionalLocalization.Content
+- uid: VRLabs.SimpleShaderInspectors.AdditionalLocalization.Equals(System.Object)
+  name: Equals(Object)
+  href: Next/api/VRLabs.SimpleShaderInspectors.AdditionalLocalization.Equals.html#VRLabs_SimpleShaderInspectors_AdditionalLocalization_Equals_System_Object_
+  commentId: M:VRLabs.SimpleShaderInspectors.AdditionalLocalization.Equals(System.Object)
+  fullName: VRLabs.SimpleShaderInspectors.AdditionalLocalization.Equals(System.Object)
+  nameWithType: AdditionalLocalization.Equals(Object)
+- uid: VRLabs.SimpleShaderInspectors.AdditionalLocalization.Equals(VRLabs.SimpleShaderInspectors.AdditionalLocalization)
+  name: Equals(AdditionalLocalization)
+  href: Next/api/VRLabs.SimpleShaderInspectors.AdditionalLocalization.Equals.html#VRLabs_SimpleShaderInspectors_AdditionalLocalization_Equals_VRLabs_SimpleShaderInspectors_AdditionalLocalization_
+  commentId: M:VRLabs.SimpleShaderInspectors.AdditionalLocalization.Equals(VRLabs.SimpleShaderInspectors.AdditionalLocalization)
+  fullName: VRLabs.SimpleShaderInspectors.AdditionalLocalization.Equals(VRLabs.SimpleShaderInspectors.AdditionalLocalization)
+  nameWithType: AdditionalLocalization.Equals(AdditionalLocalization)
+- uid: VRLabs.SimpleShaderInspectors.AdditionalLocalization.Equals*
+  name: Equals
+  href: Next/api/VRLabs.SimpleShaderInspectors.AdditionalLocalization.Equals.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.AdditionalLocalization.Equals
+  fullName: VRLabs.SimpleShaderInspectors.AdditionalLocalization.Equals
+  nameWithType: AdditionalLocalization.Equals
+- uid: VRLabs.SimpleShaderInspectors.AdditionalLocalization.GetHashCode
+  name: GetHashCode()
+  href: Next/api/VRLabs.SimpleShaderInspectors.AdditionalLocalization.GetHashCode.html#VRLabs_SimpleShaderInspectors_AdditionalLocalization_GetHashCode
+  commentId: M:VRLabs.SimpleShaderInspectors.AdditionalLocalization.GetHashCode
+  fullName: VRLabs.SimpleShaderInspectors.AdditionalLocalization.GetHashCode()
+  nameWithType: AdditionalLocalization.GetHashCode()
+- uid: VRLabs.SimpleShaderInspectors.AdditionalLocalization.GetHashCode*
+  name: GetHashCode
+  href: Next/api/VRLabs.SimpleShaderInspectors.AdditionalLocalization.GetHashCode.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.AdditionalLocalization.GetHashCode
+  fullName: VRLabs.SimpleShaderInspectors.AdditionalLocalization.GetHashCode
+  nameWithType: AdditionalLocalization.GetHashCode
 - uid: VRLabs.SimpleShaderInspectors.AdditionalLocalization.Name
   name: Name
   href: Next/api/VRLabs.SimpleShaderInspectors.AdditionalLocalization.Name.html#VRLabs_SimpleShaderInspectors_AdditionalLocalization_Name
@@ -175,36 +205,6 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Chainables.AddPropertyControl
   fullName: VRLabs.SimpleShaderInspectors.Chainables.AddPropertyControl
   nameWithType: Chainables.AddPropertyControl
-- uid: VRLabs.SimpleShaderInspectors.ComputeShaders
-  name: ComputeShaders
-  href: Next/api/VRLabs.SimpleShaderInspectors.ComputeShaders.html
-  commentId: T:VRLabs.SimpleShaderInspectors.ComputeShaders
-  fullName: VRLabs.SimpleShaderInspectors.ComputeShaders
-  nameWithType: ComputeShaders
-- uid: VRLabs.SimpleShaderInspectors.ComputeShaders.RGBAPacker
-  name: RGBAPacker
-  href: Next/api/VRLabs.SimpleShaderInspectors.ComputeShaders.RGBAPacker.html#VRLabs_SimpleShaderInspectors_ComputeShaders_RGBAPacker
-  commentId: P:VRLabs.SimpleShaderInspectors.ComputeShaders.RGBAPacker
-  fullName: VRLabs.SimpleShaderInspectors.ComputeShaders.RGBAPacker
-  nameWithType: ComputeShaders.RGBAPacker
-- uid: VRLabs.SimpleShaderInspectors.ComputeShaders.RGBAPacker*
-  name: RGBAPacker
-  href: Next/api/VRLabs.SimpleShaderInspectors.ComputeShaders.RGBAPacker.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.ComputeShaders.RGBAPacker
-  fullName: VRLabs.SimpleShaderInspectors.ComputeShaders.RGBAPacker
-  nameWithType: ComputeShaders.RGBAPacker
-- uid: VRLabs.SimpleShaderInspectors.ComputeShaders.RGBAPackerSettings
-  name: RGBAPackerSettings
-  href: Next/api/VRLabs.SimpleShaderInspectors.ComputeShaders.RGBAPackerSettings.html#VRLabs_SimpleShaderInspectors_ComputeShaders_RGBAPackerSettings
-  commentId: P:VRLabs.SimpleShaderInspectors.ComputeShaders.RGBAPackerSettings
-  fullName: VRLabs.SimpleShaderInspectors.ComputeShaders.RGBAPackerSettings
-  nameWithType: ComputeShaders.RGBAPackerSettings
-- uid: VRLabs.SimpleShaderInspectors.ComputeShaders.RGBAPackerSettings*
-  name: RGBAPackerSettings
-  href: Next/api/VRLabs.SimpleShaderInspectors.ComputeShaders.RGBAPackerSettings.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.ComputeShaders.RGBAPackerSettings
-  fullName: VRLabs.SimpleShaderInspectors.ComputeShaders.RGBAPackerSettings
-  nameWithType: ComputeShaders.RGBAPackerSettings
 - uid: VRLabs.SimpleShaderInspectors.ContainerExtensions
   name: ContainerExtensions
   href: Next/api/VRLabs.SimpleShaderInspectors.ContainerExtensions.html
@@ -319,6 +319,18 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddHelpBoxControl
   fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddHelpBoxControl
   nameWithType: Chainables.AddHelpBoxControl
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddHorizontalContainer(VRLabs.SimpleShaderInspectors.IControlContainer,System.String)
+  name: AddHorizontalContainer(IControlContainer, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddHorizontalContainer.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddHorizontalContainer_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddHorizontalContainer(VRLabs.SimpleShaderInspectors.IControlContainer,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddHorizontalContainer(VRLabs.SimpleShaderInspectors.IControlContainer, System.String)
+  nameWithType: Chainables.AddHorizontalContainer(IControlContainer, String)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddHorizontalContainer*
+  name: AddHorizontalContainer
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddHorizontalContainer.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddHorizontalContainer
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddHorizontalContainer
+  nameWithType: Chainables.AddHorizontalContainer
 - uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddKeywordToggleControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String)
   name: AddKeywordToggleControl(IControlContainer, String, String)
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddKeywordToggleControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddKeywordToggleControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_
@@ -367,6 +379,18 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddLightmapEmissionControl
   fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddLightmapEmissionControl
   nameWithType: Chainables.AddLightmapEmissionControl
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddRGBASelectorControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String)
+  name: AddRGBASelectorControl(IControlContainer, String, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddRGBASelectorControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddRGBASelectorControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddRGBASelectorControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddRGBASelectorControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.String)
+  nameWithType: Chainables.AddRGBASelectorControl(IControlContainer, String, String)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddRGBASelectorControl*
+  name: AddRGBASelectorControl
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddRGBASelectorControl.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddRGBASelectorControl
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddRGBASelectorControl
+  nameWithType: Chainables.AddRGBASelectorControl
 - uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddSpaceControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.Int32,System.String)
   name: AddSpaceControl(IControlContainer, Int32, String)
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddSpaceControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddSpaceControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_Int32_System_String_
@@ -397,12 +421,12 @@ references:
   commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String,System.String,System.String,System.String)
   fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String, System.String, System.String, System.String)
   nameWithType: Chainables.AddTextureGeneratorControl(IControlContainer, String, String, String, String)
-- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl(VRLabs.SimpleShaderInspectors.IControlContainer,UnityEngine.ComputeShader,System.String,System.String,System.String,System.String,System.String)
-  name: AddTextureGeneratorControl(IControlContainer, ComputeShader, String, String, String, String, String)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddTextureGeneratorControl_VRLabs_SimpleShaderInspectors_IControlContainer_UnityEngine_ComputeShader_System_String_System_String_System_String_System_String_System_String_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl(VRLabs.SimpleShaderInspectors.IControlContainer,UnityEngine.ComputeShader,System.String,System.String,System.String,System.String,System.String)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl(VRLabs.SimpleShaderInspectors.IControlContainer, UnityEngine.ComputeShader, System.String, System.String, System.String, System.String, System.String)
-  nameWithType: Chainables.AddTextureGeneratorControl(IControlContainer, ComputeShader, String, String, String, String, String)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl(VRLabs.SimpleShaderInspectors.IControlContainer,UnityEngine.Shader,System.String,System.String,System.String,System.String)
+  name: AddTextureGeneratorControl(IControlContainer, Shader, String, String, String, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddTextureGeneratorControl_VRLabs_SimpleShaderInspectors_IControlContainer_UnityEngine_Shader_System_String_System_String_System_String_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl(VRLabs.SimpleShaderInspectors.IControlContainer,UnityEngine.Shader,System.String,System.String,System.String,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl(VRLabs.SimpleShaderInspectors.IControlContainer, UnityEngine.Shader, System.String, System.String, System.String, System.String)
+  nameWithType: Chainables.AddTextureGeneratorControl(IControlContainer, Shader, String, String, String, String)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl*
   name: AddTextureGeneratorControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddTextureGeneratorControl.html
@@ -514,6 +538,36 @@ references:
   fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorButtonStyle(Of T)(T, UnityEngine.GUIStyle)
   nameWithType: Chainables.WithGeneratorButtonStyle<T>(T, GUIStyle)
   nameWithType.vb: Chainables.WithGeneratorButtonStyle(Of T)(T, GUIStyle)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorCloseButtonColor*
+  name: WithGeneratorCloseButtonColor
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorCloseButtonColor.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorCloseButtonColor
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorCloseButtonColor
+  nameWithType: Chainables.WithGeneratorCloseButtonColor
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorCloseButtonColor``1(``0,UnityEngine.Color)
+  name: WithGeneratorCloseButtonColor<T>(T, Color)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorCloseButtonColor.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_WithGeneratorCloseButtonColor__1___0_UnityEngine_Color_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorCloseButtonColor``1(``0,UnityEngine.Color)
+  name.vb: WithGeneratorCloseButtonColor(Of T)(T, Color)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorCloseButtonColor<T>(T, UnityEngine.Color)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorCloseButtonColor(Of T)(T, UnityEngine.Color)
+  nameWithType: Chainables.WithGeneratorCloseButtonColor<T>(T, Color)
+  nameWithType.vb: Chainables.WithGeneratorCloseButtonColor(Of T)(T, Color)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorCloseButtonStyle*
+  name: WithGeneratorCloseButtonStyle
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorCloseButtonStyle.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorCloseButtonStyle
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorCloseButtonStyle
+  nameWithType: Chainables.WithGeneratorCloseButtonStyle
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorCloseButtonStyle``1(``0,UnityEngine.GUIStyle)
+  name: WithGeneratorCloseButtonStyle<T>(T, GUIStyle)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorCloseButtonStyle.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_WithGeneratorCloseButtonStyle__1___0_UnityEngine_GUIStyle_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorCloseButtonStyle``1(``0,UnityEngine.GUIStyle)
+  name.vb: WithGeneratorCloseButtonStyle(Of T)(T, GUIStyle)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorCloseButtonStyle<T>(T, UnityEngine.GUIStyle)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorCloseButtonStyle(Of T)(T, UnityEngine.GUIStyle)
+  nameWithType: Chainables.WithGeneratorCloseButtonStyle<T>(T, GUIStyle)
+  nameWithType.vb: Chainables.WithGeneratorCloseButtonStyle(Of T)(T, GUIStyle)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorColor*
   name: WithGeneratorColor
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.WithGeneratorColor.html
@@ -1321,24 +1375,72 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.IsWideBox
   fullName: VRLabs.SimpleShaderInspectors.Controls.HelpBoxControl.IsWideBox
   nameWithType: HelpBoxControl.IsWideBox
-- uid: VRLabs.SimpleShaderInspectors.Controls.InputType
-  name: InputType
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.InputType.html
-  commentId: T:VRLabs.SimpleShaderInspectors.Controls.InputType
-  fullName: VRLabs.SimpleShaderInspectors.Controls.InputType
-  nameWithType: InputType
-- uid: VRLabs.SimpleShaderInspectors.Controls.InputType.Color
-  name: Color
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.InputType.html#VRLabs_SimpleShaderInspectors_Controls_InputType_Color
-  commentId: F:VRLabs.SimpleShaderInspectors.Controls.InputType.Color
-  fullName: VRLabs.SimpleShaderInspectors.Controls.InputType.Color
-  nameWithType: InputType.Color
-- uid: VRLabs.SimpleShaderInspectors.Controls.InputType.Texture
-  name: Texture
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.InputType.html#VRLabs_SimpleShaderInspectors_Controls_InputType_Texture
-  commentId: F:VRLabs.SimpleShaderInspectors.Controls.InputType.Texture
-  fullName: VRLabs.SimpleShaderInspectors.Controls.InputType.Texture
-  nameWithType: InputType.Texture
+- uid: VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer
+  name: HorizontalContainer
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.html
+  commentId: T:VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer
+  fullName: VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer
+  nameWithType: HorizontalContainer
+- uid: VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.#ctor
+  name: HorizontalContainer()
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.-ctor.html#VRLabs_SimpleShaderInspectors_Controls_HorizontalContainer__ctor
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.#ctor
+  fullName: VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.HorizontalContainer()
+  nameWithType: HorizontalContainer.HorizontalContainer()
+- uid: VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.#ctor*
+  name: HorizontalContainer
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.-ctor.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.#ctor
+  fullName: VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.HorizontalContainer
+  nameWithType: HorizontalContainer.HorizontalContainer
+- uid: VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl,System.String)
+  name: AddControl(SimpleControl, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.AddControl.html#VRLabs_SimpleShaderInspectors_Controls_HorizontalContainer_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl, System.String)
+  nameWithType: HorizontalContainer.AddControl(SimpleControl, String)
+- uid: VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.AddControl*
+  name: AddControl
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.AddControl.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.AddControl
+  fullName: VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.AddControl
+  nameWithType: HorizontalContainer.AddControl
+- uid: VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.ControlGUI(UnityEditor.MaterialEditor)
+  name: ControlGUI(MaterialEditor)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.ControlGUI.html#VRLabs_SimpleShaderInspectors_Controls_HorizontalContainer_ControlGUI_UnityEditor_MaterialEditor_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.ControlGUI(UnityEditor.MaterialEditor)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.ControlGUI(UnityEditor.MaterialEditor)
+  nameWithType: HorizontalContainer.ControlGUI(MaterialEditor)
+- uid: VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.ControlGUI*
+  name: ControlGUI
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.ControlGUI.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.ControlGUI
+  fullName: VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.ControlGUI
+  nameWithType: HorizontalContainer.ControlGUI
+- uid: VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.Controls
+  name: Controls
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.Controls.html#VRLabs_SimpleShaderInspectors_Controls_HorizontalContainer_Controls
+  commentId: P:VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.Controls
+  fullName: VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.Controls
+  nameWithType: HorizontalContainer.Controls
+- uid: VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.Controls*
+  name: Controls
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.Controls.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.Controls
+  fullName: VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.Controls
+  nameWithType: HorizontalContainer.Controls
+- uid: VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.GetControlList
+  name: GetControlList()
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.GetControlList.html#VRLabs_SimpleShaderInspectors_Controls_HorizontalContainer_GetControlList
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.GetControlList
+  fullName: VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.GetControlList()
+  nameWithType: HorizontalContainer.GetControlList()
+- uid: VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.GetControlList*
+  name: GetControlList
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.GetControlList.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.GetControlList
+  fullName: VRLabs.SimpleShaderInspectors.Controls.HorizontalContainer.GetControlList
+  nameWithType: HorizontalContainer.GetControlList
 - uid: VRLabs.SimpleShaderInspectors.Controls.KeywordToggleControl
   name: KeywordToggleControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.KeywordToggleControl.html
@@ -1591,6 +1693,42 @@ references:
   commentId: F:VRLabs.SimpleShaderInspectors.Controls.Resolution.XXL_4096x4096
   fullName: VRLabs.SimpleShaderInspectors.Controls.Resolution.XXL_4096x4096
   nameWithType: Resolution.XXL_4096x4096
+- uid: VRLabs.SimpleShaderInspectors.Controls.Resolution.XXS_64x64
+  name: XXS_64x64
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Resolution.html#VRLabs_SimpleShaderInspectors_Controls_Resolution_XXS_64x64
+  commentId: F:VRLabs.SimpleShaderInspectors.Controls.Resolution.XXS_64x64
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Resolution.XXS_64x64
+  nameWithType: Resolution.XXS_64x64
+- uid: VRLabs.SimpleShaderInspectors.Controls.RGBASelectorControl
+  name: RGBASelectorControl
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.RGBASelectorControl.html
+  commentId: T:VRLabs.SimpleShaderInspectors.Controls.RGBASelectorControl
+  fullName: VRLabs.SimpleShaderInspectors.Controls.RGBASelectorControl
+  nameWithType: RGBASelectorControl
+- uid: VRLabs.SimpleShaderInspectors.Controls.RGBASelectorControl.#ctor(System.String)
+  name: RGBASelectorControl(String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.RGBASelectorControl.-ctor.html#VRLabs_SimpleShaderInspectors_Controls_RGBASelectorControl__ctor_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.RGBASelectorControl.#ctor(System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.RGBASelectorControl.RGBASelectorControl(System.String)
+  nameWithType: RGBASelectorControl.RGBASelectorControl(String)
+- uid: VRLabs.SimpleShaderInspectors.Controls.RGBASelectorControl.#ctor*
+  name: RGBASelectorControl
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.RGBASelectorControl.-ctor.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.RGBASelectorControl.#ctor
+  fullName: VRLabs.SimpleShaderInspectors.Controls.RGBASelectorControl.RGBASelectorControl
+  nameWithType: RGBASelectorControl.RGBASelectorControl
+- uid: VRLabs.SimpleShaderInspectors.Controls.RGBASelectorControl.ControlGUI(UnityEditor.MaterialEditor)
+  name: ControlGUI(MaterialEditor)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.RGBASelectorControl.ControlGUI.html#VRLabs_SimpleShaderInspectors_Controls_RGBASelectorControl_ControlGUI_UnityEditor_MaterialEditor_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.RGBASelectorControl.ControlGUI(UnityEditor.MaterialEditor)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.RGBASelectorControl.ControlGUI(UnityEditor.MaterialEditor)
+  nameWithType: RGBASelectorControl.ControlGUI(MaterialEditor)
+- uid: VRLabs.SimpleShaderInspectors.Controls.RGBASelectorControl.ControlGUI*
+  name: ControlGUI
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.RGBASelectorControl.ControlGUI.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.RGBASelectorControl.ControlGUI
+  fullName: VRLabs.SimpleShaderInspectors.Controls.RGBASelectorControl.ControlGUI
+  nameWithType: RGBASelectorControl.ControlGUI
 - uid: VRLabs.SimpleShaderInspectors.Controls.Sections
   name: VRLabs.SimpleShaderInspectors.Controls.Sections
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.html
@@ -2185,13 +2323,13 @@ references:
   commentId: T:VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown
   fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown
   nameWithType: OrderedSectionDropdown
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.#ctor(System.String,AdvancedDropdownState,System.Collections.Generic.IEnumerable{VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection},System.Action{VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection})
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.#ctor(System.String,UnityEditor.IMGUI.Controls.AdvancedDropdownState,System.Collections.Generic.IEnumerable{VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection},System.Action{VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection})
   name: OrderedSectionDropdown(String, AdvancedDropdownState, IEnumerable<OrderedSection>, Action<OrderedSection>)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.-ctor.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionDropdown__ctor_System_String_AdvancedDropdownState_System_Collections_Generic_IEnumerable_VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection__System_Action_VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection__
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.#ctor(System.String,AdvancedDropdownState,System.Collections.Generic.IEnumerable{VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection},System.Action{VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection})
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.-ctor.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionDropdown__ctor_System_String_UnityEditor_IMGUI_Controls_AdvancedDropdownState_System_Collections_Generic_IEnumerable_VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection__System_Action_VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSection__
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.#ctor(System.String,UnityEditor.IMGUI.Controls.AdvancedDropdownState,System.Collections.Generic.IEnumerable{VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection},System.Action{VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection})
   name.vb: OrderedSectionDropdown(String, AdvancedDropdownState, IEnumerable(Of OrderedSection), Action(Of OrderedSection))
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.OrderedSectionDropdown(System.String, AdvancedDropdownState, System.Collections.Generic.IEnumerable<VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection>, System.Action<VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection>)
-  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.OrderedSectionDropdown(System.String, AdvancedDropdownState, System.Collections.Generic.IEnumerable(Of VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection), System.Action(Of VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection))
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.OrderedSectionDropdown(System.String, UnityEditor.IMGUI.Controls.AdvancedDropdownState, System.Collections.Generic.IEnumerable<VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection>, System.Action<VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection>)
+  fullName.vb: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.OrderedSectionDropdown(System.String, UnityEditor.IMGUI.Controls.AdvancedDropdownState, System.Collections.Generic.IEnumerable(Of VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection), System.Action(Of VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSection))
   nameWithType: OrderedSectionDropdown.OrderedSectionDropdown(String, AdvancedDropdownState, IEnumerable<OrderedSection>, Action<OrderedSection>)
   nameWithType.vb: OrderedSectionDropdown.OrderedSectionDropdown(String, AdvancedDropdownState, IEnumerable(Of OrderedSection), Action(Of OrderedSection))
 - uid: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.#ctor*
@@ -2212,11 +2350,11 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.BuildRoot
   fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.BuildRoot
   nameWithType: OrderedSectionDropdown.BuildRoot
-- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.ItemSelected(AdvancedDropdownItem)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.ItemSelected(UnityEditor.IMGUI.Controls.AdvancedDropdownItem)
   name: ItemSelected(AdvancedDropdownItem)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.ItemSelected.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionDropdown_ItemSelected_AdvancedDropdownItem_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.ItemSelected(AdvancedDropdownItem)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.ItemSelected(AdvancedDropdownItem)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.ItemSelected.html#VRLabs_SimpleShaderInspectors_Controls_Sections_OrderedSectionDropdown_ItemSelected_UnityEditor_IMGUI_Controls_AdvancedDropdownItem_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.ItemSelected(UnityEditor.IMGUI.Controls.AdvancedDropdownItem)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.ItemSelected(UnityEditor.IMGUI.Controls.AdvancedDropdownItem)
   nameWithType: OrderedSectionDropdown.ItemSelected(AdvancedDropdownItem)
 - uid: VRLabs.SimpleShaderInspectors.Controls.Sections.OrderedSectionDropdown.ItemSelected*
   name: ItemSelected
@@ -2868,12 +3006,12 @@ references:
   commentId: M:VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.#ctor(System.String,System.String,System.String)
   fullName: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.TextureGeneratorControl(System.String, System.String, System.String)
   nameWithType: TextureGeneratorControl.TextureGeneratorControl(String, String, String)
-- uid: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.#ctor(UnityEngine.ComputeShader,System.String,System.String,System.String,System.String)
-  name: TextureGeneratorControl(ComputeShader, String, String, String, String)
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.-ctor.html#VRLabs_SimpleShaderInspectors_Controls_TextureGeneratorControl__ctor_UnityEngine_ComputeShader_System_String_System_String_System_String_System_String_
-  commentId: M:VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.#ctor(UnityEngine.ComputeShader,System.String,System.String,System.String,System.String)
-  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.TextureGeneratorControl(UnityEngine.ComputeShader, System.String, System.String, System.String, System.String)
-  nameWithType: TextureGeneratorControl.TextureGeneratorControl(ComputeShader, String, String, String, String)
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.#ctor(UnityEngine.Shader,System.String,System.String,System.String)
+  name: TextureGeneratorControl(Shader, String, String, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.-ctor.html#VRLabs_SimpleShaderInspectors_Controls_TextureGeneratorControl__ctor_UnityEngine_Shader_System_String_System_String_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.#ctor(UnityEngine.Shader,System.String,System.String,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.TextureGeneratorControl(UnityEngine.Shader, System.String, System.String, System.String)
+  nameWithType: TextureGeneratorControl.TextureGeneratorControl(Shader, String, String, String)
 - uid: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.#ctor*
   name: TextureGeneratorControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.-ctor.html
@@ -2940,6 +3078,30 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.GeneratorButtonStyle
   fullName: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.GeneratorButtonStyle
   nameWithType: TextureGeneratorControl.GeneratorButtonStyle
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.GeneratorCloseButtonColor
+  name: GeneratorCloseButtonColor
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.GeneratorCloseButtonColor.html#VRLabs_SimpleShaderInspectors_Controls_TextureGeneratorControl_GeneratorCloseButtonColor
+  commentId: P:VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.GeneratorCloseButtonColor
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.GeneratorCloseButtonColor
+  nameWithType: TextureGeneratorControl.GeneratorCloseButtonColor
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.GeneratorCloseButtonColor*
+  name: GeneratorCloseButtonColor
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.GeneratorCloseButtonColor.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.GeneratorCloseButtonColor
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.GeneratorCloseButtonColor
+  nameWithType: TextureGeneratorControl.GeneratorCloseButtonColor
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.GeneratorCloseButtonStyle
+  name: GeneratorCloseButtonStyle
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.GeneratorCloseButtonStyle.html#VRLabs_SimpleShaderInspectors_Controls_TextureGeneratorControl_GeneratorCloseButtonStyle
+  commentId: P:VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.GeneratorCloseButtonStyle
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.GeneratorCloseButtonStyle
+  nameWithType: TextureGeneratorControl.GeneratorCloseButtonStyle
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.GeneratorCloseButtonStyle*
+  name: GeneratorCloseButtonStyle
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.GeneratorCloseButtonStyle.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.GeneratorCloseButtonStyle
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.GeneratorCloseButtonStyle
+  nameWithType: TextureGeneratorControl.GeneratorCloseButtonStyle
 - uid: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.GeneratorColor
   name: GeneratorColor
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.GeneratorColor.html#VRLabs_SimpleShaderInspectors_Controls_TextureGeneratorControl_GeneratorColor
@@ -3012,12 +3174,18 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.GeneratorStyle
   fullName: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.GeneratorStyle
   nameWithType: TextureGeneratorControl.GeneratorStyle
-- uid: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorHelper
-  name: TextureGeneratorHelper
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorHelper.html
-  commentId: T:VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorHelper
-  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorHelper
-  nameWithType: TextureGeneratorHelper
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.Inspector
+  name: Inspector
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.Inspector.html#VRLabs_SimpleShaderInspectors_Controls_TextureGeneratorControl_Inspector
+  commentId: P:VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.Inspector
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.Inspector
+  nameWithType: TextureGeneratorControl.Inspector
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.Inspector*
+  name: Inspector
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.Inspector.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.Inspector
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.Inspector
+  nameWithType: TextureGeneratorControl.Inspector
 - uid: VRLabs.SimpleShaderInspectors.Controls.TilingAndOffsetControl
   name: TilingAndOffsetControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TilingAndOffsetControl.html
@@ -3312,6 +3480,27 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.VertexStreamsControl.RemoveVertexStream
   fullName: VRLabs.SimpleShaderInspectors.Controls.VertexStreamsControl.RemoveVertexStream
   nameWithType: VertexStreamsControl.RemoveVertexStream
+- uid: VRLabs.SimpleShaderInspectors.DefaultGeneratorGUI
+  name: DefaultGeneratorGUI
+  href: Next/api/VRLabs.SimpleShaderInspectors.DefaultGeneratorGUI.html
+  commentId: T:VRLabs.SimpleShaderInspectors.DefaultGeneratorGUI
+  fullName: VRLabs.SimpleShaderInspectors.DefaultGeneratorGUI
+  nameWithType: DefaultGeneratorGUI
+- uid: VRLabs.SimpleShaderInspectors.DefaultGeneratorGUI.OnGUI(UnityEditor.MaterialEditor,UnityEditor.MaterialProperty[])
+  name: OnGUI(MaterialEditor, MaterialProperty[])
+  href: Next/api/VRLabs.SimpleShaderInspectors.DefaultGeneratorGUI.OnGUI.html#VRLabs_SimpleShaderInspectors_DefaultGeneratorGUI_OnGUI_UnityEditor_MaterialEditor_UnityEditor_MaterialProperty___
+  commentId: M:VRLabs.SimpleShaderInspectors.DefaultGeneratorGUI.OnGUI(UnityEditor.MaterialEditor,UnityEditor.MaterialProperty[])
+  name.vb: OnGUI(MaterialEditor, MaterialProperty())
+  fullName: VRLabs.SimpleShaderInspectors.DefaultGeneratorGUI.OnGUI(UnityEditor.MaterialEditor, UnityEditor.MaterialProperty[])
+  fullName.vb: VRLabs.SimpleShaderInspectors.DefaultGeneratorGUI.OnGUI(UnityEditor.MaterialEditor, UnityEditor.MaterialProperty())
+  nameWithType: DefaultGeneratorGUI.OnGUI(MaterialEditor, MaterialProperty[])
+  nameWithType.vb: DefaultGeneratorGUI.OnGUI(MaterialEditor, MaterialProperty())
+- uid: VRLabs.SimpleShaderInspectors.DefaultGeneratorGUI.OnGUI*
+  name: OnGUI
+  href: Next/api/VRLabs.SimpleShaderInspectors.DefaultGeneratorGUI.OnGUI.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.DefaultGeneratorGUI.OnGUI
+  fullName: VRLabs.SimpleShaderInspectors.DefaultGeneratorGUI.OnGUI
+  nameWithType: DefaultGeneratorGUI.OnGUI
 - uid: VRLabs.SimpleShaderInspectors.Extensions
   name: Extensions
   href: Next/api/VRLabs.SimpleShaderInspectors.Extensions.html
@@ -3881,6 +4070,36 @@ references:
   commentId: F:VRLabs.SimpleShaderInspectors.PropertyInfo.DisplayName
   fullName: VRLabs.SimpleShaderInspectors.PropertyInfo.DisplayName
   nameWithType: PropertyInfo.DisplayName
+- uid: VRLabs.SimpleShaderInspectors.PropertyInfo.Equals(System.Object)
+  name: Equals(Object)
+  href: Next/api/VRLabs.SimpleShaderInspectors.PropertyInfo.Equals.html#VRLabs_SimpleShaderInspectors_PropertyInfo_Equals_System_Object_
+  commentId: M:VRLabs.SimpleShaderInspectors.PropertyInfo.Equals(System.Object)
+  fullName: VRLabs.SimpleShaderInspectors.PropertyInfo.Equals(System.Object)
+  nameWithType: PropertyInfo.Equals(Object)
+- uid: VRLabs.SimpleShaderInspectors.PropertyInfo.Equals(VRLabs.SimpleShaderInspectors.PropertyInfo)
+  name: Equals(PropertyInfo)
+  href: Next/api/VRLabs.SimpleShaderInspectors.PropertyInfo.Equals.html#VRLabs_SimpleShaderInspectors_PropertyInfo_Equals_VRLabs_SimpleShaderInspectors_PropertyInfo_
+  commentId: M:VRLabs.SimpleShaderInspectors.PropertyInfo.Equals(VRLabs.SimpleShaderInspectors.PropertyInfo)
+  fullName: VRLabs.SimpleShaderInspectors.PropertyInfo.Equals(VRLabs.SimpleShaderInspectors.PropertyInfo)
+  nameWithType: PropertyInfo.Equals(PropertyInfo)
+- uid: VRLabs.SimpleShaderInspectors.PropertyInfo.Equals*
+  name: Equals
+  href: Next/api/VRLabs.SimpleShaderInspectors.PropertyInfo.Equals.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.PropertyInfo.Equals
+  fullName: VRLabs.SimpleShaderInspectors.PropertyInfo.Equals
+  nameWithType: PropertyInfo.Equals
+- uid: VRLabs.SimpleShaderInspectors.PropertyInfo.GetHashCode
+  name: GetHashCode()
+  href: Next/api/VRLabs.SimpleShaderInspectors.PropertyInfo.GetHashCode.html#VRLabs_SimpleShaderInspectors_PropertyInfo_GetHashCode
+  commentId: M:VRLabs.SimpleShaderInspectors.PropertyInfo.GetHashCode
+  fullName: VRLabs.SimpleShaderInspectors.PropertyInfo.GetHashCode()
+  nameWithType: PropertyInfo.GetHashCode()
+- uid: VRLabs.SimpleShaderInspectors.PropertyInfo.GetHashCode*
+  name: GetHashCode
+  href: Next/api/VRLabs.SimpleShaderInspectors.PropertyInfo.GetHashCode.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.PropertyInfo.GetHashCode
+  fullName: VRLabs.SimpleShaderInspectors.PropertyInfo.GetHashCode
+  nameWithType: PropertyInfo.GetHashCode
 - uid: VRLabs.SimpleShaderInspectors.PropertyInfo.Name
   name: Name
   href: Next/api/VRLabs.SimpleShaderInspectors.PropertyInfo.Name.html
@@ -4013,6 +4232,24 @@ references:
   commentId: F:VRLabs.SimpleShaderInspectors.SettingsFile.SelectedLanguage
   fullName: VRLabs.SimpleShaderInspectors.SettingsFile.SelectedLanguage
   nameWithType: SettingsFile.SelectedLanguage
+- uid: VRLabs.SimpleShaderInspectors.Shaders
+  name: Shaders
+  href: Next/api/VRLabs.SimpleShaderInspectors.Shaders.html
+  commentId: T:VRLabs.SimpleShaderInspectors.Shaders
+  fullName: VRLabs.SimpleShaderInspectors.Shaders
+  nameWithType: Shaders
+- uid: VRLabs.SimpleShaderInspectors.Shaders.RGBAPacker
+  name: RGBAPacker
+  href: Next/api/VRLabs.SimpleShaderInspectors.Shaders.RGBAPacker.html#VRLabs_SimpleShaderInspectors_Shaders_RGBAPacker
+  commentId: P:VRLabs.SimpleShaderInspectors.Shaders.RGBAPacker
+  fullName: VRLabs.SimpleShaderInspectors.Shaders.RGBAPacker
+  nameWithType: Shaders.RGBAPacker
+- uid: VRLabs.SimpleShaderInspectors.Shaders.RGBAPacker*
+  name: RGBAPacker
+  href: Next/api/VRLabs.SimpleShaderInspectors.Shaders.RGBAPacker.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Shaders.RGBAPacker
+  fullName: VRLabs.SimpleShaderInspectors.Shaders.RGBAPacker
+  nameWithType: Shaders.RGBAPacker
 - uid: VRLabs.SimpleShaderInspectors.SimpleControl
   name: SimpleControl
   href: Next/api/VRLabs.SimpleShaderInspectors.SimpleControl.html
@@ -4409,6 +4646,12 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.SSIHelper.IsSrgb
   fullName: VRLabs.SimpleShaderInspectors.SSIHelper.IsSrgb
   nameWithType: SSIHelper.IsSrgb
+- uid: VRLabs.SimpleShaderInspectors.SSIHelper.SaveAndGetTexture(UnityEngine.RenderTexture,System.String,UnityEngine.TextureWrapMode,System.Boolean)
+  name: SaveAndGetTexture(RenderTexture, String, TextureWrapMode, Boolean)
+  href: Next/api/VRLabs.SimpleShaderInspectors.SSIHelper.SaveAndGetTexture.html#VRLabs_SimpleShaderInspectors_SSIHelper_SaveAndGetTexture_UnityEngine_RenderTexture_System_String_UnityEngine_TextureWrapMode_System_Boolean_
+  commentId: M:VRLabs.SimpleShaderInspectors.SSIHelper.SaveAndGetTexture(UnityEngine.RenderTexture,System.String,UnityEngine.TextureWrapMode,System.Boolean)
+  fullName: VRLabs.SimpleShaderInspectors.SSIHelper.SaveAndGetTexture(UnityEngine.RenderTexture, System.String, UnityEngine.TextureWrapMode, System.Boolean)
+  nameWithType: SSIHelper.SaveAndGetTexture(RenderTexture, String, TextureWrapMode, Boolean)
 - uid: VRLabs.SimpleShaderInspectors.SSIHelper.SaveAndGetTexture(UnityEngine.Texture2D,System.String,UnityEngine.TextureWrapMode,System.Boolean)
   name: SaveAndGetTexture(Texture2D, String, TextureWrapMode, Boolean)
   href: Next/api/VRLabs.SimpleShaderInspectors.SSIHelper.SaveAndGetTexture.html#VRLabs_SimpleShaderInspectors_SSIHelper_SaveAndGetTexture_UnityEngine_Texture2D_System_String_UnityEngine_TextureWrapMode_System_Boolean_
@@ -4421,6 +4664,12 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.SSIHelper.SaveAndGetTexture
   fullName: VRLabs.SimpleShaderInspectors.SSIHelper.SaveAndGetTexture
   nameWithType: SSIHelper.SaveAndGetTexture
+- uid: VRLabs.SimpleShaderInspectors.SSIHelper.SaveTexture(UnityEngine.RenderTexture,System.String,UnityEngine.TextureWrapMode,System.Boolean)
+  name: SaveTexture(RenderTexture, String, TextureWrapMode, Boolean)
+  href: Next/api/VRLabs.SimpleShaderInspectors.SSIHelper.SaveTexture.html#VRLabs_SimpleShaderInspectors_SSIHelper_SaveTexture_UnityEngine_RenderTexture_System_String_UnityEngine_TextureWrapMode_System_Boolean_
+  commentId: M:VRLabs.SimpleShaderInspectors.SSIHelper.SaveTexture(UnityEngine.RenderTexture,System.String,UnityEngine.TextureWrapMode,System.Boolean)
+  fullName: VRLabs.SimpleShaderInspectors.SSIHelper.SaveTexture(UnityEngine.RenderTexture, System.String, UnityEngine.TextureWrapMode, System.Boolean)
+  nameWithType: SSIHelper.SaveTexture(RenderTexture, String, TextureWrapMode, Boolean)
 - uid: VRLabs.SimpleShaderInspectors.SSIHelper.SaveTexture(UnityEngine.Texture2D,System.String,UnityEngine.TextureWrapMode,System.Boolean)
   name: SaveTexture(Texture2D, String, TextureWrapMode, Boolean)
   href: Next/api/VRLabs.SimpleShaderInspectors.SSIHelper.SaveTexture.html#VRLabs_SimpleShaderInspectors_SSIHelper_SaveTexture_UnityEngine_Texture2D_System_String_UnityEngine_TextureWrapMode_System_Boolean_
@@ -4763,6 +5012,123 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Styles.UpIcon
   fullName: VRLabs.SimpleShaderInspectors.Styles.UpIcon
   nameWithType: Styles.UpIcon
+- uid: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector
+  name: TextureGeneratorShaderInspector
+  href: Next/api/VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.html
+  commentId: T:VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector
+  fullName: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector
+  nameWithType: TextureGeneratorShaderInspector
+- uid: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl,System.String)
+  name: AddControl(SimpleControl, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.AddControl.html#VRLabs_SimpleShaderInspectors_TextureGeneratorShaderInspector_AddControl_VRLabs_SimpleShaderInspectors_SimpleControl_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.AddControl(VRLabs.SimpleShaderInspectors.SimpleControl, System.String)
+  nameWithType: TextureGeneratorShaderInspector.AddControl(SimpleControl, String)
+- uid: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.AddControl*
+  name: AddControl
+  href: Next/api/VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.AddControl.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.AddControl
+  fullName: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.AddControl
+  nameWithType: TextureGeneratorShaderInspector.AddControl
+- uid: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.CheckChanges(UnityEditor.MaterialEditor)
+  name: CheckChanges(MaterialEditor)
+  href: Next/api/VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.CheckChanges.html#VRLabs_SimpleShaderInspectors_TextureGeneratorShaderInspector_CheckChanges_UnityEditor_MaterialEditor_
+  commentId: M:VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.CheckChanges(UnityEditor.MaterialEditor)
+  fullName: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.CheckChanges(UnityEditor.MaterialEditor)
+  nameWithType: TextureGeneratorShaderInspector.CheckChanges(MaterialEditor)
+- uid: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.CheckChanges*
+  name: CheckChanges
+  href: Next/api/VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.CheckChanges.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.CheckChanges
+  fullName: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.CheckChanges
+  nameWithType: TextureGeneratorShaderInspector.CheckChanges
+- uid: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.Controls
+  name: Controls
+  href: Next/api/VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.Controls.html#VRLabs_SimpleShaderInspectors_TextureGeneratorShaderInspector_Controls
+  commentId: P:VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.Controls
+  fullName: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.Controls
+  nameWithType: TextureGeneratorShaderInspector.Controls
+- uid: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.Controls*
+  name: Controls
+  href: Next/api/VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.Controls.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.Controls
+  fullName: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.Controls
+  nameWithType: TextureGeneratorShaderInspector.Controls
+- uid: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.GetControlList
+  name: GetControlList()
+  href: Next/api/VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.GetControlList.html#VRLabs_SimpleShaderInspectors_TextureGeneratorShaderInspector_GetControlList
+  commentId: M:VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.GetControlList
+  fullName: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.GetControlList()
+  nameWithType: TextureGeneratorShaderInspector.GetControlList()
+- uid: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.GetControlList*
+  name: GetControlList
+  href: Next/api/VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.GetControlList.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.GetControlList
+  fullName: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.GetControlList
+  nameWithType: TextureGeneratorShaderInspector.GetControlList
+- uid: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.Materials
+  name: Materials
+  href: Next/api/VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.Materials.html#VRLabs_SimpleShaderInspectors_TextureGeneratorShaderInspector_Materials
+  commentId: P:VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.Materials
+  fullName: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.Materials
+  nameWithType: TextureGeneratorShaderInspector.Materials
+- uid: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.Materials*
+  name: Materials
+  href: Next/api/VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.Materials.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.Materials
+  fullName: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.Materials
+  nameWithType: TextureGeneratorShaderInspector.Materials
+- uid: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.OnGUI(UnityEditor.MaterialEditor,UnityEditor.MaterialProperty[])
+  name: OnGUI(MaterialEditor, MaterialProperty[])
+  href: Next/api/VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.OnGUI.html#VRLabs_SimpleShaderInspectors_TextureGeneratorShaderInspector_OnGUI_UnityEditor_MaterialEditor_UnityEditor_MaterialProperty___
+  commentId: M:VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.OnGUI(UnityEditor.MaterialEditor,UnityEditor.MaterialProperty[])
+  name.vb: OnGUI(MaterialEditor, MaterialProperty())
+  fullName: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.OnGUI(UnityEditor.MaterialEditor, UnityEditor.MaterialProperty[])
+  fullName.vb: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.OnGUI(UnityEditor.MaterialEditor, UnityEditor.MaterialProperty())
+  nameWithType: TextureGeneratorShaderInspector.OnGUI(MaterialEditor, MaterialProperty[])
+  nameWithType.vb: TextureGeneratorShaderInspector.OnGUI(MaterialEditor, MaterialProperty())
+- uid: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.OnGUI*
+  name: OnGUI
+  href: Next/api/VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.OnGUI.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.OnGUI
+  fullName: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.OnGUI
+  nameWithType: TextureGeneratorShaderInspector.OnGUI
+- uid: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.Shader
+  name: Shader
+  href: Next/api/VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.Shader.html#VRLabs_SimpleShaderInspectors_TextureGeneratorShaderInspector_Shader
+  commentId: P:VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.Shader
+  fullName: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.Shader
+  nameWithType: TextureGeneratorShaderInspector.Shader
+- uid: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.Shader*
+  name: Shader
+  href: Next/api/VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.Shader.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.Shader
+  fullName: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.Shader
+  nameWithType: TextureGeneratorShaderInspector.Shader
+- uid: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.Start
+  name: Start()
+  href: Next/api/VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.Start.html#VRLabs_SimpleShaderInspectors_TextureGeneratorShaderInspector_Start
+  commentId: M:VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.Start
+  fullName: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.Start()
+  nameWithType: TextureGeneratorShaderInspector.Start()
+- uid: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.Start*
+  name: Start
+  href: Next/api/VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.Start.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.Start
+  fullName: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.Start
+  nameWithType: TextureGeneratorShaderInspector.Start
+- uid: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.StartChecks(UnityEditor.MaterialEditor)
+  name: StartChecks(MaterialEditor)
+  href: Next/api/VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.StartChecks.html#VRLabs_SimpleShaderInspectors_TextureGeneratorShaderInspector_StartChecks_UnityEditor_MaterialEditor_
+  commentId: M:VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.StartChecks(UnityEditor.MaterialEditor)
+  fullName: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.StartChecks(UnityEditor.MaterialEditor)
+  nameWithType: TextureGeneratorShaderInspector.StartChecks(MaterialEditor)
+- uid: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.StartChecks*
+  name: StartChecks
+  href: Next/api/VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.StartChecks.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.StartChecks
+  fullName: VRLabs.SimpleShaderInspectors.TextureGeneratorShaderInspector.StartChecks
+  nameWithType: TextureGeneratorShaderInspector.StartChecks
 - uid: VRLabs.SimpleShaderInspectors.Textures
   name: Textures
   href: Next/api/VRLabs.SimpleShaderInspectors.Textures.html
