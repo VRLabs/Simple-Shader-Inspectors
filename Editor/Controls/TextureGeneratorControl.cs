@@ -219,7 +219,7 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             baseContent = AdditionalContentExtensions.CreateLocalizationArrayFromNames(_baseNames);
         }
 
-        public override void Init()
+        public override void Initialization()
         {
             _crtMaterial = new Material(_shader);
             _crtMaterialEditor = Editor.CreateEditor(_crtMaterial) as MaterialEditor;
