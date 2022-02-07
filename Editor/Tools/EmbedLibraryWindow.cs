@@ -19,7 +19,7 @@ namespace VRLabs.SimpleShaderInspectors.Tools
 
         private static readonly Regex _namespaceRegex = new Regex("^[a-zA-Z0-9.]*$");
 
-        [MenuItem(SSIConstants.WINDOW_PATH + "/Embed to shader editor folder")]
+        [MenuItem(SSIConstants.WINDOW_PATH + "/Embed Library")]
         private static EmbedLibraryEditor CreateWindow()
         {
             var window = EditorWindow.GetWindow<EmbedLibraryEditor>();
@@ -142,7 +142,7 @@ namespace VRLabs.SimpleShaderInspectors.Tools
             {
                 if (Path.GetFileName(file).Contains("EmbedLibraryWindow")) continue;
                 
-                if (Path.GetExtension(file).Equals(".cs") || Path.GetExtension(file).Equals(".uxml"))
+                if (new [] {".cs", ".uxml", ".shader", ".asmdef"}.Contains(Path.GetExtension(file)))
                 {
                     var lines = new List<string>(File.ReadAllLines(file));
                     var newLines = lines.Where(line => !line.Trim().StartsWith("//")).ToList();

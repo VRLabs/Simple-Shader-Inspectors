@@ -71,6 +71,11 @@ namespace VRLabs.SimpleShaderInspectors
         protected abstract void ControlGUI(MaterialEditor materialEditor);
 
         /// <summary>
+        /// Initialize the control if the control needs some specific informations not available in the constructor.
+        /// </summary>
+        public virtual void Init() {}
+
+        /// <summary>
         /// Content of the control that is drawn.
         /// </summary>
         /// <param name="materialEditor">Material editor.</param>
