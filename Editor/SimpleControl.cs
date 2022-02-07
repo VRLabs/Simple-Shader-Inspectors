@@ -100,8 +100,11 @@ namespace VRLabs.SimpleShaderInspectors
         
         internal void Init()
         {
-            if(!_initialized)  
+            if (!_initialized)
+            {
                 Initialization();
+                _initialized = true;
+            }
         }
     }
 
