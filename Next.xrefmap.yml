@@ -3174,18 +3174,18 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.GeneratorStyle
   fullName: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.GeneratorStyle
   nameWithType: TextureGeneratorControl.GeneratorStyle
-- uid: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.Inspector
-  name: Inspector
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.Inspector.html#VRLabs_SimpleShaderInspectors_Controls_TextureGeneratorControl_Inspector
-  commentId: P:VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.Inspector
-  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.Inspector
-  nameWithType: TextureGeneratorControl.Inspector
-- uid: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.Inspector*
-  name: Inspector
-  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.Inspector.html
-  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.Inspector
-  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.Inspector
-  nameWithType: TextureGeneratorControl.Inspector
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.Initialization
+  name: Initialization()
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.Initialization.html#VRLabs_SimpleShaderInspectors_Controls_TextureGeneratorControl_Initialization
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.Initialization
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.Initialization()
+  nameWithType: TextureGeneratorControl.Initialization()
+- uid: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.Initialization*
+  name: Initialization
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.Initialization.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.Initialization
+  fullName: VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.Initialization
+  nameWithType: TextureGeneratorControl.Initialization
 - uid: VRLabs.SimpleShaderInspectors.Controls.TilingAndOffsetControl
   name: TilingAndOffsetControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.TilingAndOffsetControl.html
@@ -4316,6 +4316,18 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.SimpleControl.DrawControl
   fullName: VRLabs.SimpleShaderInspectors.SimpleControl.DrawControl
   nameWithType: SimpleControl.DrawControl
+- uid: VRLabs.SimpleShaderInspectors.SimpleControl.Initialization
+  name: Initialization()
+  href: Next/api/VRLabs.SimpleShaderInspectors.SimpleControl.Initialization.html#VRLabs_SimpleShaderInspectors_SimpleControl_Initialization
+  commentId: M:VRLabs.SimpleShaderInspectors.SimpleControl.Initialization
+  fullName: VRLabs.SimpleShaderInspectors.SimpleControl.Initialization()
+  nameWithType: SimpleControl.Initialization()
+- uid: VRLabs.SimpleShaderInspectors.SimpleControl.Initialization*
+  name: Initialization
+  href: Next/api/VRLabs.SimpleShaderInspectors.SimpleControl.Initialization.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.SimpleControl.Initialization
+  fullName: VRLabs.SimpleShaderInspectors.SimpleControl.Initialization
+  nameWithType: SimpleControl.Initialization
 - uid: VRLabs.SimpleShaderInspectors.SimpleControl.Inspector
   name: Inspector
   href: Next/api/VRLabs.SimpleShaderInspectors.SimpleControl.Inspector.html#VRLabs_SimpleShaderInspectors_SimpleControl_Inspector
@@ -4454,6 +4466,18 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.SimpleShaderInspector.Header
   fullName: VRLabs.SimpleShaderInspectors.SimpleShaderInspector.Header
   nameWithType: SimpleShaderInspector.Header
+- uid: VRLabs.SimpleShaderInspectors.SimpleShaderInspector.LoadLocalization
+  name: LoadLocalization()
+  href: Next/api/VRLabs.SimpleShaderInspectors.SimpleShaderInspector.LoadLocalization.html#VRLabs_SimpleShaderInspectors_SimpleShaderInspector_LoadLocalization
+  commentId: M:VRLabs.SimpleShaderInspectors.SimpleShaderInspector.LoadLocalization
+  fullName: VRLabs.SimpleShaderInspectors.SimpleShaderInspector.LoadLocalization()
+  nameWithType: SimpleShaderInspector.LoadLocalization()
+- uid: VRLabs.SimpleShaderInspectors.SimpleShaderInspector.LoadLocalization*
+  name: LoadLocalization
+  href: Next/api/VRLabs.SimpleShaderInspectors.SimpleShaderInspector.LoadLocalization.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.SimpleShaderInspector.LoadLocalization
+  fullName: VRLabs.SimpleShaderInspectors.SimpleShaderInspector.LoadLocalization
+  nameWithType: SimpleShaderInspector.LoadLocalization
 - uid: VRLabs.SimpleShaderInspectors.SimpleShaderInspector.Materials
   name: Materials
   href: Next/api/VRLabs.SimpleShaderInspectors.SimpleShaderInspector.Materials.html#VRLabs_SimpleShaderInspectors_SimpleShaderInspector_Materials
@@ -4634,6 +4658,21 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.SSIHelper.GetTextureDestinationPath
   fullName: VRLabs.SimpleShaderInspectors.SSIHelper.GetTextureDestinationPath
   nameWithType: SSIHelper.GetTextureDestinationPath
+- uid: VRLabs.SimpleShaderInspectors.SSIHelper.Initialize(System.Collections.Generic.IEnumerable{VRLabs.SimpleShaderInspectors.SimpleControl},System.Boolean)
+  name: Initialize(IEnumerable<SimpleControl>, Boolean)
+  href: Next/api/VRLabs.SimpleShaderInspectors.SSIHelper.Initialize.html#VRLabs_SimpleShaderInspectors_SSIHelper_Initialize_System_Collections_Generic_IEnumerable_VRLabs_SimpleShaderInspectors_SimpleControl__System_Boolean_
+  commentId: M:VRLabs.SimpleShaderInspectors.SSIHelper.Initialize(System.Collections.Generic.IEnumerable{VRLabs.SimpleShaderInspectors.SimpleControl},System.Boolean)
+  name.vb: Initialize(IEnumerable(Of SimpleControl), Boolean)
+  fullName: VRLabs.SimpleShaderInspectors.SSIHelper.Initialize(System.Collections.Generic.IEnumerable<VRLabs.SimpleShaderInspectors.SimpleControl>, System.Boolean)
+  fullName.vb: VRLabs.SimpleShaderInspectors.SSIHelper.Initialize(System.Collections.Generic.IEnumerable(Of VRLabs.SimpleShaderInspectors.SimpleControl), System.Boolean)
+  nameWithType: SSIHelper.Initialize(IEnumerable<SimpleControl>, Boolean)
+  nameWithType.vb: SSIHelper.Initialize(IEnumerable(Of SimpleControl), Boolean)
+- uid: VRLabs.SimpleShaderInspectors.SSIHelper.Initialize*
+  name: Initialize
+  href: Next/api/VRLabs.SimpleShaderInspectors.SSIHelper.Initialize.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.SSIHelper.Initialize
+  fullName: VRLabs.SimpleShaderInspectors.SSIHelper.Initialize
+  nameWithType: SSIHelper.Initialize
 - uid: VRLabs.SimpleShaderInspectors.SSIHelper.IsSrgb(UnityEngine.Texture2D)
   name: IsSrgb(Texture2D)
   href: Next/api/VRLabs.SimpleShaderInspectors.SSIHelper.IsSrgb.html#VRLabs_SimpleShaderInspectors_SSIHelper_IsSrgb_UnityEngine_Texture2D_

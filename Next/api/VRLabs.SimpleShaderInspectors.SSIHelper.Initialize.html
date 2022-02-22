@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Property Inspector
+    <title>Method Initialize
    | Simple Shader Inspectors Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Property Inspector
+    <meta name="title" content="Method Initialize
    | Simple Shader Inspectors Documentation ">
     <meta name="generator" content="docfx 2.58.2.0">
     
@@ -76,38 +76,46 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.Inspector*">
+            <article class="content wrap" id="_content" data-uid="VRLabs.SimpleShaderInspectors.SSIHelper.Initialize*">
 
-<h1 id="VRLabs_SimpleShaderInspectors_Controls_TextureGeneratorControl_Inspector_" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.Inspector*">Property Inspector
+<h1 id="VRLabs_SimpleShaderInspectors_SSIHelper_Initialize_" data-uid="VRLabs.SimpleShaderInspectors.SSIHelper.Initialize*">Method Initialize
 </h1>
 <div class="markdown level0 summary"></div>
 <div class="markdown level0 conceptual"></div>
 
-<a id="VRLabs_SimpleShaderInspectors_Controls_TextureGeneratorControl_Inspector_" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.Inspector*"></a>
-<h4 id="VRLabs_SimpleShaderInspectors_Controls_TextureGeneratorControl_Inspector" data-uid="VRLabs.SimpleShaderInspectors.Controls.TextureGeneratorControl.Inspector">Inspector</h4>
-<div class="markdown level1 summary"></div>
+<a id="VRLabs_SimpleShaderInspectors_SSIHelper_Initialize_" data-uid="VRLabs.SimpleShaderInspectors.SSIHelper.Initialize*"></a>
+<h4 id="VRLabs_SimpleShaderInspectors_SSIHelper_Initialize_System_Collections_Generic_IEnumerable_VRLabs_SimpleShaderInspectors_SimpleControl__System_Boolean_" data-uid="VRLabs.SimpleShaderInspectors.SSIHelper.Initialize(System.Collections.Generic.IEnumerable{VRLabs.SimpleShaderInspectors.SimpleControl},System.Boolean)">Initialize(IEnumerable&lt;SimpleControl&gt;, Boolean)</h4>
+<div class="markdown level1 summary"><p>Initialize all controls in the list.</p>
+</div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="decalaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">public override ISimpleShaderInspector Inspector { get; set; }</code></pre>
+  <pre><code class="lang-csharp hljs">public static void Initialize(this IEnumerable&lt;SimpleControl&gt; controls, bool recursive = true)</code></pre>
 </div>
-<h5 class="propertyValue">Property Value</h5>
+<h5 class="parameters">Parameters</h5>
 <table class="table table-bordered table-striped table-condensed">
   <thead>
     <tr>
       <th>Type</th>
+      <th>Name</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><a class="xref" href="VRLabs.SimpleShaderInspectors.ISimpleShaderInspector.html">ISimpleShaderInspector</a></td>
-      <td></td>
+      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleControl.html">SimpleControl</a>&gt;</td>
+      <td><span class="parametername">controls</span></td>
+      <td><p>Controls this method extends from.</p>
+</td>
+    </tr>
+    <tr>
+      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+      <td><span class="parametername">recursive</span></td>
+      <td><p>Is the set recursive to child controls</p>
+</td>
     </tr>
   </tbody>
 </table>
-<h5 class="overrides">Overrides</h5>
-<div><a class="xref" href="VRLabs.SimpleShaderInspectors.SimpleControl.Inspector.html#VRLabs_SimpleShaderInspectors_SimpleControl_Inspector">SimpleControl.Inspector</a></div>
 </article>
           </div>
           
