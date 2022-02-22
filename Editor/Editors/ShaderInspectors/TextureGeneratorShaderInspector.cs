@@ -111,6 +111,7 @@ namespace VRLabs.SimpleShaderInspectors
             Start();
             //LoadLocalizations();
             Controls.SetInspector(this);
+            Controls.Initialize();
             _nonAnimatablePropertyControls = (List<INonAnimatableProperty>)Controls.FindNonAnimatablePropertyControls();
             Controls.FetchProperties(properties);
             StartChecks(materialEditor);

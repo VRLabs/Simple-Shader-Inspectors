@@ -77,51 +77,6 @@ namespace VRLabs.SimpleShaderInspectors.Controls
         
         private ISimpleShaderInspector _inspector;
 
-        public override ISimpleShaderInspector Inspector
-        {
-            get => _inspector;
-            set
-            {
-                _inspector = value;
-                _crtMaterial = new Material(_shader);
-                _crtMaterialEditor = Editor.CreateEditor(_crtMaterial) as MaterialEditor;
-                _shaderStack = new List<Shader>();
-                bool isRoot = true;
-                if (Inspector is TextureGeneratorShaderInspector generatorInspector)
-                {
-                    _shaderStack.AddRange(generatorInspector.shaderStack);
-                    isRoot = false;
-                }
-                _shaderStack.Add(Inspector.Shader);
-            
-                // ReSharper disable once PossibleNullReferenceException
-                if (_crtMaterialEditor.customShaderGUI != null && _crtMaterialEditor.customShaderGUI is TextureGeneratorShaderInspector compliantInspector)
-                {
-                    if (_shaderStack.Contains(((Material)_crtMaterialEditor.target).shader))
-                    {
-                        namesContent = Array.Empty<AdditionalLocalization>();
-                    }
-                    else
-                    {
-                        compliantInspector.shaderStack.AddRange(_shaderStack);
-                        compliantInspector.Setup(_crtMaterialEditor, MaterialEditor.GetMaterialProperties(_crtMaterialEditor.targets));
-                        namesContent = compliantInspector.GetRequiredLocalization().Where(x => !string.IsNullOrWhiteSpace(x.Name)).Distinct().ToArray();
-                    }
-                }
-                else
-                {
-                    namesContent = Array.Empty<AdditionalLocalization>();
-                }
-
-                if(isRoot)
-                    foreach (AdditionalLocalization t in namesContent)
-                        t.Name = "Input_" + t.Name;
-
-                Object.DestroyImmediate(_crtMaterial);
-                Object.DestroyImmediate(_crtMaterialEditor);
-            }
-        }
-
         /// <summary>
         /// Style for the texture generator button.
         /// </summary>
@@ -262,6 +217,46 @@ namespace VRLabs.SimpleShaderInspectors.Controls
             GeneratorCloseButtonColor = Color.white;
 
             baseContent = AdditionalContentExtensions.CreateLocalizationArrayFromNames(_baseNames);
+        }
+
+        public override void Initialization()
+        {
+            _crtMaterial = new Material(_shader);
+            _crtMaterialEditor = Editor.CreateEditor(_crtMaterial) as MaterialEditor;
+            _shaderStack = new List<Shader>();
+            bool isRoot = true;
+            if (Inspector is TextureGeneratorShaderInspector generatorInspector)
+            {
+                _shaderStack.AddRange(generatorInspector.shaderStack);
+                isRoot = false;
+            }
+            _shaderStack.Add(Inspector.Shader);
+            
+            // ReSharper disable once PossibleNullReferenceException
+            if (_crtMaterialEditor.customShaderGUI != null && _crtMaterialEditor.customShaderGUI is TextureGeneratorShaderInspector compliantInspector)
+            {
+                if (_shaderStack.Contains(((Material)_crtMaterialEditor.target).shader))
+                {
+                    namesContent = Array.Empty<AdditionalLocalization>();
+                }
+                else
+                {
+                    compliantInspector.shaderStack.AddRange(_shaderStack);
+                    compliantInspector.Setup(_crtMaterialEditor, MaterialEditor.GetMaterialProperties(_crtMaterialEditor.targets));
+                    namesContent = compliantInspector.GetRequiredLocalization().Where(x => !string.IsNullOrWhiteSpace(x.Name)).Distinct().ToArray();
+                }
+            }
+            else
+            {
+                namesContent = Array.Empty<AdditionalLocalization>();
+            }
+
+            if(isRoot)
+                foreach (AdditionalLocalization t in namesContent)
+                    t.Name = "Input_" + t.Name;
+
+            Object.DestroyImmediate(_crtMaterial);
+            Object.DestroyImmediate(_crtMaterialEditor);
         }
 
         /// <summary>

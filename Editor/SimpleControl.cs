@@ -8,6 +8,8 @@ namespace VRLabs.SimpleShaderInspectors
     /// </summary>
     public abstract class SimpleControl
     {
+        private bool _initialized;
+
         /// <summary>
         /// Inspector that contains this control.
         /// </summary>
@@ -71,6 +73,11 @@ namespace VRLabs.SimpleShaderInspectors
         protected abstract void ControlGUI(MaterialEditor materialEditor);
 
         /// <summary>
+        /// Initialize the control if the control needs some specific informations not available in the constructor.
+        /// </summary>
+        public virtual void Initialization() {}
+
+        /// <summary>
         /// Content of the control that is drawn.
         /// </summary>
         /// <param name="materialEditor">Material editor.</param>
@@ -88,6 +95,15 @@ namespace VRLabs.SimpleShaderInspectors
             else
             {
                 ControlGUI(materialEditor);
+            }
+        }
+        
+        internal void Init()
+        {
+            if (!_initialized)
+            {
+                Initialization();
+                _initialized = true;
             }
         }
     }

@@ -85,6 +85,22 @@ namespace VRLabs.SimpleShaderInspectors
                     con.GetControlList().SetInspector(inspector);
             }
         }
+        
+        /// <summary>
+        /// Initialize all controls in the list.
+        /// </summary>
+        /// <param name="controls">Controls this method extends from.</param>
+        /// <param name="inspector">Inspector to set</param>
+        /// <param name="recursive">Is the set recursive to child controls</param>
+        public static void Initialize(this IEnumerable<SimpleControl> controls, bool recursive = true)
+        {
+            foreach (var control in controls)
+            {
+                control.Init();
+                if (recursive && control is IControlContainer con)
+                    con.GetControlList().Initialize();
+            }
+        }
 
         /// <summary>
         /// Find a material property from its name.
