@@ -274,6 +274,30 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddControlContainer
   fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddControlContainer
   nameWithType: Chainables.AddControlContainer
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddDoubleSidedGIControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String)
+  name: AddDoubleSidedGIControl(IControlContainer, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddDoubleSidedGIControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddDoubleSidedGIControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddDoubleSidedGIControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddDoubleSidedGIControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String)
+  nameWithType: Chainables.AddDoubleSidedGIControl(IControlContainer, String)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddDoubleSidedGIControl*
+  name: AddDoubleSidedGIControl
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddDoubleSidedGIControl.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddDoubleSidedGIControl
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddDoubleSidedGIControl
+  nameWithType: Chainables.AddDoubleSidedGIControl
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddEnableInstancingControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String)
+  name: AddEnableInstancingControl(IControlContainer, String)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddEnableInstancingControl.html#VRLabs_SimpleShaderInspectors_Controls_Chainables_AddEnableInstancingControl_VRLabs_SimpleShaderInspectors_IControlContainer_System_String_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddEnableInstancingControl(VRLabs.SimpleShaderInspectors.IControlContainer,System.String)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddEnableInstancingControl(VRLabs.SimpleShaderInspectors.IControlContainer, System.String)
+  nameWithType: Chainables.AddEnableInstancingControl(IControlContainer, String)
+- uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddEnableInstancingControl*
+  name: AddEnableInstancingControl
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddEnableInstancingControl.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.Chainables.AddEnableInstancingControl
+  fullName: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddEnableInstancingControl
+  nameWithType: Chainables.AddEnableInstancingControl
 - uid: VRLabs.SimpleShaderInspectors.Controls.Chainables.AddEnumControl*
   name: AddEnumControl
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.Chainables.AddEnumControl.html
@@ -1102,6 +1126,90 @@ references:
   commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.ControlContainer.GetControlList
   fullName: VRLabs.SimpleShaderInspectors.Controls.ControlContainer.GetControlList
   nameWithType: ControlContainer.GetControlList
+- uid: VRLabs.SimpleShaderInspectors.Controls.DoubleSidedGIControl
+  name: DoubleSidedGIControl
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.DoubleSidedGIControl.html
+  commentId: T:VRLabs.SimpleShaderInspectors.Controls.DoubleSidedGIControl
+  fullName: VRLabs.SimpleShaderInspectors.Controls.DoubleSidedGIControl
+  nameWithType: DoubleSidedGIControl
+- uid: VRLabs.SimpleShaderInspectors.Controls.DoubleSidedGIControl.#ctor
+  name: DoubleSidedGIControl()
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.DoubleSidedGIControl.-ctor.html#VRLabs_SimpleShaderInspectors_Controls_DoubleSidedGIControl__ctor
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.DoubleSidedGIControl.#ctor
+  fullName: VRLabs.SimpleShaderInspectors.Controls.DoubleSidedGIControl.DoubleSidedGIControl()
+  nameWithType: DoubleSidedGIControl.DoubleSidedGIControl()
+- uid: VRLabs.SimpleShaderInspectors.Controls.DoubleSidedGIControl.#ctor*
+  name: DoubleSidedGIControl
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.DoubleSidedGIControl.-ctor.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.DoubleSidedGIControl.#ctor
+  fullName: VRLabs.SimpleShaderInspectors.Controls.DoubleSidedGIControl.DoubleSidedGIControl
+  nameWithType: DoubleSidedGIControl.DoubleSidedGIControl
+- uid: VRLabs.SimpleShaderInspectors.Controls.DoubleSidedGIControl.ControlGUI(UnityEditor.MaterialEditor)
+  name: ControlGUI(MaterialEditor)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.DoubleSidedGIControl.ControlGUI.html#VRLabs_SimpleShaderInspectors_Controls_DoubleSidedGIControl_ControlGUI_UnityEditor_MaterialEditor_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.DoubleSidedGIControl.ControlGUI(UnityEditor.MaterialEditor)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.DoubleSidedGIControl.ControlGUI(UnityEditor.MaterialEditor)
+  nameWithType: DoubleSidedGIControl.ControlGUI(MaterialEditor)
+- uid: VRLabs.SimpleShaderInspectors.Controls.DoubleSidedGIControl.ControlGUI*
+  name: ControlGUI
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.DoubleSidedGIControl.ControlGUI.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.DoubleSidedGIControl.ControlGUI
+  fullName: VRLabs.SimpleShaderInspectors.Controls.DoubleSidedGIControl.ControlGUI
+  nameWithType: DoubleSidedGIControl.ControlGUI
+- uid: VRLabs.SimpleShaderInspectors.Controls.DoubleSidedGIControl.HasDoubleSidedGIUpdated
+  name: HasDoubleSidedGIUpdated
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.DoubleSidedGIControl.HasDoubleSidedGIUpdated.html#VRLabs_SimpleShaderInspectors_Controls_DoubleSidedGIControl_HasDoubleSidedGIUpdated
+  commentId: P:VRLabs.SimpleShaderInspectors.Controls.DoubleSidedGIControl.HasDoubleSidedGIUpdated
+  fullName: VRLabs.SimpleShaderInspectors.Controls.DoubleSidedGIControl.HasDoubleSidedGIUpdated
+  nameWithType: DoubleSidedGIControl.HasDoubleSidedGIUpdated
+- uid: VRLabs.SimpleShaderInspectors.Controls.DoubleSidedGIControl.HasDoubleSidedGIUpdated*
+  name: HasDoubleSidedGIUpdated
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.DoubleSidedGIControl.HasDoubleSidedGIUpdated.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.DoubleSidedGIControl.HasDoubleSidedGIUpdated
+  fullName: VRLabs.SimpleShaderInspectors.Controls.DoubleSidedGIControl.HasDoubleSidedGIUpdated
+  nameWithType: DoubleSidedGIControl.HasDoubleSidedGIUpdated
+- uid: VRLabs.SimpleShaderInspectors.Controls.EnableInstancingControl
+  name: EnableInstancingControl
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.EnableInstancingControl.html
+  commentId: T:VRLabs.SimpleShaderInspectors.Controls.EnableInstancingControl
+  fullName: VRLabs.SimpleShaderInspectors.Controls.EnableInstancingControl
+  nameWithType: EnableInstancingControl
+- uid: VRLabs.SimpleShaderInspectors.Controls.EnableInstancingControl.#ctor
+  name: EnableInstancingControl()
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.EnableInstancingControl.-ctor.html#VRLabs_SimpleShaderInspectors_Controls_EnableInstancingControl__ctor
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.EnableInstancingControl.#ctor
+  fullName: VRLabs.SimpleShaderInspectors.Controls.EnableInstancingControl.EnableInstancingControl()
+  nameWithType: EnableInstancingControl.EnableInstancingControl()
+- uid: VRLabs.SimpleShaderInspectors.Controls.EnableInstancingControl.#ctor*
+  name: EnableInstancingControl
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.EnableInstancingControl.-ctor.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.EnableInstancingControl.#ctor
+  fullName: VRLabs.SimpleShaderInspectors.Controls.EnableInstancingControl.EnableInstancingControl
+  nameWithType: EnableInstancingControl.EnableInstancingControl
+- uid: VRLabs.SimpleShaderInspectors.Controls.EnableInstancingControl.ControlGUI(UnityEditor.MaterialEditor)
+  name: ControlGUI(MaterialEditor)
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.EnableInstancingControl.ControlGUI.html#VRLabs_SimpleShaderInspectors_Controls_EnableInstancingControl_ControlGUI_UnityEditor_MaterialEditor_
+  commentId: M:VRLabs.SimpleShaderInspectors.Controls.EnableInstancingControl.ControlGUI(UnityEditor.MaterialEditor)
+  fullName: VRLabs.SimpleShaderInspectors.Controls.EnableInstancingControl.ControlGUI(UnityEditor.MaterialEditor)
+  nameWithType: EnableInstancingControl.ControlGUI(MaterialEditor)
+- uid: VRLabs.SimpleShaderInspectors.Controls.EnableInstancingControl.ControlGUI*
+  name: ControlGUI
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.EnableInstancingControl.ControlGUI.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.EnableInstancingControl.ControlGUI
+  fullName: VRLabs.SimpleShaderInspectors.Controls.EnableInstancingControl.ControlGUI
+  nameWithType: EnableInstancingControl.ControlGUI
+- uid: VRLabs.SimpleShaderInspectors.Controls.EnableInstancingControl.HasInstancingUpdated
+  name: HasInstancingUpdated
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.EnableInstancingControl.HasInstancingUpdated.html#VRLabs_SimpleShaderInspectors_Controls_EnableInstancingControl_HasInstancingUpdated
+  commentId: P:VRLabs.SimpleShaderInspectors.Controls.EnableInstancingControl.HasInstancingUpdated
+  fullName: VRLabs.SimpleShaderInspectors.Controls.EnableInstancingControl.HasInstancingUpdated
+  nameWithType: EnableInstancingControl.HasInstancingUpdated
+- uid: VRLabs.SimpleShaderInspectors.Controls.EnableInstancingControl.HasInstancingUpdated*
+  name: HasInstancingUpdated
+  href: Next/api/VRLabs.SimpleShaderInspectors.Controls.EnableInstancingControl.HasInstancingUpdated.html
+  commentId: Overload:VRLabs.SimpleShaderInspectors.Controls.EnableInstancingControl.HasInstancingUpdated
+  fullName: VRLabs.SimpleShaderInspectors.Controls.EnableInstancingControl.HasInstancingUpdated
+  nameWithType: EnableInstancingControl.HasInstancingUpdated
 - uid: VRLabs.SimpleShaderInspectors.Controls.EnumControl`1
   name: EnumControl<TEnum>
   href: Next/api/VRLabs.SimpleShaderInspectors.Controls.EnumControl-1.html
