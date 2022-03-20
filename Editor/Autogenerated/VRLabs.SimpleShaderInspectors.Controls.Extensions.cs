@@ -33,6 +33,20 @@
             return control;
         }
 
+        public static VRLabs.SimpleShaderInspectors.Controls.DoubleSidedGIControl AddDoubleSidedGIControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, string appendAfterAlias = "")
+        {
+            var control = new VRLabs.SimpleShaderInspectors.Controls.DoubleSidedGIControl();
+            container.AddControl(control, appendAfterAlias);
+            return control;
+        }
+
+        public static VRLabs.SimpleShaderInspectors.Controls.EnableInstancingControl AddEnableInstancingControl(this VRLabs.SimpleShaderInspectors.IControlContainer container, string appendAfterAlias = "")
+        {
+            var control = new VRLabs.SimpleShaderInspectors.Controls.EnableInstancingControl();
+            container.AddControl(control, appendAfterAlias);
+            return control;
+        }
+
         public static VRLabs.SimpleShaderInspectors.Controls.EnumControl<TEnum> AddEnumControl<TEnum>(this VRLabs.SimpleShaderInspectors.IControlContainer container, System.String propertyName, string appendAfterAlias = "") where TEnum : System.Enum
         {
             var control = new VRLabs.SimpleShaderInspectors.Controls.EnumControl<TEnum>(propertyName);
